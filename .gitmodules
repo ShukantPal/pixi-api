@@ -1,0 +1,15 @@
+[submodule "projects/pixi.js"]
+	path = projects/pixi.js
+	url = https://github.com/pixijs/pixi.js
+[submodule "projects/pixi-tilemap"]
+	path = projects/pixi-tilemap
+	url = https://github.com/pixijs/pixi-tilemap
+[submodule "projects/pixi-batch-renderer"]
+	path = projects/pixi-batch-renderer
+	url = https://github.com/pixijs/pixi-batch-renderer
+[submodule "projects/pixi-filters"]
+	path = projects/pixi-filters
+	url = https://github.com/pixijs/pixi-filters
+[submodule "projects/pixi-essentials"]
+	path = projects/pixi-essentials
+	url = https://github.com/SukantPal/pixi-essentials
