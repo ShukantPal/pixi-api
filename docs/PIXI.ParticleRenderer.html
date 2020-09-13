@@ -1,0 +1,997 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: ParticleRenderer</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/particles</div>
+    <h1 class="document__title">PIXI.ParticleRenderer</h1>
+    
+<pre class="signature__container"><code class="signature">class ParticleRenderer extends <a href="PIXI.ObjectRenderer.html">PIXI.ObjectRenderer</a></code></pre>
+
+
+    <div class="document__brief"><p>Renderer for Particles that is designer for speed over feature set.</p></div>
+    <div class="document__description"></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+
+  
+    
+<div class="member" id="constructor">
+  <h3 class="member__title"></h3>
+  
+<pre class="signature__container"><code class="signature">new PIXI.ParticleRenderer(renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a>)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        renderer
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Renderer.html">PIXI.Renderer</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The renderer this sprite batch works for.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="renderer">
+  <h3 class="member__title">renderer</h3>
+  
+<pre class="signature__container"><code class="signature">renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a></code></pre>
+
+
+  <div class="member__brief"><p>The renderer this manager works for.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="shader">
+  <h3 class="member__title">shader</h3>
+  
+<pre class="signature__container"><code class="signature">shader: <a href="PIXI.Shader.html">PIXI.Shader</a></code></pre>
+
+
+  <div class="member__brief"><p>The default shader that is used if a sprite doesn't have a more specific one.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="state">
+  <h3 class="member__title">state</h3>
+  
+<pre class="signature__container"><code class="signature">state: <a href="PIXI.State.html">PIXI.State</a></code></pre>
+
+
+  <div class="member__brief"><p>The WebGL state in which this renderer will work.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="destroy">
+  <h3 class="member__title">destroy</h3>
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Destroys the ParticleRenderer.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="flush">
+  <h3 class="member__title">flush</h3>
+  
+<pre class="signature__container"><code class="signature">flush() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Stub method that should be used to empty the current
+batch by rendering objects now.</p></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="render">
+  <h3 class="member__title">render</h3>
+  
+<pre class="signature__container"><code class="signature">render(container: <a href="PIXI.ParticleContainer.html">PIXI.ParticleContainer</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Renders the particle container object.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        container
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.ParticleContainer.html">PIXI.ParticleContainer</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The container to render using this ParticleRenderer</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="start">
+  <h3 class="member__title">start</h3>
+  
+<pre class="signature__container"><code class="signature">start() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Stub method that initializes any state required before
+rendering starts. It is different from the <code>prerender</code>
+signal, which occurs every frame, in that it is called
+whenever an object requests <em>this</em> renderer specifically.</p></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="stop">
+  <h3 class="member__title">stop</h3>
+  
+<pre class="signature__container"><code class="signature">stop() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Stops the renderer. It should free up any state and
+become dormant.</p></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="uploadPosition">
+  <h3 class="member__title">uploadPosition</h3>
+  
+<pre class="signature__container"><code class="signature">uploadPosition(children: Array<<a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>>, startIndex: number, amount: number, array: Array<number>, stride: number, offset: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Uploads the position.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        children
+      </td>
+      <td class="member-parameter__type">
+        Array<<a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the array of display objects to render</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        startIndex
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the index to start from in the children array</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        amount
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the amount of children that will have their positions uploaded</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        array
+      </td>
+      <td class="member-parameter__type">
+        Array<number>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The vertices to upload.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        stride
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Stride to use for iteration.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        offset
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Offset to start at.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="uploadRotation">
+  <h3 class="member__title">uploadRotation</h3>
+  
+<pre class="signature__container"><code class="signature">uploadRotation(children: Array<<a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>>, startIndex: number, amount: number, array: Array<number>, stride: number, offset: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Uploads the rotation.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        children
+      </td>
+      <td class="member-parameter__type">
+        Array<<a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the array of display objects to render</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        startIndex
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the index to start from in the children array</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        amount
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the amount of children that will have their rotation uploaded</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        array
+      </td>
+      <td class="member-parameter__type">
+        Array<number>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The vertices to upload.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        stride
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Stride to use for iteration.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        offset
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Offset to start at.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="uploadTint">
+  <h3 class="member__title">uploadTint</h3>
+  
+<pre class="signature__container"><code class="signature">uploadTint(children: Array<<a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>>, startIndex: number, amount: number, array: Array<number>, stride: number, offset: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Uploads the tint.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        children
+      </td>
+      <td class="member-parameter__type">
+        Array<<a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the array of display objects to render</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        startIndex
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the index to start from in the children array</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        amount
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the amount of children that will have their rotation uploaded</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        array
+      </td>
+      <td class="member-parameter__type">
+        Array<number>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The vertices to upload.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        stride
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Stride to use for iteration.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        offset
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Offset to start at.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="uploadUvs">
+  <h3 class="member__title">uploadUvs</h3>
+  
+<pre class="signature__container"><code class="signature">uploadUvs(children: Array<<a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>>, startIndex: number, amount: number, array: Array<number>, stride: number, offset: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Uploads the Uvs</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        children
+      </td>
+      <td class="member-parameter__type">
+        Array<<a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the array of display objects to render</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        startIndex
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the index to start from in the children array</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        amount
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the amount of children that will have their rotation uploaded</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        array
+      </td>
+      <td class="member-parameter__type">
+        Array<number>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The vertices to upload.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        stride
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Stride to use for iteration.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        offset
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Offset to start at.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="uploadVertices">
+  <h3 class="member__title">uploadVertices</h3>
+  
+<pre class="signature__container"><code class="signature">uploadVertices(children: Array<<a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>>, startIndex: number, amount: number, array: Array<number>, stride: number, offset: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Uploads the vertices.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        children
+      </td>
+      <td class="member-parameter__type">
+        Array<<a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the array of display objects to render</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        startIndex
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the index to start from in the children array</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        amount
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the amount of children that will have their vertices uploaded</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        array
+      </td>
+      <td class="member-parameter__type">
+        Array<number>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The vertices to upload.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        stride
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Stride to use for iteration.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        offset
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Offset to start at.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ParticleRenderer.html#renderer">renderer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ParticleRenderer.html#shader">shader</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ParticleRenderer.html#state">state</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ParticleRenderer.html#destroy">destroy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ParticleRenderer.html#flush">flush</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ParticleRenderer.html#render">render</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ParticleRenderer.html#start">start</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ParticleRenderer.html#stop">stop</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ParticleRenderer.html#uploadPosition">uploadPosition</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ParticleRenderer.html#uploadRotation">uploadRotation</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ParticleRenderer.html#uploadTint">uploadTint</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ParticleRenderer.html#uploadUvs">uploadUvs</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ParticleRenderer.html#uploadVertices">uploadVertices</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

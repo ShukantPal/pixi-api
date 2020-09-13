@@ -1,0 +1,1958 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: utils</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/utils</div>
+    <h1 class="document__title">PIXI.utils</h1>
+    
+<pre class="signature__container"><code class="signature">static namespace utils</code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>Generalized convenience utilities for PIXI.</p></div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="BaseTextureCache">
+  <h3 class="member__title">BaseTextureCache</h3>
+  
+<pre class="signature__container"><code class="signature">static BaseTextureCache: Object</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="ProgramCache">
+  <h3 class="member__title">ProgramCache</h3>
+  
+<pre class="signature__container"><code class="signature">static ProgramCache: Object</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="TextureCache">
+  <h3 class="member__title">TextureCache</h3>
+  
+<pre class="signature__container"><code class="signature">static TextureCache: Object</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="isMobile">
+  <h3 class="member__title">isMobile</h3>
+  
+<pre class="signature__container"><code class="signature">isMobile: Object</code></pre>
+
+
+  <div class="member__brief"><p>A simple JS library that detects mobile devices.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="premultiplyBlendMode">
+  <h3 class="member__title">premultiplyBlendMode</h3>
+  
+<pre class="signature__container"><code class="signature">premultiplyBlendMode: Array<number<Array>></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>maps premultiply flag and blendMode to adjusted blendMode</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="url">
+  <h3 class="member__title">url</h3>
+  
+<pre class="signature__container"><code class="signature">url: object</code></pre>
+
+
+  <div class="member__brief"><p>Node.js compatible URL utilities.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="earcut">
+  <h3 class="member__title">earcut</h3>
+  
+<pre class="signature__container"><code class="signature">earcut(vertices: Array<number>, holes: Array<number>, dimensions: number) → {Array<number>}</code></pre>
+
+
+  <div class="member__brief"><p>A polygon triangulation library</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      <th class="member-parameter-header__default">Default</th>
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        vertices
+      </td>
+      <td class="member-parameter__type">
+        Array<number>
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>A flat array of vertex coordinates</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        holes
+      </td>
+      <td class="member-parameter__type">
+        Array<number>
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>An array of hole indices</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        dimensions
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        2
+      </td>
+      <td class="member-parameter__description"><p>The number of coordinates per vertex in the input array</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>Array<number></code></pre>
+      </td>
+      <td class="member-return__description"><p>Triangulated polygon</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="sayHello">
+  <h3 class="member__title">sayHello</h3>
+  
+<pre class="signature__container"><code class="signature">static sayHello(type: string) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Logs out the version and renderer information for this running instance of PIXI.
+If you don't want to see this message you can run <code>PIXI.utils.skipHello()</code> before
+creating your renderer. Keep in mind that doing that will forever make you a jerk face.</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        type
+      </td>
+      <td class="member-parameter__type">
+        string
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The string renderer type to log.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="clearTextureCache">
+  <h3 class="member__title">clearTextureCache</h3>
+  
+<pre class="signature__container"><code class="signature">clearTextureCache() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Removes all textures from cache, but does not destroy them</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="correctBlendMode">
+  <h3 class="member__title">correctBlendMode</h3>
+  
+<pre class="signature__container"><code class="signature">correctBlendMode(blendMode: number, premultiplied: boolean) → {number}</code></pre>
+
+
+  <div class="member__brief"><p>changes blendMode according to texture format</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        blendMode
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>supposed blend mode</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        premultiplied
+      </td>
+      <td class="member-parameter__type">
+        boolean
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>whether source is premultiplied</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>number</code></pre>
+      </td>
+      <td class="member-return__description"><p>true blend mode for this texture</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="createIndicesForQuads">
+  <h3 class="member__title">createIndicesForQuads</h3>
+  
+<pre class="signature__container"><code class="signature">createIndicesForQuads(size: number, outBuffer: Uint16Array | Uint32Array) → {Uint16Array | Uint32Array}</code></pre>
+
+
+  <div class="member__brief"><p>Generic Mask Stack data structure</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        size
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      
+      <td class="member-parameter__description"><p>Number of quads</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        outBuffer
+      </td>
+      <td class="member-parameter__type">
+        Uint16Array | Uint32Array
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      
+      <td class="member-parameter__description"><p>Buffer for output, length has to be <code>6 * size</code></p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>Uint16Array | Uint32Array</code></pre>
+      </td>
+      <td class="member-return__description"><ul>
+<li>Resulting index buffer</li>
+</ul></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="decomposeDataUri">
+  <h3 class="member__title">decomposeDataUri</h3>
+  
+<pre class="signature__container"><code class="signature">decomposeDataUri(dataUri: string) → {<a href="PIXI.utils.DecomposedDataUri.html">PIXI.utils.DecomposedDataUri</a> | unknown}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Split a data URI into components. Returns undefined if
+parameter <code>dataUri</code> is not a valid data URI.</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        dataUri
+      </td>
+      <td class="member-parameter__type">
+        string
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the data URI to check</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.utils.DecomposedDataUri.html">PIXI.utils.DecomposedDataUri</a> | unknown</code></pre>
+      </td>
+      <td class="member-return__description"><p>The decomposed data uri or undefined</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="deprecation">
+  <h3 class="member__title">deprecation</h3>
+  
+<pre class="signature__container"><code class="signature">deprecation(version: string, message: string, ignoreDepth: number) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Helper for warning developers about deprecated features &amp; settings.
+A stack track for warnings is given; useful for tracking-down where
+deprecated methods/properties/classes are being used within the code.</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      <th class="member-parameter-header__default">Default</th>
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        version
+      </td>
+      <td class="member-parameter__type">
+        string
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>The version where the feature became deprecated</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        message
+      </td>
+      <td class="member-parameter__type">
+        string
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>Message should include what is deprecated, where, and the new solution</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        ignoreDepth
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        3
+      </td>
+      <td class="member-parameter__description"><p>The number of steps to ignore at the top of the error stack
+this is mostly to ignore internal deprecation calls.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroyTextureCache">
+  <h3 class="member__title">destroyTextureCache</h3>
+  
+<pre class="signature__container"><code class="signature">destroyTextureCache() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Destroys all texture in the cache</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getResolutionOfUrl">
+  <h3 class="member__title">getResolutionOfUrl</h3>
+  
+<pre class="signature__container"><code class="signature">getResolutionOfUrl(url: string, defaultValue: number) → {number}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>get the resolution / device pixel ratio of an asset by looking for the prefix
+used by spritesheets and image urls</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      <th class="member-parameter-header__default">Default</th>
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        url
+      </td>
+      <td class="member-parameter__type">
+        string
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>the image path</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        defaultValue
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        1
+      </td>
+      <td class="member-parameter__description"><p>the defaultValue if no filename prefix is set.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>number</code></pre>
+      </td>
+      <td class="member-return__description"><p>resolution / device pixel ratio of an asset</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="hex2rgb">
+  <h3 class="member__title">hex2rgb</h3>
+  
+<pre class="signature__container"><code class="signature">hex2rgb(hex: number, out: Array<number>) → {Array<number>}</code></pre>
+
+
+  <div class="member__brief"><p>Converts a hexadecimal color number to an [R, G, B] array of normalized floats (numbers from 0.0 to 1.0).</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      <th class="member-parameter-header__default">Default</th>
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        hex
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>The hexadecimal number to convert</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        out
+      </td>
+      <td class="member-parameter__type">
+        Array<number>
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        []
+      </td>
+      <td class="member-parameter__description"><p>If supplied, this array will be used rather than returning a new one</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>Array<number></code></pre>
+      </td>
+      <td class="member-return__description"><p>An array representing the [R, G, B] of the color where all values are floats.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="hex2string">
+  <h3 class="member__title">hex2string</h3>
+  
+<pre class="signature__container"><code class="signature">hex2string(hex: number) → {string}</code></pre>
+
+
+  <div class="member__brief"><p>Converts a hexadecimal color number to a string.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        hex
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Number in hex (e.g., <code>0xffffff</code>)</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>string</code></pre>
+      </td>
+      <td class="member-return__description"><p>The string color (e.g., <code>&quot;#ffffff&quot;</code>).</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="isPow2">
+  <h3 class="member__title">isPow2</h3>
+  
+<pre class="signature__container"><code class="signature">isPow2(v: number) → {boolean}</code></pre>
+
+
+  <div class="member__brief"><p>Checks if a number is a power of two.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        v
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>input value</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>boolean</code></pre>
+      </td>
+      <td class="member-return__description"><p><code>true</code> if value is power of two</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="isWebGLSupported">
+  <h3 class="member__title">isWebGLSupported</h3>
+  
+<pre class="signature__container"><code class="signature">isWebGLSupported() → {boolean}</code></pre>
+
+
+  <div class="member__brief"><p>Helper for checking for WebGL support.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>boolean</code></pre>
+      </td>
+      <td class="member-return__description"><p>Is WebGL supported.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="log2">
+  <h3 class="member__title">log2</h3>
+  
+<pre class="signature__container"><code class="signature">log2(v: number) → {number}</code></pre>
+
+
+  <div class="member__brief"><p>Computes ceil of log base 2</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        v
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>input value</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>number</code></pre>
+      </td>
+      <td class="member-return__description"><p>logarithm base 2</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="nextPow2">
+  <h3 class="member__title">nextPow2</h3>
+  
+<pre class="signature__container"><code class="signature">nextPow2(v: number) → {number}</code></pre>
+
+
+  <div class="member__brief"><p>Rounds to next power of two.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        v
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>input value</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>number</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="premultiplyRgba">
+  <h3 class="member__title">premultiplyRgba</h3>
+  
+<pre class="signature__container"><code class="signature">premultiplyRgba(rgb: Float32Array | number<Array>, alpha: number, out: Float32Array, premultiply: boolean) → {Float32Array}</code></pre>
+
+
+  <div class="member__brief"><p>combines rgb and alpha to out array</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      <th class="member-parameter-header__default">Default</th>
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        rgb
+      </td>
+      <td class="member-parameter__type">
+        Float32Array | number<Array>
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>input rgb</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        alpha
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>alpha param</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        out
+      </td>
+      <td class="member-parameter__type">
+        Float32Array
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>output</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        premultiply
+      </td>
+      <td class="member-parameter__type">
+        boolean
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        true
+      </td>
+      <td class="member-parameter__description"><p>do premultiply it</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>Float32Array</code></pre>
+      </td>
+      <td class="member-return__description"><p>vec4 rgba</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="premultiplyTint">
+  <h3 class="member__title">premultiplyTint</h3>
+  
+<pre class="signature__container"><code class="signature">premultiplyTint(tint: number, alpha: number) → {number}</code></pre>
+
+
+  <div class="member__brief"><p>premultiplies tint</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        tint
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>integer RGB</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        alpha
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>floating point alpha (0.0-1.0)</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>number</code></pre>
+      </td>
+      <td class="member-return__description"><p>tint multiplied by alpha</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="premultiplyTintToRgba">
+  <h3 class="member__title">premultiplyTintToRgba</h3>
+  
+<pre class="signature__container"><code class="signature">premultiplyTintToRgba(tint: number, alpha: number, out: Float32Array, premultiply: boolean) → {Float32Array}</code></pre>
+
+
+  <div class="member__brief"><p>converts integer tint and float alpha to vec4 form, premultiplies by default</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      <th class="member-parameter-header__default">Default</th>
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        tint
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>input tint</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        alpha
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>alpha param</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        out
+      </td>
+      <td class="member-parameter__type">
+        Float32Array
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>output</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        premultiply
+      </td>
+      <td class="member-parameter__type">
+        boolean
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        true
+      </td>
+      <td class="member-parameter__description"><p>do premultiply it</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>Float32Array</code></pre>
+      </td>
+      <td class="member-return__description"><p>vec4 rgba</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="removeItems">
+  <h3 class="member__title">removeItems</h3>
+  
+<pre class="signature__container"><code class="signature">removeItems(arr: Array<any>, startIdx: number, removeCount: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Remove items from a javascript array without generating garbage</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        arr
+      </td>
+      <td class="member-parameter__type">
+        Array<any>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Array to remove elements from</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        startIdx
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>starting index</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        removeCount
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>how many to remove</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="rgb2hex">
+  <h3 class="member__title">rgb2hex</h3>
+  
+<pre class="signature__container"><code class="signature">rgb2hex(rgb: Array<number>) → {number}</code></pre>
+
+
+  <div class="member__brief"><p>Converts a color as an [R, G, B] array of normalized floats to a hexadecimal number.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        rgb
+      </td>
+      <td class="member-parameter__type">
+        Array<number>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Array of numbers where all values are normalized floats from 0.0 to 1.0.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>number</code></pre>
+      </td>
+      <td class="member-return__description"><p>Number in hexadecimal.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="sign">
+  <h3 class="member__title">sign</h3>
+  
+<pre class="signature__container"><code class="signature">sign(n: number) → {number}</code></pre>
+
+
+  <div class="member__brief"><p>Returns sign of number</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        n
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the number to check the sign of</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>number</code></pre>
+      </td>
+      <td class="member-return__description"><p>0 if <code>n</code> is 0, -1 if <code>n</code> is negative, 1 if <code>n</code> is positive</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="skipHello">
+  <h3 class="member__title">skipHello</h3>
+  
+<pre class="signature__container"><code class="signature">skipHello() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Skips the hello message of renderers that are created after this is run.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="string2hex">
+  <h3 class="member__title">string2hex</h3>
+  
+<pre class="signature__container"><code class="signature">string2hex(string: string) → {number}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Converts a string to a hexadecimal color number.
+It can handle:
+hex strings starting with #: &quot;#ffffff&quot;
+hex strings starting with 0x: &quot;0xffffff&quot;
+hex strings without prefix: &quot;ffffff&quot;
+css colors: &quot;black&quot;</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        string
+      </td>
+      <td class="member-parameter__type">
+        string
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The string color (e.g., <code>&quot;#ffffff&quot;</code>)</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>number</code></pre>
+      </td>
+      <td class="member-return__description"><p>Number in hexadecimal.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="trimCanvas">
+  <h3 class="member__title">trimCanvas</h3>
+  
+<pre class="signature__container"><code class="signature">trimCanvas(canvas: HTMLCanvasElement) → {object}</code></pre>
+
+
+  <div class="member__brief"><p>Trim transparent borders from a canvas</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        canvas
+      </td>
+      <td class="member-parameter__type">
+        HTMLCanvasElement
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the canvas to trim</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>object</code></pre>
+      </td>
+      <td class="member-return__description"><p>Trim data</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="uid">
+  <h3 class="member__title">uid</h3>
+  
+<pre class="signature__container"><code class="signature">uid() → {number}</code></pre>
+
+
+  <div class="member__brief"><p>Gets the next unique identifier</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>number</code></pre>
+      </td>
+      <td class="member-return__description"><p>The next unique identifier to use.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.utils.html#BaseTextureCache">BaseTextureCache</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.utils.html#ProgramCache">ProgramCache</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.utils.html#TextureCache">TextureCache</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.utils.html#isMobile">isMobile</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.utils.html#premultiplyBlendMode">premultiplyBlendMode</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.utils.html#url">url</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.utils.html#earcut">earcut</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

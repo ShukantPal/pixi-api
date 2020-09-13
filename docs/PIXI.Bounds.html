@@ -1,0 +1,1506 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Bounds</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/display</div>
+    <h1 class="document__title">PIXI.Bounds</h1>
+    
+<pre class="signature__container"><code class="signature">class Bounds</code></pre>
+
+
+    <div class="document__brief"><p>'Builder' pattern for bounds rectangles.</p></div>
+    <div class="document__description"><p>This could be called an Axis-Aligned Bounding Box.
+It is not an actual shape. It is a mutable thing; no 'EMPTY' or those kind of problems.</p></div>
+
+    
+      
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="maxX">
+  <h3 class="member__title">maxX</h3>
+  
+<pre class="signature__container"><code class="signature">maxX: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="maxY">
+  <h3 class="member__title">maxY</h3>
+  
+<pre class="signature__container"><code class="signature">maxY: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="minX">
+  <h3 class="member__title">minX</h3>
+  
+<pre class="signature__container"><code class="signature">minX: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="minY">
+  <h3 class="member__title">minY</h3>
+  
+<pre class="signature__container"><code class="signature">minY: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="updateID">
+  <h3 class="member__title">updateID</h3>
+  
+<pre class="signature__container"><code class="signature">updateID: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>It is updated to _boundsID of corresponding object to keep bounds in sync with content.
+Updated from outside, thus public modifier.</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="addBounds">
+  <h3 class="member__title">addBounds</h3>
+  
+<pre class="signature__container"><code class="signature">addBounds(bounds: <a href="PIXI.Bounds.html">PIXI.Bounds</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Adds other Bounds.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        bounds
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Bounds.html">PIXI.Bounds</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The Bounds to be added</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addBoundsArea">
+  <h3 class="member__title">addBoundsArea</h3>
+  
+<pre class="signature__container"><code class="signature">addBoundsArea(bounds: <a href="PIXI.Bounds.html">PIXI.Bounds</a>, area: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Adds other Bounds, masked with Rectangle.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        bounds
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Bounds.html">PIXI.Bounds</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>TODO</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        area
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>TODO</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addBoundsMask">
+  <h3 class="member__title">addBoundsMask</h3>
+  
+<pre class="signature__container"><code class="signature">addBoundsMask(bounds: <a href="PIXI.Bounds.html">PIXI.Bounds</a>, mask: <a href="PIXI.Bounds.html">PIXI.Bounds</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Adds other Bounds, masked with Bounds.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        bounds
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Bounds.html">PIXI.Bounds</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The Bounds to be added.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        mask
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Bounds.html">PIXI.Bounds</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>TODO</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addBoundsMatrix">
+  <h3 class="member__title">addBoundsMatrix</h3>
+  
+<pre class="signature__container"><code class="signature">addBoundsMatrix(bounds: <a href="PIXI.Bounds.html">PIXI.Bounds</a>, matrix: <a href="PIXI.Matrix.html">PIXI.Matrix</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Adds other Bounds, multiplied by matrix. Bounds shouldn't be empty.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        bounds
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Bounds.html">PIXI.Bounds</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>other bounds</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        matrix
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Matrix.html">PIXI.Matrix</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>multiplicator</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addFrame">
+  <h3 class="member__title">addFrame</h3>
+  
+<pre class="signature__container"><code class="signature">addFrame(transform: <a href="PIXI.Transform.html">PIXI.Transform</a>, x0: number, y0: number, x1: number, y1: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Adds sprite frame, transformed.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        transform
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Transform.html">PIXI.Transform</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>transform to apply</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        x0
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>left X of frame</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        y0
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>top Y of frame</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        x1
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>right X of frame</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        y1
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>bottom Y of frame</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addFrameMatrix">
+  <h3 class="member__title">addFrameMatrix</h3>
+  
+<pre class="signature__container"><code class="signature">addFrameMatrix(matrix: <a href="PIXI.Matrix.html">PIXI.Matrix</a>, x0: number, y0: number, x1: number, y1: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Adds sprite frame, multiplied by matrix</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        matrix
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Matrix.html">PIXI.Matrix</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>matrix to apply</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        x0
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>left X of frame</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        y0
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>top Y of frame</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        x1
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>right X of frame</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        y1
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>bottom Y of frame</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addFramePad">
+  <h3 class="member__title">addFramePad</h3>
+  
+<pre class="signature__container"><code class="signature">addFramePad(x0: number, y0: number, x1: number, y1: number, padX: number, padY: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Adds padded frame. (x0, y0) should be strictly less than (x1, y1)</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        x0
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>left X of frame</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        y0
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>top Y of frame</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        x1
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>right X of frame</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        y1
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>bottom Y of frame</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        padX
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>padding X</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        padY
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>padding Y</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addPoint">
+  <h3 class="member__title">addPoint</h3>
+  
+<pre class="signature__container"><code class="signature">addPoint(point: <a href="PIXI.IPointData.html">PIXI.IPointData</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>This function should be inlined when its possible.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        point
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.IPointData.html">PIXI.IPointData</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The point to add.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addQuad">
+  <h3 class="member__title">addQuad</h3>
+  
+<pre class="signature__container"><code class="signature">addQuad(vertices: Float32Array) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Adds a quad, not transformed</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        vertices
+      </td>
+      <td class="member-parameter__type">
+        Float32Array
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The verts to add.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addVertexData">
+  <h3 class="member__title">addVertexData</h3>
+  
+<pre class="signature__container"><code class="signature">addVertexData(vertexData: Float32Array, beginOffset: number, endOffset: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Adds screen vertices from array</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        vertexData
+      </td>
+      <td class="member-parameter__type">
+        Float32Array
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>calculated vertices</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        beginOffset
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>begin offset</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        endOffset
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>end offset, excluded</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addVertices">
+  <h3 class="member__title">addVertices</h3>
+  
+<pre class="signature__container"><code class="signature">addVertices(transform: <a href="PIXI.Transform.html">PIXI.Transform</a>, vertices: Float32Array, beginOffset: number, endOffset: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Add an array of mesh vertices</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        transform
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Transform.html">PIXI.Transform</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>mesh transform</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        vertices
+      </td>
+      <td class="member-parameter__type">
+        Float32Array
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>mesh coordinates in array</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        beginOffset
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>begin offset</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        endOffset
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>end offset, excluded</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addVerticesMatrix">
+  <h3 class="member__title">addVerticesMatrix</h3>
+  
+<pre class="signature__container"><code class="signature">addVerticesMatrix(matrix: <a href="PIXI.Matrix.html">PIXI.Matrix</a>, vertices: Float32Array, beginOffset: number, endOffset: number, padX: number, padY: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Add an array of mesh vertices.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      <th class="member-parameter-header__default">Default</th>
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        matrix
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Matrix.html">PIXI.Matrix</a>
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>mesh matrix</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        vertices
+      </td>
+      <td class="member-parameter__type">
+        Float32Array
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>mesh coordinates in array</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        beginOffset
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>begin offset</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        endOffset
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>end offset, excluded</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        padX
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        0
+      </td>
+      <td class="member-parameter__description"><p>x padding</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        padY
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        0
+      </td>
+      <td class="member-parameter__description"><p>y padding</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="clear">
+  <h3 class="member__title">clear</h3>
+  
+<pre class="signature__container"><code class="signature">clear() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Clears the bounds and resets.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getRectangle">
+  <h3 class="member__title">getRectangle</h3>
+  
+<pre class="signature__container"><code class="signature">getRectangle(rect: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>) → {<a href="PIXI.Rectangle.html">PIXI.Rectangle</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Can return Rectangle.EMPTY constant, either construct new rectangle, either use your rectangle
+It is not guaranteed that it will return tempRect</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        rect
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      
+      <td class="member-parameter__description"><p>temporary object will be used if AABB is not empty</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Rectangle.html">PIXI.Rectangle</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>A rectangle of the bounds</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="isEmpty">
+  <h3 class="member__title">isEmpty</h3>
+  
+<pre class="signature__container"><code class="signature">isEmpty() → {boolean}</code></pre>
+
+
+  <div class="member__brief"><p>Checks if bounds are empty.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>boolean</code></pre>
+      </td>
+      <td class="member-return__description"><p>True if empty.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="pad">
+  <h3 class="member__title">pad</h3>
+  
+<pre class="signature__container"><code class="signature">pad(paddingX: number, paddingY: number) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Pads bounds object, making it grow in all directions.
+If paddingY is omitted, both paddingX and paddingY will be set to paddingX.</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      <th class="member-parameter-header__default">Default</th>
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        paddingX
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        0
+      </td>
+      <td class="member-parameter__description"><p>The horizontal padding amount.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        paddingY
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        0
+      </td>
+      <td class="member-parameter__description"><p>The vertical padding amount.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#maxX">maxX</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#maxY">maxY</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#minX">minX</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#minY">minY</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#updateID">updateID</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#addBounds">addBounds</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#addBoundsArea">addBoundsArea</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#addBoundsMask">addBoundsMask</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#addBoundsMatrix">addBoundsMatrix</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#addFrame">addFrame</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#addFrameMatrix">addFrameMatrix</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#addFramePad">addFramePad</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#addPoint">addPoint</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#addQuad">addQuad</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#addVertexData">addVertexData</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#addVertices">addVertices</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#addVerticesMatrix">addVerticesMatrix</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#clear">clear</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#getRectangle">getRectangle</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#isEmpty">isEmpty</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Bounds.html#pad">pad</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

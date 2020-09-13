@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: ProjectionSystem</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/core</div>
+    <h1 class="document__title">PIXI.ProjectionSystem</h1>
+    
+<pre class="signature__container"><code class="signature">class ProjectionSystem extends <a href="PIXI.System.html">PIXI.System</a></code></pre>
+
+
+    <div class="document__brief"><p>System plugin to the renderer to manage the projection matrix.</p></div>
+    <div class="document__description"></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+
+  
+    
+<div class="member" id="constructor">
+  <h3 class="member__title"></h3>
+  
+<pre class="signature__container"><code class="signature">new PIXI.ProjectionSystem(renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a>)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        renderer
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Renderer.html">PIXI.Renderer</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The renderer this System works for.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="defaultFrame">
+  <h3 class="member__title">defaultFrame</h3>
+  
+<pre class="signature__container"><code class="signature">defaultFrame: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Default destination frame</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="destinationFrame">
+  <h3 class="member__title">destinationFrame</h3>
+  
+<pre class="signature__container"><code class="signature">destinationFrame: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Destination frame</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="projectionMatrix">
+  <h3 class="member__title">projectionMatrix</h3>
+  
+<pre class="signature__container"><code class="signature">projectionMatrix: <a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Project matrix</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="renderer">
+  <h3 class="member__title">renderer</h3>
+  
+<pre class="signature__container"><code class="signature">renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a></code></pre>
+
+
+  <div class="member__brief"><p>The renderer this manager works for.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="sourceFrame">
+  <h3 class="member__title">sourceFrame</h3>
+  
+<pre class="signature__container"><code class="signature">sourceFrame: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Source frame</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="transform">
+  <h3 class="member__title">transform</h3>
+  
+<pre class="signature__container"><code class="signature">transform: <a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>A transform that will be appended to the projection matrix
+if null, nothing will be applied</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="calculateProjection">
+  <h3 class="member__title">calculateProjection</h3>
+  
+<pre class="signature__container"><code class="signature">calculateProjection(destinationFrame: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>, sourceFrame: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>, resolution: Number, root: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Updates the projection matrix based on a projection frame (which is a rectangle)</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        destinationFrame
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The destination frame.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        sourceFrame
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The source frame.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        resolution
+      </td>
+      <td class="member-parameter__type">
+        Number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Resolution</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        root
+      </td>
+      <td class="member-parameter__type">
+        boolean
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>If is root</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroy">
+  <h3 class="member__title">destroy</h3>
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Generic destroy methods to be overridden by the subclass</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="setTransform">
+  <h3 class="member__title">setTransform</h3>
+  
+<pre class="signature__container"><code class="signature">setTransform(matrix: <a href="PIXI.Matrix.html">PIXI.Matrix</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Sets the transform of the active render target to the given matrix</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        matrix
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Matrix.html">PIXI.Matrix</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The transformation matrix</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="update">
+  <h3 class="member__title">update</h3>
+  
+<pre class="signature__container"><code class="signature">update(destinationFrame: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>, sourceFrame: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>, resolution: Number, root: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Updates the projection matrix based on a projection frame (which is a rectangle).</p></div>
+  <div class="member__description"><p>Make sure to run <code>renderer.framebuffer.setViewport(destinationFrame)</code> after calling this.</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        destinationFrame
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The destination frame.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        sourceFrame
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The source frame.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        resolution
+      </td>
+      <td class="member-parameter__type">
+        Number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Resolution</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        root
+      </td>
+      <td class="member-parameter__type">
+        boolean
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>If is root</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ProjectionSystem.html#defaultFrame">defaultFrame</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ProjectionSystem.html#destinationFrame">destinationFrame</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ProjectionSystem.html#projectionMatrix">projectionMatrix</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ProjectionSystem.html#renderer">renderer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ProjectionSystem.html#sourceFrame">sourceFrame</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ProjectionSystem.html#transform">transform</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ProjectionSystem.html#calculateProjection">calculateProjection</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ProjectionSystem.html#destroy">destroy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ProjectionSystem.html#setTransform">setTransform</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ProjectionSystem.html#update">update</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

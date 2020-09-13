@@ -1,0 +1,627 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: G</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi-essentials/system-g</div>
+    <h1 class="document__title">G</h1>
+    
+<pre class="signature__container"><code class="signature">class G</code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>Plugin class for <code>renderer.plugins.g</code>. This API provides utilties for managing PixiJS geometries
+and their data. This includes:</p>
+<ul>
+<li>Comparing &amp; merging geometries</li>
+<li>Manipulating data based on the data-type</li>
+<li>Factory for typed-array buffers.</li>
+</ul></div>
+
+    
+      
+    
+
+    
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="compareStyle">
+  <h3 class="member__title">compareStyle</h3>
+  
+<pre class="signature__container"><code class="signature">compareStyle(g0: <a href="PIXI.Geometry.html">PIXI.Geometry</a>, g1: <a href="PIXI.Geometry.html">PIXI.Geometry</a>) → {boolean}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Compares the geometry styles of two {@code PIXI.Geometry} objects. The style comprises of
+attributes (not their buffers) and instancing flags.</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        g0
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Geometry.html">PIXI.Geometry</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        g1
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Geometry.html">PIXI.Geometry</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>boolean</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="copyBuffer">
+  <h3 class="member__title">copyBuffer</h3>
+  
+<pre class="signature__container"><code class="signature">copyBuffer(src: ArrayBufferView, dst: ArrayBufferView, len: number, offset: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Copies the elements in {@code src} into {@code dst}.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      <th class="member-parameter-header__default">Default</th>
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        src
+      </td>
+      <td class="member-parameter__type">
+        ArrayBufferView
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>the source buffer</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        dst
+      </td>
+      <td class="member-parameter__type">
+        ArrayBufferView
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>the destination buffer</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        len
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        src.length
+      </td>
+      <td class="member-parameter__description"><p>the number of elements to copy</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        offset
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        0
+      </td>
+      <td class="member-parameter__description"><p>the offset in {@code dst} to start writing into</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="copyData">
+  <h3 class="member__title">copyData</h3>
+  
+<pre class="signature__container"><code class="signature">copyData(into: <a href="PIXI.Geometry.html">PIXI.Geometry</a>, geom: <a href="PIXI.Geometry.html">PIXI.Geometry</a>, startVertex: number, swap: boolean, validateStyle: boolean) → {<a href="PIXI.Geometry.html">PIXI.Geometry</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Copies {@code geom} into the geometry {@code into}.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      <th class="member-parameter-header__default">Default</th>
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        into
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Geometry.html">PIXI.Geometry</a>
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        geom
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Geometry.html">PIXI.Geometry</a>
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        startVertex
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        0
+      </td>
+      <td class="member-parameter__description"><p>the vertex at which to start writing &quot;geom&quot; into &quot;into&quot;'s
+buffer. By default, this is zero and will overwrite &quot;geom&quot;.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        swap
+      </td>
+      <td class="member-parameter__type">
+        boolean
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        false
+      </td>
+      <td class="member-parameter__description"><p>whether the geometry's buffers can be swapped with a
+larger capacity. If false, then an error will be thrown if &quot;into&quot; does not contain
+enough capacity.</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        validateStyle
+      </td>
+      <td class="member-parameter__type">
+        boolean
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        false
+      </td>
+      <td class="member-parameter__description"><p>validates whether the style of &quot;geom&quot; is the same
+as &quot;into&quot;. If not, then no modifications are done and it is returend as-is.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Geometry.html">PIXI.Geometry</a></code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="returnBuffer">
+  <h3 class="member__title">returnBuffer</h3>
+  
+<pre class="signature__container"><code class="signature">returnBuffer(buffer: <a href="PIXI.ViewableBuffer.html">PIXI.ViewableBuffer</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Frees the buffer previously allocated using {@code allocateBuffer}.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        buffer
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.ViewableBuffer.html">PIXI.ViewableBuffer</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="sizeOf">
+  <h3 class="member__title">sizeOf</h3>
+  
+<pre class="signature__container"><code class="signature">sizeOf(dataType: <a href="PIXI.TYPES.html">PIXI.TYPES</a>) → {number}</code></pre>
+
+
+  <div class="member__brief"><p>Returns the size of the {@code PIXI.TYPES} data type in bytes.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        dataType
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.TYPES.html">PIXI.TYPES</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>number</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="viewOf">
+  <h3 class="member__title">viewOf</h3>
+  
+<pre class="signature__container"><code class="signature">viewOf(dataType: <a href="PIXI.TYPES.html">PIXI.TYPES</a>, buffer: ArrayBuffer | ArrayBufferView) → {ArrayBufferView_}</code></pre>
+
+
+  <div class="member__brief"><p>Returns the array-buffer view for the given type.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        dataType
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.TYPES.html">PIXI.TYPES</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        buffer
+      </td>
+      <td class="member-parameter__type">
+        ArrayBuffer | ArrayBufferView
+      </td>
+      
+      
+      <td class="member-parameter__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>ArrayBufferView_</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="G.html#compareStyle">compareStyle</a></li>
+    
+      <li class="page-members-explorer__item"><a href="G.html#copyBuffer">copyBuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="G.html#copyData">copyData</a></li>
+    
+      <li class="page-members-explorer__item"><a href="G.html#returnBuffer">returnBuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="G.html#sizeOf">sizeOf</a></li>
+    
+      <li class="page-members-explorer__item"><a href="G.html#viewOf">viewOf</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

@@ -1,0 +1,508 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: ProgramTemplate</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi-essentials/shader-preprocessor</div>
+    <h1 class="document__title">ProgramTemplate</h1>
+    
+<pre class="signature__container"><code class="signature">class ProgramTemplate</code></pre>
+
+
+    <div class="document__brief"><p>Helper class to create and manage a program template.</p></div>
+    <div class="document__description"></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+
+  
+    
+<div class="member" id="constructor">
+  <h3 class="member__title"></h3>
+  
+<pre class="signature__container"><code class="signature">new ProgramTemplate(vertexTemplateSrc: string, fragmentTemplateSrc: string, name)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        vertexTemplateSrc
+      </td>
+      <td class="member-parameter__type">
+        string
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      
+      <td class="member-parameter__description"><p>vertex shader template</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        fragmentTemplateSrc
+      </td>
+      <td class="member-parameter__type">
+        string
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      
+      <td class="member-parameter__description"><p>fragment shader template</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        name
+      </td>
+      <td class="member-parameter__type">
+        
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      
+      <td class="member-parameter__description"><p>name of the shader template. This is used to generate the names for generated programs.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="fragmentMacroData">
+  <h3 class="member__title">fragmentMacroData</h3>
+  
+<pre class="signature__container"><code class="signature">fragmentMacroData</code></pre>
+
+
+  <div class="member__brief"><p>The macros used in the fragment shader</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="fragmentTemplateSrc">
+  <h3 class="member__title">fragmentTemplateSrc</h3>
+  
+<pre class="signature__container"><code class="signature">fragmentTemplateSrc</code></pre>
+
+
+  <div class="member__brief"><p>The fragment shader template</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="name">
+  <h3 class="member__title">name</h3>
+  
+<pre class="signature__container"><code class="signature">name</code></pre>
+
+
+  <div class="member__brief"><p>The name for generated programs</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="programCache">
+  <h3 class="member__title">programCache</h3>
+  
+<pre class="signature__container"><code class="signature">programCache</code></pre>
+
+
+  <div class="member__brief"><p>The cache of generated programs for each passed macro value.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="vertexMacroData">
+  <h3 class="member__title">vertexMacroData</h3>
+  
+<pre class="signature__container"><code class="signature">vertexMacroData</code></pre>
+
+
+  <div class="member__brief"><p>The macros used in the vertex shader</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="vertexTemplateSrc">
+  <h3 class="member__title">vertexTemplateSrc</h3>
+  
+<pre class="signature__container"><code class="signature">vertexTemplateSrc</code></pre>
+
+
+  <div class="member__brief"><p>The vertex shader template</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="extractData">
+  <h3 class="member__title">extractData</h3>
+  
+<pre class="signature__container"><code class="signature">extractData(templateSrc: string) → {TemplateData}</code></pre>
+
+
+  <div class="member__brief"><p>Extracts the macros used in the template source.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        templateSrc
+      </td>
+      <td class="member-parameter__type">
+        string
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the shader template source</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>TemplateData</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="generateProgram">
+  <h3 class="member__title">generateProgram</h3>
+  
+<pre class="signature__container"><code class="signature">generateProgram(data: MacroData, name: string) → {<a href="PIXI.Program.html">PIXI.Program</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Generates a shader program from this template and passed macro-data.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        data
+      </td>
+      <td class="member-parameter__type">
+        MacroData
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>data providing the values of the macros in the shader template</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        name
+      </td>
+      <td class="member-parameter__type">
+        string
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>optional name, if another name is desired</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Program.html">PIXI.Program</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>the generated shader program</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="processData">
+  <h3 class="member__title">processData</h3>
+  
+<pre class="signature__container"><code class="signature">processData(templateSrc: string, macros: TemplateData, data: MacroData) → {string}</code></pre>
+
+
+  <div class="member__brief"><p>Evaluates the macros in the template and generates the shader's source.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        templateSrc
+      </td>
+      <td class="member-parameter__type">
+        string
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>template source</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        macros
+      </td>
+      <td class="member-parameter__type">
+        TemplateData
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>data defining the macros in the template source</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        data
+      </td>
+      <td class="member-parameter__type">
+        MacroData
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>data providing the values for the macros</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>string</code></pre>
+      </td>
+      <td class="member-return__description"><p>the generated shader source</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="ProgramTemplate.html#fragmentMacroData">fragmentMacroData</a></li>
+    
+      <li class="page-members-explorer__item"><a href="ProgramTemplate.html#fragmentTemplateSrc">fragmentTemplateSrc</a></li>
+    
+      <li class="page-members-explorer__item"><a href="ProgramTemplate.html#name">name</a></li>
+    
+      <li class="page-members-explorer__item"><a href="ProgramTemplate.html#programCache">programCache</a></li>
+    
+      <li class="page-members-explorer__item"><a href="ProgramTemplate.html#vertexMacroData">vertexMacroData</a></li>
+    
+      <li class="page-members-explorer__item"><a href="ProgramTemplate.html#vertexTemplateSrc">vertexTemplateSrc</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="ProgramTemplate.html#extractData">extractData</a></li>
+    
+      <li class="page-members-explorer__item"><a href="ProgramTemplate.html#generateProgram">generateProgram</a></li>
+    
+      <li class="page-members-explorer__item"><a href="ProgramTemplate.html#processData">processData</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

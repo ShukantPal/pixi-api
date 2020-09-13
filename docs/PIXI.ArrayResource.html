@@ -1,0 +1,859 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: ArrayResource</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/core</div>
+    <h1 class="document__title">PIXI.ArrayResource</h1>
+    
+<pre class="signature__container"><code class="signature">class ArrayResource extends <a href="PIXI.Resource.html">PIXI.Resource</a></code></pre>
+
+
+    <div class="document__brief"><p>A resource that contains a number of sources.</p></div>
+    <div class="document__description"></div>
+
+    
+      
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="bind">
+  <h3 class="member__title">bind</h3>
+  
+<pre class="signature__container"><code class="signature">bind: <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Add binding</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        baseTexture
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroyed">
+  <h3 class="member__title">destroyed</h3>
+  
+<pre class="signature__container"><code class="signature">destroyed: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>If resource has been destroyed</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="height">
+  <h3 class="member__title">height</h3>
+  
+<pre class="signature__container"><code class="signature">height: number</code></pre>
+
+
+  <div class="member__brief"><p>The height of the resource.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="valid">
+  <h3 class="member__title">valid</h3>
+  
+<pre class="signature__container"><code class="signature">valid: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Has been validated</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="width">
+  <h3 class="member__title">width</h3>
+  
+<pre class="signature__container"><code class="signature">width: number</code></pre>
+
+
+  <div class="member__brief"><p>The width of the resource.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Properties</h2>
+
+  
+    
+<div class="member" id="_height">
+  <h3 class="member__title">_height</h3>
+  
+<pre class="signature__container"><code class="signature">protected _height: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Internal height of the resource</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_width">
+  <h3 class="member__title">_width</h3>
+  
+<pre class="signature__container"><code class="signature">protected _width: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Internal width of the resource</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="internal">
+  <h3 class="member__title">internal</h3>
+  
+<pre class="signature__container"><code class="signature">protected internal: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p><code>true</code> if resource is created by BaseTexture
+useful for doing cleanup with BaseTexture destroy
+and not cleaning up resources that were created
+externally.</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="addBaseTextureAt">
+  <h3 class="member__title">addBaseTextureAt</h3>
+  
+<pre class="signature__container"><code class="signature">addBaseTextureAt(baseTexture: <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a>, index: number) → {<a href="PIXI.ArrayResource.html">PIXI.ArrayResource</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Set a baseTexture by ID,
+ArrayResource just takes resource from it, nothing more</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        baseTexture
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        index
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Zero-based index of resource to set</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.ArrayResource.html">PIXI.ArrayResource</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>Instance for chaining</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroy">
+  <h3 class="member__title">destroy</h3>
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Call when destroying resource, unbind any BaseTexture object
+before calling this method, as reference counts are maintained
+internally.</p></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="resize">
+  <h3 class="member__title">resize</h3>
+  
+<pre class="signature__container"><code class="signature">resize(width: number, height: number) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Trigger a resize event</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        width
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>X dimension</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        height
+      </td>
+      <td class="member-parameter__type">
+        number
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Y dimension</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="style">
+  <h3 class="member__title">style</h3>
+  
+<pre class="signature__container"><code class="signature">style(renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a>, baseTexture: <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a>, glTexture: <a href="PIXI.GLTexture.html">PIXI.GLTexture</a>) → {boolean}</code></pre>
+
+
+  <div class="member__brief"><p>Set the style, optional to override</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        renderer
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Renderer.html">PIXI.Renderer</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>yeah, renderer!</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        baseTexture
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the texture</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        glTexture
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.GLTexture.html">PIXI.GLTexture</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>texture instance for this webgl context</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>boolean</code></pre>
+      </td>
+      <td class="member-return__description"><p><code>true</code> is success</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="unbind">
+  <h3 class="member__title">unbind</h3>
+  
+<pre class="signature__container"><code class="signature">unbind(baseTexture: <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Unbind to a parent BaseTexture</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        baseTexture
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Parent texture</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="update">
+  <h3 class="member__title">update</h3>
+  
+<pre class="signature__container"><code class="signature">update() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Has been updated trigger event</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="upload">
+  <h3 class="member__title">upload</h3>
+  
+<pre class="signature__container"><code class="signature">upload(renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a>, texture: <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a>, glTexture: <a href="PIXI.GLTexture.html">PIXI.GLTexture</a>) → {boolean}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Upload the resources to the GPU.</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        renderer
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Renderer.html">PIXI.Renderer</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        texture
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        glTexture
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.GLTexture.html">PIXI.GLTexture</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>boolean</code></pre>
+      </td>
+      <td class="member-return__description"><p>whether texture was uploaded</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Methods</h2>
+
+  
+    
+<div class="member" id="dispose">
+  <h3 class="member__title">dispose</h3>
+  
+<pre class="signature__container"><code class="signature">protected dispose() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Clean up anything, this happens when destroying is ready.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="load">
+  <h3 class="member__title">load</h3>
+  
+<pre class="signature__container"><code class="signature">protected load() → {Promise<void>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>This can be overridden to start preloading a resource
+or do any other prepare step.</p></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>Promise<void></code></pre>
+      </td>
+      <td class="member-return__description"><p>Handle the validate event</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ArrayResource.html#bind">bind</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ArrayResource.html#destroyed">destroyed</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ArrayResource.html#height">height</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ArrayResource.html#valid">valid</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ArrayResource.html#width">width</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Protected Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ArrayResource.html#_height">_height</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ArrayResource.html#_width">_width</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ArrayResource.html#internal">internal</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ArrayResource.html#addBaseTextureAt">addBaseTextureAt</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ArrayResource.html#destroy">destroy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ArrayResource.html#resize">resize</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ArrayResource.html#style">style</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ArrayResource.html#unbind">unbind</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ArrayResource.html#update">update</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ArrayResource.html#upload">upload</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Protected Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ArrayResource.html#dispose">dispose</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ArrayResource.html#load">load</a></li>
+    
+  </ul>
+</div>
+
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Test Template</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="homepage">
+
+  <div class="homepage__readme md">
+    <h1>pixi-batch-renderer</h1>
+<p><img src="https://github.com/pixijs/pixi-batch-renderer/workflows/Node.js%20CI/badge.svg" alt="Node.js CI">
+<a href="https://packagephobia.now.sh/result?p=pixi-batch-renderer"><img src="https://packagephobia.now.sh/badge?p=pixi-batch-renderer" alt="install size"></a>
+<img src="https://img.shields.io/bundlephobia/min/pixi-batch-renderer" alt="">
+<img src="https://img.shields.io/npm/v/pixi-batch-renderer/latest" alt="">
+<a href="https://www.jsdelivr.com/package/npm/pixi-batch-renderer-alpha"><img src="https://data.jsdelivr.com/v1/package/npm/pixi-batch-renderer-alpha/badge" alt=""></a>
+<img src="https://david-dm.org/sukantpal/pixi-batch-renderer.svg" alt="dependencies"></p>
+<p><code>pixi-batch-renderer</code> is a PixiJS plugin that allows you to add batch rendering to your custom display objects. I have documented each class in the <code>PIXI.brend</code> namespace.</p>
+<h2>Concepts</h2>
+<p><a href="https://medium.com/swlh/inside-pixijs-batch-rendering-system-fad1b466c420">Batch rendering</a> objects involves aggregating them into groups/batches and rendering them together with one WebGL draw call. PixiJS supports batch rendering its internal display objects - <code>PIXI.Sprite</code>, <code>PIXI.Graphics</code>, and <code>PIXI.Mesh</code>. However, it is difficult to extend that to custom-built display objects; it wasn't designed as an exposable API.</p>
+<p>This library builds upon the same concept and is designed for maximum flexibility. It still uses PixiJS's batch system - a stub that enables objects to be rendered asynchronously, without loosing the order of rendering. To understand how it works, understanding these things are helpful:</p>
+<ul>
+<li>
+<p><strong>Attribute Redirects</strong>: An attribute redirect is a data-object that tells <code>pixi-batch-renderer</code> how it will transform your object into a set of shader attributes.</p>
+</li>
+<li>
+<p><strong>Index Property</strong>: If you use indices, this will be property on your display object that holds those indices. It could also be a constant array, rather than a property on each object.</p>
+</li>
+<li>
+<p><strong>State Function</strong>: This function/property tells the batch renderer what WebGL state is required to render a display-object. It is optional if you're display objects use the default state (<code>PIXI.State.for2d()</code>).</p>
+</li>
+<li>
+<p><strong>Shader Function</strong>: This function generates the shader to render whole batches. It takes one argument - the batch renderer
+that will use the shader. You can use the <code>BatchShaderFactory#derive()</code> API for create one.</p>
+</li>
+</ul>
+<h3>New features</h3>
+<ul>
+<li>
+<p><strong>Shader Templates</strong>: The <code>BatchShaderFactory</code> allows you to write shader &quot;templates&quot; containing <code>%macros%</code>. At runtime, you
+can replace these macros based with another expression. For example, the (built-in) <code>%texturesPerBatch%</code> macro is set to the
+no. of textures units in the GPU.</p>
+</li>
+<li>
+<p><strong>Custom uniforms</strong>: [Experimental] You can also use uniforms in the batch shader; however, this might reduce the batching
+efficiency if most batchable display-objects have different values for uniforms (because then they can't be batched together).</p>
+</li>
+<li>
+<p><strong>Modular architecture</strong>: With the modular architecture of this library, you change the behaviour of any component. The
+geometry composition, batch generation, and drawing stages are componentized and can be modified by providing a custom
+implementation to <code>BatchRendererPluginFactory.from</code>.</p>
+</li>
+</ul>
+<h3>Caveat with filtered/masked objects</h3>
+<p>Before rendering itself, a <code>PIXI.Container</code> with filters or a mask will flush the batch renderer and will not batch itself. This
+is because the PixiJS batch renderer cannot batch filtered and masked objects. Although this does not break pixi-batch-renderer,
+it does reduce batching-efficiency. If you want to create a batch renderer that will batch filtered and masked objects too, your display-object must override <code>render</code> (<strong>however, you will have to derive your own batch renderer class for that</strong>):</p>
+<pre><code class="hljs">render(renderer: PIXI.Renderer): void
+{
+  <span class="hljs-comment">// If you registered the batch renderer as a plugin "pluginName", then replace &lt;BatchRenderer&gt; with</span>
+  <span class="hljs-comment">// renderer.plugins.pluginName</span>
+  renderer.setObjectRenderer(&lt;BatchRenderer&gt;);
+  &lt;BatchRenderer&gt;.render(<span class="hljs-keyword">this</span>);
+
+  <span class="hljs-keyword">for</span> (let i = <span class="hljs-number">0</span>, j = <span class="hljs-keyword">this</span>.children.length; i &lt; j; i++)
+  {
+      <span class="hljs-keyword">this</span>._children.render(renderer);
+  }
+}
+</code></pre>
+<h1>Usage</h1>
+<h3>Standard Pipeline</h3>
+<p>For most use cases, <code>PIXI.brend.BatchRendererPluginFactory</code> is all you'll need from this library. You need to do these three things:</p>
+<ol>
+<li>
+<p><strong>Generate the plugin class using <code>PIXI.brend.BatchRendererPluginFactory.from</code></strong></p>
+</li>
+<li>
+<p><strong>Register the plugin with PixiJS's WebGL renderer</strong></p>
+</li>
+<li>
+<p><strong>Make your custom display object defer its rendering to your plugin</strong></p>
+</li>
+</ol>
+<p>An example implementation would look like:</p>
+<pre><code class="hljs language-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> PIXI <span class="hljs-keyword">from</span> <span class="hljs-string">'pixi.js'</span>;
+<span class="hljs-keyword">import</span> { AttributeRedirect, BatchRendererPluginFactory, BatchShaderFactory } <span class="hljs-keyword">from</span> <span class="hljs-string">'pixi-batch-renderer'</span>;
+
+<span class="hljs-comment">// ExampleFigure has two attributes: aVertex and aTextureCoord. They come from the</span>
+<span class="hljs-comment">// vertices and uvs properties in this object. The indices are in the indices property.</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExampleFigure</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">PIXI</span>.<span class="hljs-title">Container</span>
+</span>{
+  _render(renderer)
+  {
+    <span class="hljs-keyword">this</span>.vertices = [x0,y0, x1,y1, x2,y2, ..., xn,yn];<span class="hljs-comment">// variable number of vertices</span>
+    <span class="hljs-keyword">this</span>.uvs = [u0,v0, u1,v1, u2, v2, ..., un,yn];<span class="hljs-comment">// however, all other attributes must have equal length</span>
+    <span class="hljs-keyword">this</span>.texture = PIXI.Texture.from(<span class="hljs-string">"url:example"</span>);
+
+    <span class="hljs-keyword">this</span>.indices = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, ..., n];<span class="hljs-comment">// we could also tell our batch renderer to not use indices too :)</span>
+
+    renderer.setObjectRenderer(renderer.plugins[<span class="hljs-string">"ExampleRenderer"</span>]);
+    renderer.plugins[<span class="hljs-string">"ExampleRenderer"</span>].render(<span class="hljs-keyword">this</span>);
+  }
+}
+
+<span class="hljs-comment">// Define the geometry of ExampleFigure.</span>
+<span class="hljs-keyword">const</span> attribSet = [
+  <span class="hljs-keyword">new</span> AttributeRedirect({
+      <span class="hljs-attr">source</span>: <span class="hljs-string">"vertices"</span>, 
+      <span class="hljs-attr">attrib</span>: <span class="hljs-string">"aVertex"</span>, 
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'float32'</span>, 
+      <span class="hljs-attr">size</span>: <span class="hljs-number">2</span>, 
+      <span class="hljs-attr">glType</span>: PIXI.TYPES.FLOAT, 
+      <span class="hljs-attr">glSize</span>: <span class="hljs-number">2</span>
+  }),
+  <span class="hljs-keyword">new</span> AttributeRedirect({
+      <span class="hljs-attr">source</span>: <span class="hljs-string">"uvs"</span>, 
+      <span class="hljs-attr">attrib</span>: <span class="hljs-string">"aTextureCoord"</span>, 
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'float32'</span>, 
+      <span class="hljs-attr">size</span>: <span class="hljs-number">2</span>, 
+      <span class="hljs-attr">glType</span>: PIXI.TYPES.FLOAT, 
+      <span class="hljs-attr">size</span>: <span class="hljs-number">2</span>
+  }),
+];
+
+<span class="hljs-comment">// Create a shader function from a shader template!</span>
+<span class="hljs-keyword">const</span> shaderFunction = <span class="hljs-keyword">new</span> BatchShaderFactory(
+<span class="hljs-comment">// Vertex Shader</span>
+<span class="hljs-string">`
+attribute vec2 aVertex;
+attribute vec2 aTextureCoord;
+attribute float aTextureId;
+
+varying float vTextureId;
+varying vec2 vTextureCoord;
+
+uniform mat3 projectionMatrix;
+
+void main()
+{
+    gl_Position = vec4((projectionMatrix * vec3(aVertex.xy, 1)), 0, 1);
+    vTextureId = aTextureId;
+    vTextureCoord = aTextureCoord;
+}
+`</span>,
+
+<span class="hljs-comment">// Fragment Shader</span>
+<span class="hljs-string">`
+uniform uSamplers[%texturesPerBatch%];/* %texturesPerBatch% is a macro and will become a number */\
+varying float vTextureId;
+varying vec2 vTextureCoord;
+
+void main(void){
+    vec4 color;
+
+    /* get color, which is the pixel in texture uSamplers[vTextureId] @ vTextureCoord */
+    for (int k = 0; k &lt; %texturesPerBatch%; ++k)
+    {
+        if (int(vTextureId) == k)
+            color = texture2D(uSamplers[k], vTextureCoord);
+
+    }
+
+    gl_FragColor = color;
+}
+`</span>,
+{}).derive();
+
+<span class="hljs-comment">// Create batch renderer class</span>
+<span class="hljs-keyword">const</span> ExampleRenderer = BatchRendererPluginFactory.from({
+    attribSet,
+    <span class="hljs-attr">indexProperty</span>: <span class="hljs-string">"indices"</span>,
+    <span class="hljs-attr">textureProperty</span>: <span class="hljs-string">"texture"</span>,
+    <span class="hljs-attr">texIDAttrib</span>: <span class="hljs-string">"aTextureId"</span>, <span class="hljs-comment">// this will be used to locate the texture in the fragment shader later</span>
+    shaderFunction
+});
+
+<span class="hljs-comment">// Remember to do this before instantiating a PIXI.Application or PIXI.Renderer!</span>
+PIXI.Renderer.registerPlugin(<span class="hljs-string">"ExampleRenderer"</span>, ExampleRenderer);
+</code></pre>
+<h3>Uniforms Pipeline [Experimental]</h3>
+<p>You can take advantage of shader uniforms in batching too! pixi-batch-renderer supports this out of the box
+with the <code>AggregateUniformsBatchFactory</code>. There are two modes for uniforms:</p>
+<ul>
+<li>
+<p><strong>Aggregation mode</strong>: Uniforms of each display-object are aggregated into an array. Then an uniform-ID attribute
+is uploaded (say <code>aUniformId</code>) that tells the shader which uniform to pick out of an array. The attribute is passed
+to the plugin factory via the <code>uniformIDAttrib</code> option.</p>
+</li>
+<li>
+<p><strong>No-aggregation mode</strong>: Uniforms are uploaded in one-element arrays. Display-objects with different uniform values
+are not batched together. This is useful if your uniform values don't differ a lot and will avoid another attribute. To
+use this mode, simply don't pass an <code>uniformIDAttrib</code>.</p>
+</li>
+</ul>
+<ol>
+<li>Aggregation Mode (Example)</li>
+</ol>
+<pre><code class="hljs language-js"><span class="hljs-keyword">const</span> { UniformRedirect, AggregateUniformsBatchFactory } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'pixi-batch-renderer'</span>);
+
+<span class="hljs-keyword">const</span> shaderFunction = <span class="hljs-keyword">new</span> BatchShaderFactory(
+<span class="hljs-comment">// Vertex Shader</span>
+<span class="hljs-string">`
+attribute vec2 aVertex;
+attribute vec2 aTextureCoord;
+attribute float aTextureId;
+attribute float aUniformId;
+
+varying float vTextureId;
+varying vec2 vTextureCoord;
+varying float vUniformId;
+
+uniform mat3 projectionMatrix;
+
+void main()
+{
+    gl_Position = vec4((projectionMatrix * vec3(aVertex.xy, 1)), 0, 1);
+    vTextureId = aTextureId;
+    vTextureCoord = aTextureCoord;
+
+    vUniformId = aUniformId;
+}
+`</span>,
+
+<span class="hljs-comment">// Fragment Shader</span>
+<span class="hljs-string">`
+// You can also use this in the vertex shader.
+uniform shaderType[%uniformsPerBatch%];
+varying float vUniformId;
+
+uniform uSamplers[%texturesPerBatch%];/* %texturesPerBatch% is a macro and will become a number */\
+varying float vTextureId;
+varying vec2 vTextureCoord;
+
+void main(void){
+    vec4 color;
+    float type;
+
+    /* get color &amp; shaderType */
+    for (int k = 0; k &lt; int(max(%texturesPerBatch%., %uniformsPerBatch%.)); ++k)
+    {
+        if (int(vTextureId) == k) {
+            color = texture2D(uSamplers[k], vTextureCoord);
+        }
+        if (int(vUniformId) == k) {
+            type = shaderType[vUniformId];
+        }
+    }
+
+
+    if (type == 1)
+    {
+        gl_FragColor = color;
+    }
+    else
+    {
+        gl_FragColor = vec4(color.rgb * vTextureCoord.x, vTextureCoord.x);
+    }
+}
+`</span>,
+{}).derive();
+
+<span class="hljs-keyword">const</span> uniformSet = [
+  <span class="hljs-keyword">new</span> UniformRedirect({ <span class="hljs-attr">source</span>: <span class="hljs-string">"type"</span>, <span class="hljs-attr">uniform</span>: <span class="hljs-string">"shadingType"</span> });
+];
+
+<span class="hljs-keyword">const</span> ExampleRenderer = BatchRendererPluginFactory.from({
+  uniformSet,
+  <span class="hljs-attr">uniformIDAttrib</span>: <span class="hljs-string">"aUniformId"</span>,
+
+  <span class="hljs-comment">// Previous example's stuff</span>
+  attribSet,
+  <span class="hljs-attr">indexProperty</span>: <span class="hljs-string">"indices"</span>,
+  <span class="hljs-attr">textureProperty</span>: <span class="hljs-string">"texture"</span>,
+  <span class="hljs-attr">texIDAttrib</span>: <span class="hljs-string">"aTextureId"</span>,
+  shaderFunction,
+
+  <span class="hljs-attr">BatchFactoryClass</span>: AggregateUniformsBatchFactory
+})
+</code></pre>
+<ol start="2">
+<li>No Aggregation Mode (Example)</li>
+</ol>
+<pre><code class="hljs language-js"><span class="hljs-keyword">const</span> { UniformRedirect, AggregateUniformsBatchFactory } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'pixi-batch-renderer'</span>);
+
+<span class="hljs-keyword">const</span> shaderFunction = <span class="hljs-keyword">new</span> BatchShaderFactory(
+<span class="hljs-comment">// Vertex Shader (no changes to standard pipeline example!)</span>
+<span class="hljs-string">`
+attribute vec2 aVertex;
+attribute vec2 aTextureCoord;
+attribute float aTextureId;
+varying float vTextureId;
+varying vec2 vTextureCoord;
+
+uniform mat3 projectionMatrix;
+
+void main()
+{
+    gl_Position = vec4((projectionMatrix * vec3(aVertex.xy, 1)), 0, 1);
+    vTextureId = aTextureId;
+    vTextureCoord = aTextureCoord;
+}
+`</span>,
+
+<span class="hljs-comment">// Fragment Shader</span>
+<span class="hljs-string">`
+// Look only one-element instead of %uniformsPerBatch%
+uniform shaderType[1];
+varying float vUniformId;
+
+uniform uSamplers[%texturesPerBatch%];/* %texturesPerBatch% is a macro and will become a number */\
+varying float vTextureId;
+varying vec2 vTextureCoord;
+
+void main(void){
+    vec4 color;
+    float type = shaderType;
+
+    /* get color &amp; shaderType */
+    for (int k = 0; k &lt; %texturesPerBatch%; ++k)
+    {
+        if (int(vTextureId) == k) {
+            color = texture2D(uSamplers[k], vTextureCoord);
+        }
+    }
+
+    if (type == 1)
+    {
+        gl_FragColor = color;
+    }
+    else
+    {
+        gl_FragColor = vec4(color.rgb * vTextureCoord.x, vTextureCoord.x);
+    }
+}
+`</span>,
+{}).derive();
+
+<span class="hljs-keyword">const</span> uniformSet = [
+  <span class="hljs-keyword">new</span> UniformRedirect({ <span class="hljs-attr">source</span>: <span class="hljs-string">"type"</span>, <span class="hljs-attr">uniform</span>: <span class="hljs-string">"shaderType"</span> });
+];
+
+<span class="hljs-keyword">const</span> ExampleRenderer = BatchRendererPluginFactory.from({
+  uniformSet,
+
+  attribSet,
+  <span class="hljs-attr">indexProperty</span>: <span class="hljs-string">"indices"</span>,
+  <span class="hljs-attr">textureProperty</span>: <span class="hljs-string">"texture"</span>,
+  <span class="hljs-attr">texIDAttrib</span>: <span class="hljs-string">"aTextureId"</span>,
+  shaderFunction,
+
+  <span class="hljs-attr">BatchFactoryClass</span>: AggregateUniformsBatchFactory
+});
+
+PIXI.Renderer.registerPlugin(<span class="hljs-string">"erend"</span>, ExampleRenderer);
+
+<span class="hljs-comment">// Try using with a Sprite!</span>
+<span class="hljs-keyword">const</span> sprite = PIXI.Sprite.from(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>);
+
+sprite.pluginName = "erend";
+sprite.type = 0;// will fade out horizontally in shader
+</span></code></pre>
+<h3>Advanced/Customized Batch Generation</h3>
+<p>The <code>BatchRendererPluginFactory.from</code> method also accepts these (optional) options that can be used to extend the
+behaviour of built-in components:</p>
+<ul>
+<li>
+<p><code>BatchFactoryClass</code>: Child class of <a href="https://pixijs.io/pixi-batch-renderer/PIXI.brend.StdBatchFactory.html">StdBatchFactory</a></p>
+</li>
+<li>
+<p><code>BatchGeometryClass</code>: Child class of <a href="https://pixijs.io/pixi-batch-renderer/PIXI.brend.BatchGeometryFactory.html">BatchGeometry</a></p>
+</li>
+<li>
+<p><code>BatchDrawerClass</code>: Child class of <a href="https://pixijs.io/pixi-batch-renderer/PIXI.brend.BatchDrawer.html">BatchDrawer</a></p>
+</li>
+<li>
+<p><code>BatchRendererClass</code>: If overriding a component does not meet your requirements, you can derive your own batch renderer by
+providing a child class of <a href="https://pixijs.io/pixi-batch-renderer/PIXI.brend.BatchRenderer.html">BatchRenderer</a></p>
+</li>
+</ul>
+
+  </div>
+
+</div>
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

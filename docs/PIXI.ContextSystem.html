@@ -1,0 +1,785 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: ContextSystem</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/core</div>
+    <h1 class="document__title">PIXI.ContextSystem</h1>
+    
+<pre class="signature__container"><code class="signature">class ContextSystem extends <a href="PIXI.System.html">PIXI.System</a></code></pre>
+
+
+    <div class="document__brief"><p>System plugin to the renderer to manage the context.</p></div>
+    <div class="document__description"></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+
+  
+    
+<div class="member" id="constructor">
+  <h3 class="member__title"></h3>
+  
+<pre class="signature__container"><code class="signature">new PIXI.ContextSystem(renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a>)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        renderer
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Renderer.html">PIXI.Renderer</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The renderer this System works for.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="extensions">
+  <h3 class="member__title">extensions</h3>
+  
+<pre class="signature__container"><code class="signature">extensions: object</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Extensions being used</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="isLost">
+  <h3 class="member__title">isLost</h3>
+  
+<pre class="signature__container"><code class="signature">isLost: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p><code>true</code> if the context is lost</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="renderer">
+  <h3 class="member__title">renderer</h3>
+  
+<pre class="signature__container"><code class="signature">renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a></code></pre>
+
+
+  <div class="member__brief"><p>The renderer this manager works for.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="webGLVersion">
+  <h3 class="member__title">webGLVersion</h3>
+  
+<pre class="signature__container"><code class="signature">webGLVersion: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Either 1 or 2 to reflect the WebGL version being used</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="contextChange">
+  <h3 class="member__title">contextChange</h3>
+  
+<pre class="signature__container"><code class="signature">contextChange(gl: WebGLRenderingContext) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Handle the context change event</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        gl
+      </td>
+      <td class="member-parameter__type">
+        WebGLRenderingContext
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>new webgl context</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="createContext">
+  <h3 class="member__title">createContext</h3>
+  
+<pre class="signature__container"><code class="signature">createContext(canvas: HTMLCanvasElement, options: object) → {WebGLRenderingContext}</code></pre>
+
+
+  <div class="member__brief"><p>Helper class to create a WebGL Context</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        canvas
+      </td>
+      <td class="member-parameter__type">
+        HTMLCanvasElement
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>the canvas element that we will get the context from</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        options
+      </td>
+      <td class="member-parameter__type">
+        object
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>An options object that gets passed in to the canvas element containing the
+context attributes</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>WebGLRenderingContext</code></pre>
+      </td>
+      <td class="member-return__description"><p>the WebGL context</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroy">
+  <h3 class="member__title">destroy</h3>
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Generic destroy methods to be overridden by the subclass</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Methods</h2>
+
+  
+    
+<div class="member" id="getExtensions">
+  <h3 class="member__title">getExtensions</h3>
+  
+<pre class="signature__container"><code class="signature">protected getExtensions() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Auto-populate the extensions</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="handleContextLost">
+  <h3 class="member__title">handleContextLost</h3>
+  
+<pre class="signature__container"><code class="signature">protected handleContextLost(event: WebGLContextEvent) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Handles a lost webgl context</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        event
+      </td>
+      <td class="member-parameter__type">
+        WebGLContextEvent
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The context lost event.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="handleContextRestored">
+  <h3 class="member__title">handleContextRestored</h3>
+  
+<pre class="signature__container"><code class="signature">protected handleContextRestored() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Handles a restored webgl context</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="initFromContext">
+  <h3 class="member__title">initFromContext</h3>
+  
+<pre class="signature__container"><code class="signature">protected initFromContext(gl: WebGLRenderingContext) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Initialize the context</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        gl
+      </td>
+      <td class="member-parameter__type">
+        WebGLRenderingContext
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>WebGL context</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="initFromOptions">
+  <h3 class="member__title">initFromOptions</h3>
+  
+<pre class="signature__container"><code class="signature">protected initFromOptions(options: object) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Initialize from context options</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        options
+      </td>
+      <td class="member-parameter__type">
+        object
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>context attributes</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="postrender">
+  <h3 class="member__title">postrender</h3>
+  
+<pre class="signature__container"><code class="signature">protected postrender() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Handle the post-render runner event</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="validateContext">
+  <h3 class="member__title">validateContext</h3>
+  
+<pre class="signature__container"><code class="signature">protected validateContext(gl: WebGLRenderingContext) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Validate context</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        gl
+      </td>
+      <td class="member-parameter__type">
+        WebGLRenderingContext
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Render context</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ContextSystem.html#extensions">extensions</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ContextSystem.html#isLost">isLost</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ContextSystem.html#renderer">renderer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ContextSystem.html#webGLVersion">webGLVersion</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ContextSystem.html#contextChange">contextChange</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ContextSystem.html#createContext">createContext</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ContextSystem.html#destroy">destroy</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Protected Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ContextSystem.html#getExtensions">getExtensions</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ContextSystem.html#handleContextLost">handleContextLost</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ContextSystem.html#handleContextRestored">handleContextRestored</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ContextSystem.html#initFromContext">initFromContext</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ContextSystem.html#initFromOptions">initFromOptions</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ContextSystem.html#postrender">postrender</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.ContextSystem.html#validateContext">validateContext</a></li>
+    
+  </ul>
+</div>
+
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

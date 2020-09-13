@@ -1,0 +1,676 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Transform</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/math</div>
+    <h1 class="document__title">PIXI.Transform</h1>
+    
+<pre class="signature__container"><code class="signature">class Transform</code></pre>
+
+
+    <div class="document__brief"><p>Transform that takes care about its versions</p></div>
+    <div class="document__description"></div>
+
+    
+      
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="IDENTITY">
+  <h3 class="member__title">IDENTITY</h3>
+  
+<pre class="signature__container"><code class="signature">static IDENTITY: <a href="PIXI.Transform.html">PIXI.Transform</a></code></pre>
+
+
+  <div class="member__brief"><p>A default (identity) transform</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="localTransform">
+  <h3 class="member__title">localTransform</h3>
+  
+<pre class="signature__container"><code class="signature">localTransform: <a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+
+
+  <div class="member__brief"><p>The local transformation matrix.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="pivot">
+  <h3 class="member__title">pivot</h3>
+  
+<pre class="signature__container"><code class="signature">pivot: <a href="PIXI.ObservablePoint.html">PIXI.ObservablePoint</a></code></pre>
+
+
+  <div class="member__brief"><p>The pivot point of the displayObject that it rotates around.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="position">
+  <h3 class="member__title">position</h3>
+  
+<pre class="signature__container"><code class="signature">position: <a href="PIXI.ObservablePoint.html">PIXI.ObservablePoint</a></code></pre>
+
+
+  <div class="member__brief"><p>The coordinate of the object relative to the local coordinates of the parent.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="rotation">
+  <h3 class="member__title">rotation</h3>
+  
+<pre class="signature__container"><code class="signature">rotation: number</code></pre>
+
+
+  <div class="member__brief"><p>The rotation of the object in radians.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="scale">
+  <h3 class="member__title">scale</h3>
+  
+<pre class="signature__container"><code class="signature">scale: <a href="PIXI.ObservablePoint.html">PIXI.ObservablePoint</a></code></pre>
+
+
+  <div class="member__brief"><p>The scale factor of the object.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="skew">
+  <h3 class="member__title">skew</h3>
+  
+<pre class="signature__container"><code class="signature">skew: <a href="PIXI.ObservablePoint.html">PIXI.ObservablePoint</a></code></pre>
+
+
+  <div class="member__brief"><p>The skew amount, on the x and y axis.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="worldTransform">
+  <h3 class="member__title">worldTransform</h3>
+  
+<pre class="signature__container"><code class="signature">worldTransform: <a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+
+
+  <div class="member__brief"><p>The world transformation matrix.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Properties</h2>
+
+  
+    
+<div class="member" id="_currentLocalID">
+  <h3 class="member__title">_currentLocalID</h3>
+  
+<pre class="signature__container"><code class="signature">protected _currentLocalID: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The locally unique ID of the local transform
+used to calculate the current local transformation matrix.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_cx">
+  <h3 class="member__title">_cx</h3>
+  
+<pre class="signature__container"><code class="signature">protected _cx: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The X-coordinate value of the normalized local X axis,
+the first column of the local transformation matrix without a scale.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_cy">
+  <h3 class="member__title">_cy</h3>
+  
+<pre class="signature__container"><code class="signature">protected _cy: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The X-coordinate value of the normalized local Y axis,
+the second column of the local transformation matrix without a scale.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_localID">
+  <h3 class="member__title">_localID</h3>
+  
+<pre class="signature__container"><code class="signature">protected _localID: number</code></pre>
+
+
+  <div class="member__brief"><p>The locally unique ID of the local transform.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_parentID">
+  <h3 class="member__title">_parentID</h3>
+  
+<pre class="signature__container"><code class="signature">protected _parentID: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The locally unique ID of the parent's world transform
+used to calculate the current world transformation matrix.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_rotation">
+  <h3 class="member__title">_rotation</h3>
+  
+<pre class="signature__container"><code class="signature">protected _rotation: number</code></pre>
+
+
+  <div class="member__brief"><p>The rotation amount.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_sx">
+  <h3 class="member__title">_sx</h3>
+  
+<pre class="signature__container"><code class="signature">protected _sx: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The Y-coordinate value of the normalized local X axis,
+the first column of the local transformation matrix without a scale.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_sy">
+  <h3 class="member__title">_sy</h3>
+  
+<pre class="signature__container"><code class="signature">protected _sy: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The Y-coordinate value of the normalized local Y axis,
+the second column of the local transformation matrix without a scale.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_worldID">
+  <h3 class="member__title">_worldID</h3>
+  
+<pre class="signature__container"><code class="signature">protected _worldID: number</code></pre>
+
+
+  <div class="member__brief"><p>The locally unique ID of the world transform.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="setFromMatrix">
+  <h3 class="member__title">setFromMatrix</h3>
+  
+<pre class="signature__container"><code class="signature">setFromMatrix(matrix: <a href="PIXI.Matrix.html">PIXI.Matrix</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Decomposes a matrix and sets the transforms properties based on it.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        matrix
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Matrix.html">PIXI.Matrix</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The matrix to decompose</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="updateLocalTransform">
+  <h3 class="member__title">updateLocalTransform</h3>
+  
+<pre class="signature__container"><code class="signature">updateLocalTransform() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Updates the local transformation matrix.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="updateTransform">
+  <h3 class="member__title">updateTransform</h3>
+  
+<pre class="signature__container"><code class="signature">updateTransform(parentTransform: <a href="PIXI.Transform.html">PIXI.Transform</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Updates the local and the world transformation matrices.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        parentTransform
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Transform.html">PIXI.Transform</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The parent transform</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Methods</h2>
+
+  
+    
+<div class="member" id="onChange">
+  <h3 class="member__title">onChange</h3>
+  
+<pre class="signature__container"><code class="signature">protected onChange() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Called when a value changes.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="updateSkew">
+  <h3 class="member__title">updateSkew</h3>
+  
+<pre class="signature__container"><code class="signature">protected updateSkew() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Called when the skew or the rotation changes.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#IDENTITY">IDENTITY</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#localTransform">localTransform</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#pivot">pivot</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#position">position</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#rotation">rotation</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#scale">scale</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#skew">skew</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#worldTransform">worldTransform</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Protected Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#_currentLocalID">_currentLocalID</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#_cx">_cx</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#_cy">_cy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#_localID">_localID</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#_parentID">_parentID</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#_rotation">_rotation</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#_sx">_sx</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#_sy">_sy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#_worldID">_worldID</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#setFromMatrix">setFromMatrix</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#updateLocalTransform">updateLocalTransform</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#updateTransform">updateTransform</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Protected Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#onChange">onChange</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Transform.html#updateSkew">updateSkew</a></li>
+    
+  </ul>
+</div>
+
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Test Template</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="homepage">
+
+  <div class="homepage__readme md">
+    <h1>@pixi/ticker</h1>
+<h2>Installation</h2>
+<pre><code class="hljs language-bash">npm install @pixi/ticker
+</code></pre>
+<h2>Usage</h2>
+<p>Create a Ticker object directly:</p>
+<pre><code class="hljs language-js"><span class="hljs-keyword">import</span> { Ticker } <span class="hljs-keyword">from</span> <span class="hljs-string">'@pixi/ticker'</span>;
+
+<span class="hljs-keyword">const</span> ticker = <span class="hljs-keyword">new</span> Ticker();
+ticker.start();
+</code></pre>
+<p>Use as an Application plugin:</p>
+<pre><code class="hljs language-js"><span class="hljs-keyword">import</span> { TickerPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">'@pixi/ticker'</span>;
+<span class="hljs-keyword">import</span> { Application } <span class="hljs-keyword">from</span> <span class="hljs-string">'@pixi/app'</span>;
+
+Application.registerPlugin(TickerPlugin);
+
+<span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> Application();
+app.ticker.start();
+</code></pre>
+
+  </div>
+
+</div>
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

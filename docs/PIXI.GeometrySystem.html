@@ -1,0 +1,1201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: GeometrySystem</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/core</div>
+    <h1 class="document__title">PIXI.GeometrySystem</h1>
+    
+<pre class="signature__container"><code class="signature">class GeometrySystem extends <a href="PIXI.System.html">PIXI.System</a></code></pre>
+
+
+    <div class="document__brief"><p>System plugin to the renderer to manage geometry.</p></div>
+    <div class="document__description"></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+
+  
+    
+<div class="member" id="constructor">
+  <h3 class="member__title"></h3>
+  
+<pre class="signature__container"><code class="signature">new PIXI.GeometrySystem(renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a>)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        renderer
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Renderer.html">PIXI.Renderer</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The renderer this System works for.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="canUseUInt32ElementIndex">
+  <h3 class="member__title">canUseUInt32ElementIndex</h3>
+  
+<pre class="signature__container"><code class="signature">canUseUInt32ElementIndex: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p><code>true</code> if support <code>gl.UNSIGNED_INT</code> in <code>gl.drawElements</code> or <code>gl.drawElementsInstanced</code></p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="hasInstance">
+  <h3 class="member__title">hasInstance</h3>
+  
+<pre class="signature__container"><code class="signature">hasInstance: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p><code>true</code> if has <code>ANGLE_instanced_arrays</code> extension</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="hasVao">
+  <h3 class="member__title">hasVao</h3>
+  
+<pre class="signature__container"><code class="signature">hasVao: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p><code>true</code> if we has <code>*_vertex_array_object</code> extension</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="managedBuffers">
+  <h3 class="member__title">managedBuffers</h3>
+  
+<pre class="signature__container"><code class="signature">managedBuffers: object</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Cache for all buffers by id, used in case renderer gets destroyed or for profiling</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="managedGeometries">
+  <h3 class="member__title">managedGeometries</h3>
+  
+<pre class="signature__container"><code class="signature">managedGeometries: object</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Cache for all geometries by id, used in case renderer gets destroyed or for profiling</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="renderer">
+  <h3 class="member__title">renderer</h3>
+  
+<pre class="signature__container"><code class="signature">renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a></code></pre>
+
+
+  <div class="member__brief"><p>The renderer this manager works for.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="bind">
+  <h3 class="member__title">bind</h3>
+  
+<pre class="signature__container"><code class="signature">bind(geometry: <a href="PIXI.Geometry.html">PIXI.Geometry</a>, shader: <a href="PIXI.Shader.html">PIXI.Shader</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Binds geometry so that is can be drawn. Creating a Vao if required</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        geometry
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Geometry.html">PIXI.Geometry</a>
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      
+      <td class="member-parameter__description"><p>instance of geometry to bind</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        shader
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Shader.html">PIXI.Shader</a>
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      
+      <td class="member-parameter__description"><p>instance of shader to use vao for</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="contextChange">
+  <h3 class="member__title">contextChange</h3>
+  
+<pre class="signature__container"><code class="signature">contextChange() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Sets up the renderer context and necessary buffers.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroy">
+  <h3 class="member__title">destroy</h3>
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Generic destroy methods to be overridden by the subclass</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="disposeAll">
+  <h3 class="member__title">disposeAll</h3>
+  
+<pre class="signature__container"><code class="signature">disposeAll(contextLost: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>dispose all WebGL resources of all managed geometries and buffers</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      <th class="member-parameter-header__default">Default</th>
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        contextLost
+      </td>
+      <td class="member-parameter__type">
+        boolean
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        false
+      </td>
+      <td class="member-parameter__description"><p>If context was lost, we suppress <code>gl.delete</code> calls</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="disposeBuffer">
+  <h3 class="member__title">disposeBuffer</h3>
+  
+<pre class="signature__container"><code class="signature">disposeBuffer(buffer: <a href="PIXI.Buffer.html">PIXI.Buffer</a>, contextLost: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Disposes buffer</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      <th class="member-parameter-header__default">Default</th>
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        buffer
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Buffer.html">PIXI.Buffer</a>
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>buffer with data</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        contextLost
+      </td>
+      <td class="member-parameter__type">
+        boolean
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        false
+      </td>
+      <td class="member-parameter__description"><p>If context was lost, we suppress deleteVertexArray</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="disposeGeometry">
+  <h3 class="member__title">disposeGeometry</h3>
+  
+<pre class="signature__container"><code class="signature">disposeGeometry(geometry: <a href="PIXI.Geometry.html">PIXI.Geometry</a>, contextLost: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Disposes geometry</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      <th class="member-parameter-header__default">Default</th>
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        geometry
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Geometry.html">PIXI.Geometry</a>
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        
+      </td>
+      <td class="member-parameter__description"><p>Geometry with buffers. Only VAO will be disposed</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        contextLost
+      </td>
+      <td class="member-parameter__type">
+        boolean
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      <td class="member-parameter__default">
+        false
+      </td>
+      <td class="member-parameter__description"><p>If context was lost, we suppress deleteVertexArray</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="draw">
+  <h3 class="member__title">draw</h3>
+  
+<pre class="signature__container"><code class="signature">draw(type: Number, size: Number, start: Number, instanceCount: Number) → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Draw the geometry</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      <th class="member-parameter-header__attributes">Attributes</th>
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        type
+      </td>
+      <td class="member-parameter__type">
+        Number
+      </td>
+      <td class="member-parameter__attributes">
+        
+        
+        
+      </td>
+      
+      <td class="member-parameter__description"><p>the type primitive to render</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        size
+      </td>
+      <td class="member-parameter__type">
+        Number
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      
+      <td class="member-parameter__description"><p>the number of elements to be rendered</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        start
+      </td>
+      <td class="member-parameter__type">
+        Number
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      
+      <td class="member-parameter__description"><p>Starting index</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        instanceCount
+      </td>
+      <td class="member-parameter__type">
+        Number
+      </td>
+      <td class="member-parameter__attributes">
+        <p>&lt;optional&gt;</p>
+        
+        
+      </td>
+      
+      <td class="member-parameter__description"><p>the number of instances of the set of elements to execute</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>this</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="reset">
+  <h3 class="member__title">reset</h3>
+  
+<pre class="signature__container"><code class="signature">reset() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Reset and unbind any active VAO and geometry</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Methods</h2>
+
+  
+    
+<div class="member" id="activateVao">
+  <h3 class="member__title">activateVao</h3>
+  
+<pre class="signature__container"><code class="signature">protected activateVao(geometry: <a href="PIXI.Geometry.html">PIXI.Geometry</a>, program: <a href="PIXI.Program.html">PIXI.Program</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Activate vertex array object</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        geometry
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Geometry.html">PIXI.Geometry</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Geometry instance</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        program
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Program.html">PIXI.Program</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Shader program instance</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="checkCompatibility">
+  <h3 class="member__title">checkCompatibility</h3>
+  
+<pre class="signature__container"><code class="signature">protected checkCompatibility(geometry: <a href="PIXI.Geometry.html">PIXI.Geometry</a>, program: <a href="PIXI.Program.html">PIXI.Program</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Check compability between a geometry and a program</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        geometry
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Geometry.html">PIXI.Geometry</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Geometry instance</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        program
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Program.html">PIXI.Program</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Program instance</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getSignature">
+  <h3 class="member__title">getSignature</h3>
+  
+<pre class="signature__container"><code class="signature">protected getSignature(geometry: <a href="PIXI.Geometry.html">PIXI.Geometry</a>, program: <a href="PIXI.Program.html">PIXI.Program</a>) → {String}</code></pre>
+
+
+  <div class="member__brief"><p>Takes a geometry and program and generates a unique signature for them.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        geometry
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Geometry.html">PIXI.Geometry</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>to get signature from</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        program
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Program.html">PIXI.Program</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>to test geometry against</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>String</code></pre>
+      </td>
+      <td class="member-return__description"><p>Unique signature of the geometry and program</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="initGeometryVao">
+  <h3 class="member__title">initGeometryVao</h3>
+  
+<pre class="signature__container"><code class="signature">protected initGeometryVao(geometry: <a href="PIXI.Geometry.html">PIXI.Geometry</a>, program: <a href="PIXI.Program.html">PIXI.Program</a>) → {WebGLVertexArrayObject}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Creates or gets Vao with the same structure as the geometry and stores it on the geometry.
+If vao is created, it is bound automatically.</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        geometry
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Geometry.html">PIXI.Geometry</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Instance of geometry to to generate Vao for</p></td>
+    </tr><tr class="member-parameter">
+      <td class="member-parameter__name">
+        program
+      </td>
+      <td class="member-parameter__type">
+        <a href="PIXI.Program.html">PIXI.Program</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>Instance of program</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>WebGLVertexArrayObject</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="unbind">
+  <h3 class="member__title">unbind</h3>
+  
+<pre class="signature__container"><code class="signature">protected unbind() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Unbind/reset everything</p></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="updateBuffers">
+  <h3 class="member__title">updateBuffers</h3>
+  
+<pre class="signature__container"><code class="signature">protected updateBuffers() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Update buffers</p></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#canUseUInt32ElementIndex">canUseUInt32ElementIndex</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#hasInstance">hasInstance</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#hasVao">hasVao</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#managedBuffers">managedBuffers</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#managedGeometries">managedGeometries</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#renderer">renderer</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#bind">bind</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#contextChange">contextChange</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#destroy">destroy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#disposeAll">disposeAll</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#disposeBuffer">disposeBuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#disposeGeometry">disposeGeometry</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#draw">draw</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#reset">reset</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Protected Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#activateVao">activateVao</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#checkCompatibility">checkCompatibility</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#getSignature">getSignature</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#initGeometryVao">initGeometryVao</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#unbind">unbind</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GeometrySystem.html#updateBuffers">updateBuffers</a></li>
+    
+  </ul>
+</div>
+
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

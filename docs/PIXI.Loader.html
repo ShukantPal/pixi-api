@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Loader</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/loaders</div>
+    <h1 class="document__title">PIXI.Loader</h1>
+    
+<pre class="signature__container"><code class="signature">class Loader extends ResourceLoader</code></pre>
+
+
+    <div class="document__brief"><p>The new loader, extends Resource Loader by Chad Engler: https://github.com/englercj/resource-loader</p></div>
+    <div class="document__description"><pre><code class="hljs language-js"><span class="hljs-keyword">const</span> loader = PIXI.Loader.shared; <span class="hljs-comment">// PixiJS exposes a premade instance for you to use.</span>
+<span class="hljs-comment">//or</span>
+<span class="hljs-keyword">const</span> loader = <span class="hljs-keyword">new</span> PIXI.Loader(); <span class="hljs-comment">// you can also create your own if you want</span>
+
+<span class="hljs-keyword">const</span> sprites = {};
+
+<span class="hljs-comment">// Chainable `add` to enqueue a resource</span>
+loader.add(<span class="hljs-string">'bunny'</span>, <span class="hljs-string">'data/bunny.png'</span>)
+      .add(<span class="hljs-string">'spaceship'</span>, <span class="hljs-string">'assets/spritesheet.json'</span>);
+loader.add(<span class="hljs-string">'scoreFont'</span>, <span class="hljs-string">'assets/score.fnt'</span>);
+
+<span class="hljs-comment">// Chainable `pre` to add a middleware that runs for each resource, *before* loading that resource.</span>
+<span class="hljs-comment">// This is useful to implement custom caching modules (using filesystem, indexeddb, memory, etc).</span>
+loader.pre(cachingMiddleware);
+
+<span class="hljs-comment">// Chainable `use` to add a middleware that runs for each resource, *after* loading that resource.</span>
+<span class="hljs-comment">// This is useful to implement custom parsing modules (like spritesheet parsers, spine parser, etc).</span>
+loader.use(parsingMiddleware);
+
+<span class="hljs-comment">// The `load` method loads the queue of resources, and calls the passed in callback called once all</span>
+<span class="hljs-comment">// resources have loaded.</span>
+loader.load(<span class="hljs-function">(<span class="hljs-params">loader, resources</span>) =&gt;</span> {
+    <span class="hljs-comment">// resources is an object where the key is the name of the resource loaded and the value is the resource object.</span>
+    <span class="hljs-comment">// They have a couple default properties:</span>
+    <span class="hljs-comment">// - `url`: The URL that the resource was loaded from</span>
+    <span class="hljs-comment">// - `error`: The error that happened when trying to load (if any)</span>
+    <span class="hljs-comment">// - `data`: The raw data that was loaded</span>
+    <span class="hljs-comment">// also may contain other properties based on the middleware that runs.</span>
+    sprites.bunny = <span class="hljs-keyword">new</span> PIXI.TilingSprite(resources.bunny.texture);
+    sprites.spaceship = <span class="hljs-keyword">new</span> PIXI.TilingSprite(resources.spaceship.texture);
+    sprites.scoreFont = <span class="hljs-keyword">new</span> PIXI.TilingSprite(resources.scoreFont.texture);
+});
+
+<span class="hljs-comment">// throughout the process multiple signals can be dispatched.</span>
+loader.onProgress.add(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}); <span class="hljs-comment">// called once per loaded/errored file</span>
+loader.onError.add(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}); <span class="hljs-comment">// called once per errored file</span>
+loader.onLoad.add(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}); <span class="hljs-comment">// called once per loaded file</span>
+loader.onComplete.add(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}); <span class="hljs-comment">// called once when the queued resources all load.</span>
+</code></pre></div>
+
+    
+      
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="shared">
+  <h3 class="member__title">shared</h3>
+  
+<pre class="signature__container"><code class="signature">static shared: <a href="PIXI.Loader.html">PIXI.Loader</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>A premade instance of the loader that can be used to load resources.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="onComplete">
+  <h3 class="member__title">onComplete</h3>
+  
+<pre class="signature__container"><code class="signature">onComplete: <a href="PIXI.Loader.ILoaderSignal.html">PIXI.Loader.ILoaderSignal</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Dispatched when completely loaded all resources.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="onError">
+  <h3 class="member__title">onError</h3>
+  
+<pre class="signature__container"><code class="signature">onError: <a href="PIXI.Loader.ILoaderSignal.html">PIXI.Loader.ILoaderSignal</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Dispatched once per errored resource.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="onLoad">
+  <h3 class="member__title">onLoad</h3>
+  
+<pre class="signature__container"><code class="signature">onLoad: <a href="PIXI.Loader.ILoaderSignal.html">PIXI.Loader.ILoaderSignal</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Dispatched once per loaded resource.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="onProgress">
+  <h3 class="member__title">onProgress</h3>
+  
+<pre class="signature__container"><code class="signature">onProgress: <a href="PIXI.Loader.ILoaderSignal.html">PIXI.Loader.ILoaderSignal</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Dispatched once per loaded or errored resource.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="onStart">
+  <h3 class="member__title">onStart</h3>
+  
+<pre class="signature__container"><code class="signature">onStart: <a href="PIXI.Loader.ILoaderSignal.html">PIXI.Loader.ILoaderSignal</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Dispatched when the loader begins to loading process.</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="off">
+  <h3 class="member__title">off</h3>
+  
+<pre class="signature__container"><code class="signature">static off(event: any)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Use the corresponding signal, e.g., event <code>start`` is signal </code>onStart`.</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        event
+      </td>
+      <td class="member-parameter__type">
+        any
+      </td>
+      
+      
+      <td class="member-parameter__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="on">
+  <h3 class="member__title">on</h3>
+  
+<pre class="signature__container"><code class="signature">static on(event: any)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Use the corresponding signal, e.g., event <code>start`` is signal </code>onStart`.</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        event
+      </td>
+      <td class="member-parameter__type">
+        any
+      </td>
+      
+      
+      <td class="member-parameter__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="once">
+  <h3 class="member__title">once</h3>
+  
+<pre class="signature__container"><code class="signature">static once(event: any)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Use the corresponding signal, e.g., event <code>start`` is signal </code>onStart`.</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        event
+      </td>
+      <td class="member-parameter__type">
+        any
+      </td>
+      
+      
+      <td class="member-parameter__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="registerPlugin">
+  <h3 class="member__title">registerPlugin</h3>
+  
+<pre class="signature__container"><code class="signature">static registerPlugin(plugin: PIXI.ILoaderPlugin) → {<a href="PIXI.Loader.html">PIXI.Loader</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Adds a Loader plugin for the global shared loader and all
+new Loader instances created.</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        plugin
+      </td>
+      <td class="member-parameter__type">
+        PIXI.ILoaderPlugin
+      </td>
+      
+      
+      <td class="member-parameter__description"><p>The plugin to add</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Loader.html">PIXI.Loader</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>Reference to PIXI.Loader for chaining</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroy">
+  <h3 class="member__title">destroy</h3>
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Destroy the loader, removes references.</p></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Loader.html#shared">shared</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Loader.html#onComplete">onComplete</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Loader.html#onError">onError</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Loader.html#onLoad">onLoad</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Loader.html#onProgress">onProgress</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Loader.html#onStart">onStart</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Loader.html#off">off</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Loader.html#on">on</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Loader.html#once">once</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Loader.html#registerPlugin">registerPlugin</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Loader.html#destroy">destroy</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

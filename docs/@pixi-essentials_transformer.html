@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Test Template</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="homepage">
+
+  <div class="homepage__readme md">
+    <h1>@pixi-essentials/transformer</h1>
+<p>This package contains <code>Transformer</code>, which provides an interactive interface for scaling and rotating groups of display-objects.</p>
+<h2>Installation :package:</h2>
+<pre><code class="hljs language-base">npm install @pixi-essentials/transformer
+</code></pre>
+<h2>Pens :pen:</h2>
+<ul>
+<li>Standard usage: https://codepen.io/sukantpal/pen/dyMMmZm</li>
+<li>Usage with @pixi-essentials/react-bindings: https://codepen.io/sukantpal/pen/ZEWWoWX</li>
+</ul>
+<h2>Usage :page_facing_up:</h2>
+<pre><code class="hljs language-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> PIXI <span class="hljs-keyword">from</span> <span class="hljs-string">'pixi.js'</span>;
+<span class="hljs-keyword">import</span> { Transformer } <span class="hljs-keyword">from</span> <span class="hljs-string">'@pixi-essentials/transformer'</span>;
+
+<span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> PIXI.Application({
+    <span class="hljs-attr">resolution</span>: <span class="hljs-built_in">window</span>.devicePixelRatio,
+    <span class="hljs-attr">autoDensity</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">backgroundColor</span>: <span class="hljs-number">0xabcdef</span>,
+    <span class="hljs-attr">width</span>: <span class="hljs-number">1024</span>,
+    <span class="hljs-attr">height</span>: <span class="hljs-number">1024</span>,
+    <span class="hljs-attr">antialias</span>: <span class="hljs-literal">true</span>
+});
+
+<span class="hljs-built_in">document</span>.body.appendChild(app.view);
+
+<span class="hljs-keyword">const</span> circle = app.stage.addChild(<span class="hljs-keyword">new</span> PIXI.Graphics());
+
+circle.beginFill(<span class="hljs-number">0xfedbac</span>)
+    .drawCircle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">100</span>)
+    .endFill();
+circle.pivot.set(<span class="hljs-number">50</span>, <span class="hljs-number">100</span>);
+circle.scale.set(<span class="hljs-number">1</span>);
+circle.position.set(<span class="hljs-number">300</span>, <span class="hljs-number">300</span>);
+
+<span class="hljs-keyword">const</span> star = app.stage.addChild(<span class="hljs-keyword">new</span> PIXI.Graphics());
+
+star.beginFill(<span class="hljs-number">0xfedbac</span>)
+    .drawStar(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">8</span>, <span class="hljs-number">100</span>)
+    .endFill();
+star.position.set(<span class="hljs-number">800</span>, <span class="hljs-number">500</span>);
+star.pivot.set(<span class="hljs-number">50</span>, <span class="hljs-number">100</span>);
+
+app.stage.addChild(<span class="hljs-keyword">new</span> Transformer({
+    <span class="hljs-attr">group</span>: [circle, star],
+}));
+</code></pre>
+<p align="center">
+<img src="https://i.imgur.com/b82qYjF.png" width="790px" />
+</p>
+
+  </div>
+
+</div>
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>
