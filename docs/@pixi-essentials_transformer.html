@@ -35,6 +35,48 @@
 <li>Standard usage: https://codepen.io/sukantpal/pen/dyMMmZm</li>
 <li>Usage with @pixi-essentials/react-bindings: https://codepen.io/sukantpal/pen/ZEWWoWX</li>
 </ul>
+<h2>Transform options :page_with_curl:</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boxScalingEnabled</td>
+<td>false</td>
+<td>Scaling by dragging the edges of the bounding-box (also called the wireframe)</td>
+</tr>
+<tr>
+<td>centeredScaling</td>
+<td>false</td>
+<td>Whether scaling object should keep its center invariant (instead of the side being dragged)</td>
+</tr>
+<tr>
+<td>rotateEnabled</td>
+<td>true</td>
+<td>Enables the rotator handle above the top-edge of the wireframe</td>
+</tr>
+<tr>
+<td>scaleEnabled</td>
+<td>true</td>
+<td>Enables the 8 scaling handles (topLeft, topCenter, topRight, middleLeft, middleRight, bottomLeft, bottomCenter, bottomRight)</td>
+</tr>
+<tr>
+<td>skewEnabled</td>
+<td>false</td>
+<td>Enables the 2 skewing handles</td>
+</tr>
+<tr>
+<td>translateEnabled</td>
+<td>true</td>
+<td>Enables translation by dragging the wireframe. The transformer will capture all mouse events in the group's bounds</td>
+</tr>
+</tbody>
+</table>
 <h2>Usage :page_facing_up:</h2>
 <pre><code class="hljs language-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> PIXI <span class="hljs-keyword">from</span> <span class="hljs-string">'pixi.js'</span>;
 <span class="hljs-keyword">import</span> { Transformer } <span class="hljs-keyword">from</span> <span class="hljs-string">'@pixi-essentials/transformer'</span>;

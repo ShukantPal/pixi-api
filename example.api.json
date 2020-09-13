@@ -42575,7 +42575,7 @@
 			"name": "Transformer",
 			"type": "ClassDoc",
 			"brief": "",
-			"description": "<p>{@code Transformer} provides an interactive interface for editing the transforms in a group. It supports translating,\nscaling, rotating, and skewing display-objects both through interaction and code.</p>\n<p>A transformer operates in world-space, and it is best to not to position, scale, rotate, or skew one. If you do so, the\nwireframe itself will not distort (i.e. will adapt <em>against</em> your transforms). However, the wireframe may become\nthinner/thicker and the handles will scale &amp; rotate. For example, setting <code>transformer.scale.set(2)</code> will make the handles\ntwice as big, but will not scale the wireframe (assuming the display-object group itself has not been\nscaled up).</p>\n<p>NOTE: The transformer needs to capture all interaction events that would otherwise go to the display-objects in the\ngroup. Hence, it must be placed after them in the scene graph.</p>",
+			"description": "<p>{@code Transformer} provides an interactive interface for editing the transforms in a group. It supports translating,\nscaling, rotating, and skewing display-objects both through interaction and code.</p>\n<p>A transformer operates in world-space, and it is best to not position, scale, rotate, or skew one. If you do so, the\nwireframe itself will not distort (i.e. will adapt <em>against</em> your transforms). However, the wireframe may become\nthinner/thicker and the handles will scale &amp; rotate. For example, setting <code>transformer.scale.set(2)</code> will make the handles\ntwice as big, but will not scale the wireframe (assuming the display-object group itself has not been\nscaled up).</p>\n<p>NOTE: The transformer needs to capture all interaction events that would otherwise go to the display-objects in the\ngroup. Hence, it must be placed after them in the scene graph.</p>",
 			"children": [
 				{
 					"name": "_accessibleActive",
@@ -42688,6 +42688,13 @@
 					"scope": "instance",
 					"brief": "",
 					"description": "<p>The angle of the object in degrees.\n'rotation' and 'angle' have the same effect on a display object; rotation is in radians, angle is in degrees.</p>"
+				},
+				{
+					"name": "boxScalingTolerance",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The padding around the bounding-box to capture dragging on the edges.</p>",
+					"description": ""
 				},
 				{
 					"name": "buttonMode",
@@ -43280,6 +43287,13 @@
 					"scope": "instance",
 					"brief": "<p>Draws the bounding box into {@code this.wireframe}.</p>",
 					"description": ""
+				},
+				{
+					"name": "drawBoxScalingTolerance",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Draws around edges of the bounding box to capture pointer events within\n{@link Transformer#boxScalingTolerance}.</p>"
 				},
 				{
 					"name": "drawHandles",
@@ -46201,21 +46215,15 @@
 			]
 		},
 		{
-			"name": "DEFAULT_ROTATION_SNAP_TOLERANCE",
+			"name": "DEFAULT_ROTATION_SNAPS",
 			"type": "PropertyDoc",
-			"brief": "<p>The default snap tolerance, i.e. the maximum angle b/w the pointer &amp; nearest snap ray for snapping.</p>",
+			"brief": "<p>The default snap angles for rotation, in radians.</p>",
 			"description": ""
 		},
 		{
-			"name": "DEFAULT_SKEW_SNAP_TOLERANCE",
+			"name": "DEFAULT_SKEW_SNAPS",
 			"type": "PropertyDoc",
-			"brief": "<p>The default snap tolerance for skewing.</p>",
-			"description": ""
-		},
-		{
-			"name": "DEFAULT_WIREFRAME_STYLE",
-			"type": "PropertyDoc",
-			"brief": "<p>The default wireframe style for {@link Transformer}.</p>",
+			"brief": "<p>The default snap angles for skewing, in radians.</p>",
 			"description": ""
 		},
 		{
@@ -46453,16 +46461,16 @@
 			"description": ""
 		},
 		{
-			"name": "createVerticalSkew",
-			"type": "FunctionDoc",
-			"brief": "",
-			"description": ""
-		},
-		{
 			"name": "determineCrossOrigin",
 			"type": "FunctionDoc",
 			"brief": "",
 			"description": "<p>Sets the <code>crossOrigin</code> property for this resource based on if the url\nfor this resource is cross-origin. If crossOrigin was manually set, this\nfunction does nothing.\nNipped from the resource loader!</p>"
+		},
+		{
+			"name": "distanceToLine",
+			"type": "FunctionDoc",
+			"brief": "<p>Calculates the distance of (x,y) from the line through l0 and l1.</p>",
+			"description": ""
 		},
 		{
 			"name": "extractUniformsFromString",
@@ -46637,16 +46645,22 @@
 			]
 		},
 		{
+			"name": "ITransformerOptions",
+			"type": "InterfaceDoc",
+			"brief": "",
+			"description": ""
+		},
+		{
+			"name": "ITransformerStyle",
+			"type": "InterfaceDoc",
+			"brief": "",
+			"description": ""
+		},
+		{
 			"name": "ITypedArray",
 			"type": "InterfaceDoc",
 			"brief": "",
 			"description": "<p>PixiJS classes use this type instead of ArrayBuffer and typed arrays\nto support expressions like <code>geometry.buffers[0].data[0] = position.x</code>.</p>\n<p>Gives access to indexing and <code>length</code> field</p>"
-		},
-		{
-			"name": "multiplyTransform",
-			"type": "FunctionDoc",
-			"brief": "<p>Multiplies the transformation matrix {@code transform} to the display-object's transform.</p>",
-			"description": ""
 		},
 		{
 			"name": "OffscreenCanvas",

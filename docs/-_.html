@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>webdoc: vec4</title>
+    <title>webdoc: mat4</title>
 
     <link type="text/css" rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
@@ -25,9 +25,9 @@
 <div class="page-content">
   <div class="document">
     <div class="document__package">@pixi/unsafe-eval</div>
-    <h1 class="document__title">vec4</h1>
+    <h1 class="document__title">mat4</h1>
     
-<pre class="signature__container"><code class="signature">vec4(gl: <a href="IRenderingContext.html">IRenderingContext</a>, location: WebGLUniformLocation, _cv: any, value: Float32List) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">mat4(gl: <a href="IRenderingContext.html">IRenderingContext</a>, location: WebGLUniformLocation, _cv: any, value: number[]) → {void}</code></pre>
 
 
     <div class="document__brief"></div>
@@ -58,19 +58,31 @@
     </body>
   </div>
 </html>
->
+
+ml>
   </div>
 </html>
 "> </script>
     </body>
   </div>
 </html>
-ass="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
+<nav class="page-members-explorer">
+  
+  
+  
+  
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>
+parameter-header__type">Type</th>
       
       
       <th class="member-parameter-header__description">Description</th>
@@ -185,8 +197,7 @@ ass="member-parameters">
     </body>
   </div>
 </html>
-
-        
+      
       </td>
       <td class="member-parameter__description"></td>
     </tr><tr class="member-parameter">
@@ -835,6 +846,22 @@ depending on this type. Defaults to button.</p></div>
   <div class="member__brief"></div>
   <div class="member__description"><p>The angle of the object in degrees.
 'rotation' and 'angle' have the same effect on a display object; rotation is in radians, angle is in degrees.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="boxScalingTolerance">
+  <h3 class="member__title">boxScalingTolerance</h3>
+  
+<pre class="signature__container"><code class="signature">boxScalingTolerance</code></pre>
+
+
+  <div class="member__brief"><p>The padding around the bounding-box to capture dragging on the edges.</p></div>
+  <div class="member__description"></div>
 
   
 
@@ -2952,6 +2979,71 @@ Should it destroy the base texture of the child sprite</p></td>
       </td>
       <td class="member-parameter__type">
         <a href="OrientedBounds.html">OrientedBounds</a> | <a href="PIXI.AxisAlignedBounds.html">PIXI.AxisAlignedBounds</a>
+      </td>
+      
+      
+      <td class="member-parameter__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="drawBoxScalingTolerance">
+  <h3 class="member__title">drawBoxScalingTolerance</h3>
+  
+<pre class="signature__container"><code class="signature">drawBoxScalingTolerance(bounds: <a href="OrientedBounds.html">OrientedBounds</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Draws around edges of the bounding box to capture pointer events within
+Transformer#boxScalingTolerance.</p></div>
+
+  
+    
+<table class="member-parameters">
+  <caption class="member-parameters__caption">Parameters:</caption>
+  <thead class="member-parameters__head">
+    <tr class="member-parameter-header">
+      <th class="member-parameter-header__name">Name</th>
+      <th class="member-parameter-header__type">Type</th>
+      
+      
+      <th class="member-parameter-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-parameters__body">
+    <tr class="member-parameter">
+      <td class="member-parameter__name">
+        bounds
+      </td>
+      <td class="member-parameter__type">
+        <a href="OrientedBounds.html">OrientedBounds</a>
       </td>
       
       
@@ -5655,6 +5747,8 @@ calculate the bounds of the specific object (not including children).</p></div>
     
       <li class="page-members-explorer__item"><a href="Transformer.html#angle">angle</a></li>
     
+      <li class="page-members-explorer__item"><a href="Transformer.html#boxScalingTolerance">boxScalingTolerance</a></li>
+    
       <li class="page-members-explorer__item"><a href="Transformer.html#buttonMode">buttonMode</a></li>
     
       <li class="page-members-explorer__item"><a href="Transformer.html#cacheAsBitmap">cacheAsBitmap</a></li>
@@ -5832,6 +5926,8 @@ calculate the bounds of the specific object (not including children).</p></div>
       <li class="page-members-explorer__item"><a href="Transformer.html#draw">draw</a></li>
     
       <li class="page-members-explorer__item"><a href="Transformer.html#drawBounds">drawBounds</a></li>
+    
+      <li class="page-members-explorer__item"><a href="Transformer.html#drawBoxScalingTolerance">drawBoxScalingTolerance</a></li>
     
       <li class="page-members-explorer__item"><a href="Transformer.html#drawHandles">drawHandles</a></li>
     
