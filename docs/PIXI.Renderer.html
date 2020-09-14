@@ -33,7 +33,76 @@
     <div class="document__brief"><p>The Renderer draws the scene and all its content onto a WebGL enabled canvas.</p></div>
     <div class="document__description"><p>This renderer should be used for browsers that support WebGL.</p>
 <p>This renderer works by automatically managing WebGLBatchesm, so no need for Sprite Batches or Sprite Clouds.
-Don't forget to add the view to your DOM or you will not see anything!</p></div>
+Don't forget to add the view to your DOM or you will not see anything!</p>
+<p>Renderer is composed of systems that manage specific tasks. The following systems are added by default
+whenever you create a renderer:</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="PIXI.BatchSystem.html">PIXI.BatchSystem</a></td>
+<td>This manages object renderers that defer rendering until a flush.</td>
+</tr>
+<tr>
+<td><a href="PIXI.ContextSystem.html">PIXI.ContextSystem</a></td>
+<td>This manages the WebGL context and extensions.</td>
+</tr>
+<tr>
+<td><a href="PIXI.FilterSystem.html">PIXI.FilterSystem</a></td>
+<td>This manages the filtering pipeline for post-processing effects.</td>
+</tr>
+<tr>
+<td><a href="PIXI.FramebufferSystem.html">PIXI.FramebufferSystem</a></td>
+<td>This manages framebuffers, which are used for offscreen rendering.</td>
+</tr>
+<tr>
+<td><a href="PIXI.GeometrySystem.html">PIXI.GeometrySystem</a></td>
+<td>This manages geometries &amp; buffers, which are used to draw object meshes.</td>
+</tr>
+<tr>
+<td><a href="PIXI.MaskSystem.html">PIXI.MaskSystem</a></td>
+<td>This manages masking operations.</td>
+</tr>
+<tr>
+<td><a href="PIXI.ProjectionSystem.html">PIXI.ProjectionSystem</a></td>
+<td>This manages the <code>projectionMatrix</code>, used by shaders to get NDC coordinates.</td>
+</tr>
+<tr>
+<td><a href="PIXI.RenderTextureSystem.html">PIXI.RenderTextureSystem</a></td>
+<td>This manages render-textures, which are an abstraction over framebuffers.</td>
+</tr>
+<tr>
+<td><a href="PIXI.ScissorSystem.html">PIXI.ScissorSystem</a></td>
+<td>This handles scissor masking, and is used internally by MaskSystem</td>
+</tr>
+<tr>
+<td><a href="PIXI.ShaderSystem.html">PIXI.ShaderSystem</a></td>
+<td>This manages shaders, programs that run on the GPU to calculate 'em pixels.</td>
+</tr>
+<tr>
+<td><a href="PIXI.StateSystem.html">PIXI.StateSystem</a></td>
+<td>This manages the WebGL state variables like blend mode, depth testing, etc.</td>
+</tr>
+<tr>
+<td><a href="PIXI.StencilSystem.html">PIXI.StencilSystem</a></td>
+<td>This handles stencil masking, and is used internally by MaskSystem</td>
+</tr>
+<tr>
+<td><a href="PIXI.TextureSystem.html">PIXI.TextureSystem</a></td>
+<td>This manages textures and their resources on the GPU.</td>
+</tr>
+<tr>
+<td><a href="PIXI.TextureGCSystem.html">PIXI.TextureGCSystem</a></td>
+<td>This will automatically remove textures from the GPU if they are not used.</td>
+</tr>
+</tbody>
+</table>
+<p>The breadth of the API surface provided by the renderer is contained within these systems.</p></div>
 
     
       

@@ -3462,7 +3462,7 @@
 				{
 					"name": "AbstractMaskSystem",
 					"type": "ClassDoc",
-					"brief": "<p>System plugin to the renderer to manage masks of certain type</p>",
+					"brief": "<p>System plugin to the renderer to manage specific types of masking operations.</p>",
 					"description": "",
 					"children": [
 						{
@@ -12454,8 +12454,8 @@
 				{
 					"name": "Filter",
 					"type": "ClassDoc",
-					"brief": "<p>Filter is a special type of WebGL shader that is applied to the screen.</p>",
-					"description": "<p>{@link http://pixijs.io/examples/#/filters/blur-filter.js Example} of the\n{@link PIXI.filters.BlurFilter BlurFilter}.</p>\n<h3>Usage</h3>\n<p>Filters can be applied to any DisplayObject or Container.\nPixiJS' <code>FilterSystem</code> renders the container into temporary Framebuffer,\nthen filter renders it to the screen.\nMultiple filters can be added to the <code>filters</code> array property and stacked on each other.</p>\n<pre><code class=\"hljs\">const<span class=\"hljs-built_in\"> filter </span>= new PIXI.Filter(myShaderVert, myShaderFrag, { myUniform: 0.5 });\nconst container = new PIXI.Container();\ncontainer.filters = [filter];\n</code></pre>\n<h3>Previous Version Differences</h3>\n<p>In PixiJS <strong>v3</strong>, a filter was always applied to <em>whole screen</em>.</p>\n<p>In PixiJS <strong>v4</strong>, a filter can be applied <em>only part of the screen</em>.\nDevelopers had to create a set of uniforms to deal with coordinates.</p>\n<p>In PixiJS <strong>v5</strong> combines <em>both approaches</em>.\nDevelopers can use normal coordinates of v3 and then allow filter to use partial Framebuffers,\nbringing those extra uniforms into account.</p>\n<p>Also be aware that we have changed default vertex shader, please consult\n{@link https://github.com/pixijs/pixi.js/wiki/v5-Creating-filters Wiki}.</p>\n<h3>Built-in Uniforms</h3>\n<p>PixiJS viewport uses screen (CSS) coordinates, <code>(0, 0, renderer.screen.width, renderer.screen.height)</code>,\nand <code>projectionMatrix</code> uniform maps it to the gl viewport.</p>\n<p><strong>uSampler</strong></p>\n<p>The most important uniform is the input texture that container was rendered into.\n<em>Important note: as with all Framebuffers in PixiJS, both input and output are\npremultiplied by alpha.</em></p>\n<p>By default, input normalized coordinates are passed to fragment shader with <code>vTextureCoord</code>.\nUse it to sample the input.</p>\n<pre><code class=\"hljs\"><span class=\"hljs-keyword\">const</span> fragment = `\n<span class=\"hljs-keyword\">varying</span> <span class=\"hljs-type\">vec2</span> vTextureCoord;\n<span class=\"hljs-keyword\">uniform</span> <span class=\"hljs-type\">sampler2D</span> uSampler;\n<span class=\"hljs-type\">void</span> main(<span class=\"hljs-type\">void</span>)\n{\n   <span class=\"hljs-built_in\">gl_FragColor</span> = <span class=\"hljs-built_in\">texture2D</span>(uSampler, vTextureCoord);\n}\n`;\n\n<span class=\"hljs-keyword\">const</span> myFilter = new PIXI.Filter(null, fragment);\n</code></pre>\n<p>This filter is just one uniform less than {@link PIXI.filters.AlphaFilter AlphaFilter}.</p>\n<p><strong>outputFrame</strong></p>\n<p>The <code>outputFrame</code> holds the rectangle where filter is applied in screen (CSS) coordinates.\nIt's the same as <code>renderer.screen</code> for a fullscreen filter.\nOnly a part of  <code>outputFrame.zw</code> size of temporary Framebuffer is used,\n<code>(0, 0, outputFrame.width, outputFrame.height)</code>,</p>\n<p>Filters uses this quad to normalized (0-1) space, its passed into <code>aVertexPosition</code> attribute.\nTo calculate vertex position in screen space using normalized (0-1) space:</p>\n<pre><code class=\"hljs\"><span class=\"hljs-type\">vec4</span> filterVertexPosition( <span class=\"hljs-type\">void</span> )\n{\n    <span class=\"hljs-type\">vec2</span> position = aVertexPosition * <span class=\"hljs-built_in\">max</span>(outputFrame.zw, <span class=\"hljs-type\">vec2</span>(<span class=\"hljs-number\">0.</span>)) + outputFrame.xy;\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-type\">vec4</span>((projectionMatrix * <span class=\"hljs-type\">vec3</span>(position, <span class=\"hljs-number\">1.0</span>)).xy, <span class=\"hljs-number\">0.0</span>, <span class=\"hljs-number\">1.0</span>);\n}\n</code></pre>\n<p><strong>inputSize</strong></p>\n<p>Temporary framebuffer is different, it can be either the size of screen, either power-of-two.\nThe <code>inputSize.xy</code> are size of temporary framebuffer that holds input.\nThe <code>inputSize.zw</code> is inverted, it's a shortcut to evade division inside the shader.</p>\n<p>Set <code>inputSize.xy = outputFrame.zw</code> for a fullscreen filter.</p>\n<p>To calculate input normalized coordinate, you have to map it to filter normalized space.\nMultiply by <code>outputFrame.zw</code> to get input coordinate.\nDivide by <code>inputSize.xy</code> to get input normalized coordinate.</p>\n<pre><code class=\"hljs\"><span class=\"hljs-function\">vec2 <span class=\"hljs-title\">filterTextureCoord</span><span class=\"hljs-params\">( <span class=\"hljs-keyword\">void</span> )</span>\n</span>{\n    <span class=\"hljs-keyword\">return</span> aVertexPosition * (outputFrame.zw * inputSize.zw); <span class=\"hljs-comment\">// same as /inputSize.xy</span>\n}\n</code></pre>\n<p><strong>resolution</strong></p>\n<p>The <code>resolution</code> is the ratio of screen (CSS) pixels to real pixels.</p>\n<p><strong>inputPixel</strong></p>\n<p><code>inputPixel.xy</code> is the size of framebuffer in real pixels, same as <code>inputSize.xy * resolution</code>\n<code>inputPixel.zw</code> is inverted <code>inputPixel.xy</code>.</p>\n<p>It's handy for filters that use neighbour pixels, like {@link PIXI.filters.FXAAFilter FXAAFilter}.</p>\n<p><strong>inputClamp</strong></p>\n<p>If you try to get info from outside of used part of Framebuffer - you'll get undefined behaviour.\nFor displacements, coordinates has to be clamped.</p>\n<p>The <code>inputClamp.xy</code> is left-top pixel center, you may ignore it, because we use left-top part of Framebuffer\n<code>inputClamp.zw</code> is bottom-right pixel center.</p>\n<pre><code class=\"hljs\">vec4 color = texture2<span class=\"hljs-constructor\">D(<span class=\"hljs-params\">uSampler</span>, <span class=\"hljs-params\">clamp</span>(<span class=\"hljs-params\">modifigedTextureCoord</span>, <span class=\"hljs-params\">inputClamp</span>.<span class=\"hljs-params\">xy</span>, <span class=\"hljs-params\">inputClamp</span>.<span class=\"hljs-params\">zw</span>)</span>)\n</code></pre>\n<p>OR</p>\n<pre><code class=\"hljs\">vec4 color = texture2<span class=\"hljs-constructor\">D(<span class=\"hljs-params\">uSampler</span>, <span class=\"hljs-params\">min</span>(<span class=\"hljs-params\">modifigedTextureCoord</span>, <span class=\"hljs-params\">inputClamp</span>.<span class=\"hljs-params\">zw</span>)</span>)\n</code></pre>\n<h3>Additional Information</h3>\n<p>Complete documentation on Filter usage is located in the\n{@link https://github.com/pixijs/pixi.js/wiki/v5-Creating-filters Wiki}.</p>\n<p>Since PixiJS only had a handful of built-in filters, additional filters can be downloaded\n{@link https://github.com/pixijs/pixi-filters here} from the PixiJS Filters repository.</p>",
+					"brief": "",
+					"description": "<p>A filter is a special shader that applies post-processing effects to an input texture and writes into an output\nrender-target.</p>\n<p>{@link http://pixijs.io/examples/#/filters/blur-filter.js Example} of the\n{@link PIXI.filters.BlurFilter BlurFilter}.</p>\n<h3>Usage</h3>\n<p>Filters can be applied to any DisplayObject or Container.\nPixiJS' <code>FilterSystem</code> renders the container into temporary Framebuffer,\nthen filter renders it to the screen.\nMultiple filters can be added to the <code>filters</code> array property and stacked on each other.</p>\n<pre><code class=\"hljs\">const<span class=\"hljs-built_in\"> filter </span>= new PIXI.Filter(myShaderVert, myShaderFrag, { myUniform: 0.5 });\nconst container = new PIXI.Container();\ncontainer.filters = [filter];\n</code></pre>\n<h3>Previous Version Differences</h3>\n<p>In PixiJS <strong>v3</strong>, a filter was always applied to <em>whole screen</em>.</p>\n<p>In PixiJS <strong>v4</strong>, a filter can be applied <em>only part of the screen</em>.\nDevelopers had to create a set of uniforms to deal with coordinates.</p>\n<p>In PixiJS <strong>v5</strong> combines <em>both approaches</em>.\nDevelopers can use normal coordinates of v3 and then allow filter to use partial Framebuffers,\nbringing those extra uniforms into account.</p>\n<p>Also be aware that we have changed default vertex shader, please consult\n{@link https://github.com/pixijs/pixi.js/wiki/v5-Creating-filters Wiki}.</p>\n<h3>Frames</h3>\n<p>The following table summarizes the coordinate spaces used in the filtering pipeline:</p>\n <table>\n <thead>\n   <tr>\n     <th>Coordinate Space</th>\n     <th>Description</th>\n   </tr>\n </thead>\n <tbody>\n   <tr>\n     <td>Texture Coordinates</td>\n     <td>\n         The texture (or UV) coordinates in the input base-texture's space. These are normalized into the (0,1) range along\n         both axes.\n     </td>\n   </tr>\n   <tr>\n     <td>World Space</td>\n     <td>\n         A point in the same space as the world bounds of any display-object (i.e. in the scene graph's space).\n     </td>\n   </tr>\n   <tr>\n     <td>Physical Pixels</td>\n     <td>\n         This is base-texture's space with the origin on the top-left. You can calculate these by multiplying the texture\n         coordinates by the dimensions of the texture.\n     </td>\n   </tr>\n </tbody>\n </table>\n<h3>Built-in Uniforms</h3>\n<p>PixiJS viewport uses screen (CSS) coordinates, <code>(0, 0, renderer.screen.width, renderer.screen.height)</code>,\nand <code>projectionMatrix</code> uniform maps it to the gl viewport.</p>\n<p><strong>uSampler</strong></p>\n<p>The most important uniform is the input texture that container was rendered into.\n<em>Important note: as with all Framebuffers in PixiJS, both input and output are\npremultiplied by alpha.</em></p>\n<p>By default, input normalized coordinates are passed to fragment shader with <code>vTextureCoord</code>.\nUse it to sample the input.</p>\n<pre><code class=\"hljs\"><span class=\"hljs-keyword\">const</span> fragment = `\n<span class=\"hljs-keyword\">varying</span> <span class=\"hljs-type\">vec2</span> vTextureCoord;\n<span class=\"hljs-keyword\">uniform</span> <span class=\"hljs-type\">sampler2D</span> uSampler;\n<span class=\"hljs-type\">void</span> main(<span class=\"hljs-type\">void</span>)\n{\n   <span class=\"hljs-built_in\">gl_FragColor</span> = <span class=\"hljs-built_in\">texture2D</span>(uSampler, vTextureCoord);\n}\n`;\n\n<span class=\"hljs-keyword\">const</span> myFilter = new PIXI.Filter(null, fragment);\n</code></pre>\n<p>This filter is just one uniform less than {@link PIXI.filters.AlphaFilter AlphaFilter}.</p>\n<p><strong>outputFrame</strong></p>\n<p>The <code>outputFrame</code> holds the rectangle where filter is applied in screen (CSS) coordinates.\nIt's the same as <code>renderer.screen</code> for a fullscreen filter.\nOnly a part of  <code>outputFrame.zw</code> size of temporary Framebuffer is used,\n<code>(0, 0, outputFrame.width, outputFrame.height)</code>,</p>\n<p>Filters uses this quad to normalized (0-1) space, its passed into <code>aVertexPosition</code> attribute.\nTo calculate vertex position in screen space using normalized (0-1) space:</p>\n<pre><code class=\"hljs\"><span class=\"hljs-type\">vec4</span> filterVertexPosition( <span class=\"hljs-type\">void</span> )\n{\n    <span class=\"hljs-type\">vec2</span> position = aVertexPosition * <span class=\"hljs-built_in\">max</span>(outputFrame.zw, <span class=\"hljs-type\">vec2</span>(<span class=\"hljs-number\">0.</span>)) + outputFrame.xy;\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-type\">vec4</span>((projectionMatrix * <span class=\"hljs-type\">vec3</span>(position, <span class=\"hljs-number\">1.0</span>)).xy, <span class=\"hljs-number\">0.0</span>, <span class=\"hljs-number\">1.0</span>);\n}\n</code></pre>\n<p><strong>inputSize</strong></p>\n<p>Temporary framebuffer is different, it can be either the size of screen, either power-of-two.\nThe <code>inputSize.xy</code> are size of temporary framebuffer that holds input.\nThe <code>inputSize.zw</code> is inverted, it's a shortcut to evade division inside the shader.</p>\n<p>Set <code>inputSize.xy = outputFrame.zw</code> for a fullscreen filter.</p>\n<p>To calculate input normalized coordinate, you have to map it to filter normalized space.\nMultiply by <code>outputFrame.zw</code> to get input coordinate.\nDivide by <code>inputSize.xy</code> to get input normalized coordinate.</p>\n<pre><code class=\"hljs\"><span class=\"hljs-function\">vec2 <span class=\"hljs-title\">filterTextureCoord</span><span class=\"hljs-params\">( <span class=\"hljs-keyword\">void</span> )</span>\n</span>{\n    <span class=\"hljs-keyword\">return</span> aVertexPosition * (outputFrame.zw * inputSize.zw); <span class=\"hljs-comment\">// same as /inputSize.xy</span>\n}\n</code></pre>\n<p><strong>resolution</strong></p>\n<p>The <code>resolution</code> is the ratio of screen (CSS) pixels to real pixels.</p>\n<p><strong>inputPixel</strong></p>\n<p><code>inputPixel.xy</code> is the size of framebuffer in real pixels, same as <code>inputSize.xy * resolution</code>\n<code>inputPixel.zw</code> is inverted <code>inputPixel.xy</code>.</p>\n<p>It's handy for filters that use neighbour pixels, like {@link PIXI.filters.FXAAFilter FXAAFilter}.</p>\n<p><strong>inputClamp</strong></p>\n<p>If you try to get info from outside of used part of Framebuffer - you'll get undefined behaviour.\nFor displacements, coordinates has to be clamped.</p>\n<p>The <code>inputClamp.xy</code> is left-top pixel center, you may ignore it, because we use left-top part of Framebuffer\n<code>inputClamp.zw</code> is bottom-right pixel center.</p>\n<pre><code class=\"hljs\">vec4 color = texture2<span class=\"hljs-constructor\">D(<span class=\"hljs-params\">uSampler</span>, <span class=\"hljs-params\">clamp</span>(<span class=\"hljs-params\">modifigedTextureCoord</span>, <span class=\"hljs-params\">inputClamp</span>.<span class=\"hljs-params\">xy</span>, <span class=\"hljs-params\">inputClamp</span>.<span class=\"hljs-params\">zw</span>)</span>)\n</code></pre>\n<p>OR</p>\n<pre><code class=\"hljs\">vec4 color = texture2<span class=\"hljs-constructor\">D(<span class=\"hljs-params\">uSampler</span>, <span class=\"hljs-params\">min</span>(<span class=\"hljs-params\">modifigedTextureCoord</span>, <span class=\"hljs-params\">inputClamp</span>.<span class=\"hljs-params\">zw</span>)</span>)\n</code></pre>\n<h3>Additional Information</h3>\n<p>Complete documentation on Filter usage is located in the\n{@link https://github.com/pixijs/pixi.js/wiki/v5-Creating-filters Wiki}.</p>\n<p>Since PixiJS only had a handful of built-in filters, additional filters can be downloaded\n{@link https://github.com/pixijs/pixi-filters here} from the PixiJS Filters repository.</p>",
 					"children": [
 						{
 							"name": "defaultFragmentSrc",
@@ -12568,8 +12568,8 @@
 				{
 					"name": "FilterSystem",
 					"type": "ClassDoc",
-					"brief": "<p>System plugin to the renderer to manage the filters.</p>",
-					"description": "",
+					"brief": "<p>System plugin to the renderer to manage filters.</p>",
+					"description": "<h2>Pipeline</h2>\n<p>The FilterSystem executes the filtering pipeline by rendering the display-object into a texture, applying its\n[filters]{@link PIXI.Filter} in series, and the last filter outputs into the final render-target.</p>\n<p>The filter-frame is the rectangle in world space being filtered, and those contents are mapped into\n<code>(0, 0, filterFrame.width, filterFrame.height)</code> into the filter render-texture. The filter-frame is also called\nthe source-frame, as it is used to bind the filter render-textures. The last filter outputs to the <code>filterFrame</code>\nin the final render-target.</p>\n<h2>Usage</h2>\n<p>{@link PIXI.Container#renderAdvanced} is an example of how to use the filter system. It is a 3 step process:</p>\n<ul>\n<li><strong>push</strong>: Use {@link PIXI.FilterSystem#push} to push the set of filters to be applied on a filter-target.</li>\n<li><strong>render</strong>: Render the contents to be filtered using the renderer. The filter-system will only capture the contents\ninside the bounds of the filter-target. NOTE: Using {@link PIXI.Renderer#render} is\nillegal during an existing render cycle, and it may reset the filter system.</li>\n<li><strong>pop</strong>: Use {@link PIXI.FilterSystem#pop} to pop &amp; execute the filters you initially pushed. It will apply them\nserially and output to the bounds of the filter-target.</li>\n</ul>",
 					"children": [
 						{
 							"name": "activeState",
@@ -12773,15 +12773,15 @@
 							"name": "pop",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "<p>Pops off the filter and applies it.</p>",
+							"brief": "<p>Pops off a set of the filters and applies them. This should be called once you've rendered everything to be filtered.</p>",
 							"description": ""
 						},
 						{
 							"name": "push",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "<p>Adds a new filter to the System.</p>",
-							"description": ""
+							"brief": "",
+							"description": "<p>Pushes a set of filters to be applied later to the system. This will redirect further rendering into an\ninput render-texture for the rest of the filtering pipeline.</p>"
 						},
 						{
 							"name": "resize",
@@ -12810,8 +12810,8 @@
 				{
 					"name": "Framebuffer",
 					"type": "ClassDoc",
-					"brief": "<p>Frame buffer used by the BaseRenderTexture</p>",
-					"description": "",
+					"brief": "",
+					"description": "<p>A framebuffer can be used to render contents off of the screen. {@link PIXI.BaseRenderTexture} uses\none internally to render into itself. You can attach a depth or stencil buffer to a framebuffer.</p>\n<p>On WebGL 2 machines, shaders can output to multiple textures simultaneously with GLSL 300 ES.</p>",
 					"children": [
 						{
 							"name": "colorTexture",
@@ -16976,7 +16976,7 @@
 					"name": "MaskSystem",
 					"type": "ClassDoc",
 					"brief": "<p>System plugin to the renderer to manage masks.</p>",
-					"description": "",
+					"description": "<p>There are three built-in types of masking:</p>\n<ul>\n<li><strong>Scissor Masking</strong>: Scissor masking discards pixels that are outside of a rectangle called the scissor box. It is\nthe most performant as the scissor test is inexpensive. However, it can only be used when the mask is rectangular.</li>\n<li><strong>Stencil Masking</strong>: Stencil masking discards pixels that don't overlap with the pixels rendered into the stencil\nbuffer. It is the next fastest option as it does not require rendering into a separate framebuffer. However, it does\ncause the mask to be rendered <strong>twice</strong> for each masking operation; hence, minimize the rendering cost of your masks.</li>\n<li><strong>Sprite Mask Filtering</strong>: Sprite mask filtering discards pixels based on the red channel of the sprite-mask's\ntexture. (Generally, the masking texture is grayscale). Using advanced techniques, you might be able to embed this\ntype of masking in a custom shader - and hence, bypassing the masking system fully for performance wins.</li>\n</ul>\n<p>The best type of masking is auto-detected when you <code>push</code> one. To use scissor masking, you must pass in a <code>Graphics</code>\nobject with just a rectangle drawn.</p>\n<h2>Mask Stacks</h2>\n<p>In the scene graph, masks can be applied recursively, i.e. a mask can be applied during a masking operation. The mask\nstack stores the currently applied masks in order. Each {@link PIXI.BaseRenderTexture} holds its own mask stack, i.e.\nwhen you switch render-textures, the old masks only applied when you switch back to rendering to the old render-target.</p>",
 					"children": [
 						{
 							"name": "alphaMaskIndex",
@@ -16996,8 +16996,8 @@
 							"name": "enableScissor",
 							"type": "PropertyDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Enable scissor</p>"
+							"brief": "<p>Enable scissor masking.</p>",
+							"description": ""
 						},
 						{
 							"name": "maskDataPool",
@@ -17038,8 +17038,8 @@
 							"name": "pop",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Removes the last mask from the mask stack and doesn't return it.\nRenderer batch must be flushed beforehand.</p>"
+							"brief": "<p>Removes the last mask from the mask stack and doesn't return it.</p>",
+							"description": "<p>NOTE: The batch renderer should be flushed beforehand to render the masked contents before the mask is removed.</p>"
 						},
 						{
 							"name": "popSpriteMask",
@@ -17052,8 +17052,8 @@
 							"name": "push",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Applies the Mask and adds it to the current filter stack.\nRenderer batch must be flushed beforehand.</p>"
+							"brief": "<p>Enables the mask and appends it to the current mask stack.</p>",
+							"description": "<p>NOTE: The batch renderer should be flushed beforehand to prevent pending renders from being masked.</p>"
 						},
 						{
 							"name": "pushSpriteMask",
@@ -21351,28 +21351,28 @@
 					"name": "ProjectionSystem",
 					"type": "ClassDoc",
 					"brief": "<p>System plugin to the renderer to manage the projection matrix.</p>",
-					"description": "",
+					"description": "<p>The <code>projectionMatrix</code> is a global uniform provided to all shaders. It is used to transform points in world space to\nnormalized device coordinates.</p>",
 					"children": [
 						{
 							"name": "defaultFrame",
 							"type": "PropertyDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Default destination frame</p>"
+							"brief": "<p>Default destination frame</p>",
+							"description": "<p>This is not used internally. It is not advised to use this feature specifically unless you know what\nyou're doing. The <code>update</code> method will default to this frame if you do not pass the destination frame.</p>"
 						},
 						{
 							"name": "destinationFrame",
 							"type": "PropertyDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Destination frame</p>"
+							"brief": "<p>The destination frame used to calculate the current projection matrix.</p>",
+							"description": "<p>The destination frame is the rectangle in the render-target into which contents are rendered. If rendering\nto the screen, the origin is on the top-left. If rendering to a framebuffer, the origin is on the\nbottom-left. This &quot;flipping&quot; phenomenon is because of WebGL convention for (shader) texture coordinates, where\nthe bottom-left corner is (0,0). It allows display-objects to map their (0,0) position in local-space (top-left)\nto (0,0) in texture space (bottom-left). In other words, a sprite's top-left corner actually renders the\ntexture's bottom-left corner. You will also notice this when using a tool like SpectorJS to view your textures\nat runtime.</p>\n<p>The destination frame's dimensions (width,height) should be equal to the source frame. This is because,\notherwise, the contents will be scaled to fill the destination frame. Similarly, the destination frame's (x,y)\ncoordinates are (0,0) unless you know what you're doing.</p>"
 						},
 						{
 							"name": "projectionMatrix",
 							"type": "PropertyDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Project matrix</p>"
+							"brief": "<p>Projection matrix</p>",
+							"description": "<p>This matrix can be used to transform points from world space to normalized device coordinates, and is calculated\nfrom the sourceFrame → destinationFrame mapping provided.</p>\n<p>The renderer's <code>globalUniforms</code> keeps a reference to this, and so it is available for all shaders to use as a\nuniform.</p>"
 						},
 						{
 							"name": "renderer",
@@ -21385,21 +21385,21 @@
 							"name": "sourceFrame",
 							"type": "PropertyDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Source frame</p>"
+							"brief": "<p>The source frame used to calculate the current projection matrix.</p>",
+							"description": "<p>The source frame is the rectangle in world space containing the contents to be rendered.</p>"
 						},
 						{
 							"name": "transform",
 							"type": "PropertyDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>A transform that will be appended to the projection matrix\nif null, nothing will be applied</p>"
+							"brief": "<p>A transform to be appended to the projection matrix.</p>",
+							"description": "<p>This can be used to transform points in world-space one last time before they are outputted by the shader. You can\nuse to rotate the whole scene, for example. Remember to clear it once you've rendered everything.</p>"
 						},
 						{
 							"name": "calculateProjection",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "<p>Updates the projection matrix based on a projection frame (which is a rectangle)</p>",
+							"brief": "<p>Calculates the <code>projectionMatrix</code> to map points inside <code>sourceFrame</code> to inside <code>destinationFrame</code>.</p>",
 							"description": ""
 						},
 						{
@@ -21427,8 +21427,8 @@
 							"name": "update",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "<p>Updates the projection matrix based on a projection frame (which is a rectangle).</p>",
-							"description": "<p>Make sure to run <code>renderer.framebuffer.setViewport(destinationFrame)</code> after calling this.</p>"
+							"brief": "<p>Updates the projection-matrix based on the sourceFrame → destinationFrame mapping provided.</p>",
+							"description": "<p>NOTE: It is expected you call <code>renderer.framebuffer.setViewport(destinationFrame)</code> after this. This is because\nthe framebuffer viewport converts shader vertex output in normalized device coordinates to window coordinates.</p>\n<p>NOTE-2: {@link RenderTextureSystem#bind} updates the projection-matrix when you bind a render-texture. It is expected\nthat you dirty the current bindings when calling this manually.</p>"
 						}
 					]
 				},
@@ -21791,7 +21791,7 @@
 					"name": "Renderer",
 					"type": "ClassDoc",
 					"brief": "<p>The Renderer draws the scene and all its content onto a WebGL enabled canvas.</p>",
-					"description": "<p>This renderer should be used for browsers that support WebGL.</p>\n<p>This renderer works by automatically managing WebGLBatchesm, so no need for Sprite Batches or Sprite Clouds.\nDon't forget to add the view to your DOM or you will not see anything!</p>",
+					"description": "<p>This renderer should be used for browsers that support WebGL.</p>\n<p>This renderer works by automatically managing WebGLBatchesm, so no need for Sprite Batches or Sprite Clouds.\nDon't forget to add the view to your DOM or you will not see anything!</p>\n<p>Renderer is composed of systems that manage specific tasks. The following systems are added by default\nwhenever you create a renderer:</p>\n<table>\n<thead>\n<tr>\n<th>System</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>{@link PIXI.BatchSystem}</td>\n<td>This manages object renderers that defer rendering until a flush.</td>\n</tr>\n<tr>\n<td>{@link PIXI.ContextSystem}</td>\n<td>This manages the WebGL context and extensions.</td>\n</tr>\n<tr>\n<td>{@link PIXI.FilterSystem}</td>\n<td>This manages the filtering pipeline for post-processing effects.</td>\n</tr>\n<tr>\n<td>{@link PIXI.FramebufferSystem}</td>\n<td>This manages framebuffers, which are used for offscreen rendering.</td>\n</tr>\n<tr>\n<td>{@link PIXI.GeometrySystem}</td>\n<td>This manages geometries &amp; buffers, which are used to draw object meshes.</td>\n</tr>\n<tr>\n<td>{@link PIXI.MaskSystem}</td>\n<td>This manages masking operations.</td>\n</tr>\n<tr>\n<td>{@link PIXI.ProjectionSystem}</td>\n<td>This manages the <code>projectionMatrix</code>, used by shaders to get NDC coordinates.</td>\n</tr>\n<tr>\n<td>{@link PIXI.RenderTextureSystem}</td>\n<td>This manages render-textures, which are an abstraction over framebuffers.</td>\n</tr>\n<tr>\n<td>{@link PIXI.ScissorSystem}</td>\n<td>This handles scissor masking, and is used internally by {@link MaskSystem}</td>\n</tr>\n<tr>\n<td>{@link PIXI.ShaderSystem}</td>\n<td>This manages shaders, programs that run on the GPU to calculate 'em pixels.</td>\n</tr>\n<tr>\n<td>{@link PIXI.StateSystem}</td>\n<td>This manages the WebGL state variables like blend mode, depth testing, etc.</td>\n</tr>\n<tr>\n<td>{@link PIXI.StencilSystem}</td>\n<td>This handles stencil masking, and is used internally by {@link MaskSystem}</td>\n</tr>\n<tr>\n<td>{@link PIXI.TextureSystem}</td>\n<td>This manages textures and their resources on the GPU.</td>\n</tr>\n<tr>\n<td>{@link PIXI.TextureGCSystem}</td>\n<td>This will automatically remove textures from the GPU if they are not used.</td>\n</tr>\n</tbody>\n</table>\n<p>The breadth of the API surface provided by the renderer is contained within these systems.</p>",
 					"children": [
 						{
 							"name": "plugins",
@@ -22571,7 +22571,7 @@
 					"name": "RenderTextureSystem",
 					"type": "ClassDoc",
 					"brief": "<p>System plugin to the renderer to manage render textures.</p>",
-					"description": "<p>Should be added after FramebufferSystem</p>",
+					"description": "<p>Should be added after FramebufferSystem</p>\n<h3>Frames</h3>\n<p>The <code>RenderTextureSystem</code> holds a sourceFrame → destinationFrame projection. The following table explains the different\ncoordinate spaces used:</p>\n<table>\n<thead>\n<tr>\n<th>Frame</th>\n<th>Description</th>\n<th>Coordinate System</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>sourceFrame</td>\n<td>The rectangle inside of which display-objects are being rendered</td>\n<td><strong>World Space</strong>: The origin on the top-left</td>\n</tr>\n<tr>\n<td>destinationFrame</td>\n<td>The rectangle in the render-target (canvas or texture) into which contents should be rendered</td>\n<td>If rendering to the canvas, this is in screen space and the origin is on the top-left. If rendering to a render-texture, this is in its base-texture's space with the origin on the bottom-left.</td>\n</tr>\n<tr>\n<td>viewportFrame</td>\n<td>The framebuffer viewport corresponding to the destination-frame</td>\n<td><strong>Window Coordinates</strong>: The origin is always on the bottom-left.</td>\n</tr>\n</tbody>\n</table>",
 					"children": [
 						{
 							"name": "clearColor",
@@ -23135,8 +23135,8 @@
 				{
 					"name": "ScissorSystem",
 					"type": "ClassDoc",
-					"brief": "<p>System plugin to the renderer to manage scissor rects (used for masks).</p>",
-					"description": "",
+					"brief": "<p>System plugin to the renderer to manage scissor masking.</p>",
+					"description": "<p>Scissor masking discards pixels outside of a rectangle called the scissor box. The scissor box is in the framebuffer\nviewport's space; however, the mask's rectangle is projected from world-space to viewport space automatically\nby this system.</p>",
 					"children": [
 						{
 							"name": "renderer",
@@ -23170,7 +23170,7 @@
 							"name": "push",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "<p>Applies the Mask and adds it to the current stencil stack. @alvin</p>",
+							"brief": "<p>Applies the Mask and adds it to the current stencil stack.</p>",
 							"description": ""
 						},
 						{
@@ -46210,6 +46210,31 @@
 					"access": "private",
 					"scope": "static",
 					"brief": "<p>Check if resource refers to xml font data.</p>",
+					"description": ""
+				}
+			]
+		},
+		{
+			"name": "XMLStringFormat",
+			"type": "ClassDoc",
+			"access": "private",
+			"brief": "<p>BitmapFont format that's XML-based.</p>",
+			"description": "",
+			"children": [
+				{
+					"name": "parse",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "static",
+					"brief": "<p>Convert the text XML into BitmapFontData that we can use.</p>",
+					"description": ""
+				},
+				{
+					"name": "test",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "static",
+					"brief": "<p>Check if resource refers to text xml font data.</p>",
 					"description": ""
 				}
 			]

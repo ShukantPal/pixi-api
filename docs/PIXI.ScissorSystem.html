@@ -30,8 +30,10 @@
 <pre class="signature__container"><code class="signature">class ScissorSystem extends <a href="PIXI.System.html">PIXI.System</a></code></pre>
 
 
-    <div class="document__brief"><p>System plugin to the renderer to manage scissor rects (used for masks).</p></div>
-    <div class="document__description"></div>
+    <div class="document__brief"><p>System plugin to the renderer to manage scissor masking.</p></div>
+    <div class="document__description"><p>Scissor masking discards pixels outside of a rectangle called the scissor box. The scissor box is in the framebuffer
+viewport's space; however, the mask's rectangle is projected from world-space to viewport space automatically
+by this system.</p></div>
 
     
       
@@ -195,7 +197,7 @@
 <pre class="signature__container"><code class="signature">push(maskData: <a href="PIXI.MaskData.html">PIXI.MaskData</a>) → {void}</code></pre>
 
 
-  <div class="member__brief"><p>Applies the Mask and adds it to the current stencil stack. @alvin</p></div>
+  <div class="member__brief"><p>Applies the Mask and adds it to the current stencil stack.</p></div>
   <div class="member__description"></div>
 
   
