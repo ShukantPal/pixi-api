@@ -42,8 +42,8 @@ of Textures on a single Spritesheet.</p>
 }
 </code></pre>
 <p>With the <code>sheet.textures</code> you can create Sprite objects,<code>sheet.animations</code> can be used to create an AnimatedSprite.</p>
-<p>Sprite sheets can be packed using tools like <a href="https://codeandweb.com/texturepacker|TexturePacker">https://codeandweb.com/texturepacker|TexturePacker</a>,
-<a href="https://renderhjs.net/shoebox/|Shoebox">https://renderhjs.net/shoebox/|Shoebox</a> or <a href="https://github.com/krzysztof-o/spritesheet.js|Spritesheet.js">https://github.com/krzysztof-o/spritesheet.js|Spritesheet.js</a>.
+<p>Sprite sheets can be packed using tools like <a href="https://codeandweb.com/texturepacker">TexturePacker</a>,
+<a href="https://renderhjs.net/shoebox/">Shoebox</a> or <a href="https://github.com/krzysztof-o/spritesheet.js">Spritesheet.js</a>.
 Default anchor points (see PIXI.Texture#defaultAnchor) and grouping of animation sprites are currently only
 supported by TexturePacker.</p></div>
 
@@ -65,65 +65,67 @@ supported by TexturePacker.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        baseTexture
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a> | <a href="PIXI.Texture.html">PIXI.Texture</a>
-      </td>
-      <td class="member-parameter__attributes">
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
         
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          baseTexture
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a> | <a href="PIXI.Texture.html">PIXI.Texture</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
+        <td class="member-parameter__description"><p>Reference to the source BaseTexture object.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          data
+        </td>
+        <td class="member-parameter__type">
+          Object
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
-      </td>
-      
-      <td class="member-parameter__description"><p>Reference to the source BaseTexture object.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        data
-      </td>
-      <td class="member-parameter__type">
-        Object
-      </td>
-      <td class="member-parameter__attributes">
+        <td class="member-parameter__description"><p>Spritesheet image data.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          resolutionFilename
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-        
-        
-      </td>
-      
-      <td class="member-parameter__description"><p>Spritesheet image data.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        resolutionFilename
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      
-      <td class="member-parameter__description"><p>The filename to consider when determining
+        <td class="member-parameter__description"><p>The filename to consider when determining
 the resolution of the spritesheet. If not provided, the imageUrl will
 be used on the BaseTexture.</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -165,7 +167,7 @@ be used on the BaseTexture.</p></td>
 
   <div class="member__brief"></div>
   <div class="member__description"><p>A map containing the textures for each animation.
-Can be used to create an (<a href="PIXI.AnimatedSprite.html">PIXI.AnimatedSprite</a>|AnimatedSprite):</p>
+Can be used to create an <a href="PIXI.AnimatedSprite.html">AnimatedSprite</a>:</p>
 <pre><code class="hljs language-js"><span class="hljs-keyword">new</span> PIXI.AnimatedSprite(sheet.animations[<span class="hljs-string">"anim_name"</span>])
 </code></pre></div>
 
@@ -232,7 +234,7 @@ Can be used to create an (<a href="PIXI.AnimatedSprite.html">PIXI.AnimatedSprite
 
   <div class="member__brief"></div>
   <div class="member__description"><p>A map containing all textures of the sprite sheet.
-Can be used to create a (<a href="PIXI.Sprite.html">PIXI.Sprite</a>|Sprite):</p>
+Can be used to create a <a href="PIXI.Sprite.html">Sprite</a>:</p>
 <pre><code class="hljs language-js"><span class="hljs-keyword">new</span> PIXI.Sprite(sheet.textures[<span class="hljs-string">"image.png"</span>]);
 </code></pre></div>
 
@@ -262,37 +264,39 @@ Can be used to create a (<a href="PIXI.Sprite.html">PIXI.Sprite</a>|Sprite):</p>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        destroyBase
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        false
-      </td>
-      <td class="member-parameter__description"><p>Whether to destroy the base texture as well</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          destroyBase
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Whether to destroy the base texture as well</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -333,32 +337,34 @@ to prevent creating too many Texture within a single process.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        callback
-      </td>
-      <td class="member-parameter__type">
-        Function
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>Callback when complete returns
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          callback
+        </td>
+        <td class="member-parameter__type">
+          Function
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Callback when complete returns
 a map of the Textures for this spritesheet.</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 

@@ -52,41 +52,43 @@ method for adding a font to be used.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        data
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.BitmapFontData.html">PIXI.BitmapFontData</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        textures
-      </td>
-      <td class="member-parameter__type">
-        Array<<a href="PIXI.Texture.html">PIXI.Texture</a>> | Object<string, <a href="PIXI.Texture.html">PIXI.Texture</a>>
-      </td>
-      
-      
-      <td class="member-parameter__description"></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          data
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.BitmapFontData.html">PIXI.BitmapFontData</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          textures
+        </td>
+        <td class="member-parameter__type">
+          Array<<a href="PIXI.Texture.html">PIXI.Texture</a>> | Object<string, <a href="PIXI.Texture.html">PIXI.Texture</a>>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -282,172 +284,174 @@ method for adding a font to be used.</p></div>
   <div class="member__description"><p>Generates a bitmap-font for the given style and character set. This does not support
 kernings yet. With <code>style</code> properties, only the following non-layout properties are used:</p>
 <ul>
-<li>(PIXI.TextStyle#dropShadow|dropShadow)</li>
-<li>(PIXI.TextStyle#dropShadowDistance|dropShadowDistance)</li>
-<li>(PIXI.TextStyle#dropShadowColor|dropShadowColor)</li>
-<li>(PIXI.TextStyle#dropShadowBlur|dropShadowBlur)</li>
-<li>(PIXI.TextStyle#dropShadowAngle|dropShadowAngle)</li>
-<li>(PIXI.TextStyle#fill|fill)</li>
-<li>(PIXI.TextStyle#fillGradientStops|fillGradientStops)</li>
-<li>(PIXI.TextStyle#fillGradientType|fillGradientType)</li>
-<li>(PIXI.TextStyle#fontFamily|fontFamily)</li>
-<li>(PIXI.TextStyle#fontSize|fontSize)</li>
-<li>(PIXI.TextStyle#fontVariant|fontVariant)</li>
-<li>(PIXI.TextStyle#fontWeight|fontWeight)</li>
-<li>(PIXI.TextStyle#lineJoin|lineJoin)</li>
-<li>(PIXI.TextStyle#miterLimit|miterLimit)</li>
-<li>(PIXI.TextStyle#stroke|stroke)</li>
-<li>(PIXI.TextStyle#strokeThickness|strokeThickness)</li>
-<li>(PIXI.TextStyle#textBaseline|textBaseline)</li>
+<li>dropShadow</li>
+<li>{@link PIXI.TextStyle#dropShadowDistance|dropShadowDistance}</li>
+<li>dropShadowColor</li>
+<li>{@link PIXI.TextStyle#dropShadowBlur|dropShadowBlur}</li>
+<li>dropShadowAngle</li>
+<li>{@link PIXI.TextStyle#fill|fill}</li>
+<li>fillGradientStops</li>
+<li>{@link PIXI.TextStyle#fillGradientType|fillGradientType}</li>
+<li>fontFamily</li>
+<li>{@link PIXI.TextStyle#fontSize|fontSize}</li>
+<li>fontVariant</li>
+<li>{@link PIXI.TextStyle#fontWeight|fontWeight}</li>
+<li>lineJoin</li>
+<li>{@link PIXI.TextStyle#miterLimit|miterLimit}</li>
+<li>stroke</li>
+<li>{@link PIXI.TextStyle#strokeThickness|strokeThickness}</li>
+<li>textBaseline</li>
 </ul></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        name
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>The name of the custom font to use with BitmapText.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style
-      </td>
-      <td class="member-parameter__type">
-        object | <a href="PIXI.TextStyle.html">PIXI.TextStyle</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>Style options to render with BitmapFont.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.IBitmapFontOptions.html">PIXI.IBitmapFontOptions</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>Setup options for font or name of the font.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.chars
-      </td>
-      <td class="member-parameter__type">
-        string | Array<string> | Array<Array<string>>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        PIXI.BitmapFont.ALPHANUMERIC
-      </td>
-      <td class="member-parameter__description"><p>characters included
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          name
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The name of the custom font to use with BitmapText.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style
+        </td>
+        <td class="member-parameter__type">
+          object | <a href="PIXI.TextStyle.html">PIXI.TextStyle</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Style options to render with BitmapFont.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.IBitmapFontOptions.html">PIXI.IBitmapFontOptions</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Setup options for font or name of the font.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.chars
+        </td>
+        <td class="member-parameter__type">
+          string | Array<string> | Array<Array<string>>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.BitmapFont.ALPHANUMERIC
+        </td>
+        <td class="member-parameter__description"><p>characters included
 in the font set. You can also use ranges. For example, <code>[['a', 'z'], ['A', 'Z'], &quot;!@#$%^&amp;*()~{}[] &quot;]</code>.
 Don't forget to include spaces ' ' in your character set!</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.resolution
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        1
-      </td>
-      <td class="member-parameter__description"><p>Render resolution for glyphs.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.textureWidth
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        512
-      </td>
-      <td class="member-parameter__description"><p>Optional width of atlas, smaller values to reduce memory.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.textureHeight
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        512
-      </td>
-      <td class="member-parameter__description"><p>Optional height of atlas, smaller values to reduce memory.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.padding
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        4
-      </td>
-      <td class="member-parameter__description"><p>Padding between glyphs on texture atlas.</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.resolution
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>Render resolution for glyphs.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.textureWidth
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          512
+        </td>
+        <td class="member-parameter__description"><p>Optional width of atlas, smaller values to reduce memory.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.textureHeight
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          512
+        </td>
+        <td class="member-parameter__description"><p>Optional height of atlas, smaller values to reduce memory.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.padding
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          4
+        </td>
+        <td class="member-parameter__description"><p>Padding between glyphs on texture atlas.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -487,42 +491,44 @@ Don't forget to include spaces ' ' in your character set!</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        data
-      </td>
-      <td class="member-parameter__type">
-        XMLDocument | string | <a href="PIXI.BitmapFontData.html">PIXI.BitmapFontData</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          data
+        </td>
+        <td class="member-parameter__type">
+          XMLDocument | string | <a href="PIXI.BitmapFontData.html">PIXI.BitmapFontData</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The
 characters map that could be provided as xml or raw string.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        textures
-      </td>
-      <td class="member-parameter__type">
-        Object<string, <a href="PIXI.Texture.html">PIXI.Texture</a>> | <a href="PIXI.Texture.html">PIXI.Texture</a> | Array<<a href="PIXI.Texture.html">PIXI.Texture</a>>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>List of textures for each page.</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          textures
+        </td>
+        <td class="member-parameter__type">
+          Object<string, <a href="PIXI.Texture.html">PIXI.Texture</a>> | <a href="PIXI.Texture.html">PIXI.Texture</a> | Array<<a href="PIXI.Texture.html">PIXI.Texture</a>>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>List of textures for each page.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -563,31 +569,33 @@ and char fields.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        name
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      
-      
-      <td class="member-parameter__description"></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          name
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 

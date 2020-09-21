@@ -31,7 +31,36 @@
 
 
     <div class="document__brief"><p>System plugin to the renderer to manage render textures.</p></div>
-    <div class="document__description"><p>Should be added after FramebufferSystem</p></div>
+    <div class="document__description"><p>Should be added after FramebufferSystem</p>
+<h3>Frames</h3>
+<p>The <code>RenderTextureSystem</code> holds a sourceFrame → destinationFrame projection. The following table explains the different
+coordinate spaces used:</p>
+<table>
+<thead>
+<tr>
+<th>Frame</th>
+<th>Description</th>
+<th>Coordinate System</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sourceFrame</td>
+<td>The rectangle inside of which display-objects are being rendered</td>
+<td><strong>World Space</strong>: The origin on the top-left</td>
+</tr>
+<tr>
+<td>destinationFrame</td>
+<td>The rectangle in the render-target (canvas or texture) into which contents should be rendered</td>
+<td>If rendering to the canvas, this is in screen space and the origin is on the top-left. If rendering to a render-texture, this is in its base-texture's space with the origin on the bottom-left.</td>
+</tr>
+<tr>
+<td>viewportFrame</td>
+<td>The framebuffer viewport corresponding to the destination-frame</td>
+<td><strong>Window Coordinates</strong>: The origin is always on the bottom-left.</td>
+</tr>
+</tbody>
+</table></div>
 
     
       
@@ -51,31 +80,33 @@
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        renderer
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Renderer.html">PIXI.Renderer</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The renderer this System works for.</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer this System works for.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -208,63 +239,65 @@
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        renderTexture
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
         
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderTexture
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-      </td>
-      
-      <td class="member-parameter__description"><p>RenderTexture to bind, by default its <code>null</code>, the screen</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        sourceFrame
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
+        <td class="member-parameter__description"><p>RenderTexture to bind, by default its <code>null</code>, the screen</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          sourceFrame
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
+        <td class="member-parameter__description"><p>part of screen that is mapped to the renderTexture</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          destinationFrame
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-      </td>
-      
-      <td class="member-parameter__description"><p>part of screen that is mapped to the renderTexture</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        destinationFrame
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      
-      <td class="member-parameter__description"><p>part of renderTexture, by default it has the same size as sourceFrame</p></td>
-    </tr>
-  </tbody>
-</table>
+        <td class="member-parameter__description"><p>part of renderTexture, by default it has the same size as sourceFrame</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -304,54 +337,56 @@
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        clearColor
-      </td>
-      <td class="member-parameter__type">
-        Array<number>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>The color as rgba, default to use the renderer backgroundColor</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        mask
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.BUFFER_BITS.html">PIXI.BUFFER_BITS</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        BUFFER_BITS.COLOR | BUFFER_BITS.DEPTH
-      </td>
-      <td class="member-parameter__description"><p>Bitwise OR of masks
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          clearColor
+        </td>
+        <td class="member-parameter__type">
+          Array<number>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The color as rgba, default to use the renderer backgroundColor</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          mask
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.BUFFER_BITS.html">PIXI.BUFFER_BITS</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          BUFFER_BITS.COLOR | BUFFER_BITS.DEPTH
+        </td>
+        <td class="member-parameter__description"><p>Bitwise OR of masks
 that indicate the buffers to be cleared, by default COLOR and DEPTH buffers.</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 

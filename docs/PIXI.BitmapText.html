@@ -61,151 +61,153 @@ http://www.bmglyph.com/ for Mac.</p>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        text
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>A string that you would like the text to display.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style
-      </td>
-      <td class="member-parameter__type">
-        object
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>The style parameters.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.fontName
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>The installed BitmapFont name.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.fontSize
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>The size of the font in pixels, e.g. 24. If undefined,
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          text
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>A string that you would like the text to display.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The style parameters.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.fontName
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The installed BitmapFont name.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.fontSize
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The size of the font in pixels, e.g. 24. If undefined,
 .     this will default to the BitmapFont size.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.align
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        'left'
-      </td>
-      <td class="member-parameter__description"><p>Alignment for multiline text ('left', 'center' or 'right'),
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.align
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          'left'
+        </td>
+        <td class="member-parameter__description"><p>Alignment for multiline text ('left', 'center' or 'right'),
 does not affect single line text.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.tint
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0xFFFFFF
-      </td>
-      <td class="member-parameter__description"><p>The tint color.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.letterSpacing
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The amount of spacing between letters.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.maxWidth
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The max width of the text before line wrapping.</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.tint
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0xFFFFFF
+        </td>
+        <td class="member-parameter__description"><p>The tint color.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.letterSpacing
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The amount of spacing between letters.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.maxWidth
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The max width of the text before line wrapping.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -483,31 +485,33 @@ Setting this changes the 'cursor' property to <code>'pointer'</code>.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        value
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      
-      
-      <td class="member-parameter__description"></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          value
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -553,23 +557,6 @@ as it will take a snapshot of what is currently there. If the textures have not 
 
   
     
-<div class="member" id="containerUpdateTransform">
-  <h3 class="member__title">containerUpdateTransform</h3>
-  
-<pre class="signature__container"><code class="signature">containerUpdateTransform</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Container default updateTransform, does update children of container.
-Will crash if there's no parent element.</p></div>
-
-  
-
-  
-</div>
-
-  
-    
 <div class="member" id="cursor">
   <h3 class="member__title">cursor</h3>
   
@@ -595,23 +582,6 @@ is hovered over the displayObject.</p></div>
 
   <div class="member__brief"><p>Set to <code>true</code> if the BitmapText needs to be redrawn.</p></div>
   <div class="member__description"></div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="displayObjectUpdateTransform">
-  <h3 class="member__title">displayObjectUpdateTransform</h3>
-  
-<pre class="signature__container"><code class="signature">displayObjectUpdateTransform</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>DisplayObject default updateTransform, does not update children of container.
-Will crash if there's no parent element.</p></div>
 
   
 
@@ -915,8 +885,9 @@ Disable by setting the value to 0.</p></div>
 
 
   <div class="member__brief"></div>
-  <div class="member__description"><p>The pivot point of the displayObject that it rotates around.
-Assignment by value since pixi-v4.</p></div>
+  <div class="member__description"><p>The center of rotation, scaling, and skewing for this display object in its local space. The <code>position</code>
+is the projection of <code>pivot</code> in the parent's local space.</p>
+<p>By default, the pivot is the origin (0, 0).</p></div>
 
   
 
@@ -931,9 +902,8 @@ Assignment by value since pixi-v4.</p></div>
 <pre class="signature__container"><code class="signature">position: <a href="PIXI.ObservablePoint.html">PIXI.ObservablePoint</a></code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>The coordinate of the object relative to the local coordinates of the parent.
-Assignment by value since pixi-v4.</p></div>
+  <div class="member__brief"><p>The coordinate of the object relative to the local coordinates of the parent.</p></div>
+  <div class="member__description"></div>
 
   
 
@@ -1002,9 +972,8 @@ To set the global default, change <a href="PIXI.settings.html#ROUND_PIXELS">PIXI
 <pre class="signature__container"><code class="signature">scale: <a href="PIXI.ObservablePoint.html">PIXI.ObservablePoint</a></code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>The scale factor of the object.
-Assignment by value since pixi-v4.</p></div>
+  <div class="member__brief"><p>The scale factors of this object along the local coordinate axes.</p></div>
+  <div class="member__description"><p>The default scale is (1, 1).</p></div>
 
   
 
@@ -1019,9 +988,8 @@ Assignment by value since pixi-v4.</p></div>
 <pre class="signature__container"><code class="signature">skew: <a href="PIXI.ObservablePoint.html">PIXI.ObservablePoint</a></code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>The skew factor for the object in radians.
-Assignment by value since pixi-v4.</p></div>
+  <div class="member__brief"><p>The skew factor for the object in radians.</p></div>
+  <div class="member__description"></div>
 
   
 
@@ -1075,9 +1043,8 @@ as the zIndex sorting may cause the child to automatically sorted to another pos
 <pre class="signature__container"><code class="signature">sortDirty: boolean</code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Should children be sorted by zIndex at the next updateTransform call.
-Will get automatically set to true if a new child is added, or if a child's zIndex changes.</p></div>
+  <div class="member__brief"><p>Should children be sorted by zIndex at the next updateTransform call.</p></div>
+  <div class="member__description"><p>Will get automatically set to true if a new child is added, or if a child's zIndex changes.</p></div>
 
   
 
@@ -1291,11 +1258,10 @@ An alias to position.y</p></div>
 <pre class="signature__container"><code class="signature">zIndex: number</code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>The zIndex of the displayObject.
-If a container has the sortableChildren property set to true, children will be automatically
+  <div class="member__brief"><p>The zIndex of the displayObject.</p></div>
+  <div class="member__description"><p>If a container has the sortableChildren property set to true, children will be automatically
 sorted by zIndex value; a higher value will mean it will be moved towards the end of the array,
-and thus rendered on top of other displayObjects within the same container.</p></div>
+and thus rendered on top of other display objects within the same container.</p></div>
 
   
 
@@ -1491,41 +1457,43 @@ A higher value will mean it will be rendered on top of other displayObjects with
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        data
-      </td>
-      <td class="member-parameter__type">
-        string | XMLDocument | <a href="PIXI.BitmapFontData.html">PIXI.BitmapFontData</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        textures
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Texture.html">PIXI.Texture</a> | <a href="PIXI.Texture.html">PIXI.Texture</a>[] | Dict
-      </td>
-      
-      
-      <td class="member-parameter__description"></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          data
+        </td>
+        <td class="member-parameter__type">
+          string | XMLDocument | <a href="PIXI.BitmapFontData.html">PIXI.BitmapFontData</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          textures
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Texture.html">PIXI.Texture</a> | <a href="PIXI.Texture.html">PIXI.Texture</a>[] | Dict
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -1602,31 +1570,33 @@ internal function for toLocal()</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        children
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The DisplayObject(s) to add to the container</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          children
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The DisplayObject(s) to add to the container</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -1666,41 +1636,43 @@ internal function for toLocal()</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        child
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The child to add</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        index
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The index to place the child in</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          child
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The child to add</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          index
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The index to place the child in</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -1736,7 +1708,8 @@ internal function for toLocal()</p></div>
 
 
   <div class="member__brief"><p>Recalculates the bounds of the container.</p></div>
-  <div class="member__description"></div>
+  <div class="member__description"><p>This implementation will automatically fit the children's bounds into the calculation. Each child's bounds
+is limited to its mask's bounds or filterArea, if any is applied.</p></div>
 
   
 
@@ -1765,6 +1738,23 @@ internal function for toLocal()</p></div>
 
   
     
+<div class="member" id="containerUpdateTransform">
+  <h3 class="member__title">containerUpdateTransform</h3>
+  
+<pre class="signature__container"><code class="signature">containerUpdateTransform</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Container default updateTransform, does update children of container.
+Will crash if there's no parent element.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
 <div class="member" id="destroy">
   <h3 class="member__title">destroy</h3>
   
@@ -1777,89 +1767,91 @@ Do not use a Container after calling <code>destroy</code>.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        options
-      </td>
-      <td class="member-parameter__type">
-        object | boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>Options parameter. A boolean will act as if all options
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          object | boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Options parameter. A boolean will act as if all options
 have been set to that value</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.children
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        false
-      </td>
-      <td class="member-parameter__description"><p>if set to true, all the children will have their destroy
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.children
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>if set to true, all the children will have their destroy
 method called as well. 'options' will be passed on to those calls.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.texture
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        false
-      </td>
-      <td class="member-parameter__description"><p>Only used for child Sprites if options.children is set to true
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.texture
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Only used for child Sprites if options.children is set to true
 Should it destroy the texture of the child sprite</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.baseTexture
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        false
-      </td>
-      <td class="member-parameter__description"><p>Only used for child Sprites if options.children is set to true
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.baseTexture
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Only used for child Sprites if options.children is set to true
 Should it destroy the base texture of the child sprite</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -1899,31 +1891,33 @@ Should it destroy the base texture of the child sprite</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        cacheParent
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>actual parent of element</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          cacheParent
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>actual parent of element</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -1946,6 +1940,23 @@ Should it destroy the base texture of the child sprite</p></td>
     </tr>
   </tbody>
 </table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="displayObjectUpdateTransform">
+  <h3 class="member__title">displayObjectUpdateTransform</h3>
+  
+<pre class="signature__container"><code class="signature">displayObjectUpdateTransform</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>DisplayObject default updateTransform, does not update children of container.
+Will crash if there's no parent element.</p></div>
+
+  
 
   
 </div>
@@ -1997,56 +2008,78 @@ elem.disable<span class="hljs-constructor">TempParent(<span class="hljs-params">
 <pre class="signature__container"><code class="signature">getBounds(skipUpdate: boolean, rect: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>) → {<a href="PIXI.Rectangle.html">PIXI.Rectangle</a>}</code></pre>
 
 
-  <div class="member__brief"><p>Retrieves the bounds of the displayObject as a rectangle object.</p></div>
-  <div class="member__description"></div>
+  <div class="member__brief"><p>Calculates and returns the (world) bounds of the display object as a <a href="PIXI.Rectangle.html">Rectangle</a>.</p></div>
+  <div class="member__description"><p>This method is expensive on containers with a large subtree (like the stage). This is because the bounds
+of a container depend on its children's bounds, which recursively causes all bounds in the subtree to
+be recalculated. The upside, however, is that calling <code>getBounds</code> once on a container will indeed update
+the bounds of all children (the whole subtree, in fact). This side effect should be exploited by using
+<code>displayObject._bounds.getRectangle()</code> when traversing through all the bounds in a scene graph. Otherwise,
+calling <code>getBounds</code> on each object in a subtree will cause the total cost to increase quadratically as
+its height increases.</p>
+<ul>
+<li>The transforms of all objects in a container's <strong>subtree</strong> and of all <strong>ancestors</strong> are updated.</li>
+<li>The world bounds of all display objects in a container's <strong>subtree</strong> will also be recalculated.</li>
+</ul>
+<p>The <code>_bounds</code> object stores the last calculation of the bounds. You can use to entirely skip bounds
+calculation if needed.</p>
+<pre><code class="hljs language-js"><span class="hljs-keyword">const</span> lastCalculatedBounds = displayObject._bounds.getRectangle(optionalRect);
+</code></pre>
+<p>Do know that usage of <code>getLocalBounds</code> can corrupt the <code>_bounds</code> of children (the whole subtree, actually). This
+is a known issue that has not been solved. See getLocalBounds for more
+details.</p>
+<p><code>getBounds</code> should be called with <code>skipUpdate</code> equal to <code>true</code> in a render() call. This is because the transforms
+are guaranteed to be update-to-date. In fact, recalculating inside a render() call may cause corruption in certain
+cases.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        skipUpdate
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
         
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          skipUpdate
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-      </td>
-      
-      <td class="member-parameter__description"><p>Setting to <code>true</code> will stop the transforms of the scene graph from
+        <td class="member-parameter__description"><p>Setting to <code>true</code> will stop the transforms of the scene graph from
 being updated. This means the calculation returned MAY be out of date BUT will give you a
 nice performance boost.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        rect
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          rect
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-        
-      </td>
-      
-      <td class="member-parameter__description"><p>Optional rectangle to store the result of the bounds calculation.</p></td>
-    </tr>
-  </tbody>
-</table>
+        <td class="member-parameter__description"><p>Optional rectangle to store the result of the bounds calculation.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -2065,7 +2098,7 @@ nice performance boost.</p></td>
       <td class="member-return__type">
         <pre><code><a href="PIXI.Rectangle.html">PIXI.Rectangle</a></code></pre>
       </td>
-      <td class="member-return__description"><p>The rectangular bounding area.</p></td>
+      <td class="member-return__description"><p>The minimum axis-aligned rectangle in world space that fits around this object.</p></td>
     </tr>
   </tbody>
 </table>
@@ -2086,31 +2119,33 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        index
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The index to get the child at</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          index
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The index to get the child at</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -2150,53 +2185,55 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        name
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>Instance name.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        deep
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        false
-      </td>
-      <td class="member-parameter__description"><p>Whether to search recursively</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          name
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Instance name.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          deep
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Whether to search recursively</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -2236,31 +2273,33 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        child
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The DisplayObject instance to identify</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          child
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The DisplayObject instance to identify</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -2300,55 +2339,57 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        point
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Point.html">PIXI.Point</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        new PIXI.Point()
-      </td>
-      <td class="member-parameter__description"><p>The point to write the global value to.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        skipUpdate
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        false
-      </td>
-      <td class="member-parameter__description"><p>Setting to true will stop the transforms of the scene graph from
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          point
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          new PIXI.Point()
+        </td>
+        <td class="member-parameter__description"><p>The point to write the global value to.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skipUpdate
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Setting to true will stop the transforms of the scene graph from
 being updated. This means the calculation returned MAY be out of date BUT will give you a
 nice performance boost.</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -2424,31 +2465,33 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        children
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The DisplayObject(s) to remove</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          children
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The DisplayObject(s) to remove</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -2488,31 +2531,33 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        index
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The index to get the child from</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          index
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The index to get the child from</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -2552,53 +2597,55 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        beginIndex
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The beginning position.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        endIndex
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        this.children.length
-      </td>
-      <td class="member-parameter__description"><p>The ending position. Default value is size of the container.</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          beginIndex
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The beginning position.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          endIndex
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          this.children.length
+        </td>
+        <td class="member-parameter__description"><p>The ending position. Default value is size of the container.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -2633,36 +2680,50 @@ nice performance boost.</p></td>
 <pre class="signature__container"><code class="signature">render(renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
 
 
-  <div class="member__brief"><p>Renders the object using the WebGL renderer</p></div>
-  <div class="member__description"></div>
+  <div class="member__brief"><p>Renders the object using the WebGL renderer.</p></div>
+  <div class="member__description"><p>The _render method is be overriden for rendering the contents of the
+container itself. This <code>render</code> method will invoke it, and also invoke the <code>render</code> methods of all
+children afterward.</p>
+<p>If <code>renderable</code> or <code>visible</code> is false or if <code>worldAlpha</code> is not positive, this implementation will entirely
+skip rendering. See <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a> for choosing between <code>renderable</code> or <code>visible</code>. Generally,
+setting alpha to zero is not recommended for purely skipping rendering.</p>
+<p>When your scene becomes large (especially when it is larger than can be viewed in a single screen), it is
+advised to employ <strong>culling</strong> to automatically skip rendering objects outside of the current screen. The
+<a href="https://www.npmjs.com/package/@pixi-essentials/cull">@pixi-essentials/cull</a> and
+<a href="https://www.npmjs.com/package/pixi-cull">pixi-cull</a> packages do this out of the box.</p>
+<p>The renderAdvanced method is internally used when when masking or
+filtering is applied on a container. This does, however, break batching and can affect performance when
+masking and filtering is applied extensively throughout the scene graph.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        renderer
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Renderer.html">PIXI.Renderer</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The renderer</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -2702,31 +2763,33 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        renderer
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.CanvasRenderer.html">PIXI.CanvasRenderer</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The renderer</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.CanvasRenderer.html">PIXI.CanvasRenderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -2766,31 +2829,33 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        renderer
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Renderer.html">PIXI.Renderer</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>Instance of renderer</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Instance of renderer</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -2830,41 +2895,43 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        child
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The child DisplayObject instance for which you want to change the index number</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        index
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The resulting index number for the child display object</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          child
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The child DisplayObject instance for which you want to change the index number</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          index
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The resulting index number for the child display object</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -2904,31 +2971,33 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        container
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Container.html">PIXI.Container</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The Container to add this DisplayObject to.</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          container
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Container.html">PIXI.Container</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The Container to add this DisplayObject to.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -2968,165 +3037,167 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        x
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The X position</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        y
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The Y position</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        scaleX
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        1
-      </td>
-      <td class="member-parameter__description"><p>The X scale value</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        scaleY
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        1
-      </td>
-      <td class="member-parameter__description"><p>The Y scale value</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        rotation
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The rotation</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        skewX
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The X skew value</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        skewY
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The Y skew value</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        pivotX
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The X pivot value</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        pivotY
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The Y pivot value</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          x
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The X position</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          y
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The Y position</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          scaleX
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>The X scale value</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          scaleY
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>The Y scale value</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          rotation
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The rotation</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skewX
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The X skew value</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skewY
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The Y skew value</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          pivotX
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The X pivot value</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          pivotY
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The Y pivot value</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -3202,41 +3273,43 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        child
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>First display object to swap</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        child2
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>Second display object to swap</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          child
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>First display object to swap</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          child2
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Second display object to swap</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -3276,70 +3349,72 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        position
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.IPointData.html">PIXI.IPointData</a>
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>The world origin to calculate from.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        point
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Point.html">PIXI.Point</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>A Point object in which to store the value, optional
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          position
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.IPointData.html">PIXI.IPointData</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The world origin to calculate from.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          point
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>A Point object in which to store the value, optional
 (otherwise will create a new Point).</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        skipUpdate
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        false
-      </td>
-      <td class="member-parameter__description"><p>Should we skip the update transform.</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skipUpdate
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Should we skip the update transform.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -3379,86 +3454,88 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        position
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.IPointData.html">PIXI.IPointData</a>
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>The world origin to calculate from.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        from
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>The DisplayObject to calculate the global position from.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        point
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Point.html">PIXI.Point</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>A Point object in which to store the value, optional
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          position
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.IPointData.html">PIXI.IPointData</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The world origin to calculate from.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          from
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The DisplayObject to calculate the global position from.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          point
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>A Point object in which to store the value, optional
 (otherwise will create a new Point).</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        skipUpdate
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        false
-      </td>
-      <td class="member-parameter__description"><p>Should we skip the update transform</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skipUpdate
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Should we skip the update transform</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -3538,8 +3615,8 @@ if the BitmapFont is regenerated.</p></div>
 
 
   <div class="member__brief"></div>
-  <div class="member__description"><p>Recalculates the bounds of the object. Override this to
-calculate the bounds of the specific object (not including children).</p></div>
+  <div class="member__description"><p>Recalculates the content bounds of this object. This should be overriden to
+calculate the bounds of this specific object (not including children).</p></div>
 
   
 
@@ -3579,31 +3656,33 @@ calculate the bounds of the specific object (not including children).</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        renderer
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Renderer.html">PIXI.Renderer</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The renderer</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -3643,31 +3722,33 @@ calculate the bounds of the specific object (not including children).</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        renderer
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.CanvasRenderer.html">PIXI.CanvasRenderer</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The renderer</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.CanvasRenderer.html">PIXI.CanvasRenderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -3707,31 +3788,33 @@ calculate the bounds of the specific object (not including children).</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        _length
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      
-      
-      <td class="member-parameter__description"></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          _length
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -3771,31 +3854,33 @@ calculate the bounds of the specific object (not including children).</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        renderer
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Renderer.html">PIXI.Renderer</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The renderer</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -3871,13 +3956,9 @@ calculate the bounds of the specific object (not including children).</p></div>
     
       <li class="page-members-explorer__item"><a href="PIXI.BitmapText.html#children">children</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.BitmapText.html#containerUpdateTransform">containerUpdateTransform</a></li>
-    
       <li class="page-members-explorer__item"><a href="PIXI.BitmapText.html#cursor">cursor</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.BitmapText.html#dirty">dirty</a></li>
-    
-      <li class="page-members-explorer__item"><a href="PIXI.BitmapText.html#displayObjectUpdateTransform">displayObjectUpdateTransform</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.BitmapText.html#filterArea">filterArea</a></li>
     
@@ -4007,9 +4088,13 @@ calculate the bounds of the specific object (not including children).</p></div>
     
       <li class="page-members-explorer__item"><a href="PIXI.BitmapText.html#calculateBounds">calculateBounds</a></li>
     
+      <li class="page-members-explorer__item"><a href="PIXI.BitmapText.html#containerUpdateTransform">containerUpdateTransform</a></li>
+    
       <li class="page-members-explorer__item"><a href="PIXI.BitmapText.html#destroy">destroy</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.BitmapText.html#disableTempParent">disableTempParent</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.BitmapText.html#displayObjectUpdateTransform">displayObjectUpdateTransform</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.BitmapText.html#enableTempParent">enableTempParent</a></li>
     

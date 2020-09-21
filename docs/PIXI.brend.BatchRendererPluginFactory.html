@@ -57,280 +57,282 @@ for non-uniform based display-objects.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        options
-      </td>
-      <td class="member-parameter__type">
-        object
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.attribSet
-      </td>
-      <td class="member-parameter__type">
-        Array<<a href="PIXI.brend.AttributeRedirect.html">PIXI.brend.AttributeRedirect</a>>
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>set of geometry attributes</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.indexProperty
-      </td>
-      <td class="member-parameter__type">
-        string | Array<number>
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>no. of indices on display-object</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.vertexCountProperty
-      </td>
-      <td class="member-parameter__type">
-        string | number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>no. of vertices on display-object</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.textureProperty
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>textures used in display-object</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.texturePerObject
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>no. of textures used per display-object</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.texIDAttrib
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>used to find texture for each display-object (index into array)</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.uniformIDAttrib
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>used to find the uniform data for each display-object (index into array)</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.inBatchIDAttrib
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>used get the index of the object in the batch</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.masterIDAttrib
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>used to combine texture-ID, batch-ID, uniform-ID and other
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.attribSet
+        </td>
+        <td class="member-parameter__type">
+          Array<<a href="PIXI.brend.AttributeRedirect.html">PIXI.brend.AttributeRedirect</a>>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>set of geometry attributes</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.indexProperty
+        </td>
+        <td class="member-parameter__type">
+          string | Array<number>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>no. of indices on display-object</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.vertexCountProperty
+        </td>
+        <td class="member-parameter__type">
+          string | number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>no. of vertices on display-object</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.textureProperty
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>textures used in display-object</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.texturePerObject
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>no. of textures used per display-object</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.texIDAttrib
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>used to find texture for each display-object (index into array)</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.uniformIDAttrib
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>used to find the uniform data for each display-object (index into array)</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.inBatchIDAttrib
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>used get the index of the object in the batch</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.masterIDAttrib
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>used to combine texture-ID, batch-ID, uniform-ID and other
 information into one attribute. This is an advanced optimization. It is expected you override
 {@code BatchGeometryFactory#append} and supply the <code>_masterID</code> property.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.stateFunction
-      </td>
-      <td class="member-parameter__type">
-        string | Function
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-         ()=>PIXI.State.for2d()
-      </td>
-      <td class="member-parameter__description"><p>callback that finds the WebGL
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.stateFunction
+        </td>
+        <td class="member-parameter__type">
+          string | Function
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+           ()=>PIXI.State.for2d()
+        </td>
+        <td class="member-parameter__description"><p>callback that finds the WebGL
 state required for display-object shader</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.shaderFunction
-      </td>
-      <td class="member-parameter__type">
-        Function
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>shader generator function</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.BatchGeometryFactoryClass
-      </td>
-      <td class="member-parameter__type">
-        Class
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>custom batch geometry factory class</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.BatchFactoryClass
-      </td>
-      <td class="member-parameter__type">
-        Class
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>custom batch factory class</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.BatchRendererClass
-      </td>
-      <td class="member-parameter__type">
-        Class
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>custom batch renderer class</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        options.BatchDrawerClass
-      </td>
-      <td class="member-parameter__type">
-        Class
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>custom batch drawer class</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.shaderFunction
+        </td>
+        <td class="member-parameter__type">
+          Function
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>shader generator function</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.BatchGeometryFactoryClass
+        </td>
+        <td class="member-parameter__type">
+          Class
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>custom batch geometry factory class</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.BatchFactoryClass
+        </td>
+        <td class="member-parameter__type">
+          Class
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>custom batch factory class</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.BatchRendererClass
+        </td>
+        <td class="member-parameter__type">
+          Class
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>custom batch renderer class</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.BatchDrawerClass
+        </td>
+        <td class="member-parameter__type">
+          Class
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>custom batch drawer class</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 

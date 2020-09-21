@@ -30,9 +30,11 @@
 <pre class="signature__container"><code class="signature">class Filter extends <a href="PIXI.Shader.html">PIXI.Shader</a></code></pre>
 
 
-    <div class="document__brief"><p>Filter is a special type of WebGL shader that is applied to the screen.</p></div>
-    <div class="document__description"><p><a href="http://pixijs.io/examples/#/filters/blur-filter.js Example">http://pixijs.io/examples/#/filters/blur-filter.js Example</a> of the
-PIXI.filters.BlurFilter BlurFilter.</p>
+    <div class="document__brief"></div>
+    <div class="document__description"><p>A filter is a special shader that applies post-processing effects to an input texture and writes into an output
+render-target.</p>
+<p><a href="http://pixijs.io/examples/#/filters/blur-filter.js">Example</a> of the
+<a href="PIXI.filters.BlurFilter.html">BlurFilter</a>.</p>
 <h3>Usage</h3>
 <p>Filters can be applied to any DisplayObject or Container.
 PixiJS' <code>FilterSystem</code> renders the container into temporary Framebuffer,
@@ -50,7 +52,39 @@ Developers had to create a set of uniforms to deal with coordinates.</p>
 Developers can use normal coordinates of v3 and then allow filter to use partial Framebuffers,
 bringing those extra uniforms into account.</p>
 <p>Also be aware that we have changed default vertex shader, please consult
-<a href="https://github.com/pixijs/pixi.js/wiki/v5-Creating-filters Wiki">https://github.com/pixijs/pixi.js/wiki/v5-Creating-filters Wiki</a>.</p>
+<a href="https://github.com/pixijs/pixi.js/wiki/v5-Creating-filters">Wiki</a>.</p>
+<h3>Frames</h3>
+<p>The following table summarizes the coordinate spaces used in the filtering pipeline:</p>
+ <table>
+ <thead>
+   <tr>
+     <th>Coordinate Space</th>
+     <th>Description</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <td>Texture Coordinates</td>
+     <td>
+         The texture (or UV) coordinates in the input base-texture's space. These are normalized into the (0,1) range along
+         both axes.
+     </td>
+   </tr>
+   <tr>
+     <td>World Space</td>
+     <td>
+         A point in the same space as the world bounds of any display-object (i.e. in the scene graph's space).
+     </td>
+   </tr>
+   <tr>
+     <td>Physical Pixels</td>
+     <td>
+         This is base-texture's space with the origin on the top-left. You can calculate these by multiplying the texture
+         coordinates by the dimensions of the texture.
+     </td>
+   </tr>
+ </tbody>
+ </table>
 <h3>Built-in Uniforms</h3>
 <p>PixiJS viewport uses screen (CSS) coordinates, <code>(0, 0, renderer.screen.width, renderer.screen.height)</code>,
 and <code>projectionMatrix</code> uniform maps it to the gl viewport.</p>
@@ -71,7 +105,7 @@ Use it to sample the input.</p>
 
 <span class="hljs-keyword">const</span> myFilter = new PIXI.Filter(null, fragment);
 </code></pre>
-<p>This filter is just one uniform less than PIXI.filters.AlphaFilter AlphaFilter.</p>
+<p>This filter is just one uniform less than <a href="PIXI.filters.AlphaFilter.html">AlphaFilter</a>.</p>
 <p><strong>outputFrame</strong></p>
 <p>The <code>outputFrame</code> holds the rectangle where filter is applied in screen (CSS) coordinates.
 It's the same as <code>renderer.screen</code> for a fullscreen filter.
@@ -103,7 +137,7 @@ Divide by <code>inputSize.xy</code> to get input normalized coordinate.</p>
 <p><strong>inputPixel</strong></p>
 <p><code>inputPixel.xy</code> is the size of framebuffer in real pixels, same as <code>inputSize.xy * resolution</code>
 <code>inputPixel.zw</code> is inverted <code>inputPixel.xy</code>.</p>
-<p>It's handy for filters that use neighbour pixels, like PIXI.filters.FXAAFilter FXAAFilter.</p>
+<p>It's handy for filters that use neighbour pixels, like <a href="PIXI.filters.FXAAFilter.html">FXAAFilter</a>.</p>
 <p><strong>inputClamp</strong></p>
 <p>If you try to get info from outside of used part of Framebuffer - you'll get undefined behaviour.
 For displacements, coordinates has to be clamped.</p>
@@ -116,9 +150,9 @@ For displacements, coordinates has to be clamped.</p>
 </code></pre>
 <h3>Additional Information</h3>
 <p>Complete documentation on Filter usage is located in the
-<a href="https://github.com/pixijs/pixi.js/wiki/v5-Creating-filters Wiki">https://github.com/pixijs/pixi.js/wiki/v5-Creating-filters Wiki</a>.</p>
+<a href="https://github.com/pixijs/pixi.js/wiki/v5-Creating-filters">Wiki</a>.</p>
 <p>Since PixiJS only had a handful of built-in filters, additional filters can be downloaded
-<a href="https://github.com/pixijs/pixi-filters here">https://github.com/pixijs/pixi-filters here</a> from the PixiJS Filters repository.</p></div>
+<a href="https://github.com/pixijs/pixi-filters">here</a> from the PixiJS Filters repository.</p></div>
 
     
       
@@ -138,63 +172,65 @@ For displacements, coordinates has to be clamped.</p>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        vertexSrc
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
         
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          vertexSrc
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-      </td>
-      
-      <td class="member-parameter__description"><p>The source of the vertex shader.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        fragmentSrc
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
+        <td class="member-parameter__description"><p>The source of the vertex shader.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          fragmentSrc
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
+        <td class="member-parameter__description"><p>The source of the fragment shader.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          uniforms
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-      </td>
-      
-      <td class="member-parameter__description"><p>The source of the fragment shader.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        uniforms
-      </td>
-      <td class="member-parameter__type">
-        object
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      
-      <td class="member-parameter__description"><p>Custom uniforms to use to augment the built-in ones.</p></td>
-    </tr>
-  </tbody>
-</table>
+        <td class="member-parameter__description"><p>Custom uniforms to use to augment the built-in ones.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -433,93 +469,95 @@ increase the performance of the filter.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        filterManager
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.FilterSystem.html">PIXI.FilterSystem</a>
-      </td>
-      <td class="member-parameter__attributes">
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
         
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          filterManager
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.FilterSystem.html">PIXI.FilterSystem</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
+        <td class="member-parameter__description"><p>The renderer to retrieve the filter from</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          input
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
-      </td>
-      
-      <td class="member-parameter__description"><p>The renderer to retrieve the filter from</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        input
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
-      </td>
-      <td class="member-parameter__attributes">
+        <td class="member-parameter__description"><p>The input render target.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          output
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
+        <td class="member-parameter__description"><p>The target to output to.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          clearMode
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.CLEAR_MODES.html">PIXI.CLEAR_MODES</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
+        <td class="member-parameter__description"><p>Should the output be cleared before rendering to it.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          currentState
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-      </td>
-      
-      <td class="member-parameter__description"><p>The input render target.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        output
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      
-      <td class="member-parameter__description"><p>The target to output to.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        clearMode
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.CLEAR_MODES.html">PIXI.CLEAR_MODES</a>
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      
-      <td class="member-parameter__description"><p>Should the output be cleared before rendering to it.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        currentState
-      </td>
-      <td class="member-parameter__type">
-        object
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      
-      <td class="member-parameter__description"><p>It's current state of filter.
+        <td class="member-parameter__description"><p>It's current state of filter.
 There are some useful properties in the currentState :
 target, filters, sourceFrame, destinationFrame, renderTarget, resolution</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 

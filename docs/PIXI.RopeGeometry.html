@@ -55,75 +55,77 @@
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        width
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        200
-      </td>
-      <td class="member-parameter__description"><p>The width (i.e., thickness) of the rope.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        points
-      </td>
-      <td class="member-parameter__type">
-        Array<<a href="PIXI.Point.html">PIXI.Point</a>>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>An array of <a href="PIXI.Point.html">PIXI.Point</a> objects to construct this rope.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        textureScale
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>By default the rope texture will be stretched to match
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          width
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          200
+        </td>
+        <td class="member-parameter__description"><p>The width (i.e., thickness) of the rope.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          points
+        </td>
+        <td class="member-parameter__type">
+          Array<<a href="PIXI.Point.html">PIXI.Point</a>>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>An array of <a href="PIXI.Point.html">PIXI.Point</a> objects to construct this rope.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          textureScale
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>By default the rope texture will be stretched to match
 rope length. If textureScale is positive this value will be treated as a scaling
 factor and the texture will preserve its aspect ratio instead. To create a tiling rope
 set baseTexture.wrapMode to <a href="PIXI.WRAP_MODES.html#REPEAT">PIXI.WRAP_MODES.REPEAT</a> and use a power of two texture,
 then set textureScale=1 to keep the original texture pixel size.
 In order to reduce alpha channel artifacts provide a larger texture and downsample -
 i.e. set textureScale=0.5 to scale it down twice.</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -279,149 +281,151 @@ Note: <code>stride</code> and <code>start</code> should be <code>undefined</code
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        id
-      </td>
-      <td class="member-parameter__type">
-        String
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>the name of the attribute (matching up to a shader)</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        buffer
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Buffer.html">PIXI.Buffer</a> | number<Array>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>the buffer that holds the data of the attribute . You can also provide an Array and a buffer will be created from it.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        size
-      </td>
-      <td class="member-parameter__type">
-        Number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>the size of the attribute. If you have 2 floats per vertex (eg position x and y) this would be 2</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        normalized
-      </td>
-      <td class="member-parameter__type">
-        Boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        false
-      </td>
-      <td class="member-parameter__description"><p>should the data be normalized.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        type
-      </td>
-      <td class="member-parameter__type">
-        Number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        PIXI.TYPES.FLOAT
-      </td>
-      <td class="member-parameter__description"><p>what type of number is the attribute. Check {PIXI.TYPES} to see the ones available</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        stride
-      </td>
-      <td class="member-parameter__type">
-        Number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>How far apart (in floats) the start of each value is. (used for interleaving data)</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        start
-      </td>
-      <td class="member-parameter__type">
-        Number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>How far into the array to start reading values (used for interleaving data)</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        instance
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        false
-      </td>
-      <td class="member-parameter__description"><p>Instancing flag</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          id
+        </td>
+        <td class="member-parameter__type">
+          String
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>the name of the attribute (matching up to a shader)</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          buffer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Buffer.html">PIXI.Buffer</a> | number<Array>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>the buffer that holds the data of the attribute . You can also provide an Array and a buffer will be created from it.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          size
+        </td>
+        <td class="member-parameter__type">
+          Number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>the size of the attribute. If you have 2 floats per vertex (eg position x and y) this would be 2</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          normalized
+        </td>
+        <td class="member-parameter__type">
+          Boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>should the data be normalized.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          type
+        </td>
+        <td class="member-parameter__type">
+          Number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.TYPES.FLOAT
+        </td>
+        <td class="member-parameter__description"><p>what type of number is the attribute. Check {PIXI.TYPES} to see the ones available</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          stride
+        </td>
+        <td class="member-parameter__type">
+          Number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>How far apart (in floats) the start of each value is. (used for interleaving data)</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          start
+        </td>
+        <td class="member-parameter__type">
+          Number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>How far into the array to start reading values (used for interleaving data)</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          instance
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Instancing flag</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -462,35 +466,37 @@ The index buffer contains integers, three for each triangle in the geometry, whi
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        buffer
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Buffer.html">PIXI.Buffer</a> | number<Array>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
         
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          buffer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Buffer.html">PIXI.Buffer</a> | number<Array>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-      </td>
-      
-      <td class="member-parameter__description"><p>the buffer that holds the data of the index buffer. You can also provide an Array and a buffer will be created from it.</p></td>
-    </tr>
-  </tbody>
-</table>
+        <td class="member-parameter__description"><p>the buffer that holds the data of the index buffer. You can also provide an Array and a buffer will be created from it.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -638,31 +644,33 @@ The index buffer contains integers, three for each triangle in the geometry, whi
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        id
-      </td>
-      <td class="member-parameter__type">
-        String
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>the name of the attribute required</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          id
+        </td>
+        <td class="member-parameter__type">
+          String
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the name of the attribute required</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -702,31 +710,33 @@ The index buffer contains integers, three for each triangle in the geometry, whi
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        id
-      </td>
-      <td class="member-parameter__type">
-        String
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>the name of the buffer required</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          id
+        </td>
+        <td class="member-parameter__type">
+          String
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the name of the buffer required</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 

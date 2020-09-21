@@ -31,7 +31,236 @@
 
 
     <div class="document__brief"><p>The base class for all objects that are rendered on the screen.</p></div>
-    <div class="document__description"><p>This is an abstract class and should not be used on its own; rather it should b e extended.</p></div>
+    <div class="document__description"><p>This is an abstract class and can not be used on its own; rather it should be extended.</p>
+<h2>Display objects implemented in PixiJS</h2>
+<table>
+<thead>
+<tr>
+<th>Display Object</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="PIXI.Container.html">PIXI.Container</a></td>
+<td>Adds support for <code>children</code> to DisplayObject</td>
+</tr>
+<tr>
+<td><a href="PIXI.Graphics.html">PIXI.Graphics</a></td>
+<td>Shape-drawing display object similar to the Canvas API</td>
+</tr>
+<tr>
+<td><a href="PIXI.Sprite.html">PIXI.Sprite</a></td>
+<td>Draws textures (i.e. images)</td>
+</tr>
+<tr>
+<td><a href="PIXI.Text.html">PIXI.Text</a></td>
+<td>Draws text using the Canvas API internally</td>
+</tr>
+<tr>
+<td><a href="PIXI.BitmapText.html">PIXI.BitmapText</a></td>
+<td>More scaleable solution for text rendering, reusing glyph textures</td>
+</tr>
+<tr>
+<td><a href="PIXI.TilingSprite.html">PIXI.TilingSprite</a></td>
+<td>Draws textures/images in a tiled fashion</td>
+</tr>
+<tr>
+<td><a href="PIXI.AnimatedSprite.html">PIXI.AnimatedSprite</a></td>
+<td>Draws an animation of multiple images</td>
+</tr>
+<tr>
+<td><a href="PIXI.Mesh_.html">PIXI.Mesh</a></td>
+<td>Provides a lower-level API for drawing meshes with custom data</td>
+</tr>
+<tr>
+<td><a href="PIXI.NineSlicePlane.html">PIXI.NineSlicePlane</a></td>
+<td>Mesh-related</td>
+</tr>
+<tr>
+<td><a href="PIXI.SimpleMesh.html">PIXI.SimpleMesh</a></td>
+<td>v4-compatibile mesh</td>
+</tr>
+<tr>
+<td><a href="PIXI.SimplePlane.html">PIXI.SimplePlane</a></td>
+<td>Mesh-related</td>
+</tr>
+<tr>
+<td><a href="PIXI.SimpleRope.html">PIXI.SimpleRope</a></td>
+<td>Mesh-related</td>
+</tr>
+</tbody>
+</table>
+<h2>Transforms</h2>
+<p>The transform of a display object describes the projection from its
+local coordinate space to its parent's local coordinate space. The following properties are derived
+from the transform:</p>
+ <table>
+   <thead>
+     <tr>
+       <th>Property</th>
+       <th>Description</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>pivot</td>
+       <td>
+         Invariant under rotation, scaling, and skewing. The projection of into the parent's space of the pivot
+         is equal to position, regardless of the other three transformations. In other words, It is the center of
+         rotation, scaling, and skewing.
+       </td>
+     </tr>
+     <tr>
+       <td>position</td>
+       <td>
+         Translation. This is the position of the pivot in the parent's local
+         space. The default value of the pivot is the origin (0,0). If the top-left corner of your display object
+         is (0,0) in its local space, then the position will be its top-left corner in the parent's local space.
+       </td>
+     </tr>
+     <tr>
+       <td>scale</td>
+       <td>
+         Scaling. This will stretch (or compress) the display object's projection. The scale factors are along the
+         local coordinate axes. In other words, the display object is scaled before rotated or skewed. The center
+         of scaling is the pivot.
+       </td>
+     </tr>
+     <tr>
+       <td>rotation</td>
+       <td>
+          Rotation. This will rotate the display object's projection by this angle (in radians).
+       </td>
+     </tr>
+     <tr>
+       <td>skew</td>
+       <td>
+         <p>Skewing. This can be used to deform a rectangular display object into a parallelogram.</p>
+         <p>
+         In PixiJS, skew has a slightly different behaviour than the conventional meaning. It can be
+         thought of the net rotation applied to the coordinate axes (separately). For example, if "skew.x" is
+         ⍺ and "skew.y" is β, then the line x = 0 will be rotated by ⍺ (y = -x*cot⍺) and the line y = 0 will be
+         rotated by β (y = x*tanβ). A line y = x*tanϴ (i.e. a line at angle ϴ to the x-axis in local-space) will
+         be rotated by an angle between ⍺ and β.
+         </p>
+         <p>
+         It can be observed that if skew is applied equally to both axes, then it will be equivalent to applying
+         a rotation. Indeed, if "skew.x" = -ϴ and "skew.y" = ϴ, it will produce an equivalent of "rotation" = ϴ.
+         </p>
+         <p>
+         Another quite interesting observation is that "skew.x", "skew.y", rotation are communtative operations. Indeed,
+         because rotation is essentially a careful combination of the two.
+         </p>
+       </td>
+     </tr>
+     <tr>
+       <td>angle</td>
+       <td>Rotation. This is an alias for rotation, but in degrees.</td>
+     </tr>
+     <tr>
+       <td>x</td>
+       <td>Translation. This is an alias for position.x!</td>
+     </tr>
+     <tr>
+       <td>y</td>
+       <td>Translation. This is an alias for position.y!</td>
+     </tr>
+     <tr>
+       <td>width</td>
+       <td>
+         Implemented in <a href="PIXI.Container.html">Container</a>. Scaling. The width property calculates scale.x by dividing
+         the "requested" width by the local bounding box width. It is indirectly an abstraction over scale.x, and there
+         is no concept of user-defined width.
+       </td>
+     </tr>
+     <tr>
+       <td>height</td>
+       <td>
+         Implemented in <a href="PIXI.Container.html">Container</a>. Scaling. The height property calculates scale.y by dividing
+         the "requested" height by the local bounding box height. It is indirectly an abstraction over scale.y, and there
+         is no concept of user-defined height.
+       </td>
+     </tr>
+   </tbody>
+ </table>
+<h2>Bounds</h2>
+<p>The bounds of a display object is defined by the minimum axis-aligned rectangle in world space that can fit
+around it. The abstract <code>calculateBounds</code> method is responsible for providing it (and it should use the
+<code>worldTransform</code> to calculate in world space).</p>
+<p>There are a few additional types of bounding boxes:</p>
+<table>
+<thead>
+<tr>
+<th>Bounds</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>World Bounds</td>
+<td>This is synonymous is the regular bounds described above. See <code>getBounds()</code>.</td>
+</tr>
+<tr>
+<td>Local Bounds</td>
+<td>This the axis-aligned bounding box in the parent's local space. See <code>getLocalBounds()</code>.</td>
+</tr>
+<tr>
+<td>Render Bounds</td>
+<td>The bounds, but including extra rendering effects like filter padding.</td>
+</tr>
+<tr>
+<td>Projected Bounds</td>
+<td>The bounds of the projected display object onto the screen. Usually equals world bounds.</td>
+</tr>
+<tr>
+<td>Relative Bounds</td>
+<td>The bounds of a display object when projected onto a ancestor's (or parent's) space.</td>
+</tr>
+<tr>
+<td>Natural Bounds</td>
+<td>The bounds of an object in its own local space (not parent's space, like in local bounds)</td>
+</tr>
+<tr>
+<td>Content Bounds</td>
+<td>The natural bounds when excluding all children of a <code>Container</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3>calculateBounds</h3>
+<p>Container already implements <code>calculateBounds</code> in a manner that includes children.</p>
+<p>But for a non-Container display object, the <code>calculateBounds</code> method must be overriden in order for <code>getBounds</code> and
+<code>getLocalBounds</code> to work. This method must write the bounds into <code>this._bounds</code>.</p>
+<p>Generally, the following technique works for most simple cases: take the list of points
+forming the &quot;hull&quot; of the object (i.e. outline of the object's shape), and then add them
+using PIXI.Bounds#addPointMatrix.</p>
+<pre><code class="hljs language-js">calculateBounds(): <span class="hljs-keyword">void</span>
+{
+    <span class="hljs-keyword">const</span> points = [...];
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>, j = points.length; i &lt; j; i++)
+    {
+        <span class="hljs-keyword">this</span>._bounds.addPointMatrix(<span class="hljs-keyword">this</span>.worldTransform, points[i]);
+    }
+}
+</code></pre>
+<p>You can optimize this for a large number of points by using PIXI.Bounds#addVerticesMatrix to pass them
+in one array together.</p>
+<h2>Alpha</h2>
+<p>This alpha sets a display object's <strong>relative opacity</strong> w.r.t its parent. For example, if the alpha of a display
+object is 0.5 and its parent's alpha is 0.5, then it will be rendered with 25% opacity (assuming alpha is not
+applied on any ancestor further up the chain).</p>
+<p>The alpha with which the display object will be rendered is called the worldAlpha.</p>
+<h2>Renderable vs Visible</h2>
+<p>The <code>renderable</code> and <code>visible</code> properties can be used to prevent a display object from being rendered to the
+screen. However, there is a subtle difference between the two. When using <code>renderable</code>, the transforms  of the display
+object (and its children subtree) will continue to be calculated. When using <code>visible</code>, the transforms will not
+be calculated.</p>
+<p>It is recommended that applications use the <code>renderable</code> property for culling. See
+<a href="https://www.npmjs.com/package/@pixi-essentials/cull">@pixi-essentials/cull</a> or
+<a href="https://www.npmjs.com/package/pixi-cull">pixi-cull</a> for more details.</p>
+<p>Otherwise, to prevent an object from rendering in the general-purpose sense - <code>visible</code> is the property to use. This
+one is also better in terms of performance.</p></div>
 
     
       
@@ -253,31 +482,33 @@ Setting this changes the 'cursor' property to <code>'pointer'</code>.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        value
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      
-      
-      <td class="member-parameter__description"></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          value
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -316,23 +547,6 @@ as it will take a snapshot of what is currently there. If the textures have not 
   <div class="member__brief"></div>
   <div class="member__description"><p>This defines what cursor mode is used when the mouse cursor
 is hovered over the displayObject.</p></div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="displayObjectUpdateTransform">
-  <h3 class="member__title">displayObjectUpdateTransform</h3>
-  
-<pre class="signature__container"><code class="signature">displayObjectUpdateTransform</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>DisplayObject default updateTransform, does not update children of container.
-Will crash if there's no parent element.</p></div>
 
   
 
@@ -520,8 +734,9 @@ utilities shape clipping. To remove a mask, set this property to <code>null</cod
 
 
   <div class="member__brief"></div>
-  <div class="member__description"><p>The pivot point of the displayObject that it rotates around.
-Assignment by value since pixi-v4.</p></div>
+  <div class="member__description"><p>The center of rotation, scaling, and skewing for this display object in its local space. The <code>position</code>
+is the projection of <code>pivot</code> in the parent's local space.</p>
+<p>By default, the pivot is the origin (0, 0).</p></div>
 
   
 
@@ -536,9 +751,8 @@ Assignment by value since pixi-v4.</p></div>
 <pre class="signature__container"><code class="signature">position: <a href="PIXI.ObservablePoint.html">PIXI.ObservablePoint</a></code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>The coordinate of the object relative to the local coordinates of the parent.
-Assignment by value since pixi-v4.</p></div>
+  <div class="member__brief"><p>The coordinate of the object relative to the local coordinates of the parent.</p></div>
+  <div class="member__description"></div>
 
   
 
@@ -588,9 +802,8 @@ methods will still be called.</p>
 <pre class="signature__container"><code class="signature">scale: <a href="PIXI.ObservablePoint.html">PIXI.ObservablePoint</a></code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>The scale factor of the object.
-Assignment by value since pixi-v4.</p></div>
+  <div class="member__brief"><p>The scale factors of this object along the local coordinate axes.</p></div>
+  <div class="member__description"><p>The default scale is (1, 1).</p></div>
 
   
 
@@ -605,9 +818,8 @@ Assignment by value since pixi-v4.</p></div>
 <pre class="signature__container"><code class="signature">skew: <a href="PIXI.ObservablePoint.html">PIXI.ObservablePoint</a></code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>The skew factor for the object in radians.
-Assignment by value since pixi-v4.</p></div>
+  <div class="member__brief"><p>The skew factor for the object in radians.</p></div>
+  <div class="member__description"></div>
 
   
 
@@ -756,11 +968,10 @@ An alias to position.y</p></div>
 <pre class="signature__container"><code class="signature">zIndex: number</code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>The zIndex of the displayObject.
-If a container has the sortableChildren property set to true, children will be automatically
+  <div class="member__brief"><p>The zIndex of the displayObject.</p></div>
+  <div class="member__description"><p>If a container has the sortableChildren property set to true, children will be automatically
 sorted by zIndex value; a higher value will mean it will be moved towards the end of the array,
-and thus rendered on top of other displayObjects within the same container.</p></div>
+and thus rendered on top of other display objects within the same container.</p></div>
 
   
 
@@ -940,31 +1151,33 @@ A higher value will mean it will be rendered on top of other displayObjects with
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        source
-      </td>
-      <td class="member-parameter__type">
-        object
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The source of properties and methods to mix in.</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          source
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The source of properties and methods to mix in.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -1007,43 +1220,45 @@ been enabled.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        recursive
-      </td>
-      <td class="member-parameter__type">
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
         
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>whether to update the smart-masks of the children as well. Traversing the scene
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          recursive
+        </td>
+        <td class="member-parameter__type">
+          
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>whether to update the smart-masks of the children as well. Traversing the scene
 graph on your own is less optimized due to bounds recalculations.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        skipUpdate
-      </td>
-      <td class="member-parameter__type">
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skipUpdate
+        </td>
+        <td class="member-parameter__type">
+          
+        </td>
         
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>whether to not recalculate the transforms of each display-object. This is false
+        
+        <td class="member-parameter__description"><p>whether to not recalculate the transforms of each display-object. This is false
 by default because it is expected you will do this on your own.</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -1159,35 +1374,37 @@ after calling <code>destroy()</code>.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        _options
-      </td>
-      <td class="member-parameter__type">
-        IDestroyOptions | boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
         
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          _options
+        </td>
+        <td class="member-parameter__type">
+          IDestroyOptions | boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-      </td>
-      
-      <td class="member-parameter__description"></td>
-    </tr>
-  </tbody>
-</table>
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -1227,31 +1444,33 @@ after calling <code>destroy()</code>.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        cacheParent
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>actual parent of element</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          cacheParent
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>actual parent of element</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -1274,6 +1493,23 @@ after calling <code>destroy()</code>.</p></div>
     </tr>
   </tbody>
 </table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="displayObjectUpdateTransform">
+  <h3 class="member__title">displayObjectUpdateTransform</h3>
+  
+<pre class="signature__container"><code class="signature">displayObjectUpdateTransform</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>DisplayObject default updateTransform, does not update children of container.
+Will crash if there's no parent element.</p></div>
+
+  
 
   
 </div>
@@ -1325,56 +1561,78 @@ elem.disable<span class="hljs-constructor">TempParent(<span class="hljs-params">
 <pre class="signature__container"><code class="signature">getBounds(skipUpdate: boolean, rect: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>) → {<a href="PIXI.Rectangle.html">PIXI.Rectangle</a>}</code></pre>
 
 
-  <div class="member__brief"><p>Retrieves the bounds of the displayObject as a rectangle object.</p></div>
-  <div class="member__description"></div>
+  <div class="member__brief"><p>Calculates and returns the (world) bounds of the display object as a <a href="PIXI.Rectangle.html">Rectangle</a>.</p></div>
+  <div class="member__description"><p>This method is expensive on containers with a large subtree (like the stage). This is because the bounds
+of a container depend on its children's bounds, which recursively causes all bounds in the subtree to
+be recalculated. The upside, however, is that calling <code>getBounds</code> once on a container will indeed update
+the bounds of all children (the whole subtree, in fact). This side effect should be exploited by using
+<code>displayObject._bounds.getRectangle()</code> when traversing through all the bounds in a scene graph. Otherwise,
+calling <code>getBounds</code> on each object in a subtree will cause the total cost to increase quadratically as
+its height increases.</p>
+<ul>
+<li>The transforms of all objects in a container's <strong>subtree</strong> and of all <strong>ancestors</strong> are updated.</li>
+<li>The world bounds of all display objects in a container's <strong>subtree</strong> will also be recalculated.</li>
+</ul>
+<p>The <code>_bounds</code> object stores the last calculation of the bounds. You can use to entirely skip bounds
+calculation if needed.</p>
+<pre><code class="hljs language-js"><span class="hljs-keyword">const</span> lastCalculatedBounds = displayObject._bounds.getRectangle(optionalRect);
+</code></pre>
+<p>Do know that usage of <code>getLocalBounds</code> can corrupt the <code>_bounds</code> of children (the whole subtree, actually). This
+is a known issue that has not been solved. See getLocalBounds for more
+details.</p>
+<p><code>getBounds</code> should be called with <code>skipUpdate</code> equal to <code>true</code> in a render() call. This is because the transforms
+are guaranteed to be update-to-date. In fact, recalculating inside a render() call may cause corruption in certain
+cases.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        skipUpdate
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
         
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          skipUpdate
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-      </td>
-      
-      <td class="member-parameter__description"><p>Setting to <code>true</code> will stop the transforms of the scene graph from
+        <td class="member-parameter__description"><p>Setting to <code>true</code> will stop the transforms of the scene graph from
 being updated. This means the calculation returned MAY be out of date BUT will give you a
 nice performance boost.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        rect
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          rect
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-        
-      </td>
-      
-      <td class="member-parameter__description"><p>Optional rectangle to store the result of the bounds calculation.</p></td>
-    </tr>
-  </tbody>
-</table>
+        <td class="member-parameter__description"><p>Optional rectangle to store the result of the bounds calculation.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -1393,7 +1651,7 @@ nice performance boost.</p></td>
       <td class="member-return__type">
         <pre><code><a href="PIXI.Rectangle.html">PIXI.Rectangle</a></code></pre>
       </td>
-      <td class="member-return__description"><p>The rectangular bounding area.</p></td>
+      <td class="member-return__description"><p>The minimum axis-aligned rectangle in world space that fits around this object.</p></td>
     </tr>
   </tbody>
 </table>
@@ -1414,55 +1672,57 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        point
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Point.html">PIXI.Point</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        new PIXI.Point()
-      </td>
-      <td class="member-parameter__description"><p>The point to write the global value to.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        skipUpdate
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        false
-      </td>
-      <td class="member-parameter__description"><p>Setting to true will stop the transforms of the scene graph from
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          point
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          new PIXI.Point()
+        </td>
+        <td class="member-parameter__description"><p>The point to write the global value to.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skipUpdate
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Setting to true will stop the transforms of the scene graph from
 being updated. This means the calculation returned MAY be out of date BUT will give you a
 nice performance boost.</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -1502,35 +1762,37 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        rect
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
         
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          rect
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-      </td>
-      
-      <td class="member-parameter__description"><p>Optional rectangle to store the result of the bounds calculation.</p></td>
-    </tr>
-  </tbody>
-</table>
+        <td class="member-parameter__description"><p>Optional rectangle to store the result of the bounds calculation.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -1570,31 +1832,33 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        renderer
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Renderer.html">PIXI.Renderer</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The renderer.</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -1634,31 +1898,33 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        container
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Container.html">PIXI.Container</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The Container to add this DisplayObject to.</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          container
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Container.html">PIXI.Container</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The Container to add this DisplayObject to.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -1698,165 +1964,167 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        x
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The X position</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        y
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The Y position</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        scaleX
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        1
-      </td>
-      <td class="member-parameter__description"><p>The X scale value</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        scaleY
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        1
-      </td>
-      <td class="member-parameter__description"><p>The Y scale value</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        rotation
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The rotation</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        skewX
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The X skew value</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        skewY
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The Y skew value</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        pivotX
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The X pivot value</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        pivotY
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The Y pivot value</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          x
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The X position</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          y
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The Y position</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          scaleX
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>The X scale value</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          scaleY
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>The Y scale value</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          rotation
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The rotation</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skewX
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The X skew value</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skewY
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The Y skew value</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          pivotX
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The X pivot value</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          pivotY
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The Y pivot value</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -1896,70 +2164,72 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        position
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.IPointData.html">PIXI.IPointData</a>
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>The world origin to calculate from.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        point
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Point.html">PIXI.Point</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>A Point object in which to store the value, optional
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          position
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.IPointData.html">PIXI.IPointData</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The world origin to calculate from.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          point
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>A Point object in which to store the value, optional
 (otherwise will create a new Point).</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        skipUpdate
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        false
-      </td>
-      <td class="member-parameter__description"><p>Should we skip the update transform.</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skipUpdate
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Should we skip the update transform.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -1999,86 +2269,88 @@ nice performance boost.</p></td>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        position
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.IPointData.html">PIXI.IPointData</a>
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>The world origin to calculate from.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        from
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>The DisplayObject to calculate the global position from.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        point
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Point.html">PIXI.Point</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>A Point object in which to store the value, optional
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          position
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.IPointData.html">PIXI.IPointData</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The world origin to calculate from.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          from
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The DisplayObject to calculate the global position from.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          point
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>A Point object in which to store the value, optional
 (otherwise will create a new Point).</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        skipUpdate
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        false
-      </td>
-      <td class="member-parameter__description"><p>Should we skip the update transform</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skipUpdate
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Should we skip the update transform</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -2185,8 +2457,6 @@ nice performance boost.</p></td>
     
       <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#cursor">cursor</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#displayObjectUpdateTransform">displayObjectUpdateTransform</a></li>
-    
       <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#filterArea">filterArea</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#filters">filters</a></li>
@@ -2284,6 +2554,8 @@ nice performance boost.</p></td>
       <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#destroy">destroy</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#disableTempParent">disableTempParent</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#displayObjectUpdateTransform">displayObjectUpdateTransform</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#enableTempParent">enableTempParent</a></li>
     

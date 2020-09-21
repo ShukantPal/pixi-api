@@ -30,8 +30,24 @@
 <pre class="signature__container"><code class="signature">class FilterSystem extends <a href="PIXI.System.html">PIXI.System</a></code></pre>
 
 
-    <div class="document__brief"><p>System plugin to the renderer to manage the filters.</p></div>
-    <div class="document__description"></div>
+    <div class="document__brief"><p>System plugin to the renderer to manage filters.</p></div>
+    <div class="document__description"><h2>Pipeline</h2>
+<p>The FilterSystem executes the filtering pipeline by rendering the display-object into a texture, applying its
+<a href="PIXI.Filter.html">filters</a> in series, and the last filter outputs into the final render-target.</p>
+<p>The filter-frame is the rectangle in world space being filtered, and those contents are mapped into
+<code>(0, 0, filterFrame.width, filterFrame.height)</code> into the filter render-texture. The filter-frame is also called
+the source-frame, as it is used to bind the filter render-textures. The last filter outputs to the <code>filterFrame</code>
+in the final render-target.</p>
+<h2>Usage</h2>
+<p>PIXI.Container#renderAdvanced is an example of how to use the filter system. It is a 3 step process:</p>
+<ul>
+<li><strong>push</strong>: Use PIXI.FilterSystem#push to push the set of filters to be applied on a filter-target.</li>
+<li><strong>render</strong>: Render the contents to be filtered using the renderer. The filter-system will only capture the contents
+inside the bounds of the filter-target. NOTE: Using PIXI.Renderer#render is
+illegal during an existing render cycle, and it may reset the filter system.</li>
+<li><strong>pop</strong>: Use PIXI.FilterSystem#pop to pop &amp; execute the filters you initially pushed. It will apply them
+serially and output to the bounds of the filter-target.</li>
+</ul></div>
 
     
       
@@ -51,31 +67,33 @@
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        renderer
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Renderer.html">PIXI.Renderer</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The renderer this System works for.</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer this System works for.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -289,31 +307,33 @@ Use this flag if you need the old behavior.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        outputMatrix
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Matrix.html">PIXI.Matrix</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The matrix to output to.</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          outputMatrix
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Matrix.html">PIXI.Matrix</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The matrix to output to.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -353,31 +373,33 @@ Use this flag if you need the old behavior.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        outputMatrix
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Matrix.html">PIXI.Matrix</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>the matrix to output to.</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          outputMatrix
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Matrix.html">PIXI.Matrix</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the matrix to output to.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -417,77 +439,79 @@ Use this flag if you need the old behavior.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        filter
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Filter.html">PIXI.Filter</a>
-      </td>
-      <td class="member-parameter__attributes">
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
         
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          filter
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Filter.html">PIXI.Filter</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
+        <td class="member-parameter__description"><p>The filter to draw.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          input
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
-      </td>
-      
-      <td class="member-parameter__description"><p>The filter to draw.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        input
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
-      </td>
-      <td class="member-parameter__attributes">
+        <td class="member-parameter__description"><p>The input render target.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          output
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
+        <td class="member-parameter__description"><p>The target to output to.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          clearMode
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.CLEAR_MODES.html">PIXI.CLEAR_MODES</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-        
-      </td>
-      
-      <td class="member-parameter__description"><p>The input render target.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        output
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      
-      <td class="member-parameter__description"><p>The target to output to.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        clearMode
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.CLEAR_MODES.html">PIXI.CLEAR_MODES</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      
-      <td class="member-parameter__description"><p>Should the output be cleared before rendering to it</p></td>
-    </tr>
-  </tbody>
-</table>
+        <td class="member-parameter__description"><p>Should the output be cleared before rendering to it</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -527,49 +551,51 @@ Use this flag if you need the old behavior.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        filterTexture
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
-      </td>
-      <td class="member-parameter__attributes">
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
         
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          filterTexture
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
+        <td class="member-parameter__description"><p>renderTexture to bind, should belong to filter pool or filter stack</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          clearMode
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.CLEAR_MODES.html">PIXI.CLEAR_MODES</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-      </td>
-      
-      <td class="member-parameter__description"><p>renderTexture to bind, should belong to filter pool or filter stack</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        clearMode
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.CLEAR_MODES.html">PIXI.CLEAR_MODES</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      
-      <td class="member-parameter__description"><p>clearMode, by default its CLEAR/YES. See <a href="PIXI.CLEAR_MODES.html">PIXI.CLEAR_MODES</a></p></td>
-    </tr>
-  </tbody>
-</table>
+        <td class="member-parameter__description"><p>clearMode, by default its CLEAR/YES. See <a href="PIXI.CLEAR_MODES.html">PIXI.CLEAR_MODES</a></p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -609,41 +635,43 @@ Use this flag if you need the old behavior.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        outputMatrix
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Matrix.html">PIXI.Matrix</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The matrix to output to.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        sprite
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Sprite.html">PIXI.Sprite</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The sprite to map to.</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          outputMatrix
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Matrix.html">PIXI.Matrix</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The matrix to output to.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          sprite
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Sprite.html">PIXI.Sprite</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The sprite to map to.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -756,49 +784,51 @@ To be compliant with older filters, you can use params in any order</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        input
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
         
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          input
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-      </td>
-      
-      <td class="member-parameter__description"><p>renderTexture from which size and resolution will be copied</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        resolution
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
+        <td class="member-parameter__description"><p>renderTexture from which size and resolution will be copied</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          resolution
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-        
-      </td>
-      
-      <td class="member-parameter__description"><p>override resolution of the renderTexture</p></td>
-    </tr>
-  </tbody>
-</table>
+        <td class="member-parameter__description"><p>override resolution of the renderTexture</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -833,7 +863,7 @@ To be compliant with older filters, you can use params in any order</p></div>
 <pre class="signature__container"><code class="signature">pop() → {void}</code></pre>
 
 
-  <div class="member__brief"><p>Pops off the filter and applies it.</p></div>
+  <div class="member__brief"><p>Pops off a set of the filters and applies them. This should be called once you've rendered everything to be filtered.</p></div>
   <div class="member__description"></div>
 
   
@@ -869,46 +899,49 @@ To be compliant with older filters, you can use params in any order</p></div>
 <pre class="signature__container"><code class="signature">push(target: <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>, filters: Array<<a href="PIXI.Filter.html">PIXI.Filter</a>>) → {void}</code></pre>
 
 
-  <div class="member__brief"><p>Adds a new filter to the System.</p></div>
-  <div class="member__description"></div>
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Pushes a set of filters to be applied later to the system. This will redirect further rendering into an
+input render-texture for the rest of the filtering pipeline.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        target
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The target of the filter to render.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        filters
-      </td>
-      <td class="member-parameter__type">
-        Array<<a href="PIXI.Filter.html">PIXI.Filter</a>>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The filters to apply.</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          target
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The target of the filter to render.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          filters
+        </td>
+        <td class="member-parameter__type">
+          Array<<a href="PIXI.Filter.html">PIXI.Filter</a>>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The filters to apply.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -984,31 +1017,33 @@ To be compliant with older filters, you can use params in any order</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        renderTexture
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The renderTarget to free</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderTexture
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderTarget to free</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -1055,69 +1090,71 @@ To be compliant with older filters, you can use params in any order</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        minWidth
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>The minimum width of the render texture in real pixels.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        minHeight
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>The minimum height of the render texture in real pixels.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        resolution
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        1
-      </td>
-      <td class="member-parameter__description"><p>The resolution of the render texture.</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          minWidth
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The minimum width of the render texture in real pixels.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          minHeight
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The minimum height of the render texture in real pixels.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          resolution
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>The resolution of the render texture.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 

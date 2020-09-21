@@ -31,7 +31,23 @@
 
 
     <div class="document__brief"><p>System plugin to the renderer to manage masks.</p></div>
-    <div class="document__description"></div>
+    <div class="document__description"><p>There are three built-in types of masking:</p>
+<ul>
+<li><strong>Scissor Masking</strong>: Scissor masking discards pixels that are outside of a rectangle called the scissor box. It is
+the most performant as the scissor test is inexpensive. However, it can only be used when the mask is rectangular.</li>
+<li><strong>Stencil Masking</strong>: Stencil masking discards pixels that don't overlap with the pixels rendered into the stencil
+buffer. It is the next fastest option as it does not require rendering into a separate framebuffer. However, it does
+cause the mask to be rendered <strong>twice</strong> for each masking operation; hence, minimize the rendering cost of your masks.</li>
+<li><strong>Sprite Mask Filtering</strong>: Sprite mask filtering discards pixels based on the red channel of the sprite-mask's
+texture. (Generally, the masking texture is grayscale). Using advanced techniques, you might be able to embed this
+type of masking in a custom shader - and hence, bypassing the masking system fully for performance wins.</li>
+</ul>
+<p>The best type of masking is auto-detected when you <code>push</code> one. To use scissor masking, you must pass in a <code>Graphics</code>
+object with just a rectangle drawn.</p>
+<h2>Mask Stacks</h2>
+<p>In the scene graph, masks can be applied recursively, i.e. a mask can be applied during a masking operation. The mask
+stack stores the currently applied masks in order. Each <a href="PIXI.BaseRenderTexture.html">PIXI.BaseRenderTexture</a> holds its own mask stack, i.e.
+when you switch render-textures, the old masks only applied when you switch back to rendering to the old render-target.</p></div>
 
     
       
@@ -51,31 +67,33 @@
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        renderer
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.Renderer.html">PIXI.Renderer</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The renderer this System works for.</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer this System works for.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -131,8 +149,8 @@
 <pre class="signature__container"><code class="signature">enableScissor: boolean</code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Enable scissor</p></div>
+  <div class="member__brief"><p>Enable scissor masking.</p></div>
+  <div class="member__description"></div>
 
   
 
@@ -228,31 +246,33 @@
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        maskData
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.MaskData.html">PIXI.MaskData</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          maskData
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.MaskData.html">PIXI.MaskData</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -287,37 +307,38 @@
 <pre class="signature__container"><code class="signature">pop(target: <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>) → {void}</code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Removes the last mask from the mask stack and doesn't return it.
-Renderer batch must be flushed beforehand.</p></div>
+  <div class="member__brief"><p>Removes the last mask from the mask stack and doesn't return it.</p></div>
+  <div class="member__description"><p>NOTE: The batch renderer should be flushed beforehand to render the masked contents before the mask is removed.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        target
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>Display Object to pop the mask from</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          target
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Display Object to pop the mask from</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -388,47 +409,48 @@ Renderer batch must be flushed beforehand.</p></div>
 <pre class="signature__container"><code class="signature">push(target: <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>, maskData: <a href="PIXI.MaskData.html">PIXI.MaskData</a> | <a href="PIXI.Sprite.html">PIXI.Sprite</a> | <a href="PIXI.Graphics.html">PIXI.Graphics</a> | <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>) → {void}</code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Applies the Mask and adds it to the current filter stack.
-Renderer batch must be flushed beforehand.</p></div>
+  <div class="member__brief"><p>Enables the mask and appends it to the current mask stack.</p></div>
+  <div class="member__description"><p>NOTE: The batch renderer should be flushed beforehand to prevent pending renders from being masked.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        target
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>Display Object to push the mask to</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        maskData
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.MaskData.html">PIXI.MaskData</a> | <a href="PIXI.Sprite.html">PIXI.Sprite</a> | <a href="PIXI.Graphics.html">PIXI.Graphics</a> | <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The masking data.</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          target
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Display Object to push the mask to</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          maskData
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.MaskData.html">PIXI.MaskData</a> | <a href="PIXI.Sprite.html">PIXI.Sprite</a> | <a href="PIXI.Graphics.html">PIXI.Graphics</a> | <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The masking data.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -468,31 +490,33 @@ Renderer batch must be flushed beforehand.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        maskData
-      </td>
-      <td class="member-parameter__type">
-        <a href="PIXI.MaskData.html">PIXI.MaskData</a>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>Sprite to be used as the mask</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          maskData
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.MaskData.html">PIXI.MaskData</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Sprite to be used as the mask</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -532,31 +556,33 @@ Renderer batch must be flushed beforehand.</p></div>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      
-      
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        maskStack
-      </td>
-      <td class="member-parameter__type">
-        Array<<a href="PIXI.MaskData.html">PIXI.MaskData</a>>
-      </td>
-      
-      
-      <td class="member-parameter__description"><p>The mask stack</p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          maskStack
+        </td>
+        <td class="member-parameter__type">
+          Array<<a href="PIXI.MaskData.html">PIXI.MaskData</a>>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The mask stack</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 

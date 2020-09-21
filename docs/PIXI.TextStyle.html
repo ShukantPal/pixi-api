@@ -53,517 +53,519 @@ implements ITextStyle</code></pre>
 
   
     
-<table class="member-parameters">
-  <caption class="member-parameters__caption">Parameters:</caption>
-  <thead class="member-parameters__head">
-    <tr class="member-parameter-header">
-      <th class="member-parameter-header__name">Name</th>
-      <th class="member-parameter-header__type">Type</th>
-      <th class="member-parameter-header__attributes">Attributes</th>
-      <th class="member-parameter-header__default">Default</th>
-      <th class="member-parameter-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-parameters__body">
-    <tr class="member-parameter">
-      <td class="member-parameter__name">
-        style
-      </td>
-      <td class="member-parameter__type">
-        object
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>The style parameters</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.align
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        'left'
-      </td>
-      <td class="member-parameter__description"><p>Alignment for multiline text ('left', 'center' or 'right'),
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          style
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The style parameters</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.align
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          'left'
+        </td>
+        <td class="member-parameter__description"><p>Alignment for multiline text ('left', 'center' or 'right'),
 does not affect single line text</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.breakWords
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        false
-      </td>
-      <td class="member-parameter__description"><p>Indicates if lines can be wrapped within words, it
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.breakWords
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Indicates if lines can be wrapped within words, it
 needs wordWrap to be set to true</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.dropShadow
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        false
-      </td>
-      <td class="member-parameter__description"><p>Set a drop shadow for the text</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.dropShadowAlpha
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        1
-      </td>
-      <td class="member-parameter__description"><p>Set alpha for the drop shadow</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.dropShadowAngle
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        Math.PI/6
-      </td>
-      <td class="member-parameter__description"><p>Set a angle of the drop shadow</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.dropShadowBlur
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>Set a shadow blur radius</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.dropShadowColor
-      </td>
-      <td class="member-parameter__type">
-        string | number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        'black'
-      </td>
-      <td class="member-parameter__description"><p>A fill style to be used on the dropshadow e.g 'red', '#00FF00'</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.dropShadowDistance
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        5
-      </td>
-      <td class="member-parameter__description"><p>Set a distance of the drop shadow</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.fill
-      </td>
-      <td class="member-parameter__type">
-        string | Array<string> | number | Array<number> | CanvasGradient | CanvasPattern
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        'black'
-      </td>
-      <td class="member-parameter__description"><p>A canvas
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.dropShadow
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Set a drop shadow for the text</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.dropShadowAlpha
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>Set alpha for the drop shadow</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.dropShadowAngle
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          Math.PI/6
+        </td>
+        <td class="member-parameter__description"><p>Set a angle of the drop shadow</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.dropShadowBlur
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>Set a shadow blur radius</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.dropShadowColor
+        </td>
+        <td class="member-parameter__type">
+          string | number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          'black'
+        </td>
+        <td class="member-parameter__description"><p>A fill style to be used on the dropshadow e.g 'red', '#00FF00'</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.dropShadowDistance
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          5
+        </td>
+        <td class="member-parameter__description"><p>Set a distance of the drop shadow</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.fill
+        </td>
+        <td class="member-parameter__type">
+          string | Array<string> | number | Array<number> | CanvasGradient | CanvasPattern
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          'black'
+        </td>
+        <td class="member-parameter__description"><p>A canvas
 fillstyle that will be used on the text e.g 'red', '#00FF00'. Can be an array to create a gradient
 eg ['#000000','#FFFFFF']
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle|MDN">https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle|MDN</a></p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.fillGradientType
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        PIXI.TEXT_GRADIENT.LINEAR_VERTICAL
-      </td>
-      <td class="member-parameter__description"><p>If fill is an array of colours
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle">MDN</a></p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.fillGradientType
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.TEXT_GRADIENT.LINEAR_VERTICAL
+        </td>
+        <td class="member-parameter__description"><p>If fill is an array of colours
 to create a gradient, this can change the type/direction of the gradient. See <a href="PIXI.TEXT_GRADIENT.html">PIXI.TEXT_GRADIENT</a></p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.fillGradientStops
-      </td>
-      <td class="member-parameter__type">
-        Array<number>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>If fill is an array of colours to create a gradient, this array can set
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.fillGradientStops
+        </td>
+        <td class="member-parameter__type">
+          Array<number>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>If fill is an array of colours to create a gradient, this array can set
 the stop points (numbers between 0 and 1) for the color, overriding the default behaviour of evenly spacing them.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.fontFamily
-      </td>
-      <td class="member-parameter__type">
-        string | Array<string>
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        'Arial'
-      </td>
-      <td class="member-parameter__description"><p>The font family</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.fontSize
-      </td>
-      <td class="member-parameter__type">
-        number | string
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        26
-      </td>
-      <td class="member-parameter__description"><p>The font size (as a number it converts to px, but as a string,
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.fontFamily
+        </td>
+        <td class="member-parameter__type">
+          string | Array<string>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          'Arial'
+        </td>
+        <td class="member-parameter__description"><p>The font family</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.fontSize
+        </td>
+        <td class="member-parameter__type">
+          number | string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          26
+        </td>
+        <td class="member-parameter__description"><p>The font size (as a number it converts to px, but as a string,
 equivalents are '26px','20pt','160%' or '1.6em')</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.fontStyle
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        'normal'
-      </td>
-      <td class="member-parameter__description"><p>The font style ('normal', 'italic' or 'oblique')</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.fontVariant
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        'normal'
-      </td>
-      <td class="member-parameter__description"><p>The font variant ('normal' or 'small-caps')</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.fontWeight
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        'normal'
-      </td>
-      <td class="member-parameter__description"><p>The font weight ('normal', 'bold', 'bolder', 'lighter' and '100',
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.fontStyle
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          'normal'
+        </td>
+        <td class="member-parameter__description"><p>The font style ('normal', 'italic' or 'oblique')</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.fontVariant
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          'normal'
+        </td>
+        <td class="member-parameter__description"><p>The font variant ('normal' or 'small-caps')</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.fontWeight
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          'normal'
+        </td>
+        <td class="member-parameter__description"><p>The font weight ('normal', 'bold', 'bolder', 'lighter' and '100',
 '200', '300', '400', '500', '600', '700', '800' or '900')</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.leading
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The space between lines</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.letterSpacing
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>The amount of spacing between letters, default is 0</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.lineHeight
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        
-      </td>
-      <td class="member-parameter__description"><p>The line height, a number that represents the vertical space that a letter uses</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.lineJoin
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        'miter'
-      </td>
-      <td class="member-parameter__description"><p>The lineJoin property sets the type of corner created, it can resolve
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.leading
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The space between lines</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.letterSpacing
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The amount of spacing between letters, default is 0</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.lineHeight
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The line height, a number that represents the vertical space that a letter uses</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.lineJoin
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          'miter'
+        </td>
+        <td class="member-parameter__description"><p>The lineJoin property sets the type of corner created, it can resolve
 spiked text issues. Possible values &quot;miter&quot; (creates a sharp corner), &quot;round&quot; (creates a round corner) or &quot;bevel&quot;
 (creates a squared corner).</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.miterLimit
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        10
-      </td>
-      <td class="member-parameter__description"><p>The miter limit to use when using the 'miter' lineJoin mode. This can reduce
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.miterLimit
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          10
+        </td>
+        <td class="member-parameter__description"><p>The miter limit to use when using the 'miter' lineJoin mode. This can reduce
 or increase the spikiness of rendered text.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.padding
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>Occasionally some fonts are cropped. Adding some padding will prevent this from
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.padding
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>Occasionally some fonts are cropped. Adding some padding will prevent this from
 happening by adding padding to all sides of the text.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.stroke
-      </td>
-      <td class="member-parameter__type">
-        string | number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        'black'
-      </td>
-      <td class="member-parameter__description"><p>A canvas fillstyle that will be used on the text stroke
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.stroke
+        </td>
+        <td class="member-parameter__type">
+          string | number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          'black'
+        </td>
+        <td class="member-parameter__description"><p>A canvas fillstyle that will be used on the text stroke
 e.g 'blue', '#FCFF00'</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.strokeThickness
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        0
-      </td>
-      <td class="member-parameter__description"><p>A number that represents the thickness of the stroke.
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.strokeThickness
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>A number that represents the thickness of the stroke.
 Default is 0 (no stroke)</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.trim
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        false
-      </td>
-      <td class="member-parameter__description"><p>Trim transparent borders</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.textBaseline
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        'alphabetic'
-      </td>
-      <td class="member-parameter__description"><p>The baseline of the text that is rendered.</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.whiteSpace
-      </td>
-      <td class="member-parameter__type">
-        string
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        'pre'
-      </td>
-      <td class="member-parameter__description"><p>Determines whether newlines &amp; spaces are collapsed or preserved &quot;normal&quot;
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.trim
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Trim transparent borders</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.textBaseline
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          'alphabetic'
+        </td>
+        <td class="member-parameter__description"><p>The baseline of the text that is rendered.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.whiteSpace
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          'pre'
+        </td>
+        <td class="member-parameter__description"><p>Determines whether newlines &amp; spaces are collapsed or preserved &quot;normal&quot;
 (collapse, collapse), &quot;pre&quot; (preserve, preserve) | &quot;pre-line&quot; (preserve, collapse). It needs wordWrap to be set to true</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.wordWrap
-      </td>
-      <td class="member-parameter__type">
-        boolean
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        false
-      </td>
-      <td class="member-parameter__description"><p>Indicates if word wrap should be used</p></td>
-    </tr><tr class="member-parameter">
-      <td class="member-parameter__name">
-        style.wordWrapWidth
-      </td>
-      <td class="member-parameter__type">
-        number
-      </td>
-      <td class="member-parameter__attributes">
-        <p>&lt;optional&gt;</p>
-        
-        
-      </td>
-      <td class="member-parameter__default">
-        100
-      </td>
-      <td class="member-parameter__description"><p>The width at which text will wrap, it needs wordWrap to be set to true</p></td>
-    </tr>
-  </tbody>
-</table>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.wordWrap
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Indicates if word wrap should be used</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style.wordWrapWidth
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          100
+        </td>
+        <td class="member-parameter__description"><p>The width at which text will wrap, it needs wordWrap to be set to true</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   
 
@@ -718,7 +720,7 @@ Default is 0 (no stroke)</p></td>
   <div class="member__brief"></div>
   <div class="member__description"><p>A canvas fillstyle that will be used on the text e.g 'red', '#00FF00'.
 Can be an array to create a gradient eg ['#000000','#FFFFFF']
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle|MDN">https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle|MDN</a></p></div>
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle">MDN</a></p></div>
 
   
 
