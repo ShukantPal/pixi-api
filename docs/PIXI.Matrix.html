@@ -1,0 +1,1657 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Matrix</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/math</div>
+    <h1 class="document__title">PIXI.Matrix</h1>
+    
+<pre class="signature__container"><code class="signature">class Matrix</code></pre>
+
+
+    <div class="document__brief"><p>The PixiJS Matrix as a class makes it a lot faster.</p></div>
+    <div class="document__description"><p>Here is a representation of it:</p>
+<pre><code class="hljs language-js">| a | c | tx|
+| b | d | ty|
+| <span class="hljs-number">0</span> | <span class="hljs-number">0</span> | <span class="hljs-number">1</span> |
+</code></pre></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+
+  
+    
+<div class="member" id="constructor">
+  <h3 class="member__title"></h3>
+  
+<pre class="signature__container"><code class="signature">new PIXI.Matrix(a: number, b: number, c: number, d: number, tx: number, ty: number)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          a
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>x scale</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          b
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>x skew</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          c
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>y skew</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          d
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>y scale</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          tx
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>x translation</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          ty
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>y translation</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="IDENTITY">
+  <h3 class="member__title">IDENTITY</h3>
+  
+<pre class="signature__container"><code class="signature">static IDENTITY: <a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+
+
+  <div class="member__brief"><p>A default (identity) matrix</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="TEMP_MATRIX">
+  <h3 class="member__title">TEMP_MATRIX</h3>
+  
+<pre class="signature__container"><code class="signature">static TEMP_MATRIX: <a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+
+
+  <div class="member__brief"><p>A temp matrix</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="a">
+  <h3 class="member__title">a</h3>
+  
+<pre class="signature__container"><code class="signature">a: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="b">
+  <h3 class="member__title">b</h3>
+  
+<pre class="signature__container"><code class="signature">b: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="c">
+  <h3 class="member__title">c</h3>
+  
+<pre class="signature__container"><code class="signature">c: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="d">
+  <h3 class="member__title">d</h3>
+  
+<pre class="signature__container"><code class="signature">d: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="tx">
+  <h3 class="member__title">tx</h3>
+  
+<pre class="signature__container"><code class="signature">tx: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="ty">
+  <h3 class="member__title">ty</h3>
+  
+<pre class="signature__container"><code class="signature">ty: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="append">
+  <h3 class="member__title">append</h3>
+  
+<pre class="signature__container"><code class="signature">append(matrix: <a href="PIXI.Matrix.html">PIXI.Matrix</a>) → {<a href="PIXI.Matrix.html">PIXI.Matrix</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Appends the given Matrix to this Matrix.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          matrix
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Matrix.html">PIXI.Matrix</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The matrix to append.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>This matrix. Good for chaining method calls.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="apply">
+  <h3 class="member__title">apply</h3>
+  
+<pre class="signature__container"><code class="signature">apply(pos: <a href="PIXI.IPointData.html">PIXI.IPointData</a>, newPos: <a href="PIXI.Point.html">PIXI.Point</a>) → {<a href="PIXI.Point.html">PIXI.Point</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Get a new position with the current transformation applied.
+Can be used to go from a child's coordinate space to the world coordinate space. (e.g. rendering)</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          pos
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.IPointData.html">PIXI.IPointData</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The origin</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          newPos
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The point that the new position is assigned to (allowed to be same as input)</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Point.html">PIXI.Point</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>The new point, transformed through this matrix</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="applyInverse">
+  <h3 class="member__title">applyInverse</h3>
+  
+<pre class="signature__container"><code class="signature">applyInverse(pos: <a href="PIXI.IPointData.html">PIXI.IPointData</a>, newPos: <a href="PIXI.Point.html">PIXI.Point</a>) → {<a href="PIXI.Point.html">PIXI.Point</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Get a new position with the inverse of the current transformation applied.
+Can be used to go from the world coordinate space to a child's coordinate space. (e.g. input)</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          pos
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.IPointData.html">PIXI.IPointData</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The origin</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          newPos
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The point that the new position is assigned to (allowed to be same as input)</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Point.html">PIXI.Point</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>The new point, inverse-transformed through this matrix</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="clone">
+  <h3 class="member__title">clone</h3>
+  
+<pre class="signature__container"><code class="signature">clone() → {<a href="PIXI.Matrix.html">PIXI.Matrix</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Creates a new Matrix object with the same values as this one.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>A copy of this matrix. Good for chaining method calls.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="copyFrom">
+  <h3 class="member__title">copyFrom</h3>
+  
+<pre class="signature__container"><code class="signature">copyFrom(matrix: <a href="PIXI.Matrix.html">PIXI.Matrix</a>) → {<a href="PIXI.Matrix.html">PIXI.Matrix</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Changes the values of the matrix to be the same as the ones in given matrix</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          matrix
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Matrix.html">PIXI.Matrix</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The matrix to copy from.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>this</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="copyTo">
+  <h3 class="member__title">copyTo</h3>
+  
+<pre class="signature__container"><code class="signature">copyTo(matrix: <a href="PIXI.Matrix.html">PIXI.Matrix</a>) → {<a href="PIXI.Matrix.html">PIXI.Matrix</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Changes the values of the given matrix to be the same as the ones in this matrix</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          matrix
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Matrix.html">PIXI.Matrix</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The matrix to copy to.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>The matrix given in parameter with its values updated.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="decompose">
+  <h3 class="member__title">decompose</h3>
+  
+<pre class="signature__container"><code class="signature">decompose(transform: <a href="PIXI.Transform.html">PIXI.Transform</a>) → {<a href="PIXI.Transform.html">PIXI.Transform</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Decomposes the matrix (x, y, scaleX, scaleY, and rotation) and sets the properties on to a transform.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          transform
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Transform.html">PIXI.Transform</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The transform to apply the properties to.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Transform.html">PIXI.Transform</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>The transform with the newly applied properties</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="fromArray">
+  <h3 class="member__title">fromArray</h3>
+  
+<pre class="signature__container"><code class="signature">fromArray(array: Array<number>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Creates a Matrix object based on the given array. The Element to Matrix mapping order is as follows:</p></div>
+  <div class="member__description"><p>a = array[0]
+b = array[1]
+c = array[3]
+d = array[4]
+tx = array[2]
+ty = array[5]</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          array
+        </td>
+        <td class="member-parameter__type">
+          Array<number>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The array that the matrix will be populated from.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="identity">
+  <h3 class="member__title">identity</h3>
+  
+<pre class="signature__container"><code class="signature">identity() → {<a href="PIXI.Matrix.html">PIXI.Matrix</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Resets this Matrix to an identity (default) matrix.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>This matrix. Good for chaining method calls.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="invert">
+  <h3 class="member__title">invert</h3>
+  
+<pre class="signature__container"><code class="signature">invert() → {<a href="PIXI.Matrix.html">PIXI.Matrix</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Inverts this matrix</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>This matrix. Good for chaining method calls.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="prepend">
+  <h3 class="member__title">prepend</h3>
+  
+<pre class="signature__container"><code class="signature">prepend(matrix: <a href="PIXI.Matrix.html">PIXI.Matrix</a>) → {<a href="PIXI.Matrix.html">PIXI.Matrix</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Prepends the given Matrix to this Matrix.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          matrix
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Matrix.html">PIXI.Matrix</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The matrix to prepend</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>This matrix. Good for chaining method calls.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="rotate">
+  <h3 class="member__title">rotate</h3>
+  
+<pre class="signature__container"><code class="signature">rotate(angle: number) → {<a href="PIXI.Matrix.html">PIXI.Matrix</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Applies a rotation transformation to the matrix.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          angle
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The angle in radians.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>This matrix. Good for chaining method calls.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="scale">
+  <h3 class="member__title">scale</h3>
+  
+<pre class="signature__container"><code class="signature">scale(x: number, y: number) → {<a href="PIXI.Matrix.html">PIXI.Matrix</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Applies a scale transformation to the matrix.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          x
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The amount to scale horizontally</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          y
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The amount to scale vertically</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>This matrix. Good for chaining method calls.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="set">
+  <h3 class="member__title">set</h3>
+  
+<pre class="signature__container"><code class="signature">set(a: number, b: number, c: number, d: number, tx: number, ty: number) → {<a href="PIXI.Matrix.html">PIXI.Matrix</a>}</code></pre>
+
+
+  <div class="member__brief"><p>sets the matrix properties</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          a
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Matrix component</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          b
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Matrix component</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          c
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Matrix component</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          d
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Matrix component</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          tx
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Matrix component</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          ty
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Matrix component</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>This matrix. Good for chaining method calls.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="setTransform">
+  <h3 class="member__title">setTransform</h3>
+  
+<pre class="signature__container"><code class="signature">setTransform(x: number, y: number, pivotX: number, pivotY: number, scaleX: number, scaleY: number, rotation: number, skewX: number, skewY: number) → {<a href="PIXI.Matrix.html">PIXI.Matrix</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Sets the matrix based on all the available properties</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          x
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Position on the x axis</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          y
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Position on the y axis</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          pivotX
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Pivot on the x axis</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          pivotY
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Pivot on the y axis</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          scaleX
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Scale on the x axis</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          scaleY
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Scale on the y axis</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          rotation
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Rotation in radians</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skewX
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Skew on the x axis</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skewY
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Skew on the y axis</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>This matrix. Good for chaining method calls.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="toArray">
+  <h3 class="member__title">toArray</h3>
+  
+<pre class="signature__container"><code class="signature">toArray(transpose: boolean, out: Float32Array) → {Array<number>}</code></pre>
+
+
+  <div class="member__brief"><p>Creates an array from the current Matrix object.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          transpose
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Whether we need to transpose the matrix or not</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          out
+        </td>
+        <td class="member-parameter__type">
+          Float32Array
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          new Float32Array(9)
+        </td>
+        <td class="member-parameter__description"><p>If provided the array will be assigned to out</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>Array<number></code></pre>
+      </td>
+      <td class="member-return__description"><p>the newly created array which contains the matrix</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="translate">
+  <h3 class="member__title">translate</h3>
+  
+<pre class="signature__container"><code class="signature">translate(x: number, y: number) → {<a href="PIXI.Matrix.html">PIXI.Matrix</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Translates the matrix on the x and y.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          x
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>How much to translate x by</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          y
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>How much to translate y by</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>This matrix. Good for chaining method calls.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#IDENTITY">IDENTITY</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#TEMP_MATRIX">TEMP_MATRIX</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#a">a</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#b">b</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#c">c</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#d">d</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#tx">tx</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#ty">ty</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#append">append</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#apply">apply</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#applyInverse">applyInverse</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#clone">clone</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#copyFrom">copyFrom</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#copyTo">copyTo</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#decompose">decompose</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#fromArray">fromArray</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#identity">identity</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#invert">invert</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#prepend">prepend</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#rotate">rotate</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#scale">scale</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#set">set</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#setTransform">setTransform</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#toArray">toArray</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Matrix.html#translate">translate</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: BatchShaderFactory</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">pixi-batch-renderer</div>
+    <h1 class="document__title">PIXI.brend.BatchShaderFactory</h1>
+    
+<pre class="signature__container"><code class="signature">class BatchShaderFactory</code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>Exposes an easy-to-use API for generating shader-functions to use in
+the batch renderer!</p>
+<p>You are required to provide an injector map, which maps macros to functions
+that return a string value for those macros given a renderer. By default, only one
+injector is used - the textures per batch <code>%texturesPerBatch%</code> macro. This is replaced by
+the number of textures passed to the <code>uSamplers</code> textures uniform.</p>
+<p><strong>Built-in Injectors</strong>:</p>
+<ul>
+<li>
+<p><code>%texturesPerBatch%</code>: replaced by the max. textures allowed by WebGL context</p>
+</li>
+<li>
+<p><code>%uniformsPerBatch%</code>: replaced by the (aggregate-uniforms) batch factory's <code>MAX_UNIFORMS</code> property.</p>
+</li>
+</ul></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+
+  
+    
+<div class="member" id="constructor">
+  <h3 class="member__title"></h3>
+  
+<pre class="signature__container"><code class="signature">new PIXI.brend.BatchShaderFactory(vertexShaderTemplate: string, fragmentShaderTemplate: string, uniforms: UniformGroup | Map<string, object>, templateInjectors: Object<String, PIXI.brend.InjectorFunction>, disableVertexShaderTemplate: boolean)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>WARNING: Do not pass <code>uSamplers</code> in your uniforms. They
+will be added to your shader instance directly.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          vertexShaderTemplate
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          fragmentShaderTemplate
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          uniforms
+        </td>
+        <td class="member-parameter__type">
+          UniformGroup | Map<string, object>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          templateInjectors
+        </td>
+        <td class="member-parameter__type">
+          Object<String, PIXI.brend.InjectorFunction>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          disableVertexShaderTemplate
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          true
+        </td>
+        <td class="member-parameter__description"><p>turn off (true)
+if you aren't using macros in the vertex shader</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="disableVertexShaderTemplate">
+  <h3 class="member__title">disableVertexShaderTemplate</h3>
+  
+<pre class="signature__container"><code class="signature">disableVertexShaderTemplate: Boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Disable vertex shader templates to speed up shader
+generation.</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="_generateShader">
+  <h3 class="member__title">_generateShader</h3>
+  
+<pre class="signature__container"><code class="signature">_generateShader(stringState: string, renderer: <a href="PIXI.brend.BatchRenderer.html">PIXI.brend.BatchRenderer</a>) → {<a href="PIXI.Shader.html">PIXI.Shader</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          stringState
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.brend.BatchRenderer.html">PIXI.brend.BatchRenderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Shader.html">PIXI.Shader</a></code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="derive">
+  <h3 class="member__title">derive</h3>
+  
+<pre class="signature__container"><code class="signature">derive() → {(brend: <a href="PIXI.brend.BatchRenderer.html">PIXI.brend.BatchRenderer</a>) => PIXI.Shader}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>This essentially returns a function for generating the shader for a batch
+renderer.</p></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>(brend: <a href="PIXI.brend.BatchRenderer.html">PIXI.brend.BatchRenderer</a>) => PIXI.Shader</code></pre>
+      </td>
+      <td class="member-return__description"><p>shader function that can be given to the batch renderer</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.BatchShaderFactory.html#disableVertexShaderTemplate">disableVertexShaderTemplate</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.BatchShaderFactory.html#_generateShader">_generateShader</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.BatchShaderFactory.html#derive">derive</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

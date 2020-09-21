@@ -1,0 +1,1165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: InteractionManager</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/interaction</div>
+    <h1 class="document__title">PIXI.InteractionManager</h1>
+    
+<pre class="signature__container"><code class="signature">class InteractionManager extends <a href="PIXI.utils.EventEmitter.html">PIXI.utils.EventEmitter</a></code></pre>
+
+
+    <div class="document__brief"><p>The interaction manager deals with mouse, touch and pointer events.</p></div>
+    <div class="document__description"><p>Any DisplayObject can be interactive if its <code>interactive</code> property is set to true.</p>
+<p>This manager also supports multitouch.</p>
+<p>An instance of this class is automatically created by default, and can be found at <code>renderer.plugins.interaction</code></p></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+
+  
+    
+<div class="member" id="constructor">
+  <h3 class="member__title"></h3>
+  
+<pre class="signature__container"><code class="signature">new PIXI.InteractionManager(renderer: <a href="PIXI.CanvasRenderer.html">PIXI.CanvasRenderer</a> | <a href="PIXI.Renderer.html">PIXI.Renderer</a>, options: object)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.CanvasRenderer.html">PIXI.CanvasRenderer</a> | <a href="PIXI.Renderer.html">PIXI.Renderer</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>A reference to the current renderer</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The options for the manager.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.autoPreventDefault
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          true
+        </td>
+        <td class="member-parameter__description"><p>Should the manager automatically prevent default browser actions.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.interactionFrequency
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          10
+        </td>
+        <td class="member-parameter__description"><p>Maximum requency (ms) at pointer over/out states will be checked.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.useSystemTicker
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          true
+        </td>
+        <td class="member-parameter__description"><p>Whether to add tickerUpdate to {@link PIXI.Ticker.system}.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="autoPreventDefault">
+  <h3 class="member__title">autoPreventDefault</h3>
+  
+<pre class="signature__container"><code class="signature">autoPreventDefault: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Should default browser actions automatically be prevented.
+Does not apply to pointer events for backwards compatibility
+preventDefault on pointer events stops mouse events from firing
+Thus, for every pointer event, there will always be either a mouse of touch event alongside it.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="currentCursorMode">
+  <h3 class="member__title">currentCursorMode</h3>
+  
+<pre class="signature__container"><code class="signature">currentCursorMode: string</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The mode of the cursor that is being used.
+The value of this is a key from the cursorStyles dictionary.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="cursorStyles">
+  <h3 class="member__title">cursorStyles</h3>
+  
+<pre class="signature__container"><code class="signature">cursorStyles: Object<string, Object></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Dictionary of how different cursor modes are handled. Strings are handled as CSS cursor
+values, objects are handled as dictionaries of CSS values for interactionDOMElement,
+and functions are called instead of changing the CSS.
+Default CSS cursor values are provided for 'default' and 'pointer' modes.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="eventData">
+  <h3 class="member__title">eventData</h3>
+  
+<pre class="signature__container"><code class="signature">eventData: object</code></pre>
+
+
+  <div class="member__brief"><p>An event data object to handle all the event tracking/dispatching</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="interactionFrequency">
+  <h3 class="member__title">interactionFrequency</h3>
+  
+<pre class="signature__container"><code class="signature">interactionFrequency: number</code></pre>
+
+
+  <div class="member__brief"><p>Maximum requency in milliseconds at which pointer over/out states will be checked by tickerUpdate.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="mouse">
+  <h3 class="member__title">mouse</h3>
+  
+<pre class="signature__container"><code class="signature">mouse: <a href="PIXI.InteractionData.html">PIXI.InteractionData</a></code></pre>
+
+
+  <div class="member__brief"><p>The mouse data</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="moveWhenInside">
+  <h3 class="member__title">moveWhenInside</h3>
+  
+<pre class="signature__container"><code class="signature">moveWhenInside: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>This property determines if mousemove and touchmove events are fired only when the cursor
+is over the object.
+Setting to true will make things work more in line with how the DOM version works.
+Setting to false can make things easier for things like dragging
+It is currently set to false as this is how PixiJS used to work. This will be set to true in
+future versions of pixi.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="renderer">
+  <h3 class="member__title">renderer</h3>
+  
+<pre class="signature__container"><code class="signature">renderer: <a href="PIXI.AbstractRenderer.html">PIXI.AbstractRenderer</a></code></pre>
+
+
+  <div class="member__brief"><p>The renderer this interaction manager works for.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="resolution">
+  <h3 class="member__title">resolution</h3>
+  
+<pre class="signature__container"><code class="signature">resolution: number</code></pre>
+
+
+  <div class="member__brief"><p>The current resolution / device pixel ratio.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="supportsPointerEvents">
+  <h3 class="member__title">supportsPointerEvents</h3>
+  
+<pre class="signature__container"><code class="signature">supportsPointerEvents: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Does the device support pointer events
+https://www.w3.org/Submission/pointer-events/</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="supportsTouchEvents">
+  <h3 class="member__title">supportsTouchEvents</h3>
+  
+<pre class="signature__container"><code class="signature">supportsTouchEvents: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Does the device support touch events
+https://www.w3.org/TR/touch-events/</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="useSystemTicker">
+  <h3 class="member__title">useSystemTicker</h3>
+  
+<pre class="signature__container"><code class="signature">useSystemTicker: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Should the InteractionManager automatically add tickerUpdate to {@link PIXI.Ticker.system}.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Properties</h2>
+
+  
+    
+<div class="member" id="eventsAdded">
+  <h3 class="member__title">eventsAdded</h3>
+  
+<pre class="signature__container"><code class="signature">protected eventsAdded: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Have events been attached to the dom element?</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="interactionDOMElement">
+  <h3 class="member__title">interactionDOMElement</h3>
+  
+<pre class="signature__container"><code class="signature">protected interactionDOMElement: HTMLElement</code></pre>
+
+
+  <div class="member__brief"><p>The DOM element to bind to.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="lastObjectRendered">
+  <h3 class="member__title">lastObjectRendered</h3>
+  
+<pre class="signature__container"><code class="signature">protected lastObjectRendered: <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Last rendered object or temp object</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="mouseOverRenderer">
+  <h3 class="member__title">mouseOverRenderer</h3>
+  
+<pre class="signature__container"><code class="signature">protected mouseOverRenderer: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Is the mouse hovering over the renderer?</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="tickerAdded">
+  <h3 class="member__title">tickerAdded</h3>
+  
+<pre class="signature__container"><code class="signature">protected tickerAdded: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Has the system ticker been added?</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="destroy">
+  <h3 class="member__title">destroy</h3>
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Destroys the interaction manager</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="hitTest">
+  <h3 class="member__title">hitTest</h3>
+  
+<pre class="signature__container"><code class="signature">hitTest(globalPoint: <a href="PIXI.Point.html">PIXI.Point</a>, root: <a href="PIXI.Container.html">PIXI.Container</a>) → {<a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Hit tests a point against the display tree, returning the first interactive object that is hit.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          globalPoint
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>A point to hit test with, in global space.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          root
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Container.html">PIXI.Container</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The root display object to start from. If omitted, defaults
+to the last rendered root of the associated renderer.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>The hit display object, if any.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="mapPositionToPoint">
+  <h3 class="member__title">mapPositionToPoint</h3>
+  
+<pre class="signature__container"><code class="signature">mapPositionToPoint(point: <a href="PIXI.IPointData.html">PIXI.IPointData</a>, x: number, y: number) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Maps x and y coords from a DOM object and maps them correctly to the PixiJS view. The
+resulting value is stored in the point. This takes into account the fact that the DOM
+element could be scaled and positioned anywhere on the screen.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          point
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.IPointData.html">PIXI.IPointData</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the point that the result will be stored in</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          x
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the x coord of the position to map</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          y
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the y coord of the position to map</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="setCursorMode">
+  <h3 class="member__title">setCursorMode</h3>
+  
+<pre class="signature__container"><code class="signature">setCursorMode(mode: string) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Sets the current cursor mode, handling any callbacks or CSS style changes.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          mode
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>cursor mode, a key from the cursorStyles dictionary</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="setTargetElement">
+  <h3 class="member__title">setTargetElement</h3>
+  
+<pre class="signature__container"><code class="signature">setTargetElement(element: HTMLElement, resolution: number) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Sets the DOM element which will receive mouse/touch events. This is useful for when you have
+other DOM elements on top of the renderers Canvas element. With this you'll be bale to delegate
+another DOM element to receive those events.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          element
+        </td>
+        <td class="member-parameter__type">
+          HTMLElement
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>the DOM element which will receive mouse and touch events.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          resolution
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>The resolution / device pixel ratio of the new element (relative to the canvas).</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="tickerUpdate">
+  <h3 class="member__title">tickerUpdate</h3>
+  
+<pre class="signature__container"><code class="signature">tickerUpdate(deltaTime: number) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Updates the state of interactive objects if at least interactionFrequency
+milliseconds have passed since the last invocation.</p>
+<p>Invoked by a throttled ticker update from <a href="PIXI.Ticker_.html#system">PIXI.Ticker.system</a>.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          deltaTime
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>time delta since the last call</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="update">
+  <h3 class="member__title">update</h3>
+  
+<pre class="signature__container"><code class="signature">update() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Updates the state of interactive objects.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Methods</h2>
+
+  
+    
+<div class="member" id="processInteractive">
+  <h3 class="member__title">processInteractive</h3>
+  
+<pre class="signature__container"><code class="signature">protected processInteractive(interactionEvent: <a href="PIXI.InteractionEvent.html">PIXI.InteractionEvent</a>, displayObject: <a href="PIXI.Container.html">PIXI.Container</a> | <a href="PIXI.Sprite.html">PIXI.Sprite</a> | <a href="PIXI.TilingSprite.html">PIXI.TilingSprite</a>, func: Function, hitTest: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>This function is provides a neat way of crawling through the scene graph and running a
+specified function on all interactive objects it finds. It will also take care of hit
+testing the interactive objects and passes the hit across in the function.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          interactionEvent
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.InteractionEvent.html">PIXI.InteractionEvent</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>event containing the point that
+is tested for collision</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          displayObject
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Container.html">PIXI.Container</a> | <a href="PIXI.Sprite.html">PIXI.Sprite</a> | <a href="PIXI.TilingSprite.html">PIXI.TilingSprite</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>the displayObject
+that will be hit test (recursively crawls its children)</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          func
+        </td>
+        <td class="member-parameter__type">
+          Function
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>the function that will be called on each interactive object. The
+interactionEvent, displayObject and hit will be passed to the function</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          hitTest
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>indicates whether we want to calculate hits
+or just iterate through all interactive objects</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#autoPreventDefault">autoPreventDefault</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#currentCursorMode">currentCursorMode</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#cursorStyles">cursorStyles</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#eventData">eventData</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#interactionFrequency">interactionFrequency</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#mouse">mouse</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#moveWhenInside">moveWhenInside</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#renderer">renderer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#resolution">resolution</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#supportsPointerEvents">supportsPointerEvents</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#supportsTouchEvents">supportsTouchEvents</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#useSystemTicker">useSystemTicker</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Protected Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#eventsAdded">eventsAdded</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#interactionDOMElement">interactionDOMElement</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#lastObjectRendered">lastObjectRendered</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#mouseOverRenderer">mouseOverRenderer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#tickerAdded">tickerAdded</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#destroy">destroy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#hitTest">hitTest</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#mapPositionToPoint">mapPositionToPoint</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#setCursorMode">setCursorMode</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#setTargetElement">setTargetElement</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#tickerUpdate">tickerUpdate</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#update">update</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Protected Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionManager.html#processInteractive">processInteractive</a></li>
+    
+  </ul>
+</div>
+
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

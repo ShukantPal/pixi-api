@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Test Template</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="homepage">
+
+  <div class="homepage__readme md">
+    <h1>@pixi-essentials/cull</h1>
+<p>This package provides an optimized, highly configurable culling mechanism.</p>
+<h2>Installation :package:</h2>
+<pre><code class="hljs language-bash">npm install @pixi-essentials/cull
+</code></pre>
+<h2>Usage :page_facing_up:</h2>
+<h3>Static scenes</h3>
+<p>If display-object's in your scene graph do not change each frame, then you can run culling whenever
+your display-object's move or your scene graph changes.</p>
+<pre><code class="hljs language-ts"><span class="hljs-keyword">import</span> { Application } <span class="hljs-keyword">from</span> <span class="hljs-string">'pixi.js'</span>;
+<span class="hljs-keyword">import</span> { Cull } <span class="hljs-keyword">from</span> <span class="hljs-string">'@pixi-essentials/cull'</span>;
+<span class="hljs-keyword">import</span> { Viewport } <span class="hljs-keyword">from</span> <span class="hljs-string">'pixi-viewport'</span>;
+
+<span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> Application({  });
+<span class="hljs-keyword">const</span> renderer = app.renderer;
+<span class="hljs-keyword">const</span> viewport = initScene(<span class="hljs-keyword">new</span> Viewport());
+<span class="hljs-keyword">const</span> cull = <span class="hljs-keyword">new</span> Cull().addAll(viewport.children);
+
+<span class="hljs-comment">// Flags whether culling, should be set "true" when a child is added to the viewport's subtree.</span>
+<span class="hljs-keyword">let</span> cullDirty = <span class="hljs-literal">false</span>;
+
+viewport.on(<span class="hljs-string">'frame-end'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">if</span> (viewport.dirty || cullDirty) {
+        cull.cull(renderer.screen);
+
+        viewport.dirty = <span class="hljs-literal">false</span>;
+        cullDirty = <span class="hljs-literal">false</span>;
+    }
+})
+</code></pre>
+<h3>Dynamic scenes</h3>
+<p>If your scene graph is dynamic and/or changes across frames cannot be tracked, you can run culling
+on the <code>prerender</code> event.</p>
+<pre><code class="hljs language-ts">renderer.on(<span class="hljs-string">'prerender'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    cull.cull(renderer.screen);
+})
+</code></pre>
+<h3>Multiple scene graphs</h3>
+<p>If you are rendering multiple panes on to the canvas, each with its own scene graph, using different
+projections, then you need to use separate culls for each scene graph.</p>
+<pre><code class="hljs language-ts">cull.cull(sourceFrame);
+</code></pre>
+
+  </div>
+
+</div>
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

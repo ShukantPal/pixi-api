@@ -1,0 +1,510 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: TextureMatrix</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/core</div>
+    <h1 class="document__title">PIXI.TextureMatrix</h1>
+    
+<pre class="signature__container"><code class="signature">class TextureMatrix</code></pre>
+
+
+    <div class="document__brief"><p>Class controls uv mapping from Texture normal space to BaseTexture normal space.</p></div>
+    <div class="document__description"><p>Takes <code>trim</code> and <code>rotate</code> into account. May contain clamp settings for Meshes and TilingSprite.</p>
+<p>Can be used in Texture <code>uvMatrix</code> field, or separately, you can use different clamp settings on the same texture.
+If you want to add support for texture region of certain feature or filter, that's what you're looking for.</p>
+<p>Takes track of Texture changes through <code>_lastTextureID</code> private field.
+Use <code>update()</code> method call to track it from outside.</p></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+
+  
+    
+<div class="member" id="constructor">
+  <h3 class="member__title"></h3>
+  
+<pre class="signature__container"><code class="signature">new PIXI.TextureMatrix(texture: <a href="PIXI.Texture.html">PIXI.Texture</a>, clampMargin: number)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          texture
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Texture.html">PIXI.Texture</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>observed texture</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          clampMargin
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>Changes frame clamping, 0.5 by default. Use -0.5 for extra border.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="clampMargin">
+  <h3 class="member__title">clampMargin</h3>
+  
+<pre class="signature__container"><code class="signature">clampMargin: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Changes frame clamping
+Works with TilingSprite and Mesh
+Change to -0.5 to add a pixel to the edge, recommended for transparent trimmed textures in atlas</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="clampOffset">
+  <h3 class="member__title">clampOffset</h3>
+  
+<pre class="signature__container"><code class="signature">clampOffset: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Changes frame clamping
+Works with TilingSprite and Mesh
+Change to 1.5 if you texture has repeated right and bottom lines, that leads to smoother borders</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="isSimple">
+  <h3 class="member__title">isSimple</h3>
+  
+<pre class="signature__container"><code class="signature">isSimple: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>If texture size is the same as baseTexture</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="mapCoord">
+  <h3 class="member__title">mapCoord</h3>
+  
+<pre class="signature__container"><code class="signature">mapCoord: <a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Matrix operation that converts texture region coords to texture coords</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="texture">
+  <h3 class="member__title">texture</h3>
+  
+<pre class="signature__container"><code class="signature">texture: <a href="PIXI.Texture.html">PIXI.Texture</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>texture property</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="uClampFrame">
+  <h3 class="member__title">uClampFrame</h3>
+  
+<pre class="signature__container"><code class="signature">uClampFrame: Float32Array</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Clamp region for normalized coords, left-top pixel center in xy , bottom-right in zw.
+Calculated based on clampOffset.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="uClampOffset">
+  <h3 class="member__title">uClampOffset</h3>
+  
+<pre class="signature__container"><code class="signature">uClampOffset: Float32Array</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Normalized clamp offset.
+Calculated based on clampOffset.</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Properties</h2>
+
+  
+    
+<div class="member" id="_textureID">
+  <h3 class="member__title">_textureID</h3>
+  
+<pre class="signature__container"><code class="signature">protected _textureID: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Tracks Texture frame changes</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_updateID">
+  <h3 class="member__title">_updateID</h3>
+  
+<pre class="signature__container"><code class="signature">protected _updateID: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Tracks Texture frame changes</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="multiplyUvs">
+  <h3 class="member__title">multiplyUvs</h3>
+  
+<pre class="signature__container"><code class="signature">multiplyUvs(uvs: Float32Array, out: Float32Array) → {Float32Array}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Multiplies uvs array to transform</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          uvs
+        </td>
+        <td class="member-parameter__type">
+          Float32Array
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>mesh uvs</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          out
+        </td>
+        <td class="member-parameter__type">
+          Float32Array
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          uvs
+        </td>
+        <td class="member-parameter__description"><p>output</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>Float32Array</code></pre>
+      </td>
+      <td class="member-return__description"><p>output</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="update">
+  <h3 class="member__title">update</h3>
+  
+<pre class="signature__container"><code class="signature">update(forceUpdate: boolean) → {boolean}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>updates matrices if texture was changed</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          forceUpdate
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>if true, matrices will be updated any case</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>boolean</code></pre>
+      </td>
+      <td class="member-return__description"><p>whether or not it was updated</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.TextureMatrix.html#clampMargin">clampMargin</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.TextureMatrix.html#clampOffset">clampOffset</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.TextureMatrix.html#isSimple">isSimple</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.TextureMatrix.html#mapCoord">mapCoord</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.TextureMatrix.html#texture">texture</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.TextureMatrix.html#uClampFrame">uClampFrame</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.TextureMatrix.html#uClampOffset">uClampOffset</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Protected Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.TextureMatrix.html#_textureID">_textureID</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.TextureMatrix.html#_updateID">_updateID</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.TextureMatrix.html#multiplyUvs">multiplyUvs</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.TextureMatrix.html#update">update</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

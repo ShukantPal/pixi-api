@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: BVHNode</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi-essentials/bvh</div>
+    <h1 class="document__title">PIXI.BVHNode</h1>
+    
+<pre class="signature__container"><code class="signature">class BVHNode</code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"></div>
+
+    
+      
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="bounds">
+  <h3 class="member__title">bounds</h3>
+  
+<pre class="signature__container"><code class="signature">bounds: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The union of this node's childrens' axis-aligned bounding boxes.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="children">
+  <h3 class="member__title">children</h3>
+  
+<pre class="signature__container"><code class="signature">children: Array<<a href="PIXI.BVHNode.html">PIXI.BVHNode</a>></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The two children of this node.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="objectCount">
+  <h3 class="member__title">objectCount</h3>
+  
+<pre class="signature__container"><code class="signature">objectCount: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The number of objects in this node</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="objectOffset">
+  <h3 class="member__title">objectOffset</h3>
+  
+<pre class="signature__container"><code class="signature">objectOffset: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The index of the first object of this node in its tree's object array.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="splitAxis">
+  <h3 class="member__title">splitAxis</h3>
+  
+<pre class="signature__container"><code class="signature">splitAxis: <a href="PIXI.BVHSplitAxis.html">PIXI.BVHSplitAxis</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The axis alonged which this node was split to get its children.</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="isLeaf">
+  <h3 class="member__title">isLeaf</h3>
+  
+<pre class="signature__container"><code class="signature">isLeaf() → {boolean}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>boolean</code></pre>
+      </td>
+      <td class="member-return__description"><p>whether this node is a leaf</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="resetInterior">
+  <h3 class="member__title">resetInterior</h3>
+  
+<pre class="signature__container"><code class="signature">resetInterior(splitAxis: <a href="PIXI.BVHSplitAxis.html">PIXI.BVHSplitAxis</a>, child0: <a href="PIXI.BVHNode.html">PIXI.BVHNode</a>, child1: <a href="PIXI.BVHNode.html">PIXI.BVHNode</a>) → {<a href="PIXI.BVHNode.html">PIXI.BVHNode</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Builds a interior <code>BVHNode</code> whose children are <code>child0</code> and <code>child1</code> split along <code>splitAxis</code>.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          splitAxis
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.BVHSplitAxis.html">PIXI.BVHSplitAxis</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          child0
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.BVHNode.html">PIXI.BVHNode</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          child1
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.BVHNode.html">PIXI.BVHNode</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.BVHNode.html">PIXI.BVHNode</a></code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="resetLeaf">
+  <h3 class="member__title">resetLeaf</h3>
+  
+<pre class="signature__container"><code class="signature">resetLeaf(offset: number, objects: number, bounds: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>) → {<a href="PIXI.BVHNode.html">PIXI.BVHNode</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Builds a leaf <code>BVHNode</code> whose objects start at <code>offset</code> and with bounds <code>bounds</code>.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          offset
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          objects
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          bounds
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.BVHNode.html">PIXI.BVHNode</a></code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.BVHNode.html#bounds">bounds</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.BVHNode.html#children">children</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.BVHNode.html#objectCount">objectCount</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.BVHNode.html#objectOffset">objectOffset</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.BVHNode.html#splitAxis">splitAxis</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.BVHNode.html#isLeaf">isLeaf</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.BVHNode.html#resetInterior">resetInterior</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.BVHNode.html#resetLeaf">resetLeaf</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

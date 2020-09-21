@@ -1,0 +1,2553 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: GraphicsGeometry</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/graphics</div>
+    <h1 class="document__title">PIXI.GraphicsGeometry</h1>
+    
+<pre class="signature__container"><code class="signature">class GraphicsGeometry extends <a href="PIXI.BatchGeometry.html">PIXI.BatchGeometry</a></code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>The Graphics class contains methods used to draw primitive shapes such as lines, circles and
+rectangles to the display, and to color and fill them.</p>
+<p>GraphicsGeometry is designed to not be continually updating the geometry since it's expensive
+to re-tesselate using <strong>earcut</strong>. Consider using <a href="PIXI.Mesh_.html">PIXI.Mesh</a> for this use-case, it's much faster.</p></div>
+
+    
+      
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="BATCHABLE_SIZE">
+  <h3 class="member__title">BATCHABLE_SIZE</h3>
+  
+<pre class="signature__container"><code class="signature">static BATCHABLE_SIZE: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The maximum number of points to consider an object &quot;batchable&quot;,
+able to be batched by the renderer's batch system.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="bounds">
+  <h3 class="member__title">bounds</h3>
+  
+<pre class="signature__container"><code class="signature">bounds: <a href="PIXI.Bounds.html">PIXI.Bounds</a></code></pre>
+
+
+  <div class="member__brief"><p>Get the current bounds of the graphic geometry.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="boundsPadding">
+  <h3 class="member__title">boundsPadding</h3>
+  
+<pre class="signature__container"><code class="signature">boundsPadding: number</code></pre>
+
+
+  <div class="member__brief"><p>Padding to add to the bounds.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="closePointEps">
+  <h3 class="member__title">closePointEps</h3>
+  
+<pre class="signature__container"><code class="signature">closePointEps: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Minimal distance between points that are considered different.
+Affects line tesselation.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="instanceCount">
+  <h3 class="member__title">instanceCount</h3>
+  
+<pre class="signature__container"><code class="signature">instanceCount: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Number of instances in this geometry, pass it to <code>GeometrySystem.draw()</code></p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="refCount">
+  <h3 class="member__title">refCount</h3>
+  
+<pre class="signature__container"><code class="signature">refCount: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Count of existing (not destroyed) meshes that reference this geometry</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Properties</h2>
+
+  
+    
+<div class="member" id="_bounds">
+  <h3 class="member__title">_bounds</h3>
+  
+<pre class="signature__container"><code class="signature">protected _bounds: <a href="PIXI.Bounds.html">PIXI.Bounds</a></code></pre>
+
+
+  <div class="member__brief"><p>Cached bounds.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_buffer">
+  <h3 class="member__title">_buffer</h3>
+  
+<pre class="signature__container"><code class="signature">protected _buffer: <a href="PIXI.Buffer.html">PIXI.Buffer</a></code></pre>
+
+
+  <div class="member__brief"><p>Buffer used for position, color, texture IDs</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_indexBuffer">
+  <h3 class="member__title">_indexBuffer</h3>
+  
+<pre class="signature__container"><code class="signature">protected _indexBuffer: <a href="PIXI.Buffer.html">PIXI.Buffer</a></code></pre>
+
+
+  <div class="member__brief"><p>Index buffer data</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="batchDirty">
+  <h3 class="member__title">batchDirty</h3>
+  
+<pre class="signature__container"><code class="signature">protected batchDirty: number</code></pre>
+
+
+  <div class="member__brief"><p>Batches need to regenerated if the geometry is updated.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="batches">
+  <h3 class="member__title">batches</h3>
+  
+<pre class="signature__container"><code class="signature">protected batches: Array<<a href="PIXI.graphicsUtils.BatchPart.html">PIXI.graphicsUtils.BatchPart</a>></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Intermediate abstract format sent to batch system.
+Can be converted to drawCalls or to batchable objects.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="boundsDirty">
+  <h3 class="member__title">boundsDirty</h3>
+  
+<pre class="signature__container"><code class="signature">protected boundsDirty: number</code></pre>
+
+
+  <div class="member__brief"><p>The bounds dirty flag.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="cacheDirty">
+  <h3 class="member__title">cacheDirty</h3>
+  
+<pre class="signature__container"><code class="signature">protected cacheDirty: number</code></pre>
+
+
+  <div class="member__brief"><p>Used to check if the cache is dirty.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="clearDirty">
+  <h3 class="member__title">clearDirty</h3>
+  
+<pre class="signature__container"><code class="signature">protected clearDirty: number</code></pre>
+
+
+  <div class="member__brief"><p>Used to detect if we cleared the graphicsData.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="colors">
+  <h3 class="member__title">colors</h3>
+  
+<pre class="signature__container"><code class="signature">protected colors: Array<number></code></pre>
+
+
+  <div class="member__brief"><p>The collection of colors</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="dirty">
+  <h3 class="member__title">dirty</h3>
+  
+<pre class="signature__container"><code class="signature">protected dirty: number</code></pre>
+
+
+  <div class="member__brief"><p>Used to detect if the graphics object has changed.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="drawCalls">
+  <h3 class="member__title">drawCalls</h3>
+  
+<pre class="signature__container"><code class="signature">protected drawCalls: Array<object></code></pre>
+
+
+  <div class="member__brief"><p>List of current draw calls drived from the batches.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="glVertexArrayObjects">
+  <h3 class="member__title">glVertexArrayObjects</h3>
+  
+<pre class="signature__container"><code class="signature">protected glVertexArrayObjects: object</code></pre>
+
+
+  <div class="member__brief"><p>A map of renderer IDs to webgl VAOs</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="graphicsData">
+  <h3 class="member__title">graphicsData</h3>
+  
+<pre class="signature__container"><code class="signature">protected graphicsData: Array<<a href="PIXI.GraphicsData.html">PIXI.GraphicsData</a>></code></pre>
+
+
+  <div class="member__brief"><p>The collection of drawn shapes.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="indices">
+  <h3 class="member__title">indices</h3>
+  
+<pre class="signature__container"><code class="signature">protected indices: Array<number></code></pre>
+
+
+  <div class="member__brief"><p>The indices of the vertices</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="points">
+  <h3 class="member__title">points</h3>
+  
+<pre class="signature__container"><code class="signature">protected points: Array<number></code></pre>
+
+
+  <div class="member__brief"><p>An array of points to draw, 2 numbers per point</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="shapeIndex">
+  <h3 class="member__title">shapeIndex</h3>
+  
+<pre class="signature__container"><code class="signature">protected shapeIndex: number</code></pre>
+
+
+  <div class="member__brief"><p>Index of the last batched shape in the stack of calls.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="textureIds">
+  <h3 class="member__title">textureIds</h3>
+  
+<pre class="signature__container"><code class="signature">protected textureIds: Array<number></code></pre>
+
+
+  <div class="member__brief"><p>Reference to the texture IDs.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="uvs">
+  <h3 class="member__title">uvs</h3>
+  
+<pre class="signature__container"><code class="signature">protected uvs: Array<number></code></pre>
+
+
+  <div class="member__brief"><p>The UVs collection</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="_compareStyles">
+  <h3 class="member__title">_compareStyles</h3>
+  
+<pre class="signature__container"><code class="signature">_compareStyles(styleA: <a href="PIXI.FillStyle.html">PIXI.FillStyle</a> | <a href="PIXI.LineStyle.html">PIXI.LineStyle</a>, styleB: <a href="PIXI.FillStyle.html">PIXI.FillStyle</a> | <a href="PIXI.LineStyle.html">PIXI.LineStyle</a>) → {boolean}</code></pre>
+
+
+  <div class="member__brief"><p>Affinity check</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          styleA
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.FillStyle.html">PIXI.FillStyle</a> | <a href="PIXI.LineStyle.html">PIXI.LineStyle</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          styleB
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.FillStyle.html">PIXI.FillStyle</a> | <a href="PIXI.LineStyle.html">PIXI.LineStyle</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>boolean</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addAttribute">
+  <h3 class="member__title">addAttribute</h3>
+  
+<pre class="signature__container"><code class="signature">addAttribute(id: String, buffer: <a href="PIXI.Buffer.html">PIXI.Buffer</a> | number<Array>, size: Number, normalized: Boolean, type: Number, stride: Number, start: Number, instance: boolean) → {<a href="PIXI.Geometry.html">PIXI.Geometry</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Adds an attribute to the geometry
+Note: <code>stride</code> and <code>start</code> should be <code>undefined</code> if you dont know them, not 0!</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          id
+        </td>
+        <td class="member-parameter__type">
+          String
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>the name of the attribute (matching up to a shader)</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          buffer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Buffer.html">PIXI.Buffer</a> | number<Array>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>the buffer that holds the data of the attribute . You can also provide an Array and a buffer will be created from it.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          size
+        </td>
+        <td class="member-parameter__type">
+          Number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>the size of the attribute. If you have 2 floats per vertex (eg position x and y) this would be 2</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          normalized
+        </td>
+        <td class="member-parameter__type">
+          Boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>should the data be normalized.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          type
+        </td>
+        <td class="member-parameter__type">
+          Number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.TYPES.FLOAT
+        </td>
+        <td class="member-parameter__description"><p>what type of number is the attribute. Check {PIXI.TYPES} to see the ones available</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          stride
+        </td>
+        <td class="member-parameter__type">
+          Number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>How far apart (in floats) the start of each value is. (used for interleaving data)</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          start
+        </td>
+        <td class="member-parameter__type">
+          Number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>How far into the array to start reading values (used for interleaving data)</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          instance
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Instancing flag</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Geometry.html">PIXI.Geometry</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>returns self, useful for chaining.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addIndex">
+  <h3 class="member__title">addIndex</h3>
+  
+<pre class="signature__container"><code class="signature">addIndex(buffer: <a href="PIXI.Buffer.html">PIXI.Buffer</a> | number<Array>) → {<a href="PIXI.Geometry.html">PIXI.Geometry</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Adds an index buffer to the geometry
+The index buffer contains integers, three for each triangle in the geometry, which reference the various attribute buffers (position, colour, UV coordinates, other UV coordinates, normal, …). There is only ONE index buffer.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          buffer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Buffer.html">PIXI.Buffer</a> | number<Array>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>the buffer that holds the data of the index buffer. You can also provide an Array and a buffer will be created from it.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Geometry.html">PIXI.Geometry</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>returns self, useful for chaining.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="adjustUvs">
+  <h3 class="member__title">adjustUvs</h3>
+  
+<pre class="signature__container"><code class="signature">adjustUvs(uvs: Array<number>, texture: <a href="PIXI.Texture.html">PIXI.Texture</a>, start: number, size: number) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Modify uvs array according to position of texture region
+Does not work with rotated or trimmed textures</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          uvs
+        </td>
+        <td class="member-parameter__type">
+          Array<number>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>array</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          texture
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Texture.html">PIXI.Texture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>region</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          start
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>starting index for uvs</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          size
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>how many points to adjust</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="clear">
+  <h3 class="member__title">clear</h3>
+  
+<pre class="signature__container"><code class="signature">clear() → {<a href="PIXI.GraphicsGeometry.html">PIXI.GraphicsGeometry</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Clears the graphics that were drawn to this Graphics object, and resets fill and line style settings.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.GraphicsGeometry.html">PIXI.GraphicsGeometry</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>This GraphicsGeometry object. Good for chaining method calls</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="clone">
+  <h3 class="member__title">clone</h3>
+  
+<pre class="signature__container"><code class="signature">clone() → {<a href="PIXI.Geometry.html">PIXI.Geometry</a>}</code></pre>
+
+
+  <div class="member__brief"><p>returns a clone of the geometry</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Geometry.html">PIXI.Geometry</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>a new clone of this geometry</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="containsPoint">
+  <h3 class="member__title">containsPoint</h3>
+  
+<pre class="signature__container"><code class="signature">containsPoint(point: <a href="PIXI.IPointData.html">PIXI.IPointData</a>) → {Boolean}</code></pre>
+
+
+  <div class="member__brief"><p>Check to see if a point is contained within this geometry.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          point
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.IPointData.html">PIXI.IPointData</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Point to check if it's contained.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>Boolean</code></pre>
+      </td>
+      <td class="member-return__description"><p><code>true</code> if the point is contained within geometry.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroy">
+  <h3 class="member__title">destroy</h3>
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Destroys the GraphicsGeometry object.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="dispose">
+  <h3 class="member__title">dispose</h3>
+  
+<pre class="signature__container"><code class="signature">dispose() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>disposes WebGL resources that are connected to this geometry</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="drawHole">
+  <h3 class="member__title">drawHole</h3>
+  
+<pre class="signature__container"><code class="signature">drawHole(shape: <a href="PIXI.Circle.html">PIXI.Circle</a> | <a href="PIXI.Ellipse.html">PIXI.Ellipse</a> | <a href="PIXI.Polygon.html">PIXI.Polygon</a> | <a href="PIXI.Rectangle.html">PIXI.Rectangle</a> | <a href="PIXI.RoundedRectangle.html">PIXI.RoundedRectangle</a>, matrix: <a href="PIXI.Matrix.html">PIXI.Matrix</a>) → {<a href="PIXI.GraphicsGeometry.html">PIXI.GraphicsGeometry</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Draws the given shape to this Graphics object. Can be any of Circle, Rectangle, Ellipse, Line or Polygon.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          shape
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Circle.html">PIXI.Circle</a> | <a href="PIXI.Ellipse.html">PIXI.Ellipse</a> | <a href="PIXI.Polygon.html">PIXI.Polygon</a> | <a href="PIXI.Rectangle.html">PIXI.Rectangle</a> | <a href="PIXI.RoundedRectangle.html">PIXI.RoundedRectangle</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The shape object to draw.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          matrix
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Matrix.html">PIXI.Matrix</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Transform applied to the points of the shape.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.GraphicsGeometry.html">PIXI.GraphicsGeometry</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>Returns geometry for chaining.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="drawShape">
+  <h3 class="member__title">drawShape</h3>
+  
+<pre class="signature__container"><code class="signature">drawShape(shape: <a href="PIXI.Circle.html">PIXI.Circle</a> | <a href="PIXI.Ellipse.html">PIXI.Ellipse</a> | <a href="PIXI.Polygon.html">PIXI.Polygon</a> | <a href="PIXI.Rectangle.html">PIXI.Rectangle</a> | <a href="PIXI.RoundedRectangle.html">PIXI.RoundedRectangle</a>, fillStyle: <a href="PIXI.FillStyle.html">PIXI.FillStyle</a>, lineStyle: <a href="PIXI.LineStyle.html">PIXI.LineStyle</a>, matrix: <a href="PIXI.Matrix.html">PIXI.Matrix</a>) → {<a href="PIXI.GraphicsGeometry.html">PIXI.GraphicsGeometry</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Draws the given shape to this Graphics object. Can be any of Circle, Rectangle, Ellipse, Line or Polygon.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          shape
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Circle.html">PIXI.Circle</a> | <a href="PIXI.Ellipse.html">PIXI.Ellipse</a> | <a href="PIXI.Polygon.html">PIXI.Polygon</a> | <a href="PIXI.Rectangle.html">PIXI.Rectangle</a> | <a href="PIXI.RoundedRectangle.html">PIXI.RoundedRectangle</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The shape object to draw.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          fillStyle
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.FillStyle.html">PIXI.FillStyle</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Defines style of the fill.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          lineStyle
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.LineStyle.html">PIXI.LineStyle</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Defines style of the lines.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          matrix
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Matrix.html">PIXI.Matrix</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Transform applied to the points of the shape.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.GraphicsGeometry.html">PIXI.GraphicsGeometry</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>Returns geometry for chaining.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getAttribute">
+  <h3 class="member__title">getAttribute</h3>
+  
+<pre class="signature__container"><code class="signature">getAttribute(id: String) → {<a href="PIXI.Attribute.html">PIXI.Attribute</a>}</code></pre>
+
+
+  <div class="member__brief"><p>returns the requested attribute</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          id
+        </td>
+        <td class="member-parameter__type">
+          String
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the name of the attribute required</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Attribute.html">PIXI.Attribute</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>the attribute requested.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getBuffer">
+  <h3 class="member__title">getBuffer</h3>
+  
+<pre class="signature__container"><code class="signature">getBuffer(id: String) → {<a href="PIXI.Buffer.html">PIXI.Buffer</a>}</code></pre>
+
+
+  <div class="member__brief"><p>returns the requested buffer</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          id
+        </td>
+        <td class="member-parameter__type">
+          String
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the name of the buffer required</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Buffer.html">PIXI.Buffer</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>the buffer requested.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getIndex">
+  <h3 class="member__title">getIndex</h3>
+  
+<pre class="signature__container"><code class="signature">getIndex() → {<a href="PIXI.Buffer.html">PIXI.Buffer</a>}</code></pre>
+
+
+  <div class="member__brief"><p>returns the index buffer</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Buffer.html">PIXI.Buffer</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>the index buffer.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="interleave">
+  <h3 class="member__title">interleave</h3>
+  
+<pre class="signature__container"><code class="signature">interleave() → {<a href="PIXI.Geometry.html">PIXI.Geometry</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>this function modifies the structure so that all current attributes become interleaved into a single buffer
+This can be useful if your model remains static as it offers a little performance boost</p></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Geometry.html">PIXI.Geometry</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>returns self, useful for chaining.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="invalidate">
+  <h3 class="member__title">invalidate</h3>
+  
+<pre class="signature__container"><code class="signature">invalidate() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Call if you changed graphicsData manually.
+Empties all batch buffers.</p></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="updateBatches">
+  <h3 class="member__title">updateBatches</h3>
+  
+<pre class="signature__container"><code class="signature">updateBatches(aloow32Indices: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Generates intermediate batch data. Either gets converted to drawCalls
+or used to convert to batch objects directly by the Graphics object.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          aloow32Indices
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>Allow using 32-bit indices for preventings artefacts when more that 65535 vertices</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Methods</h2>
+
+  
+    
+<div class="member" id="addColors">
+  <h3 class="member__title">addColors</h3>
+  
+<pre class="signature__container"><code class="signature">protected addColors(colors: Array<number>, color: number, alpha: number, size: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Add colors.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          colors
+        </td>
+        <td class="member-parameter__type">
+          Array<number>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>List of colors to add to</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          color
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Color to add</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          alpha
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Alpha to use</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          size
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Number of colors to add</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addTextureIds">
+  <h3 class="member__title">addTextureIds</h3>
+  
+<pre class="signature__container"><code class="signature">protected addTextureIds(textureIds: Array<number>, id: number, size: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Add texture id that the shader/fragment wants to use.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          textureIds
+        </td>
+        <td class="member-parameter__type">
+          Array<number>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          id
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          size
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addUvs">
+  <h3 class="member__title">addUvs</h3>
+  
+<pre class="signature__container"><code class="signature">protected addUvs(verts: Array<number>, uvs: Array<number>, texture: <a href="PIXI.Texture.html">PIXI.Texture</a>, start: number, size: number, matrix: <a href="PIXI.Matrix.html">PIXI.Matrix</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Generates the UVs for a shape.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          verts
+        </td>
+        <td class="member-parameter__type">
+          Array<number>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>Vertices</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          uvs
+        </td>
+        <td class="member-parameter__type">
+          Array<number>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>UVs</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          texture
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Texture.html">PIXI.Texture</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>Reference to Texture</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          start
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>Index buffer start index.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          size
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The size/length for index buffer.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          matrix
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Matrix.html">PIXI.Matrix</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>Optional transform for all points.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="buildDrawCalls">
+  <h3 class="member__title">buildDrawCalls</h3>
+  
+<pre class="signature__container"><code class="signature">protected buildDrawCalls() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Converts intermediate batches data to drawCalls.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="calculateBounds">
+  <h3 class="member__title">calculateBounds</h3>
+  
+<pre class="signature__container"><code class="signature">protected calculateBounds() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Update the local bounds of the object. Expensive to use performance-wise.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="isBatchable">
+  <h3 class="member__title">isBatchable</h3>
+  
+<pre class="signature__container"><code class="signature">protected isBatchable() → {boolean}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Checks to see if this graphics geometry can be batched.
+Currently it needs to be small enough and not contain any native lines.</p></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>boolean</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="packAttributes">
+  <h3 class="member__title">packAttributes</h3>
+  
+<pre class="signature__container"><code class="signature">protected packAttributes() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Packs attributes to single buffer.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="packBatches">
+  <h3 class="member__title">packBatches</h3>
+  
+<pre class="signature__container"><code class="signature">protected packBatches() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Offset the indices so that it works with the batcher.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="processFill">
+  <h3 class="member__title">processFill</h3>
+  
+<pre class="signature__container"><code class="signature">protected processFill(data: <a href="PIXI.GraphicsData.html">PIXI.GraphicsData</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Process fill part of Graphics.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          data
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.GraphicsData.html">PIXI.GraphicsData</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="processHoles">
+  <h3 class="member__title">processHoles</h3>
+  
+<pre class="signature__container"><code class="signature">protected processHoles(holes: Array<<a href="PIXI.GraphicsData.html">PIXI.GraphicsData</a>>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Process the holes data.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          holes
+        </td>
+        <td class="member-parameter__type">
+          Array<<a href="PIXI.GraphicsData.html">PIXI.GraphicsData</a>>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Holes to render</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="processLine">
+  <h3 class="member__title">processLine</h3>
+  
+<pre class="signature__container"><code class="signature">protected processLine(data: <a href="PIXI.GraphicsData.html">PIXI.GraphicsData</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Process line part of Graphics.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          data
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.GraphicsData.html">PIXI.GraphicsData</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="transformPoints">
+  <h3 class="member__title">transformPoints</h3>
+  
+<pre class="signature__container"><code class="signature">protected transformPoints(points: Array<number>, matrix: <a href="PIXI.Matrix.html">PIXI.Matrix</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Transform points using matrix.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          points
+        </td>
+        <td class="member-parameter__type">
+          Array<number>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Points to transform</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          matrix
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Matrix.html">PIXI.Matrix</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Transform matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="validateBatching">
+  <h3 class="member__title">validateBatching</h3>
+  
+<pre class="signature__container"><code class="signature">protected validateBatching() → {boolean}</code></pre>
+
+
+  <div class="member__brief"><p>Test geometry for batching process.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>boolean</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#BATCHABLE_SIZE">BATCHABLE_SIZE</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#bounds">bounds</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#boundsPadding">boundsPadding</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#closePointEps">closePointEps</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#instanceCount">instanceCount</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#refCount">refCount</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Protected Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#_bounds">_bounds</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#_buffer">_buffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#_indexBuffer">_indexBuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#batchDirty">batchDirty</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#batches">batches</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#boundsDirty">boundsDirty</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#cacheDirty">cacheDirty</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#clearDirty">clearDirty</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#colors">colors</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#dirty">dirty</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#drawCalls">drawCalls</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#glVertexArrayObjects">glVertexArrayObjects</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#graphicsData">graphicsData</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#indices">indices</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#points">points</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#shapeIndex">shapeIndex</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#textureIds">textureIds</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#uvs">uvs</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#_compareStyles">_compareStyles</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#addAttribute">addAttribute</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#addIndex">addIndex</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#adjustUvs">adjustUvs</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#clear">clear</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#clone">clone</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#containsPoint">containsPoint</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#destroy">destroy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#dispose">dispose</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#drawHole">drawHole</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#drawShape">drawShape</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#getAttribute">getAttribute</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#getBuffer">getBuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#getIndex">getIndex</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#interleave">interleave</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#invalidate">invalidate</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#updateBatches">updateBatches</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Protected Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#addColors">addColors</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#addTextureIds">addTextureIds</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#addUvs">addUvs</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#buildDrawCalls">buildDrawCalls</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#calculateBounds">calculateBounds</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#isBatchable">isBatchable</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#packAttributes">packAttributes</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#packBatches">packBatches</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#processFill">processFill</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#processHoles">processHoles</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#processLine">processLine</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#transformPoints">transformPoints</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.GraphicsGeometry.html#validateBatching">validateBatching</a></li>
+    
+  </ul>
+</div>
+
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

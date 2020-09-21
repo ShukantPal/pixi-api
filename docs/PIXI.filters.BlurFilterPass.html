@@ -1,0 +1,551 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: BlurFilterPass</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/filter-blur</div>
+    <h1 class="document__title">PIXI.filters.BlurFilterPass</h1>
+    
+<pre class="signature__container"><code class="signature">class BlurFilterPass extends <a href="PIXI.Filter.html">PIXI.Filter</a></code></pre>
+
+
+    <div class="document__brief"><p>The BlurFilterPass applies a horizontal or vertical Gaussian blur to an object.</p></div>
+    <div class="document__description"></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+
+  
+    
+<div class="member" id="constructor">
+  <h3 class="member__title"></h3>
+  
+<pre class="signature__container"><code class="signature">new PIXI.filters.BlurFilterPass(horizontal: boolean, strength: number, quality: number, resolution: number, kernelSize: number)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          horizontal
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Do pass along the x-axis (<code>true</code>) or y-axis (<code>false</code>).</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          strength
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          8
+        </td>
+        <td class="member-parameter__description"><p>The strength of the blur filter.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          quality
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          4
+        </td>
+        <td class="member-parameter__description"><p>The quality of the blur filter.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          resolution
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>The resolution of the blur filter.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          kernelSize
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          5
+        </td>
+        <td class="member-parameter__description"><p>The kernelSize of the blur filter.Options: 5, 7, 9, 11, 13, 15.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="autoFit">
+  <h3 class="member__title">autoFit</h3>
+  
+<pre class="signature__container"><code class="signature">autoFit: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>If enabled, PixiJS will fit the filter area into boundaries for better performance.
+Switch it off if it does not work for specific shader.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="blendMode">
+  <h3 class="member__title">blendMode</h3>
+  
+<pre class="signature__container"><code class="signature">blendMode: number</code></pre>
+
+
+  <div class="member__brief"><p>Sets the blendmode of the filter</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="blur">
+  <h3 class="member__title">blur</h3>
+  
+<pre class="signature__container"><code class="signature">blur: number</code></pre>
+
+
+  <div class="member__brief"><p>Sets the strength of both the blur.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="enabled">
+  <h3 class="member__title">enabled</h3>
+  
+<pre class="signature__container"><code class="signature">enabled: boolean</code></pre>
+
+
+  <div class="member__brief"><p>If enabled is true the filter is applied, if false it will not.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="legacy">
+  <h3 class="member__title">legacy</h3>
+  
+<pre class="signature__container"><code class="signature">legacy: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Legacy filters use position and uvs from attributes</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="padding">
+  <h3 class="member__title">padding</h3>
+  
+<pre class="signature__container"><code class="signature">padding: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The padding of the filter. Some filters require extra space to breath such as a blur.
+Increasing this will add extra width and height to the bounds of the object that the
+filter is applied to.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="program">
+  <h3 class="member__title">program</h3>
+  
+<pre class="signature__container"><code class="signature">program: <a href="PIXI.Program.html">PIXI.Program</a></code></pre>
+
+
+  <div class="member__brief"><p>Program that the shader uses</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="quality">
+  <h3 class="member__title">quality</h3>
+  
+<pre class="signature__container"><code class="signature">quality: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Sets the quality of the blur by modifying the number of passes. More passes means higher
+quaility bluring but the lower the performance.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="resolution">
+  <h3 class="member__title">resolution</h3>
+  
+<pre class="signature__container"><code class="signature">resolution: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The resolution of the filter. Setting this to be lower will lower the quality but
+increase the performance of the filter.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="state">
+  <h3 class="member__title">state</h3>
+  
+<pre class="signature__container"><code class="signature">state: <a href="PIXI.State.html">PIXI.State</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The WebGL state the filter requires to render</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="uniforms">
+  <h3 class="member__title">uniforms</h3>
+  
+<pre class="signature__container"><code class="signature">uniforms: object</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Shader uniform values, shortcut for <code>uniformGroup.uniforms</code></p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="apply">
+  <h3 class="member__title">apply</h3>
+  
+<pre class="signature__container"><code class="signature">apply(filterManager: <a href="PIXI.FilterSystem.html">PIXI.FilterSystem</a>, input: <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>, output: <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>, clearMode: <a href="PIXI.CLEAR_MODES.html">PIXI.CLEAR_MODES</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Applies the filter.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          filterManager
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.FilterSystem.html">PIXI.FilterSystem</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The manager.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          input
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The input target.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          output
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.RenderTexture.html">PIXI.RenderTexture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The output target.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          clearMode
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.CLEAR_MODES.html">PIXI.CLEAR_MODES</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>How to clear</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroy">
+  <h3 class="member__title">destroy</h3>
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.filters.BlurFilterPass.html#autoFit">autoFit</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.filters.BlurFilterPass.html#blendMode">blendMode</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.filters.BlurFilterPass.html#blur">blur</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.filters.BlurFilterPass.html#enabled">enabled</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.filters.BlurFilterPass.html#legacy">legacy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.filters.BlurFilterPass.html#padding">padding</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.filters.BlurFilterPass.html#program">program</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.filters.BlurFilterPass.html#quality">quality</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.filters.BlurFilterPass.html#resolution">resolution</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.filters.BlurFilterPass.html#state">state</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.filters.BlurFilterPass.html#uniforms">uniforms</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.filters.BlurFilterPass.html#apply">apply</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.filters.BlurFilterPass.html#destroy">destroy</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

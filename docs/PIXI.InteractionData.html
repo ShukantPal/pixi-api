@@ -1,0 +1,609 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: InteractionData</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/interaction</div>
+    <h1 class="document__title">PIXI.InteractionData</h1>
+    
+<pre class="signature__container"><code class="signature">class InteractionData</code></pre>
+
+
+    <div class="document__brief"><p>Holds all information related to an Interaction event</p></div>
+    <div class="document__description"></div>
+
+    
+      
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="button">
+  <h3 class="member__title">button</h3>
+  
+<pre class="signature__container"><code class="signature">button: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Indicates which button was pressed on the mouse or pointer device to trigger the event.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="buttons">
+  <h3 class="member__title">buttons</h3>
+  
+<pre class="signature__container"><code class="signature">buttons: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Indicates which buttons are pressed on the mouse or pointer device when the event is triggered.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="global">
+  <h3 class="member__title">global</h3>
+  
+<pre class="signature__container"><code class="signature">global: <a href="PIXI.Point.html">PIXI.Point</a></code></pre>
+
+
+  <div class="member__brief"><p>This point stores the global coords of where the touch/mouse event happened</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="height">
+  <h3 class="member__title">height</h3>
+  
+<pre class="signature__container"><code class="signature">height: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The height of the pointer's contact along the y-axis, measured in CSS pixels.
+radiusY of TouchEvents will be represented by this value.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="identifier">
+  <h3 class="member__title">identifier</h3>
+  
+<pre class="signature__container"><code class="signature">identifier: number</code></pre>
+
+
+  <div class="member__brief"><p>Unique identifier for this interaction</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="isPrimary">
+  <h3 class="member__title">isPrimary</h3>
+  
+<pre class="signature__container"><code class="signature">isPrimary: Boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Indicates whether or not the pointer device that created the event is the primary pointer.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="originalEvent">
+  <h3 class="member__title">originalEvent</h3>
+  
+<pre class="signature__container"><code class="signature">originalEvent: MouseEvent | TouchEvent | PointerEvent</code></pre>
+
+
+  <div class="member__brief"><p>When passed to an event handler, this will be the original DOM Event that was captured</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="pointerId">
+  <h3 class="member__title">pointerId</h3>
+  
+<pre class="signature__container"><code class="signature">pointerId: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The unique identifier of the pointer. It will be the same as <code>identifier</code>.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="pointerType">
+  <h3 class="member__title">pointerType</h3>
+  
+<pre class="signature__container"><code class="signature">pointerType: string</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The type of pointer that triggered the event.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="pressure">
+  <h3 class="member__title">pressure</h3>
+  
+<pre class="signature__container"><code class="signature">pressure: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Pressure applied by the pointing device during the event. A Touch's force property
+will be represented by this value.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="rotationAngle">
+  <h3 class="member__title">rotationAngle</h3>
+  
+<pre class="signature__container"><code class="signature">rotationAngle: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>From TouchEvents (not PointerEvents triggered by touches), the rotationAngle of the Touch.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="tangentialPressure">
+  <h3 class="member__title">tangentialPressure</h3>
+  
+<pre class="signature__container"><code class="signature">tangentialPressure: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Barrel pressure on a stylus pointer.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="target">
+  <h3 class="member__title">target</h3>
+  
+<pre class="signature__container"><code class="signature">target: <a href="PIXI.Sprite.html">PIXI.Sprite</a></code></pre>
+
+
+  <div class="member__brief"><p>The target Sprite that was interacted with</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="tiltX">
+  <h3 class="member__title">tiltX</h3>
+  
+<pre class="signature__container"><code class="signature">tiltX: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The angle, in degrees, between the pointer device and the screen.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="tiltY">
+  <h3 class="member__title">tiltY</h3>
+  
+<pre class="signature__container"><code class="signature">tiltY: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The angle, in degrees, between the pointer device and the screen.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="twist">
+  <h3 class="member__title">twist</h3>
+  
+<pre class="signature__container"><code class="signature">twist: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Twist of a stylus pointer.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="width">
+  <h3 class="member__title">width</h3>
+  
+<pre class="signature__container"><code class="signature">width: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The width of the pointer's contact along the x-axis, measured in CSS pixels.
+radiusX of TouchEvents will be represented by this value.</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="copyEvent">
+  <h3 class="member__title">copyEvent</h3>
+  
+<pre class="signature__container"><code class="signature">copyEvent(event: Touch | MouseEvent | PointerEvent) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Copies properties from normalized event data.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          event
+        </td>
+        <td class="member-parameter__type">
+          Touch | MouseEvent | PointerEvent
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The normalized event data</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getLocalPosition">
+  <h3 class="member__title">getLocalPosition</h3>
+  
+<pre class="signature__container"><code class="signature">getLocalPosition(displayObject: <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>, point: <a href="PIXI.Point.html">PIXI.Point</a>, globalPos: <a href="PIXI.Point.html">PIXI.Point</a>) → {<a href="PIXI.Point.html">PIXI.Point</a>}</code></pre>
+
+
+  <div class="member__brief"><p>This will return the local coordinates of the specified displayObject for this InteractionData</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          displayObject
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The DisplayObject that you would like the local
+coords off</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          point
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>A Point object in which to store the value, optional (otherwise
+will create a new point)</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          globalPos
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>A Point object containing your custom global coords, optional
+(otherwise will use the current global coords)</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.Point.html">PIXI.Point</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>A point containing the coordinates of the InteractionData position relative
+to the DisplayObject</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="reset">
+  <h3 class="member__title">reset</h3>
+  
+<pre class="signature__container"><code class="signature">reset() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Resets the data for pooling.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#button">button</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#buttons">buttons</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#global">global</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#height">height</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#identifier">identifier</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#isPrimary">isPrimary</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#originalEvent">originalEvent</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#pointerId">pointerId</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#pointerType">pointerType</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#pressure">pressure</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#rotationAngle">rotationAngle</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#tangentialPressure">tangentialPressure</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#target">target</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#tiltX">tiltX</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#tiltY">tiltY</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#twist">twist</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#width">width</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#copyEvent">copyEvent</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#getLocalPosition">getLocalPosition</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.InteractionData.html#reset">reset</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

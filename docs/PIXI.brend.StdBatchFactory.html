@@ -1,0 +1,962 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: StdBatchFactory</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">pixi-batch-renderer</div>
+    <h1 class="document__title">PIXI.brend.StdBatchFactory</h1>
+    
+<pre class="signature__container"><code class="signature">class StdBatchFactory</code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>Factory for producing &quot;standard&quot; (based on state, geometry, &amp; textures) batches of
+display-objects.</p>
+<p><strong>NOTE:</strong> Instead of &quot;building&quot; batches, this factory actually keeps the batches in
+a buffer so they can be accessed together at the end.</p>
+<p><strong>Shared Textures</strong>: If display-objects in the same batch use the same base-texture,
+then that base-texture is not uploaded twice. This allows for more better batch density
+when you use texture atlases (textures with same base-texture). This is one reason why
+textures are treated as &quot;special&quot; uniforms.</p></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+
+  
+    
+<div class="member" id="constructor">
+  <h3 class="member__title"></h3>
+  
+<pre class="signature__container"><code class="signature">new PIXI.brend.StdBatchFactory(renderer: <a href="PIXI.brend.BatchRenderer.html">PIXI.brend.BatchRenderer</a>)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.brend.BatchRenderer.html">PIXI.brend.BatchRenderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="_batchBuffer">
+  <h3 class="member__title">_batchBuffer</h3>
+  
+<pre class="signature__container"><code class="signature">_batchBuffer</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_textureBuffer">
+  <h3 class="member__title">_textureBuffer</h3>
+  
+<pre class="signature__container"><code class="signature">_textureBuffer: object</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_textureCount">
+  <h3 class="member__title">_textureCount</h3>
+  
+<pre class="signature__container"><code class="signature">_textureCount: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Textures per display-object</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_textureLimit">
+  <h3 class="member__title">_textureLimit</h3>
+  
+<pre class="signature__container"><code class="signature">_textureLimit: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Max. no of textures per batch (should be &lt;= texture units of GPU)</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_textureProperty">
+  <h3 class="member__title">_textureProperty</h3>
+  
+<pre class="signature__container"><code class="signature">_textureProperty: string</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Property in which textures are kept of display-objects</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Properties</h2>
+
+  
+    
+<div class="member" id="_batchBuffer">
+  <h3 class="member__title">_batchBuffer</h3>
+  
+<pre class="signature__container"><code class="signature">protected _batchBuffer</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Display-objects in current batch</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_batchCount">
+  <h3 class="member__title">_batchCount</h3>
+  
+<pre class="signature__container"><code class="signature">protected _batchCount: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Number of batches created since last reset.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_batchPool">
+  <h3 class="member__title">_batchPool</h3>
+  
+<pre class="signature__container"><code class="signature">protected _batchPool: Array<any></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Pool to batch objects into which data is fed.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_renderer">
+  <h3 class="member__title">_renderer</h3>
+  
+<pre class="signature__container"><code class="signature">protected _renderer: <a href="PIXI.brend.BatchRenderer.html">PIXI.brend.BatchRenderer</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="_nextBatch">
+  <h3 class="member__title">_nextBatch</h3>
+  
+<pre class="signature__container"><code class="signature">_nextBatch(geometryOffset: number) → {any}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          geometryOffset
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>any</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="_put">
+  <h3 class="member__title">_put</h3>
+  
+<pre class="signature__container"><code class="signature">_put(displayObject: <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>) → {boolean}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Should store any information from the display-object to be put into
+the batch.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          displayObject
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>boolean</code></pre>
+      </td>
+      <td class="member-return__description"><ul>
+<li>whether the display-object was &quot;compatible&quot; with
+other display-objects in the batch. If not, it should not have been
+added.</li>
+</ul></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="_putAllTextures">
+  <h3 class="member__title">_putAllTextures</h3>
+  
+<pre class="signature__container"><code class="signature">_putAllTextures(textureArray: Array) → {boolean}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          textureArray
+        </td>
+        <td class="member-parameter__type">
+          Array
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>boolean</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="access">
+  <h3 class="member__title">access</h3>
+  
+<pre class="signature__container"><code class="signature">access() → {Array<object>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Returns the built batch pool. The array returned may be larger than the pool
+itself.</p></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>Array<object></code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="build">
+  <h3 class="member__title">build</h3>
+  
+<pre class="signature__container"><code class="signature">build(batch: PIXI.brend.Batch) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Creates the batch object and pushes it into the pool This also resets any state
+so that a new batch can be started again.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          batch
+        </td>
+        <td class="member-parameter__type">
+          PIXI.brend.Batch
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>{PIXI.brend.Batch}</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="put">
+  <h3 class="member__title">put</h3>
+  
+<pre class="signature__container"><code class="signature">put(targetObject: <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>, state: <a href="PIXI.State.html">PIXI.State</a>) → {boolean}</code></pre>
+
+
+  <div class="member__brief"><p>Puts the display-object into the current batch, if possible.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          targetObject
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>add</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          state
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.State.html">PIXI.State</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>te required by that object</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>boolean</code></pre>
+      </td>
+      <td class="member-return__description"><p>whether the object was added to the batch. If it wasn't, you should &quot;build&quot; it.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="ready">
+  <h3 class="member__title">ready</h3>
+  
+<pre class="signature__container"><code class="signature">ready() → {boolean}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>boolean</code></pre>
+      </td>
+      <td class="member-return__description"><ul>
+<li>whether this factory is ready to start a new batch from
+&quot;start&quot;. If not, then the current batch must be built before starting a new one.</li>
+</ul></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="reset">
+  <h3 class="member__title">reset</h3>
+  
+<pre class="signature__container"><code class="signature">reset() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Clears the batch pool.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="size">
+  <h3 class="member__title">size</h3>
+  
+<pre class="signature__container"><code class="signature">size() → {number}</code></pre>
+
+
+  <div class="member__brief"><p>Size of the batch pool built since last reset.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>number</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Methods</h2>
+
+  
+    
+<div class="member" id="_buildBatch">
+  <h3 class="member__title">_buildBatch</h3>
+  
+<pre class="signature__container"><code class="signature">protected _buildBatch(batch: object) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Should add any information required to render the batch. If you override this,
+you must call <code>super._buildBatch</code> and clear any state.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          batch
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="_newBatch">
+  <h3 class="member__title">_newBatch</h3>
+  
+<pre class="signature__container"><code class="signature">protected _newBatch() → {object}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>object</code></pre>
+      </td>
+      <td class="member-return__description"><p>a new batch</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#_batchBuffer">_batchBuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#_textureBuffer">_textureBuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#_textureCount">_textureCount</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#_textureLimit">_textureLimit</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#_textureProperty">_textureProperty</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Protected Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#_batchBuffer">_batchBuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#_batchCount">_batchCount</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#_batchPool">_batchPool</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#_renderer">_renderer</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#_nextBatch">_nextBatch</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#_put">_put</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#_putAllTextures">_putAllTextures</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#access">access</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#build">build</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#put">put</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#ready">ready</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#reset">reset</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#size">size</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Protected Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#_buildBatch">_buildBatch</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.StdBatchFactory.html#_newBatch">_newBatch</a></li>
+    
+  </ul>
+</div>
+
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

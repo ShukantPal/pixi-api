@@ -1,0 +1,625 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Framebuffer</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/core</div>
+    <h1 class="document__title">PIXI.Framebuffer</h1>
+    
+<pre class="signature__container"><code class="signature">class Framebuffer</code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>A framebuffer can be used to render contents off of the screen. <a href="PIXI.BaseRenderTexture.html">PIXI.BaseRenderTexture</a> uses
+one internally to render into itself. You can attach a depth or stencil buffer to a framebuffer.</p>
+<p>On WebGL 2 machines, shaders can output to multiple textures simultaneously with GLSL 300 ES.</p></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+
+  
+    
+<div class="member" id="constructor">
+  <h3 class="member__title"></h3>
+  
+<pre class="signature__container"><code class="signature">new PIXI.Framebuffer(width: number, height: number)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          width
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Width of the frame buffer</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          height
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Height of the frame buffer</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="colorTexture">
+  <h3 class="member__title">colorTexture</h3>
+  
+<pre class="signature__container"><code class="signature">colorTexture: Array<<a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a>></code></pre>
+
+
+  <div class="member__brief"><p>Reference to the colorTexture.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="height">
+  <h3 class="member__title">height</h3>
+  
+<pre class="signature__container"><code class="signature">height: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Height of framebuffer in pixels</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="multisample">
+  <h3 class="member__title">multisample</h3>
+  
+<pre class="signature__container"><code class="signature">multisample: <a href="PIXI.MSAA_QUALITY.html">PIXI.MSAA_QUALITY</a></code></pre>
+
+
+  <div class="member__brief"><p>Desired number of samples for antialiasing. 0 means AA should not be used.</p></div>
+  <div class="member__description"><p>Experimental WebGL2 feature, allows to use antialiasing in individual renderTextures.
+Antialiasing is the same as for main buffer with renderer <code>antialias:true</code> options.
+Seriously affects GPU memory consumption and GPU performance.</p>
+<pre><code class="hljs language-js"> renderTexture.framebuffer.multisample = PIXI.MSAA_QUALITY.HIGH;
+ <span class="hljs-comment">//...</span>
+ renderer.render(renderTexture, myContainer);
+ renderer.framebuffer.blit(); <span class="hljs-comment">// copies data from MSAA framebuffer to texture</span>
+</code></pre></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="width">
+  <h3 class="member__title">width</h3>
+  
+<pre class="signature__container"><code class="signature">width: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Width of framebuffer in pixels</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="addColorTexture">
+  <h3 class="member__title">addColorTexture</h3>
+  
+<pre class="signature__container"><code class="signature">addColorTexture(index: number, texture: <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a>) → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Add texture to the colorTexture array</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          index
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>Index of the array to add the texture to</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          texture
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Texture to add to the array</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>this</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addDepthTexture">
+  <h3 class="member__title">addDepthTexture</h3>
+  
+<pre class="signature__container"><code class="signature">addDepthTexture(texture: <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a>) → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Add a depth texture to the frame buffer</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          texture
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>Texture to add</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>this</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroyDepthTexture">
+  <h3 class="member__title">destroyDepthTexture</h3>
+  
+<pre class="signature__container"><code class="signature">destroyDepthTexture() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Destroys and removes the depth texture added to this framebuffer.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="dispose">
+  <h3 class="member__title">dispose</h3>
+  
+<pre class="signature__container"><code class="signature">dispose() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Disposes WebGL resources that are connected to this geometry</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="enableDepth">
+  <h3 class="member__title">enableDepth</h3>
+  
+<pre class="signature__container"><code class="signature">enableDepth() → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Enable depth on the frame buffer</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>this</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="enableStencil">
+  <h3 class="member__title">enableStencil</h3>
+  
+<pre class="signature__container"><code class="signature">enableStencil() → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Enable stencil on the frame buffer</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>this</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="resize">
+  <h3 class="member__title">resize</h3>
+  
+<pre class="signature__container"><code class="signature">resize(width: number, height: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Resize the frame buffer</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          width
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Width of the frame buffer to resize to</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          height
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Height of the frame buffer to resize to</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Framebuffer.html#colorTexture">colorTexture</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Framebuffer.html#height">height</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Framebuffer.html#multisample">multisample</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Framebuffer.html#width">width</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Framebuffer.html#addColorTexture">addColorTexture</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Framebuffer.html#addDepthTexture">addDepthTexture</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Framebuffer.html#destroyDepthTexture">destroyDepthTexture</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Framebuffer.html#dispose">dispose</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Framebuffer.html#enableDepth">enableDepth</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Framebuffer.html#enableStencil">enableStencil</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.Framebuffer.html#resize">resize</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

@@ -1,0 +1,1205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: FramebufferSystem</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+    <script src="scripts/prettify.js"></script>
+    <script src="scripts/lang-css.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/core</div>
+    <h1 class="document__title">PIXI.FramebufferSystem</h1>
+    
+<pre class="signature__container"><code class="signature">class FramebufferSystem extends <a href="PIXI.System.html">PIXI.System</a></code></pre>
+
+
+    <div class="document__brief"><p>System plugin to the renderer to manage framebuffers.</p></div>
+    <div class="document__description"></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+
+  
+    
+<div class="member" id="constructor">
+  <h3 class="member__title"></h3>
+  
+<pre class="signature__container"><code class="signature">new PIXI.FramebufferSystem(renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a>)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer this System works for.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="managedFramebuffers">
+  <h3 class="member__title">managedFramebuffers</h3>
+  
+<pre class="signature__container"><code class="signature">managedFramebuffers: Array<<a href="PIXI.Framebuffer.html">PIXI.Framebuffer</a>></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>A list of managed framebuffers</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="renderer">
+  <h3 class="member__title">renderer</h3>
+  
+<pre class="signature__container"><code class="signature">renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a></code></pre>
+
+
+  <div class="member__brief"><p>The renderer this manager works for.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="size">
+  <h3 class="member__title">size</h3>
+  
+<pre class="signature__container"><code class="signature">size: object</code></pre>
+
+
+  <div class="member__brief"><p>Get the size of the current width and height. Returns object with <code>width</code> and <code>height</code> values.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="unknownFramebuffer">
+  <h3 class="member__title">unknownFramebuffer</h3>
+  
+<pre class="signature__container"><code class="signature">unknownFramebuffer: Framebuffer</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Framebuffer value that shows that we don't know what is bound</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="bind">
+  <h3 class="member__title">bind</h3>
+  
+<pre class="signature__container"><code class="signature">bind(framebuffer: <a href="PIXI.Framebuffer.html">PIXI.Framebuffer</a>, frame: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Bind a framebuffer</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          framebuffer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Framebuffer.html">PIXI.Framebuffer</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          frame
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>frame, default is framebuffer size</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="blit">
+  <h3 class="member__title">blit</h3>
+  
+<pre class="signature__container"><code class="signature">blit(framebuffer: <a href="PIXI.Framebuffer.html">PIXI.Framebuffer</a>, sourcePixels: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>, destPixels: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Only works with WebGL2</p></div>
+  <div class="member__description"><p>blits framebuffer to another of the same or bigger size
+after that target framebuffer is bound</p>
+<p>Fails with WebGL warning if blits multisample framebuffer to different size</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          framebuffer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Framebuffer.html">PIXI.Framebuffer</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>by default it blits &quot;into itself&quot;, from renderBuffer to texture.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          sourcePixels
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>source rectangle in pixels</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          destPixels
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>dest rectangle in pixels, assumed to be the same as sourcePixels</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="clear">
+  <h3 class="member__title">clear</h3>
+  
+<pre class="signature__container"><code class="signature">clear(r: Number, g: Number, b: Number, a: Number, mask: <a href="PIXI.BUFFER_BITS.html">PIXI.BUFFER_BITS</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Clear the color of the context</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          r
+        </td>
+        <td class="member-parameter__type">
+          Number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Red value from 0 to 1</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          g
+        </td>
+        <td class="member-parameter__type">
+          Number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Green value from 0 to 1</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          b
+        </td>
+        <td class="member-parameter__type">
+          Number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Blue value from 0 to 1</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          a
+        </td>
+        <td class="member-parameter__type">
+          Number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Alpha value from 0 to 1</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          mask
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.BUFFER_BITS.html">PIXI.BUFFER_BITS</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          BUFFER_BITS.COLOR | BUFFER_BITS.DEPTH
+        </td>
+        <td class="member-parameter__description"><p>Bitwise OR of masks
+that indicate the buffers to be cleared, by default COLOR and DEPTH buffers.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="contextChange">
+  <h3 class="member__title">contextChange</h3>
+  
+<pre class="signature__container"><code class="signature">contextChange() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Sets up the renderer context and necessary buffers.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroy">
+  <h3 class="member__title">destroy</h3>
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Generic destroy methods to be overridden by the subclass</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="detectSamples">
+  <h3 class="member__title">detectSamples</h3>
+  
+<pre class="signature__container"><code class="signature">detectSamples(samples: <a href="PIXI.MSAA_QUALITY.html">PIXI.MSAA_QUALITY</a>) → {<a href="PIXI.MSAA_QUALITY.html">PIXI.MSAA_QUALITY</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Detects number of samples that is not more than a param but as close to it as possible</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          samples
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.MSAA_QUALITY.html">PIXI.MSAA_QUALITY</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>number of samples</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.MSAA_QUALITY.html">PIXI.MSAA_QUALITY</a></code></pre>
+      </td>
+      <td class="member-return__description"><ul>
+<li>recommended number of samples</li>
+</ul></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="disposeAll">
+  <h3 class="member__title">disposeAll</h3>
+  
+<pre class="signature__container"><code class="signature">disposeAll(contextLost: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Disposes all framebuffers, but not textures bound to them</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          contextLost
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>If context was lost, we suppress all delete function calls</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="disposeFramebuffer">
+  <h3 class="member__title">disposeFramebuffer</h3>
+  
+<pre class="signature__container"><code class="signature">disposeFramebuffer(framebuffer: <a href="PIXI.Framebuffer.html">PIXI.Framebuffer</a>, contextLost: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Disposes framebuffer</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          framebuffer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Framebuffer.html">PIXI.Framebuffer</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>framebuffer that has to be disposed of</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          contextLost
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>If context was lost, we suppress all delete function calls</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="reset">
+  <h3 class="member__title">reset</h3>
+  
+<pre class="signature__container"><code class="signature">reset() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>resets framebuffer stored state, binds screen framebuffer</p></div>
+  <div class="member__description"><p>should be called before renderTexture reset()</p></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="setViewport">
+  <h3 class="member__title">setViewport</h3>
+  
+<pre class="signature__container"><code class="signature">setViewport(x: Number, y: Number, width: Number, height: Number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Set the WebGLRenderingContext's viewport.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          x
+        </td>
+        <td class="member-parameter__type">
+          Number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>X position of viewport</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          y
+        </td>
+        <td class="member-parameter__type">
+          Number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Y position of viewport</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          width
+        </td>
+        <td class="member-parameter__type">
+          Number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Width of viewport</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          height
+        </td>
+        <td class="member-parameter__type">
+          Number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Height of viewport</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Methods</h2>
+
+  
+    
+<div class="member" id="initFramebuffer">
+  <h3 class="member__title">initFramebuffer</h3>
+  
+<pre class="signature__container"><code class="signature">protected initFramebuffer(framebuffer: <a href="PIXI.Framebuffer.html">PIXI.Framebuffer</a>) → {<a href="PIXI.GLFramebuffer.html">PIXI.GLFramebuffer</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Initialize framebuffer for this context</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          framebuffer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Framebuffer.html">PIXI.Framebuffer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code><a href="PIXI.GLFramebuffer.html">PIXI.GLFramebuffer</a></code></pre>
+      </td>
+      <td class="member-return__description"><p>created GLFramebuffer</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="resizeFramebuffer">
+  <h3 class="member__title">resizeFramebuffer</h3>
+  
+<pre class="signature__container"><code class="signature">protected resizeFramebuffer(framebuffer: <a href="PIXI.Framebuffer.html">PIXI.Framebuffer</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Resize the framebuffer</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          framebuffer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Framebuffer.html">PIXI.Framebuffer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="updateFramebuffer">
+  <h3 class="member__title">updateFramebuffer</h3>
+  
+<pre class="signature__container"><code class="signature">protected updateFramebuffer(framebuffer: <a href="PIXI.Framebuffer.html">PIXI.Framebuffer</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Update the framebuffer</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          framebuffer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Framebuffer.html">PIXI.Framebuffer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <pre><code>void</code></pre>
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.FramebufferSystem.html#managedFramebuffers">managedFramebuffers</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.FramebufferSystem.html#renderer">renderer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.FramebufferSystem.html#size">size</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.FramebufferSystem.html#unknownFramebuffer">unknownFramebuffer</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.FramebufferSystem.html#bind">bind</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.FramebufferSystem.html#blit">blit</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.FramebufferSystem.html#clear">clear</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.FramebufferSystem.html#contextChange">contextChange</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.FramebufferSystem.html#destroy">destroy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.FramebufferSystem.html#detectSamples">detectSamples</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.FramebufferSystem.html#disposeAll">disposeAll</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.FramebufferSystem.html#disposeFramebuffer">disposeFramebuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.FramebufferSystem.html#reset">reset</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.FramebufferSystem.html#setViewport">setViewport</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Protected Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.FramebufferSystem.html#initFramebuffer">initFramebuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.FramebufferSystem.html#resizeFramebuffer">resizeFramebuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.FramebufferSystem.html#updateFramebuffer">updateFramebuffer</a></li>
+    
+  </ul>
+</div>
+
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script>prettyPrint();</script>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>
