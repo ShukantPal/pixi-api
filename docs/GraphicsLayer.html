@@ -8,12 +8,11 @@
     <link type="text/css" rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
 
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="scripts/default-template.js"></script>
-    <script src="scripts/prettify.js"></script>
-    <script src="scripts/lang-css.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -328,7 +327,7 @@ you are constantly redrawing the graphics element.</p></div>
 <div class="member" id="children">
   <h3 class="member__title">children</h3>
   
-<pre class="signature__container"><code class="signature">children: Array<<a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>></code></pre>
+<pre class="signature__container"><code class="signature">children: Array&lt;<a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>></code></pre>
 
 
   <div class="member__brief"><p>The array of children of this container.</p></div>
@@ -395,7 +394,7 @@ rather than figuring out the dimensions of the displayObject each frame you can 
 <div class="member" id="filters">
   <h3 class="member__title">filters</h3>
   
-<pre class="signature__container"><code class="signature">filters: Array<<a href="PIXI.Filter.html">PIXI.Filter</a>></code></pre>
+<pre class="signature__container"><code class="signature">filters: Array&lt;<a href="PIXI.Filter.html">PIXI.Filter</a>></code></pre>
 
 
   <div class="member__brief"></div>
@@ -1045,7 +1044,7 @@ and thus rendered on top of other display objects within the same container.</p>
 <div class="member" id="_enabledFilters">
   <h3 class="member__title">_enabledFilters</h3>
   
-<pre class="signature__container"><code class="signature">protected _enabledFilters: Array<<a href="PIXI.Filter.html">PIXI.Filter</a>></code></pre>
+<pre class="signature__container"><code class="signature">protected _enabledFilters: Array&lt;<a href="PIXI.Filter.html">PIXI.Filter</a>></code></pre>
 
 
   <div class="member__brief"></div>
@@ -1223,7 +1222,7 @@ A higher value will mean it will be rendered on top of other displayObjects with
 <div class="member" id="batches">
   <h3 class="member__title">batches</h3>
   
-<pre class="signature__container"><code class="signature">protected batches: Array<object></code></pre>
+<pre class="signature__container"><code class="signature">protected batches: Array&lt;object></code></pre>
 
 
   <div class="member__brief"><p>A collections of batches! These can be drawn by the renderer batch system.</p></div>
@@ -1316,7 +1315,7 @@ internal function for toLocal()</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -1392,7 +1391,7 @@ internal function for toLocal()</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -1458,7 +1457,7 @@ internal function for toLocal()</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a></code></pre>
+        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
       </td>
       <td class="member-return__description"><p>The first child that was added.</p></td>
     </tr>
@@ -1534,7 +1533,7 @@ internal function for toLocal()</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a></code></pre>
+        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
       </td>
       <td class="member-return__description"><p>The child that was added.</p></td>
     </tr>
@@ -1689,7 +1688,7 @@ indicates counter-clockwise.</p></td>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -1795,7 +1794,7 @@ indicates counter-clockwise.</p></td>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -1884,7 +1883,7 @@ indicates counter-clockwise.</p></td>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -1924,7 +1923,7 @@ please use <code>moveTo</code> <code>lineTo</code>, <code>quadraticCurveTo</code
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>Returns itself.</p></td>
     </tr>
@@ -2060,7 +2059,7 @@ please use <code>moveTo</code> <code>lineTo</code>, <code>quadraticCurveTo</code
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -2176,7 +2175,7 @@ please use <code>moveTo</code> <code>lineTo</code>, <code>quadraticCurveTo</code
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -2213,7 +2212,7 @@ is limited to its mask's bounds or filterArea, if any is applied.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -2249,7 +2248,7 @@ is limited to its mask's bounds or filterArea, if any is applied.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -2302,7 +2301,7 @@ Note that only the geometry of the object is cloned, not its transform (position
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>A clone of the graphics object</p></td>
     </tr>
@@ -2338,7 +2337,7 @@ Note that only the geometry of the object is cloned, not its transform (position
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>Returns itself.</p></td>
     </tr>
@@ -2421,7 +2420,7 @@ Will crash if there's no parent element.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>boolean</code></pre>
+        boolean
       </td>
       <td class="member-return__description"><p>the result of the test</p></td>
     </tr>
@@ -2545,7 +2544,7 @@ Should it destroy the base texture of the child sprite</p></td>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -2611,7 +2610,7 @@ Should it destroy the base texture of the child sprite</p></td>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -2714,7 +2713,7 @@ Will crash if there's no parent element.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -2810,7 +2809,7 @@ Will crash if there's no parent element.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -2825,7 +2824,7 @@ Will crash if there's no parent element.</p></div>
 <div class="member" id="drawPolygon">
   <h3 class="member__title">drawPolygon</h3>
   
-<pre class="signature__container"><code class="signature">drawPolygon(path: Array<number> | Array<<a href="PIXI.Point.html">PIXI.Point</a>> | <a href="PIXI.Polygon.html">PIXI.Polygon</a>) → {<a href="PIXI.Graphics.html">PIXI.Graphics</a>}</code></pre>
+<pre class="signature__container"><code class="signature">drawPolygon(path: Array&lt;number> | Array&lt;<a href="PIXI.Point.html">PIXI.Point</a>> | <a href="PIXI.Polygon.html">PIXI.Polygon</a>) → {<a href="PIXI.Graphics.html">PIXI.Graphics</a>}</code></pre>
 
 
   <div class="member__brief"><p>Draws a polygon using the given path.</p></div>
@@ -2876,7 +2875,7 @@ Will crash if there's no parent element.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -2972,7 +2971,7 @@ Will crash if there's no parent element.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -3078,7 +3077,7 @@ Will crash if there's no parent element.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -3144,7 +3143,7 @@ Will crash if there's no parent element.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -3296,7 +3295,7 @@ Will crash if there's no parent element.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -3335,7 +3334,7 @@ elem.disable<span class="hljs-constructor">TempParent(<span class="hljs-params">
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a></code></pre>
+        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
       </td>
       <td class="member-return__description"><p>current parent</p></td>
     </tr>
@@ -3371,7 +3370,7 @@ elem.disable<span class="hljs-constructor">TempParent(<span class="hljs-params">
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -3407,7 +3406,7 @@ elem.disable<span class="hljs-constructor">TempParent(<span class="hljs-params">
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>Returns itself.</p></td>
     </tr>
@@ -3484,7 +3483,7 @@ or the <strong>@pixi/canvas-graphics</strong> package.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Texture.html">PIXI.Texture</a></code></pre>
+        <a href="PIXI.Texture.html">PIXI.Texture</a>
       </td>
       <td class="member-return__description"><p>The new texture.</p></td>
     </tr>
@@ -3590,7 +3589,7 @@ nice performance boost.</p></td>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Rectangle.html">PIXI.Rectangle</a></code></pre>
+        <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
       </td>
       <td class="member-return__description"><p>The minimum axis-aligned rectangle in world space that fits around this object.</p></td>
     </tr>
@@ -3656,7 +3655,7 @@ nice performance boost.</p></td>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a></code></pre>
+        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
       </td>
       <td class="member-return__description"><p>The child at the given index, if any.</p></td>
     </tr>
@@ -3744,7 +3743,7 @@ nice performance boost.</p></td>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a></code></pre>
+        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
       </td>
       <td class="member-return__description"><p>The child with the specified name.</p></td>
     </tr>
@@ -3810,7 +3809,7 @@ nice performance boost.</p></td>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>number</code></pre>
+        number
       </td>
       <td class="member-return__description"><p>The index position of the child display object to identify</p></td>
     </tr>
@@ -3900,7 +3899,7 @@ nice performance boost.</p></td>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Point.html">PIXI.Point</a></code></pre>
+        <a href="PIXI.Point.html">PIXI.Point</a>
       </td>
       <td class="member-return__description"><p>The updated point.</p></td>
     </tr>
@@ -3990,7 +3989,7 @@ it was default behaviour of pixi 4.0-5.2 and caused many problems to users.</p><
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Rectangle.html">PIXI.Rectangle</a></code></pre>
+        <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
       </td>
       <td class="member-return__description"><p>The rectangular bounding area.</p></td>
     </tr>
@@ -4027,7 +4026,7 @@ masked with gl.scissor.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>boolean</code></pre>
+        boolean
       </td>
       <td class="member-return__description"><p>True if only 1 rect.</p></td>
     </tr>
@@ -4228,7 +4227,7 @@ method or the drawCircle() method.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -4461,7 +4460,7 @@ Default 0xFFFFFF if texture present.</p></td>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -4538,7 +4537,7 @@ The current drawing position is then set to (x, y).</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -4614,7 +4613,7 @@ The current drawing position is then set to (x, y).</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -4711,7 +4710,7 @@ Based on: https://stackoverflow.com/questions/785097/how-do-i-implement-a-bezier
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
     </tr>
@@ -4777,7 +4776,7 @@ Based on: https://stackoverflow.com/questions/785097/how-do-i-implement-a-bezier
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a></code></pre>
+        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
       </td>
       <td class="member-return__description"><p>The first child that was removed.</p></td>
     </tr>
@@ -4843,7 +4842,7 @@ Based on: https://stackoverflow.com/questions/785097/how-do-i-implement-a-bezier
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a></code></pre>
+        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
       </td>
       <td class="member-return__description"><p>The child that was removed.</p></td>
     </tr>
@@ -4858,7 +4857,7 @@ Based on: https://stackoverflow.com/questions/785097/how-do-i-implement-a-bezier
 <div class="member" id="removeChildren">
   <h3 class="member__title">removeChildren</h3>
   
-<pre class="signature__container"><code class="signature">removeChildren(beginIndex: number, endIndex: number) → {Array<<a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>>}</code></pre>
+<pre class="signature__container"><code class="signature">removeChildren(beginIndex: number, endIndex: number) → {Array&lt;<a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>>}</code></pre>
 
 
   <div class="member__brief"><p>Removes all children from this container that are within the begin and end indexes.</p></div>
@@ -4931,7 +4930,7 @@ Based on: https://stackoverflow.com/questions/785097/how-do-i-implement-a-bezier
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>Array<<a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>></code></pre>
+        Array<<a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>>
       </td>
       <td class="member-return__description"><p>List of removed children</p></td>
     </tr>
@@ -5009,7 +5008,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -5121,7 +5120,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -5197,7 +5196,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -5263,7 +5262,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>Returns itself.</p></td>
     </tr>
@@ -5329,7 +5328,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Container.html">PIXI.Container</a></code></pre>
+        <a href="PIXI.Container.html">PIXI.Container</a>
       </td>
       <td class="member-return__description"><p>The Container that this DisplayObject was added to.</p></td>
     </tr>
@@ -5529,7 +5528,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a></code></pre>
+        <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
       </td>
       <td class="member-return__description"><p>The DisplayObject instance</p></td>
     </tr>
@@ -5565,7 +5564,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -5641,7 +5640,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -5746,7 +5745,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Point.html">PIXI.Point</a></code></pre>
+        <a href="PIXI.Point.html">PIXI.Point</a>
       </td>
       <td class="member-return__description"><p>A point object representing the position of this object.</p></td>
     </tr>
@@ -5867,7 +5866,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Point.html">PIXI.Point</a></code></pre>
+        <a href="PIXI.Point.html">PIXI.Point</a>
       </td>
       <td class="member-return__description"><p>A point object representing the position of this object</p></td>
     </tr>
@@ -5903,7 +5902,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -5946,7 +5945,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -6034,7 +6033,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -6070,7 +6069,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -6136,7 +6135,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -6202,7 +6201,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -6268,7 +6267,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -6334,7 +6333,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.Shader.html">PIXI.Shader</a></code></pre>
+        <a href="PIXI.Shader.html">PIXI.Shader</a>
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -6370,7 +6369,7 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -6407,7 +6406,7 @@ geometry, recaculate the vertices.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -6443,7 +6442,7 @@ geometry, recaculate the vertices.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -6509,7 +6508,7 @@ geometry, recaculate the vertices.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -6575,7 +6574,7 @@ geometry, recaculate the vertices.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -6611,7 +6610,7 @@ geometry, recaculate the vertices.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -6956,7 +6955,6 @@ geometry, recaculate the vertices.</p></div>
 
       </article>
       <footer class="footer" id="footer-mount-point"></footer>
-      <script>prettyPrint();</script>
       <script src="scripts/linenumber.js"> </script>
     </body>
   </div>

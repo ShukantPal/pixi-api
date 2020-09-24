@@ -8,12 +8,11 @@
     <link type="text/css" rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
 
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="scripts/default-template.js"></script>
-    <script src="scripts/prettify.js"></script>
-    <script src="scripts/lang-css.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -45,7 +44,7 @@
 <div class="member" id="constructor">
   <h3 class="member__title"></h3>
   
-<pre class="signature__container"><code class="signature">new PIXI.TextMetrics(text: string, style: <a href="PIXI.TextStyle.html">PIXI.TextStyle</a>, width: number, height: number, lines: Array<string>, lineWidths: Array<number>, lineHeight: number, maxLineWidth: number, fontProperties: Object)</code></pre>
+<pre class="signature__container"><code class="signature">new PIXI.TextMetrics(text: string, style: <a href="PIXI.TextStyle.html">PIXI.TextStyle</a>, width: number, height: number, lines: Array&lt;string>, lineWidths: Array&lt;number>, lineHeight: number, maxLineWidth: number, fontProperties: Object)</code></pre>
 
 
   <div class="member__brief"></div>
@@ -277,7 +276,7 @@ These characters are all tall to help calculate the height required for text.</p
 <div class="member" id="lines">
   <h3 class="member__title">lines</h3>
   
-<pre class="signature__container"><code class="signature">lines: Array<string></code></pre>
+<pre class="signature__container"><code class="signature">lines: Array&lt;string></code></pre>
 
 
   <div class="member__brief"><p>An array of lines of the text broken by new lines and wrapping is specified in style</p></div>
@@ -293,7 +292,7 @@ These characters are all tall to help calculate the height required for text.</p
 <div class="member" id="lineWidths">
   <h3 class="member__title">lineWidths</h3>
   
-<pre class="signature__container"><code class="signature">lineWidths: Array<number></code></pre>
+<pre class="signature__container"><code class="signature">lineWidths: Array&lt;number></code></pre>
 
 
   <div class="member__brief"><p>An array of the line widths for each line matched to <code>lines</code></p></div>
@@ -475,7 +474,7 @@ It must return a boolean.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>boolean</code></pre>
+        boolean
       </td>
       <td class="member-return__description"><p>whether to break word or not</p></td>
     </tr>
@@ -553,7 +552,7 @@ It must return a boolean.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>boolean</code></pre>
+        boolean
       </td>
       <td class="member-return__description"><p>whether to break word or not</p></td>
     </tr>
@@ -623,7 +622,7 @@ It must return a boolean.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>void</code></pre>
+        void
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -689,7 +688,7 @@ It must return a boolean.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.IFontMetrics.html">PIXI.IFontMetrics</a></code></pre>
+        <a href="PIXI.IFontMetrics.html">PIXI.IFontMetrics</a>
       </td>
       <td class="member-return__description"><p>Font properties object</p></td>
     </tr>
@@ -801,7 +800,7 @@ It must return a boolean.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code><a href="PIXI.TextMetrics.html">PIXI.TextMetrics</a></code></pre>
+        <a href="PIXI.TextMetrics.html">PIXI.TextMetrics</a>
       </td>
       <td class="member-return__description"><p>measured width and height of the text.</p></td>
     </tr>
@@ -816,7 +815,7 @@ It must return a boolean.</p></div>
 <div class="member" id="wordWrapSplit">
   <h3 class="member__title">wordWrapSplit</h3>
   
-<pre class="signature__container"><code class="signature">static wordWrapSplit(token: string) → {Array<string>}</code></pre>
+<pre class="signature__container"><code class="signature">static wordWrapSplit(token: string) → {Array&lt;string>}</code></pre>
 
 
   <div class="member__brief"><p>Overridable helper method used internally by TextMetrics, exposed to allow customizing the class's behavior.</p></div>
@@ -869,7 +868,7 @@ It must return an array of characters.</p></div>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <pre><code>Array<string></code></pre>
+        Array<string>
       </td>
       <td class="member-return__description"><p>The characters of the token</p></td>
     </tr>
@@ -949,7 +948,6 @@ It must return an array of characters.</p></div>
 
       </article>
       <footer class="footer" id="footer-mount-point"></footer>
-      <script>prettyPrint();</script>
       <script src="scripts/linenumber.js"> </script>
     </body>
   </div>
