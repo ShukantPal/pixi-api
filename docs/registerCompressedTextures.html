@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>webdoc: LoaderResource</title>
+    <title>webdoc: registerCompressedTextures</title>
 
     <link type="text/css" rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
@@ -23,17 +23,17 @@
         
 <div class="page-content">
   <div class="document">
-    <div class="document__package">@pixi/loaders</div>
-    <h1 class="document__title">PIXI.LoaderResource</h1>
+    <div class="document__package">@pixi/compressed-textures</div>
+    <h1 class="document__title">registerCompressedTextures</h1>
     
-<pre class="signature__container"><code class="signature">class LoaderResource</code></pre>
+<pre class="signature__container"><code class="signature">registerCompressedTextures(url: string, resources: <a href="PIXI.CompressedTextureResource.html">PIXI.CompressedTextureResource</a>[]) → {void}</code></pre>
 
 
     <div class="document__brief"></div>
-    <div class="document__description"><p>Reference to <strong><a href="https://github.com/englercj/resource-loader">https://github.com/englercj/resource-loader</a></strong>'s Resource class.</p></div>
+    <div class="document__description"><p>Creates base-textures and textures for each compressed-texture resource and adds them into the global
+texture cache. The first texture has two IDs - <code>${url}</code>, <code>${url}-1</code>; while the rest have an ID of the
+form <code>${url}-i</code>.</p></div>
 
-    
-      
     
 
     

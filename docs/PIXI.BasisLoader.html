@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: BasisLoader</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/basis</div>
+    <h1 class="document__title">PIXI.BasisLoader</h1>
+    
+<pre class="signature__container"><code class="signature">class BasisLoader
+implements <a href="PIXI.ILoaderPlugin.html">PIXI.ILoaderPlugin</a></code></pre>
+
+
+    <div class="document__brief"><p>Loader plugin for handling BASIS supercompressed texture files.</p></div>
+    <div class="document__description"><p>To use this loader, you must bind the basis_universal WebAssembly transcoder. There are two ways of
+doing this:</p>
+<ol>
+<li>Adding a &lt;script&gt; tag to your HTML page to the transcoder bundle in this package, and serving
+the WASM binary from the same location.</li>
+</ol>
+<pre><code class="hljs language-js"><span class="hljs-comment">// Copy ./node_modules/@pixi/basis/assets/basis_.wasm into your assets directory</span>
+<span class="hljs-comment">// as well, so it is served from the same folder as the JavaScript!</span>
+&amp;lt;script src=<span class="hljs-string">"./node_modules/@pixi/basis/assets/basis_transcoder.js"</span> /&amp;gt;
+</code></pre>
+<p>NOTE: <code>basis_transcoder.js</code> expects the WebAssembly binary to be named <code>basis_transcoder.wasm</code>.
+NOTE-2: This method supports transcoding on the main-thread. Only use this if you have 1 or 2 *.basis
+files.</p>
+<ol start="2">
+<li>Loading the transcoder source from a URL.</li>
+</ol>
+<pre><code class="hljs language-js"><span class="hljs-comment">// Use this if you to use the default CDN url for @pixi/basis</span>
+BasisLoader.loadTranscoder();
+
+<span class="hljs-comment">// Use this if you want to serve the transcoder on your own</span>
+BasisLoader.loadTranscoder(<span class="hljs-string">'./basis_transcoder.js'</span>, <span class="hljs-string">'./basis_transcoder.wasm'</span>);
+</code></pre>
+<p>NOTE: This can only be used with web-workers.</p></div>
+
+    
+      
+    
+
+    
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="use">
+  <h3 class="member__title">use</h3>
+  
+<pre class="signature__container"><code class="signature">static use(resource: ILoaderResource, next: (...args: any[]) => void) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Transcodes the *.basis data when the data is loaded. If the transcoder is not bound yet, it
+will hook transcoding to BasisResource#onTranscoderInitialized.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          resource
+        </td>
+        <td class="member-parameter__type">
+          ILoaderResource
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          next
+        </td>
+        <td class="member-parameter__type">
+          (...args: any[]) => void
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        void
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.BasisLoader.html#use">use</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

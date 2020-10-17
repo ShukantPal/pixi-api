@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>webdoc: SimpleRope</title>
+    <title>webdoc: SVGTextEngineImpl</title>
 
     <link type="text/css" rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
@@ -23,113 +23,20 @@
         
 <div class="page-content">
   <div class="document">
-    <div class="document__package">@pixi/mesh-extras</div>
-    <h1 class="document__title">PIXI.SimpleRope</h1>
+    <div class="document__package">@pixi-essentials/svg</div>
+    <h1 class="document__title">SVGTextEngineImpl</h1>
     
-<pre class="signature__container"><code class="signature">class SimpleRope extends <a href="PIXI.Mesh_.html">PIXI.Mesh</a></code></pre>
+<pre class="signature__container"><code class="signature">class SVGTextEngineImpl extends <a href="PIXI.Sprite.html">PIXI.Sprite</a>
+implements <a href="SVGTextEngine.html">SVGTextEngine</a></code></pre>
 
 
-    <div class="document__brief"><p>The rope allows you to draw a texture across several points and then manipulate these points</p></div>
-    <div class="document__description"><pre><code class="hljs language-js"> <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">20</span>; i++) {
-     points.push(<span class="hljs-keyword">new</span> PIXI.Point(i * <span class="hljs-number">50</span>, <span class="hljs-number">0</span>));
- };
- <span class="hljs-keyword">let</span> rope = <span class="hljs-keyword">new</span> PIXI.SimpleRope(PIXI.Texture.from(<span class="hljs-string">"snake.png"</span>), points);
-</code></pre></div>
+    <div class="document__brief"></div>
+    <div class="document__description"><p><code>SVGTextEngineImpl</code> is the default implementation for <a href="SVGTextEngine.html">SVGTextEngine</a>. It is inspired by <a href="PIXI.Text.html">PIXI.Text</a> that
+is provided by @pixi/text. It uses a &lt;canvas /&gt; to draw and cache the text. This may cause blurring issues when
+the SVG is viewed at highly zoomed-in scales because it is rasterized.</p></div>
 
     
       
-<div class="members">
-  <h2 class="members__category">Constructor</h2>
-
-  
-    
-<div class="member" id="constructor">
-  <h3 class="member__title"></h3>
-  
-<pre class="signature__container"><code class="signature">new PIXI.SimpleRope(texture: <a href="PIXI.Texture.html">PIXI.Texture</a>, points: Array&lt;<a href="PIXI.Point.html">PIXI.Point</a>>, textureScale: number)</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        <th class="member-parameter-header__attributes">Attributes</th>
-        <th class="member-parameter-header__default">Default</th>
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          texture
-        </td>
-        <td class="member-parameter__type">
-          <a href="PIXI.Texture.html">PIXI.Texture</a>
-        </td>
-        <td class="member-parameter__attributes">
-          
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          
-        </td>
-        <td class="member-parameter__description"><p>The texture to use on the rope.</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          points
-        </td>
-        <td class="member-parameter__type">
-          Array<<a href="PIXI.Point.html">PIXI.Point</a>>
-        </td>
-        <td class="member-parameter__attributes">
-          
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          
-        </td>
-        <td class="member-parameter__description"><p>An array of <a href="PIXI.Point.html">PIXI.Point</a> objects to construct this rope.</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          textureScale
-        </td>
-        <td class="member-parameter__type">
-          number
-        </td>
-        <td class="member-parameter__attributes">
-          <p>&lt;optional&gt;</p>
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          0
-        </td>
-        <td class="member-parameter__description"><p>Optional. Positive values scale rope texture
-keeping its aspect ratio. You can reduce alpha channel artifacts by providing a larger texture
-and downsampling here. If set to zero, texture will be streched instead.</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-</div>
-
-  
-</div>
-
     
 
     
@@ -319,6 +226,27 @@ depending on this type. Defaults to button.</p></div>
 
   
     
+<div class="member" id="anchor">
+  <h3 class="member__title">anchor</h3>
+  
+<pre class="signature__container"><code class="signature">anchor: <a href="PIXI.ObservablePoint.html">PIXI.ObservablePoint</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The anchor sets the origin point of the sprite. The default value is taken from the <a href="PIXI.Texture.html">Texture</a>
+and passed to the constructor.</p>
+<p>The default is <code>(0,0)</code>, this means the sprite's origin is the top left.</p>
+<p>Setting the anchor to <code>(0.5,0.5)</code> means the sprite's origin is centered.</p>
+<p>Setting the anchor to <code>(1,1)</code> would mean the sprite's origin point will be the bottom right corner.</p>
+<p>If you pass only single parameter, it will set both x and y to the same value as shown in the example below.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
 <div class="member" id="angle">
   <h3 class="member__title">angle</h3>
   
@@ -336,31 +264,14 @@ depending on this type. Defaults to button.</p></div>
 
   
     
-<div class="member" id="autoUpdate">
-  <h3 class="member__title">autoUpdate</h3>
-  
-<pre class="signature__container"><code class="signature">autoUpdate: boolean</code></pre>
-
-
-  <div class="member__brief"><p>re-calculate vertices by rope points each frame</p></div>
-  <div class="member__description"></div>
-
-  
-
-  
-</div>
-
-  
-    
 <div class="member" id="blendMode">
   <h3 class="member__title">blendMode</h3>
   
 <pre class="signature__container"><code class="signature">blendMode: number</code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>The blend mode to be applied to the Mesh. Apply a value of
-<code>PIXI.BLEND_MODES.NORMAL</code> to reset the blend mode.</p></div>
+  <div class="member__brief"><p>The blend mode to be applied to the sprite. Apply a value of <code>PIXI.BLEND_MODES.NORMAL</code> to reset the blend mode.</p></div>
+  <div class="member__description"></div>
 
   
 
@@ -470,22 +381,6 @@ is hovered over the displayObject.</p></div>
 
   
     
-<div class="member" id="drawMode">
-  <h3 class="member__title">drawMode</h3>
-  
-<pre class="signature__container"><code class="signature">drawMode: number</code></pre>
-
-
-  <div class="member__brief"><p>The way the Mesh should be drawn, can be any of the <a href="PIXI.DRAW_MODES.html">PIXI.DRAW_MODES</a> constants.</p></div>
-  <div class="member__description"></div>
-
-  
-
-  
-</div>
-
-  
-    
 <div class="member" id="filterArea">
   <h3 class="member__title">filterArea</h3>
   
@@ -524,31 +419,13 @@ To remove filters simply set this property to <code>'null'</code>.</li>
 
   
     
-<div class="member" id="geometry">
-  <h3 class="member__title">geometry</h3>
-  
-<pre class="signature__container"><code class="signature">geometry: <a href="PIXI.Geometry.html">PIXI.Geometry</a></code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Includes vertex positions, face indices, normals, colors, UVs, and
-custom attributes within buffers, reducing the cost of passing all
-this data to the GPU. Can be shared between multiple Mesh objects.</p></div>
-
-  
-
-  
-</div>
-
-  
-    
 <div class="member" id="height">
   <h3 class="member__title">height</h3>
   
 <pre class="signature__container"><code class="signature">height: number</code></pre>
 
 
-  <div class="member__brief"><p>The height of the Container, setting this will actually modify the scale to achieve the value set</p></div>
+  <div class="member__brief"><p>The height of the sprite, setting this will actually modify the scale to achieve the value set</p></div>
   <div class="member__description"></div>
 
   
@@ -677,22 +554,6 @@ utilities shape clipping. To remove a mask, set this property to <code>null</cod
 
   
     
-<div class="member" id="material">
-  <h3 class="member__title">material</h3>
-  
-<pre class="signature__container"><code class="signature">material: <a href="PIXI.MeshMaterial.html">PIXI.MeshMaterial</a></code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Alias for PIXI.Mesh#shader.</p></div>
-
-  
-
-  
-</div>
-
-  
-    
 <div class="member" id="name">
   <h3 class="member__title">name</h3>
   
@@ -735,6 +596,23 @@ utilities shape clipping. To remove a mask, set this property to <code>null</cod
   <div class="member__description"><p>The center of rotation, scaling, and skewing for this display object in its local space. The <code>position</code>
 is the projection of <code>pivot</code> in the parent's local space.</p>
 <p>By default, the pivot is the origin (0, 0).</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="pluginName">
+  <h3 class="member__title">pluginName</h3>
+  
+<pre class="signature__container"><code class="signature">pluginName: string</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Plugin that is responsible for rendering this element.
+Allows to customize the rendering process without overriding '_render' &amp; '_renderCanvas' methods.</p></div>
 
   
 
@@ -829,39 +707,6 @@ To set the global default, change <a href="PIXI.settings.html#ROUND_PIXELS">PIXI
 
   
     
-<div class="member" id="shader">
-  <h3 class="member__title">shader</h3>
-  
-<pre class="signature__container"><code class="signature">shader: <a href="PIXI.Shader.html">PIXI.Shader</a> | <a href="PIXI.MeshMaterial.html">PIXI.MeshMaterial</a></code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Represents the vertex and fragment shaders that processes the geometry and runs on the GPU.
-Can be shared between multiple Mesh objects.</p></div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="size">
-  <h3 class="member__title">size</h3>
-  
-<pre class="signature__container"><code class="signature">size: number</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>How much of the geometry to draw, by default <code>0</code> renders everything.</p></div>
-
-  
-
-  
-</div>
-
-  
-    
 <div class="member" id="skew">
   <h3 class="member__title">skew</h3>
   
@@ -933,46 +778,13 @@ as the zIndex sorting may cause the child to automatically sorted to another pos
 
   
     
-<div class="member" id="start">
-  <h3 class="member__title">start</h3>
-  
-<pre class="signature__container"><code class="signature">start: number</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Typically the index of the IndexBuffer where to start drawing.</p></div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="state">
-  <h3 class="member__title">state</h3>
-  
-<pre class="signature__container"><code class="signature">state: <a href="PIXI.State.html">PIXI.State</a></code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Represents the WebGL state the Mesh required to render, excludes shader and geometry. E.g.,
-blend mode, culling, depth testing, direction of rendering triangles, backface, etc.</p></div>
-
-  
-
-  
-</div>
-
-  
-    
 <div class="member" id="texture">
   <h3 class="member__title">texture</h3>
   
 <pre class="signature__container"><code class="signature">texture: <a href="PIXI.Texture.html">PIXI.Texture</a></code></pre>
 
 
-  <div class="member__brief"><p>The texture that the Mesh uses.</p></div>
+  <div class="member__brief"><p>The texture that the sprite is using</p></div>
   <div class="member__description"></div>
 
   
@@ -989,8 +801,8 @@ blend mode, culling, depth testing, direction of rendering triangles, backface, 
 
 
   <div class="member__brief"></div>
-  <div class="member__description"><p>The multiply tint applied to the Mesh. This is a hex value. A value of
-<code>0xFFFFFF</code> will remove any tint effect.</p></div>
+  <div class="member__description"><p>The tint applied to the sprite. This is a hex value.
+A value of 0xFFFFFF will remove any tint effect.</p></div>
 
   
 
@@ -1008,39 +820,6 @@ blend mode, culling, depth testing, direction of rendering triangles, backface, 
   <div class="member__brief"></div>
   <div class="member__description"><p>World transform and local transform of this object.
 This will become read-only later, please do not assign anything there unless you know what are you doing.</p></div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="uvBuffer">
-  <h3 class="member__title">uvBuffer</h3>
-  
-<pre class="signature__container"><code class="signature">uvBuffer: <a href="PIXI.Buffer.html">PIXI.Buffer</a></code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>To change mesh uv's, change its uvBuffer data and increment its _updateID.</p></div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="verticesBuffer">
-  <h3 class="member__title">verticesBuffer</h3>
-  
-<pre class="signature__container"><code class="signature">verticesBuffer: <a href="PIXI.Buffer.html">PIXI.Buffer</a></code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>To change mesh vertices, change its uvBuffer data and increment its _updateID.
-Incrementing _updateID is optional because most of Mesh objects do it anyway.</p></div>
 
   
 
@@ -1073,7 +852,7 @@ the updateTransform function will not be called.</p>
 <pre class="signature__container"><code class="signature">width: number</code></pre>
 
 
-  <div class="member__brief"><p>The width of the Container, setting this will actually modify the scale to achieve the value set</p></div>
+  <div class="member__brief"><p>The width of the sprite, setting this will actually modify the scale to achieve the value set</p></div>
   <div class="member__description"></div>
 
   
@@ -1222,22 +1001,6 @@ and thus rendered on top of other display objects within the same container.</p>
 
   
     
-<div class="member" id="_cachedTexture">
-  <h3 class="member__title">_cachedTexture</h3>
-  
-<pre class="signature__container"><code class="signature">protected _cachedTexture: <a href="PIXI.Texture.html">PIXI.Texture</a></code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>The cache texture is used to generate <code>_tintedCanvas</code>.</p></div>
-
-  
-
-  
-</div>
-
-  
-    
 <div class="member" id="_cachedTint">
   <h3 class="member__title">_cachedTint</h3>
   
@@ -1245,7 +1008,8 @@ and thus rendered on top of other display objects within the same container.</p>
 
 
   <div class="member__brief"></div>
-  <div class="member__description"><p>Cached tint value so we can tell when the tint is changed.</p></div>
+  <div class="member__description"><p>Cached tint value so we can tell when the tint is changed.
+Value is used for 2d CanvasRenderer.</p></div>
 
   
 
@@ -1278,6 +1042,22 @@ and thus rendered on top of other display objects within the same container.</p>
 
   <div class="member__brief"></div>
   <div class="member__description"><p>Currently enabled filters</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_height">
+  <h3 class="member__title">_height</h3>
+  
+<pre class="signature__container"><code class="signature">protected _height: number</code></pre>
+
+
+  <div class="member__brief"><p>The height of the sprite (this is initially set by the texture)</p></div>
+  <div class="member__description"></div>
 
   
 
@@ -1359,6 +1139,22 @@ Used by containers to help sort objects with the same zIndex, by using previous 
 
   <div class="member__brief"></div>
   <div class="member__description"><p>Cached tinted texture.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_width">
+  <h3 class="member__title">_width</h3>
+  
+<pre class="signature__container"><code class="signature">protected _width: number</code></pre>
+
+
+  <div class="member__brief"><p>The width of the sprite (this is initially set by the texture)</p></div>
+  <div class="member__description"></div>
 
   
 
@@ -1607,14 +1403,15 @@ is limited to its mask's bounds or filterArea, if any is applied.</p></div>
 
   
     
-<div class="member" id="calculateUvs">
-  <h3 class="member__title">calculateUvs</h3>
+<div class="member" id="calculateTrimmedVertices">
+  <h3 class="member__title">calculateTrimmedVertices</h3>
   
-<pre class="signature__container"><code class="signature">calculateUvs() → {void}</code></pre>
+<pre class="signature__container"><code class="signature">calculateTrimmedVertices() → {void}</code></pre>
 
 
-  <div class="member__brief"><p>Updates uv field based on from geometry uv's or batchUvs</p></div>
-  <div class="member__description"></div>
+  <div class="member__brief"></div>
+  <div class="member__description"><p>calculates worldTransform * vertices for a non texture with a trim. store it in vertexTrimmedData
+This is used to ensure that the true width and height of a trimmed texture is respected</p></div>
 
   
 
@@ -1649,7 +1446,7 @@ is limited to its mask's bounds or filterArea, if any is applied.</p></div>
 <pre class="signature__container"><code class="signature">calculateVertices() → {void}</code></pre>
 
 
-  <div class="member__brief"><p>Updates vertexData field based on transform and vertices</p></div>
+  <div class="member__brief"><p>calculates worldTransform * vertices, store it in vertexData</p></div>
   <div class="member__description"></div>
 
   
@@ -1668,6 +1465,42 @@ is limited to its mask's bounds or filterArea, if any is applied.</p></div>
     <tr class="member-return">
       <td class="member-return__type">
         void
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="clear">
+  <h3 class="member__title">clear</h3>
+  
+<pre class="signature__container"><code class="signature">clear() → {Promise}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        Promise
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -1702,7 +1535,7 @@ Will crash if there's no parent element.</p></div>
 <pre class="signature__container"><code class="signature">containsPoint(point: <a href="PIXI.IPointData.html">PIXI.IPointData</a>) → {boolean}</code></pre>
 
 
-  <div class="member__brief"><p>Tests if a point is inside this mesh. Works only for PIXI.DRAW_MODES.TRIANGLES.</p></div>
+  <div class="member__brief"><p>Tests if a point is inside this sprite</p></div>
   <div class="member__description"></div>
 
   
@@ -1768,7 +1601,7 @@ Will crash if there's no parent element.</p></div>
 <pre class="signature__container"><code class="signature">destroy(options: object | boolean) → {void}</code></pre>
 
 
-  <div class="member__brief"><p>Destroys the Mesh object.</p></div>
+  <div class="member__brief"><p>Destroys this sprite and optionally its texture and children</p></div>
   <div class="member__description"></div>
 
   
@@ -1801,8 +1634,8 @@ Will crash if there's no parent element.</p></div>
         <td class="member-parameter__default">
           
         </td>
-        <td class="member-parameter__description"><p>Options parameter. A boolean will act as if all
-options have been set to that value</p></td>
+        <td class="member-parameter__description"><p>Options parameter. A boolean will act as if all options
+have been set to that value</p></td>
       </tr><tr class="member-parameter">
         <td class="member-parameter__name">
           options.children
@@ -1818,8 +1651,40 @@ options have been set to that value</p></td>
         <td class="member-parameter__default">
           false
         </td>
-        <td class="member-parameter__description"><p>if set to true, all the children will have
-their destroy method called as well. 'options' will be passed on to those calls.</p></td>
+        <td class="member-parameter__description"><p>if set to true, all the children will have their destroy
+method called as well. 'options' will be passed on to those calls.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.texture
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Should it destroy the current texture of the sprite as well</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.baseTexture
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Should it destroy the base texture of the sprite as well</p></td>
       </tr>
     </tbody>
   </table>
@@ -2393,12 +2258,11 @@ nice performance boost.</p></td>
 <div class="member" id="getLocalBounds">
   <h3 class="member__title">getLocalBounds</h3>
   
-<pre class="signature__container"><code class="signature">getLocalBounds(rect: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>, skipChildrenUpdate: boolean) → {<a href="PIXI.Rectangle.html">PIXI.Rectangle</a>}</code></pre>
+<pre class="signature__container"><code class="signature">getLocalBounds(rect: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>) → {<a href="PIXI.Rectangle.html">PIXI.Rectangle</a>}</code></pre>
 
 
-  <div class="member__brief"><p>Retrieves the local bounds of the displayObject as a rectangle object.</p></div>
-  <div class="member__description"><p>Calling <code>getLocalBounds</code> may invalidate the <code>_bounds</code> of the whole subtree below. If using it inside a render()
-call, it is advised to call <code>getBounds()</code> immediately after to recalculate the world bounds of the subtree.</p></div>
+  <div class="member__brief"><p>Gets the local bounds of the sprite object.</p></div>
+  <div class="member__description"></div>
 
   
     
@@ -2410,7 +2274,7 @@ call, it is advised to call <code>getBounds()</code> immediately after to recalc
         <th class="member-parameter-header__name">Name</th>
         <th class="member-parameter-header__type">Type</th>
         <th class="member-parameter-header__attributes">Attributes</th>
-        <th class="member-parameter-header__default">Default</th>
+        
         <th class="member-parameter-header__description">Description</th>
       </tr>
     </thead>
@@ -2427,27 +2291,8 @@ call, it is advised to call <code>getBounds()</code> immediately after to recalc
           
           
         </td>
-        <td class="member-parameter__default">
-          
-        </td>
-        <td class="member-parameter__description"><p>Optional rectangle to store the result of the bounds calculation.</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          skipChildrenUpdate
-        </td>
-        <td class="member-parameter__type">
-          boolean
-        </td>
-        <td class="member-parameter__attributes">
-          <p>&lt;optional&gt;</p>
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          false
-        </td>
-        <td class="member-parameter__description"><p>Setting to <code>true</code> will stop re-calculation of children transforms,
-it was default behaviour of pixi 4.0-5.2 and caused many problems to users.</p></td>
+        
+        <td class="member-parameter__description"><p>Optional output rectangle.</p></td>
       </tr>
     </tbody>
   </table>
@@ -2470,7 +2315,7 @@ it was default behaviour of pixi 4.0-5.2 and caused many problems to users.</p><
       <td class="member-return__type">
         <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>
       </td>
-      <td class="member-return__description"><p>The rectangular bounding area.</p></td>
+      <td class="member-return__description"><p>The bounds.</p></td>
     </tr>
   </tbody>
 </table>
@@ -3590,6 +3435,42 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
 
   
     
+<div class="member" id="updateText">
+  <h3 class="member__title">updateText</h3>
+  
+<pre class="signature__container"><code class="signature">updateText() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        void
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
 <div class="member" id="updateTransform">
   <h3 class="member__title">updateTransform</h3>
   
@@ -3639,9 +3520,44 @@ masking and filtering is applied extensively throughout the scene graph.</p></di
 <pre class="signature__container"><code class="signature">protected _calculateBounds() → {void}</code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Updates the bounds of the mesh as a rectangle. The bounds calculation takes the worldTransform into account.
-there must be a aVertexPosition attribute present in the geometry for bounds to be calculated correctly.</p></div>
+  <div class="member__brief"><p>Updates the bounds of the sprite.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        void
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="_onTextureUpdate">
+  <h3 class="member__title">_onTextureUpdate</h3>
+  
+<pre class="signature__container"><code class="signature">protected _onTextureUpdate() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>When the texture is updated, this event will fire to update the scale and frame</p></div>
+  <div class="member__description"></div>
 
   
 
@@ -3676,8 +3592,8 @@ there must be a aVertexPosition attribute present in the geometry for bounds to 
 <pre class="signature__container"><code class="signature">protected _render(renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Standard renderer draw.</p></div>
+  <div class="member__brief"><p>Renders the object using the WebGL renderer</p></div>
+  <div class="member__description"></div>
 
   
     
@@ -3703,139 +3619,7 @@ there must be a aVertexPosition attribute present in the geometry for bounds to 
         </td>
         
         
-        <td class="member-parameter__description"><p>Instance to renderer.</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<table class="member-returns">
-  <caption class="member-returns__caption">Returns:</caption>
-  <thead class="member-returns__head">
-    <tr class="member-returns-header">
-      <th class="member-returns-header__type">Type</th>
-      <th class="member-returns-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-returns__body">
-    <tr class="member-return">
-      <td class="member-return__type">
-        void
-      </td>
-      <td class="member-return__description"></td>
-    </tr>
-  </tbody>
-</table>
-
-  
-</div>
-
-  
-    
-<div class="member" id="_renderDefault">
-  <h3 class="member__title">_renderDefault</h3>
-  
-<pre class="signature__container"><code class="signature">protected _renderDefault(renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Standard non-batching way of rendering.</p></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          renderer
-        </td>
-        <td class="member-parameter__type">
-          <a href="PIXI.Renderer.html">PIXI.Renderer</a>
-        </td>
-        
-        
-        <td class="member-parameter__description"><p>Instance to renderer.</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<table class="member-returns">
-  <caption class="member-returns__caption">Returns:</caption>
-  <thead class="member-returns__head">
-    <tr class="member-returns-header">
-      <th class="member-returns-header__type">Type</th>
-      <th class="member-returns-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-returns__body">
-    <tr class="member-return">
-      <td class="member-return__type">
-        void
-      </td>
-      <td class="member-return__description"></td>
-    </tr>
-  </tbody>
-</table>
-
-  
-</div>
-
-  
-    
-<div class="member" id="_renderToBatch">
-  <h3 class="member__title">_renderToBatch</h3>
-  
-<pre class="signature__container"><code class="signature">protected _renderToBatch(renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Rendering by using the Batch system.</p></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          renderer
-        </td>
-        <td class="member-parameter__type">
-          <a href="PIXI.Renderer.html">PIXI.Renderer</a>
-        </td>
-        
-        
-        <td class="member-parameter__description"><p>Instance to renderer.</p></td>
+        <td class="member-parameter__description"><p>The webgl renderer to use.</p></td>
       </tr>
     </tbody>
   </table>
@@ -4011,125 +3795,109 @@ there must be a aVertexPosition attribute present in the geometry for bounds to 
   <h3 class="page-members-explorer-category__title">Public Properties</h3>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_accessibleActive">_accessibleActive</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_accessibleActive">_accessibleActive</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_accessibleDiv">_accessibleDiv</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_accessibleDiv">_accessibleDiv</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_bounds">_bounds</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_bounds">_bounds</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_localBounds">_localBounds</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_localBounds">_localBounds</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#accessible">accessible</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#accessible">accessible</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#accessibleChildren">accessibleChildren</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#accessibleChildren">accessibleChildren</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#accessibleHint">accessibleHint</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#accessibleHint">accessibleHint</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#accessiblePointerEvents">accessiblePointerEvents</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#accessiblePointerEvents">accessiblePointerEvents</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#accessibleTitle">accessibleTitle</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#accessibleTitle">accessibleTitle</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#accessibleType">accessibleType</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#accessibleType">accessibleType</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#alpha">alpha</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#alpha">alpha</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#angle">angle</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#anchor">anchor</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#autoUpdate">autoUpdate</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#angle">angle</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#blendMode">blendMode</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#blendMode">blendMode</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#buttonMode">buttonMode</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#buttonMode">buttonMode</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#cacheAsBitmap">cacheAsBitmap</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#cacheAsBitmap">cacheAsBitmap</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#children">children</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#children">children</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#cursor">cursor</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#cursor">cursor</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#drawMode">drawMode</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#filterArea">filterArea</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#filterArea">filterArea</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#filters">filters</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#filters">filters</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#height">height</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#geometry">geometry</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#hitArea">hitArea</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#height">height</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#interactive">interactive</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#hitArea">hitArea</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#interactiveChildren">interactiveChildren</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#interactive">interactive</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#isMask">isMask</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#interactiveChildren">interactiveChildren</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#isSprite">isSprite</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#isMask">isMask</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#localTransform">localTransform</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#isSprite">isSprite</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#mask">mask</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#localTransform">localTransform</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#name">name</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#mask">mask</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#parent">parent</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#material">material</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#pivot">pivot</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#name">name</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#pluginName">pluginName</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#parent">parent</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#position">position</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#pivot">pivot</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#renderable">renderable</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#position">position</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#rotation">rotation</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#renderable">renderable</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#roundPixels">roundPixels</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#rotation">rotation</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#scale">scale</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#roundPixels">roundPixels</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#skew">skew</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#scale">scale</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#smartMask">smartMask</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#shader">shader</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#sortableChildren">sortableChildren</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#size">size</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#sortDirty">sortDirty</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#skew">skew</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#texture">texture</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#smartMask">smartMask</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#tint">tint</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#sortableChildren">sortableChildren</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#transform">transform</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#sortDirty">sortDirty</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#visible">visible</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#start">start</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#width">width</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#state">state</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#worldAlpha">worldAlpha</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#texture">texture</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#worldTransform">worldTransform</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#tint">tint</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#worldVisible">worldVisible</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#transform">transform</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#x">x</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#uvBuffer">uvBuffer</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#y">y</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#verticesBuffer">verticesBuffer</a></li>
-    
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#visible">visible</a></li>
-    
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#width">width</a></li>
-    
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#worldAlpha">worldAlpha</a></li>
-    
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#worldTransform">worldTransform</a></li>
-    
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#worldVisible">worldVisible</a></li>
-    
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#x">x</a></li>
-    
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#y">y</a></li>
-    
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#zIndex">zIndex</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#zIndex">zIndex</a></li>
     
   </ul>
 </div>
@@ -4140,29 +3908,31 @@ there must be a aVertexPosition attribute present in the geometry for bounds to 
   <h3 class="page-members-explorer-category__title">Protected Properties</h3>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_boundsID">_boundsID</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_boundsID">_boundsID</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_boundsRect">_boundsRect</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_boundsRect">_boundsRect</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_cachedTexture">_cachedTexture</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_cachedTint">_cachedTint</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_cachedTint">_cachedTint</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_destroyed">_destroyed</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_destroyed">_destroyed</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_enabledFilters">_enabledFilters</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_enabledFilters">_enabledFilters</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_height">_height</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_lastSortedIndex">_lastSortedIndex</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_lastSortedIndex">_lastSortedIndex</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_localBoundsRect">_localBoundsRect</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_localBoundsRect">_localBoundsRect</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_mask">_mask</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_mask">_mask</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_tempDisplayObjectParent">_tempDisplayObjectParent</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_tempDisplayObjectParent">_tempDisplayObjectParent</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_tintedCanvas">_tintedCanvas</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_tintedCanvas">_tintedCanvas</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_zIndex">_zIndex</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_width">_width</a></li>
+    
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_zIndex">_zIndex</a></li>
     
   </ul>
 </div>
@@ -4173,69 +3943,73 @@ there must be a aVertexPosition attribute present in the geometry for bounds to 
   <h3 class="page-members-explorer-category__title">Public Methods</h3>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_recursivePostUpdateTransform">_recursivePostUpdateTransform</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_recursivePostUpdateTransform">_recursivePostUpdateTransform</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#addChild">addChild</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#addChild">addChild</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#addChildAt">addChildAt</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#addChildAt">addChildAt</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#calculateBounds">calculateBounds</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#calculateBounds">calculateBounds</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#calculateUvs">calculateUvs</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#calculateTrimmedVertices">calculateTrimmedVertices</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#calculateVertices">calculateVertices</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#calculateVertices">calculateVertices</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#containerUpdateTransform">containerUpdateTransform</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#clear">clear</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#containsPoint">containsPoint</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#containerUpdateTransform">containerUpdateTransform</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#destroy">destroy</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#containsPoint">containsPoint</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#disableTempParent">disableTempParent</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#destroy">destroy</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#displayObjectUpdateTransform">displayObjectUpdateTransform</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#disableTempParent">disableTempParent</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#enableTempParent">enableTempParent</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#displayObjectUpdateTransform">displayObjectUpdateTransform</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#getBounds">getBounds</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#enableTempParent">enableTempParent</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#getChildAt">getChildAt</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#getBounds">getBounds</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#getChildByName">getChildByName</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#getChildAt">getChildAt</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#getChildIndex">getChildIndex</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#getChildByName">getChildByName</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#getGlobalPosition">getGlobalPosition</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#getChildIndex">getChildIndex</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#getLocalBounds">getLocalBounds</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#getGlobalPosition">getGlobalPosition</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#removeChild">removeChild</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#getLocalBounds">getLocalBounds</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#removeChildAt">removeChildAt</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#removeChild">removeChild</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#removeChildren">removeChildren</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#removeChildAt">removeChildAt</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#render">render</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#removeChildren">removeChildren</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#renderCanvas">renderCanvas</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#render">render</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#renderWebGL">renderWebGL</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#renderCanvas">renderCanvas</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#setChildIndex">setChildIndex</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#renderWebGL">renderWebGL</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#setParent">setParent</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#setChildIndex">setChildIndex</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#setTransform">setTransform</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#setParent">setParent</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#sortChildren">sortChildren</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#setTransform">setTransform</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#swapChildren">swapChildren</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#sortChildren">sortChildren</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#toGlobal">toGlobal</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#swapChildren">swapChildren</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#toLocal">toLocal</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#toGlobal">toGlobal</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#updateTransform">updateTransform</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#toLocal">toLocal</a></li>
+    
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#updateText">updateText</a></li>
+    
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#updateTransform">updateTransform</a></li>
     
   </ul>
 </div>
@@ -4246,17 +4020,15 @@ there must be a aVertexPosition attribute present in the geometry for bounds to 
   <h3 class="page-members-explorer-category__title">Protected Methods</h3>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_calculateBounds">_calculateBounds</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_calculateBounds">_calculateBounds</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_render">_render</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_onTextureUpdate">_onTextureUpdate</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_renderDefault">_renderDefault</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#_render">_render</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#_renderToBatch">_renderToBatch</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#onChildrenChange">onChildrenChange</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#onChildrenChange">onChildrenChange</a></li>
-    
-      <li class="page-members-explorer__item"><a href="PIXI.SimpleRope.html#renderAdvanced">renderAdvanced</a></li>
+      <li class="page-members-explorer__item"><a href="SVGTextEngineImpl.html#renderAdvanced">renderAdvanced</a></li>
     
   </ul>
 </div>

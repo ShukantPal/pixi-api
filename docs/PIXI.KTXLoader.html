@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>webdoc: ScissorSystem</title>
+    <title>webdoc: KTXLoader</title>
 
     <link type="text/css" rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
@@ -23,96 +23,33 @@
         
 <div class="page-content">
   <div class="document">
-    <div class="document__package">@pixi/core</div>
-    <h1 class="document__title">PIXI.ScissorSystem</h1>
+    <div class="document__package">@pixi/compressed-textures</div>
+    <h1 class="document__title">PIXI.KTXLoader</h1>
     
-<pre class="signature__container"><code class="signature">class ScissorSystem extends <a href="PIXI.System.html">PIXI.System</a></code></pre>
+<pre class="signature__container"><code class="signature">class KTXLoader
+implements <a href="PIXI.ILoaderPlugin.html">PIXI.ILoaderPlugin</a></code></pre>
 
 
-    <div class="document__brief"><p>System plugin to the renderer to manage scissor masking.</p></div>
-    <div class="document__description"><p>Scissor masking discards pixels outside of a rectangle called the scissor box. The scissor box is in the framebuffer
-viewport's space; however, the mask's rectangle is projected from world-space to viewport space automatically
-by this system.</p></div>
+    <div class="document__brief"><p>Loader plugin for handling KTX texture container files.</p></div>
+    <div class="document__description"><p>This KTX loader does not currently support the following features:</p>
+<ul>
+<li>cube textures</li>
+<li>3D textures</li>
+<li>vendor-specific key/value data parsing</li>
+<li>endianness conversion for big-endian machines</li>
+<li>embedded *.basis files</li>
+</ul>
+<p>It does supports the following features:</p>
+<ul>
+<li>multiple textures per file</li>
+<li>mipmapping</li>
+</ul></div>
 
     
       
-<div class="members">
-  <h2 class="members__category">Constructor</h2>
-
-  
-    
-<div class="member" id="constructor">
-  <h3 class="member__title"></h3>
-  
-<pre class="signature__container"><code class="signature">new PIXI.ScissorSystem(renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a>)</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          renderer
-        </td>
-        <td class="member-parameter__type">
-          <a href="PIXI.Renderer.html">PIXI.Renderer</a>
-        </td>
-        
-        
-        <td class="member-parameter__description"><p>The renderer this System works for.</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-</div>
-
-  
-</div>
-
     
 
     
-<div class="members">
-  <h2 class="members__category">Public Properties</h2>
-
-  
-    
-<div class="member" id="renderer">
-  <h3 class="member__title">renderer</h3>
-  
-<pre class="signature__container"><code class="signature">renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a></code></pre>
-
-
-  <div class="member__brief"><p>The renderer this manager works for.</p></div>
-  <div class="member__description"></div>
-
-  
-
-  
-</div>
-
-  
-</div>
-
     
     
 <div class="members">
@@ -120,88 +57,15 @@ by this system.</p></div>
 
   
     
-<div class="member" id="destroy">
-  <h3 class="member__title">destroy</h3>
+<div class="member" id="parse">
+  <h3 class="member__title">parse</h3>
   
-<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
-
-
-  <div class="member__brief"><p>Generic destroy methods to be overridden by the subclass</p></div>
-  <div class="member__description"></div>
-
-  
-
-  
-    
-<table class="member-returns">
-  <caption class="member-returns__caption">Returns:</caption>
-  <thead class="member-returns__head">
-    <tr class="member-returns-header">
-      <th class="member-returns-header__type">Type</th>
-      <th class="member-returns-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-returns__body">
-    <tr class="member-return">
-      <td class="member-return__type">
-        void
-      </td>
-      <td class="member-return__description"></td>
-    </tr>
-  </tbody>
-</table>
-
-  
-</div>
-
-  
-    
-<div class="member" id="pop">
-  <h3 class="member__title">pop</h3>
-  
-<pre class="signature__container"><code class="signature">pop() → {void}</code></pre>
+<pre class="signature__container"><code class="signature">static parse(url: string, arrayBuffer: ArrayBuffer) → {void}</code></pre>
 
 
   <div class="member__brief"></div>
-  <div class="member__description"><p>This should be called after a mask is popped off the mask stack. It will rebind the scissor box to be latest with the
-last mask in the stack.</p>
-<p>This can also be called when you directly modify the scissor box and want to restore PixiJS state.</p></div>
-
-  
-
-  
-    
-<table class="member-returns">
-  <caption class="member-returns__caption">Returns:</caption>
-  <thead class="member-returns__head">
-    <tr class="member-returns-header">
-      <th class="member-returns-header__type">Type</th>
-      <th class="member-returns-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-returns__body">
-    <tr class="member-return">
-      <td class="member-return__type">
-        void
-      </td>
-      <td class="member-return__description"></td>
-    </tr>
-  </tbody>
-</table>
-
-  
-</div>
-
-  
-    
-<div class="member" id="push">
-  <h3 class="member__title">push</h3>
-  
-<pre class="signature__container"><code class="signature">push(maskData: <a href="PIXI.MaskData.html">PIXI.MaskData</a>) → {void}</code></pre>
-
-
-  <div class="member__brief"><p>Applies the Mask and adds it to the current stencil stack.</p></div>
-  <div class="member__description"></div>
+  <div class="member__description"><p>Parses the KTX file header, generates base-textures, and puts them into the texture
+cache.</p></div>
 
   
     
@@ -220,14 +84,24 @@ last mask in the stack.</p>
     <tbody class="member-parameters__body">
       <tr class="member-parameter">
         <td class="member-parameter__name">
-          maskData
+          url
         </td>
         <td class="member-parameter__type">
-          <a href="PIXI.MaskData.html">PIXI.MaskData</a>
+          string
         </td>
         
         
-        <td class="member-parameter__description"><p>The mask data</p></td>
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          arrayBuffer
+        </td>
+        <td class="member-parameter__type">
+          ArrayBuffer
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
       </tr>
     </tbody>
   </table>
@@ -249,6 +123,159 @@ last mask in the stack.</p>
     <tr class="member-return">
       <td class="member-return__type">
         void
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="use">
+  <h3 class="member__title">use</h3>
+  
+<pre class="signature__container"><code class="signature">static use(resource: <a href="PIXI.LoaderResource.html">PIXI.LoaderResource</a>, next: Function) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Called after a KTX file is loaded.</p></div>
+  <div class="member__description"><p>This will parse the KTX file header and add a {@code BaseTexture} to the texture
+cache.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          resource
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.LoaderResource.html">PIXI.LoaderResource</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          next
+        </td>
+        <td class="member-parameter__type">
+          Function
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        void
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="validate">
+  <h3 class="member__title">validate</h3>
+  
+<pre class="signature__container"><code class="signature">static validate(url: string, dataView: DataView) → {boolean}</code></pre>
+
+
+  <div class="member__brief"><p>Checks whether the arrayBuffer contains a valid *.ktx file.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          url
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          dataView
+        </td>
+        <td class="member-parameter__type">
+          DataView
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        boolean
       </td>
       <td class="member-return__description"></td>
     </tr>
@@ -267,16 +294,6 @@ last mask in the stack.</p>
 
 <nav class="page-members-explorer">
   
-
-<div class="page-members-explorer-category">
-  <h3 class="page-members-explorer-category__title">Public Properties</h3>
-  <ul class="page-members-explorer-category__items">
-    
-      <li class="page-members-explorer__item"><a href="PIXI.ScissorSystem.html#renderer">renderer</a></li>
-    
-  </ul>
-</div>
-
   
   
 
@@ -284,11 +301,11 @@ last mask in the stack.</p>
   <h3 class="page-members-explorer-category__title">Public Methods</h3>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="PIXI.ScissorSystem.html#destroy">destroy</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.KTXLoader.html#parse">parse</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.ScissorSystem.html#pop">pop</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.KTXLoader.html#use">use</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.ScissorSystem.html#push">push</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.KTXLoader.html#validate">validate</a></li>
     
   </ul>
 </div>

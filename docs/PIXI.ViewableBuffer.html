@@ -29,9 +29,8 @@
 <pre class="signature__container"><code class="signature">class ViewableBuffer</code></pre>
 
 
-    <div class="document__brief"></div>
-    <div class="document__description"><p>Flexible wrapper around <code>ArrayBuffer</code> that also provides
-typed array views on demand.</p></div>
+    <div class="document__brief"><p>Flexible wrapper around <code>ArrayBuffer</code> that also provides typed array views on demand.</p></div>
+    <div class="document__description"></div>
 
     
       
@@ -43,7 +42,7 @@ typed array views on demand.</p></div>
 <div class="member" id="constructor">
   <h3 class="member__title"></h3>
   
-<pre class="signature__container"><code class="signature">new PIXI.ViewableBuffer(size: number)</code></pre>
+<pre class="signature__container"><code class="signature">new PIXI.ViewableBuffer(length: number)</code></pre>
 
 
   <div class="member__brief"></div>
@@ -66,7 +65,7 @@ typed array views on demand.</p></div>
     <tbody class="member-parameters__body">
       <tr class="member-parameter">
         <td class="member-parameter__name">
-          size
+          length
         </td>
         <td class="member-parameter__type">
           number
@@ -74,6 +73,52 @@ typed array views on demand.</p></div>
         
         
         <td class="member-parameter__description"><p>The size of the buffer in bytes.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="constructor">
+  <h3 class="member__title"></h3>
+  
+<pre class="signature__container"><code class="signature">new PIXI.ViewableBuffer(arrayBuffer: ArrayBuffer)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          arrayBuffer
+        </td>
+        <td class="member-parameter__type">
+          ArrayBuffer
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The source array buffer.</p></td>
       </tr>
     </tbody>
   </table>
@@ -165,9 +210,8 @@ typed array views on demand.</p></div>
 <pre class="signature__container"><code class="signature">rawBinaryData: ArrayBuffer</code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Underlying <code>ArrayBuffer</code> that holds all the data
-and is of capacity <code>size</code>.</p></div>
+  <div class="member__brief"><p>Underlying <code>ArrayBuffer</code> that holds all the data and is of capacity <code>this.size</code>.</p></div>
+  <div class="member__description"></div>
 
   
 

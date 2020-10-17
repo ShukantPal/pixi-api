@@ -1,0 +1,530 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: CompressedTextureResource</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi/compressed-textures</div>
+    <h1 class="document__title">PIXI.CompressedTextureResource</h1>
+    
+<pre class="signature__container"><code class="signature">class CompressedTextureResource extends <a href="PIXI.resources.BlobResource.html">PIXI.resources.BlobResource</a></code></pre>
+
+
+    <div class="document__brief"><p>Resource for compressed texture formats, as follows: S3TC/DXTn (&amp; their sRGB formats), ATC, ASTC, ETC 1/2, PVRTC.</p></div>
+    <div class="document__description"><p>Compressed textures improve performance when rendering is texture-bound. The texture data stays compressed in
+graphics memory, increasing memory locality and speeding up texture fetches. These formats can also be used to store
+more detail in the same amount of memory.</p>
+<p>For most developers, container file formats are a better abstraction instead of directly handling raw texture
+data. PixiJS provides native support for the following texture file formats (via <a href="PIXI.Loader.html">PIXI.Loader</a>):</p>
+<ul>
+<li><strong>.dds</strong> - the DirectDraw Surface file format stores DXTn (DXT-1,3,5) data. See <a href="PIXI.DDSLoader.html">PIXI.DDSLoader</a></li>
+<li><strong>.ktx</strong> - the Khronos Texture Container file format supports storing all the supported WebGL compression formats.
+See <a href="PIXI.KTXLoader.html">PIXI.KTXLoader</a>.</li>
+<li><strong>.basis</strong> - the BASIS supercompressed file format stores texture data in an internal format that is transcoded
+to the compression format supported on the device at <em>runtime</em>. It also supports transcoding into a uncompressed
+format as a fallback; you must install the <code>@pixi/basis-loader</code>, <code>@pixi/basis-transcoder</code> packages separately to
+use these files. See <a href="PIXI.BasisLoader.html">PIXI.BasisLoader</a>.</li>
+</ul>
+<p>The loaders for the aforementioned formats use <code>CompressedTextureResource</code> internally. It is strongly suggested that
+they be used instead.</p>
+<h2>Working directly with CompressedTextureResource</h2>
+<p>Since <code>CompressedTextureResource</code> inherits <code>BlobResource</code>, you can provide it a URL pointing to a file containing
+the raw texture data (with no file headers!):</p>
+<pre><code class="hljs language-js"><span class="hljs-comment">// The resource backing the texture data for your textures.</span>
+<span class="hljs-comment">// <span class="hljs-doctag">NOTE:</span> You can also provide a ArrayBufferView instead of a URL. This is used when loading data from a container file</span>
+<span class="hljs-comment">//   format such as KTX, DDS, or BASIS.</span>
+<span class="hljs-keyword">const</span> compressedResource = <span class="hljs-keyword">new</span> PIXI.CompressedTextureResource(<span class="hljs-string">"bunny.dxt5"</span>, {
+  <span class="hljs-attr">format</span>: PIXI.INTERNAL_FORMATS.COMPRESSED_RGBA_S3TC_DXT5_EXT,
+  <span class="hljs-attr">width</span>: <span class="hljs-number">256</span>,
+  <span class="hljs-attr">height</span>: <span class="hljs-number">256</span>
+});
+
+<span class="hljs-comment">// You can create a base-texture to the cache, so that future `Texture`s can be created using the `Texture.from` API.</span>
+<span class="hljs-keyword">const</span> baseTexture = <span class="hljs-keyword">new</span> PIXI.BaseTexture(compressedResource, { <span class="hljs-attr">pmaMode</span>: PIXI.ALPHA_MODES.NPM });
+
+<span class="hljs-comment">// Create a Texture to add to the TextureCache</span>
+<span class="hljs-keyword">const</span> texture = <span class="hljs-keyword">new</span> PIXI.Texture(baseTexture);
+
+<span class="hljs-comment">// Add baseTexture &amp; texture to the global texture cache</span>
+PIXI.BaseTexture.addToCache(baseTexture, <span class="hljs-string">"bunny.dxt5"</span>);
+PIXI.Texture.addToCache(texture, <span class="hljs-string">"bunny.dxt5"</span>);
+</code></pre></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+
+  
+    
+<div class="member" id="constructor">
+  <h3 class="member__title"></h3>
+  
+<pre class="signature__container"><code class="signature">new PIXI.CompressedTextureResource(source: string | Uint8Array | Uint32Array, options: ICompressedTextureResourceOptions)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          source
+        </td>
+        <td class="member-parameter__type">
+          string | Uint8Array | Uint32Array
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>the buffer/URL holding the compressed texture data</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          ICompressedTextureResourceOptions
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.format
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.INTERNAL_FORMATS.html">PIXI.INTERNAL_FORMATS</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>the compression format</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.width
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>the image width in pixels.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.height
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>the image height in pixels.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.level
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>the mipmap levels stored in the compressed texture, including level 0.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.levelBuffers
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>the buffers for each mipmap level. <code>CompressedTextureResource</code> can allows you
+to pass <code>null</code> for <code>source</code>, for cases where each level is stored in non-contiguous memory.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="buffer">
+  <h3 class="member__title">buffer</h3>
+  
+<pre class="signature__container"><code class="signature">buffer: ViewableBuffer</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The viewable buffer on the data</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="format">
+  <h3 class="member__title">format</h3>
+  
+<pre class="signature__container"><code class="signature">format</code></pre>
+
+
+  <div class="member__brief"><p>The compression format</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="levels">
+  <h3 class="member__title">levels</h3>
+  
+<pre class="signature__container"><code class="signature">levels</code></pre>
+
+
+  <div class="member__brief"><p>The number of mipmap levels stored in the resource buffer.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="origin">
+  <h3 class="member__title">origin</h3>
+  
+<pre class="signature__container"><code class="signature">origin: string</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The URL of the texture file</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="load">
+  <h3 class="member__title">load</h3>
+  
+<pre class="signature__container"><code class="signature">load() → {Promise}</code></pre>
+
+
+  <div class="member__brief"><p>Loads the blob</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        Promise
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="upload">
+  <h3 class="member__title">upload</h3>
+  
+<pre class="signature__container"><code class="signature">upload(renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a>, _texture: <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a>, _glTexture: <a href="PIXI.GLTexture.html">PIXI.GLTexture</a>) → {boolean}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          _texture
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          _glTexture
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.GLTexture.html">PIXI.GLTexture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        boolean
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Methods</h2>
+
+  
+    
+<div class="member" id="onBlobLoaded">
+  <h3 class="member__title">onBlobLoaded</h3>
+  
+<pre class="signature__container"><code class="signature">protected onBlobLoaded() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        void
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+</div>
+
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.CompressedTextureResource.html#buffer">buffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.CompressedTextureResource.html#format">format</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.CompressedTextureResource.html#levels">levels</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.CompressedTextureResource.html#origin">origin</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.CompressedTextureResource.html#load">load</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.CompressedTextureResource.html#upload">upload</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Protected Methods</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.CompressedTextureResource.html#onBlobLoaded">onBlobLoaded</a></li>
+    
+  </ul>
+</div>
+
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>webdoc: uint</title>
+    <title>webdoc: vec4</title>
 
     <link type="text/css" rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
@@ -24,9 +24,9 @@
 <div class="page-content">
   <div class="document">
     <div class="document__package">@pixi/unsafe-eval</div>
-    <h1 class="document__title">uint</h1>
+    <h1 class="document__title">vec4</h1>
     
-<pre class="signature__container"><code class="signature">uint(gl: <a href="IRenderingContext.html">IRenderingContext</a>, location: WebGLUniformLocation, _cv: any, value: Uint32List) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">vec4(gl: <a href="IRenderingContext.html">IRenderingContext</a>, location: WebGLUniformLocation, _cv: any, value: Float32List) → {void}</code></pre>
 
 
     <div class="document__brief"></div>
@@ -56,39 +56,23 @@
     </body>
   </div>
 </html>
-
-
-
+>
   </div>
 </html>
 "> </script>
     </body>
   </div>
 </html>
+description"></div>
 
-    
-    
-    
-    
-  </div>
-</div>
-
-<nav class="page-members-explorer">
   
-  
-  
-  
-</nav>
-
-
-
-      </article>
-      <footer class="footer" id="footer-mount-point"></footer>
-      <script src="scripts/linenumber.js"> </script>
-    </body>
-  </div>
-</html>
-<th class="member-parameter-header__name">Name</th>
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
         <th class="member-parameter-header__type">Type</th>
         
         
@@ -206,7 +190,22 @@
     </body>
   </div>
 </html>
-/td>
+lass="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"></td>
       </tr><tr class="member-parameter">
         <td class="member-parameter__name">
           options.group
@@ -862,6 +861,22 @@ depending on this type. Defaults to button.</p></div>
 
   
     
+<div class="member" id="boxRotationTolerance">
+  <h3 class="member__title">boxRotationTolerance</h3>
+  
+<pre class="signature__container"><code class="signature">boxRotationTolerance</code></pre>
+
+
+  <div class="member__brief"><p>The thickness of the box rotation area</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
 <div class="member" id="boxScalingTolerance">
   <h3 class="member__title">boxScalingTolerance</h3>
   
@@ -1082,13 +1097,13 @@ To remove filters simply set this property to <code>'null'</code>.</li>
 
   
     
-<div class="member" id="handles">
-  <h3 class="member__title">handles</h3>
+<div class="member" id="handleAnchors">
+  <h3 class="member__title">handleAnchors</h3>
   
-<pre class="signature__container"><code class="signature">handles</code></pre>
+<pre class="signature__container"><code class="signature">handleAnchors</code></pre>
 
 
-  <div class="member__brief"><p>Object mapping handle-names to the handle display-objects.</p></div>
+  <div class="member__brief"><p>Positions of the various handles</p></div>
   <div class="member__description"></div>
 
   
@@ -2184,6 +2199,22 @@ A higher value will mean it will be rendered on top of other displayObjects with
 </div>
 
   
+    
+<div class="member" id="handles">
+  <h3 class="member__title">handles</h3>
+  
+<pre class="signature__container"><code class="signature">protected handles</code></pre>
+
+
+  <div class="member__brief"><p>Object mapping handle-names to the handle display-objects.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
 </div>
 
     
@@ -2951,139 +2982,6 @@ Will crash if there's no parent element.</p></div>
 
   <div class="member__brief"><p>Recalculates the transformer's geometry. This is called on each render.</p></div>
   <div class="member__description"></div>
-
-  
-
-  
-    
-<table class="member-returns">
-  <caption class="member-returns__caption">Returns:</caption>
-  <thead class="member-returns__head">
-    <tr class="member-returns-header">
-      <th class="member-returns-header__type">Type</th>
-      <th class="member-returns-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-returns__body">
-    <tr class="member-return">
-      <td class="member-return__type">
-        void
-      </td>
-      <td class="member-return__description"></td>
-    </tr>
-  </tbody>
-</table>
-
-  
-</div>
-
-  
-    
-<div class="member" id="drawBounds">
-  <h3 class="member__title">drawBounds</h3>
-  
-<pre class="signature__container"><code class="signature">drawBounds(bounds: <a href="OrientedBounds.html">OrientedBounds</a> | <a href="PIXI.AxisAlignedBounds.html">PIXI.AxisAlignedBounds</a>) → {void}</code></pre>
-
-
-  <div class="member__brief"><p>Draws the bounding box into {@code this.wireframe}.</p></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          bounds
-        </td>
-        <td class="member-parameter__type">
-          <a href="OrientedBounds.html">OrientedBounds</a> | <a href="PIXI.AxisAlignedBounds.html">PIXI.AxisAlignedBounds</a>
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<table class="member-returns">
-  <caption class="member-returns__caption">Returns:</caption>
-  <thead class="member-returns__head">
-    <tr class="member-returns-header">
-      <th class="member-returns-header__type">Type</th>
-      <th class="member-returns-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-returns__body">
-    <tr class="member-return">
-      <td class="member-return__type">
-        void
-      </td>
-      <td class="member-return__description"></td>
-    </tr>
-  </tbody>
-</table>
-
-  
-</div>
-
-  
-    
-<div class="member" id="drawBoxScalingTolerance">
-  <h3 class="member__title">drawBoxScalingTolerance</h3>
-  
-<pre class="signature__container"><code class="signature">drawBoxScalingTolerance(bounds: <a href="OrientedBounds.html">OrientedBounds</a>) → {void}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Draws around edges of the bounding box to capture pointer events within
-Transformer#boxScalingTolerance.</p></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          bounds
-        </td>
-        <td class="member-parameter__type">
-          <a href="OrientedBounds.html">OrientedBounds</a>
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
 
   
 
@@ -4054,6 +3952,91 @@ it was default behaviour of pixi 4.0-5.2 and caused many problems to users.</p><
         void
       </td>
       <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="projectToLocal">
+  <h3 class="member__title">projectToLocal</h3>
+  
+<pre class="signature__container"><code class="signature">projectToLocal(input: <a href="PIXI.Point.html">PIXI.Point</a>, output: <a href="PIXI.Point.html">PIXI.Point</a>) → {<a href="PIXI.Point.html">PIXI.Point</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Projects {@code input} from the group's world space into the transformer's local space, and puts the result
+into {@code output}.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          input
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          output
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        <a href="PIXI.Point.html">PIXI.Point</a>
+      </td>
+      <td class="member-return__description"><p>the output</p></td>
     </tr>
   </tbody>
 </table>
@@ -5335,83 +5318,6 @@ it was default behaviour of pixi 4.0-5.2 and caused many problems to users.</p><
 
   
     
-<div class="member" id="toTransformerLocal">
-  <h3 class="member__title">toTransformerLocal</h3>
-  
-<pre class="signature__container"><code class="signature">toTransformerLocal(input: <a href="PIXI.Point.html">PIXI.Point</a>, output: <a href="PIXI.Point.html">PIXI.Point</a>) → {<a href="PIXI.Point.html">PIXI.Point</a>}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Transforms {@code input} from the group's world space into the transformer's local space, and puts the result
-into {@code output}.</p></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          input
-        </td>
-        <td class="member-parameter__type">
-          <a href="PIXI.Point.html">PIXI.Point</a>
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          output
-        </td>
-        <td class="member-parameter__type">
-          <a href="PIXI.Point.html">PIXI.Point</a>
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<table class="member-returns">
-  <caption class="member-returns__caption">Returns:</caption>
-  <thead class="member-returns__head">
-    <tr class="member-returns-header">
-      <th class="member-returns-header__type">Type</th>
-      <th class="member-returns-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-returns__body">
-    <tr class="member-return">
-      <td class="member-return__type">
-        <a href="PIXI.Point.html">PIXI.Point</a>
-      </td>
-      <td class="member-return__description"><p>the output</p></td>
-    </tr>
-  </tbody>
-</table>
-
-  
-</div>
-
-  
-    
 <div class="member" id="updateGroupBounds">
   <h3 class="member__title">updateGroupBounds</h3>
   
@@ -5865,6 +5771,8 @@ calculate the bounds of this specific object (not including children).</p></div>
     
       <li class="page-members-explorer__item"><a href="Transformer.html#angle">angle</a></li>
     
+      <li class="page-members-explorer__item"><a href="Transformer.html#boxRotationTolerance">boxRotationTolerance</a></li>
+    
       <li class="page-members-explorer__item"><a href="Transformer.html#boxScalingTolerance">boxScalingTolerance</a></li>
     
       <li class="page-members-explorer__item"><a href="Transformer.html#buttonMode">buttonMode</a></li>
@@ -5887,7 +5795,7 @@ calculate the bounds of this specific object (not including children).</p></div>
     
       <li class="page-members-explorer__item"><a href="Transformer.html#group">group</a></li>
     
-      <li class="page-members-explorer__item"><a href="Transformer.html#handles">handles</a></li>
+      <li class="page-members-explorer__item"><a href="Transformer.html#handleAnchors">handleAnchors</a></li>
     
       <li class="page-members-explorer__item"><a href="Transformer.html#handleStyle">handleStyle</a></li>
     
@@ -6010,6 +5918,8 @@ calculate the bounds of this specific object (not including children).</p></div>
     
       <li class="page-members-explorer__item"><a href="Transformer.html#_zIndex">_zIndex</a></li>
     
+      <li class="page-members-explorer__item"><a href="Transformer.html#handles">handles</a></li>
+    
   </ul>
 </div>
 
@@ -6043,10 +5953,6 @@ calculate the bounds of this specific object (not including children).</p></div>
     
       <li class="page-members-explorer__item"><a href="Transformer.html#draw">draw</a></li>
     
-      <li class="page-members-explorer__item"><a href="Transformer.html#drawBounds">drawBounds</a></li>
-    
-      <li class="page-members-explorer__item"><a href="Transformer.html#drawBoxScalingTolerance">drawBoxScalingTolerance</a></li>
-    
       <li class="page-members-explorer__item"><a href="Transformer.html#drawHandles">drawHandles</a></li>
     
       <li class="page-members-explorer__item"><a href="Transformer.html#enableTempParent">enableTempParent</a></li>
@@ -6072,6 +5978,8 @@ calculate the bounds of this specific object (not including children).</p></div>
       <li class="page-members-explorer__item"><a href="Transformer.html#onPointerUp">onPointerUp</a></li>
     
       <li class="page-members-explorer__item"><a href="Transformer.html#prependTransform">prependTransform</a></li>
+    
+      <li class="page-members-explorer__item"><a href="Transformer.html#projectToLocal">projectToLocal</a></li>
     
       <li class="page-members-explorer__item"><a href="Transformer.html#removeChild">removeChild</a></li>
     
@@ -6102,8 +6010,6 @@ calculate the bounds of this specific object (not including children).</p></div>
       <li class="page-members-explorer__item"><a href="Transformer.html#toGlobal">toGlobal</a></li>
     
       <li class="page-members-explorer__item"><a href="Transformer.html#toLocal">toLocal</a></li>
-    
-      <li class="page-members-explorer__item"><a href="Transformer.html#toTransformerLocal">toTransformerLocal</a></li>
     
       <li class="page-members-explorer__item"><a href="Transformer.html#updateGroupBounds">updateGroupBounds</a></li>
     

@@ -177,8 +177,8 @@ coordinate spaces used:</p>
 <pre class="signature__container"><code class="signature">destinationFrame: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a></code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Destination frame</p></div>
+  <div class="member__brief"><p>The destination frame for the render-target's projection mapping.</p></div>
+  <div class="member__description"><p>See PIXI.Projection#destinationFrame for more details.</p></div>
 
   
 
@@ -209,8 +209,26 @@ coordinate spaces used:</p>
 <pre class="signature__container"><code class="signature">sourceFrame: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a></code></pre>
 
 
+  <div class="member__brief"><p>The source frame for the render-target's projection mapping.</p></div>
+  <div class="member__description"><p>See PIXI.ProjectionSystem#sourceFrame for more details.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="viewportFrame">
+  <h3 class="member__title">viewportFrame</h3>
+  
+<pre class="signature__container"><code class="signature">viewportFrame: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a></code></pre>
+
+
   <div class="member__brief"></div>
-  <div class="member__description"><p>Source frame</p></div>
+  <div class="member__description"><p>The viewport frame for the render-target's viewport binding. This is equal to the destination-frame
+for render-textures, while it is y-flipped when rendering to the screen (i.e. its origin is always on
+the bottom-left).</p></div>
 
   
 
@@ -509,6 +527,8 @@ that indicate the buffers to be cleared, by default COLOR and DEPTH buffers.</p>
       <li class="page-members-explorer__item"><a href="PIXI.RenderTextureSystem.html#renderer">renderer</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.RenderTextureSystem.html#sourceFrame">sourceFrame</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.RenderTextureSystem.html#viewportFrame">viewportFrame</a></li>
     
   </ul>
 </div>

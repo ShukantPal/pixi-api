@@ -30,12 +30,19 @@
 
 
     <div class="document__brief"></div>
-    <div class="document__description"><p>The Graphics class contains methods used to draw primitive shapes such as lines, circles and
-rectangles to the display, and to color and fill them.</p>
-<p>Note that because Graphics can share a GraphicsGeometry with other instances,
-it is necessary to call <code>destroy()</code> to properly dereference the underlying
-GraphicsGeometry and avoid a memory leak. Alternatively, keep using the same
-Graphics instance and call <code>clear()</code> between redraws.</p></div>
+    <div class="document__description"><p>The Graphics class is primarily used to render primitive shapes such as lines, circles and
+rectangles to the display, and to color and fill them.  However, you can also use a Graphics
+object to build a list of primitives to use as a mask, or as a complex hitArea.</p>
+<p>Please note that due to legacy naming conventions, the behavior of some functions in this class
+can be confusing.  Each call to <code>drawRect()</code>, <code>drawPolygon()</code>, etc. actually stores that primitive
+in the Geometry class's GraphicsGeometry object for later use in rendering or hit testing - the
+functions do not directly draw anything to the screen.  Similarly, the <code>clear()</code> function doesn't
+change the screen, it simply resets the list of primitives, which can be useful if you want to
+rebuild the contents of an existing Graphics object.</p>
+<p>Once a GraphicsGeometry list is built, you can re-use it in other Geometry objects as
+an optimization, by passing it into a new Geometry object's constructor.  Because of this
+ability, it's important to call <code>destroy()</code> on Geometry objects once you are done with them, to
+properly dereference each GraphicsGeometry and prevent memory leaks.</p></div>
 
     
       
@@ -328,7 +335,10 @@ depending on this type. Defaults to button.</p></div>
 
   <div class="member__brief"></div>
   <div class="member__description"><p>The blend mode to be applied to the graphic shape. Apply a value of
-<code>PIXI.BLEND_MODES.NORMAL</code> to reset the blend mode.</p></div>
+<code>PIXI.BLEND_MODES.NORMAL</code> to reset the blend mode.  Note that, since each
+primitive in the GraphicsGeometry list is rendered sequentially, modes
+such as <code>PIXI.BLEND_MODES.ADD</code> and <code>PIXI.BLEND_MODES.MULTIPLY</code> will
+be applied per-primitive.</p></div>
 
   
 
@@ -905,7 +915,7 @@ blend mode, culling, depth testing, direction of rendering triangles, backface, 
 
 
   <div class="member__brief"></div>
-  <div class="member__description"><p>The tint applied to the graphic shape. This is a hex value. A value of
+  <div class="member__description"><p>The tint applied to each graphic shape. This is a hex value. A value of
 0xFFFFFF will remove any tint effect.</p></div>
 
   

@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: InheritedPaintProvider</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <header class="header" id="header-mount-point"></header>
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        
+        
+<div class="page-content">
+  <div class="document">
+    <div class="document__package">@pixi-essentials/svg</div>
+    <h1 class="document__title">InheritedPaintProvider</h1>
+    
+<pre class="signature__container"><code class="signature">class InheritedPaintProvider
+implements <a href="Paint.html">Paint</a></code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>Inherited paint, used for &lt;use /&gt; elements. The properties used on the inherited paint do not
+override those on the parent.</p></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+
+  
+    
+<div class="member" id="constructor">
+  <h3 class="member__title"></h3>
+  
+<pre class="signature__container"><code class="signature">new InheritedPaintProvider(parent: <a href="Paint.html">Paint</a>, provider: <a href="Paint.html">Paint</a>)</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Composes a <code>Paint</code> that will inherit properties from the <code>parent</code> if the <code>provider</code> does not
+define them.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          parent
+        </td>
+        <td class="member-parameter__type">
+          <a href="Paint.html">Paint</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          provider
+        </td>
+        <td class="member-parameter__type">
+          <a href="Paint.html">Paint</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+
+  
+    
+<div class="member" id="dirtyId">
+  <h3 class="member__title">dirtyId</h3>
+  
+<pre class="signature__container"><code class="signature">dirtyId</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="fill">
+  <h3 class="member__title">fill</h3>
+  
+<pre class="signature__container"><code class="signature">fill</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="opacity">
+  <h3 class="member__title">opacity</h3>
+  
+<pre class="signature__container"><code class="signature">opacity</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="stroke">
+  <h3 class="member__title">stroke</h3>
+  
+<pre class="signature__container"><code class="signature">stroke</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="strokeDashArray">
+  <h3 class="member__title">strokeDashArray</h3>
+  
+<pre class="signature__container"><code class="signature">strokeDashArray</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="strokeDashOffset">
+  <h3 class="member__title">strokeDashOffset</h3>
+  
+<pre class="signature__container"><code class="signature">strokeDashOffset</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="strokeLineCap">
+  <h3 class="member__title">strokeLineCap</h3>
+  
+<pre class="signature__container"><code class="signature">strokeLineCap</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="strokeLineJoin">
+  <h3 class="member__title">strokeLineJoin</h3>
+  
+<pre class="signature__container"><code class="signature">strokeLineJoin</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="strokeMiterLimit">
+  <h3 class="member__title">strokeMiterLimit</h3>
+  
+<pre class="signature__container"><code class="signature">strokeMiterLimit</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="strokeWidth">
+  <h3 class="member__title">strokeWidth</h3>
+  
+<pre class="signature__container"><code class="signature">strokeWidth</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+    
+  </div>
+</div>
+
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <h3 class="page-members-explorer-category__title">Public Properties</h3>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="InheritedPaintProvider.html#dirtyId">dirtyId</a></li>
+    
+      <li class="page-members-explorer__item"><a href="InheritedPaintProvider.html#fill">fill</a></li>
+    
+      <li class="page-members-explorer__item"><a href="InheritedPaintProvider.html#opacity">opacity</a></li>
+    
+      <li class="page-members-explorer__item"><a href="InheritedPaintProvider.html#stroke">stroke</a></li>
+    
+      <li class="page-members-explorer__item"><a href="InheritedPaintProvider.html#strokeDashArray">strokeDashArray</a></li>
+    
+      <li class="page-members-explorer__item"><a href="InheritedPaintProvider.html#strokeDashOffset">strokeDashOffset</a></li>
+    
+      <li class="page-members-explorer__item"><a href="InheritedPaintProvider.html#strokeLineCap">strokeLineCap</a></li>
+    
+      <li class="page-members-explorer__item"><a href="InheritedPaintProvider.html#strokeLineJoin">strokeLineJoin</a></li>
+    
+      <li class="page-members-explorer__item"><a href="InheritedPaintProvider.html#strokeMiterLimit">strokeMiterLimit</a></li>
+    
+      <li class="page-members-explorer__item"><a href="InheritedPaintProvider.html#strokeWidth">strokeWidth</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+  
+</nav>
+
+
+
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

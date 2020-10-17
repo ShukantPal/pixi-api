@@ -248,7 +248,10 @@ depending on this type. Defaults to button.</p></div>
 
   <div class="member__brief"></div>
   <div class="member__description"><p>The blend mode to be applied to the graphic shape. Apply a value of
-<code>PIXI.BLEND_MODES.NORMAL</code> to reset the blend mode.</p></div>
+<code>PIXI.BLEND_MODES.NORMAL</code> to reset the blend mode.  Note that, since each
+primitive in the GraphicsGeometry list is rendered sequentially, modes
+such as <code>PIXI.BLEND_MODES.ADD</code> and <code>PIXI.BLEND_MODES.MULTIPLY</code> will
+be applied per-primitive.</p></div>
 
   
 
@@ -825,7 +828,7 @@ blend mode, culling, depth testing, direction of rendering triangles, backface, 
 
 
   <div class="member__brief"></div>
-  <div class="member__description"><p>The tint applied to the graphic shape. This is a hex value. A value of
+  <div class="member__description"><p>The tint applied to each graphic shape. This is a hex value. A value of
 0xFFFFFF will remove any tint effect.</p></div>
 
   

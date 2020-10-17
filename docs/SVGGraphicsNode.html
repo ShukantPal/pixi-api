@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>webdoc: TransformerHandle</title>
+    <title>webdoc: SVGGraphicsNode</title>
 
     <link type="text/css" rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
@@ -23,14 +23,49 @@
         
 <div class="page-content">
   <div class="document">
-    <div class="document__package">@pixi-essentials/transformer</div>
-    <h1 class="document__title">TransformerHandle</h1>
+    <div class="document__package">@pixi-essentials/svg</div>
+    <h1 class="document__title">SVGGraphicsNode</h1>
     
-<pre class="signature__container"><code class="signature">class TransformerHandle extends <a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
+<pre class="signature__container"><code class="signature">class SVGGraphicsNode extends <a href="PIXI.Graphics.html">PIXI.Graphics</a></code></pre>
 
 
-    <div class="document__brief"><p>The transfomer handle base implementation.</p></div>
-    <div class="document__description"></div>
+    <div class="document__brief"><p>This node can be used to directly embed the following elements:</p></div>
+    <div class="document__description"><table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SVGGElement</td>
+<td>&lt;g /&gt;</td>
+</tr>
+<tr>
+<td>SVGCircleElement</td>
+<td>&lt;circle /&gt;</td>
+</tr>
+<tr>
+<td>SVGLineElement</td>
+<td>&lt;line /&gt;</td>
+</tr>
+<tr>
+<td>SVGPolylineElement</td>
+<td>&lt;polyline /&gt;</td>
+</tr>
+<tr>
+<td>SVGPolygonElement</td>
+<td>&lt;polygon /&gt;</td>
+</tr>
+<tr>
+<td>SVGRectElement</td>
+<td>&lt;rect /&gt;</td>
+</tr>
+</tbody>
+</table>
+<p>It also provides an implementation for dashed stroking, by adding the <code>dashArray</code> and <code>dashOffset</code> properties
+to <code>LineStyle</code>.</p></div>
 
     
       
@@ -42,111 +77,11 @@
 <div class="member" id="constructor">
   <h3 class="member__title"></h3>
   
-<pre class="signature__container"><code class="signature">new TransformerHandle(handle: string, styleOpts: object, handler: Function, commit: Function, cursor: string)</code></pre>
+<pre class="signature__container"><code class="signature">new SVGGraphicsNode()</code></pre>
 
 
   <div class="member__brief"></div>
   <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        <th class="member-parameter-header__attributes">Attributes</th>
-        <th class="member-parameter-header__default">Default</th>
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          handle
-        </td>
-        <td class="member-parameter__type">
-          string
-        </td>
-        <td class="member-parameter__attributes">
-          
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          
-        </td>
-        <td class="member-parameter__description"><p>the type of handle being drawn</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          styleOpts
-        </td>
-        <td class="member-parameter__type">
-          object
-        </td>
-        <td class="member-parameter__attributes">
-          
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          
-        </td>
-        <td class="member-parameter__description"><p>styling options passed by the user</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          handler
-        </td>
-        <td class="member-parameter__type">
-          Function
-        </td>
-        <td class="member-parameter__attributes">
-          
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          
-        </td>
-        <td class="member-parameter__description"><p>handler for drag events, it receives the pointer position; used by {@code onDrag}.</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          commit
-        </td>
-        <td class="member-parameter__type">
-          Function
-        </td>
-        <td class="member-parameter__attributes">
-          
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          
-        </td>
-        <td class="member-parameter__description"><p>handler for drag-end events.</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          cursor
-        </td>
-        <td class="member-parameter__type">
-          string
-        </td>
-        <td class="member-parameter__attributes">
-          <p>&lt;optional&gt;</p>
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          'move'
-        </td>
-        <td class="member-parameter__description"><p>a custom cursor to be applied on this handle</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
 
   
 
@@ -203,22 +138,6 @@
 
 
   <div class="member__brief"><p>The bounds object, this is used to calculate and store the bounds of the displayObject.</p></div>
-  <div class="member__description"></div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="_dirty">
-  <h3 class="member__title">_dirty</h3>
-  
-<pre class="signature__container"><code class="signature">_dirty</code></pre>
-
-
-  <div class="member__brief"><p>This flags whether this handle should be redrawn in the next frame due to style changes.</p></div>
   <div class="member__description"></div>
 
   
@@ -562,22 +481,6 @@ To remove filters simply set this property to <code>'null'</code>.</li>
   <div class="member__description"><p>Includes vertex positions, face indices, normals, colors, UVs, and
 custom attributes within buffers, reducing the cost of passing all
 this data to the GPU. Can be shared between multiple Mesh or Graphics objects.</p></div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="handle">
-  <h3 class="member__title">handle</h3>
-  
-<pre class="signature__container"><code class="signature">handle</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
 
   
 
@@ -967,22 +870,6 @@ as the zIndex sorting may cause the child to automatically sorted to another pos
   <div class="member__brief"></div>
   <div class="member__description"><p>Represents the WebGL state the Graphics required to render, excludes shader and geometry. E.g.,
 blend mode, culling, depth testing, direction of rendering triangles, backface, etc.</p></div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="style">
-  <h3 class="member__title">style</h3>
-  
-<pre class="signature__container"><code class="signature">style</code></pre>
-
-
-  <div class="member__brief"><p>The currently applied handle style.</p></div>
-  <div class="member__description"></div>
 
   
 
@@ -2796,42 +2683,6 @@ Will crash if there's no parent element.</p></div>
 
   
     
-<div class="member" id="draw">
-  <h3 class="member__title">draw</h3>
-  
-<pre class="signature__container"><code class="signature">draw() → {void}</code></pre>
-
-
-  <div class="member__brief"><p>Redraws the handle's geometry. This is called on a <code>render</code> if {@code this._dirty} is true.</p></div>
-  <div class="member__description"></div>
-
-  
-
-  
-    
-<table class="member-returns">
-  <caption class="member-returns__caption">Returns:</caption>
-  <thead class="member-returns__head">
-    <tr class="member-returns-header">
-      <th class="member-returns-header__type">Type</th>
-      <th class="member-returns-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-returns__body">
-    <tr class="member-return">
-      <td class="member-return__type">
-        void
-      </td>
-      <td class="member-return__description"></td>
-    </tr>
-  </tbody>
-</table>
-
-  
-</div>
-
-  
-    
 <div class="member" id="drawCircle">
   <h3 class="member__title">drawCircle</h3>
   
@@ -3491,6 +3342,599 @@ Will crash if there's no parent element.</p></div>
         <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="ellipticArc">
+  <h3 class="member__title">ellipticArc</h3>
+  
+<pre class="signature__container"><code class="signature">ellipticArc(cx: number, cy: number, rx: number, ry: number, startAngle: number, endAngle: number, xAxisRotation, anticlockwise) → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Draws an elliptical arc.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          cx
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The x-coordinate of the center of the ellipse.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          cy
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The y-coordinate of the center of the ellipse.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          rx
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The radius along the x-axis.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          ry
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The radius along the y-axis.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          startAngle
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The starting eccentric angle, in radians (0 is at the 3 o'clock position of the arc's circle).</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          endAngle
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The ending eccentric angle, in radians.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          xAxisRotation
+        </td>
+        <td class="member-parameter__type">
+          
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The angle of the whole ellipse w.r.t. x-axis.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          anticlockwise
+        </td>
+        <td class="member-parameter__type">
+          
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Specifies whether the drawing should be counterclockwise or clockwise.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        this
+      </td>
+      <td class="member-return__description"><p>This Graphics object. Good for chaining method calls.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="ellipticArcTo">
+  <h3 class="member__title">ellipticArcTo</h3>
+  
+<pre class="signature__container"><code class="signature">ellipticArcTo(endX: number, endY: number, rx: number, ry: number, xAxisRotation, anticlockwise, largeArc) → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Draws an elliptical arc to the specified point.</p></div>
+  <div class="member__description"><p>If rx = 0 or ry = 0, then a line is drawn. If the radii provided are too small to draw the arc, then
+they are scaled up appropriately.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          endX
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the x-coordinate of the ending point.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          endY
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the y-coordinate of the ending point.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          rx
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The radius along the x-axis.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          ry
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The radius along the y-axis.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          xAxisRotation
+        </td>
+        <td class="member-parameter__type">
+          
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The angle of the ellipse as a whole w.r.t/ x-axis.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          anticlockwise
+        </td>
+        <td class="member-parameter__type">
+          
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Specifies whether the arc should be drawn counterclockwise or clockwise.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          largeArc
+        </td>
+        <td class="member-parameter__type">
+          
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Specifies whether the larger arc of two possible should be choosen.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        this
+      </td>
+      <td class="member-return__description"><p>This Graphics object. Good for chaining method calls.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="embedCircle">
+  <h3 class="member__title">embedCircle</h3>
+  
+<pre class="signature__container"><code class="signature">embedCircle(element: SVGCircleElement) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Embeds the <code>SVGCircleElement</code> into this node.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          element
+        </td>
+        <td class="member-parameter__type">
+          SVGCircleElement
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The circle element to draw.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        void
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="embedLine">
+  <h3 class="member__title">embedLine</h3>
+  
+<pre class="signature__container"><code class="signature">embedLine(element: SVGLineElement) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Embeds the <code>SVGLineElement</code> into this node.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          element
+        </td>
+        <td class="member-parameter__type">
+          SVGLineElement
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The line element to draw.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        void
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="embedPolygon">
+  <h3 class="member__title">embedPolygon</h3>
+  
+<pre class="signature__container"><code class="signature">embedPolygon(element: SVGPolygonElement) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Embeds the <code>SVGPolygonElement</code> element into this node.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          element
+        </td>
+        <td class="member-parameter__type">
+          SVGPolygonElement
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The polygon element to draw.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        void
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="embedPolyline">
+  <h3 class="member__title">embedPolyline</h3>
+  
+<pre class="signature__container"><code class="signature">embedPolyline(element: SVGPolylineElement) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Embeds the <code>SVGPolylineElement</code> element into this node.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          element
+        </td>
+        <td class="member-parameter__type">
+          SVGPolylineElement
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The polyline element to draw.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        void
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="embedRect">
+  <h3 class="member__title">embedRect</h3>
+  
+<pre class="signature__container"><code class="signature">embedRect(element: SVGRectElement) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Embeds the <code>SVGRectElement</code> into this node.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          element
+        </td>
+        <td class="member-parameter__type">
+          SVGRectElement
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The rectangle element to draw.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        void
+      </td>
+      <td class="member-return__description"></td>
     </tr>
   </tbody>
 </table>
@@ -4435,10 +4879,10 @@ method or the drawCircle() method.</p></div>
 <div class="member" id="lineTextureStyle">
   <h3 class="member__title">lineTextureStyle</h3>
   
-<pre class="signature__container"><code class="signature">lineTextureStyle(options: object) → {<a href="PIXI.Graphics.html">PIXI.Graphics</a>}</code></pre>
+<pre class="signature__container"><code class="signature">lineTextureStyle(options: ILineStyleOptions) → {this}</code></pre>
 
 
-  <div class="member__brief"><p>Like line style but support texture for line fill.</p></div>
+  <div class="member__brief"></div>
   <div class="member__description"></div>
 
   
@@ -4450,8 +4894,8 @@ method or the drawCircle() method.</p></div>
       <tr class="member-parameter-header">
         <th class="member-parameter-header__name">Name</th>
         <th class="member-parameter-header__type">Type</th>
-        <th class="member-parameter-header__attributes">Attributes</th>
-        <th class="member-parameter-header__default">Default</th>
+        
+        
         <th class="member-parameter-header__description">Description</th>
       </tr>
     </thead>
@@ -4461,178 +4905,11 @@ method or the drawCircle() method.</p></div>
           options
         </td>
         <td class="member-parameter__type">
-          object
+          ILineStyleOptions
         </td>
-        <td class="member-parameter__attributes">
-          <p>&lt;optional&gt;</p>
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          
-        </td>
-        <td class="member-parameter__description"><p>Collection of options for setting line style.</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          options.width
-        </td>
-        <td class="member-parameter__type">
-          number
-        </td>
-        <td class="member-parameter__attributes">
-          <p>&lt;optional&gt;</p>
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          0
-        </td>
-        <td class="member-parameter__description"><p>width of the line to draw, will update the objects stored style</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          options.texture
-        </td>
-        <td class="member-parameter__type">
-          <a href="PIXI.Texture.html">PIXI.Texture</a>
-        </td>
-        <td class="member-parameter__attributes">
-          <p>&lt;optional&gt;</p>
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          PIXI.Texture.WHITE
-        </td>
-        <td class="member-parameter__description"><p>Texture to use</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          options.color
-        </td>
-        <td class="member-parameter__type">
-          number
-        </td>
-        <td class="member-parameter__attributes">
-          <p>&lt;optional&gt;</p>
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          0x0
-        </td>
-        <td class="member-parameter__description"><p>color of the line to draw, will update the objects stored style.
-Default 0xFFFFFF if texture present.</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          options.alpha
-        </td>
-        <td class="member-parameter__type">
-          number
-        </td>
-        <td class="member-parameter__attributes">
-          <p>&lt;optional&gt;</p>
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          1
-        </td>
-        <td class="member-parameter__description"><p>alpha of the line to draw, will update the objects stored style</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          options.matrix
-        </td>
-        <td class="member-parameter__type">
-          <a href="PIXI.Matrix.html">PIXI.Matrix</a>
-        </td>
-        <td class="member-parameter__attributes">
-          <p>&lt;optional&gt;</p>
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          null
-        </td>
-        <td class="member-parameter__description"><p>Texture matrix to transform texture</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          options.alignment
-        </td>
-        <td class="member-parameter__type">
-          number
-        </td>
-        <td class="member-parameter__attributes">
-          <p>&lt;optional&gt;</p>
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          0.5
-        </td>
-        <td class="member-parameter__description"><p>alignment of the line to draw, (0 = inner, 0.5 = middle, 1 = outter)</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          options.native
-        </td>
-        <td class="member-parameter__type">
-          boolean
-        </td>
-        <td class="member-parameter__attributes">
-          <p>&lt;optional&gt;</p>
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          false
-        </td>
-        <td class="member-parameter__description"><p>If true the lines will be draw using LINES instead of TRIANGLE_STRIP</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          options.cap
-        </td>
-        <td class="member-parameter__type">
-          <a href="PIXI.LINE_CAP.html">PIXI.LINE_CAP</a>
-        </td>
-        <td class="member-parameter__attributes">
-          <p>&lt;optional&gt;</p>
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          PIXI.LINE_CAP.BUTT
-        </td>
-        <td class="member-parameter__description"><p>line cap style</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          options.join
-        </td>
-        <td class="member-parameter__type">
-          <a href="PIXI.LINE_JOIN.html">PIXI.LINE_JOIN</a>
-        </td>
-        <td class="member-parameter__attributes">
-          <p>&lt;optional&gt;</p>
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          PIXI.LINE_JOIN.MITER
-        </td>
-        <td class="member-parameter__description"><p>line join style</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          options.miterLimit
-        </td>
-        <td class="member-parameter__type">
-          number
-        </td>
-        <td class="member-parameter__attributes">
-          <p>&lt;optional&gt;</p>
-          
-          
-        </td>
-        <td class="member-parameter__default">
-          10
-        </td>
-        <td class="member-parameter__description"><p>miter limit ratio</p></td>
+        
+        
+        <td class="member-parameter__description"></td>
       </tr>
     </tbody>
   </table>
@@ -4653,9 +4930,9 @@ Default 0xFFFFFF if texture present.</p></td>
   <tbody class="member-returns__body">
     <tr class="member-return">
       <td class="member-return__type">
-        <a href="PIXI.Graphics.html">PIXI.Graphics</a>
+        this
       </td>
-      <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
+      <td class="member-return__description"></td>
     </tr>
   </tbody>
 </table>
@@ -4809,402 +5086,6 @@ The current drawing position is then set to (x, y).</p></div>
         <a href="PIXI.Graphics.html">PIXI.Graphics</a>
       </td>
       <td class="member-return__description"><p>This Graphics object. Good for chaining method calls</p></td>
-    </tr>
-  </tbody>
-</table>
-
-  
-</div>
-
-  
-    
-<div class="member" id="onDrag">
-  <h3 class="member__title">onDrag</h3>
-  
-<pre class="signature__container"><code class="signature">onDrag(e: <a href="PIXI.InteractionEvent.html">PIXI.InteractionEvent</a>) → {void}</code></pre>
-
-
-  <div class="member__brief"><p>Called on a <code>pointermove</code> when {@code this._pointerDown} &amp; {@code this._pointerDragging}.</p></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          e
-        </td>
-        <td class="member-parameter__type">
-          <a href="PIXI.InteractionEvent.html">PIXI.InteractionEvent</a>
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<table class="member-returns">
-  <caption class="member-returns__caption">Returns:</caption>
-  <thead class="member-returns__head">
-    <tr class="member-returns-header">
-      <th class="member-returns-header__type">Type</th>
-      <th class="member-returns-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-returns__body">
-    <tr class="member-return">
-      <td class="member-return__type">
-        void
-      </td>
-      <td class="member-return__description"></td>
-    </tr>
-  </tbody>
-</table>
-
-  
-</div>
-
-  
-    
-<div class="member" id="onDragEnd">
-  <h3 class="member__title">onDragEnd</h3>
-  
-<pre class="signature__container"><code class="signature">onDragEnd(_: <a href="PIXI.InteractionEvent.html">PIXI.InteractionEvent</a>) → {void}</code></pre>
-
-
-  <div class="member__brief"><p>Called on a <code>pointerup</code> or <code>pointerupoutside</code> &amp; {@code this._pointerDragging} was true.</p></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          _
-        </td>
-        <td class="member-parameter__type">
-          <a href="PIXI.InteractionEvent.html">PIXI.InteractionEvent</a>
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<table class="member-returns">
-  <caption class="member-returns__caption">Returns:</caption>
-  <thead class="member-returns__head">
-    <tr class="member-returns-header">
-      <th class="member-returns-header__type">Type</th>
-      <th class="member-returns-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-returns__body">
-    <tr class="member-return">
-      <td class="member-return__type">
-        void
-      </td>
-      <td class="member-return__description"></td>
-    </tr>
-  </tbody>
-</table>
-
-  
-</div>
-
-  
-    
-<div class="member" id="onDragStart">
-  <h3 class="member__title">onDragStart</h3>
-  
-<pre class="signature__container"><code class="signature">onDragStart(e: <a href="PIXI.InteractionEvent.html">PIXI.InteractionEvent</a>) → {void}</code></pre>
-
-
-  <div class="member__brief"><p>Called on the first <code>pointermove</code> when {@code this._pointerDown} is true. You must call the super implementation.</p></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          e
-        </td>
-        <td class="member-parameter__type">
-          <a href="PIXI.InteractionEvent.html">PIXI.InteractionEvent</a>
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<table class="member-returns">
-  <caption class="member-returns__caption">Returns:</caption>
-  <thead class="member-returns__head">
-    <tr class="member-returns-header">
-      <th class="member-returns-header__type">Type</th>
-      <th class="member-returns-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-returns__body">
-    <tr class="member-return">
-      <td class="member-return__type">
-        void
-      </td>
-      <td class="member-return__description"></td>
-    </tr>
-  </tbody>
-</table>
-
-  
-</div>
-
-  
-    
-<div class="member" id="onPointerDown">
-  <h3 class="member__title">onPointerDown</h3>
-  
-<pre class="signature__container"><code class="signature">onPointerDown(e: <a href="PIXI.InteractionEvent.html">PIXI.InteractionEvent</a>) → {void}</code></pre>
-
-
-  <div class="member__brief"><p>Handles the <code>pointerdown</code> event. You must call the super implementation.</p></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          e
-        </td>
-        <td class="member-parameter__type">
-          <a href="PIXI.InteractionEvent.html">PIXI.InteractionEvent</a>
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<table class="member-returns">
-  <caption class="member-returns__caption">Returns:</caption>
-  <thead class="member-returns__head">
-    <tr class="member-returns-header">
-      <th class="member-returns-header__type">Type</th>
-      <th class="member-returns-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-returns__body">
-    <tr class="member-return">
-      <td class="member-return__type">
-        void
-      </td>
-      <td class="member-return__description"></td>
-    </tr>
-  </tbody>
-</table>
-
-  
-</div>
-
-  
-    
-<div class="member" id="onPointerMove">
-  <h3 class="member__title">onPointerMove</h3>
-  
-<pre class="signature__container"><code class="signature">onPointerMove(e: <a href="PIXI.InteractionEvent.html">PIXI.InteractionEvent</a>) → {void}</code></pre>
-
-
-  <div class="member__brief"><p>Handles the <code>pointermove</code> event. You must call the super implementation.</p></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          e
-        </td>
-        <td class="member-parameter__type">
-          <a href="PIXI.InteractionEvent.html">PIXI.InteractionEvent</a>
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<table class="member-returns">
-  <caption class="member-returns__caption">Returns:</caption>
-  <thead class="member-returns__head">
-    <tr class="member-returns-header">
-      <th class="member-returns-header__type">Type</th>
-      <th class="member-returns-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-returns__body">
-    <tr class="member-return">
-      <td class="member-return__type">
-        void
-      </td>
-      <td class="member-return__description"></td>
-    </tr>
-  </tbody>
-</table>
-
-  
-</div>
-
-  
-    
-<div class="member" id="onPointerUp">
-  <h3 class="member__title">onPointerUp</h3>
-  
-<pre class="signature__container"><code class="signature">onPointerUp(e: <a href="PIXI.InteractionEvent.html">PIXI.InteractionEvent</a>) → {void}</code></pre>
-
-
-  <div class="member__brief"><p>Handles the <code>pointerup</code> event. You must call the super implementation.</p></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          e
-        </td>
-        <td class="member-parameter__type">
-          <a href="PIXI.InteractionEvent.html">PIXI.InteractionEvent</a>
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<table class="member-returns">
-  <caption class="member-returns__caption">Returns:</caption>
-  <thead class="member-returns__head">
-    <tr class="member-returns-header">
-      <th class="member-returns-header__type">Type</th>
-      <th class="member-returns-header__description">Description</th>
-    </tr>
-  </thead>
-  <tbody class="member-returns__body">
-    <tr class="member-return">
-      <td class="member-return__type">
-        void
-      </td>
-      <td class="member-return__description"></td>
     </tr>
   </tbody>
 </table>
@@ -7230,119 +7111,113 @@ geometry, recaculate the vertices.</p></div>
   <h3 class="page-members-explorer-category__title">Public Properties</h3>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_accessibleActive">_accessibleActive</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_accessibleActive">_accessibleActive</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_accessibleDiv">_accessibleDiv</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_accessibleDiv">_accessibleDiv</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_bounds">_bounds</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_bounds">_bounds</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_dirty">_dirty</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_localBounds">_localBounds</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_localBounds">_localBounds</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#accessible">accessible</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#accessible">accessible</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#accessibleChildren">accessibleChildren</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#accessibleChildren">accessibleChildren</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#accessibleHint">accessibleHint</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#accessibleHint">accessibleHint</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#accessiblePointerEvents">accessiblePointerEvents</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#accessiblePointerEvents">accessiblePointerEvents</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#accessibleTitle">accessibleTitle</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#accessibleTitle">accessibleTitle</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#accessibleType">accessibleType</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#accessibleType">accessibleType</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#alpha">alpha</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#alpha">alpha</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#angle">angle</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#angle">angle</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#blendMode">blendMode</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#blendMode">blendMode</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#buttonMode">buttonMode</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#buttonMode">buttonMode</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#cacheAsBitmap">cacheAsBitmap</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#cacheAsBitmap">cacheAsBitmap</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#children">children</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#children">children</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#cursor">cursor</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#cursor">cursor</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#fill">fill</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#fill">fill</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#filterArea">filterArea</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#filterArea">filterArea</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#filters">filters</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#filters">filters</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#geometry">geometry</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#geometry">geometry</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#height">height</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#handle">handle</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#hitArea">hitArea</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#height">height</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#interactive">interactive</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#hitArea">hitArea</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#interactiveChildren">interactiveChildren</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#interactive">interactive</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#isMask">isMask</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#interactiveChildren">interactiveChildren</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#isSprite">isSprite</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#isMask">isMask</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#line">line</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#isSprite">isSprite</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#localTransform">localTransform</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#line">line</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#mask">mask</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#localTransform">localTransform</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#name">name</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#mask">mask</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#parent">parent</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#name">name</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#pivot">pivot</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#parent">parent</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#pluginName">pluginName</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#pivot">pivot</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#position">position</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#pluginName">pluginName</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#renderable">renderable</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#position">position</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#rotation">rotation</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#renderable">renderable</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#scale">scale</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#rotation">rotation</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#shader">shader</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#scale">scale</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#skew">skew</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#shader">shader</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#smartMask">smartMask</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#skew">skew</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#sortableChildren">sortableChildren</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#smartMask">smartMask</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#sortDirty">sortDirty</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#sortableChildren">sortableChildren</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#state">state</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#sortDirty">sortDirty</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#tint">tint</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#state">state</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#transform">transform</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#style">style</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#visible">visible</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#tint">tint</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#width">width</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#transform">transform</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#worldAlpha">worldAlpha</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#visible">visible</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#worldTransform">worldTransform</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#width">width</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#worldVisible">worldVisible</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#worldAlpha">worldAlpha</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#x">x</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#worldTransform">worldTransform</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#y">y</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#worldVisible">worldVisible</a></li>
-    
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#x">x</a></li>
-    
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#y">y</a></li>
-    
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#zIndex">zIndex</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#zIndex">zIndex</a></li>
     
   </ul>
 </div>
@@ -7353,41 +7228,41 @@ geometry, recaculate the vertices.</p></div>
   <h3 class="page-members-explorer-category__title">Protected Properties</h3>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_boundsID">_boundsID</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_boundsID">_boundsID</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_boundsRect">_boundsRect</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_boundsRect">_boundsRect</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_destroyed">_destroyed</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_destroyed">_destroyed</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_enabledFilters">_enabledFilters</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_enabledFilters">_enabledFilters</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_fillStyle">_fillStyle</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_fillStyle">_fillStyle</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_holeMode">_holeMode</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_holeMode">_holeMode</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_lastSortedIndex">_lastSortedIndex</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_lastSortedIndex">_lastSortedIndex</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_lineStyle">_lineStyle</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_lineStyle">_lineStyle</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_localBoundsRect">_localBoundsRect</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_localBoundsRect">_localBoundsRect</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_mask">_mask</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_mask">_mask</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_matrix">_matrix</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_matrix">_matrix</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_tempDisplayObjectParent">_tempDisplayObjectParent</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_tempDisplayObjectParent">_tempDisplayObjectParent</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_zIndex">_zIndex</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_zIndex">_zIndex</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#batchDirty">batchDirty</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#batchDirty">batchDirty</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#batches">batches</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#batches">batches</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#batchTint">batchTint</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#batchTint">batchTint</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#currentPath">currentPath</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#currentPath">currentPath</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#vertexData">vertexData</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#vertexData">vertexData</a></li>
     
   </ul>
 </div>
@@ -7398,133 +7273,133 @@ geometry, recaculate the vertices.</p></div>
   <h3 class="page-members-explorer-category__title">Public Methods</h3>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_recursivePostUpdateTransform">_recursivePostUpdateTransform</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_recursivePostUpdateTransform">_recursivePostUpdateTransform</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_renderDrawCallDirect">_renderDrawCallDirect</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_renderDrawCallDirect">_renderDrawCallDirect</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#addChild">addChild</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#addChild">addChild</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#addChildAt">addChildAt</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#addChildAt">addChildAt</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#arc">arc</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#arc">arc</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#arcTo">arcTo</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#arcTo">arcTo</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#beginFill">beginFill</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#beginFill">beginFill</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#beginHole">beginHole</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#beginHole">beginHole</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#beginTextureFill">beginTextureFill</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#beginTextureFill">beginTextureFill</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#bezierCurveTo">bezierCurveTo</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#bezierCurveTo">bezierCurveTo</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#calculateBounds">calculateBounds</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#calculateBounds">calculateBounds</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#clear">clear</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#clear">clear</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#clone">clone</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#clone">clone</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#closePath">closePath</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#closePath">closePath</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#containerUpdateTransform">containerUpdateTransform</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#containerUpdateTransform">containerUpdateTransform</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#containsPoint">containsPoint</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#containsPoint">containsPoint</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#destroy">destroy</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#destroy">destroy</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#disableTempParent">disableTempParent</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#disableTempParent">disableTempParent</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#displayObjectUpdateTransform">displayObjectUpdateTransform</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#displayObjectUpdateTransform">displayObjectUpdateTransform</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#draw">draw</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#drawCircle">drawCircle</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#drawCircle">drawCircle</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#drawEllipse">drawEllipse</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#drawEllipse">drawEllipse</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#drawPolygon">drawPolygon</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#drawPolygon">drawPolygon</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#drawRect">drawRect</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#drawRect">drawRect</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#drawRoundedRect">drawRoundedRect</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#drawRoundedRect">drawRoundedRect</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#drawShape">drawShape</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#drawShape">drawShape</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#drawStar">drawStar</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#drawStar">drawStar</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#ellipticArc">ellipticArc</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#enableTempParent">enableTempParent</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#ellipticArcTo">ellipticArcTo</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#endFill">endFill</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#embedCircle">embedCircle</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#endHole">endHole</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#embedLine">embedLine</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#generateCanvasTexture">generateCanvasTexture</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#embedPolygon">embedPolygon</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#getBounds">getBounds</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#embedPolyline">embedPolyline</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#getChildAt">getChildAt</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#embedRect">embedRect</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#getChildByName">getChildByName</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#enableTempParent">enableTempParent</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#getChildIndex">getChildIndex</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#endFill">endFill</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#getGlobalPosition">getGlobalPosition</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#endHole">endHole</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#getLocalBounds">getLocalBounds</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#generateCanvasTexture">generateCanvasTexture</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#isFastRect">isFastRect</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#getBounds">getBounds</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#lineStyle">lineStyle</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#getChildAt">getChildAt</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#lineTextureStyle">lineTextureStyle</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#getChildByName">getChildByName</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#lineTo">lineTo</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#getChildIndex">getChildIndex</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#moveTo">moveTo</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#getGlobalPosition">getGlobalPosition</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#onDrag">onDrag</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#getLocalBounds">getLocalBounds</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#onDragEnd">onDragEnd</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#isFastRect">isFastRect</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#onDragStart">onDragStart</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#lineStyle">lineStyle</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#onPointerDown">onPointerDown</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#lineTextureStyle">lineTextureStyle</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#onPointerMove">onPointerMove</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#lineTo">lineTo</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#onPointerUp">onPointerUp</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#moveTo">moveTo</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#quadraticCurveTo">quadraticCurveTo</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#quadraticCurveTo">quadraticCurveTo</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#removeChild">removeChild</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#removeChild">removeChild</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#removeChildAt">removeChildAt</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#removeChildAt">removeChildAt</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#removeChildren">removeChildren</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#removeChildren">removeChildren</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#render">render</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#render">render</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#renderCanvas">renderCanvas</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#renderCanvas">renderCanvas</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#renderWebGL">renderWebGL</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#renderWebGL">renderWebGL</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#setChildIndex">setChildIndex</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#setChildIndex">setChildIndex</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#setMatrix">setMatrix</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#setMatrix">setMatrix</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#setParent">setParent</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#setParent">setParent</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#setTransform">setTransform</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#setTransform">setTransform</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#sortChildren">sortChildren</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#sortChildren">sortChildren</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#swapChildren">swapChildren</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#swapChildren">swapChildren</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#toGlobal">toGlobal</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#toGlobal">toGlobal</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#toLocal">toLocal</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#toLocal">toLocal</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#updateTransform">updateTransform</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#updateTransform">updateTransform</a></li>
     
   </ul>
 </div>
@@ -7535,31 +7410,31 @@ geometry, recaculate the vertices.</p></div>
   <h3 class="page-members-explorer-category__title">Protected Methods</h3>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_calculateBounds">_calculateBounds</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_calculateBounds">_calculateBounds</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_initCurve">_initCurve</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_initCurve">_initCurve</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_populateBatches">_populateBatches</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_populateBatches">_populateBatches</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_render">_render</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_render">_render</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_renderBatched">_renderBatched</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_renderBatched">_renderBatched</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_renderDirect">_renderDirect</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_renderDirect">_renderDirect</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#_resolveDirectShader">_resolveDirectShader</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#_resolveDirectShader">_resolveDirectShader</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#calculateTints">calculateTints</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#calculateTints">calculateTints</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#calculateVertices">calculateVertices</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#calculateVertices">calculateVertices</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#finishPoly">finishPoly</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#finishPoly">finishPoly</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#onChildrenChange">onChildrenChange</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#onChildrenChange">onChildrenChange</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#renderAdvanced">renderAdvanced</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#renderAdvanced">renderAdvanced</a></li>
     
-      <li class="page-members-explorer__item"><a href="TransformerHandle.html#startPoly">startPoly</a></li>
+      <li class="page-members-explorer__item"><a href="SVGGraphicsNode.html#startPoly">startPoly</a></li>
     
   </ul>
 </div>
