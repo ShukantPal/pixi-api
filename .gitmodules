@@ -13,3 +13,6 @@
 [submodule "projects/pixi-essentials"]
 	path = projects/pixi-essentials
 	url = https://github.com/SukantPal/pixi-essentials
+[submodule "projects/pixi-ui"]
+	path = projects/pixi-ui
+	url = https://github.com/pixijs/pixi-ui

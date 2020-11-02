@@ -43,7 +43,7 @@ of Textures on a single Spritesheet.</p>
 <p>With the <code>sheet.textures</code> you can create Sprite objects,<code>sheet.animations</code> can be used to create an AnimatedSprite.</p>
 <p>Sprite sheets can be packed using tools like <a href="https://codeandweb.com/texturepacker">TexturePacker</a>,
 <a href="https://renderhjs.net/shoebox/">Shoebox</a> or <a href="https://github.com/krzysztof-o/spritesheet.js">Spritesheet.js</a>.
-Default anchor points (see PIXI.Texture#defaultAnchor) and grouping of animation sprites are currently only
+Default anchor points (see PIXI.RenderTexture.html#defaultAnchor) and grouping of animation sprites are currently only
 supported by TexturePacker.</p></div>
 
     
@@ -166,7 +166,7 @@ be used on the BaseTexture.</p></td>
 
   <div class="member__brief"></div>
   <div class="member__description"><p>A map containing the textures for each animation.
-Can be used to create an <a href="PIXI.AnimatedSprite.html">AnimatedSprite</a>:</p>
+Can be used to create an PIXI.AnimatedSprite.html:</p>
 <pre><code class="hljs language-js"><span class="hljs-keyword">new</span> PIXI.AnimatedSprite(sheet.animations[<span class="hljs-string">"anim_name"</span>])
 </code></pre></div>
 
@@ -180,7 +180,7 @@ Can be used to create an <a href="PIXI.AnimatedSprite.html">AnimatedSprite</a>:<
 <div class="member" id="baseTexture">
   <h3 class="member__title">baseTexture</h3>
   
-<pre class="signature__container"><code class="signature">baseTexture: <a href="PIXI.BaseTexture.html">PIXI.BaseTexture</a></code></pre>
+<pre class="signature__container"><code class="signature">baseTexture: PIXI.BaseTexture.html</code></pre>
 
 
   <div class="member__brief"></div>
@@ -233,7 +233,7 @@ Can be used to create an <a href="PIXI.AnimatedSprite.html">AnimatedSprite</a>:<
 
   <div class="member__brief"></div>
   <div class="member__description"><p>A map containing all textures of the sprite sheet.
-Can be used to create a <a href="PIXI.Sprite.html">Sprite</a>:</p>
+Can be used to create a PIXI.Sprite.html:</p>
 <pre><code class="hljs language-js"><span class="hljs-keyword">new</span> PIXI.Sprite(sheet.textures[<span class="hljs-string">"image.png"</span>]);
 </code></pre></div>
 

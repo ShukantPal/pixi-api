@@ -41,51 +41,51 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="PIXI.Container.html">PIXI.Container</a></td>
+<td>PIXI.Container.html</td>
 <td>Adds support for <code>children</code> to DisplayObject</td>
 </tr>
 <tr>
-<td><a href="PIXI.Graphics.html">PIXI.Graphics</a></td>
+<td>PIXI.Graphics.html</td>
 <td>Shape-drawing display object similar to the Canvas API</td>
 </tr>
 <tr>
-<td><a href="PIXI.Sprite.html">PIXI.Sprite</a></td>
+<td>PIXI.Sprite.html</td>
 <td>Draws textures (i.e. images)</td>
 </tr>
 <tr>
-<td><a href="PIXI.Text.html">PIXI.Text</a></td>
+<td>PIXI.Text.html</td>
 <td>Draws text using the Canvas API internally</td>
 </tr>
 <tr>
-<td><a href="PIXI.BitmapText.html">PIXI.BitmapText</a></td>
+<td>PIXI.BitmapText.html</td>
 <td>More scaleable solution for text rendering, reusing glyph textures</td>
 </tr>
 <tr>
-<td><a href="PIXI.TilingSprite.html">PIXI.TilingSprite</a></td>
+<td>PIXI.TilingSprite.html</td>
 <td>Draws textures/images in a tiled fashion</td>
 </tr>
 <tr>
-<td><a href="PIXI.AnimatedSprite.html">PIXI.AnimatedSprite</a></td>
+<td>PIXI.AnimatedSprite.html</td>
 <td>Draws an animation of multiple images</td>
 </tr>
 <tr>
-<td><a href="PIXI.Mesh_.html">PIXI.Mesh</a></td>
+<td>PIXI.Mesh.html</td>
 <td>Provides a lower-level API for drawing meshes with custom data</td>
 </tr>
 <tr>
-<td><a href="PIXI.NineSlicePlane.html">PIXI.NineSlicePlane</a></td>
+<td>PIXI.NineSlicePlane.html</td>
 <td>Mesh-related</td>
 </tr>
 <tr>
-<td><a href="PIXI.SimpleMesh.html">PIXI.SimpleMesh</a></td>
+<td>PIXI.SimpleMesh.html</td>
 <td>v4-compatibile mesh</td>
 </tr>
 <tr>
-<td><a href="PIXI.SimplePlane.html">PIXI.SimplePlane</a></td>
+<td>PIXI.SimplePlane.html</td>
 <td>Mesh-related</td>
 </tr>
 <tr>
-<td><a href="PIXI.SimpleRope.html">PIXI.SimpleRope</a></td>
+<td>PIXI.SimpleRope.html</td>
 <td>Mesh-related</td>
 </tr>
 </tbody>
@@ -103,7 +103,7 @@ from the transform:</p>
    </thead>
    <tbody>
      <tr>
-       <td>pivot</td>
+       <td><a href="PIXI.AnimatedSprite.html#pivot">pivot</a></td>
        <td>
          Invariant under rotation, scaling, and skewing. The projection of into the parent's space of the pivot
          is equal to position, regardless of the other three transformations. In other words, It is the center of
@@ -111,29 +111,29 @@ from the transform:</p>
        </td>
      </tr>
      <tr>
-       <td>position</td>
+       <td><a href="PIXI.AnimatedSprite.html#position">position</a></td>
        <td>
-         Translation. This is the position of the pivot in the parent's local
+         Translation. This is the position of the PIXI.AnimatedSprite.html#pivot in the parent's local
          space. The default value of the pivot is the origin (0,0). If the top-left corner of your display object
          is (0,0) in its local space, then the position will be its top-left corner in the parent's local space.
        </td>
      </tr>
      <tr>
-       <td>scale</td>
+       <td><a href="PIXI.AnimatedSprite.html#scale">scale</a></td>
        <td>
          Scaling. This will stretch (or compress) the display object's projection. The scale factors are along the
          local coordinate axes. In other words, the display object is scaled before rotated or skewed. The center
-         of scaling is the pivot.
+         of scaling is the PIXI.AnimatedSprite.html#pivot.
        </td>
      </tr>
      <tr>
-       <td>rotation</td>
+       <td><a href="PIXI.AnimatedSprite.html#rotation">rotation</a></td>
        <td>
           Rotation. This will rotate the display object's projection by this angle (in radians).
        </td>
      </tr>
      <tr>
-       <td>skew</td>
+       <td><a href="PIXI.AnimatedSprite.html#skew">skew</a></td>
        <td>
          <p>Skewing. This can be used to deform a rectangular display object into a parallelogram.</p>
          <p>
@@ -155,7 +155,7 @@ from the transform:</p>
      </tr>
      <tr>
        <td>angle</td>
-       <td>Rotation. This is an alias for rotation, but in degrees.</td>
+       <td>Rotation. This is an alias for PIXI.AnimatedSprite.html#rotation, but in degrees.</td>
      </tr>
      <tr>
        <td>x</td>
@@ -168,7 +168,7 @@ from the transform:</p>
      <tr>
        <td>width</td>
        <td>
-         Implemented in <a href="PIXI.Container.html">Container</a>. Scaling. The width property calculates scale.x by dividing
+         Implemented in PIXI.Container.html. Scaling. The width property calculates scale.x by dividing
          the "requested" width by the local bounding box width. It is indirectly an abstraction over scale.x, and there
          is no concept of user-defined width.
        </td>
@@ -176,7 +176,7 @@ from the transform:</p>
      <tr>
        <td>height</td>
        <td>
-         Implemented in <a href="PIXI.Container.html">Container</a>. Scaling. The height property calculates scale.y by dividing
+         Implemented in PIXI.Container.html. Scaling. The height property calculates scale.y by dividing
          the "requested" height by the local bounding box height. It is indirectly an abstraction over scale.y, and there
          is no concept of user-defined height.
        </td>
@@ -232,7 +232,7 @@ around it. The abstract <code>calculateBounds</code> method is responsible for p
 <code>getLocalBounds</code> to work. This method must write the bounds into <code>this._bounds</code>.</p>
 <p>Generally, the following technique works for most simple cases: take the list of points
 forming the &quot;hull&quot; of the object (i.e. outline of the object's shape), and then add them
-using PIXI.Bounds#addPointMatrix.</p>
+using <a href="PIXI.Bounds.html#addPointMatrix">PIXI.Bounds#addPointMatrix</a>.</p>
 <pre><code class="hljs language-js">calculateBounds(): <span class="hljs-keyword">void</span>
 {
     <span class="hljs-keyword">const</span> points = [...];
@@ -243,13 +243,13 @@ using PIXI.Bounds#addPointMatrix.</p>
     }
 }
 </code></pre>
-<p>You can optimize this for a large number of points by using PIXI.Bounds#addVerticesMatrix to pass them
+<p>You can optimize this for a large number of points by using <a href="PIXI.Bounds.html#addVerticesMatrix">PIXI.Bounds#addVerticesMatrix</a> to pass them
 in one array together.</p>
 <h2>Alpha</h2>
 <p>This alpha sets a display object's <strong>relative opacity</strong> w.r.t its parent. For example, if the alpha of a display
 object is 0.5 and its parent's alpha is 0.5, then it will be rendered with 25% opacity (assuming alpha is not
 applied on any ancestor further up the chain).</p>
-<p>The alpha with which the display object will be rendered is called the worldAlpha.</p>
+<p>The alpha with which the display object will be rendered is called the <a href="PIXI.AnimatedSprite.html#worldAlpha">worldAlpha</a>.</p>
 <h2>Renderable vs Visible</h2>
 <p>The <code>renderable</code> and <code>visible</code> properties can be used to prevent a display object from being rendered to the
 screen. However, there is a subtle difference between the two. When using <code>renderable</code>, the transforms  of the display
@@ -306,7 +306,7 @@ one is also better in terms of performance.</p></div>
 <div class="member" id="_bounds">
   <h3 class="member__title">_bounds</h3>
   
-<pre class="signature__container"><code class="signature">_bounds: <a href="PIXI.Bounds.html">PIXI.Bounds</a></code></pre>
+<pre class="signature__container"><code class="signature">_bounds: PIXI.Bounds.html</code></pre>
 
 
   <div class="member__brief"><p>The bounds object, this is used to calculate and store the bounds of the displayObject.</p></div>
@@ -322,7 +322,7 @@ one is also better in terms of performance.</p></div>
 <div class="member" id="_localBounds">
   <h3 class="member__title">_localBounds</h3>
   
-<pre class="signature__container"><code class="signature">_localBounds: <a href="PIXI.Bounds.html">PIXI.Bounds</a></code></pre>
+<pre class="signature__container"><code class="signature">_localBounds: PIXI.Bounds.html</code></pre>
 
 
   <div class="member__brief"><p>Local bounds object, swapped with <code>_bounds</code> when using <code>getLocalBounds()</code>.</p></div>
@@ -557,7 +557,7 @@ is hovered over the displayObject.</p></div>
 <div class="member" id="filterArea">
   <h3 class="member__title">filterArea</h3>
   
-<pre class="signature__container"><code class="signature">filterArea: ?<a href="PIXI.Rectangle.html">PIXI.Rectangle</a></code></pre>
+<pre class="signature__container"><code class="signature">filterArea: ?PIXI.Rectangle.html</code></pre>
 
 
   <div class="member__brief"></div>
@@ -575,7 +575,7 @@ rather than figuring out the dimensions of the displayObject each frame you can 
 <div class="member" id="filters">
   <h3 class="member__title">filters</h3>
   
-<pre class="signature__container"><code class="signature">filters: Array&lt;<a href="PIXI.Filter.html">PIXI.Filter</a>></code></pre>
+<pre class="signature__container"><code class="signature">filters: Array&lt;PIXI.Filter.html></code></pre>
 
 
   <div class="member__brief"></div>
@@ -595,7 +595,7 @@ To remove filters simply set this property to <code>'null'</code>.</li>
 <div class="member" id="hitArea">
   <h3 class="member__title">hitArea</h3>
   
-<pre class="signature__container"><code class="signature">hitArea: <a href="PIXI.IHitArea.html">PIXI.IHitArea</a></code></pre>
+<pre class="signature__container"><code class="signature">hitArea: PIXI.IHitArea.html</code></pre>
 
 
   <div class="member__brief"></div>
@@ -661,7 +661,7 @@ events will not be emitted unless <code>interactive</code> is set to <code>true<
 <div class="member" id="localTransform">
   <h3 class="member__title">localTransform</h3>
   
-<pre class="signature__container"><code class="signature">localTransform: <a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+<pre class="signature__container"><code class="signature">localTransform: PIXI.Matrix.html</code></pre>
 
 
   <div class="member__brief"><p>Current transform of the object based on local factors: position, scale, other stuff.</p></div>
@@ -677,13 +677,13 @@ events will not be emitted unless <code>interactive</code> is set to <code>true<
 <div class="member" id="mask">
   <h3 class="member__title">mask</h3>
   
-<pre class="signature__container"><code class="signature">mask: <a href="PIXI.Container.html">PIXI.Container</a> | <a href="PIXI.MaskData.html">PIXI.MaskData</a> | unknown</code></pre>
+<pre class="signature__container"><code class="signature">mask: PIXI.Container.html | PIXI.MaskData.html | unknown</code></pre>
 
 
   <div class="member__brief"></div>
   <div class="member__description"><p>Sets a mask for the displayObject. A mask is an object that limits the visibility of an
 object to the shape of the mask applied to it. In PixiJS a regular mask must be a
-<a href="PIXI.Graphics.html">PIXI.Graphics</a> or a <a href="PIXI.Sprite.html">PIXI.Sprite</a> object. This allows for much faster masking in canvas as it
+PIXI.Graphics.html or a PIXI.Sprite.html object. This allows for much faster masking in canvas as it
 utilities shape clipping. To remove a mask, set this property to <code>null</code>.</p>
 <p>For sprite mask both alpha and red channel are used. Black mask is the same as transparent mask.</p></div>
 
@@ -713,7 +713,7 @@ utilities shape clipping. To remove a mask, set this property to <code>null</cod
 <div class="member" id="parent">
   <h3 class="member__title">parent</h3>
   
-<pre class="signature__container"><code class="signature">parent: <a href="PIXI.Container.html">PIXI.Container</a></code></pre>
+<pre class="signature__container"><code class="signature">parent: PIXI.Container.html</code></pre>
 
 
   <div class="member__brief"><p>The display object container that contains this display object.</p></div>
@@ -729,7 +729,7 @@ utilities shape clipping. To remove a mask, set this property to <code>null</cod
 <div class="member" id="pivot">
   <h3 class="member__title">pivot</h3>
   
-<pre class="signature__container"><code class="signature">pivot: <a href="PIXI.ObservablePoint.html">PIXI.ObservablePoint</a></code></pre>
+<pre class="signature__container"><code class="signature">pivot: PIXI.ObservablePoint.html</code></pre>
 
 
   <div class="member__brief"></div>
@@ -747,7 +747,7 @@ is the projection of <code>pivot</code> in the parent's local space.</p>
 <div class="member" id="position">
   <h3 class="member__title">position</h3>
   
-<pre class="signature__container"><code class="signature">position: <a href="PIXI.ObservablePoint.html">PIXI.ObservablePoint</a></code></pre>
+<pre class="signature__container"><code class="signature">position: PIXI.ObservablePoint.html</code></pre>
 
 
   <div class="member__brief"><p>The coordinate of the object relative to the local coordinates of the parent.</p></div>
@@ -798,7 +798,7 @@ methods will still be called.</p>
 <div class="member" id="scale">
   <h3 class="member__title">scale</h3>
   
-<pre class="signature__container"><code class="signature">scale: <a href="PIXI.ObservablePoint.html">PIXI.ObservablePoint</a></code></pre>
+<pre class="signature__container"><code class="signature">scale: PIXI.ObservablePoint.html</code></pre>
 
 
   <div class="member__brief"><p>The scale factors of this object along the local coordinate axes.</p></div>
@@ -814,7 +814,7 @@ methods will still be called.</p>
 <div class="member" id="skew">
   <h3 class="member__title">skew</h3>
   
-<pre class="signature__container"><code class="signature">skew: <a href="PIXI.ObservablePoint.html">PIXI.ObservablePoint</a></code></pre>
+<pre class="signature__container"><code class="signature">skew: PIXI.ObservablePoint.html</code></pre>
 
 
   <div class="member__brief"><p>The skew factor for the object in radians.</p></div>
@@ -830,7 +830,7 @@ methods will still be called.</p>
 <div class="member" id="smartMask">
   <h3 class="member__title">smartMask</h3>
   
-<pre class="signature__container"><code class="signature">smartMask: <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a></code></pre>
+<pre class="signature__container"><code class="signature">smartMask: PIXI.DisplayObject.html</code></pre>
 
 
   <div class="member__brief"></div>
@@ -847,7 +847,7 @@ methods will still be called.</p>
 <div class="member" id="transform">
   <h3 class="member__title">transform</h3>
   
-<pre class="signature__container"><code class="signature">transform: <a href="PIXI.Transform.html">PIXI.Transform</a></code></pre>
+<pre class="signature__container"><code class="signature">transform: PIXI.Transform.html</code></pre>
 
 
   <div class="member__brief"></div>
@@ -898,7 +898,7 @@ the updateTransform function will not be called.</p>
 <div class="member" id="worldTransform">
   <h3 class="member__title">worldTransform</h3>
   
-<pre class="signature__container"><code class="signature">worldTransform: <a href="PIXI.Matrix.html">PIXI.Matrix</a></code></pre>
+<pre class="signature__container"><code class="signature">worldTransform: PIXI.Matrix.html</code></pre>
 
 
   <div class="member__brief"><p>Current transform of the object based on world (parent) factors.</p></div>
@@ -1005,7 +1005,7 @@ and thus rendered on top of other display objects within the same container.</p>
 <div class="member" id="_boundsRect">
   <h3 class="member__title">_boundsRect</h3>
   
-<pre class="signature__container"><code class="signature">protected _boundsRect: <a href="PIXI.Bounds.html">PIXI.Bounds</a></code></pre>
+<pre class="signature__container"><code class="signature">protected _boundsRect: PIXI.Bounds.html</code></pre>
 
 
   <div class="member__brief"><p>Cache of this display-object's bounds-rectangle.</p></div>
@@ -1037,7 +1037,7 @@ and thus rendered on top of other display objects within the same container.</p>
 <div class="member" id="_enabledFilters">
   <h3 class="member__title">_enabledFilters</h3>
   
-<pre class="signature__container"><code class="signature">protected _enabledFilters: Array&lt;<a href="PIXI.Filter.html">PIXI.Filter</a>></code></pre>
+<pre class="signature__container"><code class="signature">protected _enabledFilters: Array&lt;PIXI.Filter.html></code></pre>
 
 
   <div class="member__brief"></div>
@@ -1070,7 +1070,7 @@ Used by containers to help sort objects with the same zIndex, by using previous 
 <div class="member" id="_localBoundsRect">
   <h3 class="member__title">_localBoundsRect</h3>
   
-<pre class="signature__container"><code class="signature">protected _localBoundsRect: <a href="PIXI.Bounds.html">PIXI.Bounds</a></code></pre>
+<pre class="signature__container"><code class="signature">protected _localBoundsRect: PIXI.Bounds.html</code></pre>
 
 
   <div class="member__brief"><p>Cache of this display-object's local-bounds rectangle.</p></div>
@@ -1086,7 +1086,7 @@ Used by containers to help sort objects with the same zIndex, by using previous 
 <div class="member" id="_mask">
   <h3 class="member__title">_mask</h3>
   
-<pre class="signature__container"><code class="signature">protected _mask: <a href="PIXI.Container.html">PIXI.Container</a> | <a href="PIXI.MaskData.html">PIXI.MaskData</a> | unknown</code></pre>
+<pre class="signature__container"><code class="signature">protected _mask: PIXI.Container.html | PIXI.MaskData.html | unknown</code></pre>
 
 
   <div class="member__brief"><p>The original, cached mask of the object.</p></div>
@@ -1102,7 +1102,7 @@ Used by containers to help sort objects with the same zIndex, by using previous 
 <div class="member" id="_tempDisplayObjectParent">
   <h3 class="member__title">_tempDisplayObjectParent</h3>
   
-<pre class="signature__container"><code class="signature">protected _tempDisplayObjectParent: <a href="PIXI.Container.html">PIXI.Container</a></code></pre>
+<pre class="signature__container"><code class="signature">protected _tempDisplayObjectParent: PIXI.Container.html</code></pre>
 
 
   <div class="member__brief"></div>
@@ -1438,8 +1438,8 @@ after calling <code>destroy()</code>.</p></div>
 <pre class="signature__container"><code class="signature">disableTempParent(cacheParent: <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>) → {void}</code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Pair method for <code>enableTempParent</code></p></div>
+  <div class="member__brief"><p>Pair method for <code>enableTempParent</code></p></div>
+  <div class="member__description"></div>
 
   
     
@@ -1465,7 +1465,7 @@ after calling <code>destroy()</code>.</p></div>
         </td>
         
         
-        <td class="member-parameter__description"><p>actual parent of element</p></td>
+        <td class="member-parameter__description"><p>Actual parent of element</p></td>
       </tr>
     </tbody>
   </table>
@@ -1560,7 +1560,7 @@ elem.disable<span class="hljs-constructor">TempParent(<span class="hljs-params">
 <pre class="signature__container"><code class="signature">getBounds(skipUpdate: boolean, rect: <a href="PIXI.Rectangle.html">PIXI.Rectangle</a>) → {<a href="PIXI.Rectangle.html">PIXI.Rectangle</a>}</code></pre>
 
 
-  <div class="member__brief"><p>Calculates and returns the (world) bounds of the display object as a <a href="PIXI.Rectangle.html">Rectangle</a>.</p></div>
+  <div class="member__brief"><p>Calculates and returns the (world) bounds of the display object as a PIXI.Rectangle.html.</p></div>
   <div class="member__description"><p>This method is expensive on containers with a large subtree (like the stage). This is because the bounds
 of a container depend on its children's bounds, which recursively causes all bounds in the subtree to
 be recalculated. The upside, however, is that calling <code>getBounds</code> once on a container will indeed update
@@ -1577,7 +1577,7 @@ calculation if needed.</p>
 <pre><code class="hljs language-js"><span class="hljs-keyword">const</span> lastCalculatedBounds = displayObject._bounds.getRectangle(optionalRect);
 </code></pre>
 <p>Do know that usage of <code>getLocalBounds</code> can corrupt the <code>_bounds</code> of children (the whole subtree, actually). This
-is a known issue that has not been solved. See getLocalBounds for more
+is a known issue that has not been solved. See PIXI.DisplayObject.html#getLocalBounds for more
 details.</p>
 <p><code>getBounds</code> should be called with <code>skipUpdate</code> equal to <code>true</code> in a render() call. This is because the transforms
 are guaranteed to be update-to-date. In fact, recalculating inside a render() call may cause corruption in certain
@@ -2426,85 +2426,85 @@ nice performance boost.</p></td>
   <h3 class="page-members-explorer-category__title">Public Properties</h3>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#_accessibleActive">_accessibleActive</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#_accessibleActive">_accessibleActive</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#_accessibleDiv">_accessibleDiv</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#_accessibleDiv">_accessibleDiv</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#_bounds">_bounds</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#_bounds">_bounds</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#_localBounds">_localBounds</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#_localBounds">_localBounds</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#accessible">accessible</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#accessible">accessible</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#accessibleChildren">accessibleChildren</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#accessibleChildren">accessibleChildren</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#accessibleHint">accessibleHint</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#accessibleHint">accessibleHint</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#accessiblePointerEvents">accessiblePointerEvents</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#accessiblePointerEvents">accessiblePointerEvents</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#accessibleTitle">accessibleTitle</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#accessibleTitle">accessibleTitle</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#accessibleType">accessibleType</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#accessibleType">accessibleType</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#alpha">alpha</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#alpha">alpha</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#angle">angle</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#angle">angle</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#buttonMode">buttonMode</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#buttonMode">buttonMode</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#cacheAsBitmap">cacheAsBitmap</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#cacheAsBitmap">cacheAsBitmap</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#cursor">cursor</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#cursor">cursor</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#filterArea">filterArea</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#filterArea">filterArea</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#filters">filters</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#filters">filters</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#hitArea">hitArea</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#hitArea">hitArea</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#interactive">interactive</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#interactive">interactive</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#isMask">isMask</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#isMask">isMask</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#isSprite">isSprite</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.BitmapText.html#isSprite">isSprite</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#localTransform">localTransform</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#localTransform">localTransform</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#mask">mask</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#mask">mask</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#name">name</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#name">name</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#parent">parent</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#parent">parent</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#pivot">pivot</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#pivot">pivot</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#position">position</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#position">position</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#renderable">renderable</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#renderable">renderable</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#rotation">rotation</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#rotation">rotation</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#scale">scale</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#scale">scale</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#skew">skew</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#skew">skew</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#smartMask">smartMask</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#smartMask">smartMask</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#transform">transform</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#transform">transform</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#visible">visible</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#visible">visible</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#worldAlpha">worldAlpha</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#worldAlpha">worldAlpha</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#worldTransform">worldTransform</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#worldTransform">worldTransform</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#worldVisible">worldVisible</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#worldVisible">worldVisible</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#x">x</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#x">x</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#y">y</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#y">y</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#zIndex">zIndex</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#zIndex">zIndex</a></li>
     
   </ul>
 </div>
@@ -2515,23 +2515,23 @@ nice performance boost.</p></td>
   <h3 class="page-members-explorer-category__title">Protected Properties</h3>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#_boundsID">_boundsID</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#_boundsID">_boundsID</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#_boundsRect">_boundsRect</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#_boundsRect">_boundsRect</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#_destroyed">_destroyed</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#_destroyed">_destroyed</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#_enabledFilters">_enabledFilters</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#_enabledFilters">_enabledFilters</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#_lastSortedIndex">_lastSortedIndex</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#_lastSortedIndex">_lastSortedIndex</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#_localBoundsRect">_localBoundsRect</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#_localBoundsRect">_localBoundsRect</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#_mask">_mask</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#_mask">_mask</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#_tempDisplayObjectParent">_tempDisplayObjectParent</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#_tempDisplayObjectParent">_tempDisplayObjectParent</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#_zIndex">_zIndex</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#_zIndex">_zIndex</a></li>
     
   </ul>
 </div>
@@ -2546,33 +2546,33 @@ nice performance boost.</p></td>
     
       <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#updateSmartMask">updateSmartMask</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#_recursivePostUpdateTransform">_recursivePostUpdateTransform</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#_recursivePostUpdateTransform">_recursivePostUpdateTransform</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#calculateBounds">calculateBounds</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#destroy">destroy</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#disableTempParent">disableTempParent</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#disableTempParent">disableTempParent</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#displayObjectUpdateTransform">displayObjectUpdateTransform</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#displayObjectUpdateTransform">displayObjectUpdateTransform</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#enableTempParent">enableTempParent</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#enableTempParent">enableTempParent</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#getBounds">getBounds</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#getBounds">getBounds</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#getGlobalPosition">getGlobalPosition</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#getGlobalPosition">getGlobalPosition</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#getLocalBounds">getLocalBounds</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#render">render</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#setParent">setParent</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#setParent">setParent</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#setTransform">setTransform</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#setTransform">setTransform</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#toGlobal">toGlobal</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#toGlobal">toGlobal</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#toLocal">toLocal</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.AnimatedSprite.html#toLocal">toLocal</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.DisplayObject.html#updateTransform">updateTransform</a></li>
     

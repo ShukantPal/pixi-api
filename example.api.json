@@ -2669,6 +2669,14 @@
 									"description": ""
 								},
 								{
+									"name": "_indexCountProperty",
+									"type": "PropertyDoc",
+									"access": "protected",
+									"scope": "instance",
+									"brief": "",
+									"description": ""
+								},
+								{
 									"name": "geometryMerger",
 									"type": "PropertyDoc",
 									"access": "protected",
@@ -2754,8 +2762,8 @@
 									"type": "PropertyDoc",
 									"access": "protected",
 									"scope": "instance",
-									"brief": "",
-									"description": "<p>Attribute redirects</p>"
+									"brief": "<p>Attribute redirects</p>",
+									"description": ""
 								},
 								{
 									"name": "_BatchDrawerClass",
@@ -2814,12 +2822,20 @@
 									"description": "<p>Indexes the display-object in the batch.</p>"
 								},
 								{
-									"name": "_indexProperty",
+									"name": "_indexCountProperty",
 									"type": "PropertyDoc",
 									"access": "protected",
 									"scope": "instance",
 									"brief": "",
-									"description": "<p>Indices property</p>"
+									"description": "<p>A manual resolution of the number of indicies in a display object's geometry. This is ignored if the\nindex buffer is not used (see _indexProperty). If not provided, the index buffer's entire length\nis used.</p>"
+								},
+								{
+									"name": "_indexProperty",
+									"type": "PropertyDoc",
+									"access": "protected",
+									"scope": "instance",
+									"brief": "<p>Indices property</p>",
+									"description": ""
 								},
 								{
 									"name": "_shaderFunction",
@@ -2883,7 +2899,7 @@
 									"access": "protected",
 									"scope": "instance",
 									"brief": "",
-									"description": "<p>Vertex count property (optional)</p>"
+									"description": "<p>A manual resolution of the number of vertices in a display object's geometry. If not provided, this is\ncalculated as the number of element in the first attribute's buffer.</p>"
 								},
 								{
 									"name": "options",
@@ -2892,6 +2908,20 @@
 									"scope": "instance",
 									"brief": "",
 									"description": "<p>The options used to create this batch renderer.</p>"
+								},
+								{
+									"name": "calculateIndexCount",
+									"type": "MethodDoc",
+									"scope": "instance",
+									"brief": "<p>Calculates the number of indices in the display object's geometry.</p>",
+									"description": ""
+								},
+								{
+									"name": "calculateVertexCount",
+									"type": "MethodDoc",
+									"scope": "instance",
+									"brief": "<p>Calculates the number of vertices in the display object's geometry.</p>",
+									"description": ""
 								},
 								{
 									"name": "constructor",
@@ -3707,6 +3737,13 @@
 							"type": "MethodDoc",
 							"scope": "instance",
 							"brief": "<p>Set a resource by ID</p>",
+							"description": ""
+						},
+						{
+							"name": "constructor",
+							"type": "MethodDoc",
+							"scope": "instance",
+							"brief": "",
 							"description": ""
 						},
 						{
@@ -4965,8 +5002,8 @@
 							"name": "disableTempParent",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Pair method for <code>enableTempParent</code></p>"
+							"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+							"description": ""
 						},
 						{
 							"name": "displayObjectUpdateTransform",
@@ -7748,6 +7785,13 @@
 							"description": ""
 						},
 						{
+							"name": "_roundPixels",
+							"type": "PropertyDoc",
+							"scope": "instance",
+							"brief": "<p>If true PixiJS will Math.floor() x/y values when rendering</p>",
+							"description": ""
+						},
+						{
 							"name": "accessible",
 							"type": "PropertyDoc",
 							"scope": "instance",
@@ -8009,6 +8053,7 @@
 						{
 							"name": "roundPixels",
 							"type": "PropertyDoc",
+							"access": "public",
 							"scope": "instance",
 							"brief": "",
 							"description": "<p>If true PixiJS will Math.floor() x/y values when rendering, stopping pixel interpolation.\nAdvantages can include sharper image quality (like text) and faster rendering on canvas.\nThe main disadvantage is movement of objects may appear less smooth.\nTo set the global default, change {@link PIXI.settings.ROUND_PIXELS}</p>"
@@ -8393,8 +8438,8 @@
 							"name": "disableTempParent",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Pair method for <code>enableTempParent</code></p>"
+							"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+							"description": ""
 						},
 						{
 							"name": "displayObjectUpdateTransform",
@@ -10780,8 +10825,8 @@
 							"name": "disableTempParent",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Pair method for <code>enableTempParent</code></p>"
+							"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+							"description": ""
 						},
 						{
 							"name": "displayObjectUpdateTransform",
@@ -12255,8 +12300,8 @@
 							"name": "disableTempParent",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Pair method for <code>enableTempParent</code></p>"
+							"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+							"description": ""
 						},
 						{
 							"name": "displayObjectUpdateTransform",
@@ -14565,8 +14610,8 @@
 							"name": "disableTempParent",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Pair method for <code>enableTempParent</code></p>"
+							"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+							"description": ""
 						},
 						{
 							"name": "displayObjectUpdateTransform",
@@ -18366,8 +18411,8 @@
 							"name": "disableTempParent",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Pair method for <code>enableTempParent</code></p>"
+							"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+							"description": ""
 						},
 						{
 							"name": "displayObjectUpdateTransform",
@@ -19887,8 +19932,8 @@
 							"name": "disableTempParent",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Pair method for <code>enableTempParent</code></p>"
+							"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+							"description": ""
 						},
 						{
 							"name": "displayObjectUpdateTransform",
@@ -21070,8 +21115,8 @@
 							"name": "disableTempParent",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Pair method for <code>enableTempParent</code></p>"
+							"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+							"description": ""
 						},
 						{
 							"name": "displayObjectUpdateTransform",
@@ -24694,8 +24739,8 @@
 							"name": "disableTempParent",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Pair method for <code>enableTempParent</code></p>"
+							"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+							"description": ""
 						},
 						{
 							"name": "displayObjectUpdateTransform",
@@ -25843,8 +25888,8 @@
 							"name": "disableTempParent",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Pair method for <code>enableTempParent</code></p>"
+							"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+							"description": ""
 						},
 						{
 							"name": "displayObjectUpdateTransform",
@@ -26991,8 +27036,8 @@
 							"name": "disableTempParent",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Pair method for <code>enableTempParent</code></p>"
+							"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+							"description": ""
 						},
 						{
 							"name": "displayObjectUpdateTransform",
@@ -28142,8 +28187,8 @@
 							"name": "disableTempParent",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Pair method for <code>enableTempParent</code></p>"
+							"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+							"description": ""
 						},
 						{
 							"name": "displayObjectUpdateTransform",
@@ -30200,8 +30245,8 @@
 							"name": "disableTempParent",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Pair method for <code>enableTempParent</code></p>"
+							"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+							"description": ""
 						},
 						{
 							"name": "displayObjectUpdateTransform",
@@ -32787,8 +32832,8 @@
 							"name": "disableTempParent",
 							"type": "MethodDoc",
 							"scope": "instance",
-							"brief": "",
-							"description": "<p>Pair method for <code>enableTempParent</code></p>"
+							"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+							"description": ""
 						},
 						{
 							"name": "displayObjectUpdateTransform",
@@ -37440,6 +37485,92 @@
 			]
 		},
 		{
+			"name": "BufferInvalidation",
+			"type": "ClassDoc",
+			"brief": "<p>A buffer invalidation records a region of data that has changed across frames.</p>",
+			"description": "",
+			"children": [
+				{
+					"name": "clone",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Clone this object, used for debugging only</p>",
+					"description": ""
+				},
+				{
+					"name": "constructor",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "init",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Initialize the invalidation tracking data.</p>",
+					"description": ""
+				}
+			]
+		},
+		{
+			"name": "BufferInvalidationQueue",
+			"type": "ClassDoc",
+			"brief": "<p>The buffer invalidation queue manages a singly-linked list of buffer invalidations.</p>",
+			"description": "",
+			"children": [
+				{
+					"name": "append",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Appends the invalidation-node to this queue</p>",
+					"description": ""
+				},
+				{
+					"name": "append",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Appends an invalidation from offset with the given size.</p>",
+					"description": ""
+				},
+				{
+					"name": "clear",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Clears this queue, and returns the nodes to {@code BufferInvalidationPool}.</p>",
+					"description": ""
+				},
+				{
+					"name": "coalesce",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Coalesces {@code node} and its successor {@code node.next} into one. The successor is released from the\nqueue.</p>"
+				},
+				{
+					"name": "constructor",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "isEmpty",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "partition",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>This will repartition the invalidated buffer indices into fewer, larger segments. This is mainly used to avoid\nissuing too many <code>bufferSubData</code> when sparse, small changes occur in the geometry.</p>"
+				}
+			]
+		},
+		{
 			"name": "BufferPool",
 			"type": "ClassDoc",
 			"brief": "<p>Pool for any array-like type.</p>",
@@ -37447,6 +37578,35 @@
 			"children": [
 				{
 					"name": "allocateBuffer",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "constructor",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "releaseBuffer",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				}
+			]
+		},
+		{
+			"name": "CanvasTileRenderer",
+			"type": "ClassDoc",
+			"brief": "",
+			"description": "",
+			"children": [
+				{
+					"name": "constructor",
 					"type": "MethodDoc",
 					"scope": "instance",
 					"brief": "",
@@ -37956,20 +38116,6 @@
 					"description": ""
 				},
 				{
-					"name": "addFrame",
-					"type": "MethodDoc",
-					"scope": "instance",
-					"brief": "",
-					"description": ""
-				},
-				{
-					"name": "addRect",
-					"type": "MethodDoc",
-					"scope": "instance",
-					"brief": "",
-					"description": ""
-				},
-				{
 					"name": "calculateBounds",
 					"type": "MethodDoc",
 					"scope": "instance",
@@ -37978,20 +38124,6 @@
 				},
 				{
 					"name": "clear",
-					"type": "MethodDoc",
-					"scope": "instance",
-					"brief": "",
-					"description": ""
-				},
-				{
-					"name": "clearModify",
-					"type": "MethodDoc",
-					"scope": "instance",
-					"brief": "",
-					"description": ""
-				},
-				{
-					"name": "constructor",
 					"type": "MethodDoc",
 					"scope": "instance",
 					"brief": "",
@@ -38015,8 +38147,8 @@
 					"name": "disableTempParent",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
-					"description": "<p>Pair method for <code>enableTempParent</code></p>"
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
 				},
 				{
 					"name": "displayObjectUpdateTransform",
@@ -38113,8 +38245,8 @@
 					"name": "render",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
-					"description": ""
+					"brief": "<p>Renders the object using the WebGL renderer.</p>",
+					"description": "<p>The [_render]{@link PIXI.Container#_render} method is be overriden for rendering the contents of the\ncontainer itself. This <code>render</code> method will invoke it, and also invoke the <code>render</code> methods of all\nchildren afterward.</p>\n<p>If <code>renderable</code> or <code>visible</code> is false or if <code>worldAlpha</code> is not positive, this implementation will entirely\nskip rendering. See {@link PIXI.DisplayObject} for choosing between <code>renderable</code> or <code>visible</code>. Generally,\nsetting alpha to zero is not recommended for purely skipping rendering.</p>\n<p>When your scene becomes large (especially when it is larger than can be viewed in a single screen), it is\nadvised to employ <strong>culling</strong> to automatically skip rendering objects outside of the current screen. The\n[@pixi-essentials/cull]{@link https://www.npmjs.com/package/@pixi-essentials/cull} and\n[pixi-cull]{@link https://www.npmjs.com/package/pixi-cull} packages do this out of the box.</p>\n<p>The [renderAdvanced]{@link PIXI.Container#renderAdvanced} method is internally used when when masking or\nfiltering is applied on a container. This does, however, break batching and can affect performance when\nmasking and filtering is applied extensively throughout the scene graph.</p>"
 				},
 				{
 					"name": "renderCanvas",
@@ -38125,13 +38257,6 @@
 				},
 				{
 					"name": "renderWebGL",
-					"type": "MethodDoc",
-					"scope": "instance",
-					"brief": "",
-					"description": ""
-				},
-				{
-					"name": "setBitmaps",
 					"type": "MethodDoc",
 					"scope": "instance",
 					"brief": "",
@@ -38170,13 +38295,6 @@
 					"type": "MethodDoc",
 					"scope": "instance",
 					"brief": "<p>Swaps the position of 2 Display Objects within this container.</p>",
-					"description": ""
-				},
-				{
-					"name": "tileAnimX",
-					"type": "MethodDoc",
-					"scope": "instance",
-					"brief": "",
 					"description": ""
 				},
 				{
@@ -39168,8 +39286,8 @@
 					"name": "disableTempParent",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
-					"description": "<p>Pair method for <code>enableTempParent</code></p>"
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
 				},
 				{
 					"name": "displayObjectUpdateTransform",
@@ -40079,6 +40197,14 @@
 					"access": "protected",
 					"scope": "instance",
 					"brief": "<p>Batch geometries that can be reused.</p>",
+					"description": ""
+				},
+				{
+					"name": "_indexCountProperty",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
 					"description": ""
 				},
 				{
@@ -41014,8 +41140,8 @@
 					"name": "disableTempParent",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
-					"description": "<p>Pair method for <code>enableTempParent</code></p>"
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
 				},
 				{
 					"name": "displayObjectUpdateTransform",
@@ -42683,8 +42809,8 @@
 					"name": "disableTempParent",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
-					"description": "<p>Pair method for <code>enableTempParent</code></p>"
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
 				},
 				{
 					"name": "displayObjectUpdateTransform",
@@ -44408,8 +44534,8 @@
 					"name": "disableTempParent",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
-					"description": "<p>Pair method for <code>enableTempParent</code></p>"
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
 				},
 				{
 					"name": "displayObjectUpdateTransform",
@@ -45760,8 +45886,8 @@
 					"name": "disableTempParent",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
-					"description": "<p>Pair method for <code>enableTempParent</code></p>"
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
 				},
 				{
 					"name": "displayObjectUpdateTransform",
@@ -47161,8 +47287,8 @@
 					"name": "disableTempParent",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
-					"description": "<p>Pair method for <code>enableTempParent</code></p>"
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
 				},
 				{
 					"name": "displayObjectUpdateTransform",
@@ -48538,8 +48664,8 @@
 					"name": "disableTempParent",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
-					"description": "<p>Pair method for <code>enableTempParent</code></p>"
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
 				},
 				{
 					"name": "displayObjectUpdateTransform",
@@ -49778,8 +49904,8 @@
 					"name": "disableTempParent",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
-					"description": "<p>Pair method for <code>enableTempParent</code></p>"
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
 				},
 				{
 					"name": "displayObjectUpdateTransform",
@@ -50796,8 +50922,8 @@
 					"name": "disableTempParent",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
-					"description": "<p>Pair method for <code>enableTempParent</code></p>"
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
 				},
 				{
 					"name": "displayObjectUpdateTransform",
@@ -51761,8 +51887,8 @@
 					"name": "disableTempParent",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
-					"description": "<p>Pair method for <code>enableTempParent</code></p>"
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
 				},
 				{
 					"name": "displayObjectUpdateTransform",
@@ -52702,8 +52828,8 @@
 					"name": "disableTempParent",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
-					"description": "<p>Pair method for <code>enableTempParent</code></p>"
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
 				},
 				{
 					"name": "displayObjectUpdateTransform",
@@ -53566,8 +53692,8 @@
 					"name": "disableTempParent",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
-					"description": "<p>Pair method for <code>enableTempParent</code></p>"
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
 				},
 				{
 					"name": "displayObjectUpdateTransform",
@@ -54715,8 +54841,8 @@
 					"name": "disableTempParent",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
-					"description": "<p>Pair method for <code>enableTempParent</code></p>"
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
 				},
 				{
 					"name": "displayObjectUpdateTransform",
@@ -55957,8 +56083,8 @@
 					"name": "disableTempParent",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
-					"description": "<p>Pair method for <code>enableTempParent</code></p>"
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
 				},
 				{
 					"name": "displayObjectUpdateTransform",
@@ -57146,8 +57272,8 @@
 					"name": "disableTempParent",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
-					"description": "<p>Pair method for <code>enableTempParent</code></p>"
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
 				},
 				{
 					"name": "displayObjectUpdateTransform",
@@ -57947,15 +58073,15 @@
 			"description": ""
 		},
 		{
-			"name": "INTERNAL_FORMAT_TO_BASIS_FORMAT",
+			"name": "INSIG_REGION_DIST",
 			"type": "PropertyDoc",
-			"brief": "<p>Maps {@link PIXI.INTERNAL_FORMATS} to {@link BASIS_FORMATS}</p>",
+			"brief": "<p>20% of {@link SIG_REGION_LEN}</p>",
 			"description": ""
 		},
 		{
-			"name": "MAX_INVALIDATIONS",
+			"name": "INTERNAL_FORMAT_TO_BASIS_FORMAT",
 			"type": "PropertyDoc",
-			"brief": "<p>The maximum number of invalidations allowed per buffer.</p>",
+			"brief": "<p>Maps {@link PIXI.INTERNAL_FORMATS} to {@link BASIS_FORMATS}</p>",
 			"description": ""
 		},
 		{
@@ -57963,12 +58089,6 @@
 			"type": "PropertyDoc",
 			"brief": "<p>An array of all {@link ScaleHandle} values.</p>",
 			"description": ""
-		},
-		{
-			"name": "SIG_REGION_LEN",
-			"type": "PropertyDoc",
-			"brief": "",
-			"description": "<p>The minimum length of a &quot;significant&quot; invalidation. Two significant invalidations can be separated\nby at most 20% of their lengths, unless the number of regions is below {@link MAX_INVALIDATIONS}.</p>\n<p>This is also the maximum length of an &quot;insignificant&quot; invalidation. Two insignifant invalidations\nshould always be merged if they are less away than 20% of {@code SIG_REGION_LEN}.</p>"
 		},
 		{
 			"name": "Transformer",
@@ -58030,7 +58150,7 @@
 			"description": ""
 		},
 		{
-			"name": "_compileVertexCountExpression",
+			"name": "_sizeOf",
 			"type": "MethodDoc",
 			"scope": "instance",
 			"brief": "",
@@ -58052,6 +58172,13 @@
 		},
 		{
 			"name": "compile",
+			"type": "MethodDoc",
+			"scope": "instance",
+			"brief": "",
+			"description": ""
+		},
+		{
+			"name": "generateVertexCountExpr",
 			"type": "MethodDoc",
 			"scope": "instance",
 			"brief": "",
@@ -58107,13 +58234,6 @@
 			"description": ""
 		},
 		{
-			"name": "uniformsPerBatch",
-			"type": "MethodDoc",
-			"scope": "instance",
-			"brief": "",
-			"description": ""
-		},
-		{
 			"name": "uvec3",
 			"type": "MethodDoc",
 			"scope": "instance",
@@ -58140,12 +58260,6 @@
 			"access": "private",
 			"scope": "static",
 			"brief": "<p>returns a little WebGL context to use for program inspection.</p>",
-			"description": ""
-		},
-		{
-			"name": "_replaceAll",
-			"type": "FunctionDoc",
-			"brief": "",
 			"description": ""
 		},
 		{
@@ -58292,6 +58406,12 @@
 		},
 		{
 			"name": "inDash",
+			"type": "FunctionDoc",
+			"brief": "",
+			"description": ""
+		},
+		{
+			"name": "injectTexturesPerBatch",
 			"type": "FunctionDoc",
 			"brief": "",
 			"description": ""
@@ -58498,7 +58618,7 @@
 			"description": ""
 		},
 		{
-			"name": "resolveFunctionOrProperty",
+			"name": "resolveConstantOrProperty",
 			"type": "FunctionDoc",
 			"brief": "",
 			"description": ""
@@ -58528,12 +58648,6 @@
 					"description": "<p>Puts the text {@code content} into the local space of the engine at {@code position}. {@code matrix} can\nbe used to transform the glyphs, although it is as optional feature for implementations.</p>"
 				}
 			]
-		},
-		{
-			"name": "uploadBuffer",
-			"type": "FunctionDoc",
-			"brief": "",
-			"description": ""
 		},
 		{
 			"name": "areArraysEqual",

@@ -34,15 +34,15 @@
 graphics memory, increasing memory locality and speeding up texture fetches. These formats can also be used to store
 more detail in the same amount of memory.</p>
 <p>For most developers, container file formats are a better abstraction instead of directly handling raw texture
-data. PixiJS provides native support for the following texture file formats (via <a href="PIXI.Loader.html">PIXI.Loader</a>):</p>
+data. PixiJS provides native support for the following texture file formats (via PIXI.Loader.html):</p>
 <ul>
-<li><strong>.dds</strong> - the DirectDraw Surface file format stores DXTn (DXT-1,3,5) data. See <a href="PIXI.DDSLoader.html">PIXI.DDSLoader</a></li>
+<li><strong>.dds</strong> - the DirectDraw Surface file format stores DXTn (DXT-1,3,5) data. See PIXI.DDSLoader.html</li>
 <li><strong>.ktx</strong> - the Khronos Texture Container file format supports storing all the supported WebGL compression formats.
-See <a href="PIXI.KTXLoader.html">PIXI.KTXLoader</a>.</li>
+See PIXI.KTXLoader.html.</li>
 <li><strong>.basis</strong> - the BASIS supercompressed file format stores texture data in an internal format that is transcoded
 to the compression format supported on the device at <em>runtime</em>. It also supports transcoding into a uncompressed
 format as a fallback; you must install the <code>@pixi/basis-loader</code>, <code>@pixi/basis-transcoder</code> packages separately to
-use these files. See <a href="PIXI.BasisLoader.html">PIXI.BasisLoader</a>.</li>
+use these files. See PIXI.BasisLoader.html.</li>
 </ul>
 <p>The loaders for the aforementioned formats use <code>CompressedTextureResource</code> internally. It is strongly suggested that
 they be used instead.</p>
@@ -482,13 +482,13 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
   <h3 class="page-members-explorer-category__title">Public Properties</h3>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="PIXI.CompressedTextureResource.html#buffer">buffer</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.resources.BlobResource.html#buffer">buffer</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.CompressedTextureResource.html#format">format</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.CompressedTextureResource.html#levels">levels</a></li>
     
-      <li class="page-members-explorer__item"><a href="PIXI.CompressedTextureResource.html#origin">origin</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.resources.BlobResource.html#origin">origin</a></li>
     
   </ul>
 </div>
@@ -500,7 +500,7 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
   <h3 class="page-members-explorer-category__title">Public Methods</h3>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="PIXI.CompressedTextureResource.html#load">load</a></li>
+      <li class="page-members-explorer__item"><a href="PIXI.resources.BlobResource.html#load">load</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.CompressedTextureResource.html#upload">upload</a></li>
     

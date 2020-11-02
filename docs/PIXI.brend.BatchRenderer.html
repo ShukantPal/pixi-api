@@ -46,12 +46,12 @@ instance of PIXI.brend.BatchFactory.</p>
 </li>
 <li>
 <p><strong>Geometry Composition</strong>: The geometries of all display-objects are merged together in a
-composite geometry. This is done using an instance of <a href="PIXI.brend.BatchGeometryFactory.html">PIXI.brend.BatchGeometryFactory</a>.</p>
+composite geometry. This is done using an instance of PIXI.brend.BatchGeometryFactory.html.</p>
 </li>
 <li>
 <p><strong>Drawing</strong>: Each batch is rendered in-order using <code>gl.draw*</code>. The textures and
 uniforms of each display-object are uploaded as arrays. This is done using an instance of
-<a href="PIXI.brend.BatchDrawer.html">PIXI.brend.BatchDrawer</a>.</p>
+PIXI.brend.BatchDrawer.html.</p>
 </li>
 </ul>
 <p>Each stage in this pipeline can be configured by overriding the appropriate component and passing that
@@ -61,7 +61,7 @@ class to <code>BatchRendererPluginFactory.from*</code>.</p>
 <p>Since the max. display-object count per batch is not known until the WebGL context is created,
 shaders are generated at runtime by processing shader templates. A shader templates has &quot;%macros%&quot;
 that are replaced by constants at runtime.</p>
-<p>To use shader templates, simply use PIXI.brend.BatchShaderFactory#derive. This will generate a
+<p>To use shader templates, simply use <a href="PIXI.brend.BatchShaderFactory.html#derive">PIXI.brend.BatchShaderFactory#derive</a>. This will generate a
 function that derives a shader from your template at runtime.</p>
 <h3>Textures</h3>
 <p>The batch renderer uploads textures in the <code>uniform sampler2D uSamplers[%texturesPerBatch%];</code>. The
@@ -365,7 +365,7 @@ BatchGeometryFactory#append and sets the {@code _masterIDAttrib}.</p></div>
 <div class="member" id="renderer">
   <h3 class="member__title">renderer</h3>
   
-<pre class="signature__container"><code class="signature">renderer: <a href="PIXI.Renderer.html">PIXI.Renderer</a></code></pre>
+<pre class="signature__container"><code class="signature">renderer: PIXI.Renderer.html</code></pre>
 
 
   <div class="member__brief"><p>The renderer this manager works for.</p></div>
@@ -388,11 +388,11 @@ BatchGeometryFactory#append and sets the {@code _masterIDAttrib}.</p></div>
 <div class="member" id="_attribRedirects">
   <h3 class="member__title">_attribRedirects</h3>
   
-<pre class="signature__container"><code class="signature">protected _attribRedirects: Array&lt;<a href="PIXI.brend.AttributeRedirect.html">PIXI.brend.AttributeRedirect</a>></code></pre>
+<pre class="signature__container"><code class="signature">protected _attribRedirects</code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Attribute redirects</p></div>
+  <div class="member__brief"><p>Attribute redirects</p></div>
+  <div class="member__description"></div>
 
   
 
@@ -513,14 +513,32 @@ BatchGeometryFactory#append and sets the {@code _masterIDAttrib}.</p></div>
 
   
     
-<div class="member" id="_indexProperty">
-  <h3 class="member__title">_indexProperty</h3>
+<div class="member" id="_indexCountProperty">
+  <h3 class="member__title">_indexCountProperty</h3>
   
-<pre class="signature__container"><code class="signature">protected _indexProperty: string</code></pre>
+<pre class="signature__container"><code class="signature">protected _indexCountProperty</code></pre>
 
 
   <div class="member__brief"></div>
-  <div class="member__description"><p>Indices property</p></div>
+  <div class="member__description"><p>A manual resolution of the number of indicies in a display object's geometry. This is ignored if the
+index buffer is not used (see _indexProperty). If not provided, the index buffer's entire length
+is used.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_indexProperty">
+  <h3 class="member__title">_indexProperty</h3>
+  
+<pre class="signature__container"><code class="signature">protected _indexProperty</code></pre>
+
+
+  <div class="member__brief"><p>Indices property</p></div>
+  <div class="member__description"></div>
 
   
 
@@ -629,7 +647,7 @@ in-batch ID because equal uniforms are not uploaded twice.</p></div>
 <div class="member" id="_uniformRedirects">
   <h3 class="member__title">_uniformRedirects</h3>
   
-<pre class="signature__container"><code class="signature">protected _uniformRedirects: Array&lt;<a href="PIXI.brend.UniformRedirect.html">PIXI.brend.UniformRedirect</a>></code></pre>
+<pre class="signature__container"><code class="signature">protected _uniformRedirects: Array&lt;PIXI.brend.UniformRedirect.html></code></pre>
 
 
   <div class="member__brief"></div>
@@ -646,11 +664,12 @@ batch factories (like <code>PIXI.brend.AggregateUniformsBatchFactory</code>).</p
 <div class="member" id="_vertexCountProperty">
   <h3 class="member__title">_vertexCountProperty</h3>
   
-<pre class="signature__container"><code class="signature">protected _vertexCountProperty: string</code></pre>
+<pre class="signature__container"><code class="signature">protected _vertexCountProperty</code></pre>
 
 
   <div class="member__brief"></div>
-  <div class="member__description"><p>Vertex count property (optional)</p></div>
+  <div class="member__description"><p>A manual resolution of the number of vertices in a display object's geometry. If not provided, this is
+calculated as the number of element in the first attribute's buffer.</p></div>
 
   
 
@@ -679,6 +698,138 @@ batch factories (like <code>PIXI.brend.AggregateUniformsBatchFactory</code>).</p
     
 <div class="members">
   <h2 class="members__category">Public Methods</h2>
+
+  
+    
+<div class="member" id="calculateIndexCount">
+  <h3 class="member__title">calculateIndexCount</h3>
+  
+<pre class="signature__container"><code class="signature">calculateIndexCount(object: <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>) → {number}</code></pre>
+
+
+  <div class="member__brief"><p>Calculates the number of indices in the display object's geometry.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          object
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        number
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+
+  
+    
+<div class="member" id="calculateVertexCount">
+  <h3 class="member__title">calculateVertexCount</h3>
+  
+<pre class="signature__container"><code class="signature">calculateVertexCount(object: <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>) → {number}</code></pre>
+
+
+  <div class="member__brief"><p>Calculates the number of vertices in the display object's geometry.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          object
+        </td>
+        <td class="member-parameter__type">
+          <a href="PIXI.DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<table class="member-returns">
+  <caption class="member-returns__caption">Returns:</caption>
+  <thead class="member-returns__head">
+    <tr class="member-returns-header">
+      <th class="member-returns-header__type">Type</th>
+      <th class="member-returns-header__description">Description</th>
+    </tr>
+  </thead>
+  <tbody class="member-returns__body">
+    <tr class="member-return">
+      <td class="member-return__type">
+        number
+      </td>
+      <td class="member-return__description"></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
 
   
     
@@ -985,6 +1136,8 @@ This is automatically invoked by the renderer's batch system.</p></div>
     
       <li class="page-members-explorer__item"><a href="PIXI.brend.BatchRenderer.html#_inBatchIDAttrib">_inBatchIDAttrib</a></li>
     
+      <li class="page-members-explorer__item"><a href="PIXI.brend.BatchRenderer.html#_indexCountProperty">_indexCountProperty</a></li>
+    
       <li class="page-members-explorer__item"><a href="PIXI.brend.BatchRenderer.html#_indexProperty">_indexProperty</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.brend.BatchRenderer.html#_shaderFunction">_shaderFunction</a></li>
@@ -1013,6 +1166,10 @@ This is automatically invoked by the renderer's batch system.</p></div>
 <div class="page-members-explorer-category">
   <h3 class="page-members-explorer-category__title">Public Methods</h3>
   <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.BatchRenderer.html#calculateIndexCount">calculateIndexCount</a></li>
+    
+      <li class="page-members-explorer__item"><a href="PIXI.brend.BatchRenderer.html#calculateVertexCount">calculateVertexCount</a></li>
     
       <li class="page-members-explorer__item"><a href="PIXI.brend.BatchRenderer.html#contextChange">contextChange</a></li>
     
