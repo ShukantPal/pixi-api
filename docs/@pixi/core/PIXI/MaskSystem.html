@@ -1,0 +1,841 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: MaskSystem</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi/core
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a>
+        &gt;
+      
+      <span>MaskSystem</span>
+    </div>
+    <h1 class="document__title">PIXI.MaskSystem</h1>
+    
+<pre class="signature__container"><code class="signature">class MaskSystem extends <a href="/pixi-api/@pixi/core/PIXI/System.html">PIXI.System</a></code></pre>
+
+
+    <div class="document__brief"><p>System plugin to the renderer to manage masks.</p></div>
+    <div class="document__description"><p>There are three built-in types of masking:</p>
+<ul>
+<li><strong>Scissor Masking</strong>: Scissor masking discards pixels that are outside of a rectangle called the scissor box. It is
+the most performant as the scissor test is inexpensive. However, it can only be used when the mask is rectangular.</li>
+<li><strong>Stencil Masking</strong>: Stencil masking discards pixels that don't overlap with the pixels rendered into the stencil
+buffer. It is the next fastest option as it does not require rendering into a separate framebuffer. However, it does
+cause the mask to be rendered <strong>twice</strong> for each masking operation; hence, minimize the rendering cost of your masks.</li>
+<li><strong>Sprite Mask Filtering</strong>: Sprite mask filtering discards pixels based on the red channel of the sprite-mask's
+texture. (Generally, the masking texture is grayscale). Using advanced techniques, you might be able to embed this
+type of masking in a custom shader - and hence, bypassing the masking system fully for performance wins.</li>
+</ul>
+<p>The best type of masking is auto-detected when you <code>push</code> one. To use scissor masking, you must pass in a <code>Graphics</code>
+object with just a rectangle drawn.</p>
+<h2>Mask Stacks</h2>
+<p>In the scene graph, masks can be applied recursively, i.e. a mask can be applied during a masking operation. The mask
+stack stores the currently applied masks in order. Each <a href=/pixi-api/@pixi/core/PIXI/BaseRenderTexture.html>PIXI.BaseRenderTexture</a> holds its own mask stack, i.e.
+when you switch render-textures, the old masks only applied when you switch back to rendering to the old render-target.</p></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new PIXI.MaskSystem(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer this System works for.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="alphaMaskIndex">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#alphaMaskIndex">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>alphaMaskIndex</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">alphaMaskIndex: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Current index of alpha mask pool</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="alphaMaskPool">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#alphaMaskPool">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>alphaMaskPool</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">alphaMaskPool: Array&lt;<a href=/pixi-api/@pixi/core/PIXI/SpriteMaskFilter.html>PIXI.SpriteMaskFilter</a>></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Pool of used sprite mask filters</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="enableScissor">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#enableScissor">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>enableScissor</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">enableScissor: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Enable scissor masking.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="maskDataPool">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#maskDataPool">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>maskDataPool</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">maskDataPool: Array&lt;<a href=/pixi-api/@pixi/core/PIXI/MaskData.html>PIXI.MaskData</a>></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Pool of mask data</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="renderer">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#renderer">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>renderer</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">renderer: <a href=/pixi-api/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a></code></pre>
+
+
+  <div class="member__brief"><p>The renderer this manager works for.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="destroy">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#destroy">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>destroy</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Generic destroy methods to be overridden by the subclass</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="detect">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#detect">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>detect</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">detect(maskData: <a href="/pixi-api/@pixi/core/PIXI/MaskData.html">PIXI.MaskData</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Sets type of MaskData based on its maskObject</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          maskData
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/MaskData.html">PIXI.MaskData</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="pop">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#pop">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>pop</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">pop(target: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Removes the last mask from the mask stack and doesn't return it.</p></div>
+  <div class="member__description"><p>NOTE: The batch renderer should be flushed beforehand to render the masked contents before the mask is removed.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          target
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Display Object to pop the mask from</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="popSpriteMask">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#popSpriteMask">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>popSpriteMask</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">popSpriteMask() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Removes the last filter from the filter stack and doesn't return it.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="push">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#push">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>push</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">push(target: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, maskData: <a href="/pixi-api/@pixi/core/PIXI/MaskData.html">PIXI.MaskData</a> | <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a> | <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a> | <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Enables the mask and appends it to the current mask stack.</p></div>
+  <div class="member__description"><p>NOTE: The batch renderer should be flushed beforehand to prevent pending renders from being masked.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          target
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Display Object to push the mask to</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          maskData
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/MaskData.html">PIXI.MaskData</a> | <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a> | <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a> | <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The masking data.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="pushSpriteMask">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#pushSpriteMask">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>pushSpriteMask</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">pushSpriteMask(maskData: <a href="/pixi-api/@pixi/core/PIXI/MaskData.html">PIXI.MaskData</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Applies the Mask and adds it to the current filter stack.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          maskData
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/MaskData.html">PIXI.MaskData</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Sprite to be used as the mask</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="setMaskStack">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#setMaskStack">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>setMaskStack</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">setMaskStack(maskStack: Array&lt;<a href="/pixi-api/@pixi/core/PIXI/MaskData.html">PIXI.MaskData</a>>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Changes the mask stack that is used by this System.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          maskStack
+        </td>
+        <td class="member-parameter__type">
+          Array&lt;<a href="/pixi-api/@pixi/core/PIXI/MaskData.html">PIXI.MaskData</a>&gt;
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The mask stack</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#alphaMaskIndex">alphaMaskIndex</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#alphaMaskPool">alphaMaskPool</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#enableScissor">enableScissor</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#maskDataPool">maskDataPool</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#renderer">renderer</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#destroy">destroy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#detect">detect</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#pop">pop</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#popSpriteMask">popSpriteMask</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#push">push</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#pushSpriteMask">pushSpriteMask</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/MaskSystem.html#setMaskStack">setMaskStack</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

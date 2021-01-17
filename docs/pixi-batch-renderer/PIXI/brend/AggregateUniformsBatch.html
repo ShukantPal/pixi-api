@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: AggregateUniformsBatch</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        pixi-batch-renderer
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a> &gt; <a href="/pixi-api/pixi-batch-renderer/PIXI/brend.html">brend</a>
+        &gt;
+      
+      <span>AggregateUniformsBatch</span>
+    </div>
+    <h1 class="document__title">PIXI.brend.AggregateUniformsBatch</h1>
+    
+<pre class="signature__container"><code class="signature">class AggregateUniformsBatch extends <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/StdBatch.html">PIXI.brend.StdBatch</a></code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>Allows usage of uniforms when rendering display-objects in batches. It expects you to
+aggregate each display-object's uniforms in an array and that the shader will pick
+the appropriate uniform at runtime (an index into the uniforms array will be passed).</p>
+<p><strong>Usage in shader:</strong></p>
+<pre><code class="hljs"><span class="hljs-comment">// Your display-objects&#x27; affine transforms are aggregated into this array.</span>
+<span class="hljs-keyword">uniform</span> mat3d affineTransform[];
+
+<span class="hljs-comment">// For WebGL1+ machines, your uniforms may be fetched by the uniform-ID attrib (float).</span>
+<span class="hljs-keyword">varying</span> <span class="hljs-type">float</span> vUniformID;
+
+<span class="hljs-comment">// For WebGL-2 only, to prevent interpolation overhead, you may use the flat in variables. You</span>
+<span class="hljs-comment">// can configure this in AggregateUniformShaderFactory.</span>
+<span class="hljs-keyword">flat</span> <span class="hljs-keyword">in</span> <span class="hljs-type">int</span> uniformID;
+</code></pre>
+<h1>No Aggregation Mode</h1>
+<p>Aggregating uniforms into arrays requries a uniform-ID attribute to be uploaded as well. This
+may cost a lot of memory if your uniforms don't really change a lot. For these cases, you can
+disable uniform aggregation by not passing a <code>uniformIDAttrib</code>. This will make batches <strong>only</strong>
+have one value for each uniform. The uniforms will still be uploaded as 1-element arrays, however.</p></div>
+
+    
+      
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="geometryOffset">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#geometryOffset">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>geometryOffset</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">geometryOffset: number</code></pre>
+
+
+  <div class="member__brief"><p>Index of the first vertex of this batch's geometry in the uploaded geometry.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="renderer">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#renderer">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>renderer</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">renderer: <a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html>PIXI.brend.BatchRenderer</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Renderer holding the uniform redirects</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="state">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#state">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>state</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">state: <a href=/pixi-api/@pixi/core/PIXI/State.html>PIXI.State</a></code></pre>
+
+
+  <div class="member__brief"><p>State required to render this batch.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="textureBuffer">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#textureBuffer">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>textureBuffer</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">textureBuffer: Array&lt;<a href=/pixi-api/@pixi/core/PIXI/Texture.html>PIXI.Texture</a>></code></pre>
+
+
+  <div class="member__brief"><p>Textures that are used by the display-object's in this batch.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="uidMap">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#uidMap">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>uidMap</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">uidMap: Map&lt;number, number></code></pre>
+
+
+  <div class="member__brief"><p>Map of base-texture UIDs to texture indices into <code>uSamplers</code>.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="uniformBuffer">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#uniformBuffer">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>uniformBuffer</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">uniformBuffer: Object&lt;string, Array&lt;UniformGroup>></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The buffer of uniform arrays of the display-objects</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="uniformLength">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#uniformLength">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>uniformLength</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">uniformLength: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>No. of uniforms buffered (per uniform name)</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="uniformMap">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#uniformMap">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>uniformMap</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">uniformMap: Array&lt;number></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Array mapping the in-batch ID to the uniform ID.</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="reset">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#reset">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>reset</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">reset() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="upload">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#upload">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>upload</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">upload(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#geometryOffset">geometryOffset</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#renderer">renderer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#state">state</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#textureBuffer">textureBuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#uidMap">uidMap</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#uniformBuffer">uniformBuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#uniformLength">uniformLength</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#uniformMap">uniformMap</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#reset">reset</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AggregateUniformsBatch.html#upload">upload</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

@@ -1,0 +1,508 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: BVHNode</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi-essentials/bvh
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a>
+        &gt;
+      
+      <span>BVHNode</span>
+    </div>
+    <h1 class="document__title">PIXI.BVHNode</h1>
+    
+<pre class="signature__container"><code class="signature">class BVHNode</code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"></div>
+
+    
+      
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="bounds">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#bounds">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>bounds</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">bounds: <a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The union of this node's childrens' axis-aligned bounding boxes.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="children">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#children">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>children</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">children: Array&lt;<a href=/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html>PIXI.BVHNode</a>></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The two children of this node.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="objectCount">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#objectCount">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>objectCount</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">objectCount: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The number of objects in this node</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="objectOffset">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#objectOffset">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>objectOffset</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">objectOffset: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The index of the first object of this node in its tree's object array.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="splitAxis">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#splitAxis">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>splitAxis</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">splitAxis: <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHSplitAxis.html">PIXI.BVHSplitAxis</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The axis alonged which this node was split to get its children.</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="isLeaf">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#isLeaf">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>isLeaf</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">isLeaf() → {boolean}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          boolean
+        </td>
+        <td class="member-return__description"><p>whether this node is a leaf</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="resetInterior">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#resetInterior">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>resetInterior</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">resetInterior(splitAxis: <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHSplitAxis.html">PIXI.BVHSplitAxis</a>, child0: <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html">PIXI.BVHNode</a>, child1: <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html">PIXI.BVHNode</a>) → {<a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html">PIXI.BVHNode</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Builds a interior <code>BVHNode</code> whose children are <code>child0</code> and <code>child1</code> split along <code>splitAxis</code>.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          splitAxis
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHSplitAxis.html">PIXI.BVHSplitAxis</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          child0
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html">PIXI.BVHNode</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          child1
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html">PIXI.BVHNode</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html">PIXI.BVHNode</a>
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="resetLeaf">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#resetLeaf">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>resetLeaf</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">resetLeaf(offset: number, objects: number, bounds: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>) → {<a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html">PIXI.BVHNode</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Builds a leaf <code>BVHNode</code> whose objects start at <code>offset</code> and with bounds <code>bounds</code>.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          offset
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          objects
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          bounds
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html">PIXI.BVHNode</a>
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#bounds">bounds</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#children">children</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#objectCount">objectCount</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#objectOffset">objectOffset</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#splitAxis">splitAxis</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#isLeaf">isLeaf</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#resetInterior">resetInterior</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#resetLeaf">resetLeaf</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

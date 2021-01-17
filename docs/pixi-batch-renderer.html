@@ -5,22 +5,29 @@
     <meta charset="utf-8" />
     <title>webdoc: Test Template</title>
 
-    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
 
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="scripts/default-template.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
-      <header class="header" id="header-mount-point"></header>
       <article class="page">
         <div class="page-explorer" id="explorer-mount-point"></div>
-        
-        
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
 <div class="page-content">
   <div class="homepage">
   
@@ -72,16 +79,16 @@ implementation to <code>BatchRendererPluginFactory.from</code>.</p>
 <p>Before rendering itself, a <code>PIXI.Container</code> with filters or a mask will flush the batch renderer and will not batch itself. This
 is because the PixiJS batch renderer cannot batch filtered and masked objects. Although this does not break pixi-batch-renderer,
 it does reduce batching-efficiency. If you want to create a batch renderer that will batch filtered and masked objects too, your display-object must override <code>render</code> (<strong>however, you will have to derive your own batch renderer class for that</strong>):</p>
-<pre><code class="hljs">render(renderer: PIXI.Renderer): void
+<pre><code class="hljs">render(renderer: PIXI.Renderer): <span class="hljs-keyword">void</span>
 {
-  <span class="hljs-comment">// If you registered the batch renderer as a plugin "pluginName", then replace &lt;BatchRenderer&gt; with</span>
+  <span class="hljs-comment">// If you registered the batch renderer as a plugin &quot;pluginName&quot;, then replace &lt;BatchRenderer&gt; with</span>
   <span class="hljs-comment">// renderer.plugins.pluginName</span>
   renderer.setObjectRenderer(&lt;BatchRenderer&gt;);
-  &lt;BatchRenderer&gt;.render(<span class="hljs-keyword">this</span>);
+  &lt;BatchRenderer&gt;.render(<span class="hljs-built_in">this</span>);
 
-  <span class="hljs-keyword">for</span> (let i = <span class="hljs-number">0</span>, j = <span class="hljs-keyword">this</span>.children.length; i &lt; j; i++)
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>, j = <span class="hljs-built_in">this</span>.children.length; i &lt; j; i++)
   {
-      <span class="hljs-keyword">this</span>._children.render(renderer);
+      <span class="hljs-built_in">this</span>._children.render(renderer);
   }
 }
 </code></pre>
@@ -100,40 +107,40 @@ it does reduce batching-efficiency. If you want to create a batch renderer that 
 </li>
 </ol>
 <p>An example implementation would look like:</p>
-<pre><code class="hljs language-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> PIXI <span class="hljs-keyword">from</span> <span class="hljs-string">'pixi.js'</span>;
-<span class="hljs-keyword">import</span> { AttributeRedirect, BatchRendererPluginFactory, BatchShaderFactory } <span class="hljs-keyword">from</span> <span class="hljs-string">'pixi-batch-renderer'</span>;
+<pre><code class="hljs language-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> PIXI <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;pixi.js&#x27;</span>;
+<span class="hljs-keyword">import</span> { AttributeRedirect, BatchRendererPluginFactory, BatchShaderFactory } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;pixi-batch-renderer&#x27;</span>;
 
 <span class="hljs-comment">// ExampleFigure has two attributes: aVertex and aTextureCoord. They come from the</span>
 <span class="hljs-comment">// vertices and uvs properties in this object. The indices are in the indices property.</span>
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExampleFigure</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">PIXI</span>.<span class="hljs-title">Container</span>
 </span>{
-  _render(renderer)
+  <span class="hljs-function"><span class="hljs-title">_render</span>(<span class="hljs-params">renderer</span>)</span>
   {
-    <span class="hljs-keyword">this</span>.vertices = [x0,y0, x1,y1, x2,y2, ..., xn,yn];<span class="hljs-comment">// variable number of vertices</span>
-    <span class="hljs-keyword">this</span>.uvs = [u0,v0, u1,v1, u2, v2, ..., un,yn];<span class="hljs-comment">// however, all other attributes must have equal length</span>
-    <span class="hljs-keyword">this</span>.texture = PIXI.Texture.from(<span class="hljs-string">"url:example"</span>);
+    <span class="hljs-built_in">this</span>.vertices = [x0,y0, x1,y1, x2,y2, ..., xn,yn];<span class="hljs-comment">// variable number of vertices</span>
+    <span class="hljs-built_in">this</span>.uvs = [u0,v0, u1,v1, u2, v2, ..., un,yn];<span class="hljs-comment">// however, all other attributes must have equal length</span>
+    <span class="hljs-built_in">this</span>.texture = PIXI.Texture.from(<span class="hljs-string">&quot;url:example&quot;</span>);
 
-    <span class="hljs-keyword">this</span>.indices = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, ..., n];<span class="hljs-comment">// we could also tell our batch renderer to not use indices too :)</span>
+    <span class="hljs-built_in">this</span>.indices = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, ..., n];<span class="hljs-comment">// we could also tell our batch renderer to not use indices too :)</span>
 
-    renderer.setObjectRenderer(renderer.plugins[<span class="hljs-string">"ExampleRenderer"</span>]);
-    renderer.plugins[<span class="hljs-string">"ExampleRenderer"</span>].render(<span class="hljs-keyword">this</span>);
+    renderer.setObjectRenderer(renderer.plugins[<span class="hljs-string">&quot;ExampleRenderer&quot;</span>]);
+    renderer.plugins[<span class="hljs-string">&quot;ExampleRenderer&quot;</span>].render(<span class="hljs-built_in">this</span>);
   }
 }
 
 <span class="hljs-comment">// Define the geometry of ExampleFigure.</span>
 <span class="hljs-keyword">const</span> attribSet = [
   <span class="hljs-keyword">new</span> AttributeRedirect({
-      <span class="hljs-attr">source</span>: <span class="hljs-string">"vertices"</span>, 
-      <span class="hljs-attr">attrib</span>: <span class="hljs-string">"aVertex"</span>, 
-      <span class="hljs-attr">type</span>: <span class="hljs-string">'float32'</span>, 
+      <span class="hljs-attr">source</span>: <span class="hljs-string">&quot;vertices&quot;</span>, 
+      <span class="hljs-attr">attrib</span>: <span class="hljs-string">&quot;aVertex&quot;</span>, 
+      <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;float32&#x27;</span>, 
       <span class="hljs-attr">size</span>: <span class="hljs-number">2</span>, 
       <span class="hljs-attr">glType</span>: PIXI.TYPES.FLOAT, 
       <span class="hljs-attr">glSize</span>: <span class="hljs-number">2</span>
   }),
   <span class="hljs-keyword">new</span> AttributeRedirect({
-      <span class="hljs-attr">source</span>: <span class="hljs-string">"uvs"</span>, 
-      <span class="hljs-attr">attrib</span>: <span class="hljs-string">"aTextureCoord"</span>, 
-      <span class="hljs-attr">type</span>: <span class="hljs-string">'float32'</span>, 
+      <span class="hljs-attr">source</span>: <span class="hljs-string">&quot;uvs&quot;</span>, 
+      <span class="hljs-attr">attrib</span>: <span class="hljs-string">&quot;aTextureCoord&quot;</span>, 
+      <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;float32&#x27;</span>, 
       <span class="hljs-attr">size</span>: <span class="hljs-number">2</span>, 
       <span class="hljs-attr">glType</span>: PIXI.TYPES.FLOAT, 
       <span class="hljs-attr">size</span>: <span class="hljs-number">2</span>
@@ -186,14 +193,14 @@ void main(void){
 <span class="hljs-comment">// Create batch renderer class</span>
 <span class="hljs-keyword">const</span> ExampleRenderer = BatchRendererPluginFactory.from({
     attribSet,
-    <span class="hljs-attr">indexProperty</span>: <span class="hljs-string">"indices"</span>,
-    <span class="hljs-attr">textureProperty</span>: <span class="hljs-string">"texture"</span>,
-    <span class="hljs-attr">texIDAttrib</span>: <span class="hljs-string">"aTextureId"</span>, <span class="hljs-comment">// this will be used to locate the texture in the fragment shader later</span>
+    <span class="hljs-attr">indexProperty</span>: <span class="hljs-string">&quot;indices&quot;</span>,
+    <span class="hljs-attr">textureProperty</span>: <span class="hljs-string">&quot;texture&quot;</span>,
+    <span class="hljs-attr">texIDAttrib</span>: <span class="hljs-string">&quot;aTextureId&quot;</span>, <span class="hljs-comment">// this will be used to locate the texture in the fragment shader later</span>
     shaderFunction
 });
 
 <span class="hljs-comment">// Remember to do this before instantiating a PIXI.Application or PIXI.Renderer!</span>
-PIXI.Renderer.registerPlugin(<span class="hljs-string">"ExampleRenderer"</span>, ExampleRenderer);
+PIXI.Renderer.registerPlugin(<span class="hljs-string">&quot;ExampleRenderer&quot;</span>, ExampleRenderer);
 </code></pre>
 <h3>Uniforms Pipeline [Experimental]</h3>
 <p>You can take advantage of shader uniforms in batching too! pixi-batch-renderer supports this out of the box
@@ -213,7 +220,7 @@ use this mode, simply don't pass an <code>uniformIDAttrib</code>.</p>
 <ol>
 <li>Aggregation Mode (Example)</li>
 </ol>
-<pre><code class="hljs language-js"><span class="hljs-keyword">const</span> { UniformRedirect, AggregateUniformsBatchFactory } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'pixi-batch-renderer'</span>);
+<pre><code class="hljs language-js"><span class="hljs-keyword">const</span> { UniformRedirect, AggregateUniformsBatchFactory } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;pixi-batch-renderer&#x27;</span>);
 
 <span class="hljs-keyword">const</span> shaderFunction = <span class="hljs-keyword">new</span> BatchShaderFactory(
 <span class="hljs-comment">// Vertex Shader</span>
@@ -278,18 +285,18 @@ void main(void){
 {}).derive();
 
 <span class="hljs-keyword">const</span> uniformSet = [
-  <span class="hljs-keyword">new</span> UniformRedirect({ <span class="hljs-attr">source</span>: <span class="hljs-string">"type"</span>, <span class="hljs-attr">uniform</span>: <span class="hljs-string">"shadingType"</span> });
+  <span class="hljs-keyword">new</span> UniformRedirect({ <span class="hljs-attr">source</span>: <span class="hljs-string">&quot;type&quot;</span>, <span class="hljs-attr">uniform</span>: <span class="hljs-string">&quot;shadingType&quot;</span> });
 ];
 
 <span class="hljs-keyword">const</span> ExampleRenderer = BatchRendererPluginFactory.from({
   uniformSet,
-  <span class="hljs-attr">uniformIDAttrib</span>: <span class="hljs-string">"aUniformId"</span>,
+  <span class="hljs-attr">uniformIDAttrib</span>: <span class="hljs-string">&quot;aUniformId&quot;</span>,
 
-  <span class="hljs-comment">// Previous example's stuff</span>
+  <span class="hljs-comment">// Previous example&#x27;s stuff</span>
   attribSet,
-  <span class="hljs-attr">indexProperty</span>: <span class="hljs-string">"indices"</span>,
-  <span class="hljs-attr">textureProperty</span>: <span class="hljs-string">"texture"</span>,
-  <span class="hljs-attr">texIDAttrib</span>: <span class="hljs-string">"aTextureId"</span>,
+  <span class="hljs-attr">indexProperty</span>: <span class="hljs-string">&quot;indices&quot;</span>,
+  <span class="hljs-attr">textureProperty</span>: <span class="hljs-string">&quot;texture&quot;</span>,
+  <span class="hljs-attr">texIDAttrib</span>: <span class="hljs-string">&quot;aTextureId&quot;</span>,
   shaderFunction,
 
   <span class="hljs-attr">BatchFactoryClass</span>: AggregateUniformsBatchFactory
@@ -298,7 +305,7 @@ void main(void){
 <ol start="2">
 <li>No Aggregation Mode (Example)</li>
 </ol>
-<pre><code class="hljs language-js"><span class="hljs-keyword">const</span> { UniformRedirect, AggregateUniformsBatchFactory } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'pixi-batch-renderer'</span>);
+<pre><code class="hljs language-js"><span class="hljs-keyword">const</span> { UniformRedirect, AggregateUniformsBatchFactory } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;pixi-batch-renderer&#x27;</span>);
 
 <span class="hljs-keyword">const</span> shaderFunction = <span class="hljs-keyword">new</span> BatchShaderFactory(
 <span class="hljs-comment">// Vertex Shader (no changes to standard pipeline example!)</span>
@@ -354,29 +361,29 @@ void main(void){
 {}).derive();
 
 <span class="hljs-keyword">const</span> uniformSet = [
-  <span class="hljs-keyword">new</span> UniformRedirect({ <span class="hljs-attr">source</span>: <span class="hljs-string">"type"</span>, <span class="hljs-attr">uniform</span>: <span class="hljs-string">"shaderType"</span> });
+  <span class="hljs-keyword">new</span> UniformRedirect({ <span class="hljs-attr">source</span>: <span class="hljs-string">&quot;type&quot;</span>, <span class="hljs-attr">uniform</span>: <span class="hljs-string">&quot;shaderType&quot;</span> });
 ];
 
 <span class="hljs-keyword">const</span> ExampleRenderer = BatchRendererPluginFactory.from({
   uniformSet,
 
   attribSet,
-  <span class="hljs-attr">indexProperty</span>: <span class="hljs-string">"indices"</span>,
-  <span class="hljs-attr">textureProperty</span>: <span class="hljs-string">"texture"</span>,
-  <span class="hljs-attr">texIDAttrib</span>: <span class="hljs-string">"aTextureId"</span>,
+  <span class="hljs-attr">indexProperty</span>: <span class="hljs-string">&quot;indices&quot;</span>,
+  <span class="hljs-attr">textureProperty</span>: <span class="hljs-string">&quot;texture&quot;</span>,
+  <span class="hljs-attr">texIDAttrib</span>: <span class="hljs-string">&quot;aTextureId&quot;</span>,
   shaderFunction,
 
   <span class="hljs-attr">BatchFactoryClass</span>: AggregateUniformsBatchFactory
 });
 
-PIXI.Renderer.registerPlugin(<span class="hljs-string">"erend"</span>, ExampleRenderer);
+PIXI.Renderer.registerPlugin(<span class="hljs-string">&quot;erend&quot;</span>, ExampleRenderer);
 
 <span class="hljs-comment">// Try using with a Sprite!</span>
-<span class="hljs-keyword">const</span> sprite = PIXI.Sprite.from(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>);
+<span class="hljs-keyword">const</span> sprite = PIXI.Sprite.from(&lt;url&gt;);
 
-sprite.pluginName = "erend";
-sprite.type = 0;// will fade out horizontally in shader
-</span></code></pre>
+sprite.pluginName = <span class="hljs-string">&quot;erend&quot;</span>;
+sprite.type = <span class="hljs-number">0</span>;<span class="hljs-comment">// will fade out horizontally in shader</span>
+</code></pre>
 <h3>Advanced/Customized Batch Generation</h3>
 <p>The <code>BatchRendererPluginFactory.from</code> method also accepts these (optional) options that can be used to extend the
 behaviour of built-in components:</p>
@@ -401,6 +408,8 @@ providing a child class of <a href="https://pixijs.io/pixi-batch-renderer/PIXI.b
   </div>
 </div>
 
+          </div>
+        </div?
       </article>
       <footer class="footer" id="footer-mount-point"></footer>
       <script src="scripts/linenumber.js"> </script>

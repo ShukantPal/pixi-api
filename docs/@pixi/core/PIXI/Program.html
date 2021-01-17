@@ -1,0 +1,546 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Program</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi/core
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a>
+        &gt;
+      
+      <span>Program</span>
+    </div>
+    <h1 class="document__title">PIXI.Program</h1>
+    
+<pre class="signature__container"><code class="signature">class Program</code></pre>
+
+
+    <div class="document__brief"><p>Helper class to create a shader program.</p></div>
+    <div class="document__description"></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new PIXI.Program(vertexSrc: string, fragmentSrc: string, name: string) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          vertexSrc
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The source of the vertex shader.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          fragmentSrc
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The source of the fragment shader.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          name
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>Name for shader</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="defaultFragmentSrc">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/Program.html#defaultFragmentSrc">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>defaultFragmentSrc</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static defaultFragmentSrc: string</code></pre>
+
+
+  <div class="member__brief"><p>The default fragment shader source</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="defaultVertexSrc">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/Program.html#defaultVertexSrc">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>defaultVertexSrc</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static defaultVertexSrc: string</code></pre>
+
+
+  <div class="member__brief"><p>The default vertex shader source</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="fragmentSrc">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/Program.html#fragmentSrc">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>fragmentSrc</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">fragmentSrc: string</code></pre>
+
+
+  <div class="member__brief"><p>The fragment shader.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="vertexSrc">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/Program.html#vertexSrc">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>vertexSrc</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">vertexSrc: string</code></pre>
+
+
+  <div class="member__brief"><p>The vertex shader.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="from">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/Program.html#from">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>from</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static from(vertexSrc: string, fragmentSrc: string, name: string) → {<a href="/pixi-api/@pixi/core/PIXI/Program.html">PIXI.Program</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>A short hand function to create a program based of a vertex and fragment shader
+this method will also check to see if there is a cached program.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          vertexSrc
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The source of the vertex shader.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          fragmentSrc
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The source of the fragment shader.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          name
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          pixi-shader
+        </td>
+        <td class="member-parameter__description"><p>Name for shader</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Program.html">PIXI.Program</a>
+        </td>
+        <td class="member-return__description"><p>an shiny new Pixi shader!</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="extractData">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/Program.html#extractData">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>extractData</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected extractData(vertexSrc: string, fragmentSrc: string) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Extracts the data for a buy creating a small test program
+or reading the src directly.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          vertexSrc
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The source of the vertex shader.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          fragmentSrc
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The source of the fragment shader.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/Program.html#defaultFragmentSrc">defaultFragmentSrc</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/Program.html#defaultVertexSrc">defaultVertexSrc</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/Program.html#fragmentSrc">fragmentSrc</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/Program.html#vertexSrc">vertexSrc</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/Program.html#from">from</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Protected Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/Program.html#extractData">extractData</a></li>
+    
+  </ul>
+</div>
+
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

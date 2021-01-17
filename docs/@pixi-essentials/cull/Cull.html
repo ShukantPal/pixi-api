@@ -1,0 +1,899 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Cull</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi-essentials/cull
+        &gt;
+      
+      
+      <span>Cull</span>
+    </div>
+    <h1 class="document__title">Cull</h1>
+    
+<pre class="signature__container"><code class="signature">class Cull</code></pre>
+
+
+    <div class="document__brief"><p>Provides a simple, configurable mechanism for culling a subtree of your scene graph.</p></div>
+    <div class="document__description"><p>If your scene graph is not static, culling needs to be done before rendering. You
+can run it on the <code>prerender</code> event fired by the renderer.</p></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new Cull(options) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.recursive
+        </td>
+        <td class="member-parameter__type">
+          
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>whether culling should be recursive</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.toggle
+        </td>
+        <td class="member-parameter__type">
+          
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          'renderable'
+        </td>
+        <td class="member-parameter__description"><p>which property of display-object was be set to indicate
+its culling state. It should be one of <code>renderable</code>, <code>visible</code>.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="add">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/cull/Cull.html#add">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>add</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">add(target: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>) → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Adds a display-object to the culling list</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          target
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the display-object to be culled</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          this
+        </td>
+        <td class="member-return__description"><p>this</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addAll">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/cull/Cull.html#addAll">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>addAll</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">addAll(targets: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>[]) → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Adds all the display-objects to the culling list</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          targets
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>[]
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the display-objects to be culled</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          this
+        </td>
+        <td class="member-return__description"><p>this</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="clear">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/cull/Cull.html#clear">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>clear</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">clear() → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Clears the culling list</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          this
+        </td>
+        <td class="member-return__description"><p>this</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="cull">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/cull/Cull.html#cull">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>cull</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">cull(rect: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, skipUpdate) → {this}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          rect
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the rectangle outside of which display-objects should be culled</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skipUpdate
+        </td>
+        <td class="member-parameter__type">
+          
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>whether to skip unculling, transform update, bounds calculation. It is
+highly recommended you enable this by calling <em>this.uncull()</em> and <em>root.getBounds(false)</em> manually
+before your render loop.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          this
+        </td>
+        <td class="member-return__description"><p>this</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="cullRecursive">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/cull/Cull.html#cullRecursive">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>cullRecursive</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">cullRecursive(rect: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, displayObject: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, skipUpdate: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Recursively culls the subtree of <code>displayObject</code>.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          rect
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>the visiblity rectangle</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          displayObject
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>the root of the subtree to cull</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skipUpdate
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>whether to skip bounds calculation. However, transforms are expected to be updated by the caller.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="remove">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/cull/Cull.html#remove">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>remove</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">remove(target: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>) → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Removes the display-object from the culling list</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          target
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the display-object to be removed</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          this
+        </td>
+        <td class="member-return__description"><p>this</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="removeAll">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/cull/Cull.html#removeAll">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>removeAll</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">removeAll(targets: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>[]) → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Removes all the passed display-objects from the culling list</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          targets
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>[]
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the display-objects to be removed</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          this
+        </td>
+        <td class="member-return__description"><p>this</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="uncull">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/cull/Cull.html#uncull">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>uncull</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">uncull() → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Sets all display-objects to the unculled state.</p></div>
+  <div class="member__description"><p>This happens regardless of whether the culling toggle was set by <code>this.cull</code> or manually. This
+is why it is recommended to one of <code>visible</code> or <code>renderable</code> for normal use and the other for culling.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          this
+        </td>
+        <td class="member-return__description"><p>this</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="uncullRecursive">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/cull/Cull.html#uncullRecursive">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>uncullRecursive</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">uncullRecursive(displayObject: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Recursively unculls the subtree of <code>displayObject</code>.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          displayObject
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#add">add</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#addAll">addAll</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#clear">clear</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#cull">cull</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#cullRecursive">cullRecursive</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#remove">remove</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#removeAll">removeAll</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#uncull">uncull</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#uncullRecursive">uncullRecursive</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

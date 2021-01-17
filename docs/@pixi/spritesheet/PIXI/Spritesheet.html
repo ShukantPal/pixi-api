@@ -1,0 +1,561 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Spritesheet</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi/spritesheet
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a>
+        &gt;
+      
+      <span>Spritesheet</span>
+    </div>
+    <h1 class="document__title">PIXI.Spritesheet</h1>
+    
+<pre class="signature__container"><code class="signature">class Spritesheet</code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>Utility class for maintaining reference to a collection
+of Textures on a single Spritesheet.</p>
+<p>To access a sprite sheet from your code pass its JSON data file to Pixi's loader:</p>
+<pre><code class="hljs language-js">PIXI.Loader.shared.add(<span class="hljs-string">&quot;images/spritesheet.json&quot;</span>).load(setup);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">let</span> sheet = PIXI.Loader.shared.resources[<span class="hljs-string">&quot;images/spritesheet.json&quot;</span>].spritesheet;
+  ...
+}
+</code></pre>
+<p>With the <code>sheet.textures</code> you can create Sprite objects,<code>sheet.animations</code> can be used to create an AnimatedSprite.</p>
+<p>Sprite sheets can be packed using tools like <a href="https://codeandweb.com/texturepacker">TexturePacker</a>,
+<a href="https://renderhjs.net/shoebox/">Shoebox</a> or <a href="https://github.com/krzysztof-o/spritesheet.js">Spritesheet.js</a>.
+Default anchor points (see <a href=/pixi-api/@pixi/core/PIXI/Texture.html#defaultAnchor>PIXI.Texture#defaultAnchor</a>) and grouping of animation sprites are currently only
+supported by TexturePacker.</p></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new PIXI.Spritesheet(baseTexture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a> | <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>, data: Object, resolutionFilename: string) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          baseTexture
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a> | <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>Reference to the source BaseTexture object.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          data
+        </td>
+        <td class="member-parameter__type">
+          Object
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>Spritesheet image data.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          resolutionFilename
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The filename to consider when determining
+the resolution of the spritesheet. If not provided, the imageUrl will
+be used on the BaseTexture.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="BATCH_SIZE">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html#BATCH_SIZE">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>BATCH_SIZE</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static BATCH_SIZE: number</code></pre>
+
+
+  <div class="member__brief"><p>The maximum number of Textures to build per process.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="animations">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html#animations">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>animations</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">animations: Object</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>A map containing the textures for each animation.
+Can be used to create an <a href=/pixi-api/@pixi/sprite-animated/PIXI/AnimatedSprite.html>AnimatedSprite</a>:</p>
+<pre><code class="hljs language-js"><span class="hljs-keyword">new</span> PIXI.AnimatedSprite(sheet.animations[<span class="hljs-string">&quot;anim_name&quot;</span>])
+</code></pre></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="baseTexture">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html#baseTexture">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>baseTexture</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">baseTexture: <a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html>PIXI.BaseTexture</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Reference to ths source texture.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="data">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html#data">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>data</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">data: Object</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Reference to the original JSON data.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="resolution">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html#resolution">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>resolution</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">resolution: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The resolution of the spritesheet.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="textures">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html#textures">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>textures</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">textures: Object</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>A map containing all textures of the sprite sheet.
+Can be used to create a <a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html>Sprite</a>:</p>
+<pre><code class="hljs language-js"><span class="hljs-keyword">new</span> PIXI.Sprite(sheet.textures[<span class="hljs-string">&quot;image.png&quot;</span>]);
+</code></pre></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="destroy">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html#destroy">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>destroy</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">destroy(destroyBase: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Destroy Spritesheet and don't use after this.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          destroyBase
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Whether to destroy the base texture as well</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="parse">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html#parse">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>parse</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">parse(callback: Function) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Parser spritesheet from loaded data. This is done asynchronously
+to prevent creating too many Texture within a single process.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          callback
+        </td>
+        <td class="member-parameter__type">
+          Function
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Callback when complete returns
+a map of the Textures for this spritesheet.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html#BATCH_SIZE">BATCH_SIZE</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html#animations">animations</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html#baseTexture">baseTexture</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html#data">data</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html#resolution">resolution</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html#textures">textures</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html#destroy">destroy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html#parse">parse</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

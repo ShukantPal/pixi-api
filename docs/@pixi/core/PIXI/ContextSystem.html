@@ -1,0 +1,995 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: ContextSystem</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi/core
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a>
+        &gt;
+      
+      <span>ContextSystem</span>
+    </div>
+    <h1 class="document__title">PIXI.ContextSystem</h1>
+    
+<pre class="signature__container"><code class="signature">class ContextSystem extends <a href="/pixi-api/@pixi/core/PIXI/System.html">PIXI.System</a></code></pre>
+
+
+    <div class="document__brief"><p>System plugin to the renderer to manage the context.</p></div>
+    <div class="document__description"></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new PIXI.ContextSystem(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer this System works for.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="extensions">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#extensions">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>extensions</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">extensions: object</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Extensions being used</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="isLost">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#isLost">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>isLost</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">isLost: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p><code>true</code> if the context is lost</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="renderer">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#renderer">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>renderer</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">renderer: <a href=/pixi-api/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a></code></pre>
+
+
+  <div class="member__brief"><p>The renderer this manager works for.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="webGLVersion">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#webGLVersion">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>webGLVersion</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">webGLVersion: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Either 1 or 2 to reflect the WebGL version being used</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="contextChange">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#contextChange">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>contextChange</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">contextChange(gl: WebGLRenderingContext) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Handle the context change event</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          gl
+        </td>
+        <td class="member-parameter__type">
+          WebGLRenderingContext
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>new webgl context</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="createContext">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#createContext">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>createContext</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">createContext(canvas: HTMLCanvasElement, options: object) → {WebGLRenderingContext}</code></pre>
+
+
+  <div class="member__brief"><p>Helper class to create a WebGL Context</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          canvas
+        </td>
+        <td class="member-parameter__type">
+          HTMLCanvasElement
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the canvas element that we will get the context from</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>An options object that gets passed in to the canvas element containing the
+context attributes</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          WebGLRenderingContext
+        </td>
+        <td class="member-return__description"><p>the WebGL context</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroy">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#destroy">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>destroy</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Generic destroy methods to be overridden by the subclass</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="getExtensions">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#getExtensions">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>getExtensions</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected getExtensions() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Auto-populate the extensions</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="handleContextLost">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#handleContextLost">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>handleContextLost</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected handleContextLost(event: WebGLContextEvent) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Handles a lost webgl context</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          event
+        </td>
+        <td class="member-parameter__type">
+          WebGLContextEvent
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The context lost event.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="handleContextRestored">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#handleContextRestored">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>handleContextRestored</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected handleContextRestored() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Handles a restored webgl context</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="initFromContext">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#initFromContext">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>initFromContext</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected initFromContext(gl: WebGLRenderingContext) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Initialize the context</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          gl
+        </td>
+        <td class="member-parameter__type">
+          WebGLRenderingContext
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>WebGL context</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="initFromOptions">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#initFromOptions">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>initFromOptions</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected initFromOptions(options: object) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Initialize from context options</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>context attributes</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="postrender">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#postrender">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>postrender</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected postrender() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Handle the post-render runner event</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="validateContext">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#validateContext">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>validateContext</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected validateContext(gl: WebGLRenderingContext) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Validate context</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          gl
+        </td>
+        <td class="member-parameter__type">
+          WebGLRenderingContext
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Render context</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#extensions">extensions</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#isLost">isLost</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#renderer">renderer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#webGLVersion">webGLVersion</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#contextChange">contextChange</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#createContext">createContext</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#destroy">destroy</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Protected Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#getExtensions">getExtensions</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#handleContextLost">handleContextLost</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#handleContextRestored">handleContextRestored</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#initFromContext">initFromContext</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#initFromOptions">initFromOptions</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#postrender">postrender</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ContextSystem.html#validateContext">validateContext</a></li>
+    
+  </ul>
+</div>
+
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

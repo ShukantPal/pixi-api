@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: State</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi/core
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a>
+        &gt;
+      
+      <span>State</span>
+    </div>
+    <h1 class="document__title">PIXI.State</h1>
+    
+<pre class="signature__container"><code class="signature">class State</code></pre>
+
+
+    <div class="document__brief"><p>This is a WebGL state, and is is passed The WebGL StateManager.</p></div>
+    <div class="document__description"><p>Each mesh rendered may require WebGL to be in a different state.
+For example you may want different blend mode or to enable polygon offsets</p></div>
+
+    
+      
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="blend">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/State.html#blend">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>blend</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">blend: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Activates blending of the computed fragment color values</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="blendMode">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/State.html#blendMode">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>blendMode</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">blendMode: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The blend mode to be applied when this state is set. Apply a value of <code>PIXI.BLEND_MODES.NORMAL</code> to reset the blend mode.
+Setting this mode to anything other than NO_BLEND will automatically switch blending on.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="clockwiseFrontFace">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/State.html#clockwiseFrontFace">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>clockwiseFrontFace</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">clockwiseFrontFace: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Specifies whether or not front or back-facing polygons can be culled.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="culling">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/State.html#culling">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>culling</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">culling: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Activates culling of polygons.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="depthMask">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/State.html#depthMask">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>depthMask</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">depthMask: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Enables or disables writing to the depth buffer.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="depthTest">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/State.html#depthTest">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>depthTest</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">depthTest: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Activates depth comparisons and updates to the depth buffer.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="offsets">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/State.html#offsets">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>offsets</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">offsets: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Activates adding an offset to depth values of polygon's fragments</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="polygonOffset">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/State.html#polygonOffset">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>polygonOffset</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">polygonOffset: number</code></pre>
+
+
+  <div class="member__brief"><p>The polygon offset. Setting this property to anything other than 0 will automatically enable polygon offset fill.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/State.html#blend">blend</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/State.html#blendMode">blendMode</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/State.html#clockwiseFrontFace">clockwiseFrontFace</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/State.html#culling">culling</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/State.html#depthMask">depthMask</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/State.html#depthTest">depthTest</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/State.html#offsets">offsets</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/State.html#polygonOffset">polygonOffset</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

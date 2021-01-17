@@ -1,0 +1,954 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Transform</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi/math
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a>
+        &gt;
+      
+      <span>Transform</span>
+    </div>
+    <h1 class="document__title">PIXI.Transform</h1>
+    
+<pre class="signature__container"><code class="signature">class Transform</code></pre>
+
+
+    <div class="document__brief"><p>Transform that takes care about its versions</p></div>
+    <div class="document__description"></div>
+
+    
+      
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="IDENTITY">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#IDENTITY">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>IDENTITY</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static IDENTITY: <a href=/pixi-api/@pixi/math/PIXI/Transform.html>PIXI.Transform</a></code></pre>
+
+
+  <div class="member__brief"><p>A default (identity) transform</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="localTransform">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#localTransform">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>localTransform</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">localTransform: <a href=/pixi-api/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a></code></pre>
+
+
+  <div class="member__brief"><p>The local transformation matrix.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="pivot">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#pivot">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>pivot</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">pivot: <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a></code></pre>
+
+
+  <div class="member__brief"><p>The pivot point of the displayObject that it rotates around.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="position">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#position">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>position</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">position: <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a></code></pre>
+
+
+  <div class="member__brief"><p>The coordinate of the object relative to the local coordinates of the parent.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="rotation">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#rotation">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>rotation</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">rotation: number</code></pre>
+
+
+  <div class="member__brief"><p>The rotation of the object in radians.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="scale">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#scale">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>scale</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">scale: <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a></code></pre>
+
+
+  <div class="member__brief"><p>The scale factor of the object.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="skew">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#skew">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>skew</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">skew: <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a></code></pre>
+
+
+  <div class="member__brief"><p>The skew amount, on the x and y axis.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="worldTransform">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#worldTransform">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>worldTransform</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">worldTransform: <a href=/pixi-api/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a></code></pre>
+
+
+  <div class="member__brief"><p>The world transformation matrix.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="_currentLocalID">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#_currentLocalID">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_currentLocalID</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _currentLocalID: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The locally unique ID of the local transform
+used to calculate the current local transformation matrix.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_cx">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#_cx">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_cx</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _cx: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The X-coordinate value of the normalized local X axis,
+the first column of the local transformation matrix without a scale.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_cy">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#_cy">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_cy</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _cy: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The X-coordinate value of the normalized local Y axis,
+the second column of the local transformation matrix without a scale.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_localID">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#_localID">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_localID</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _localID: number</code></pre>
+
+
+  <div class="member__brief"><p>The locally unique ID of the local transform.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_parentID">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#_parentID">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_parentID</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _parentID: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The locally unique ID of the parent's world transform
+used to calculate the current world transformation matrix.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_rotation">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#_rotation">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_rotation</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _rotation: number</code></pre>
+
+
+  <div class="member__brief"><p>The rotation amount.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_sx">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#_sx">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_sx</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _sx: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The Y-coordinate value of the normalized local X axis,
+the first column of the local transformation matrix without a scale.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_sy">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#_sy">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_sy</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _sy: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The Y-coordinate value of the normalized local Y axis,
+the second column of the local transformation matrix without a scale.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_worldID">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#_worldID">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_worldID</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _worldID: number</code></pre>
+
+
+  <div class="member__brief"><p>The locally unique ID of the world transform.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="setFromMatrix">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#setFromMatrix">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>setFromMatrix</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">setFromMatrix(matrix: <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Decomposes a matrix and sets the transforms properties based on it.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          matrix
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The matrix to decompose</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="updateLocalTransform">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#updateLocalTransform">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>updateLocalTransform</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">updateLocalTransform() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Updates the local transformation matrix.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="updateTransform">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#updateTransform">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>updateTransform</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">updateTransform(parentTransform: <a href="/pixi-api/@pixi/math/PIXI/Transform.html">PIXI.Transform</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Updates the local and the world transformation matrices.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          parentTransform
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Transform.html">PIXI.Transform</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The parent transform</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="onChange">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#onChange">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>onChange</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected onChange() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Called when a value changes.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="updateSkew">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/math/PIXI/Transform.html#updateSkew">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>updateSkew</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected updateSkew() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Called when the skew or the rotation changes.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#IDENTITY">IDENTITY</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#localTransform">localTransform</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#pivot">pivot</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#position">position</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#rotation">rotation</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#scale">scale</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#skew">skew</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#worldTransform">worldTransform</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Protected Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#_currentLocalID">_currentLocalID</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#_cx">_cx</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#_cy">_cy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#_localID">_localID</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#_parentID">_parentID</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#_rotation">_rotation</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#_sx">_sx</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#_sy">_sy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#_worldID">_worldID</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#setFromMatrix">setFromMatrix</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#updateLocalTransform">updateLocalTransform</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#updateTransform">updateTransform</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Protected Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#onChange">onChange</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/math/PIXI/Transform.html#updateSkew">updateSkew</a></li>
+    
+  </ul>
+</div>
+
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

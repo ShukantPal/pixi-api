@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: EdgeLoopIterator</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi-essentials/data-half-edge-mesh
+        &gt;
+      
+      
+      <span>EdgeLoopIterator</span>
+    </div>
+    <h1 class="document__title">EdgeLoopIterator</h1>
+    
+<pre class="signature__container"><code class="signature">class EdgeLoopIterator
+implements Iterator</code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>Iterator for traversing over the edges forming a loop around a face. It loops in the counterclockwise
+direction.</p>
+<p>In order to guarantee that each edge is encountered only once, the face's edge list not be modified.</p>
+<p>You can get the shared iterator of a <code>Face</code>: <code>face[Symbol.iterator]</code></p></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new EdgeLoopIterator(face: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Face.html">Face</a>) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          face
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Face.html">Face</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the face around which to iterate</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="current">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/EdgeLoopIterator.html#current">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>current</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">current</code></pre>
+
+
+  <div class="member__brief"><p>The last half-edge returned by <code>this.next</code>.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="done">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/EdgeLoopIterator.html#done">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>done</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">done</code></pre>
+
+
+  <div class="member__brief"><p>Whether this iterator has looped over all the edges of <code>this.face</code>.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="face">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/EdgeLoopIterator.html#face">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>face</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">face</code></pre>
+
+
+  <div class="member__brief"><p>The face this iterator will iterate over.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="next">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/EdgeLoopIterator.html#next">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>next</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">next() → {IteratorResult}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          IteratorResult
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="reset">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/EdgeLoopIterator.html#reset">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>reset</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">reset() → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Reset this iterator so it can be used from start.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          this
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/EdgeLoopIterator.html#current">current</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/EdgeLoopIterator.html#done">done</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/EdgeLoopIterator.html#face">face</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/EdgeLoopIterator.html#next">next</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/EdgeLoopIterator.html#reset">reset</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

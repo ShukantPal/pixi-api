@@ -1,0 +1,854 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: InstancedRenderer</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi-essentials/instanced-renderer
+        &gt;
+      
+      
+      <span>InstancedRenderer</span>
+    </div>
+    <h1 class="document__title">InstancedRenderer</h1>
+    
+<pre class="signature__container"><code class="signature">class InstancedRenderer extends <a href="/pixi-api/@pixi/core/PIXI/ObjectRenderer.html">PIXI.ObjectRenderer</a></code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p><code>InstancedRenderer</code> is an object-renderer for drawing meshes/shapes/display-objects
+that have a common geometry and some &quot;instanced&quot; attributes.</p></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new InstancedRenderer(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, options: <a href="/pixi-api/@pixi-essentials/instanced-renderer/PIXI/IInstancedRendererOptions.html">PIXI.IInstancedRendererOptions</a>) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the WebGL renderer to attach to</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi-essentials/instanced-renderer/PIXI/IInstancedRendererOptions.html">PIXI.IInstancedRendererOptions</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the pipeline description</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="_instanceBuffer">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceBuffer">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_instanceBuffer</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">_instanceBuffer: <a href=/pixi-api/@pixi/core/PIXI/Buffer.html>PIXI.Buffer</a></code></pre>
+
+
+  <div class="member__brief"><p>The instance buffer holds all instanced attributes in an interleaved fashion.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_shader">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_shader">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_shader</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">_shader: <a href=/pixi-api/@pixi/core/PIXI/Shader.html>PIXI.Shader</a></code></pre>
+
+
+  <div class="member__brief"><p>The shader used to draw all instances.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_state">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_state">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_state</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">_state: <a href=/pixi-api/@pixi/core/PIXI/State.html>PIXI.State</a></code></pre>
+
+
+  <div class="member__brief"><p>The WebGL state required for using the shader.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="renderer">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#renderer">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>renderer</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">renderer: <a href=/pixi-api/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a></code></pre>
+
+
+  <div class="member__brief"><p>The renderer this manager works for.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="_geometry">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_geometry">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_geometry</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _geometry: <a href=/pixi-api/@pixi/core/PIXI/Geometry.html>PIXI.Geometry</a></code></pre>
+
+
+  <div class="member__brief"><p>The reference geometry specifying the &quot;attribute style&quot;.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_instanceAttribSizes">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceAttribSizes">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_instanceAttribSizes</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _instanceAttribSizes: Object&lt;string, number></code></pre>
+
+
+  <div class="member__brief"><p>Object mapping (instanced) attribute IDs to their sizes in bytes.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_instanceAttribViews">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceAttribViews">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_instanceAttribViews</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _instanceAttribViews: Object&lt;string, string></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Object mapping (instanced) attribute IDs to their data type views (i.e. <code>uint32View</code>,
+<code>float32View</code>, <code>uint8View</code>, etc. in <code>PIXI.ViewableBuffer</code>).</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_instanceBuilder">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceBuilder">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_instanceBuilder</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _instanceBuilder: Object&lt;string, string></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Maps display-object property names holding instanced attribute data to their attribute
+names.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_instanceSize">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceSize">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_instanceSize</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _instanceSize: number</code></pre>
+
+
+  <div class="member__brief"><p>The bytes used per instance/display-object.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_objectBuffer">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_objectBuffer">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_objectBuffer</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _objectBuffer: Array&lt;<a href=/pixi-api/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a>></code></pre>
+
+
+  <div class="member__brief"><p>Buffered display-objects</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_objectCount">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_objectCount">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_objectCount</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _objectCount: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The number of display-objects buffered. This is different from the buffer's capacity
+<code>this._objectBuffer.length</code>.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="instanceRendererID">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#instanceRendererID">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>instanceRendererID</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected instanceRendererID: number</code></pre>
+
+
+  <div class="member__brief"><p>Unique ID for this instance renderer.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="_initInstanceBuffer">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_initInstanceBuffer">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_initInstanceBuffer</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">_initInstanceBuffer() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Replaces <code>this._geometry</code> with a new geometry such that each instanced attribute
+points to the same buffer. Uninstanced attributes refer to their original buffers.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroy">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#destroy">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>destroy</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Generic destruction method that frees all resources. This
+should be called by subclasses.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="flush">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#flush">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>flush</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">flush() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Flushes/draws all pending display-objects.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="render">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#render">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>render</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">render(displayObject: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          displayObject
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="start">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#start">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>start</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">start() → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="stop">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#stop">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>stop</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">stop() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Stops the renderer. It should free up any state and
+become dormant.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceBuffer">_instanceBuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_shader">_shader</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_state">_state</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#renderer">renderer</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Protected Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_geometry">_geometry</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceAttribSizes">_instanceAttribSizes</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceAttribViews">_instanceAttribViews</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceBuilder">_instanceBuilder</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceSize">_instanceSize</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_objectBuffer">_objectBuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_objectCount">_objectCount</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#instanceRendererID">instanceRendererID</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_initInstanceBuffer">_initInstanceBuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#destroy">destroy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#flush">flush</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#render">render</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#start">start</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#stop">stop</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

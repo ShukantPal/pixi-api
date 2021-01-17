@@ -1,0 +1,1107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: DiffGeometryFactory</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi-pbr/diffy
+        &gt;
+      
+      
+      <span>DiffGeometryFactory</span>
+    </div>
+    <h1 class="document__title">DiffGeometryFactory</h1>
+    
+<pre class="signature__container"><code class="signature">class DiffGeometryFactory extends <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html">PIXI.brend.BatchGeometryFactory</a></code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new DiffGeometryFactory(renderer: <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html">PIXI.brend.BatchRenderer</a>) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html">PIXI.brend.BatchRenderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="_geometryCache">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#_geometryCache">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_geometryCache</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">_geometryCache</code></pre>
+
+
+  <div class="member__brief"><p>Cache of the geometries drawn in the last frame.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_geometryPipeline">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#_geometryPipeline">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_geometryPipeline</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">_geometryPipeline</code></pre>
+
+
+  <div class="member__brief"><p>The geometries already drawn this frame.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="_geometryPool">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#_geometryPool">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_geometryPool</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _geometryPool: <a href=/pixi-api/@pixi/core/PIXI/Geometry.html>PIXI.Geometry</a></code></pre>
+
+
+  <div class="member__brief"><p>Batch geometries that can be reused.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_indexCountProperty">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#_indexCountProperty">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_indexCountProperty</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _indexCountProperty</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="geometryMerger">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#geometryMerger">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>geometryMerger</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected geometryMerger: PIXI.brend#IGeometryMerger</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>This lazy getter returns the geometry-merger function. This function
+takes one argument - the display-object to be appended to the batch -
+and pushes its geometry to the batch geometry.</p>
+<p>You can overwrite this property with a custom geometry-merger function
+if customizing <code>PIXI.brend.BatchGeometryFactory</code>.</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="append">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#append">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>append</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">append(targetObject: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, batch: number) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Append's the display-object geometry to this batch's geometry. You must override
+this you need to &quot;modify&quot; the geometry of the display-object before merging into
+the composite geometry (for example, adding an ID to a special uniform)</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          targetObject
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          batch
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="build">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#build">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>build</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">build() → {<a href="/pixi-api/@pixi-pbr/diffy/DiffGeometry.html">DiffGeometry</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometry.html">DiffGeometry</a>
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="diffCache">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#diffCache">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>diffCache</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">diffCache(cache: ArrayLike, data: ArrayLike) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Calculates the regions different in the cached &amp; updated versions of a buffer. The cache is expected to not be smaller
+than the updated data.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          cache
+        </td>
+        <td class="member-parameter__type">
+          ArrayLike
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          data
+        </td>
+        <td class="member-parameter__type">
+          ArrayLike
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getAttributeBuffer">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#getAttributeBuffer">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>getAttributeBuffer</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">getAttributeBuffer(size: number) → {<a href="/pixi-api/@pixi/core/PIXI/ViewableBuffer.html">PIXI.ViewableBuffer</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          size
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/core/PIXI/ViewableBuffer.html">PIXI.ViewableBuffer</a>
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getIndexBuffer">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#getIndexBuffer">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>getIndexBuffer</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">getIndexBuffer(size: number) → {Uint16Array}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          size
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          Uint16Array
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="init">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#init">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>init</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">init(verticesBatched: number, indiciesBatched: number) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Ensures this factory has enough space to buffer the given number of vertices
+and indices. This should be called before feeding display-objects from the
+batch.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          verticesBatched
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          indiciesBatched
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="postrender">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#postrender">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>postrender</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">postrender() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="release">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#release">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>release</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">release(geom: <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometry.html">DiffGeometry</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p><code>DiffGeometryFactory</code></p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          geom
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometry.html">DiffGeometry</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="releaseCache">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#releaseCache">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>releaseCache</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">releaseCache() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Release the geometry cache</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="updateCache">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#updateCache">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>updateCache</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">updateCache(geometry: <a href="/pixi-api/@pixi/core/PIXI/BatchGeometry.html">PIXI.BatchGeometry</a>, type: "attribBuffer" | "indexBuffer", data: Uint32Array | Uint16Array) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          geometry
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/BatchGeometry.html">PIXI.BatchGeometry</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          type
+        </td>
+        <td class="member-parameter__type">
+          "attribBuffer" | "indexBuffer"
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          data
+        </td>
+        <td class="member-parameter__type">
+          Uint32Array | Uint16Array
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#_geometryCache">_geometryCache</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#_geometryPipeline">_geometryPipeline</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Protected Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#_geometryPool">_geometryPool</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#_indexCountProperty">_indexCountProperty</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#geometryMerger">geometryMerger</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#append">append</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#build">build</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#diffCache">diffCache</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#getAttributeBuffer">getAttributeBuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#getIndexBuffer">getIndexBuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#init">init</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#postrender">postrender</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#release">release</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#releaseCache">releaseCache</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-pbr/diffy/DiffGeometryFactory.html#updateCache">updateCache</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

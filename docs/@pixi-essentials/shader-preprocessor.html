@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Test Template</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="homepage">
+  
+    <div class="homepage__readme md">
+      <h1>@pixi-essentials/shader-preprocessor</h1>
+<p>This package provides a minimal runtime shader-generation mechanism based on %macros%. It allows you to use %macros% in your shader code, such that they are replaced when you provide their values when generating the shader in JavaScript.</p>
+<h2>Usage</h2>
+<p>The following example demonstrates the usage of macros in the fragment shader:</p>
+<pre><code class="hljs language-glsl"><span class="hljs-comment">// fragmentSrc</span>
+
+<span class="hljs-keyword">varying</span> <span class="hljs-type">float</span> vTextureId;
+<span class="hljs-keyword">varying</span> <span class="hljs-type">vec2</span> vTextureCoord;
+
+<span class="hljs-keyword">uniform</span> <span class="hljs-type">sampler2D</span> uSamplers[%texturesPerBatch%];
+
+<span class="hljs-type">void</span> main(<span class="hljs-type">void</span>) {
+   <span class="hljs-type">vec4</span> color;
+   
+   <span class="hljs-comment">// The following will generate an if-else-if chain that will put </span>
+   <span class="hljs-comment">// texture2D(uSamplers[vTextureId], vTextureCoord) into color.</span>
+   <span class="hljs-comment">// HINT: In shaders you cannot index an array with a variable index (vTextureId is a variable).</span>
+   %sampleColor(uSamplers, vTextureId, vTextureCoord, color)%
+   
+   <span class="hljs-built_in">gl_FragColor</span> = color;
+}
+</code></pre>
+<pre><code class="hljs language-ts"><span class="hljs-keyword">import</span> { ShaderPreprocessor } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pixi-essentials/shader-preprocessor&#x27;</span>;
+<span class="hljs-keyword">import</span> vertexSrc <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./vertexSrc.vert&#x27;</span>;
+<span class="hljs-keyword">import</span> fragmentSrc <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./fragmentSrc.frag&#x27;</span>;
+
+<span class="hljs-comment">// Get the WebGL context from your renderer</span>
+<span class="hljs-keyword">const</span> gl = renderer.gl;
+
+<span class="hljs-comment">// The generated shader based on the number of textures passed to the shader at once</span>
+<span class="hljs-keyword">const</span> shader = ShaderPreprocessor.from(vertexSrc, fragmentSrc, {}, {
+  <span class="hljs-attr">texturesPerBatch</span>: gl.getParameter(gl.MAX_TEXTURE_IMAGE_UNITS), 
+  <span class="hljs-function"><span class="hljs-title">someValue</span>(<span class="hljs-params">samplerArrayVariable, textureIndexVariable, textureCoordinateVariable, outVariable</span>)</span> {
+    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> Generate an if-else-if chain and return it.</span>
+  }
+);
+</code></pre>
+
+    </div>
+  
+  </div>
+</div>
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

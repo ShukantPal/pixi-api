@@ -1,0 +1,880 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: DefaultObjectPool</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi-essentials/object-pool
+        &gt;
+      
+      
+        <a href=/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory.html>ObjectPoolFactory</a> &gt; <a href=/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory.html#build>build</a>
+        &gt;
+      
+      <span>DefaultObjectPool</span>
+    </div>
+    <h1 class="document__title">ObjectPoolFactory.build.DefaultObjectPool</h1>
+    
+<pre class="signature__container"><code class="signature">class DefaultObjectPool extends <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html">ObjectPool</a></code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"></div>
+
+    
+      
+    
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Protected Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="_freeCount">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#_freeCount">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_freeCount</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _freeCount: number</code></pre>
+
+
+  <div class="member__brief"><p>Number of objects in the pool. This is less than or equal to <code>_pool.length</code>.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_freeList">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#_freeList">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_freeList</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _freeList: Array&lt;T></code></pre>
+
+
+  <div class="member__brief"><p>Supply pool of objects that can be used to immediately lend.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="capacity">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#capacity">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>capacity</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected capacity: number</code></pre>
+
+
+  <div class="member__brief"><p>The number of objects that can be stored in the pool without allocating more space.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="allocate">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#allocate">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>allocate</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">allocate() → {T}</code></pre>
+
+
+  <div class="member__brief"><p>Obtains an instance from this pool.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          T
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="allocateArray">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#allocateArray">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>allocateArray</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">allocateArray(lengthOrArray: number | T&lt;Array>) → {Array&lt;T>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Obtains an array of instances from this pool. This is faster than allocating multiple objects
+separately from this pool.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          lengthOrArray
+        </td>
+        <td class="member-parameter__type">
+          number | T&lt;Array&gt;
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>no. of objects to allocate OR the array itself into which
+objects are inserted. The amount to allocate is inferred from the array's length.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          Array&lt;T&gt;
+        </td>
+        <td class="member-return__description"><p>array of allocated objects</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="create">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#create">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>create</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">create() → {any}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          any
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="limit">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#limit">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>limit</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">limit(count: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Dereferences objects for the GC to collect and brings the pool size down to <code>count</code>.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          count
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="release">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#release">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>release</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">release(object: T) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Returns the object to the pool.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          object
+        </td>
+        <td class="member-parameter__type">
+          T
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="releaseArray">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#releaseArray">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>releaseArray</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">releaseArray(array: Array&lt;T>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Releases all of the objects in the passed array. These need not be allocated using <code>allocateArray</code>, however.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          array
+        </td>
+        <td class="member-parameter__type">
+          Array&lt;T&gt;
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="reserve">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#reserve">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>reserve</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">reserve(count: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Preallocates objects so that the pool size is at least <code>count</code>.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          count
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="startGC">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#startGC">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>startGC</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">startGC(ticker: Ticker) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Install the GC on the shared ticker.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          ticker
+        </td>
+        <td class="member-parameter__type">
+          Ticker
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          Ticker.shared
+        </td>
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="stopGC">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#stopGC">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>stopGC</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">stopGC(ticker: Ticker) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Stops running the GC on the pool.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          ticker
+        </td>
+        <td class="member-parameter__type">
+          Ticker
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          Ticker.shared
+        </td>
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Protected Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#_freeCount">_freeCount</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#_freeList">_freeList</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#capacity">capacity</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#allocate">allocate</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#allocateArray">allocateArray</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#create">create</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#limit">limit</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#release">release</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#releaseArray">releaseArray</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#reserve">reserve</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#startGC">startGC</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPoolFactory/build/DefaultObjectPool.html#stopGC">stopGC</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

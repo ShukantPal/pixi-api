@@ -1,0 +1,2426 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: ColorMatrixFilter</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi/filter-color-matrix
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a> &gt; <a href=/pixi-api/pixi/js/PIXI/filters.html>filters</a>
+        &gt;
+      
+      <span>ColorMatrixFilter</span>
+    </div>
+    <h1 class="document__title">PIXI.filters.ColorMatrixFilter</h1>
+    
+<pre class="signature__container"><code class="signature">class ColorMatrixFilter extends <a href="/pixi-api/@pixi/core/PIXI/Filter.html">PIXI.Filter</a></code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>The ColorMatrixFilter class lets you apply a 5x4 matrix transformation on the RGBA
+color and alpha values of every pixel on your displayObject to produce a result
+with a new set of RGBA color and alpha values. It's pretty powerful!</p>
+<pre><code class="hljs language-js"> <span class="hljs-keyword">let</span> colorMatrix = <span class="hljs-keyword">new</span> PIXI.filters.ColorMatrixFilter();
+ container.filters = [colorMatrix];
+ colorMatrix.contrast(<span class="hljs-number">2</span>);
+</code></pre></div>
+
+    
+      
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="alpha">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#alpha">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>alpha</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">alpha: number</code></pre>
+
+
+  <div class="member__brief"><p>The opacity value to use when mixing the original and resultant colors.</p></div>
+  <div class="member__description"><p>When the value is 0, the original color is used without modification.
+When the value is 1, the result color is used.
+When in the range (0, 1) the color is interpolated between the original and result by this amount.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="autoFit">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#autoFit">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>autoFit</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">autoFit: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>If enabled, PixiJS will fit the filter area into boundaries for better performance.
+Switch it off if it does not work for specific shader.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="blendMode">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#blendMode">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>blendMode</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">blendMode: number</code></pre>
+
+
+  <div class="member__brief"><p>Sets the blendmode of the filter</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="enabled">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#enabled">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>enabled</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">enabled: boolean</code></pre>
+
+
+  <div class="member__brief"><p>If enabled is true the filter is applied, if false it will not.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="legacy">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#legacy">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>legacy</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">legacy: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Legacy filters use position and uvs from attributes</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="matrix">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#matrix">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>matrix</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">matrix: Array&lt;number></code></pre>
+
+
+  <div class="member__brief"><p>The matrix of the color matrix filter</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="padding">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#padding">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>padding</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">padding: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The padding of the filter. Some filters require extra space to breath such as a blur.
+Increasing this will add extra width and height to the bounds of the object that the
+filter is applied to.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="program">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#program">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>program</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">program: <a href=/pixi-api/@pixi/core/PIXI/Program.html>PIXI.Program</a></code></pre>
+
+
+  <div class="member__brief"><p>Program that the shader uses</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="resolution">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#resolution">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>resolution</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">resolution: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The resolution of the filter. Setting this to be lower will lower the quality but
+increase the performance of the filter.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="state">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#state">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>state</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">state: <a href=/pixi-api/@pixi/core/PIXI/State.html>PIXI.State</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The WebGL state the filter requires to render</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="uniforms">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#uniforms">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>uniforms</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">uniforms: object</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Shader uniform values, shortcut for <code>uniformGroup.uniforms</code></p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="_loadMatrix">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#_loadMatrix">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_loadMatrix</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">_loadMatrix(matrix: Array&lt;number>, multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Transforms current matrix and set the new one</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          matrix
+        </td>
+        <td class="member-parameter__type">
+          Array&lt;number&gt;
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>5x4 matrix</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="apply">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#apply">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>apply</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">apply(filterManager: <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html">PIXI.FilterSystem</a>, input: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, output: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, clearMode: <a href="/pixi-api/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>, currentState: object) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Applies the filter</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          filterManager
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html">PIXI.FilterSystem</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The renderer to retrieve the filter from</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          input
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The input render target.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          output
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The target to output to.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          clearMode
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>Should the output be cleared before rendering to it.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          currentState
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>It's current state of filter.
+There are some useful properties in the currentState :
+target, filters, sourceFrame, destinationFrame, renderTarget, resolution</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="blackAndWhite">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#blackAndWhite">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>blackAndWhite</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">blackAndWhite(multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Set the black and white matrice.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="brightness">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#brightness">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>brightness</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">brightness(b: number, multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Adjusts brightness</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          b
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>value of the brigthness (0-1, where 0 is black)</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="browni">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#browni">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>browni</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">browni(multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Brown delicious browni filter (thanks Dominic Szablewski)</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="colorTone">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#colorTone">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>colorTone</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">colorTone(desaturation: number, toned: number, lightColor: number, darkColor: number, multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>We don't know exactly what it does, kind of gradient map, but funny to play with!</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          desaturation
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Tone values.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          toned
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Tone values.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          lightColor
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Tone values, example: <code>0xFFE580</code></p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          darkColor
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Tone values, example: <code>0xFFE580</code></p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="contrast">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#contrast">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>contrast</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">contrast(amount: number, multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Set the contrast matrix, increase the separation between dark and bright
+Increase contrast : shadows darker and highlights brighter
+Decrease contrast : bring the shadows up and the highlights down</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          amount
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>value of the contrast (0-1)</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="desaturate">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#desaturate">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>desaturate</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">desaturate() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Desaturate image (remove color)</p></div>
+  <div class="member__description"><p>Call the saturate function</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroy">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#destroy">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>destroy</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="greyscale">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#greyscale">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>greyscale</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">greyscale(scale: number, multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Set the matrices in grey scales</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          scale
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>value of the grey (0-1, where 0 is black)</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="hue">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#hue">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>hue</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">hue(rotation: number, multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Set the hue property of the color</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          rotation
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>in degrees</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="kodachrome">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#kodachrome">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>kodachrome</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">kodachrome(multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Color reversal film introduced by Eastman Kodak in 1935. (thanks Dominic Szablewski)</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="lsd">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#lsd">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>lsd</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">lsd(multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>LSD effect</p></div>
+  <div class="member__description"><p>Multiply the current matrix</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="negative">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#negative">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>negative</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">negative(multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Negative image (inverse of classic rgb matrix)</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="night">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#night">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>night</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">night(intensity: number, multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Night effect</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          intensity
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The intensity of the night effect.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="polaroid">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#polaroid">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>polaroid</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">polaroid(multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Polaroid filter</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="predator">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#predator">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>predator</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">predator(amount: number, multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Predator effect</p></div>
+  <div class="member__description"><p>Erase the current matrix by setting a new indepent one</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          amount
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>how much the predator feels his future victim</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="reset">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#reset">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>reset</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">reset() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Erase the current matrix by setting the default one</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="saturate">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#saturate">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>saturate</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">saturate(amount: number, multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Set the saturation matrix, increase the separation between colors
+Increase saturation : increase contrast, brightness, and sharpness</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          amount
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The saturation amount (0-1)</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="sepia">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#sepia">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>sepia</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">sepia(multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Sepia image</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="technicolor">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#technicolor">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>technicolor</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">technicolor(multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Color motion picture process invented in 1916 (thanks Dominic Szablewski)</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="toBGR">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#toBGR">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>toBGR</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">toBGR(multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Filter who transforms : Red -&gt; Blue and Blue -&gt; Red</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="vintage">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#vintage">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>vintage</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">vintage(multiply: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Vintage filter (thanks Dominic Szablewski)</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          multiply
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>if true, current matrix and matrix are multiplied. If false,
+just set the current matrix with @param matrix</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#alpha">alpha</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#autoFit">autoFit</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#blendMode">blendMode</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#enabled">enabled</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#legacy">legacy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#matrix">matrix</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#padding">padding</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#program">program</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#resolution">resolution</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#state">state</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#uniforms">uniforms</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#_loadMatrix">_loadMatrix</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#apply">apply</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#blackAndWhite">blackAndWhite</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#brightness">brightness</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#browni">browni</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#colorTone">colorTone</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#contrast">contrast</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#desaturate">desaturate</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#destroy">destroy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#greyscale">greyscale</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#hue">hue</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#kodachrome">kodachrome</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#lsd">lsd</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#negative">negative</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#night">night</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#polaroid">polaroid</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#predator">predator</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#reset">reset</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#saturate">saturate</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#sepia">sepia</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#technicolor">technicolor</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#toBGR">toBGR</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/filter-color-matrix/PIXI/filters/ColorMatrixFilter.html#vintage">vintage</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

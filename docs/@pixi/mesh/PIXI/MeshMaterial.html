@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: MeshMaterial</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi/mesh
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a>
+        &gt;
+      
+      <span>MeshMaterial</span>
+    </div>
+    <h1 class="document__title">PIXI.MeshMaterial</h1>
+    
+<pre class="signature__container"><code class="signature">class MeshMaterial extends <a href="/pixi-api/@pixi/core/PIXI/Shader.html">PIXI.Shader</a></code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>Slightly opinionated default shader for PixiJS 2D objects.</p></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new PIXI.MeshMaterial(uSampler: <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>, options: object) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          uSampler
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Texture that material uses to render.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Additional options</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.alpha
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>Default alpha.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.tint
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0xFFFFFF
+        </td>
+        <td class="member-parameter__description"><p>Default tint.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.pluginName
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          'batch'
+        </td>
+        <td class="member-parameter__description"><p>Renderer plugin for batching.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.program
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Program.html">PIXI.Program</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0xFFFFFF
+        </td>
+        <td class="member-parameter__description"><p>Custom program.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.uniforms
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Custom uniforms.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="alpha">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#alpha">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>alpha</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">alpha: number</code></pre>
+
+
+  <div class="member__brief"><p>This gets automatically set by the object using this.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="batchable">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#batchable">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>batchable</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">batchable: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p><code>true</code> if shader can be batch with the renderer's batch system.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="pluginName">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#pluginName">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>pluginName</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">pluginName: string</code></pre>
+
+
+  <div class="member__brief"><p>Renderer plugin for batching</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="program">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#program">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>program</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">program: <a href=/pixi-api/@pixi/core/PIXI/Program.html>PIXI.Program</a></code></pre>
+
+
+  <div class="member__brief"><p>Program that the shader uses</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="texture">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#texture">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>texture</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">texture: <a href=/pixi-api/@pixi/core/PIXI/Texture.html>PIXI.Texture</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Reference to the texture being rendered.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="tint">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#tint">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>tint</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">tint: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Multiply tint for the material.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="uniforms">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#uniforms">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>uniforms</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">uniforms: object</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Shader uniform values, shortcut for <code>uniformGroup.uniforms</code></p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="uvMatrix">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#uvMatrix">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>uvMatrix</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">uvMatrix: <a href=/pixi-api/@pixi/core/PIXI/TextureMatrix.html>PIXI.TextureMatrix</a></code></pre>
+
+
+  <div class="member__brief"><p>TextureMatrix instance for this Mesh, used to track Texture changes</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="destroy">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#destroy">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>destroy</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="update">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#update">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>update</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">update() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Gets called automatically by the Mesh. Intended to be overridden for custom
+MeshMaterial objects.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="render">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#render">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>render</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected render(renderer: <a href="/pixi-api/@pixi/canvas-renderer/PIXI/CanvasRenderer.html">PIXI.CanvasRenderer</a>, mesh: <a href="/pixi-api/@pixi/mesh/PIXI/Mesh.html">PIXI.Mesh</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Renders the mesh using the Canvas renderer</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/canvas-renderer/PIXI/CanvasRenderer.html">PIXI.CanvasRenderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The canvas renderer.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          mesh
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/mesh/PIXI/Mesh.html">PIXI.Mesh</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Mesh to render.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#alpha">alpha</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#batchable">batchable</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#pluginName">pluginName</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#program">program</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#texture">texture</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#tint">tint</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#uniforms">uniforms</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#uvMatrix">uvMatrix</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#destroy">destroy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#update">update</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Protected Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/mesh/PIXI/MeshMaterial.html#render">render</a></li>
+    
+  </ul>
+</div>
+
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

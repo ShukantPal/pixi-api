@@ -1,0 +1,1505 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: ImageResource</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi/core
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a>
+        &gt;
+      
+      <span>ImageResource</span>
+    </div>
+    <h1 class="document__title">PIXI.ImageResource</h1>
+    
+<pre class="signature__container"><code class="signature">class ImageResource extends <a href="/pixi-api/@pixi/core/PIXI/BaseImageResource.html">PIXI.BaseImageResource</a></code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>Resource type for HTMLImageElement.</p></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new PIXI.ImageResource(source: HTMLImageElement | string, options: object) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          source
+        </td>
+        <td class="member-parameter__type">
+          HTMLImageElement | string
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>image source or URL</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.autoLoad
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          true
+        </td>
+        <td class="member-parameter__description"><p>start loading process</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.createBitmap
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.settings.CREATE_IMAGE_BITMAP
+        </td>
+        <td class="member-parameter__description"><p>whether its required to create
+a bitmap before upload</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.crossorigin
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          true
+        </td>
+        <td class="member-parameter__description"><p>Load image using cross origin</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.alphaMode
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/constants/PIXI/ALPHA_MODES.html">PIXI.ALPHA_MODES</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.ALPHA_MODES.UNPACK
+        </td>
+        <td class="member-parameter__description"><p>Premultiply image alpha in bitmap</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="alphaMode">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#alphaMode">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>alphaMode</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">alphaMode: <a href=/pixi-api/@pixi/constants/PIXI/ALPHA_MODES.html>PIXI.ALPHA_MODES</a> | unknown</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Controls texture alphaMode field
+Copies from options
+Default is <code>null</code>, copies option from baseTexture</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="bitmap">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#bitmap">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>bitmap</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">bitmap: ImageBitmap</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The ImageBitmap element created for HTMLImageElement</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="createBitmap">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#createBitmap">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>createBitmap</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">createBitmap: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>If capable, convert the image using createImageBitmap API</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroyed">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#destroyed">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>destroyed</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">destroyed: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>If resource has been destroyed</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="height">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#height">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>height</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">height: number</code></pre>
+
+
+  <div class="member__brief"><p>The height of the resource.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="premultiplyAlpha">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#premultiplyAlpha">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>premultiplyAlpha</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">premultiplyAlpha: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="preserveBitmap">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#preserveBitmap">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>preserveBitmap</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">preserveBitmap: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>If the image should be disposed after upload</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="source">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#source">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>source</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">source: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | SVGElement</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The source element</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="url">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#url">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>url</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">url: string</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>URL of the image source</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="valid">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#valid">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>valid</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">valid: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Has been validated</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="width">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#width">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>width</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">width: number</code></pre>
+
+
+  <div class="member__brief"><p>The width of the resource.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="_height">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#_height">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_height</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _height: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Internal height of the resource</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_width">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#_width">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_width</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _width: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Internal width of the resource</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="internal">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#internal">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>internal</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected internal: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p><code>true</code> if resource is created by BaseTexture
+useful for doing cleanup with BaseTexture destroy
+and not cleaning up resources that were created
+externally.</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="test">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#test">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>test</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static test(source: string | HTMLImageElement) → {boolean}</code></pre>
+
+
+  <div class="member__brief"><p>Used to auto-detect the type of resource.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          source
+        </td>
+        <td class="member-parameter__type">
+          string | HTMLImageElement
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The source object</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          boolean
+        </td>
+        <td class="member-return__description"><p><code>true</code> if source is string or HTMLImageElement</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="bind">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#bind">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>bind</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">bind(baseTexture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Bind to a parent BaseTexture</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          baseTexture
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Parent texture</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroy">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#destroy">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>destroy</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Call when destroying resource, unbind any BaseTexture object
+before calling this method, as reference counts are maintained
+internally.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="dispose">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#dispose">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>dispose</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">dispose() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Destroys this texture</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="load">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#load">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>load</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">load(createBitmap: boolean) → {Promise&lt;void>}</code></pre>
+
+
+  <div class="member__brief"><p>returns a promise when image will be loaded and processed</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          createBitmap
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>whether process image into bitmap</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          Promise&lt;void&gt;
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="process">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#process">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>process</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">process() → {Promise&lt;void>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Called when we need to convert image into BitmapImage.
+Can be called multiple times, real promise is cached inside.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          Promise&lt;void&gt;
+        </td>
+        <td class="member-return__description"><p>cached promise to fill that bitmap</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="resize">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#resize">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>resize</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">resize(width: number, height: number) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Trigger a resize event</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          width
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>X dimension</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          height
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Y dimension</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="style">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#style">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>style</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">style(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, baseTexture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, glTexture: <a href="/pixi-api/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>) → {boolean}</code></pre>
+
+
+  <div class="member__brief"><p>Set the style, optional to override</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>yeah, renderer!</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          baseTexture
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the texture</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          glTexture
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>texture instance for this webgl context</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          boolean
+        </td>
+        <td class="member-return__description"><p><code>true</code> is success</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="unbind">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#unbind">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>unbind</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">unbind(baseTexture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Unbind to a parent BaseTexture</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          baseTexture
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Parent texture</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="update">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#update">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>update</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">update() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Checks if source width/height was changed, resize can cause extra baseTexture update.
+Triggers one update in any case.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="upload">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#upload">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>upload</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">upload(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, baseTexture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, glTexture: <a href="/pixi-api/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>) → {boolean}</code></pre>
+
+
+  <div class="member__brief"><p>Upload the image resource to GPU.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Renderer to upload to</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          baseTexture
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>BaseTexture for this resource</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          glTexture
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>GLTexture to use</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          boolean
+        </td>
+        <td class="member-return__description"><p>true is success</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#alphaMode">alphaMode</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#bitmap">bitmap</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#createBitmap">createBitmap</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#destroyed">destroyed</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#height">height</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#premultiplyAlpha">premultiplyAlpha</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#preserveBitmap">preserveBitmap</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#source">source</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#url">url</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#valid">valid</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#width">width</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Protected Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#_height">_height</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#_width">_width</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#internal">internal</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#test">test</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#bind">bind</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#destroy">destroy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#dispose">dispose</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#load">load</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#process">process</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#resize">resize</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#style">style</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#unbind">unbind</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#update">update</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ImageResource.html#upload">upload</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

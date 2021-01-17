@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Mesh</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi-essentials/data-half-edge-mesh
+        &gt;
+      
+      
+      <span>Mesh</span>
+    </div>
+    <h1 class="document__title">Mesh</h1>
+    
+<pre class="signature__container"><code class="signature">class Mesh</code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"></div>
+
+    
+      
+    
+
+    
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="addDegenerateFace">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Mesh.html#addDegenerateFace">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>addDegenerateFace</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">addDegenerateFace(data: F) → {<a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Face.html">Face</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Creates a degenerate (one-point loop) face and adds it to this mesh.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          data
+        </td>
+        <td class="member-parameter__type">
+          F
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>the data associated with the face, if any</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Face.html">Face</a>
+        </td>
+        <td class="member-return__description"><p>the newly created degenerate face</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addVertex">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Mesh.html#addVertex">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>addVertex</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">addVertex(face: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Face.html">Face</a>, vertexData: V, edgeData: E) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Adds a vertex to <code>face</code> by splitting the last edge.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          face
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Face.html">Face</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          vertexData
+        </td>
+        <td class="member-parameter__type">
+          V
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          edgeData
+        </td>
+        <td class="member-parameter__type">
+          E
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="sharedEdgeIterator">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Mesh.html#sharedEdgeIterator">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>sharedEdgeIterator</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">sharedEdgeIterator() → {<a href="/pixi-api/@pixi-essentials/types/CircularLinkedListIterator.html">CircularLinkedListIterator</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Returns the shared edge iterator for this mesh. The first edge is a dummy.</p></div>
+  <div class="member__description"><p>CONTRACT: It is expected that the caller does not hold a reference to the iterator after immediate use.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi-essentials/types/CircularLinkedListIterator.html">CircularLinkedListIterator</a>
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="sharedFaceIterator">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Mesh.html#sharedFaceIterator">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>sharedFaceIterator</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">sharedFaceIterator() → {<a href="/pixi-api/@pixi-essentials/types/CircularLinkedListIterator.html">CircularLinkedListIterator</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Returns the shared face iterator for this mesh. The first face is a dummy.</p></div>
+  <div class="member__description"><p>CONTRACT: It is expected that the caller does not hold a reference to the iterator after immediate use.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi-essentials/types/CircularLinkedListIterator.html">CircularLinkedListIterator</a>
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="sharedVertexIterator">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Mesh.html#sharedVertexIterator">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>sharedVertexIterator</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">sharedVertexIterator() → {<a href="/pixi-api/@pixi-essentials/types/CircularLinkedListIterator.html">CircularLinkedListIterator</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Returns the shared vertex iterator for this mesh. The first vertex is a dummy.</p></div>
+  <div class="member__description"><p>CONTRACT: It is expected that the caller does not hold a reference to the iterator after immediate use.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi-essentials/types/CircularLinkedListIterator.html">CircularLinkedListIterator</a>
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="validate">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Mesh.html#validate">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>validate</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">validate() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Validates the mesh and checks whether the following invariants hold true:</p>
+<ul>
+<li><code>eachEdge.next.twin.next === eachEdge</code></li>
+</ul></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Mesh.html#addDegenerateFace">addDegenerateFace</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Mesh.html#addVertex">addVertex</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Mesh.html#sharedEdgeIterator">sharedEdgeIterator</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Mesh.html#sharedFaceIterator">sharedFaceIterator</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Mesh.html#sharedVertexIterator">sharedVertexIterator</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Mesh.html#validate">validate</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

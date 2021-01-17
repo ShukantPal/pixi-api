@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Test Template</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="homepage">
+  
+    <div class="homepage__readme md">
+      <h1>@pixi-pbr/diffy</h1>
+<p>This package can be used to minimize buffer upload overhead in vertex-bound applications. It exploits
+<code>bufferSubData</code> to upload only modified parts of the batched geometry. This trades off graphics memory
+for reducing data transfers.</p>
+<h2>Installation :package:</h2>
+<pre><code class="hljs language-bash">npm install @pixi-pbr/diffy
+</code></pre>
+<h2>Notes</h2>
+<ul>
+<li><strong>WebGL 1</strong>: WebGL 1 does not the required overload of <code>gl.bufferSubData</code> to do partial uploads. This
+in turns only allows optimizations in the case where the geometry has not changed at all.</li>
+<li><strong>Projection Matrix</strong>: If your application uses a viewport (like <code>pixi-viewport</code> by David Fignater), then
+you can optimize it use a projection-matrix so that your object's coordinate do not change when modifying
+the viewport itself. This has the effect of the geometry not changing at all when panning/zooming so buffer uploads can be fully optimized away!</li>
+</ul>
+<h2>Usage</h2>
+<p>To enable this optimization, you can use the exported geometry-factory and drawer.</p>
+<pre><code class="hljs language-js"><span class="hljs-keyword">import</span> { BatchRendererPluginFactory } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;pixi-batch-renderer&#x27;</span>;
+<span class="hljs-keyword">import</span> { DiffGeometryFactory, DiffDrawer } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pixi-pbr/diffy&#x27;</span>;
+
+<span class="hljs-comment">// YourRenderer will have the diffy optimization!</span>
+<span class="hljs-keyword">const</span> YourRenderer = BatchRendererPluginFactory.from({
+    ...yourOptions,
+    <span class="hljs-attr">BatchGeometryFactoryClass</span>: DiffGeometryFactory,
+    <span class="hljs-attr">BatchDrawerClass</span>: DiffDrawer
+});
+</code></pre>
+<h2>Collaboration</h2>
+<p>I'd like to thank <a href="https://www.strytegy.com">Strytegy</a> for funding the initial development of this package.</p>
+<p><a href="https://www.strytegy.com"><img src="https://i.imgur.com/3Ns1JJb.png" width="153.3px" /></a></p>
+
+    </div>
+  
+  </div>
+</div>
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

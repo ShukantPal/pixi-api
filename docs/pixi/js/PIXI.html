@@ -1,0 +1,1059 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: PIXI</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        pixi.js
+        &gt;
+      
+      
+      <span>PIXI</span>
+    </div>
+    <h1 class="document__title">PIXI</h1>
+    
+<pre class="signature__container"><code class="signature">namespace PIXI</code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"></div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="DATA_URI">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi/js/PIXI.html#DATA_URI">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>DATA_URI</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static DATA_URI</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Regexp for data URI.
+Based on: <a href="https://github.com/ragingwind/data-uri-regex">https://github.com/ragingwind/data-uri-regex</a></p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="DEG_TO_RAD">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi/js/PIXI.html#DEG_TO_RAD">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>DEG_TO_RAD</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static DEG_TO_RAD: number</code></pre>
+
+
+  <div class="member__brief"><p>Conversion factor for converting degrees to radians.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="GRAPHICS_CURVES">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi/js/PIXI.html#GRAPHICS_CURVES">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>GRAPHICS_CURVES</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static GRAPHICS_CURVES: object</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Graphics curves resolution settings. If <code>adaptive</code> flag is set to <code>true</code>,
+the resolution is calculated based on the curve's length to ensure better visual quality.
+Adaptive draw works with <code>bezierCurveTo</code> and <code>quadraticCurveTo</code>.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="INSTALLED">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi/js/PIXI.html#INSTALLED">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>INSTALLED</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static INSTALLED: Array&lt;<a href="/pixi-api/@pixi/core/PIXI/IResourcePlugin.html">PIXI.IResourcePlugin</a>></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Collection of installed resource types, class must extend <a href=/pixi-api/@pixi/core/PIXI/Resource.html>PIXI.Resource</a>.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="loader">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi/js/PIXI.html#loader">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>loader</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static loader: <a href=/pixi-api/@pixi/loaders/PIXI/Loader.html>PIXI.Loader</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="PI_2">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi/js/PIXI.html#PI_2">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>PI_2</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static PI_2: number</code></pre>
+
+
+  <div class="member__brief"><p>Two Pi.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="RAD_TO_DEG">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi/js/PIXI.html#RAD_TO_DEG">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>RAD_TO_DEG</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static RAD_TO_DEG: number</code></pre>
+
+
+  <div class="member__brief"><p>Conversion factor for converting radians to degrees.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="SVG_SIZE">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi/js/PIXI.html#SVG_SIZE">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>SVG_SIZE</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static SVG_SIZE</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="TRANSFORM_MODE">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi/js/PIXI.html#TRANSFORM_MODE">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>TRANSFORM_MODE</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static TRANSFORM_MODE: number</code></pre>
+
+
+  <div class="member__brief"><p>Constants that specify the transform type.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="VERSION">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi/js/PIXI.html#VERSION">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>VERSION</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static VERSION: string</code></pre>
+
+
+  <div class="member__brief"><p>String of the current PIXI version.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="defaultFilterVertex">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi/js/PIXI.html#defaultFilterVertex">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>defaultFilterVertex</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">defaultFilterVertex: string</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Default filter vertex shader</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="defaultVertex">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi/js/PIXI.html#defaultVertex">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>defaultVertex</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">defaultVertex: string</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Default vertex shader</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="autoDetectResource">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/autoDetectResource.html">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>autoDetectResource</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static autoDetectResource(source: string | unknown, options: object) → {<a href="/pixi-api/@pixi/core/PIXI/Resource.html">PIXI.Resource</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Create a resource element from a single source element. This
+auto-detects which type of resource to create. All resources that
+are auto-detectable must have a static <code>test</code> method and a constructor
+with the arguments <code>(source, options?)</code>. Currently, the supported
+resources for auto-detection include:</p>
+<ul>
+<li><a href=/pixi-api/@pixi/core/PIXI/ImageResource.html>PIXI.ImageResource</a></li>
+<li><a href=/pixi-api/@pixi/core/PIXI/CanvasResource.html>PIXI.CanvasResource</a></li>
+<li><a href=/pixi-api/@pixi/core/PIXI/VideoResource.html>PIXI.VideoResource</a></li>
+<li><a href=/pixi-api/@pixi/core/PIXI/SVGResource.html>PIXI.SVGResource</a></li>
+<li><a href=/pixi-api/@pixi/core/PIXI/BufferResource.html>PIXI.BufferResource</a></li>
+</ul></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          source
+        </td>
+        <td class="member-parameter__type">
+          string | unknown
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Resource source, this can be the URL to the resource,
+a typed-array (for BufferResource), HTMLVideoElement, SVG data-uri
+or any other resource that can be auto-detected. If not resource is
+detected, it's assumed to be an ImageResource.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Pass-through options to use for Resource</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.width
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Width of BufferResource or SVG rasterization</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.height
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Height of BufferResource or SVG rasterization</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.autoLoad
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          true
+        </td>
+        <td class="member-parameter__description"><p>Image, SVG and Video flag to start loading</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.scale
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>SVG source scale. Overridden by width, height</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.createBitmap
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.settings.CREATE_IMAGE_BITMAP
+        </td>
+        <td class="member-parameter__description"><p>Image option to create Bitmap object</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.crossorigin
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          true
+        </td>
+        <td class="member-parameter__description"><p>Image and Video option to set crossOrigin</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.autoPlay
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          true
+        </td>
+        <td class="member-parameter__description"><p>Video option to start playing video immediately</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.updateFPS
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>Video option to update how many times a second the
+texture should be updated from the video. Leave at 0 to update at every render</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Resource.html">PIXI.Resource</a>
+        </td>
+        <td class="member-return__description"><p>The created resource.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="autoDetectRenderer">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/autoDetectRenderer.html">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>autoDetectRenderer</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">autoDetectRenderer(options: object) → {<a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a> | <a href="/pixi-api/@pixi/canvas-renderer/PIXI/CanvasRenderer.html">PIXI.CanvasRenderer</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>This helper function will automatically detect which renderer you should be using.
+WebGL is the preferred renderer as it is a lot faster. If WebGL is not supported by
+the browser then this function will return a canvas renderer</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The optional renderer parameters</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.width
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          800
+        </td>
+        <td class="member-parameter__description"><p>the width of the renderers view</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.height
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          600
+        </td>
+        <td class="member-parameter__description"><p>the height of the renderers view</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.view
+        </td>
+        <td class="member-parameter__type">
+          HTMLCanvasElement
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>the canvas to use as a view, optional</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.transparent
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>If the render view is transparent, default false</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.autoDensity
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Resizes renderer view in CSS pixels to allow for
+resolutions other than 1</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.antialias
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>sets antialias</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.preserveDrawingBuffer
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>enables drawing buffer preservation, enable this if you
+need to call toDataUrl on the webgl context</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.backgroundColor
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0x000000
+        </td>
+        <td class="member-parameter__description"><p>The background color of the rendered area
+(shown if not transparent).</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.clearBeforeRender
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          true
+        </td>
+        <td class="member-parameter__description"><p>This sets if the renderer will clear the canvas or
+not before the new render pass.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.resolution
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>The resolution / device pixel ratio of the renderer, retina would be 2</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.forceCanvas
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>prevents selection of WebGL renderer, even if such is present, this
+option only is available when using <strong>pixi.js-legacy</strong> or <strong>@pixi/canvas-renderer</strong> modules, otherwise
+it is ignored.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.powerPreference
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Parameter passed to webgl context, set to &quot;high-performance&quot;
+for devices with dual graphics card <strong>webgl only</strong></p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a> | <a href="/pixi-api/@pixi/canvas-renderer/PIXI/CanvasRenderer.html">PIXI.CanvasRenderer</a>
+        </td>
+        <td class="member-return__description"><p>Returns WebGL renderer if available, otherwise CanvasRenderer</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="useDeprecated">
+  
+    <section class="member__title">
+      <a href="/pixi-api/pixi/js/PIXI/useDeprecated.html">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>useDeprecated</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">useDeprecated(this: any) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Deprecations (backward compatibilities) are automatically applied for browser bundles
+in the UMD module format. If using Webpack or Rollup, you'll need to apply these
+deprecations manually by doing something like this:</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          this
+        </td>
+        <td class="member-parameter__type">
+          any
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi/js/PIXI.html#DATA_URI">DATA_URI</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi/js/PIXI.html#DEG_TO_RAD">DEG_TO_RAD</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi/js/PIXI.html#GRAPHICS_CURVES">GRAPHICS_CURVES</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi/js/PIXI.html#INSTALLED">INSTALLED</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi/js/PIXI.html#loader">loader</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi/js/PIXI.html#PI_2">PI_2</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi/js/PIXI.html#RAD_TO_DEG">RAD_TO_DEG</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi/js/PIXI.html#SVG_SIZE">SVG_SIZE</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi/js/PIXI.html#TRANSFORM_MODE">TRANSFORM_MODE</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi/js/PIXI.html#VERSION">VERSION</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi/js/PIXI.html#defaultFilterVertex">defaultFilterVertex</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/pixi/js/PIXI.html#defaultVertex">defaultVertex</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

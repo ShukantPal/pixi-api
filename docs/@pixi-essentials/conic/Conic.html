@@ -1,0 +1,1098 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Conic</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi-essentials/conic
+        &gt;
+      
+      
+      <span>Conic</span>
+    </div>
+    <h1 class="document__title">Conic</h1>
+    
+<pre class="signature__container"><code class="signature">class Conic</code></pre>
+
+
+    <div class="document__brief"><p>Describes a conic section or any quadric curve</p></div>
+    <div class="document__description"><p>A quadric curve can be represented in the form <em>k<sup>2</sup> - lm</em>, where, <em>k</em>, <em>l</em>, <em>m</em>
+are linear functionals. <em>l</em> and <em>m</em> are two lines tangent to the curve, while <em>k</em> is the
+line connecting the two points of tangency.</p></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new Conic() → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="_dirtyID">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/conic/Conic.html#_dirtyID">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_dirtyID</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">_dirtyID</code></pre>
+
+
+  <div class="member__brief"><p>Flags changes in the shape data</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="controlPoints">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/conic/Conic.html#controlPoints">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>controlPoints</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">controlPoints</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The control points in design space. The control points allow you to map design space points to the local space
+points when creating a graphic.</p>
+<p>By default, the conic is a quadratic bezier curve.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="k">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/conic/Conic.html#k">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>k</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">k</code></pre>
+
+
+  <div class="member__brief"><p>The chord connecting the points of tangency on <em>l</em> and <em>m</em>.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="l">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/conic/Conic.html#l">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>l</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">l</code></pre>
+
+
+  <div class="member__brief"><p>A line tangent to the curve.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="m">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/conic/Conic.html#m">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>m</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">m</code></pre>
+
+
+  <div class="member__brief"><p>A line tangent to the curve.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="createCircle">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/conic/Conic.html#createCircle">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>createCircle</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static createCircle(radius: number) → {<a href="/pixi-api/@pixi-essentials/conic/Conic.html">Conic</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Creates a circular conic of the given <code>radius</code> that is in the bounding box
+(0,0,2_r_,2_r_).</p>
+<p>Implicit form:
+(<em>x</em>/√2 + <em>y</em>/√2 - <em>r</em>/√2)<sup>2</sup> - <em>xy</em> = <em>0</em></p>
+<p>Simplified form:
+(<em>x</em> - <em>r</em>)<sup>2</sup> - (<em>y</em> - <em>r</em>)<sup>2</sup> - r<sup>2</sup> = <em>0</em></p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          radius
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the radius of the circle</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi-essentials/conic/Conic.html">Conic</a>
+        </td>
+        <td class="member-return__description"><p>the conic shape</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="createEllipse">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/conic/Conic.html#createEllipse">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>createEllipse</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static createEllipse(a: number, b: number) → {<a href="/pixi-api/@pixi-essentials/conic/Conic.html">Conic</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Creates an ellipse with the given major &amp; minor semi-axes that is located in the
+bounding box (0,0,2_a_,2_b_).</p>
+<p>Implicit form:
+(<em>x</em>/<em>a</em> + <em>y</em>/<em>b</em> - 1)<sup>2</sup> - 2_xy_/<em>ab</em> = 0</p>
+<p>Simplified form:
+(<em>x</em>/<em>a</em> - 1)<sup>2</sup> + (<em>y</em>/<em>b</em> -  1)<sup>2</sup> - 1 = 0</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          a
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>major semi-axis length</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          b
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>minor semi-axis length</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi-essentials/conic/Conic.html">Conic</a>
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="createHyperbola">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/conic/Conic.html#createHyperbola">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>createHyperbola</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static createHyperbola(a: number, b: number) → {<a href="/pixi-api/@pixi-essentials/conic/Conic.html">Conic</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Creates a hyperbola that opens up and down; since hyperbolas are not closed curves,
+they do not have a bounding box.</p>
+<p>Implicit form:
+1<sup>2</sup> - (<em>y</em>/<em>b</em> - <em>x</em>/<em>a</em>)(<em>y</em>/<em>b</em> + <em>x</em>/<em>a</em>) = 0</p>
+<p>Simplified form:
+(y/b)<sup>2</sup> - (x/a)<sup>2</sup> = 1</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          a
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>major semi-axis</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          b
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>minor semi-axis</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi-essentials/conic/Conic.html">Conic</a>
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="createParabola">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/conic/Conic.html#createParabola">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>createParabola</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static createParabola(a: number) → {<a href="/pixi-api/@pixi-essentials/conic/Conic.html">Conic</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Creates a parabola that opens upward (for <em>a</em> &gt; 0); since parabolas are not closed
+curves, they do not have a bounding box.</p>
+<p>The standard bezier curve is the parabola <em>x</em><sup>2</sup> - <em>y</em>, with the control
+points (0,0), (1/2,0), (1,1).</p>
+<p>Equation:
+x<sup>2 - 4_ay_ = 0</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          a
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>distance of directrix, focus from the vertex of the parabola (0,0)</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi-essentials/conic/Conic.html">Conic</a>
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="setControlPoints">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/conic/Conic.html#setControlPoints">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>setControlPoints</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">setControlPoints(c0: <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>, c1: <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>, c2: <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Set control points in texture space</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          c0
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          c1
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          c2
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="setk">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/conic/Conic.html#setk">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>setk</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">setk(a: number, b: number, c: number) → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Sets the equation of the &quot;k&quot; line to <em>ax + by + c = 0</em>.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          a
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          b
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          c
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          this
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="setl">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/conic/Conic.html#setl">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>setl</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">setl(a: number, b: number, c: number) → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Sets the equation of the &quot;l&quot; line to <em>ax + by + c = 0</em>.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          a
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          b
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          c
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          this
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="setm">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/conic/Conic.html#setm">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>setm</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">setm(a: number, b: number, c: number) → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Sets the equation of the line &quot;m&quot; to <em>ax + by + c = 0</em>.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          a
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          b
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          c
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          this
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="update">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/conic/Conic.html#update">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>update</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">update() → {this}</code></pre>
+
+
+  <div class="member__brief"><p>Flag the shape as dirty after you have modified the data directly.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          this
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/conic/Conic.html#_dirtyID">_dirtyID</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/conic/Conic.html#controlPoints">controlPoints</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/conic/Conic.html#k">k</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/conic/Conic.html#l">l</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/conic/Conic.html#m">m</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/conic/Conic.html#createCircle">createCircle</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/conic/Conic.html#createEllipse">createEllipse</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/conic/Conic.html#createHyperbola">createHyperbola</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/conic/Conic.html#createParabola">createParabola</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/conic/Conic.html#setControlPoints">setControlPoints</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/conic/Conic.html#setk">setk</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/conic/Conic.html#setl">setl</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/conic/Conic.html#setm">setm</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/conic/Conic.html#update">update</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

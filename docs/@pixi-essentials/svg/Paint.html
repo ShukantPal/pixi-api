@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Paint</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi-essentials/svg
+        &gt;
+      
+      
+      <span>Paint</span>
+    </div>
+    <h1 class="document__title">Paint</h1>
+    
+<pre class="signature__container"><code class="signature">interface Paint</code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>Internal, parsed form of painting attributes. If a paint attribute was not defined, it <strong>must</strong> be
+<code>null</code> (not <code>undefined</code>).</p></div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="dirtyId">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/svg/Paint.html#dirtyId">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>dirtyId</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">dirtyId</code></pre>
+
+
+  <div class="member__brief"><p>Flags when the paint is updated.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="fill">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/svg/Paint.html#fill">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>fill</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">fill</code></pre>
+
+
+  <div class="member__brief"><p>The interior paint for the shape.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="opacity">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/svg/Paint.html#opacity">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>opacity</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">opacity</code></pre>
+
+
+  <div class="member__brief"><p>The opacity of the fill.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="stroke">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/svg/Paint.html#stroke">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>stroke</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">stroke</code></pre>
+
+
+  <div class="member__brief"><p>The color of the stroke outline applied on the shape.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="strokeDashArray">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/svg/Paint.html#strokeDashArray">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>strokeDashArray</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">strokeDashArray</code></pre>
+
+
+  <div class="member__brief"><p>The dash pattern for stroking the shape.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="strokeDashOffset">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/svg/Paint.html#strokeDashOffset">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>strokeDashOffset</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">strokeDashOffset</code></pre>
+
+
+  <div class="member__brief"><p>The distance into the dash pattern at which the stroking is started.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="strokeLineCap">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/svg/Paint.html#strokeLineCap">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>strokeLineCap</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">strokeLineCap</code></pre>
+
+
+  <div class="member__brief"><p>The line caps applied at the end of the stroke. This is not applied for closed shapes.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="strokeLineJoin">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/svg/Paint.html#strokeLineJoin">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>strokeLineJoin</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">strokeLineJoin</code></pre>
+
+
+  <div class="member__brief"><p>The line join applied at the joint to line segments.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="strokeMiterLimit">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/svg/Paint.html#strokeMiterLimit">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>strokeMiterLimit</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">strokeMiterLimit</code></pre>
+
+
+  <div class="member__brief"><p>The maximum miter distance.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="strokeWidth">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/svg/Paint.html#strokeWidth">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>strokeWidth</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">strokeWidth</code></pre>
+
+
+  <div class="member__brief"><p>The width of the stroke outline applied on the shape.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/svg/Paint.html#dirtyId">dirtyId</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/svg/Paint.html#fill">fill</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/svg/Paint.html#opacity">opacity</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/svg/Paint.html#stroke">stroke</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/svg/Paint.html#strokeDashArray">strokeDashArray</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/svg/Paint.html#strokeDashOffset">strokeDashOffset</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/svg/Paint.html#strokeLineCap">strokeLineCap</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/svg/Paint.html#strokeLineJoin">strokeLineJoin</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/svg/Paint.html#strokeMiterLimit">strokeMiterLimit</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/svg/Paint.html#strokeWidth">strokeWidth</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

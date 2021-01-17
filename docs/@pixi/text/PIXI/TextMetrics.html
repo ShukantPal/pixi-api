@@ -1,0 +1,1187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: TextMetrics</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi/text
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a>
+        &gt;
+      
+      <span>TextMetrics</span>
+    </div>
+    <h1 class="document__title">PIXI.TextMetrics</h1>
+    
+<pre class="signature__container"><code class="signature">class TextMetrics</code></pre>
+
+
+    <div class="document__brief"><p>The TextMetrics object represents the measurement of a block of text with a specified style.</p></div>
+    <div class="document__description"><pre><code class="hljs language-js"><span class="hljs-keyword">let</span> style = <span class="hljs-keyword">new</span> PIXI.TextStyle({<span class="hljs-attr">fontFamily</span> : <span class="hljs-string">&#x27;Arial&#x27;</span>, <span class="hljs-attr">fontSize</span>: <span class="hljs-number">24</span>, <span class="hljs-attr">fill</span> : <span class="hljs-number">0xff1010</span>, <span class="hljs-attr">align</span> : <span class="hljs-string">&#x27;center&#x27;</span>})
+<span class="hljs-keyword">let</span> textMetrics = PIXI.TextMetrics.measureText(<span class="hljs-string">&#x27;Your text&#x27;</span>, style)
+</code></pre></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new PIXI.TextMetrics(text: string, style: <a href="/pixi-api/@pixi/text/PIXI/TextStyle.html">PIXI.TextStyle</a>, width: number, height: number, lines: Array&lt;string>, lineWidths: Array&lt;number>, lineHeight: number, maxLineWidth: number, fontProperties: Object) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          text
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the text that was measured</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/text/PIXI/TextStyle.html">PIXI.TextStyle</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the style that was measured</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          width
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the measured width of the text</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          height
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the measured height of the text</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          lines
+        </td>
+        <td class="member-parameter__type">
+          Array&lt;string&gt;
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>an array of the lines of text broken by new lines and wrapping if specified in style</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          lineWidths
+        </td>
+        <td class="member-parameter__type">
+          Array&lt;number&gt;
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>an array of the line widths for each line matched to <code>lines</code></p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          lineHeight
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the measured line height for this style</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          maxLineWidth
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the maximum line width for all measured lines</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          fontProperties
+        </td>
+        <td class="member-parameter__type">
+          Object
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the font properties object from TextMetrics.measureFont</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="BASELINE_MULTIPLIER">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#BASELINE_MULTIPLIER">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>BASELINE_MULTIPLIER</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static BASELINE_MULTIPLIER: number</code></pre>
+
+
+  <div class="member__brief"><p>Baseline multiplier for calculate font metrics.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="BASELINE_SYMBOL">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#BASELINE_SYMBOL">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>BASELINE_SYMBOL</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static BASELINE_SYMBOL: string</code></pre>
+
+
+  <div class="member__brief"><p>Baseline symbol for calculate font metrics.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="METRICS_STRING">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#METRICS_STRING">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>METRICS_STRING</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static METRICS_STRING: string</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>String used for calculate font metrics.
+These characters are all tall to help calculate the height required for text.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="fontProperties">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#fontProperties">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>fontProperties</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">fontProperties: <a href="/pixi-api/@pixi/text/PIXI/IFontMetrics.html">PIXI.IFontMetrics</a></code></pre>
+
+
+  <div class="member__brief"><p>The font properties object from TextMetrics.measureFont</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="height">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#height">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>height</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">height: number</code></pre>
+
+
+  <div class="member__brief"><p>The measured height of the text</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="lineHeight">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#lineHeight">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>lineHeight</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">lineHeight: number</code></pre>
+
+
+  <div class="member__brief"><p>The measured line height for this style</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="lines">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#lines">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>lines</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">lines: Array&lt;string></code></pre>
+
+
+  <div class="member__brief"><p>An array of lines of the text broken by new lines and wrapping is specified in style</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="lineWidths">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#lineWidths">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>lineWidths</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">lineWidths: Array&lt;number></code></pre>
+
+
+  <div class="member__brief"><p>An array of the line widths for each line matched to <code>lines</code></p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="maxLineWidth">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#maxLineWidth">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>maxLineWidth</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">maxLineWidth: number</code></pre>
+
+
+  <div class="member__brief"><p>The maximum line width for all measured lines</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="style">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#style">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>style</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">style: <a href=/pixi-api/@pixi/text/PIXI/TextStyle.html>PIXI.TextStyle</a></code></pre>
+
+
+  <div class="member__brief"><p>The style that was measured</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="text">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#text">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>text</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">text: string</code></pre>
+
+
+  <div class="member__brief"><p>The text that was measured</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="width">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#width">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>width</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">width: number</code></pre>
+
+
+  <div class="member__brief"><p>The measured width of the text</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="canBreakChars">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#canBreakChars">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>canBreakChars</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static canBreakChars(char: string, nextChar: string, token: string, index: number, breakWords: boolean) → {boolean}</code></pre>
+
+
+  <div class="member__brief"><p>Overridable helper method used internally by TextMetrics, exposed to allow customizing the class's behavior.</p></div>
+  <div class="member__description"><p>It allows one to determine whether a pair of characters
+should be broken by newlines
+For example certain characters in CJK langs or numbers.
+It must return a boolean.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          char
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The character</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          nextChar
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The next character</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          token
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The token/word the characters are from</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          index
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The index in the token of the char</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          breakWords
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The style attr break words</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          boolean
+        </td>
+        <td class="member-return__description"><p>whether to break word or not</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="canBreakWords">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#canBreakWords">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>canBreakWords</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static canBreakWords(token: string, breakWords: boolean) → {boolean}</code></pre>
+
+
+  <div class="member__brief"><p>Overridable helper method used internally by TextMetrics, exposed to allow customizing the class's behavior.</p></div>
+  <div class="member__description"><p>It allows one to customise which words should break
+Examples are if the token is CJK or numbers.
+It must return a boolean.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          token
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The token</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          breakWords
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The style attr break words</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          boolean
+        </td>
+        <td class="member-return__description"><p>whether to break word or not</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="clearMetrics">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#clearMetrics">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>clearMetrics</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static clearMetrics(font: string) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Clear font metrics in metrics cache.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          font
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>font name. If font name not set then clear cache for all fonts.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="measureFont">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#measureFont">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>measureFont</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static measureFont(font: string) → {<a href="/pixi-api/@pixi/text/PIXI/IFontMetrics.html">PIXI.IFontMetrics</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Calculates the ascent, descent and fontSize of a given font-style</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          font
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>String representing the style of the font</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/text/PIXI/IFontMetrics.html">PIXI.IFontMetrics</a>
+        </td>
+        <td class="member-return__description"><p>Font properties object</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="measureText">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#measureText">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>measureText</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static measureText(text: string, style: <a href="/pixi-api/@pixi/text/PIXI/TextStyle.html">PIXI.TextStyle</a>, wordWrap: boolean, canvas: HTMLCanvasElement) → {<a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html">PIXI.TextMetrics</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Measures the supplied string of text and returns a Rectangle.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          text
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>the text to measure.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/text/PIXI/TextStyle.html">PIXI.TextStyle</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>the text style to use for measuring</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          wordWrap
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>optional override for if word-wrap should be applied to the text.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          canvas
+        </td>
+        <td class="member-parameter__type">
+          HTMLCanvasElement
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>optional specification of the canvas to use for measuring.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html">PIXI.TextMetrics</a>
+        </td>
+        <td class="member-return__description"><p>measured width and height of the text.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="wordWrapSplit">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#wordWrapSplit">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>wordWrapSplit</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static wordWrapSplit(token: string) → {Array&lt;string>}</code></pre>
+
+
+  <div class="member__brief"><p>Overridable helper method used internally by TextMetrics, exposed to allow customizing the class's behavior.</p></div>
+  <div class="member__description"><p>It is called when a token (usually a word) has to be split into separate pieces
+in order to determine the point to break a word.
+It must return an array of characters.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          token
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The token to split</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          Array&lt;string&gt;
+        </td>
+        <td class="member-return__description"><p>The characters of the token</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#BASELINE_MULTIPLIER">BASELINE_MULTIPLIER</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#BASELINE_SYMBOL">BASELINE_SYMBOL</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#METRICS_STRING">METRICS_STRING</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#fontProperties">fontProperties</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#height">height</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#lineHeight">lineHeight</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#lines">lines</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#lineWidths">lineWidths</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#maxLineWidth">maxLineWidth</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#style">style</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#text">text</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#width">width</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#canBreakChars">canBreakChars</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#canBreakWords">canBreakWords</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#clearMetrics">clearMetrics</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#measureFont">measureFont</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#measureText">measureText</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/TextMetrics.html#wordWrapSplit">wordWrapSplit</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

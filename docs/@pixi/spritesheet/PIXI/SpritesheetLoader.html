@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: SpritesheetLoader</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi/spritesheet
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a>
+        &gt;
+      
+      <span>SpritesheetLoader</span>
+    </div>
+    <h1 class="document__title">PIXI.SpritesheetLoader</h1>
+    
+<pre class="signature__container"><code class="signature">class SpritesheetLoader
+implements <a href="/pixi-api/@pixi/loaders/PIXI/ILoaderPlugin.html">PIXI.ILoaderPlugin</a></code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p><a href=/pixi-api/@pixi/loaders/PIXI/Loader.html>PIXI.Loader</a> middleware for loading texture atlases that have been created with
+TexturePacker or similar JSON-based spritesheet.</p>
+<p>This middleware automatically generates Texture resources.</p>
+<p>If you're using Webpack or other bundlers and plan on bundling the atlas' JSON,
+use the <a href=/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html>PIXI.Spritesheet</a> class to directly parse the JSON.</p>
+<p>The Loader's image Resource name is automatically appended with <code>&quot;_image&quot;</code>.
+If a Resource with this name is already loaded, the Loader will skip parsing the
+Spritesheet. The code below will generate an internal Loader Resource called <code>&quot;myatlas_image&quot;</code>.</p></div>
+
+    
+      
+    
+
+    
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="getResourcePath">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/spritesheet/PIXI/SpritesheetLoader.html#getResourcePath">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>getResourcePath</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static getResourcePath(resource: <a href="/pixi-api/@pixi/loaders/PIXI/LoaderResource.html">PIXI.LoaderResource</a>, baseUrl: string) → {string}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Get the spritesheets root path</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          resource
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/loaders/PIXI/LoaderResource.html">PIXI.LoaderResource</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Resource to check path</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          baseUrl
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Base root url</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          string
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="use">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/spritesheet/PIXI/SpritesheetLoader.html#use">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>use</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static use(resource: <a href="/pixi-api/@pixi/loaders/PIXI/LoaderResource.html">PIXI.LoaderResource</a>, next: Function) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Called after a resource is loaded.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          resource
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/loaders/PIXI/LoaderResource.html">PIXI.LoaderResource</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          next
+        </td>
+        <td class="member-parameter__type">
+          Function
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/spritesheet/PIXI/SpritesheetLoader.html#getResourcePath">getResourcePath</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/spritesheet/PIXI/SpritesheetLoader.html#use">use</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

@@ -1,0 +1,5536 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Text</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi/text
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a>
+        &gt;
+      
+      <span>Text</span>
+    </div>
+    <h1 class="document__title">PIXI.Text</h1>
+    
+<pre class="signature__container"><code class="signature">class Text extends <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a></code></pre>
+
+
+    <div class="document__brief"><p>A Text Object will create a line or multiple lines of text.</p></div>
+    <div class="document__description"><p>The text is created using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</a>.</p>
+<p>The primary advantage of this class over BitmapText is that you have great control over the style of the text,
+which you can change at runtime.</p>
+<p>The primary disadvantages is that each piece of text has it's own texture, which can use more memory.
+When text changes, this texture has to be re-generated and re-uploaded to the GPU, taking up time.</p>
+<p>To split a line you can use '\n' in your text string, or, on the <code>style</code> object,
+change its <code>wordWrap</code> property to true and and give the <code>wordWrapWidth</code> property a value.</p>
+<p>A Text can be created directly from a string and a style object,
+which can be generated <a href="https://pixijs.io/pixi-text-style">here</a>.</p>
+<pre><code class="hljs language-js"><span class="hljs-keyword">let</span> text = <span class="hljs-keyword">new</span> PIXI.Text(<span class="hljs-string">&#x27;This is a PixiJS text&#x27;</span>,{<span class="hljs-attr">fontFamily</span> : <span class="hljs-string">&#x27;Arial&#x27;</span>, <span class="hljs-attr">fontSize</span>: <span class="hljs-number">24</span>, <span class="hljs-attr">fill</span> : <span class="hljs-number">0xff1010</span>, <span class="hljs-attr">align</span> : <span class="hljs-string">&#x27;center&#x27;</span>});
+</code></pre></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new PIXI.Text(text: string, style: object | <a href="/pixi-api/@pixi/text/PIXI/TextStyle.html">PIXI.TextStyle</a>, canvas: HTMLCanvasElement) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          text
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The string that you would like the text to display</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style
+        </td>
+        <td class="member-parameter__type">
+          object | <a href="/pixi-api/@pixi/text/PIXI/TextStyle.html">PIXI.TextStyle</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The style parameters</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          canvas
+        </td>
+        <td class="member-parameter__type">
+          HTMLCanvasElement
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The canvas element for drawing text</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="_accessibleActive">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_accessibleActive">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_accessibleActive</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">_accessibleActive: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_accessibleDiv">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_accessibleDiv">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_accessibleDiv</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">_accessibleDiv: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_bounds">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_bounds">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_bounds</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">_bounds: <a href=/pixi-api/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a></code></pre>
+
+
+  <div class="member__brief"><p>The bounds object, this is used to calculate and store the bounds of the displayObject.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_localBounds">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_localBounds">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_localBounds</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">_localBounds: <a href=/pixi-api/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a></code></pre>
+
+
+  <div class="member__brief"><p>Local bounds object, swapped with <code>_bounds</code> when using <code>getLocalBounds()</code>.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_resolution">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_resolution">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_resolution</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">_resolution: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The resolution / device pixel ratio of the canvas.
+This is set to automatically match the renderer resolution by default, but can be overridden by setting manually.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="accessible">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#accessible">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>accessible</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">accessible: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Flag for if the object is accessible. If true AccessibilityManager will overlay a
+shadow div with attributes set</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="accessibleChildren">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#accessibleChildren">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>accessibleChildren</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">accessibleChildren: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Setting to false will prevent any children inside this container to
+be accessible. Defaults to true.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="accessibleHint">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#accessibleHint">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>accessibleHint</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">accessibleHint: string</code></pre>
+
+
+  <div class="member__brief"><p>Sets the aria-label attribute of the shadow div</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="accessiblePointerEvents">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#accessiblePointerEvents">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>accessiblePointerEvents</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">accessiblePointerEvents: string</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Specify the pointer-events the accessible div will use
+Defaults to auto.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="accessibleTitle">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#accessibleTitle">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>accessibleTitle</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">accessibleTitle: ?string</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Sets the title attribute of the shadow div
+If accessibleTitle AND accessibleHint has not been this will default to 'displayObject [tabIndex]'</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="accessibleType">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#accessibleType">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>accessibleType</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">accessibleType: string</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Specify the type of div the accessible layer is. Screen readers treat the element differently
+depending on this type. Defaults to button.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="alpha">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#alpha">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>alpha</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">alpha: number</code></pre>
+
+
+  <div class="member__brief"><p>The opacity of the object.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="anchor">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#anchor">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>anchor</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">anchor: <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The anchor sets the origin point of the sprite. The default value is taken from the <a href=/pixi-api/@pixi/core/PIXI/Texture.html>Texture</a>
+and passed to the constructor.</p>
+<p>The default is <code>(0,0)</code>, this means the sprite's origin is the top left.</p>
+<p>Setting the anchor to <code>(0.5,0.5)</code> means the sprite's origin is centered.</p>
+<p>Setting the anchor to <code>(1,1)</code> would mean the sprite's origin point will be the bottom right corner.</p>
+<p>If you pass only single parameter, it will set both x and y to the same value as shown in the example below.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="angle">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#angle">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>angle</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">angle: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The angle of the object in degrees.
+'rotation' and 'angle' have the same effect on a display object; rotation is in radians, angle is in degrees.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="blendMode">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#blendMode">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>blendMode</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">blendMode: number</code></pre>
+
+
+  <div class="member__brief"><p>The blend mode to be applied to the sprite. Apply a value of <code>PIXI.BLEND_MODES.NORMAL</code> to reset the blend mode.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="buttonMode">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#buttonMode">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>buttonMode</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">buttonMode: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>If enabled, the mouse cursor use the pointer behavior when hovered over the displayObject if it is interactive
+Setting this changes the 'cursor' property to <code>'pointer'</code>.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          value
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="cacheAsBitmap">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#cacheAsBitmap">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>cacheAsBitmap</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">cacheAsBitmap: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Set this to true if you want this display object to be cached as a bitmap.
+This basically takes a snap shot of the display object as it is at that moment. It can
+provide a performance benefit for complex static displayObjects.
+To remove simply set this property to <code>false</code></p>
+<p>IMPORTANT GOTCHA - Make sure that all your textures are preloaded BEFORE setting this property to true
+as it will take a snapshot of what is currently there. If the textures have not loaded then they will not appear.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="canvas">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#canvas">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>canvas</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">canvas: HTMLCanvasElement</code></pre>
+
+
+  <div class="member__brief"><p>The canvas element that everything is drawn to</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="children">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#children">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>children</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">children: Array&lt;<a href=/pixi-api/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a>></code></pre>
+
+
+  <div class="member__brief"><p>The array of children of this container.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="context">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#context">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>context</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">context: CanvasRenderingContext2D</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The canvas 2d context that everything is drawn with</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="cursor">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#cursor">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>cursor</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">cursor: string</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>This defines what cursor mode is used when the mouse cursor
+is hovered over the displayObject.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="filterArea">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#filterArea">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>filterArea</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">filterArea: ?<a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The area the filter is applied to. This is used as more of an optimization
+rather than figuring out the dimensions of the displayObject each frame you can set this rectangle.</p>
+<p>Also works as an interaction mask.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="filters">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#filters">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>filters</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">filters: Array&lt;<a href=/pixi-api/@pixi/core/PIXI/Filter.html>PIXI.Filter</a>></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Sets the filters for the displayObject.</p>
+<ul>
+<li>IMPORTANT: This is a WebGL only feature and will be ignored by the canvas renderer.
+To remove filters simply set this property to <code>'null'</code>.</li>
+</ul></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="height">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#height">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>height</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">height: number</code></pre>
+
+
+  <div class="member__brief"><p>The height of the Text, setting this will actually modify the scale to achieve the value set</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="hitArea">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#hitArea">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>hitArea</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">hitArea: <a href=/pixi-api/@pixi/interaction/PIXI/IHitArea.html>PIXI.IHitArea</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Interaction shape. Children will be hit first, then this shape will be checked.
+Setting this will cause this shape to be checked in hit tests rather than the displayObject's bounds.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="interactive">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#interactive">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>interactive</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">interactive: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Enable interaction events for the DisplayObject. Touch, pointer and mouse
+events will not be emitted unless <code>interactive</code> is set to <code>true</code>.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="interactiveChildren">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#interactiveChildren">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>interactiveChildren</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">interactiveChildren: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Determines if the children to the displayObject can be clicked/touched
+Setting this to false allows PixiJS to bypass a recursive <code>hitTest</code> function</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="isMask">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#isMask">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>isMask</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">isMask: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Does any other displayObject use this object as a mask?</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="isSprite">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#isSprite">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>isSprite</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">isSprite: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>used to fast check if a sprite is.. a sprite!</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="localTransform">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#localTransform">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>localTransform</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">localTransform: <a href=/pixi-api/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a></code></pre>
+
+
+  <div class="member__brief"><p>Current transform of the object based on local factors: position, scale, other stuff.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="mask">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#mask">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>mask</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">mask: <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a> | <a href=/pixi-api/@pixi/core/PIXI/MaskData.html>PIXI.MaskData</a> | unknown</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Sets a mask for the displayObject. A mask is an object that limits the visibility of an
+object to the shape of the mask applied to it. In PixiJS a regular mask must be a
+<a href=/pixi-api/@pixi/graphics/PIXI/Graphics.html>PIXI.Graphics</a> or a <a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html>PIXI.Sprite</a> object. This allows for much faster masking in canvas as it
+utilities shape clipping. To remove a mask, set this property to <code>null</code>.</p>
+<p>For sprite mask both alpha and red channel are used. Black mask is the same as transparent mask.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="name">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#name">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>name</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">name: string</code></pre>
+
+
+  <div class="member__brief"><p>The instance name of the object.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="parent">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#parent">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>parent</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">parent: <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a></code></pre>
+
+
+  <div class="member__brief"><p>The display object container that contains this display object.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="pivot">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#pivot">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>pivot</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">pivot: <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The center of rotation, scaling, and skewing for this display object in its local space. The <code>position</code>
+is the projection of <code>pivot</code> in the parent's local space.</p>
+<p>By default, the pivot is the origin (0, 0).</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="pluginName">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#pluginName">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>pluginName</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">pluginName: string</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Plugin that is responsible for rendering this element.
+Allows to customize the rendering process without overriding '_render' &amp; '_renderCanvas' methods.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="position">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#position">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>position</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">position: <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a></code></pre>
+
+
+  <div class="member__brief"><p>The coordinate of the object relative to the local coordinates of the parent.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="renderable">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#renderable">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>renderable</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">renderable: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Can this object be rendered, if false the object will not be drawn but the updateTransform
+methods will still be called.</p>
+<p>Only affects recursive calls from parent. You can ask for bounds manually.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="resolution">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#resolution">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>resolution</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">resolution: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The resolution / device pixel ratio of the canvas.
+This is set to automatically match the renderer resolution by default, but can be overridden by setting manually.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="rotation">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#rotation">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>rotation</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">rotation: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The rotation of the object in radians.
+'rotation' and 'angle' have the same effect on a display object; rotation is in radians, angle is in degrees.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="roundPixels">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#roundPixels">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>roundPixels</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">roundPixels: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>If true PixiJS will Math.floor() x/y values when rendering, stopping pixel interpolation.
+Advantages can include sharper image quality (like text) and faster rendering on canvas.
+The main disadvantage is movement of objects may appear less smooth.
+To set the global default, change <a href=/pixi-api/@pixi/settings/PIXI/settings.html#ROUND_PIXELS>PIXI.settings.ROUND_PIXELS</a></p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="scale">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#scale">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>scale</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">scale: <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a></code></pre>
+
+
+  <div class="member__brief"><p>The scale factors of this object along the local coordinate axes.</p></div>
+  <div class="member__description"><p>The default scale is (1, 1).</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="skew">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#skew">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>skew</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">skew: <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a></code></pre>
+
+
+  <div class="member__brief"><p>The skew factor for the object in radians.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="smartMask">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#smartMask">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>smartMask</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">smartMask: <a href=/pixi-api/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>It enable smart-masking, set this property. Before rendering the scene graph, you must invoke
+<code>updateSmartMask</code> on each display-object to enable masking.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="sortableChildren">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#sortableChildren">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>sortableChildren</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">sortableChildren: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>If set to true, the container will sort its children by zIndex value
+when updateTransform() is called, or manually if sortChildren() is called.</p>
+<p>This actually changes the order of elements in the array, so should be treated
+as a basic solution that is not performant compared to other solutions,
+such as @link https://github.com/pixijs/pixi-display</p>
+<p>Also be aware of that this may not work nicely with the addChildAt() function,
+as the zIndex sorting may cause the child to automatically sorted to another position.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="sortDirty">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#sortDirty">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>sortDirty</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">sortDirty: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Should children be sorted by zIndex at the next updateTransform call.</p></div>
+  <div class="member__description"><p>Will get automatically set to true if a new child is added, or if a child's zIndex changes.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="style">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#style">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>style</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">style: object | <a href=/pixi-api/@pixi/text/PIXI/TextStyle.html>PIXI.TextStyle</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Set the style of the text. Set up an event listener to listen for changes on the style
+object and mark the text as dirty.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="text">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#text">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>text</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">text: string</code></pre>
+
+
+  <div class="member__brief"><p>Set the copy for the text object. To split a line you can use '\n'.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="texture">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#texture">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>texture</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">texture: <a href=/pixi-api/@pixi/core/PIXI/Texture.html>PIXI.Texture</a></code></pre>
+
+
+  <div class="member__brief"><p>The texture that the sprite is using</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="tint">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#tint">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>tint</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">tint: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The tint applied to the sprite. This is a hex value.
+A value of 0xFFFFFF will remove any tint effect.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="transform">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#transform">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>transform</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">transform: <a href=/pixi-api/@pixi/math/PIXI/Transform.html>PIXI.Transform</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>World transform and local transform of this object.
+This will become read-only later, please do not assign anything there unless you know what are you doing.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="visible">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#visible">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>visible</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">visible: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The visibility of the object. If false the object will not be drawn, and
+the updateTransform function will not be called.</p>
+<p>Only affects recursive calls from parent. You can ask for bounds or call updateTransform manually.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="width">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#width">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>width</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">width: number</code></pre>
+
+
+  <div class="member__brief"><p>The width of the Text, setting this will actually modify the scale to achieve the value set</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="worldAlpha">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#worldAlpha">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>worldAlpha</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">worldAlpha: number</code></pre>
+
+
+  <div class="member__brief"><p>The multiplied alpha of the displayObject.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="worldTransform">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#worldTransform">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>worldTransform</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">worldTransform: <a href=/pixi-api/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a></code></pre>
+
+
+  <div class="member__brief"><p>Current transform of the object based on world (parent) factors.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="worldVisible">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#worldVisible">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>worldVisible</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">worldVisible: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Indicates if the object is globally visible.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="x">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#x">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>x</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">x: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The position of the displayObject on the x axis relative to the local coordinates of the parent.
+An alias to position.x</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="y">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#y">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>y</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">y: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The position of the displayObject on the y axis relative to the local coordinates of the parent.
+An alias to position.y</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="zIndex">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#zIndex">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>zIndex</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">zIndex: number</code></pre>
+
+
+  <div class="member__brief"><p>The zIndex of the displayObject.</p></div>
+  <div class="member__description"><p>If a container has the sortableChildren property set to true, children will be automatically
+sorted by zIndex value; a higher value will mean it will be moved towards the end of the array,
+and thus rendered on top of other display objects within the same container.</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="_boundsID">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_boundsID">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_boundsID</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _boundsID: number</code></pre>
+
+
+  <div class="member__brief"><p>Flags the cached bounds as dirty.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_boundsRect">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_boundsRect">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_boundsRect</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _boundsRect: <a href=/pixi-api/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a></code></pre>
+
+
+  <div class="member__brief"><p>Cache of this display-object's bounds-rectangle.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_cachedTint">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_cachedTint">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_cachedTint</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _cachedTint: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Cached tint value so we can tell when the tint is changed.
+Value is used for 2d CanvasRenderer.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_destroyed">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_destroyed">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_destroyed</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _destroyed: boolean</code></pre>
+
+
+  <div class="member__brief"><p>If the object has been destroyed via destroy(). If true, it should not be used.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_enabledFilters">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_enabledFilters">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_enabledFilters</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _enabledFilters: Array&lt;<a href=/pixi-api/@pixi/core/PIXI/Filter.html>PIXI.Filter</a>></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Currently enabled filters</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_height">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_height">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_height</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _height: number</code></pre>
+
+
+  <div class="member__brief"><p>The height of the sprite (this is initially set by the texture)</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_lastSortedIndex">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_lastSortedIndex">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_lastSortedIndex</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _lastSortedIndex: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Which index in the children array the display component was before the previous zIndex sort.
+Used by containers to help sort objects with the same zIndex, by using previous array index as the decider.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_localBoundsRect">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_localBoundsRect">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_localBoundsRect</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _localBoundsRect: <a href=/pixi-api/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a></code></pre>
+
+
+  <div class="member__brief"><p>Cache of this display-object's local-bounds rectangle.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_mask">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_mask">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_mask</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _mask: <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a> | <a href=/pixi-api/@pixi/core/PIXI/MaskData.html>PIXI.MaskData</a> | unknown</code></pre>
+
+
+  <div class="member__brief"><p>The original, cached mask of the object.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_tempDisplayObjectParent">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_tempDisplayObjectParent">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_tempDisplayObjectParent</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _tempDisplayObjectParent: <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_tintedCanvas">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_tintedCanvas">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_tintedCanvas</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _tintedCanvas: HTMLCanvasElement</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Cached tinted texture.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_width">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_width">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_width</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _width: number</code></pre>
+
+
+  <div class="member__brief"><p>The width of the sprite (this is initially set by the texture)</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_zIndex">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_zIndex">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_zIndex</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _zIndex: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The zIndex of the displayObject.
+A higher value will mean it will be rendered on top of other displayObjects within the same container.</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="_recursivePostUpdateTransform">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_recursivePostUpdateTransform">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_recursivePostUpdateTransform</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">_recursivePostUpdateTransform() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Recursively updates transform of all objects from the root to this one
+internal function for toLocal()</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addChild">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#addChild">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>addChild</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">addChild(children: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>) → {<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Adds one or more children to the container.</p></div>
+  <div class="member__description"><p>Multiple items can be added like so: <code>myContainer.addChild(thingOne, thingTwo, thingThree)</code></p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          children
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The DisplayObject(s) to add to the container</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        <td class="member-return__description"><p>The first child that was added.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addChildAt">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#addChildAt">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>addChildAt</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">addChildAt(child: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, index: number) → {<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Adds a child to the container at a specified index. If the index is out of bounds an error will be thrown</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          child
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The child to add</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          index
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The index to place the child in</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        <td class="member-return__description"><p>The child that was added.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="calculateBounds">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#calculateBounds">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>calculateBounds</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">calculateBounds() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Recalculates the bounds of the container.</p></div>
+  <div class="member__description"><p>This implementation will automatically fit the children's bounds into the calculation. Each child's bounds
+is limited to its mask's bounds or filterArea, if any is applied.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="calculateTrimmedVertices">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#calculateTrimmedVertices">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>calculateTrimmedVertices</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">calculateTrimmedVertices() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>calculates worldTransform * vertices for a non texture with a trim. store it in vertexTrimmedData
+This is used to ensure that the true width and height of a trimmed texture is respected</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="calculateVertices">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#calculateVertices">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>calculateVertices</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">calculateVertices() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>calculates worldTransform * vertices, store it in vertexData</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="containerUpdateTransform">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#containerUpdateTransform">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>containerUpdateTransform</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">containerUpdateTransform</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Container default updateTransform, does update children of container.
+Will crash if there's no parent element.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="containsPoint">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#containsPoint">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>containsPoint</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">containsPoint(point: <a href="/pixi-api/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>) → {boolean}</code></pre>
+
+
+  <div class="member__brief"><p>Tests if a point is inside this sprite</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          point
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the point to test</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          boolean
+        </td>
+        <td class="member-return__description"><p>the result of the test</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroy">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#destroy">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>destroy</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">destroy(options: object | boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Destroys this text object.
+Note* Unlike a Sprite, a Text object will automatically destroy its baseTexture and texture as
+the majority of the time the texture will not be shared with any other Sprites.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          object | boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Options parameter. A boolean will act as if all options
+have been set to that value</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.children
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>if set to true, all the children will have their
+destroy method called as well. 'options' will be passed on to those calls.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.texture
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          true
+        </td>
+        <td class="member-parameter__description"><p>Should it destroy the current texture of the sprite as well</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.baseTexture
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          true
+        </td>
+        <td class="member-parameter__description"><p>Should it destroy the base texture of the sprite as well</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="disableTempParent">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#disableTempParent">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>disableTempParent</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">disableTempParent(cacheParent: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Pair method for <code>enableTempParent</code></p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          cacheParent
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Actual parent of element</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="displayObjectUpdateTransform">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#displayObjectUpdateTransform">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>displayObjectUpdateTransform</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">displayObjectUpdateTransform</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>DisplayObject default updateTransform, does not update children of container.
+Will crash if there's no parent element.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="enableTempParent">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#enableTempParent">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>enableTempParent</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">enableTempParent() → {<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Used in Renderer, cacheAsBitmap and other places where you call an <code>updateTransform</code> on root</p></div>
+  <div class="member__description"><pre><code class="hljs">const cacheParent = elem.enable<span class="hljs-constructor">TempParent()</span>;
+elem.update<span class="hljs-constructor">Transform()</span>;
+elem.disable<span class="hljs-constructor">TempParent(<span class="hljs-params">cacheParent</span>)</span>;
+</code></pre></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        <td class="member-return__description"><p>current parent</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getBounds">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#getBounds">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>getBounds</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">getBounds(skipUpdate: boolean, rect: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>) → {<a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Calculates and returns the (world) bounds of the display object as a <a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>Rectangle</a>.</p></div>
+  <div class="member__description"><p>This method is expensive on containers with a large subtree (like the stage). This is because the bounds
+of a container depend on its children's bounds, which recursively causes all bounds in the subtree to
+be recalculated. The upside, however, is that calling <code>getBounds</code> once on a container will indeed update
+the bounds of all children (the whole subtree, in fact). This side effect should be exploited by using
+<code>displayObject._bounds.getRectangle()</code> when traversing through all the bounds in a scene graph. Otherwise,
+calling <code>getBounds</code> on each object in a subtree will cause the total cost to increase quadratically as
+its height increases.</p>
+<ul>
+<li>The transforms of all objects in a container's <strong>subtree</strong> and of all <strong>ancestors</strong> are updated.</li>
+<li>The world bounds of all display objects in a container's <strong>subtree</strong> will also be recalculated.</li>
+</ul>
+<p>The <code>_bounds</code> object stores the last calculation of the bounds. You can use to entirely skip bounds
+calculation if needed.</p>
+<pre><code class="hljs language-js"><span class="hljs-keyword">const</span> lastCalculatedBounds = displayObject._bounds.getRectangle(optionalRect);
+</code></pre>
+<p>Do know that usage of <code>getLocalBounds</code> can corrupt the <code>_bounds</code> of children (the whole subtree, actually). This
+is a known issue that has not been solved. See <a href=/pixi-api/@pixi/display/PIXI/DisplayObject.html#getLocalBounds>getLocalBounds</a> for more
+details.</p>
+<p><code>getBounds</code> should be called with <code>skipUpdate</code> equal to <code>true</code> in a render() call. This is because the transforms
+are guaranteed to be update-to-date. In fact, recalculating inside a render() call may cause corruption in certain
+cases.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          skipUpdate
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>Setting to <code>true</code> will stop the transforms of the scene graph from
+being updated. This means the calculation returned MAY be out of date BUT will give you a
+nice performance boost.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          rect
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>Optional rectangle to store the result of the bounds calculation.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        <td class="member-return__description"><p>The minimum axis-aligned rectangle in world space that fits around this object.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getChildAt">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#getChildAt">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>getChildAt</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">getChildAt(index: number) → {<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Returns the child at the specified index</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          index
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The index to get the child at</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        <td class="member-return__description"><p>The child at the given index, if any.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getChildByName">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#getChildByName">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>getChildByName</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">getChildByName(name: string, deep: boolean) → {<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Returns the display object in the container.</p></div>
+  <div class="member__description"><p>Recursive searches are done in a preorder traversal.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          name
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Instance name.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          deep
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Whether to search recursively</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        <td class="member-return__description"><p>The child with the specified name.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getChildIndex">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#getChildIndex">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>getChildIndex</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">getChildIndex(child: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>) → {number}</code></pre>
+
+
+  <div class="member__brief"><p>Returns the index position of a child DisplayObject instance</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          child
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The DisplayObject instance to identify</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          number
+        </td>
+        <td class="member-return__description"><p>The index position of the child display object to identify</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getGlobalPosition">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#getGlobalPosition">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>getGlobalPosition</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">getGlobalPosition(point: <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean) → {<a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Returns the global position of the displayObject. Does not depend on object scale, rotation and pivot.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          point
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          new PIXI.Point()
+        </td>
+        <td class="member-parameter__description"><p>The point to write the global value to.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skipUpdate
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Setting to true will stop the transforms of the scene graph from
+being updated. This means the calculation returned MAY be out of date BUT will give you a
+nice performance boost.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-return__description"><p>The updated point.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getLocalBounds">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#getLocalBounds">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>getLocalBounds</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">getLocalBounds(rect: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>) → {<a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Gets the local bounds of the text object.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          rect
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The output rectangle.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        <td class="member-return__description"><p>The bounds.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="removeChild">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#removeChild">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>removeChild</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">removeChild(children: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>) → {<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Removes one or more children from the container.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          children
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The DisplayObject(s) to remove</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        <td class="member-return__description"><p>The first child that was removed.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="removeChildAt">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#removeChildAt">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>removeChildAt</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">removeChildAt(index: number) → {<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Removes a child from the specified index position.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          index
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The index to get the child from</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        <td class="member-return__description"><p>The child that was removed.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="removeChildren">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#removeChildren">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>removeChildren</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">removeChildren(beginIndex: number, endIndex: number) → {Array&lt;<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>>}</code></pre>
+
+
+  <div class="member__brief"><p>Removes all children from this container that are within the begin and end indexes.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          beginIndex
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The beginning position.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          endIndex
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          this.children.length
+        </td>
+        <td class="member-parameter__description"><p>The ending position. Default value is size of the container.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          Array&lt;<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>&gt;
+        </td>
+        <td class="member-return__description"><p>List of removed children</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="render">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#render">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>render</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">render(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Renders the object using the WebGL renderer.</p></div>
+  <div class="member__description"><p>The <a href=/pixi-api/@pixi/display/PIXI/Container.html#_render>_render</a> method is be overriden for rendering the contents of the
+container itself. This <code>render</code> method will invoke it, and also invoke the <code>render</code> methods of all
+children afterward.</p>
+<p>If <code>renderable</code> or <code>visible</code> is false or if <code>worldAlpha</code> is not positive, this implementation will entirely
+skip rendering. See <a href=/pixi-api/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a> for choosing between <code>renderable</code> or <code>visible</code>. Generally,
+setting alpha to zero is not recommended for purely skipping rendering.</p>
+<p>When your scene becomes large (especially when it is larger than can be viewed in a single screen), it is
+advised to employ <strong>culling</strong> to automatically skip rendering objects outside of the current screen. The
+<a href="https://www.npmjs.com/package/@pixi-essentials/cull">@pixi-essentials/cull</a> and
+<a href="https://www.npmjs.com/package/pixi-cull">pixi-cull</a> packages do this out of the box.</p>
+<p>The <a href=/pixi-api/@pixi/display/PIXI/Container.html#renderAdvanced>renderAdvanced</a> method is internally used when when masking or
+filtering is applied on a container. This does, however, break batching and can affect performance when
+masking and filtering is applied extensively throughout the scene graph.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="renderCanvas">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#renderCanvas">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>renderCanvas</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">renderCanvas(renderer: <a href="/pixi-api/@pixi/canvas-renderer/PIXI/CanvasRenderer.html">PIXI.CanvasRenderer</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Renders the object using the Canvas renderer</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/canvas-renderer/PIXI/CanvasRenderer.html">PIXI.CanvasRenderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="renderWebGL">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#renderWebGL">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>renderWebGL</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">renderWebGL(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Instance of renderer</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="setChildIndex">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#setChildIndex">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>setChildIndex</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">setChildIndex(child: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, index: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Changes the position of an existing child in the display object container</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          child
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The child DisplayObject instance for which you want to change the index number</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          index
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The resulting index number for the child display object</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="setParent">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#setParent">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>setParent</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">setParent(container: <a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a>) → {<a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Set the parent Container of this DisplayObject.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          container
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The Container to add this DisplayObject to.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a>
+        </td>
+        <td class="member-return__description"><p>The Container that this DisplayObject was added to.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="setTransform">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#setTransform">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>setTransform</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">setTransform(x: number, y: number, scaleX: number, scaleY: number, rotation: number, skewX: number, skewY: number, pivotX: number, pivotY: number) → {<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Convenience function to set the position, scale, skew and pivot at once.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          x
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The X position</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          y
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The Y position</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          scaleX
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>The X scale value</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          scaleY
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>The Y scale value</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          rotation
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The rotation</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skewX
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The X skew value</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skewY
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The Y skew value</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          pivotX
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The X pivot value</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          pivotY
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The Y pivot value</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        <td class="member-return__description"><p>The DisplayObject instance</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="sortChildren">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#sortChildren">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>sortChildren</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">sortChildren() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Sorts children by zIndex. Previous order is mantained for 2 children with the same zIndex.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="swapChildren">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#swapChildren">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>swapChildren</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">swapChildren(child: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, child2: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Swaps the position of 2 Display Objects within this container.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          child
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>First display object to swap</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          child2
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Second display object to swap</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="toGlobal">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#toGlobal">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>toGlobal</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">toGlobal(position: <a href="/pixi-api/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>, point: <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean) → {<a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Calculates the global position of the display object.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          position
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The world origin to calculate from.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          point
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>A Point object in which to store the value, optional
+(otherwise will create a new Point).</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skipUpdate
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Should we skip the update transform.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-return__description"><p>A point object representing the position of this object.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="toLocal">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#toLocal">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>toLocal</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">toLocal(position: <a href="/pixi-api/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>, from: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, point: <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean) → {<a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Calculates the local position of the display object relative to another point.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          position
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The world origin to calculate from.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          from
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The DisplayObject to calculate the global position from.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          point
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>A Point object in which to store the value, optional
+(otherwise will create a new Point).</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          skipUpdate
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Should we skip the update transform</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+        </td>
+        <td class="member-return__description"><p>A point object representing the position of this object</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="updateText">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#updateText">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>updateText</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">updateText(respectDirty: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Renders text to its canvas, and updates its texture.
+By default this is used internally to ensure the texture is correct before rendering,
+but it can be used called externally, for example from this class to 'pre-generate' the texture from a piece of text,
+and then shared across multiple Sprites.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          respectDirty
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Whether to abort updating the text if the Text isn't dirty and the function is called.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="updateTransform">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#updateTransform">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>updateTransform</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">updateTransform() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Updates the transform on all children of this container for rendering</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="_calculateBounds">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_calculateBounds">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_calculateBounds</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _calculateBounds() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>calculates the bounds of the Text as a rectangle. The bounds calculation takes the worldTransform into account.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="_onTextureUpdate">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_onTextureUpdate">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_onTextureUpdate</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _onTextureUpdate() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>When the texture is updated, this event will fire to update the scale and frame</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="_render">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#_render">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_render</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _render(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Renders the object using the WebGL renderer</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="onChildrenChange">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#onChildrenChange">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>onChildrenChange</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected onChildrenChange(_length: number) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Overridable method that can be used by Container subclasses whenever the children array is modified</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          _length
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="renderAdvanced">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text/PIXI/Text.html#renderAdvanced">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>renderAdvanced</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected renderAdvanced(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Render the object using the WebGL renderer and advanced features.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_accessibleActive">_accessibleActive</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_accessibleDiv">_accessibleDiv</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_bounds">_bounds</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_localBounds">_localBounds</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_resolution">_resolution</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#accessible">accessible</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#accessibleChildren">accessibleChildren</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#accessibleHint">accessibleHint</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#accessiblePointerEvents">accessiblePointerEvents</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#accessibleTitle">accessibleTitle</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#accessibleType">accessibleType</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#alpha">alpha</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#anchor">anchor</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#angle">angle</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#blendMode">blendMode</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#buttonMode">buttonMode</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#cacheAsBitmap">cacheAsBitmap</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#canvas">canvas</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#children">children</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#context">context</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#cursor">cursor</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#filterArea">filterArea</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#filters">filters</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#height">height</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#hitArea">hitArea</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#interactive">interactive</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#interactiveChildren">interactiveChildren</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#isMask">isMask</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#isSprite">isSprite</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#localTransform">localTransform</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#mask">mask</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#name">name</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#parent">parent</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#pivot">pivot</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#pluginName">pluginName</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#position">position</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#renderable">renderable</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#resolution">resolution</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#rotation">rotation</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#roundPixels">roundPixels</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#scale">scale</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#skew">skew</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#smartMask">smartMask</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#sortableChildren">sortableChildren</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#sortDirty">sortDirty</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#style">style</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#text">text</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#texture">texture</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#tint">tint</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#transform">transform</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#visible">visible</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#width">width</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#worldAlpha">worldAlpha</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#worldTransform">worldTransform</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#worldVisible">worldVisible</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#x">x</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#y">y</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#zIndex">zIndex</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Protected Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_boundsID">_boundsID</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_boundsRect">_boundsRect</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_cachedTint">_cachedTint</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_destroyed">_destroyed</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_enabledFilters">_enabledFilters</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_height">_height</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_lastSortedIndex">_lastSortedIndex</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_localBoundsRect">_localBoundsRect</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_mask">_mask</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_tempDisplayObjectParent">_tempDisplayObjectParent</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_tintedCanvas">_tintedCanvas</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_width">_width</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_zIndex">_zIndex</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_recursivePostUpdateTransform">_recursivePostUpdateTransform</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#addChild">addChild</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#addChildAt">addChildAt</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#calculateBounds">calculateBounds</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#calculateTrimmedVertices">calculateTrimmedVertices</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#calculateVertices">calculateVertices</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#containerUpdateTransform">containerUpdateTransform</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#containsPoint">containsPoint</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#destroy">destroy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#disableTempParent">disableTempParent</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#displayObjectUpdateTransform">displayObjectUpdateTransform</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#enableTempParent">enableTempParent</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#getBounds">getBounds</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#getChildAt">getChildAt</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#getChildByName">getChildByName</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#getChildIndex">getChildIndex</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#getGlobalPosition">getGlobalPosition</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#getLocalBounds">getLocalBounds</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#removeChild">removeChild</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#removeChildAt">removeChildAt</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#removeChildren">removeChildren</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#render">render</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#renderCanvas">renderCanvas</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#renderWebGL">renderWebGL</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#setChildIndex">setChildIndex</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#setParent">setParent</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#setTransform">setTransform</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#sortChildren">sortChildren</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#swapChildren">swapChildren</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#toGlobal">toGlobal</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#toLocal">toLocal</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#updateText">updateText</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#updateTransform">updateTransform</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Protected Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_calculateBounds">_calculateBounds</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_onTextureUpdate">_onTextureUpdate</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#_render">_render</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#onChildrenChange">onChildrenChange</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text/PIXI/Text.html#renderAdvanced">renderAdvanced</a></li>
+    
+  </ul>
+</div>
+
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

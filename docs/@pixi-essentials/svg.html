@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Test Template</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="homepage">
+  
+    <div class="homepage__readme md">
+      <h1>@pixi-essentials/svg</h1>
+<p>This package exports a scene for drawing SVG DOMs. It is the most feature-rich implementation built on top
+of PixiJS.</p>
+<p>It will automatically cull the SVG scene if you are using a viewport.</p>
+<h2>Installation :package:</h2>
+<pre><code class="hljs language-bash">npm install @pixi-essentials/svg
+</code></pre>
+<h2>Usage :page_facing_up:</h2>
+<pre><code class="hljs language-ts"><span class="hljs-keyword">import</span> { SVGScene } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pixi-essentials/svg&#x27;</span>;
+
+<span class="hljs-comment">// <span class="hljs-doctag">NOTE:</span> Do not use a newline as the first character, otherwise the source will not be parsed by the browser.</span>
+<span class="hljs-keyword">const</span> src = <span class="hljs-string">`&lt;svg 
+    width=&quot;12cm&quot; 
+    height=&quot;5.25cm&quot; 
+    viewBox=&quot;0 0 1200 400&quot; 
+    xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot;&gt;
+
+    &lt;title&gt;Example arcs01 - arc commands in path data&lt;/title&gt;
+    &lt;desc&gt;Picture of a pie chart with two pie wedges and a picture of a line with arc blips&lt;/desc&gt;
+    &lt;rect id=&quot;bounding-box&quot; x=&quot;1&quot; y=&quot;1&quot; width=&quot;1198&quot; height=&quot;398&quot;
+        fill=&quot;none&quot; stroke=&quot;blue&quot; 
+        stroke-width=&quot;3&quot;
+        stroke-dasharray=&quot;15, 8, 2, 8&quot;
+        stroke-linecap=&quot;round&quot; /&gt;
+
+    &lt;defs&gt;
+        &lt;circle id=&quot;myCircle&quot; cx=&quot;60&quot; cy=&quot;60&quot; r=&quot;50&quot; stroke=&quot;blue&quot; stroke-width=&quot;10&quot; /&gt;
+    &lt;/defs&gt;
+
+    &lt;path d=&quot;M300,200 h-150 a150,150 0 1,0 150,-150 z&quot;
+        fill=&quot;red&quot; stroke=&quot;blue&quot; stroke-width=&quot;5&quot; /&gt;
+    &lt;path d=&quot;M 10,30
+        A 20,20 0,0,1 50,30
+        A 20,20 0,0,1 90,30
+        Q 90,60 50,90
+        Q 10,60 10,30 z&quot;/&gt;
+    &lt;path d=&quot;M275,175 v-150 a150,150 0 0,0 -150,150 z&quot;
+        fill=&quot;yellow&quot; stroke=&quot;blue&quot; stroke-width=&quot;5&quot; stroke-dasharray=&quot;15, 8, 2, 8&quot; /&gt;
+    &lt;path d=&quot;M600,350 l 50,-25
+        a25,25 -30 0,1 50,-25 l 50,-25
+        a25,50 -30 0,1 50,-25 l 50,-25
+        a25,75 -30 0,1 50,-25 l 50,-25
+        a25,100 -30 0,1 50,-25 l 50,-25&quot;
+        fill=&quot;none&quot; stroke=&quot;red&quot; stroke-width=&quot;5&quot; stroke-dasharray=&quot;15, 8, 2, 8&quot; /&gt;
+    &lt;image 
+        xlink:href=&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/693612/IaUrttj.png&quot; 
+        crossorigin=&quot;anonymous&quot; 
+        x=&quot;20&quot;
+        y=&quot;100&quot;
+        height=&quot;150&quot; 
+        width=&quot;100&quot; /&gt;
+    &lt;use href=&quot;#myCircle&quot; fill=&quot;red&quot; x=&quot;550&quot; y=&quot;10&quot; /&gt;
+    &lt;use href=&quot;#myCircle&quot; fill=&quot;green&quot; x=&quot;700&quot; y=&quot;10&quot; /&gt;
+&lt;/svg&gt;
+`</span>;
+
+<span class="hljs-comment">// Loads the SVG string as a DOM tree.</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadSVG</span>(<span class="hljs-params">src</span>) </span>{
+    <span class="hljs-keyword">const</span> div = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&#x27;div&#x27;</span>);
+
+    div.innerHTML = src;
+    <span class="hljs-keyword">const</span> svg = div.firstChild;
+
+    <span class="hljs-keyword">return</span> svg;
+}
+
+<span class="hljs-comment">// Voila, you can now use this scene by adding it to your scene graph!</span>
+<span class="hljs-keyword">const</span> scene = <span class="hljs-keyword">new</span> SVGScene(loadSVG(src));
+</code></pre>
+<h2>Collaboration</h2>
+<p>I'd like to thank <a href="strytegy.com">Strytegy</a> for funding the initial development of this package.</p>
+<p><a href="https://www.strytegy.com"><img src="https://i.imgur.com/3Ns1JJb.png" width="153.3px" /></a></p>
+
+    </div>
+  
+  </div>
+</div>
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

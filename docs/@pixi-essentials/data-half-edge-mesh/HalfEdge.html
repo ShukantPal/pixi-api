@@ -1,0 +1,610 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: HalfEdge</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi-essentials/data-half-edge-mesh
+        &gt;
+      
+      
+      <span>HalfEdge</span>
+    </div>
+    <h1 class="document__title">HalfEdge</h1>
+    
+<pre class="signature__container"><code class="signature">class HalfEdge
+implements <a href="/pixi-api/@pixi-essentials/types/ILinkedListNode.html">ILinkedListNode</a></code></pre>
+
+
+    <div class="document__brief"><p>A directed edge from its origin to destination.</p></div>
+    <div class="document__description"><p><code>HalfEdge</code> is a node of the following circular linked-lists:</p>
+<ul>
+<li>the list of edges in the whole mesh: HalfEdge#next</li>
+<li>the list of edges around its left face: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lnext">HalfEdge#lnext</a></li>
+<li>the list of edges directed from its origin vertex: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#onext">HalfEdge#onext</a></li>
+<li>the list of edges directed to its destination vertex: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dnext">HalfEdge#dnext</a></li>
+<li>the list of edges around its right face: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rnext">HalfEdge#rnext</a></li>
+</ul></div>
+
+    
+      
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="dlast">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dlast">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>dlast</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">dlast</code></pre>
+
+
+  <div class="member__brief"><p>The last edge sharing <code>this.dst</code> in the counterclockwise direction.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="dnext">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dnext">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>dnext</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">dnext</code></pre>
+
+
+  <div class="member__brief"><p>The next edge sharing <code>this.dst</code> in the counterclockwise direction.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="dst">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dst">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>dst</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">dst</code></pre>
+
+
+  <div class="member__brief"><p>The destination vertex</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="leftFace">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#leftFace">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>leftFace</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">leftFace</code></pre>
+
+
+  <div class="member__brief"><p>The face on the left side of this edge. This edge is oriented counterclockwise to its left face.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="lnext">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lnext">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>lnext</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">lnext</code></pre>
+
+
+  <div class="member__brief"><p>The next edge on the left face (pointing counterclockwise direction).</p></div>
+  <div class="member__description"><p><code>this.lnext</code>'s origin vertex is this edge's destination vertex.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="lprev">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lprev">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>lprev</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">lprev</code></pre>
+
+
+  <div class="member__brief"><p>The previous edge on the left face (pointing counterclockwise direction).</p></div>
+  <div class="member__description"><p><code>this.lprev</code>'s destination vertex is this edge's origin vertex.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="onext">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#onext">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>onext</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">onext</code></pre>
+
+
+  <div class="member__brief"><p>The next edge sharing <code>this.org</code> in the counterclockwise direction.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="oprev">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#oprev">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>oprev</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">oprev</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The previous edge sharing <code>this.org</code> in the counterclockwise direction. It is also
+the next edge in the clockwise direction.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="org">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#org">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>org</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">org</code></pre>
+
+
+  <div class="member__brief"><p>The origin vertex</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="rightFace">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rightFace">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>rightFace</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">rightFace</code></pre>
+
+
+  <div class="member__brief"><p>The face on the right side of this edge. This edge is oriented clockwise to its right face.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="rlast">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rlast">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>rlast</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">rlast</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The next edge on the right face in counterclockwise direction; however, this and <code>this.rlast</code>
+are directed in the clockwise direction of the right face.</p>
+<p><code>this.rlast</code>'s origin vertex is this edge's destination vertex.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="rnext">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rnext">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>rnext</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">rnext</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The next edge on the right face in counterclockwise direction; however, this and <code>this.rnext</code>
+are directed in the clockwise direction of the right face.</p>
+<p><code>this.rnext</code>'s destination vertex is this edge's origin vertex.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="twin">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#twin">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>twin</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">twin</code></pre>
+
+
+  <div class="member__brief"><p>The half-edge directed from <code>this.dst</code>.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="connect">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#connect">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>connect</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">connect(origin: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Vertex.html">Vertex</a>, twin: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html">HalfEdge</a>, leftFace: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Face.html">Face</a>) → {this}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          origin
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Vertex.html">Vertex</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          twin
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html">HalfEdge</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          leftFace
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Face.html">Face</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          this
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dlast">dlast</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dnext">dnext</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dst">dst</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#leftFace">leftFace</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lnext">lnext</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lprev">lprev</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#onext">onext</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#oprev">oprev</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#org">org</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rightFace">rightFace</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rlast">rlast</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rnext">rnext</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#twin">twin</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#connect">connect</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

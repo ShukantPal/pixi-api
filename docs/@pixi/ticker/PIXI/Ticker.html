@@ -1,0 +1,1123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Ticker</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi/ticker
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a>
+        &gt;
+      
+      <span>Ticker</span>
+    </div>
+    <h1 class="document__title">PIXI.Ticker</h1>
+    
+<pre class="signature__container"><code class="signature">class Ticker</code></pre>
+
+
+    <div class="document__brief"><p>A Ticker class that runs an update loop that other objects listen to.</p></div>
+    <div class="document__description"><p>This class is composed around listeners meant for execution on the next requested animation frame.
+Animation frames are requested only when necessary, e.g. When the ticker is started and the emitter has listeners.</p></div>
+
+    
+      
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="shared">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#shared">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>shared</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static shared: <a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html>PIXI.Ticker</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The shared ticker instance used by <a href=/pixi-api/@pixi/sprite-animated/PIXI/AnimatedSprite.html>PIXI.AnimatedSprite</a> and by
+<a href=/pixi-api/@pixi/core/PIXI/VideoResource.html>PIXI.VideoResource</a> to update animation frames / video textures.</p>
+<p>It may also be used by <a href=/pixi-api/@pixi/app/PIXI/Application.html>PIXI.Application</a> if created with the <code>sharedTicker</code> option property set to true.</p>
+<p>The property <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#autoStart">PIXI.Ticker#autoStart</a> is set to <code>true</code> for this instance.
+Please follow the examples for usage, including how to opt-out of auto-starting the shared ticker.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="system">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#system">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>system</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static system: <a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html>PIXI.Ticker</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The system ticker instance used by <a href=/pixi-api/@pixi/interaction/PIXI/InteractionManager.html>PIXI.InteractionManager</a> and by
+<a href=/pixi-api/@pixi/prepare/PIXI/BasePrepare.html>PIXI.BasePrepare</a> for core timing functionality that shouldn't usually need to be paused,
+unlike the <code>shared</code> ticker which drives visual animations and rendering which may want to be paused.</p>
+<p>The property <a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html#autoStart>PIXI.Ticker#autoStart</a> is set to <code>true</code> for this instance.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="autoStart">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#autoStart">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>autoStart</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">autoStart: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Whether or not this ticker should invoke the method
+<a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#start">PIXI.Ticker#start</a> automatically
+when a listener is added.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="count">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#count">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>count</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">count: number</code></pre>
+
+
+  <div class="member__brief"><p>The number of listeners on this ticker, calculated by walking through linked list</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="deltaMS">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#deltaMS">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>deltaMS</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">deltaMS: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Scaler time elapsed in milliseconds from last frame to this frame.
+This value is capped by setting <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#minFPS">PIXI.Ticker#minFPS</a>
+and is scaled with <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#speed">PIXI.Ticker#speed</a>.
+<strong>Note:</strong> The cap may be exceeded by scaling.
+If the platform supports DOMHighResTimeStamp,
+this value will have a precision of 1 µs.
+Defaults to target frame time</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="deltaTime">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#deltaTime">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>deltaTime</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">deltaTime: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Scalar time value from last frame to this frame.
+This value is capped by setting <a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html#minFPS>PIXI.Ticker#minFPS</a>
+and is scaled with <a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html#speed>PIXI.Ticker#speed</a>.
+<strong>Note:</strong> The cap may be exceeded by scaling.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="elapsedMS">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#elapsedMS">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>elapsedMS</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">elapsedMS: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Time elapsed in milliseconds from last frame to this frame.
+Opposed to what the scalar <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#deltaTime">PIXI.Ticker#deltaTime</a>
+is based, this value is neither capped nor scaled.
+If the platform supports DOMHighResTimeStamp,
+this value will have a precision of 1 µs.
+Defaults to target frame time</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="FPS">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#FPS">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>FPS</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">FPS: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The frames per second at which this ticker is running.
+The default is approximately 60 in most modern browsers.
+<strong>Note:</strong> This does not factor in the value of
+<a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html#speed>PIXI.Ticker#speed</a>, which is specific
+to scaling <a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html#deltaTime>PIXI.Ticker#deltaTime</a>.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="lastTime">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#lastTime">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>lastTime</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">lastTime: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The last time <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#update">PIXI.Ticker#update</a> was invoked.
+This value is also reset internally outside of invoking
+update, but only when a new animation frame is requested.
+If the platform supports DOMHighResTimeStamp,
+this value will have a precision of 1 µs.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="maxFPS">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#maxFPS">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>maxFPS</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">maxFPS: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Manages the minimum amount of milliseconds required to
+elapse between invoking <a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html#update>PIXI.Ticker#update</a>.
+This will effect the measured value of <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#FPS">PIXI.Ticker#FPS</a>.
+If it is set to <code>0</code>, then there is no limit; PixiJS will render as many frames as it can.
+Otherwise it will be at least <code>minFPS</code></p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="minFPS">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#minFPS">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>minFPS</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">minFPS: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Manages the maximum amount of milliseconds allowed to
+elapse between invoking <a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html#update>PIXI.Ticker#update</a>.
+This value is used to cap <a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html#deltaTime>PIXI.Ticker#deltaTime</a>,
+but does not effect the measured value of <a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html#FPS>PIXI.Ticker#FPS</a>.
+When setting this property it is clamped to a value between
+<code>0</code> and <code>PIXI.settings.TARGET_FPMS * 1000</code>.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="speed">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#speed">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>speed</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">speed: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Factor of current <a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html#deltaTime>PIXI.Ticker#deltaTime</a>.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="started">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#started">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>started</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">started: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Whether or not this ticker has been started.
+<code>true</code> if <a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html#start>PIXI.Ticker#start</a> has been called.
+<code>false</code> if <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#stop">PIXI.Ticker#stop</a> has been called.
+While <code>false</code>, this value may change to <code>true</code> in the
+event of <a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html#autoStart>PIXI.Ticker#autoStart</a> being <code>true</code>
+and a listener is added.</p></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="add">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#add">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>add</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">add(fn: Function, context: unknown, priority: number) → {<a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html">PIXI.Ticker</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Register a handler for tick events. Calls continuously unless
+it is removed or the ticker is stopped.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          fn
+        </td>
+        <td class="member-parameter__type">
+          Function
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The listener function to be added for updates</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          context
+        </td>
+        <td class="member-parameter__type">
+          unknown
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The listener context</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          priority
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.UPDATE_PRIORITY.NORMAL
+        </td>
+        <td class="member-parameter__description"><p>The priority for emitting</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html">PIXI.Ticker</a>
+        </td>
+        <td class="member-return__description"><p>This instance of a ticker</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="addOnce">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#addOnce">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>addOnce</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">addOnce(fn: Function, context: unknown, priority: number) → {<a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html">PIXI.Ticker</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Add a handler for the tick event which is only execute once.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          fn
+        </td>
+        <td class="member-parameter__type">
+          Function
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The listener function to be added for one update</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          context
+        </td>
+        <td class="member-parameter__type">
+          unknown
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The listener context</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          priority
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.UPDATE_PRIORITY.NORMAL
+        </td>
+        <td class="member-parameter__description"><p>The priority for emitting</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html">PIXI.Ticker</a>
+        </td>
+        <td class="member-return__description"><p>This instance of a ticker</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroy">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#destroy">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>destroy</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Destroy the ticker and don't use after this. Calling
+this method removes all references to internal events.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="remove">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#remove">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>remove</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">remove(fn: Function, context: unknown) → {<a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html">PIXI.Ticker</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Removes any handlers matching the function and context parameters.
+If no handlers are left after removing, then it cancels the animation frame.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          fn
+        </td>
+        <td class="member-parameter__type">
+          Function
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The listener function to be removed</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          context
+        </td>
+        <td class="member-parameter__type">
+          unknown
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The listener context to be removed</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html">PIXI.Ticker</a>
+        </td>
+        <td class="member-return__description"><p>This instance of a ticker</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="start">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#start">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>start</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">start() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Starts the ticker. If the ticker has listeners
+a new animation frame is requested at this point.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="stop">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#stop">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>stop</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">stop() → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Stops the ticker. If the ticker has requested
+an animation frame it is canceled at this point.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="update">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#update">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>update</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">update(currentTime: number) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Triggers an update. An update entails setting the
+current <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#elapsedMS">PIXI.Ticker#elapsedMS</a>,
+the current <a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html#deltaTime>PIXI.Ticker#deltaTime</a>,
+invoking all listeners with current deltaTime,
+and then finally setting <a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#lastTime">PIXI.Ticker#lastTime</a>
+with the value of currentTime that was provided.
+This method will be called automatically by animation
+frame callbacks if the ticker instance has been started
+and listeners are added.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          currentTime
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          performance.now()
+        </td>
+        <td class="member-parameter__description"><p>the current time of execution</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#shared">shared</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html#system>system</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#autoStart">autoStart</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#count">count</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#deltaMS">deltaMS</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#deltaTime">deltaTime</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#elapsedMS">elapsedMS</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#FPS">FPS</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#lastTime">lastTime</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#maxFPS">maxFPS</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#minFPS">minFPS</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#speed">speed</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#started">started</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#add">add</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#addOnce">addOnce</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#destroy">destroy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#remove">remove</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#start">start</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#stop">stop</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/ticker/PIXI/Ticker.html#update">update</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

@@ -1,0 +1,1297 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: AbstractRenderer</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi/core
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a>
+        &gt;
+      
+      <span>AbstractRenderer</span>
+    </div>
+    <h1 class="document__title">PIXI.AbstractRenderer</h1>
+    
+<pre class="signature__container"><code class="signature">class AbstractRenderer extends <a href="/pixi-api/@pixi/utils/PIXI/utils/EventEmitter.html">PIXI.utils.EventEmitter</a></code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>The AbstractRenderer is the base for a PixiJS Renderer. It is extended by the <a href=/pixi-api/@pixi/canvas-renderer/PIXI/CanvasRenderer.html>PIXI.CanvasRenderer</a>
+and <a href=/pixi-api/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a> which can be used for rendering a PixiJS scene.</p></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new PIXI.AbstractRenderer(system, options: IRendererOptions) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          system
+        </td>
+        <td class="member-parameter__type">
+          
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The name of the system this renderer is for.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          IRendererOptions
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The optional renderer parameters.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.width
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          800
+        </td>
+        <td class="member-parameter__description"><p>The width of the screen.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.height
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          600
+        </td>
+        <td class="member-parameter__description"><p>The height of the screen.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.view
+        </td>
+        <td class="member-parameter__type">
+          HTMLCanvasElement
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The canvas to use as a view, optional.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.transparent
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>If the render view is transparent.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.autoDensity
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Resizes renderer view in CSS pixels to allow for
+resolutions other than 1.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.antialias
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Sets antialias</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.resolution
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>The resolution / device pixel ratio of the renderer. The
+resolution of the renderer retina would be 2.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.preserveDrawingBuffer
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Enables drawing buffer preservation,
+enable this if you need to call toDataUrl on the WebGL context.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.clearBeforeRender
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          true
+        </td>
+        <td class="member-parameter__description"><p>This sets if the renderer will clear the canvas or
+not before the new render pass.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.backgroundColor
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0x000000
+        </td>
+        <td class="member-parameter__description"><p>The background color of the rendered area
+(shown if not transparent).</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="autoResize">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#autoResize">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>autoResize</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static autoResize: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="autoDensity">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#autoDensity">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>autoDensity</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">autoDensity: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Whether CSS dimensions of canvas view should be resized to screen dimensions automatically.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="backgroundColor">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#backgroundColor">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>backgroundColor</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">backgroundColor: number</code></pre>
+
+
+  <div class="member__brief"><p>The background color to fill if not transparent</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="clearBeforeRender">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#clearBeforeRender">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>clearBeforeRender</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">clearBeforeRender: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>This sets if the CanvasRenderer will clear the canvas or not before the new render pass.
+If the scene is NOT transparent PixiJS will use a canvas sized fillRect operation every
+frame to set the canvas background color. If the scene is transparent PixiJS will use clearRect
+to clear the canvas every frame. Disable this by setting this to false. For example, if
+your game has a canvas filling background image you often don't need this set.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="height">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#height">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>height</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">height: number</code></pre>
+
+
+  <div class="member__brief"><p>Same as view.height, actual number of pixels in the canvas by vertical.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="options">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#options">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>options</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">options: Object</code></pre>
+
+
+  <div class="member__brief"><p>The supplied constructor options.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="plugins">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#plugins">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>plugins</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">plugins: object</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Collection of plugins.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="preserveDrawingBuffer">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#preserveDrawingBuffer">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>preserveDrawingBuffer</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">preserveDrawingBuffer: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The value of the preserveDrawingBuffer flag affects whether or not the contents of
+the stencil buffer is retained after rendering.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="resolution">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#resolution">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>resolution</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">resolution: number</code></pre>
+
+
+  <div class="member__brief"><p>The resolution / device pixel ratio of the renderer.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="screen">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#screen">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>screen</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">screen: <a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a></code></pre>
+
+
+  <div class="member__brief"><p>Measurements of the screen. (0, 0, screenWidth, screenHeight).</p></div>
+  <div class="member__description"><p>Its safe to use as filterArea or hitArea for the whole stage.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="transparent">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#transparent">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>transparent</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">transparent: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Whether the render view is transparent.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="type">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#type">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>type</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">type: number</code></pre>
+
+
+  <div class="member__brief"><p>The type of the renderer.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="view">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#view">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>view</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">view: HTMLCanvasElement</code></pre>
+
+
+  <div class="member__brief"><p>The canvas element that everything is drawn to.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="width">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#width">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>width</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">width: number</code></pre>
+
+
+  <div class="member__brief"><p>Same as view.width, actual number of pixels in the canvas by horizontal.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="_backgroundColor">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#_backgroundColor">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_backgroundColor</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _backgroundColor: number</code></pre>
+
+
+  <div class="member__brief"><p>The background color as a number.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_backgroundColorRgba">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#_backgroundColorRgba">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_backgroundColorRgba</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _backgroundColorRgba: Array&lt;number></code></pre>
+
+
+  <div class="member__brief"><p>The background color as an [R, G, B] array.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_backgroundColorString">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#_backgroundColorString">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_backgroundColorString</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _backgroundColorString: string</code></pre>
+
+
+  <div class="member__brief"><p>The background color as a string.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="_lastObjectRendered">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#_lastObjectRendered">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_lastObjectRendered</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _lastObjectRendered: <a href=/pixi-api/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a></code></pre>
+
+
+  <div class="member__brief"><p>The last root object that the renderer tried to render.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="destroy">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#destroy">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>destroy</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">destroy(removeView: boolean) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Removes everything from the renderer and optionally removes the Canvas DOM element.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          removeView
+        </td>
+        <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          false
+        </td>
+        <td class="member-parameter__description"><p>Removes the Canvas element from the DOM.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="generateTexture">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#generateTexture">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>generateTexture</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">generateTexture(displayObject: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, scaleMode: <a href="/pixi-api/@pixi/constants/PIXI/SCALE_MODES.html">PIXI.SCALE_MODES</a>, resolution: number, region: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>) → {<a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Useful function that returns a texture of the display object that can then be used to create sprites
+This can be quite useful if your displayObject is complicated and needs to be reused multiple times.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          displayObject
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The displayObject the object will be generated from.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          scaleMode
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/constants/PIXI/SCALE_MODES.html">PIXI.SCALE_MODES</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The scale mode of the texture.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          resolution
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The resolution / device pixel ratio of the texture being generated.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          region
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The region of the displayObject, that shall be rendered,
+if no region is specified, defaults to the local bounds of the displayObject.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+        </td>
+        <td class="member-return__description"><p>A texture of the graphics object.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="resize">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#resize">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>resize</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">resize(screenWidth: number, screenHeight: number) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Resizes the screen and canvas to the specified width and height.
+Canvas dimensions are multiplied by resolution.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          screenWidth
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The new width of the screen.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          screenHeight
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The new height of the screen.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+<div class="members">
+  <h2 class="members__category">Protected Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="initPlugins">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#initPlugins">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>initPlugins</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected initPlugins(staticMap: object) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Initialize the plugins.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          staticMap
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The dictionary of statically saved plugins.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#autoResize">autoResize</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#autoDensity">autoDensity</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#backgroundColor">backgroundColor</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#clearBeforeRender">clearBeforeRender</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#height">height</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#options">options</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#plugins">plugins</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#preserveDrawingBuffer">preserveDrawingBuffer</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#resolution">resolution</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#screen">screen</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#transparent">transparent</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#type">type</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#view">view</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#width">width</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Protected Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#_backgroundColor">_backgroundColor</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#_backgroundColorRgba">_backgroundColorRgba</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#_backgroundColorString">_backgroundColorString</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#_lastObjectRendered">_lastObjectRendered</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#destroy">destroy</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#generateTexture">generateTexture</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#resize">resize</a></li>
+    
+  </ul>
+</div>
+
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Protected Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/AbstractRenderer.html#initPlugins">initPlugins</a></li>
+    
+  </ul>
+</div>
+
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

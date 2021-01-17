@@ -1,0 +1,791 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: canvasUtils</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi/canvas-renderer
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a>
+        &gt;
+      
+      <span>canvasUtils</span>
+    </div>
+    <h1 class="document__title">PIXI.canvasUtils</h1>
+    
+<pre class="signature__container"><code class="signature">static namespace canvasUtils</code></pre>
+
+
+    <div class="document__brief"><p>Utility methods for Sprite/Texture tinting.</p></div>
+    <div class="document__description"><p>Tinting with the CanvasRenderer involves creating a new canvas to use as a texture,
+so be aware of the performance implications.</p></div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="cacheStepsPerColorChannel">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#cacheStepsPerColorChannel">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>cacheStepsPerColorChannel</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static cacheStepsPerColorChannel: number</code></pre>
+
+
+  <div class="member__brief"><p>Number of steps which will be used as a cap when rounding colors.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="canUseMultiply">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#canUseMultiply">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>canUseMultiply</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static canUseMultiply: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Whether or not the Canvas BlendModes are supported, consequently the ability to tint using the multiply method.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="convertTintToImage">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#convertTintToImage">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>convertTintToImage</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static convertTintToImage: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Tint cache boolean flag.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="tintMethod">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintMethod">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>tintMethod</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static tintMethod: Function</code></pre>
+
+
+  <div class="member__brief"><p>The tinting method that will be used.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="getTintedCanvas">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#getTintedCanvas">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>getTintedCanvas</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static getTintedCanvas(sprite: <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>, color: number) → {HTMLCanvasElement}</code></pre>
+
+
+  <div class="member__brief"><p>Basically this method just needs a sprite and a color and tints the sprite with the given color.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          sprite
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the sprite to tint</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          color
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the color to use to tint the sprite with</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          HTMLCanvasElement
+        </td>
+        <td class="member-return__description"><p>The tinted canvas</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getTintedPattern">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#getTintedPattern">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>getTintedPattern</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static getTintedPattern(texture: <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>, color: number) → {HTMLCanvasElement}</code></pre>
+
+
+  <div class="member__brief"><p>Basically this method just needs a sprite and a color and tints the sprite with the given color.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          texture
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the sprite to tint</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          color
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the color to use to tint the sprite with</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          HTMLCanvasElement
+        </td>
+        <td class="member-return__description"><p>The tinted canvas</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="roundColor">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#roundColor">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>roundColor</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static roundColor(color: number) → {number}</code></pre>
+
+
+  <div class="member__brief"><p>Rounds the specified color according to the canvasUtils.cacheStepsPerColorChannel.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          color
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the color to round, should be a hex color</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          number
+        </td>
+        <td class="member-return__description"><p>The rounded color.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="tintWithMultiply">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintWithMultiply">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>tintWithMultiply</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static tintWithMultiply(texture: <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>, color: number, canvas: HTMLCanvasElement) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Tint a texture using the 'multiply' operation.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          texture
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the texture to tint</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          color
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the color to use to tint the sprite with</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          canvas
+        </td>
+        <td class="member-parameter__type">
+          HTMLCanvasElement
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the current canvas</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="tintWithOverlay">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintWithOverlay">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>tintWithOverlay</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static tintWithOverlay(texture: <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>, color: number, canvas: HTMLCanvasElement) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Tint a texture using the 'overlay' operation.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          texture
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the texture to tint</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          color
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the color to use to tint the sprite with</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          canvas
+        </td>
+        <td class="member-parameter__type">
+          HTMLCanvasElement
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the current canvas</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="tintWithPerPixel">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintWithPerPixel">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>tintWithPerPixel</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static tintWithPerPixel(texture: <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>, color: number, canvas: HTMLCanvasElement) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Tint a texture pixel per pixel.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          texture
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the texture to tint</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          color
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the color to use to tint the sprite with</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          canvas
+        </td>
+        <td class="member-parameter__type">
+          HTMLCanvasElement
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>the current canvas</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#cacheStepsPerColorChannel">cacheStepsPerColorChannel</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#canUseMultiply">canUseMultiply</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#convertTintToImage">convertTintToImage</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintMethod">tintMethod</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#getTintedCanvas">getTintedCanvas</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#getTintedPattern">getTintedPattern</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#roundColor">roundColor</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintWithMultiply">tintWithMultiply</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintWithOverlay">tintWithOverlay</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintWithPerPixel">tintWithPerPixel</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

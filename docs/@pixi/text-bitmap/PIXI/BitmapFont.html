@@ -1,0 +1,910 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: BitmapFont</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi/text-bitmap
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a>
+        &gt;
+      
+      <span>BitmapFont</span>
+    </div>
+    <h1 class="document__title">PIXI.BitmapFont</h1>
+    
+<pre class="signature__container"><code class="signature">class BitmapFont</code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>BitmapFont represents a typeface available for use with the BitmapText class. Use the <code>install</code>
+method for adding a font to be used.</p></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new PIXI.BitmapFont(data: <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFontData.html">PIXI.BitmapFontData</a>, textures: Array&lt;<a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>> | Object&lt;string, <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>>) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          data
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFontData.html">PIXI.BitmapFontData</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          textures
+        </td>
+        <td class="member-parameter__type">
+          Array&lt;<a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>&gt; | Object&lt;string, <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>&gt;
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="ALPHA">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#ALPHA">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>ALPHA</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static ALPHA: Array&lt;Array&lt;string>></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>This character set includes all the letters in the alphabet (both lower- and upper- case).</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="ALPHANUMERIC">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#ALPHANUMERIC">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>ALPHANUMERIC</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static ALPHANUMERIC: Array&lt;Array&lt;string>></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>This character set is the union of <code>BitmapFont.ALPHA</code> and <code>BitmapFont.NUMERIC</code>.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="ASCII">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#ASCII">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>ASCII</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static ASCII: Array&lt;Array&lt;string>></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>This character set consists of all the ASCII table.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="available">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#available">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>available</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static available: Object&lt;string, <a href=/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html>PIXI.BitmapFont</a>></code></pre>
+
+
+  <div class="member__brief"><p>Collection of available/installed fonts.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="defaultOptions">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#defaultOptions">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>defaultOptions</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static defaultOptions: <a href="/pixi-api/@pixi/text-bitmap/PIXI/IBitmapFontOptions.html">PIXI.IBitmapFontOptions</a></code></pre>
+
+
+  <div class="member__brief"><p>Collection of default options when using <code>BitmapFont.from</code>.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="NUMERIC">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#NUMERIC">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>NUMERIC</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static NUMERIC: Array&lt;Array&lt;string>></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>This character set includes all decimal digits (from 0 to 9).</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="chars">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#chars">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>chars</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">chars: object</code></pre>
+
+
+  <div class="member__brief"><p>The map of characters by character code.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="font">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#font">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>font</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">font: string</code></pre>
+
+
+  <div class="member__brief"><p>The name of the font face.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="lineHeight">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#lineHeight">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>lineHeight</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">lineHeight: number</code></pre>
+
+
+  <div class="member__brief"><p>The line-height of the font face in pixels.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="size">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#size">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>size</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">size: number</code></pre>
+
+
+  <div class="member__brief"><p>The size of the font face in pixels.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="from">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#from">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>from</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static from(name: string, style: object | <a href="/pixi-api/@pixi/text/PIXI/TextStyle.html">PIXI.TextStyle</a>, options: <a href="/pixi-api/@pixi/text-bitmap/PIXI/IBitmapFontOptions.html">PIXI.IBitmapFontOptions</a>) → {<a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html">PIXI.BitmapFont</a>}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Generates a bitmap-font for the given style and character set. This does not support
+kernings yet. With <code>style</code> properties, only the following non-layout properties are used:</p>
+<ul>
+<li><a href="/pixi-api/@pixi/text/PIXI/TextStyle.html#dropShadow">dropShadow</a></li>
+<li><a href="/pixi-api/@pixi/text/PIXI/TextStyle.html#dropShadowDistance">dropShadowDistance</a></li>
+<li><a href="/pixi-api/@pixi/text/PIXI/TextStyle.html#dropShadowColor">dropShadowColor</a></li>
+<li><a href="/pixi-api/@pixi/text/PIXI/TextStyle.html#dropShadowBlur">dropShadowBlur</a></li>
+<li><a href="/pixi-api/@pixi/text/PIXI/TextStyle.html#dropShadowAngle">dropShadowAngle</a></li>
+<li><a href="/pixi-api/@pixi/text/PIXI/TextStyle.html#fill">fill</a></li>
+<li><a href="/pixi-api/@pixi/text/PIXI/TextStyle.html#fillGradientStops">fillGradientStops</a></li>
+<li><a href="/pixi-api/@pixi/text/PIXI/TextStyle.html#fillGradientType">fillGradientType</a></li>
+<li><a href="/pixi-api/@pixi/text/PIXI/TextStyle.html#fontFamily">fontFamily</a></li>
+<li><a href="/pixi-api/@pixi/text/PIXI/TextStyle.html#fontSize">fontSize</a></li>
+<li><a href="/pixi-api/@pixi/text/PIXI/TextStyle.html#fontVariant">fontVariant</a></li>
+<li><a href="/pixi-api/@pixi/text/PIXI/TextStyle.html#fontWeight">fontWeight</a></li>
+<li><a href="/pixi-api/@pixi/text/PIXI/TextStyle.html#lineJoin">lineJoin</a></li>
+<li><a href="/pixi-api/@pixi/text/PIXI/TextStyle.html#miterLimit">miterLimit</a></li>
+<li><a href="/pixi-api/@pixi/text/PIXI/TextStyle.html#stroke">stroke</a></li>
+<li><a href="/pixi-api/@pixi/text/PIXI/TextStyle.html#strokeThickness">strokeThickness</a></li>
+<li><a href="/pixi-api/@pixi/text/PIXI/TextStyle.html#textBaseline">textBaseline</a></li>
+</ul></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          name
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The name of the custom font to use with BitmapText.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          style
+        </td>
+        <td class="member-parameter__type">
+          object | <a href="/pixi-api/@pixi/text/PIXI/TextStyle.html">PIXI.TextStyle</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Style options to render with BitmapFont.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/text-bitmap/PIXI/IBitmapFontOptions.html">PIXI.IBitmapFontOptions</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Setup options for font or name of the font.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.chars
+        </td>
+        <td class="member-parameter__type">
+          string | Array&lt;string&gt; | Array&lt;Array&lt;string&gt;&gt;
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.BitmapFont.ALPHANUMERIC
+        </td>
+        <td class="member-parameter__description"><p>characters included
+in the font set. You can also use ranges. For example, <code>[['a', 'z'], ['A', 'Z'], &quot;!@#$%^&amp;*()~{}[] &quot;]</code>.
+Don't forget to include spaces ' ' in your character set!</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.resolution
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>Render resolution for glyphs.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.textureWidth
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          512
+        </td>
+        <td class="member-parameter__description"><p>Optional width of atlas, smaller values to reduce memory.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.textureHeight
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          512
+        </td>
+        <td class="member-parameter__description"><p>Optional height of atlas, smaller values to reduce memory.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.padding
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          4
+        </td>
+        <td class="member-parameter__description"><p>Padding between glyphs on texture atlas.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html">PIXI.BitmapFont</a>
+        </td>
+        <td class="member-return__description"><p>Font generated by style options.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="install">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#install">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>install</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static install(data: XMLDocument | string | <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFontData.html">PIXI.BitmapFontData</a>, textures: Object&lt;string, <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>> | <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a> | Array&lt;<a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>>) → {<a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html">PIXI.BitmapFont</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Register a new bitmap font.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          data
+        </td>
+        <td class="member-parameter__type">
+          XMLDocument | string | <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFontData.html">PIXI.BitmapFontData</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The
+characters map that could be provided as xml or raw string.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          textures
+        </td>
+        <td class="member-parameter__type">
+          Object&lt;string, <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>&gt; | <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a> | Array&lt;<a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>&gt;
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>List of textures for each page.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html">PIXI.BitmapFont</a>
+        </td>
+        <td class="member-return__description"><p>Result font object with font, size, lineHeight
+and char fields.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="uninstall">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#uninstall">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>uninstall</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static uninstall(name: string) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Remove bitmap font by name.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          name
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="destroy">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#destroy">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>destroy</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Remove references to created glyph textures.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#ALPHA">ALPHA</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#ALPHANUMERIC">ALPHANUMERIC</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#ASCII">ASCII</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#available">available</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#defaultOptions">defaultOptions</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#NUMERIC">NUMERIC</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#chars">chars</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#font">font</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#lineHeight">lineHeight</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#size">size</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#from">from</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#install">install</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#uninstall">uninstall</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapFont.html#destroy">destroy</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

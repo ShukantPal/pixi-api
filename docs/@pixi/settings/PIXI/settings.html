@@ -1,0 +1,876 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: settings</title>
+
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi/settings
+        &gt;
+      
+      
+        <a href=/pixi-api/pixi/js/PIXI.html>PIXI</a>
+        &gt;
+      
+      <span>settings</span>
+    </div>
+    <h1 class="document__title">PIXI.settings</h1>
+    
+<pre class="signature__container"><code class="signature">static namespace settings</code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>User's customizable globals for overriding the default PIXI settings, such
+as a renderer's default resolution, framerate, float precision, etc.</p></div>
+
+    
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="ANISOTROPIC_LEVEL">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#ANISOTROPIC_LEVEL">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>ANISOTROPIC_LEVEL</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static ANISOTROPIC_LEVEL: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Default anisotropic filtering level of textures.
+Usually from 0 to 16</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="CAN_UPLOAD_SAME_BUFFER">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#CAN_UPLOAD_SAME_BUFFER">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>CAN_UPLOAD_SAME_BUFFER</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static CAN_UPLOAD_SAME_BUFFER: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Can we upload the same buffer in a single frame?</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="CREATE_IMAGE_BITMAP">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#CREATE_IMAGE_BITMAP">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>CREATE_IMAGE_BITMAP</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static CREATE_IMAGE_BITMAP: boolean</code></pre>
+
+
+  <div class="member__brief"><p>Enables bitmap creation before image load. This feature is experimental.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="FAIL_IF_MAJOR_PERFORMANCE_CAVEAT">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#FAIL_IF_MAJOR_PERFORMANCE_CAVEAT">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>FAIL_IF_MAJOR_PERFORMANCE_CAVEAT</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static FAIL_IF_MAJOR_PERFORMANCE_CAVEAT: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Should the <code>failIfMajorPerformanceCaveat</code> flag be enabled as a context option used in the <code>isWebGLSupported</code> function.
+For most scenarios this should be left as true, as otherwise the user may have a poor experience.
+However, it can be useful to disable under certain scenarios, such as headless unit tests.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="FILTER_RESOLUTION">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#FILTER_RESOLUTION">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>FILTER_RESOLUTION</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static FILTER_RESOLUTION: number</code></pre>
+
+
+  <div class="member__brief"><p>Default filter resolution.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="GC_MAX_CHECK_COUNT">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#GC_MAX_CHECK_COUNT">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>GC_MAX_CHECK_COUNT</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static GC_MAX_CHECK_COUNT: number</code></pre>
+
+
+  <div class="member__brief"><p>Default Garbage Collection maximum check count.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="GC_MAX_IDLE">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#GC_MAX_IDLE">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>GC_MAX_IDLE</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static GC_MAX_IDLE: number</code></pre>
+
+
+  <div class="member__brief"><p>Default Garbage Collection max idle.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="GC_MODE">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#GC_MODE">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>GC_MODE</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static GC_MODE: <a href="/pixi-api/@pixi/constants/PIXI/GC_MODES.html">PIXI.GC_MODES</a></code></pre>
+
+
+  <div class="member__brief"><p>Default Garbage Collection mode.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="MESH_CANVAS_PADDING">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#MESH_CANVAS_PADDING">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>MESH_CANVAS_PADDING</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static MESH_CANVAS_PADDING: number</code></pre>
+
+
+  <div class="member__brief"><p>Default <code>canvasPadding</code> for canvas-based Mesh rendering.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="MIPMAP_TEXTURES">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#MIPMAP_TEXTURES">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>MIPMAP_TEXTURES</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static MIPMAP_TEXTURES: <a href="/pixi-api/@pixi/constants/PIXI/MIPMAP_MODES.html">PIXI.MIPMAP_MODES</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>If set to true WebGL will attempt make textures mimpaped by default.
+Mipmapping will only succeed if the base texture uploaded has power of two dimensions.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="PRECISION_FRAGMENT">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#PRECISION_FRAGMENT">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>PRECISION_FRAGMENT</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static PRECISION_FRAGMENT: <a href="/pixi-api/@pixi/constants/PIXI/PRECISION.html">PIXI.PRECISION</a></code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Default specify float precision in fragment shader.
+iOS is best set at highp due to https://github.com/pixijs/pixi.js/issues/3742</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="PRECISION_VERTEX">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#PRECISION_VERTEX">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>PRECISION_VERTEX</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static PRECISION_VERTEX: <a href=/pixi-api/@pixi/constants/PIXI/PRECISION.html>PIXI.PRECISION</a></code></pre>
+
+
+  <div class="member__brief"><p>Default specify float precision in vertex shader.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="PREFER_ENV">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#PREFER_ENV">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>PREFER_ENV</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static PREFER_ENV: number</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The maximum support for using WebGL. If a device does not
+support WebGL version, for instance WebGL 2, it will still
+attempt to fallback support to WebGL 1. If you want to
+explicitly remove feature support to target a more stable
+baseline, prefer a lower environment.</p>
+<p>Due to <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=934823">bug in chromium</a>
+we disable webgl2 by default for all non-apple mobile devices.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="RENDER_OPTIONS">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#RENDER_OPTIONS">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>RENDER_OPTIONS</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static RENDER_OPTIONS: object</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>The default render options if none are supplied to <a href=/pixi-api/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a>
+or <a href=/pixi-api/@pixi/canvas-renderer/PIXI/CanvasRenderer.html>PIXI.CanvasRenderer</a>.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="RESOLUTION">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#RESOLUTION">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>RESOLUTION</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static RESOLUTION: number</code></pre>
+
+
+  <div class="member__brief"><p>Default resolution / device pixel ratio of the renderer.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="RETINA_PREFIX">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#RETINA_PREFIX">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>RETINA_PREFIX</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static RETINA_PREFIX: RegExp</code></pre>
+
+
+  <div class="member__brief"><p>The prefix that denotes a URL is for a retina asset.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="ROUND_PIXELS">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#ROUND_PIXELS">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>ROUND_PIXELS</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static ROUND_PIXELS: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>If true PixiJS will Math.floor() x/y values when rendering, stopping pixel interpolation.
+Advantages can include sharper image quality (like text) and faster rendering on canvas.
+The main disadvantage is movement of objects may appear less smooth.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="SCALE_MODE">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#SCALE_MODE">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>SCALE_MODE</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static SCALE_MODE: <a href="/pixi-api/@pixi/constants/PIXI/SCALE_MODES.html">PIXI.SCALE_MODES</a></code></pre>
+
+
+  <div class="member__brief"><p>Default scale mode for textures.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="SORTABLE_CHILDREN">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#SORTABLE_CHILDREN">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>SORTABLE_CHILDREN</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static SORTABLE_CHILDREN: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Sets the default value for the container property 'sortableChildren'.
+If set to true, the container will sort its children by zIndex value
+when updateTransform() is called, or manually if sortChildren() is called.</p>
+<p>This actually changes the order of elements in the array, so should be treated
+as a basic solution that is not performant compared to other solutions,
+such as @link https://github.com/pixijs/pixi-display</p>
+<p>Also be aware of that this may not work nicely with the addChildAt() function,
+as the zIndex sorting may cause the child to automatically sorted to another position.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="SPRITE_BATCH_SIZE">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#SPRITE_BATCH_SIZE">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>SPRITE_BATCH_SIZE</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static SPRITE_BATCH_SIZE: number</code></pre>
+
+
+  <div class="member__brief"><p>The default sprite batch size.</p></div>
+  <div class="member__description"><p>The default aims to balance desktop and mobile devices.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="SPRITE_MAX_TEXTURES">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#SPRITE_MAX_TEXTURES">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>SPRITE_MAX_TEXTURES</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static SPRITE_MAX_TEXTURES: number</code></pre>
+
+
+  <div class="member__brief"><p>The maximum textures that this device supports.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="STRICT_TEXTURE_CACHE">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#STRICT_TEXTURE_CACHE">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>STRICT_TEXTURE_CACHE</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static STRICT_TEXTURE_CACHE: boolean</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>If set to <code>true</code>, <em>only</em> Textures and BaseTexture objects stored
+in the caches (<a href="/pixi-api/@pixi/utils/PIXI/utils.html#TextureCache">TextureCache</a> and
+<a href="/pixi-api/@pixi/utils/PIXI/utils.html#BaseTextureCache">BaseTextureCache</a>) can be
+used when calling <a href="/pixi-api/@pixi/core/PIXI/Texture.html#from">Texture.from</a> or
+<a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#from">BaseTexture.from</a>.
+Otherwise, these <code>from</code> calls throw an exception. Using this property
+can be useful if you want to enforce preloading all assets with
+<a href=/pixi-api/@pixi/loaders/PIXI/Loader.html>Loader</a>.</p></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="TARGET_FPMS">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#TARGET_FPMS">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>TARGET_FPMS</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static TARGET_FPMS: number</code></pre>
+
+
+  <div class="member__brief"><p>Target frames per millisecond.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="TRANSFORM_MODE">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#TRANSFORM_MODE">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>TRANSFORM_MODE</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static TRANSFORM_MODE: <a href=/pixi-api/pixi/js/PIXI.html#TRANSFORM_MODE>PIXI.TRANSFORM_MODE</a></code></pre>
+
+
+  <div class="member__brief"><p>Default transform type.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="UPLOADS_PER_FRAME">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#UPLOADS_PER_FRAME">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>UPLOADS_PER_FRAME</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static UPLOADS_PER_FRAME: number</code></pre>
+
+
+  <div class="member__brief"><p>Default number of uploads per frame using prepare plugin.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="WRAP_MODE">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/settings/PIXI/settings.html#WRAP_MODE">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>WRAP_MODE</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">static WRAP_MODE: <a href="/pixi-api/@pixi/constants/PIXI/WRAP_MODES.html">PIXI.WRAP_MODES</a></code></pre>
+
+
+  <div class="member__brief"><p>Default wrap modes that are supported by pixi.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+    
+  </div>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#ANISOTROPIC_LEVEL">ANISOTROPIC_LEVEL</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#CAN_UPLOAD_SAME_BUFFER">CAN_UPLOAD_SAME_BUFFER</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#CREATE_IMAGE_BITMAP">CREATE_IMAGE_BITMAP</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#FAIL_IF_MAJOR_PERFORMANCE_CAVEAT">FAIL_IF_MAJOR_PERFORMANCE_CAVEAT</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#FILTER_RESOLUTION">FILTER_RESOLUTION</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#GC_MAX_CHECK_COUNT">GC_MAX_CHECK_COUNT</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#GC_MAX_IDLE">GC_MAX_IDLE</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#GC_MODE">GC_MODE</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#MESH_CANVAS_PADDING">MESH_CANVAS_PADDING</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#MIPMAP_TEXTURES">MIPMAP_TEXTURES</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#PRECISION_FRAGMENT">PRECISION_FRAGMENT</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#PRECISION_VERTEX">PRECISION_VERTEX</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#PREFER_ENV">PREFER_ENV</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#RENDER_OPTIONS">RENDER_OPTIONS</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#RESOLUTION">RESOLUTION</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#RETINA_PREFIX">RETINA_PREFIX</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#ROUND_PIXELS">ROUND_PIXELS</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#SCALE_MODE">SCALE_MODE</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#SORTABLE_CHILDREN">SORTABLE_CHILDREN</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#SPRITE_BATCH_SIZE">SPRITE_BATCH_SIZE</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#SPRITE_MAX_TEXTURES">SPRITE_MAX_TEXTURES</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#STRICT_TEXTURE_CACHE">STRICT_TEXTURE_CACHE</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#TARGET_FPMS">TARGET_FPMS</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#TRANSFORM_MODE">TRANSFORM_MODE</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#UPLOADS_PER_FRAME">UPLOADS_PER_FRAME</a></li>
+    
+      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/settings/PIXI/settings.html#WRAP_MODE">WRAP_MODE</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+  
+</nav>
+
+
+
+          </div>
+        </div?
+      </article>
+      <footer class="footer" id="footer-mount-point"></footer>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

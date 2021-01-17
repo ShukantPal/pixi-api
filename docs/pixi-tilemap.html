@@ -5,22 +5,29 @@
     <meta charset="utf-8" />
     <title>webdoc: Test Template</title>
 
-    <link type="text/css" rel="stylesheet" href="styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
 
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="scripts/default-template.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "pixi-api",
+      };
+    </script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
-      <header class="header" id="header-mount-point"></header>
       <article class="page">
         <div class="page-explorer" id="explorer-mount-point"></div>
-        
-        
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
 <div class="page-content">
   <div class="homepage">
   
@@ -33,7 +40,7 @@
 <p>Library that helps with tilemaps, provide special shaders and canvas fallback. Works with pixi &gt;= 5.0.4</p>
 <h2>Type of builds (<strong>Important!</strong>)</h2>
 <p>Beware, we've changed the filename of good old ES5 build, according to pixi-build-tools rollup config!</p>
-<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"dist/pixi-tilemap.umd.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;dist/pixi-tilemap.umd.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 <p>CommonJS build is located in <code>dist/pixi-tilemap.js</code>.</p>
 <p>ESM is specified in <code>package.json</code>.</p>
@@ -64,28 +71,28 @@ PIXI.tilemap.Constant.maxTextures = <span class="hljs-number">4</span>;
 <p><a href="https://pixijs.github.io/pixi-tilemap/?canvas">canvas</a></p>
 <h3>Basic demo :pen:</h3>
 <p><a href="https://pixijs.github.io/pixi-tilemap/basic.html">webgl</a></p>
-<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://github.com/pixijs/pixi-tilemap/blob/master/src/pixi-tilemap.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://github.com/pixijs/pixi-tilemap/blob/master/src/pixi-tilemap.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 <pre><code class="hljs language-js"><span class="hljs-keyword">var</span> renderer = PIXI.autoDetectRenderer(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>);
 <span class="hljs-built_in">document</span>.body.appendChild(renderer.view);
 
 <span class="hljs-keyword">var</span> loader = <span class="hljs-keyword">new</span> PIXI.loaders.Loader();
-loader.add(<span class="hljs-string">'atlas'</span>, <span class="hljs-string">'basic/atlas.json'</span>);
+loader.add(<span class="hljs-string">&#x27;atlas&#x27;</span>, <span class="hljs-string">&#x27;basic/atlas.json&#x27;</span>);
 loader.load(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">loader, resources</span>) </span>{
-	<span class="hljs-keyword">var</span> tilemap = <span class="hljs-keyword">new</span> PIXI.tilemap.CompositeRectTileLayer(<span class="hljs-number">0</span>, [resources[<span class="hljs-string">'atlas_image'</span>].texture]);
+	<span class="hljs-keyword">var</span> tilemap = <span class="hljs-keyword">new</span> PIXI.tilemap.CompositeRectTileLayer(<span class="hljs-number">0</span>, [resources[<span class="hljs-string">&#x27;atlas_image&#x27;</span>].texture]);
     <span class="hljs-keyword">var</span> size = <span class="hljs-number">32</span>;
     <span class="hljs-comment">// bah, im too lazy, i just want to specify filenames from atlas</span>
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">7</span>;i++)
         <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> j=<span class="hljs-number">0</span>;j&lt;<span class="hljs-number">7</span>;j++) {
-            tilemap.addFrame(<span class="hljs-string">"grass.png"</span>, i*size, j*size);
+            tilemap.addFrame(<span class="hljs-string">&quot;grass.png&quot;</span>, i*size, j*size);
             <span class="hljs-keyword">if</span> (i%<span class="hljs-number">2</span>==<span class="hljs-number">1</span> &amp;&amp; j%<span class="hljs-number">2</span>==<span class="hljs-number">1</span>)
-                tilemap.addFrame(<span class="hljs-string">"tough.png"</span>, i*size, j*size);
+                tilemap.addFrame(<span class="hljs-string">&quot;tough.png&quot;</span>, i*size, j*size);
         }
 
     <span class="hljs-comment">// if you are lawful citizen, please use textures from the loader</span>
     <span class="hljs-keyword">var</span> textures = resources.atlas.textures;
-    tilemap.addFrame(textures[<span class="hljs-string">"brick.png"</span>], <span class="hljs-number">2</span>*size, <span class="hljs-number">2</span>*size);
-    tilemap.addFrame(textures[<span class="hljs-string">"brick_wall.png"</span>], <span class="hljs-number">2</span>*size, <span class="hljs-number">3</span>*size);
+    tilemap.addFrame(textures[<span class="hljs-string">&quot;brick.png&quot;</span>], <span class="hljs-number">2</span>*size, <span class="hljs-number">2</span>*size);
+    tilemap.addFrame(textures[<span class="hljs-string">&quot;brick_wall.png&quot;</span>], <span class="hljs-number">2</span>*size, <span class="hljs-number">3</span>*size);
 
     renderer.render(tilemap);
 });
@@ -98,6 +105,8 @@ loader.load(<span class="hljs-function"><span class="hljs-keyword">function</spa
   </div>
 </div>
 
+          </div>
+        </div?
       </article>
       <footer class="footer" id="footer-mount-point"></footer>
       <script src="scripts/linenumber.js"> </script>
