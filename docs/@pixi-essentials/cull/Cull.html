@@ -144,6 +144,209 @@ its culling state. It should be one of <code>renderable</code>, <code>visible</c
     
 
     
+
+<div class="members">
+  <h2 class="members__category">Summary</h2>
+  <hr />
+  
+
+
+  
+
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods from Cull</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  this
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/cull/Cull.html#add">add(target: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Adds a display-object to the culling list</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  this
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/cull/Cull.html#addAll">addAll(targets: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>[])</a>
+                </section>
+                <section>
+                  
+                    <p>Adds all the display-objects to the culling list</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  this
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/cull/Cull.html#clear">clear()</a>
+                </section>
+                <section>
+                  
+                    <p>Clears the culling list</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  this
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/cull/Cull.html#cull">cull(rect: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, skipUpdate)</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/cull/Cull.html#cullRecursive">cullRecursive(rect: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, displayObject: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, skipUpdate: boolean)</a>
+                </section>
+                <section>
+                  
+                    <p>Recursively culls the subtree of <code>displayObject</code>.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  this
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/cull/Cull.html#remove">remove(target: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Removes the display-object from the culling list</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  this
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/cull/Cull.html#removeAll">removeAll(targets: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>[])</a>
+                </section>
+                <section>
+                  
+                    <p>Removes all the passed display-objects from the culling list</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  this
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/cull/Cull.html#uncull">uncull()</a>
+                </section>
+                <section>
+                  
+                    <p>Sets all display-objects to the unculled state.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/cull/Cull.html#uncullRecursive">uncullRecursive(displayObject: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Recursively unculls the subtree of <code>displayObject</code>.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+
+  
+
+
+
+</div>
+
+
+    
     
     
 <div class="members">
@@ -851,10 +1054,16 @@ is why it is recommended to one of <code>visible</code> or <code>renderable</cod
 
     
   </div>
+  <footer class="footer" id="footer-mount-point"></footer>
 </div>
 
 <hr class="page-r-divider" />
 <nav class="page-members-explorer">
+  <div class="page-members-explorer-category">
+    <section class="page-members-explorer-category__title">
+      Summary
+    </section>
+  </div>
   
   
   
@@ -863,23 +1072,23 @@ is why it is recommended to one of <code>visible</code> or <code>renderable</cod
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#add">add</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/cull/Cull.html#add>add</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#addAll">addAll</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/cull/Cull.html#addAll>addAll</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#clear">clear</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/cull/Cull.html#clear>clear</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#cull">cull</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/cull/Cull.html#cull>cull</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#cullRecursive">cullRecursive</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/cull/Cull.html#cullRecursive>cullRecursive</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#remove">remove</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/cull/Cull.html#remove>remove</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#removeAll">removeAll</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/cull/Cull.html#removeAll>removeAll</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#uncull">uncull</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/cull/Cull.html#uncull>uncull</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/cull/Cull.html#uncullRecursive">uncullRecursive</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/cull/Cull.html#uncullRecursive>uncullRecursive</a></li>
     
   </ul>
 </div>
@@ -889,10 +1098,10 @@ is why it is recommended to one of <code>visible</code> or <code>renderable</cod
 
 
 
+            <!-- footer in content -->
           </div>
-        </div?
+        </div>
       </article>
-      <footer class="footer" id="footer-mount-point"></footer>
       <script src="scripts/linenumber.js"> </script>
     </body>
   </div>

@@ -106,6 +106,280 @@ constructor.</p></div>
     
 
     
+
+<div class="members">
+  <h2 class="members__category">Summary</h2>
+  <hr />
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties from ObjectPool</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#_freeCount">protected _freeCount</a>
+                </section>
+                <section>
+                  
+                    <p>Number of objects in the pool. This is less than or equal to <code>_pool.length</code>.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  Array&lt;T&gt;
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#_freeList">protected _freeList</a>
+                </section>
+                <section>
+                  
+                    <p>Supply pool of objects that can be used to immediately lend.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#capacity">protected capacity</a>
+                </section>
+                <section>
+                  
+                    <p>The number of objects that can be stored in the pool without allocating more space.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods from ObjectPool</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  T
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#allocate">allocate()</a>
+                </section>
+                <section>
+                  
+                    <p>Obtains an instance from this pool.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  Array&lt;T&gt;
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#allocateArray">allocateArray(lengthOrArray: number | T&lt;Array>)</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  T
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#create">create()</a>
+                </section>
+                <section>
+                  
+                    <p>Instantiates a new object of type <code>T</code>.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#limit">limit(count: number)</a>
+                </section>
+                <section>
+                  
+                    <p>Dereferences objects for the GC to collect and brings the pool size down to <code>count</code>.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#release">release(object: T)</a>
+                </section>
+                <section>
+                  
+                    <p>Returns the object to the pool.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#releaseArray">releaseArray(array: Array&lt;T>)</a>
+                </section>
+                <section>
+                  
+                    <p>Releases all of the objects in the passed array. These need not be allocated using <code>allocateArray</code>, however.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#reserve">reserve(count: number)</a>
+                </section>
+                <section>
+                  
+                    <p>Preallocates objects so that the pool size is at least <code>count</code>.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#startGC">startGC(ticker: Ticker)</a>
+                </section>
+                <section>
+                  
+                    <p>Install the GC on the shared ticker.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#stopGC">stopGC(ticker: Ticker)</a>
+                </section>
+                <section>
+                  
+                    <p>Stops running the GC on the pool.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+
+  
+
+
+
+</div>
+
+
+    
     
 <div class="members">
   <h2 class="members__category">Protected Properties</h2>
@@ -870,10 +1144,16 @@ objects are inserted. The amount to allocate is inferred from the array's length
 
     
   </div>
+  <footer class="footer" id="footer-mount-point"></footer>
 </div>
 
 <hr class="page-r-divider" />
 <nav class="page-members-explorer">
+  <div class="page-members-explorer-category">
+    <section class="page-members-explorer-category__title">
+      Summary
+    </section>
+  </div>
   
   
 
@@ -881,11 +1161,11 @@ objects are inserted. The amount to allocate is inferred from the array's length
   <section class="page-members-explorer-category__title">Protected Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#_freeCount">_freeCount</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#_freeCount>_freeCount</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#_freeList">_freeList</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#_freeList>_freeList</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#capacity">capacity</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#capacity>capacity</a></li>
     
   </ul>
 </div>
@@ -896,23 +1176,23 @@ objects are inserted. The amount to allocate is inferred from the array's length
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#allocate">allocate</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#allocate>allocate</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#allocateArray">allocateArray</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#allocateArray>allocateArray</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#create">create</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#create>create</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#limit">limit</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#limit>limit</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#release">release</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#release>release</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#releaseArray">releaseArray</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#releaseArray>releaseArray</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#reserve">reserve</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#reserve>reserve</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#startGC">startGC</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#startGC>startGC</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#stopGC">stopGC</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/object-pool/ObjectPool.html#stopGC>stopGC</a></li>
     
   </ul>
 </div>
@@ -922,10 +1202,10 @@ objects are inserted. The amount to allocate is inferred from the array's length
 
 
 
+            <!-- footer in content -->
           </div>
-        </div?
+        </div>
       </article>
-      <footer class="footer" id="footer-mount-point"></footer>
       <script src="scripts/linenumber.js"> </script>
     </body>
   </div>

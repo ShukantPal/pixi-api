@@ -53,6 +53,246 @@ so be aware of the performance implications.</p></div>
     
 
     
+
+<div class="members">
+  <h2 class="members__category">Summary</h2>
+  <hr />
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties from canvasUtils</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#cacheStepsPerColorChannel">static cacheStepsPerColorChannel</a>
+                </section>
+                <section>
+                  
+                    <p>Number of steps which will be used as a cap when rounding colors.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  boolean
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#canUseMultiply">static canUseMultiply</a>
+                </section>
+                <section>
+                  
+                    <p>Whether or not the Canvas BlendModes are supported, consequently the ability to tint using the multiply method.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  boolean
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#convertTintToImage">static convertTintToImage</a>
+                </section>
+                <section>
+                  
+                    <p>Tint cache boolean flag.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  Function
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintMethod">static tintMethod</a>
+                </section>
+                <section>
+                  
+                    <p>The tinting method that will be used.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods from canvasUtils</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  HTMLCanvasElement
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#getTintedCanvas">static getTintedCanvas(sprite: <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>, color: number)</a>
+                </section>
+                <section>
+                  
+                    <p>Basically this method just needs a sprite and a color and tints the sprite with the given color.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  HTMLCanvasElement
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#getTintedPattern">static getTintedPattern(texture: <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>, color: number)</a>
+                </section>
+                <section>
+                  
+                    <p>Basically this method just needs a sprite and a color and tints the sprite with the given color.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#roundColor">static roundColor(color: number)</a>
+                </section>
+                <section>
+                  
+                    <p>Rounds the specified color according to the canvasUtils.cacheStepsPerColorChannel.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintWithMultiply">static tintWithMultiply(texture: <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>, color: number, canvas: HTMLCanvasElement)</a>
+                </section>
+                <section>
+                  
+                    <p>Tint a texture using the 'multiply' operation.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintWithOverlay">static tintWithOverlay(texture: <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>, color: number, canvas: HTMLCanvasElement)</a>
+                </section>
+                <section>
+                  
+                    <p>Tint a texture using the 'overlay' operation.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintWithPerPixel">static tintWithPerPixel(texture: <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>, color: number, canvas: HTMLCanvasElement)</a>
+                </section>
+                <section>
+                  
+                    <p>Tint a texture pixel per pixel.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+
+  
+
+
+
+</div>
+
+
+    
 <div class="members">
   <h2 class="members__category">Public Properties</h2>
   <hr />
@@ -733,23 +973,29 @@ so be aware of the performance implications.</p></div>
 
     
   </div>
+  <footer class="footer" id="footer-mount-point"></footer>
 </div>
 
 <hr class="page-r-divider" />
 <nav class="page-members-explorer">
+  <div class="page-members-explorer-category">
+    <section class="page-members-explorer-category__title">
+      Summary
+    </section>
+  </div>
   
 
 <div class="page-members-explorer-category">
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#cacheStepsPerColorChannel">cacheStepsPerColorChannel</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#cacheStepsPerColorChannel>cacheStepsPerColorChannel</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#canUseMultiply">canUseMultiply</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#canUseMultiply>canUseMultiply</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#convertTintToImage">convertTintToImage</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#convertTintToImage>convertTintToImage</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintMethod">tintMethod</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintMethod>tintMethod</a></li>
     
   </ul>
 </div>
@@ -761,17 +1007,17 @@ so be aware of the performance implications.</p></div>
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#getTintedCanvas">getTintedCanvas</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#getTintedCanvas>getTintedCanvas</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#getTintedPattern">getTintedPattern</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#getTintedPattern>getTintedPattern</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#roundColor">roundColor</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#roundColor>roundColor</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintWithMultiply">tintWithMultiply</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintWithMultiply>tintWithMultiply</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintWithOverlay">tintWithOverlay</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintWithOverlay>tintWithOverlay</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintWithPerPixel">tintWithPerPixel</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/canvas-renderer/PIXI/canvasUtils.html#tintWithPerPixel>tintWithPerPixel</a></li>
     
   </ul>
 </div>
@@ -781,10 +1027,10 @@ so be aware of the performance implications.</p></div>
 
 
 
+            <!-- footer in content -->
           </div>
-        </div?
+        </div>
       </article>
-      <footer class="footer" id="footer-mount-point"></footer>
       <script src="scripts/linenumber.js"> </script>
     </body>
   </div>

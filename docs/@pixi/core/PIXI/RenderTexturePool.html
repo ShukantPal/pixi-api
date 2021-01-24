@@ -128,6 +128,222 @@ Stores collection of temporary pow2 or screen-sized renderTextures</p>
     
 
     
+
+<div class="members">
+  <h2 class="members__category">Summary</h2>
+  <hr />
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties from RenderTexturePool</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  string
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#SCREEN_KEY">static SCREEN_KEY</a>
+                </section>
+                <section>
+                  
+                    <p>Key that is used to store fullscreen renderTextures in a pool</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  boolean
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#enableFullScreen">enableFullScreen</a>
+                </section>
+                <section>
+                  
+                    <p>Allow renderTextures of the same size as screen, not just pow2</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods from RenderTexturePool</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#clear">clear(destroyTextures: boolean)</a>
+                </section>
+                <section>
+                  
+                    <p>Clears the pool</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  RenderTexture
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#createTexture">createTexture(realWidth: number, realHeight: number)</a>
+                </section>
+                <section>
+                  
+                    <p>creates of texture with params that were specified in pool constructor</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#getFilterTexture">getFilterTexture(input: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, resolution: number)</a>
+                </section>
+                <section>
+                  
+                    <p>Gets extra texture of the same size as input renderTexture</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#returnFilterTexture">returnFilterTexture(renderTexture: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>)</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#returnTexture">returnTexture(renderTexture: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>)</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#setScreenSize">setScreenSize(size: <a href="/pixi-api/@pixi/math/PIXI/ISize.html">PIXI.ISize</a>)</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#getOptimalTexture">protected getOptimalTexture(minWidth: number, minHeight: number, resolution: number)</a>
+                </section>
+                <section>
+                  
+                    <p>Gets a Power-of-Two render texture or fullScreen texture</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+
+  
+
+
+
+</div>
+
+
+    
 <div class="members">
   <h2 class="members__category">Public Properties</h2>
   <hr />
@@ -835,19 +1051,25 @@ sets new screen size, sets <code>enableFullScreen</code> to true</p>
 </div>
 
   </div>
+  <footer class="footer" id="footer-mount-point"></footer>
 </div>
 
 <hr class="page-r-divider" />
 <nav class="page-members-explorer">
+  <div class="page-members-explorer-category">
+    <section class="page-members-explorer-category__title">
+      Summary
+    </section>
+  </div>
   
 
 <div class="page-members-explorer-category">
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#SCREEN_KEY">SCREEN_KEY</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#SCREEN_KEY>SCREEN_KEY</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#enableFullScreen">enableFullScreen</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#enableFullScreen>enableFullScreen</a></li>
     
   </ul>
 </div>
@@ -859,17 +1081,17 @@ sets new screen size, sets <code>enableFullScreen</code> to true</p>
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#clear">clear</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#clear>clear</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#createTexture">createTexture</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#createTexture>createTexture</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#getFilterTexture">getFilterTexture</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#getFilterTexture>getFilterTexture</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#returnFilterTexture">returnFilterTexture</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#returnFilterTexture>returnFilterTexture</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#returnTexture">returnTexture</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#returnTexture>returnTexture</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#setScreenSize">setScreenSize</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#setScreenSize>setScreenSize</a></li>
     
   </ul>
 </div>
@@ -880,7 +1102,7 @@ sets new screen size, sets <code>enableFullScreen</code> to true</p>
   <section class="page-members-explorer-category__title">Protected Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#getOptimalTexture">getOptimalTexture</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/RenderTexturePool.html#getOptimalTexture>getOptimalTexture</a></li>
     
   </ul>
 </div>
@@ -889,10 +1111,10 @@ sets new screen size, sets <code>enableFullScreen</code> to true</p>
 
 
 
+            <!-- footer in content -->
           </div>
-        </div?
+        </div>
       </article>
-      <footer class="footer" id="footer-mount-point"></footer>
       <script src="scripts/linenumber.js"> </script>
     </body>
   </div>

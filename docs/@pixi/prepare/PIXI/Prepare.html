@@ -110,556 +110,232 @@ See PIXI.CanvasRenderer#plugins or {@link PIXI.Renderer#plugins}.</p></div>
     
 
     
+
 <div class="members">
-  <h2 class="members__category">Public Properties</h2>
+  <h2 class="members__category">Summary</h2>
   <hr />
+  
+
 
   
-    
-<div class="member" id="limiter">
+
   
-    <section class="member__title">
-      <a href="/pixi-api/@pixi/prepare/PIXI/Prepare.html#limiter">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>limiter</span>
+
+
+  
+
+  
+
+
+  
+  <div class="accordion">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties inherited from BasePrepare</h3>
     </section>
-  
-  
-<pre class="signature__container"><code class="signature">limiter: <a href=/pixi-api/@pixi/prepare/PIXI/CountLimiter.html>PIXI.CountLimiter</a> | <a href=/pixi-api/@pixi/prepare/PIXI/TimeLimiter.html>PIXI.TimeLimiter</a></code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>The limiter to be used to control how quickly items are prepared.</p></div>
-
-  
-
-  
-</div>
-
-  
-</div>
-
-    
-<div class="members">
-  <h2 class="members__category">Protected Properties</h2>
-  <hr />
-
-  
-    
-<div class="member" id="renderer">
-  
-    <section class="member__title">
-      <a href="/pixi-api/@pixi/prepare/PIXI/Prepare.html#renderer">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>renderer</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">protected renderer: <a href=/pixi-api/@pixi/core/PIXI/AbstractRenderer.html>PIXI.AbstractRenderer</a></code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Reference to the renderer.</p></div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="uploadHookHelper">
-  
-    <section class="member__title">
-      <a href="/pixi-api/@pixi/prepare/PIXI/Prepare.html#uploadHookHelper">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>uploadHookHelper</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">protected uploadHookHelper: object</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>The only real difference between CanvasPrepare and Prepare is what they pass
-to upload hooks. That different parameter is stored here.</p></div>
-
-  
-
-  
-</div>
-
-  
-</div>
-
-    
-<div class="members">
-  <h2 class="members__category">Public Methods</h2>
-  <hr />
-
-  
-    
-<div class="member" id="add">
-  
-    <section class="member__title">
-      <a href="/pixi-api/@pixi/prepare/PIXI/Prepare.html#add">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>add</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">add(item: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a> | <a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a> | <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a> | <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a> | <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a> | <a href="/pixi-api/@pixi/text/PIXI/Text.html">PIXI.Text</a> | unknown) → {this}</code></pre>
-
-
-  <div class="member__brief"><p>Manually add an item to the uploading queue.</p></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          item
-        </td>
-        <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a> | <a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a> | <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a> | <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a> | <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a> | <a href="/pixi-api/@pixi/text/PIXI/Text.html">PIXI.Text</a> | unknown
-        </td>
-        
-        
-        <td class="member-parameter__description"><p>Object to
-add to the queue</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          this
-        </td>
-        <td class="member-return__description"><p>Instance of plugin for chaining.</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="destroy">
-  
-    <section class="member__title">
-      <a href="/pixi-api/@pixi/prepare/PIXI/Prepare.html#destroy">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>destroy</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
-
-
-  <div class="member__brief"><p>Destroys the plugin, don't use after this.</p></div>
-  <div class="member__description"></div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          void
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="registerFindHook">
-  
-    <section class="member__title">
-      <a href="/pixi-api/@pixi/prepare/PIXI/Prepare.html#registerFindHook">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>registerFindHook</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">registerFindHook(addHook: Function) → {this}</code></pre>
-
-
-  <div class="member__brief"><p>Adds hooks for finding items.</p></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          addHook
-        </td>
-        <td class="member-parameter__type">
-          Function
-        </td>
-        
-        
-        <td class="member-parameter__description"><p>Function call that takes two parameters: <code>item:*, queue:Array</code>
-function must return <code>true</code> if it was able to add item to the queue.</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          this
-        </td>
-        <td class="member-return__description"><p>Instance of plugin for chaining.</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="registerUploadHook">
-  
-    <section class="member__title">
-      <a href="/pixi-api/@pixi/prepare/PIXI/Prepare.html#registerUploadHook">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>registerUploadHook</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">registerUploadHook(uploadHook: Function) → {this}</code></pre>
-
-
-  <div class="member__brief"><p>Adds hooks for uploading items.</p></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          uploadHook
-        </td>
-        <td class="member-parameter__type">
-          Function
-        </td>
-        
-        
-        <td class="member-parameter__description"><p>Function call that takes two parameters: <code>prepare:CanvasPrepare, item:*</code> and
-function must return <code>true</code> if it was able to handle upload of item.</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          this
-        </td>
-        <td class="member-return__description"><p>Instance of plugin for chaining.</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="upload">
-  
-    <section class="member__title">
-      <a href="/pixi-api/@pixi/prepare/PIXI/Prepare.html#upload">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>upload</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">upload(item: Function | <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a> | <a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a> | <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a> | <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a> | <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a> | <a href="/pixi-api/@pixi/text/PIXI/Text.html">PIXI.Text</a>, done: Function) → {void}</code></pre>
-
-
-  <div class="member__brief"><p>Upload all the textures and graphics to the GPU.</p></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        <th class="member-parameter-header__attributes">Attributes</th>
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          item
-        </td>
-        <td class="member-parameter__type">
-          Function | <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a> | <a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a> | <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a> | <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a> | <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a> | <a href="/pixi-api/@pixi/text/PIXI/Text.html">PIXI.Text</a>
-        </td>
-        <td class="member-parameter__attributes">
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
           
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/prepare/PIXI/CountLimiter.html>PIXI.CountLimiter</a> | <a href=/pixi-api/@pixi/prepare/PIXI/TimeLimiter.html>PIXI.TimeLimiter</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/prepare/PIXI/BasePrepare.html#limiter">limiter</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
           
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/core/PIXI/AbstractRenderer.html>PIXI.AbstractRenderer</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/prepare/PIXI/BasePrepare.html#renderer">protected renderer</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
           
-        </td>
-        
-        <td class="member-parameter__description"><p>Either the container or display object to search for items to upload, the items to upload themselves,
-or the callback function, if items have been added using <code>prepare.add</code>.</p></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          done
-        </td>
-        <td class="member-parameter__type">
-          Function
-        </td>
-        <td class="member-parameter__attributes">
-          <p>&lt;optional&gt;</p>
+            <tr>
+              <td class="summary__signature">
+                
+                  object
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/prepare/PIXI/BasePrepare.html#uploadHookHelper">protected uploadHookHelper</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
           
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods inherited from BasePrepare</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
           
-        </td>
-        
-        <td class="member-parameter__description"><p>Optional callback when all queued uploads have completed</p></td>
-      </tr>
-    </tbody>
-  </table>
+            <tr>
+              <td class="summary__signature">
+                
+                  this
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/prepare/PIXI/BasePrepare.html#add">add(item: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a> | <a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a> | <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a> | <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a> | <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a> | <a href="/pixi-api/@pixi/text/PIXI/Text.html">PIXI.Text</a> | unknown)</a>
+                </section>
+                <section>
+                  
+                    <p>Manually add an item to the uploading queue.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/prepare/PIXI/BasePrepare.html#destroy">destroy()</a>
+                </section>
+                <section>
+                  
+                    <p>Destroys the plugin, don't use after this.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  this
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/prepare/PIXI/BasePrepare.html#registerFindHook">registerFindHook(addHook: Function)</a>
+                </section>
+                <section>
+                  
+                    <p>Adds hooks for finding items.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  this
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/prepare/PIXI/BasePrepare.html#registerUploadHook">registerUploadHook(uploadHook: Function)</a>
+                </section>
+                <section>
+                  
+                    <p>Adds hooks for uploading items.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/prepare/PIXI/BasePrepare.html#upload">upload(item: Function | <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a> | <a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a> | <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a> | <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a> | <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a> | <a href="/pixi-api/@pixi/text/PIXI/Text.html">PIXI.Text</a>, done: Function)</a>
+                </section>
+                <section>
+                  
+                    <p>Upload all the textures and graphics to the GPU.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
 </div>
 
-  
 
-  
     
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          void
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-</div>
-
+    
+    
     
   </div>
+  <footer class="footer" id="footer-mount-point"></footer>
 </div>
 
 <hr class="page-r-divider" />
 <nav class="page-members-explorer">
+  <div class="page-members-explorer-category">
+    <section class="page-members-explorer-category__title">
+      Summary
+    </section>
+  </div>
   
-
-<div class="page-members-explorer-category">
-  <section class="page-members-explorer-category__title">Public Properties</section>
-  <ul class="page-members-explorer-category__items">
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/prepare/PIXI/Prepare.html#limiter">limiter</a></li>
-    
-  </ul>
-</div>
-
   
-
-<div class="page-members-explorer-category">
-  <section class="page-members-explorer-category__title">Protected Properties</section>
-  <ul class="page-members-explorer-category__items">
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/prepare/PIXI/Prepare.html#renderer">renderer</a></li>
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/prepare/PIXI/Prepare.html#uploadHookHelper">uploadHookHelper</a></li>
-    
-  </ul>
-</div>
-
   
-
-<div class="page-members-explorer-category">
-  <section class="page-members-explorer-category__title">Public Methods</section>
-  <ul class="page-members-explorer-category__items">
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/prepare/PIXI/Prepare.html#add">add</a></li>
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/prepare/PIXI/Prepare.html#destroy">destroy</a></li>
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/prepare/PIXI/Prepare.html#registerFindHook">registerFindHook</a></li>
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/prepare/PIXI/Prepare.html#registerUploadHook">registerUploadHook</a></li>
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/prepare/PIXI/Prepare.html#upload">upload</a></li>
-    
-  </ul>
-</div>
-
   
 </nav>
 
 
 
+            <!-- footer in content -->
           </div>
-        </div?
+        </div>
       </article>
-      <footer class="footer" id="footer-mount-point"></footer>
       <script src="scripts/linenumber.js"> </script>
     </body>
   </div>

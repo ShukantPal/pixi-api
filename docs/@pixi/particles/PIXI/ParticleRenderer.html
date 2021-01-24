@@ -107,36 +107,335 @@
     
 
     
+
+<div class="members">
+  <h2 class="members__category">Summary</h2>
+  <hr />
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties from ParticleRenderer</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/core/PIXI/Shader.html>PIXI.Shader</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#shader">shader</a>
+                </section>
+                <section>
+                  
+                    <p>The default shader that is used if a sprite doesn't have a more specific one.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/core/PIXI/State.html>PIXI.State</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#state">state</a>
+                </section>
+                <section>
+                  
+                    <p>The WebGL state in which this renderer will work.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods from ParticleRenderer</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#destroy">destroy()</a>
+                </section>
+                <section>
+                  
+                    <p>Destroys the ParticleRenderer.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#render">render(container: <a href="/pixi-api/@pixi/particles/PIXI/ParticleContainer.html">PIXI.ParticleContainer</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Renders the particle container object.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#uploadPosition">uploadPosition(children: Array&lt;<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>>, startIndex: number, amount: number, array: Array&lt;number>, stride: number, offset: number)</a>
+                </section>
+                <section>
+                  
+                    <p>Uploads the position.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#uploadRotation">uploadRotation(children: Array&lt;<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>>, startIndex: number, amount: number, array: Array&lt;number>, stride: number, offset: number)</a>
+                </section>
+                <section>
+                  
+                    <p>Uploads the rotation.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#uploadTint">uploadTint(children: Array&lt;<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>>, startIndex: number, amount: number, array: Array&lt;number>, stride: number, offset: number)</a>
+                </section>
+                <section>
+                  
+                    <p>Uploads the tint.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#uploadUvs">uploadUvs(children: Array&lt;<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>>, startIndex: number, amount: number, array: Array&lt;number>, stride: number, offset: number)</a>
+                </section>
+                <section>
+                  
+                    <p>Uploads the Uvs</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#uploadVertices">uploadVertices(children: Array&lt;<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>>, startIndex: number, amount: number, array: Array&lt;number>, stride: number, offset: number)</a>
+                </section>
+                <section>
+                  
+                    <p>Uploads the vertices.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties inherited from ObjectRenderer</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/ObjectRenderer.html#renderer">renderer</a>
+                </section>
+                <section>
+                  
+                    <p>The renderer this manager works for.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  
+
+  
+
+
+  
+  <div class="accordion">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods inherited from ObjectRenderer</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/ObjectRenderer.html#flush">flush()</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/ObjectRenderer.html#start">start()</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/ObjectRenderer.html#stop">stop()</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  
+
+</div>
+
+
+    
 <div class="members">
   <h2 class="members__category">Public Properties</h2>
   <hr />
-
-  
-    
-<div class="member" id="renderer">
-  
-    <section class="member__title">
-      <a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#renderer">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>renderer</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">renderer: <a href=/pixi-api/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a></code></pre>
-
-
-  <div class="member__brief"><p>The renderer this manager works for.</p></div>
-  <div class="member__description"></div>
-
-  
-
-  
-</div>
 
   
     
@@ -252,56 +551,6 @@
 
   
     
-<div class="member" id="flush">
-  
-    <section class="member__title">
-      <a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#flush">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>flush</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">flush() → {void}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Stub method that should be used to empty the current
-batch by rendering objects now.</p></div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          void
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
 <div class="member" id="render">
   
     <section class="member__title">
@@ -351,108 +600,6 @@ batch by rendering objects now.</p></div>
     </tbody>
   </table>
 </div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          void
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="start">
-  
-    <section class="member__title">
-      <a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#start">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>start</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">start() → {void}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Stub method that initializes any state required before
-rendering starts. It is different from the <code>prerender</code>
-signal, which occurs every frame, in that it is called
-whenever an object requests <em>this</em> renderer specifically.</p></div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          void
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="stop">
-  
-    <section class="member__title">
-      <a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#stop">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>stop</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">stop() → {void}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Stops the renderer. It should free up any state and
-become dormant.</p></div>
 
   
 
@@ -1131,21 +1278,25 @@ become dormant.</p></div>
 
     
   </div>
+  <footer class="footer" id="footer-mount-point"></footer>
 </div>
 
 <hr class="page-r-divider" />
 <nav class="page-members-explorer">
+  <div class="page-members-explorer-category">
+    <section class="page-members-explorer-category__title">
+      Summary
+    </section>
+  </div>
   
 
 <div class="page-members-explorer-category">
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#renderer">renderer</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#shader>shader</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#shader">shader</a></li>
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#state">state</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#state>state</a></li>
     
   </ul>
 </div>
@@ -1157,25 +1308,19 @@ become dormant.</p></div>
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#destroy">destroy</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#destroy>destroy</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#flush">flush</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#render>render</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#render">render</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#uploadPosition>uploadPosition</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#start">start</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#uploadRotation>uploadRotation</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#stop">stop</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#uploadTint>uploadTint</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#uploadPosition">uploadPosition</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#uploadUvs>uploadUvs</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#uploadRotation">uploadRotation</a></li>
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#uploadTint">uploadTint</a></li>
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#uploadUvs">uploadUvs</a></li>
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#uploadVertices">uploadVertices</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/particles/PIXI/ParticleRenderer.html#uploadVertices>uploadVertices</a></li>
     
   </ul>
 </div>
@@ -1185,10 +1330,10 @@ become dormant.</p></div>
 
 
 
+            <!-- footer in content -->
           </div>
-        </div?
+        </div>
       </article>
-      <footer class="footer" id="footer-mount-point"></footer>
       <script src="scripts/linenumber.js"> </script>
     </body>
   </div>

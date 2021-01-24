@@ -54,6 +54,198 @@
     
 
     
+
+<div class="members">
+  <h2 class="members__category">Summary</h2>
+  <hr />
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties from BVHNode</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#bounds">bounds</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  Array&lt;<a href=/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html>PIXI.BVHNode</a>&gt;
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#children">children</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#objectCount">objectCount</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#objectOffset">objectOffset</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHSplitAxis.html">PIXI.BVHSplitAxis</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#splitAxis">splitAxis</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods from BVHNode</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  boolean
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#isLeaf">isLeaf()</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html">PIXI.BVHNode</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#resetInterior">resetInterior(splitAxis: <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHSplitAxis.html">PIXI.BVHSplitAxis</a>, child0: <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html">PIXI.BVHNode</a>, child1: <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html">PIXI.BVHNode</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Builds a interior <code>BVHNode</code> whose children are <code>child0</code> and <code>child1</code> split along <code>splitAxis</code>.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html">PIXI.BVHNode</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#resetLeaf">resetLeaf(offset: number, objects: number, bounds: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Builds a leaf <code>BVHNode</code> whose objects start at <code>offset</code> and with bounds <code>bounds</code>.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+
+  
+
+
+
+</div>
+
+
+    
 <div class="members">
   <h2 class="members__category">Public Properties</h2>
   <hr />
@@ -182,7 +374,7 @@
     </section>
   
   
-<pre class="signature__container"><code class="signature">splitAxis: <a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHSplitAxis.html">PIXI.BVHSplitAxis</a></code></pre>
+<pre class="signature__container"><code class="signature">splitAxis: <a href=/pixi-api/@pixi-essentials/bvh/PIXI/BVHSplitAxis.html>PIXI.BVHSplitAxis</a></code></pre>
 
 
   <div class="member__brief"></div>
@@ -454,25 +646,31 @@
 
     
   </div>
+  <footer class="footer" id="footer-mount-point"></footer>
 </div>
 
 <hr class="page-r-divider" />
 <nav class="page-members-explorer">
+  <div class="page-members-explorer-category">
+    <section class="page-members-explorer-category__title">
+      Summary
+    </section>
+  </div>
   
 
 <div class="page-members-explorer-category">
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#bounds">bounds</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#bounds>bounds</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#children">children</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#children>children</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#objectCount">objectCount</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#objectCount>objectCount</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#objectOffset">objectOffset</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#objectOffset>objectOffset</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#splitAxis">splitAxis</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#splitAxis>splitAxis</a></li>
     
   </ul>
 </div>
@@ -484,11 +682,11 @@
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#isLeaf">isLeaf</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#isLeaf>isLeaf</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#resetInterior">resetInterior</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#resetInterior>resetInterior</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#resetLeaf">resetLeaf</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/bvh/PIXI/BVHNode.html#resetLeaf>resetLeaf</a></li>
     
   </ul>
 </div>
@@ -498,10 +696,10 @@
 
 
 
+            <!-- footer in content -->
           </div>
-        </div?
+        </div>
       </article>
-      <footer class="footer" id="footer-mount-point"></footer>
       <script src="scripts/linenumber.js"> </script>
     </body>
   </div>

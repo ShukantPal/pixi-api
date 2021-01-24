@@ -115,6 +115,410 @@ that have a common geometry and some &quot;instanced&quot; attributes.</p></div>
     
 
     
+
+<div class="members">
+  <h2 class="members__category">Summary</h2>
+  <hr />
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties from InstancedRenderer</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/core/PIXI/Buffer.html>PIXI.Buffer</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceBuffer">_instanceBuffer</a>
+                </section>
+                <section>
+                  
+                    <p>The instance buffer holds all instanced attributes in an interleaved fashion.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/core/PIXI/Shader.html>PIXI.Shader</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_shader">_shader</a>
+                </section>
+                <section>
+                  
+                    <p>The shader used to draw all instances.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/core/PIXI/State.html>PIXI.State</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_state">_state</a>
+                </section>
+                <section>
+                  
+                    <p>The WebGL state required for using the shader.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/core/PIXI/Geometry.html>PIXI.Geometry</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_geometry">protected _geometry</a>
+                </section>
+                <section>
+                  
+                    <p>The reference geometry specifying the &quot;attribute style&quot;.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  Object&lt;string, number&gt;
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceAttribSizes">protected _instanceAttribSizes</a>
+                </section>
+                <section>
+                  
+                    <p>Object mapping (instanced) attribute IDs to their sizes in bytes.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  Object&lt;string, string&gt;
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceAttribViews">protected _instanceAttribViews</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  Object&lt;string, string&gt;
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceBuilder">protected _instanceBuilder</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceSize">protected _instanceSize</a>
+                </section>
+                <section>
+                  
+                    <p>The bytes used per instance/display-object.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  Array&lt;<a href=/pixi-api/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a>&gt;
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_objectBuffer">protected _objectBuffer</a>
+                </section>
+                <section>
+                  
+                    <p>Buffered display-objects</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_objectCount">protected _objectCount</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#instanceRendererID">protected instanceRendererID</a>
+                </section>
+                <section>
+                  
+                    <p>Unique ID for this instance renderer.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods from InstancedRenderer</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_initInstanceBuffer">_initInstanceBuffer()</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#flush">flush()</a>
+                </section>
+                <section>
+                  
+                    <p>Flushes/draws all pending display-objects.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#render">render(displayObject: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#start">start()</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties inherited from ObjectRenderer</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/ObjectRenderer.html#renderer">renderer</a>
+                </section>
+                <section>
+                  
+                    <p>The renderer this manager works for.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  
+
+  
+
+
+  
+  <div class="accordion">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods inherited from ObjectRenderer</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/ObjectRenderer.html#destroy">destroy()</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/ObjectRenderer.html#stop">stop()</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  
+
+</div>
+
+
+    
 <div class="members">
   <h2 class="members__category">Public Properties</h2>
   <hr />
@@ -193,33 +597,6 @@ that have a common geometry and some &quot;instanced&quot; attributes.</p></div>
 
 
   <div class="member__brief"><p>The WebGL state required for using the shader.</p></div>
-  <div class="member__description"></div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="renderer">
-  
-    <section class="member__title">
-      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#renderer">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>renderer</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">renderer: <a href=/pixi-api/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a></code></pre>
-
-
-  <div class="member__brief"><p>The renderer this manager works for.</p></div>
   <div class="member__description"></div>
 
   
@@ -514,56 +891,6 @@ points to the same buffer. Uninstanced attributes refer to their original buffer
 
   
     
-<div class="member" id="destroy">
-  
-    <section class="member__title">
-      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#destroy">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>destroy</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Generic destruction method that frees all resources. This
-should be called by subclasses.</p></div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          void
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
 <div class="member" id="flush">
   
     <section class="member__title">
@@ -718,77 +1045,31 @@ should be called by subclasses.</p></div>
 </div>
 
   
-    
-<div class="member" id="stop">
-  
-    <section class="member__title">
-      <a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#stop">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>stop</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">stop() → {void}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Stops the renderer. It should free up any state and
-become dormant.</p></div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          void
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
 </div>
 
     
   </div>
+  <footer class="footer" id="footer-mount-point"></footer>
 </div>
 
 <hr class="page-r-divider" />
 <nav class="page-members-explorer">
+  <div class="page-members-explorer-category">
+    <section class="page-members-explorer-category__title">
+      Summary
+    </section>
+  </div>
   
 
 <div class="page-members-explorer-category">
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceBuffer">_instanceBuffer</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceBuffer>_instanceBuffer</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_shader">_shader</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_shader>_shader</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_state">_state</a></li>
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#renderer">renderer</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_state>_state</a></li>
     
   </ul>
 </div>
@@ -799,21 +1080,21 @@ become dormant.</p></div>
   <section class="page-members-explorer-category__title">Protected Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_geometry">_geometry</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_geometry>_geometry</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceAttribSizes">_instanceAttribSizes</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceAttribSizes>_instanceAttribSizes</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceAttribViews">_instanceAttribViews</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceAttribViews>_instanceAttribViews</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceBuilder">_instanceBuilder</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceBuilder>_instanceBuilder</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceSize">_instanceSize</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_instanceSize>_instanceSize</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_objectBuffer">_objectBuffer</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_objectBuffer>_objectBuffer</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_objectCount">_objectCount</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_objectCount>_objectCount</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#instanceRendererID">instanceRendererID</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#instanceRendererID>instanceRendererID</a></li>
     
   </ul>
 </div>
@@ -824,17 +1105,13 @@ become dormant.</p></div>
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_initInstanceBuffer">_initInstanceBuffer</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#_initInstanceBuffer>_initInstanceBuffer</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#destroy">destroy</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#flush>flush</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#flush">flush</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#render>render</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#render">render</a></li>
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#start">start</a></li>
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#stop">stop</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/instanced-renderer/InstancedRenderer.html#start>start</a></li>
     
   </ul>
 </div>
@@ -844,10 +1121,10 @@ become dormant.</p></div>
 
 
 
+            <!-- footer in content -->
           </div>
-        </div?
+        </div>
       </article>
-      <footer class="footer" id="footer-mount-point"></footer>
       <script src="scripts/linenumber.js"> </script>
     </body>
   </div>

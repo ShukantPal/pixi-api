@@ -227,6 +227,204 @@ just one element) as the property itself.</p></div>
     
 
     
+
+<div class="members">
+  <h2 class="members__category">Summary</h2>
+  <hr />
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties from AttributeRedirect</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#glSize">glSize</a>
+                </section>
+                <section>
+                  
+                    <p>Size of attribute in terms of <code>glType</code>.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/constants/PIXI/TYPES.html>PIXI.TYPES</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#glType">glType</a>
+                </section>
+                <section>
+                  
+                    <p>Type of attribute, when uploading.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  boolean
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#normalize">normalize</a>
+                </section>
+                <section>
+                  
+                    <p>Whether to normalize the attribute values.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#properSize">properSize</a>
+                </section>
+                <section>
+                  
+                    <p>This is equal to <code>size</code> or 1 if size is <code>%notarray%</code>.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number | '%notarray%'
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#size">size</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  string
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#type">type</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+
+  
+
+
+  
+  <div class="accordion">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties inherited from Redirect</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  string
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/Redirect.html#glslIdentifer">glslIdentifer</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  string | Function
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/Redirect.html#source">source</a>
+                </section>
+                <section>
+                  
+                    <p>The property on the display-object that holds the resource.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+
+</div>
+
+
+    
 <div class="members">
   <h2 class="members__category">Public Properties</h2>
   <hr />
@@ -252,34 +450,6 @@ just one element) as the property itself.</p></div>
 
   <div class="member__brief"><p>Size of attribute in terms of <code>glType</code>.</p></div>
   <div class="member__description"><p>Note that <code>glSize * glType &lt;= size * type</code></p></div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="glslIdentifer">
-  
-    <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#glslIdentifer">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>glslIdentifer</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">glslIdentifer: string</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>The shader variable that references the resource, e.g. attribute or uniform
-name.</p></div>
 
   
 
@@ -404,34 +574,6 @@ you can set this to <code>'%notarray%'</code>.</p></div>
 
   
     
-<div class="member" id="source">
-  
-    <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#source">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>source</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">source: string | Function</code></pre>
-
-
-  <div class="member__brief"><p>The property on the display-object that holds the resource.</p></div>
-  <div class="member__description"><p>Instead of a property, you can provide a callback that generates the resource
-on invokation.</p></div>
-
-  
-
-  
-</div>
-
-  
-    
 <div class="member" id="type">
   
     <section class="member__title">
@@ -465,31 +607,33 @@ on invokation.</p></div>
     
     
   </div>
+  <footer class="footer" id="footer-mount-point"></footer>
 </div>
 
 <hr class="page-r-divider" />
 <nav class="page-members-explorer">
+  <div class="page-members-explorer-category">
+    <section class="page-members-explorer-category__title">
+      Summary
+    </section>
+  </div>
   
 
 <div class="page-members-explorer-category">
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#glSize">glSize</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#glSize>glSize</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#glslIdentifer">glslIdentifer</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#glType>glType</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#glType">glType</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#normalize>normalize</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#normalize">normalize</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#properSize>properSize</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#properSize">properSize</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#size>size</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#size">size</a></li>
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#source">source</a></li>
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#type">type</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html#type>type</a></li>
     
   </ul>
 </div>
@@ -501,10 +645,10 @@ on invokation.</p></div>
 
 
 
+            <!-- footer in content -->
           </div>
-        </div?
+        </div>
       </article>
-      <footer class="footer" id="footer-mount-point"></footer>
       <script src="scripts/linenumber.js"> </script>
     </body>
   </div>

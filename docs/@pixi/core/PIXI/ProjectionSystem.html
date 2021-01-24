@@ -108,6 +108,282 @@ normalized device coordinates.</p></div>
     
 
     
+
+<div class="members">
+  <h2 class="members__category">Summary</h2>
+  <hr />
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties from ProjectionSystem</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#defaultFrame">defaultFrame</a>
+                </section>
+                <section>
+                  
+                    <p>Default destination frame</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#destinationFrame">destinationFrame</a>
+                </section>
+                <section>
+                  
+                    <p>The destination frame used to calculate the current projection matrix.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#projectionMatrix">projectionMatrix</a>
+                </section>
+                <section>
+                  
+                    <p>Projection matrix</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#sourceFrame">sourceFrame</a>
+                </section>
+                <section>
+                  
+                    <p>The source frame used to calculate the current projection matrix.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#transform">transform</a>
+                </section>
+                <section>
+                  
+                    <p>A transform to be appended to the projection matrix.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods from ProjectionSystem</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#calculateProjection">calculateProjection(destinationFrame: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, sourceFrame: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, resolution: Number, root: boolean)</a>
+                </section>
+                <section>
+                  
+                    <p>Calculates the <code>projectionMatrix</code> to map points inside <code>sourceFrame</code> to inside <code>destinationFrame</code>.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#setTransform">setTransform(matrix: <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Sets the transform of the active render target to the given matrix</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#update">update(destinationFrame: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, sourceFrame: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, resolution: Number, root: boolean)</a>
+                </section>
+                <section>
+                  
+                    <p>Updates the projection-matrix based on the sourceFrame → destinationFrame mapping provided.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties inherited from System</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/System.html#renderer">renderer</a>
+                </section>
+                <section>
+                  
+                    <p>The renderer this manager works for.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods inherited from System</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/System.html#destroy">destroy()</a>
+                </section>
+                <section>
+                  
+                    <p>Generic destroy methods to be overridden by the subclass</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+</div>
+
+
+    
 <div class="members">
   <h2 class="members__category">Public Properties</h2>
   <hr />
@@ -200,33 +476,6 @@ coordinates are (0,0) unless you know what you're doing.</p></div>
 from the sourceFrame → destinationFrame mapping provided.</p>
 <p>The renderer's <code>globalUniforms</code> keeps a reference to this, and so it is available for all shaders to use as a
 uniform.</p></div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="renderer">
-  
-    <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#renderer">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>renderer</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">renderer: <a href=/pixi-api/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a></code></pre>
-
-
-  <div class="member__brief"><p>The renderer this manager works for.</p></div>
-  <div class="member__description"></div>
 
   
 
@@ -379,55 +628,6 @@ is y-flipped.</p></td>
     </tbody>
   </table>
 </div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          void
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="destroy">
-  
-    <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#destroy">
-        <img
-          src="/pixi-api/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>destroy</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">destroy() → {void}</code></pre>
-
-
-  <div class="member__brief"><p>Generic destroy methods to be overridden by the subclass</p></div>
-  <div class="member__description"></div>
 
   
 
@@ -656,27 +856,31 @@ is y-flipped (i.e. upside down relative to the screen).</p></td>
 
     
   </div>
+  <footer class="footer" id="footer-mount-point"></footer>
 </div>
 
 <hr class="page-r-divider" />
 <nav class="page-members-explorer">
+  <div class="page-members-explorer-category">
+    <section class="page-members-explorer-category__title">
+      Summary
+    </section>
+  </div>
   
 
 <div class="page-members-explorer-category">
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#defaultFrame">defaultFrame</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#defaultFrame>defaultFrame</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#destinationFrame">destinationFrame</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#destinationFrame>destinationFrame</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#projectionMatrix">projectionMatrix</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#projectionMatrix>projectionMatrix</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#renderer">renderer</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#sourceFrame>sourceFrame</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#sourceFrame">sourceFrame</a></li>
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#transform">transform</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#transform>transform</a></li>
     
   </ul>
 </div>
@@ -688,13 +892,11 @@ is y-flipped (i.e. upside down relative to the screen).</p></td>
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#calculateProjection">calculateProjection</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#calculateProjection>calculateProjection</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#destroy">destroy</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#setTransform>setTransform</a></li>
     
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#setTransform">setTransform</a></li>
-    
-      <li class="page-members-explorer__item"><a href="/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#update">update</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/ProjectionSystem.html#update>update</a></li>
     
   </ul>
 </div>
@@ -704,10 +906,10 @@ is y-flipped (i.e. upside down relative to the screen).</p></td>
 
 
 
+            <!-- footer in content -->
           </div>
-        </div?
+        </div>
       </article>
-      <footer class="footer" id="footer-mount-point"></footer>
       <script src="scripts/linenumber.js"> </script>
     </body>
   </div>
