@@ -6085,6 +6085,84 @@
 					]
 				},
 				{
+					"name": "AxisAlignedBounds",
+					"type": "ClassDoc",
+					"brief": "",
+					"description": "<p>Rectangle object is an area defined by its position, as indicated by its top-left corner\npoint (x, y) and by its width and its height.</p>",
+					"members": [
+						{
+							"name": "ceil",
+							"type": "MethodDoc",
+							"scope": "instance",
+							"brief": "<p>Enlarges rectangle that way its corners lie on grid</p>",
+							"description": ""
+						},
+						{
+							"name": "clone",
+							"type": "MethodDoc",
+							"scope": "instance",
+							"brief": "<p>Creates a clone of this Rectangle</p>",
+							"description": ""
+						},
+						{
+							"name": "constructor",
+							"type": "MethodDoc",
+							"scope": "instance",
+							"brief": "",
+							"description": ""
+						},
+						{
+							"name": "contains",
+							"type": "MethodDoc",
+							"scope": "instance",
+							"brief": "<p>Checks whether the x and y coordinates given are contained within this Rectangle</p>",
+							"description": ""
+						},
+						{
+							"name": "copyFrom",
+							"type": "MethodDoc",
+							"scope": "instance",
+							"brief": "<p>Copies another rectangle to this one.</p>",
+							"description": ""
+						},
+						{
+							"name": "copyTo",
+							"type": "MethodDoc",
+							"scope": "instance",
+							"brief": "<p>Copies this rectangle to another one.</p>",
+							"description": ""
+						},
+						{
+							"name": "enlarge",
+							"type": "MethodDoc",
+							"scope": "instance",
+							"brief": "<p>Enlarges this rectangle to include the passed rectangle.</p>",
+							"description": ""
+						},
+						{
+							"name": "equals",
+							"type": "MethodDoc",
+							"scope": "instance",
+							"brief": "<p>Checks whether the given {@link bounds} are equal to this.</p>",
+							"description": ""
+						},
+						{
+							"name": "fit",
+							"type": "MethodDoc",
+							"scope": "instance",
+							"brief": "<p>Fits this rectangle around the passed one.</p>",
+							"description": ""
+						},
+						{
+							"name": "pad",
+							"type": "MethodDoc",
+							"scope": "instance",
+							"brief": "",
+							"description": "<p>Pads the rectangle making it grow in all directions.\nIf paddingY is omitted, both paddingX and paddingY will be set to paddingX.</p>"
+						}
+					]
+				},
+				{
 					"name": "BaseImageResource",
 					"type": "ClassDoc",
 					"brief": "",
@@ -37139,6 +37217,12 @@
 			"description": ""
 		},
 		{
+			"name": "AggregateUniformsBatchFactory",
+			"type": "ClassDoc",
+			"brief": "",
+			"description": ""
+		},
+		{
 			"name": "AxisAlignedBounds",
 			"type": "ClassDoc",
 			"brief": "",
@@ -37325,6 +37409,30 @@
 			"name": "BasisFile",
 			"type": "ClassDoc",
 			"brief": "<p>Binding to C++ {@code BasisFile} wrapper class.</p>",
+			"description": ""
+		},
+		{
+			"name": "Batch",
+			"type": "ClassDoc",
+			"brief": "",
+			"description": ""
+		},
+		{
+			"name": "BatchGenerator",
+			"type": "ClassDoc",
+			"brief": "",
+			"description": ""
+		},
+		{
+			"name": "BatchGeometryFactory",
+			"type": "ClassDoc",
+			"brief": "",
+			"description": ""
+		},
+		{
+			"name": "BatchRendererPluginFactory",
+			"type": "ClassDoc",
+			"brief": "",
 			"description": ""
 		},
 		{
@@ -37674,6 +37782,35 @@
 		{
 			"name": "BufferInvalidation",
 			"type": "ClassDoc",
+			"brief": "",
+			"description": "",
+			"members": [
+				{
+					"name": "clone",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "constructor",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "init",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				}
+			]
+		},
+		{
+			"name": "BufferInvalidation",
+			"type": "ClassDoc",
 			"brief": "<p>A buffer invalidation records a region of data that has changed across frames.</p>",
 			"description": "",
 			"members": [
@@ -37696,6 +37833,35 @@
 					"type": "MethodDoc",
 					"scope": "instance",
 					"brief": "<p>Initialize the invalidation tracking data.</p>",
+					"description": ""
+				}
+			]
+		},
+		{
+			"name": "BufferInvalidationQueue",
+			"type": "ClassDoc",
+			"brief": "",
+			"description": "",
+			"members": [
+				{
+					"name": "coalesce",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "isEmpty",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "partition",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
 					"description": ""
 				}
 			]
@@ -37760,6 +37926,12 @@
 		{
 			"name": "BufferPool",
 			"type": "ClassDoc",
+			"brief": "",
+			"description": ""
+		},
+		{
+			"name": "BufferPool",
+			"type": "ClassDoc",
 			"brief": "<p>Pool for any array-like type.</p>",
 			"description": "",
 			"members": [
@@ -37787,16 +37959,16 @@
 			]
 		},
 		{
-			"name": "CanvasTileRenderer",
+			"name": "CircularDoublyLinkedList",
 			"type": "ClassDoc",
 			"brief": "",
 			"description": "",
 			"members": [
 				{
-					"name": "constructor",
+					"name": "add",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "",
+					"brief": "<p>Adds {@code node} into this list before {@code nodeAfter}.</p>",
 					"description": ""
 				}
 			]
@@ -37821,6 +37993,34 @@
 			"type": "ClassDoc",
 			"brief": "<p>An iterable circular linked-list data structure.</p>",
 			"description": ""
+		},
+		{
+			"name": "CircularLinkedList",
+			"type": "ClassDoc",
+			"brief": "<p>An iterable circular linked-list data structure.</p>",
+			"description": ""
+		},
+		{
+			"name": "CircularLinkedListIterator",
+			"type": "ClassDoc",
+			"brief": "<p>Iterator for circular linked-lists</p>",
+			"description": "",
+			"members": [
+				{
+					"name": "next",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "reset",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Reset the iterator so it can be used again.</p>",
+					"description": ""
+				}
+			]
 		},
 		{
 			"name": "CircularLinkedListIterator",
@@ -38310,7 +38510,962 @@
 					"description": "<p>This implementation will automatically fit the children's bounds into the calculation. Each child's bounds\nis limited to its mask's bounds or filterArea, if any is applied.</p>"
 				},
 				{
+					"name": "containerUpdateTransform",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Container default updateTransform, does update children of container.\nWill crash if there's no parent element.</p>"
+				},
+				{
+					"name": "destroy",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Removes all internal references and listeners as well as removes children from the display list.\nDo not use a Container after calling <code>destroy</code>.</p>"
+				},
+				{
+					"name": "disableTempParent",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
+				},
+				{
+					"name": "displayObjectUpdateTransform",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>DisplayObject default updateTransform, does not update children of container.\nWill crash if there's no parent element.</p>"
+				},
+				{
+					"name": "enableTempParent",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Used in Renderer, cacheAsBitmap and other places where you call an <code>updateTransform</code> on root</p>",
+					"description": "<pre><code class=\"hljs\">const cacheParent = elem.enable<span class=\"hljs-constructor\">TempParent()</span>;\nelem.update<span class=\"hljs-constructor\">Transform()</span>;\nelem.disable<span class=\"hljs-constructor\">TempParent(<span class=\"hljs-params\">cacheParent</span>)</span>;\n</code></pre>"
+				},
+				{
+					"name": "getBounds",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Calculates and returns the (world) bounds of the display object as a [Rectangle]{@link PIXI.Rectangle}.</p>",
+					"description": "<p>This method is expensive on containers with a large subtree (like the stage). This is because the bounds\nof a container depend on its children's bounds, which recursively causes all bounds in the subtree to\nbe recalculated. The upside, however, is that calling <code>getBounds</code> once on a container will indeed update\nthe bounds of all children (the whole subtree, in fact). This side effect should be exploited by using\n<code>displayObject._bounds.getRectangle()</code> when traversing through all the bounds in a scene graph. Otherwise,\ncalling <code>getBounds</code> on each object in a subtree will cause the total cost to increase quadratically as\nits height increases.</p>\n<ul>\n<li>The transforms of all objects in a container's <strong>subtree</strong> and of all <strong>ancestors</strong> are updated.</li>\n<li>The world bounds of all display objects in a container's <strong>subtree</strong> will also be recalculated.</li>\n</ul>\n<p>The <code>_bounds</code> object stores the last calculation of the bounds. You can use to entirely skip bounds\ncalculation if needed.</p>\n<pre><code class=\"hljs language-js\"><span class=\"hljs-keyword\">const</span> lastCalculatedBounds = displayObject._bounds.getRectangle(optionalRect);\n</code></pre>\n<p>Do know that usage of <code>getLocalBounds</code> can corrupt the <code>_bounds</code> of children (the whole subtree, actually). This\nis a known issue that has not been solved. See [getLocalBounds]{@link PIXI.DisplayObject#getLocalBounds} for more\ndetails.</p>\n<p><code>getBounds</code> should be called with <code>skipUpdate</code> equal to <code>true</code> in a render() call. This is because the transforms\nare guaranteed to be update-to-date. In fact, recalculating inside a render() call may cause corruption in certain\ncases.</p>"
+				},
+				{
+					"name": "getChildAt",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Returns the child at the specified index</p>",
+					"description": ""
+				},
+				{
+					"name": "getChildByName",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Returns the display object in the container.</p>",
+					"description": "<p>Recursive searches are done in a preorder traversal.</p>"
+				},
+				{
+					"name": "getChildIndex",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Returns the index position of a child DisplayObject instance</p>",
+					"description": ""
+				},
+				{
+					"name": "getGlobalPosition",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Returns the global position of the displayObject. Does not depend on object scale, rotation and pivot.</p>",
+					"description": ""
+				},
+				{
+					"name": "getLocalBounds",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Retrieves the local bounds of the displayObject as a rectangle object.</p>",
+					"description": "<p>Calling <code>getLocalBounds</code> may invalidate the <code>_bounds</code> of the whole subtree below. If using it inside a render()\ncall, it is advised to call <code>getBounds()</code> immediately after to recalculate the world bounds of the subtree.</p>"
+				},
+				{
+					"name": "removeChild",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Removes one or more children from the container.</p>",
+					"description": ""
+				},
+				{
+					"name": "removeChildAt",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Removes a child from the specified index position.</p>",
+					"description": ""
+				},
+				{
+					"name": "removeChildren",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Removes all children from this container that are within the begin and end indexes.</p>",
+					"description": ""
+				},
+				{
+					"name": "render",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Renders the object using the WebGL renderer.</p>",
+					"description": "<p>The [_render]{@link PIXI.Container#_render} method is be overriden for rendering the contents of the\ncontainer itself. This <code>render</code> method will invoke it, and also invoke the <code>render</code> methods of all\nchildren afterward.</p>\n<p>If <code>renderable</code> or <code>visible</code> is false or if <code>worldAlpha</code> is not positive, this implementation will entirely\nskip rendering. See {@link PIXI.DisplayObject} for choosing between <code>renderable</code> or <code>visible</code>. Generally,\nsetting alpha to zero is not recommended for purely skipping rendering.</p>\n<p>When your scene becomes large (especially when it is larger than can be viewed in a single screen), it is\nadvised to employ <strong>culling</strong> to automatically skip rendering objects outside of the current screen. The\n[@pixi-essentials/cull]{@link https://www.npmjs.com/package/@pixi-essentials/cull} and\n[pixi-cull]{@link https://www.npmjs.com/package/pixi-cull} packages do this out of the box.</p>\n<p>The [renderAdvanced]{@link PIXI.Container#renderAdvanced} method is internally used when when masking or\nfiltering is applied on a container. This does, however, break batching and can affect performance when\nmasking and filtering is applied extensively throughout the scene graph.</p>"
+				},
+				{
+					"name": "renderCanvas",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Renders the object using the Canvas renderer</p>"
+				},
+				{
+					"name": "renderWebGL",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "setChildIndex",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Changes the position of an existing child in the display object container</p>",
+					"description": ""
+				},
+				{
+					"name": "setParent",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Set the parent Container of this DisplayObject.</p>",
+					"description": ""
+				},
+				{
+					"name": "setTransform",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Convenience function to set the position, scale, skew and pivot at once.</p>",
+					"description": ""
+				},
+				{
+					"name": "sortChildren",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Sorts children by zIndex. Previous order is mantained for 2 children with the same zIndex.</p>",
+					"description": ""
+				},
+				{
+					"name": "swapChildren",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Swaps the position of 2 Display Objects within this container.</p>",
+					"description": ""
+				},
+				{
+					"name": "toGlobal",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Calculates the global position of the display object.</p>",
+					"description": ""
+				},
+				{
+					"name": "toLocal",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Calculates the local position of the display object relative to another point.</p>",
+					"description": ""
+				},
+				{
+					"name": "updateTransform",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Updates the transform on all children of this container for rendering</p>",
+					"description": ""
+				},
+				{
+					"name": "_calculateBounds",
+					"type": "MethodDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Recalculates the content bounds of this object. This should be overriden to\ncalculate the bounds of this specific object (not including children).</p>"
+				},
+				{
+					"name": "_render",
+					"type": "MethodDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>To be overridden by the subclasses.</p>",
+					"description": ""
+				},
+				{
+					"name": "_renderCanvas",
+					"type": "MethodDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>To be overridden by the subclass</p>"
+				},
+				{
+					"name": "onChildrenChange",
+					"type": "MethodDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>Overridable method that can be used by Container subclasses whenever the children array is modified</p>",
+					"description": ""
+				},
+				{
+					"name": "renderAdvanced",
+					"type": "MethodDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>Render the object using the WebGL renderer and advanced features.</p>",
+					"description": ""
+				},
+				{
+					"name": "_cacheAsBitmapDestroy",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Destroys the cached object.</p>",
+					"description": ""
+				},
+				{
+					"name": "_calculateCachedBounds",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Calculates the bounds of the cached sprite</p>",
+					"description": ""
+				},
+				{
+					"name": "_destroyCachedDisplayObject",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Destroys the cached sprite.</p>",
+					"description": ""
+				},
+				{
+					"name": "_getCachedLocalBounds",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Gets the bounds of the cached sprite.</p>",
+					"description": ""
+				},
+				{
+					"name": "_initCachedDisplayObject",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Prepares the WebGL renderer to cache the sprite</p>",
+					"description": ""
+				},
+				{
+					"name": "_initCachedDisplayObjectCanvas",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Prepares the Canvas renderer to cache the sprite</p>",
+					"description": ""
+				},
+				{
+					"name": "_renderCached",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Renders a cached version of the sprite with WebGL</p>",
+					"description": ""
+				},
+				{
+					"name": "_renderCachedCanvas",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Renders a cached version of the sprite with canvas</p>",
+					"description": ""
+				},
+				{
+					"name": "childAdded",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "<p>Fired when a DisplayObject is added to this Container.</p>",
+					"description": ""
+				},
+				{
+					"name": "click",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button (usually a mouse left-button) is pressed and released on\nthe display object. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mousedown",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button (usually a mouse left-button) is pressed on the display.\nobject. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mousemove",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device (usually a mouse) is moved while over the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mouseout",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device (usually a mouse) is moved off the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mouseover",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device (usually a mouse) is moved onto the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mouseup",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button (usually a mouse left-button) is released over the display\nobject. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mouseupoutside",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button (usually a mouse left-button) is released outside the\ndisplay object that initially registered a\n[mousedown]{@link PIXI.DisplayObject#event:mousedown}.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointercancel",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when the operating system cancels a pointer event.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointerdown",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button is pressed on the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointermove",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device is moved while over the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointerout",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device is moved off the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointerover",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device is moved onto the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointertap",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button is pressed and released on the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointerup",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button is released over the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointerupoutside",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button is released outside the display object that initially\nregistered a [pointerdown]{@link PIXI.DisplayObject#event:pointerdown}.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "removedFrom",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "<p>Fired when a DisplayObject is removed from this Container.</p>",
+					"description": ""
+				},
+				{
+					"name": "rightclick",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device secondary button (usually a mouse right-button) is pressed\nand released on the display object. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "rightdown",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device secondary button (usually a mouse right-button) is pressed\non the display object. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "rightup",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device secondary button (usually a mouse right-button) is released\nover the display object. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "rightupoutside",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device secondary button (usually a mouse right-button) is released\noutside the display object that initially registered a\n[rightdown]{@link PIXI.DisplayObject#event:rightdown}.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "tap",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a touch point is placed and removed from the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "touchcancel",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when the operating system cancels a touch.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "touchend",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a touch point is removed from the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "touchendoutside",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a touch point is removed outside of the display object that initially\nregistered a [touchstart]{@link PIXI.DisplayObject#event:touchstart}.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "touchmove",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a touch point is moved along the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "touchstart",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a touch point is placed on the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "added",
+					"type": "EventDoc",
+					"scope": "instance",
+					"brief": "<p>Fired when this DisplayObject is added to a Container.</p>",
+					"description": ""
+				},
+				{
+					"name": "removed",
+					"type": "EventDoc",
+					"brief": "<p>Fired when this DisplayObject is removed from a Container.</p>",
+					"description": ""
+				}
+			]
+		},
+		{
+			"name": "CompositeRectTileLayer",
+			"type": "ClassDoc",
+			"brief": "",
+			"description": "",
+			"members": [
+				{
+					"name": "_accessibleActive",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "_accessibleDiv",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "_bounds",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The bounds object, this is used to calculate and store the bounds of the displayObject.</p>",
+					"description": ""
+				},
+				{
+					"name": "_localBounds",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Local bounds object, swapped with <code>_bounds</code> when using <code>getLocalBounds()</code>.</p>",
+					"description": ""
+				},
+				{
+					"name": "accessible",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Flag for if the object is accessible. If true AccessibilityManager will overlay a\nshadow div with attributes set</p>"
+				},
+				{
+					"name": "accessibleChildren",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Setting to false will prevent any children inside this container to\nbe accessible. Defaults to true.</p>"
+				},
+				{
+					"name": "accessibleHint",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Sets the aria-label attribute of the shadow div</p>",
+					"description": ""
+				},
+				{
+					"name": "accessiblePointerEvents",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Specify the pointer-events the accessible div will use\nDefaults to auto.</p>"
+				},
+				{
+					"name": "accessibleTitle",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Sets the title attribute of the shadow div\nIf accessibleTitle AND accessibleHint has not been this will default to 'displayObject [tabIndex]'</p>"
+				},
+				{
+					"name": "accessibleType",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Specify the type of div the accessible layer is. Screen readers treat the element differently\ndepending on this type. Defaults to button.</p>"
+				},
+				{
+					"name": "alpha",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The opacity of the object.</p>",
+					"description": ""
+				},
+				{
+					"name": "angle",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The angle of the object in degrees.\n'rotation' and 'angle' have the same effect on a display object; rotation is in radians, angle is in degrees.</p>"
+				},
+				{
+					"name": "buttonMode",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>If enabled, the mouse cursor use the pointer behavior when hovered over the displayObject if it is interactive\nSetting this changes the 'cursor' property to <code>'pointer'</code>.</p>"
+				},
+				{
+					"name": "cacheAsBitmap",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Set this to true if you want this display object to be cached as a bitmap.\nThis basically takes a snap shot of the display object as it is at that moment. It can\nprovide a performance benefit for complex static displayObjects.\nTo remove simply set this property to <code>false</code></p>\n<p>IMPORTANT GOTCHA - Make sure that all your textures are preloaded BEFORE setting this property to true\nas it will take a snapshot of what is currently there. If the textures have not loaded then they will not appear.</p>"
+				},
+				{
+					"name": "children",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The array of children of this container.</p>",
+					"description": ""
+				},
+				{
+					"name": "cursor",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>This defines what cursor mode is used when the mouse cursor\nis hovered over the displayObject.</p>"
+				},
+				{
+					"name": "filterArea",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The area the filter is applied to. This is used as more of an optimization\nrather than figuring out the dimensions of the displayObject each frame you can set this rectangle.</p>\n<p>Also works as an interaction mask.</p>"
+				},
+				{
+					"name": "filters",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Sets the filters for the displayObject.</p>\n<ul>\n<li>IMPORTANT: This is a WebGL only feature and will be ignored by the canvas renderer.\nTo remove filters simply set this property to <code>'null'</code>.</li>\n</ul>"
+				},
+				{
+					"name": "height",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The height of the Container, setting this will actually modify the scale to achieve the value set</p>",
+					"description": ""
+				},
+				{
+					"name": "hitArea",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Interaction shape. Children will be hit first, then this shape will be checked.\nSetting this will cause this shape to be checked in hit tests rather than the displayObject's bounds.</p>"
+				},
+				{
+					"name": "interactive",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Enable interaction events for the DisplayObject. Touch, pointer and mouse\nevents will not be emitted unless <code>interactive</code> is set to <code>true</code>.</p>"
+				},
+				{
+					"name": "interactiveChildren",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Determines if the children to the displayObject can be clicked/touched\nSetting this to false allows PixiJS to bypass a recursive <code>hitTest</code> function</p>"
+				},
+				{
+					"name": "isMask",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Does any other displayObject use this object as a mask?</p>"
+				},
+				{
+					"name": "isSprite",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>used to fast check if a sprite is.. a sprite!</p>"
+				},
+				{
+					"name": "localTransform",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Current transform of the object based on local factors: position, scale, other stuff.</p>",
+					"description": ""
+				},
+				{
+					"name": "mask",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Sets a mask for the displayObject. A mask is an object that limits the visibility of an\nobject to the shape of the mask applied to it. In PixiJS a regular mask must be a\n{@link PIXI.Graphics} or a {@link PIXI.Sprite} object. This allows for much faster masking in canvas as it\nutilities shape clipping. To remove a mask, set this property to <code>null</code>.</p>\n<p>For sprite mask both alpha and red channel are used. Black mask is the same as transparent mask.</p>"
+				},
+				{
+					"name": "name",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The instance name of the object.</p>",
+					"description": ""
+				},
+				{
+					"name": "parent",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The display object container that contains this display object.</p>",
+					"description": ""
+				},
+				{
+					"name": "pivot",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The center of rotation, scaling, and skewing for this display object in its local space. The <code>position</code>\nis the projection of <code>pivot</code> in the parent's local space.</p>\n<p>By default, the pivot is the origin (0, 0).</p>"
+				},
+				{
+					"name": "position",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The coordinate of the object relative to the local coordinates of the parent.</p>",
+					"description": ""
+				},
+				{
+					"name": "renderable",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Can this object be rendered, if false the object will not be drawn but the updateTransform\nmethods will still be called.</p>\n<p>Only affects recursive calls from parent. You can ask for bounds manually.</p>"
+				},
+				{
+					"name": "rotation",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The rotation of the object in radians.\n'rotation' and 'angle' have the same effect on a display object; rotation is in radians, angle is in degrees.</p>"
+				},
+				{
+					"name": "scale",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The scale factors of this object along the local coordinate axes.</p>",
+					"description": "<p>The default scale is (1, 1).</p>"
+				},
+				{
+					"name": "skew",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The skew factor for the object in radians.</p>",
+					"description": ""
+				},
+				{
+					"name": "smartMask",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>It enable smart-masking, set this property. Before rendering the scene graph, you must invoke\n{@code updateSmartMask} on each display-object to enable masking.</p>"
+				},
+				{
+					"name": "sortableChildren",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>If set to true, the container will sort its children by zIndex value\nwhen updateTransform() is called, or manually if sortChildren() is called.</p>\n<p>This actually changes the order of elements in the array, so should be treated\nas a basic solution that is not performant compared to other solutions,\nsuch as @link https://github.com/pixijs/pixi-display</p>\n<p>Also be aware of that this may not work nicely with the addChildAt() function,\nas the zIndex sorting may cause the child to automatically sorted to another position.</p>"
+				},
+				{
+					"name": "sortDirty",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Should children be sorted by zIndex at the next updateTransform call.</p>",
+					"description": "<p>Will get automatically set to true if a new child is added, or if a child's zIndex changes.</p>"
+				},
+				{
+					"name": "transform",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>World transform and local transform of this object.\nThis will become read-only later, please do not assign anything there unless you know what are you doing.</p>"
+				},
+				{
+					"name": "visible",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The visibility of the object. If false the object will not be drawn, and\nthe updateTransform function will not be called.</p>\n<p>Only affects recursive calls from parent. You can ask for bounds or call updateTransform manually.</p>"
+				},
+				{
+					"name": "width",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The width of the Container, setting this will actually modify the scale to achieve the value set</p>",
+					"description": ""
+				},
+				{
+					"name": "worldAlpha",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The multiplied alpha of the displayObject.</p>",
+					"description": ""
+				},
+				{
+					"name": "worldTransform",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Current transform of the object based on world (parent) factors.</p>",
+					"description": ""
+				},
+				{
+					"name": "worldVisible",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Indicates if the object is globally visible.</p>",
+					"description": ""
+				},
+				{
+					"name": "x",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The position of the displayObject on the x axis relative to the local coordinates of the parent.\nAn alias to position.x</p>"
+				},
+				{
+					"name": "y",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The position of the displayObject on the y axis relative to the local coordinates of the parent.\nAn alias to position.y</p>"
+				},
+				{
+					"name": "zIndex",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The zIndex of the displayObject.</p>",
+					"description": "<p>If a container has the sortableChildren property set to true, children will be automatically\nsorted by zIndex value; a higher value will mean it will be moved towards the end of the array,\nand thus rendered on top of other display objects within the same container.</p>"
+				},
+				{
+					"name": "_boundsID",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>Flags the cached bounds as dirty.</p>",
+					"description": ""
+				},
+				{
+					"name": "_boundsRect",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>Cache of this display-object's bounds-rectangle.</p>",
+					"description": ""
+				},
+				{
+					"name": "_destroyed",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>If the object has been destroyed via destroy(). If true, it should not be used.</p>",
+					"description": ""
+				},
+				{
+					"name": "_enabledFilters",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Currently enabled filters</p>"
+				},
+				{
+					"name": "_lastSortedIndex",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Which index in the children array the display component was before the previous zIndex sort.\nUsed by containers to help sort objects with the same zIndex, by using previous array index as the decider.</p>"
+				},
+				{
+					"name": "_localBoundsRect",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>Cache of this display-object's local-bounds rectangle.</p>",
+					"description": ""
+				},
+				{
+					"name": "_mask",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>The original, cached mask of the object.</p>",
+					"description": ""
+				},
+				{
+					"name": "_tempDisplayObjectParent",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "_zIndex",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The zIndex of the displayObject.\nA higher value will mean it will be rendered on top of other displayObjects within the same container.</p>"
+				},
+				{
+					"name": "tabIndex",
+					"type": "PropertyDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "trackedPointers",
+					"type": "PropertyDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Internal set of all active pointers, by identifier</p>",
+					"description": ""
+				},
+				{
+					"name": "_recursivePostUpdateTransform",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Recursively updates transform of all objects from the root to this one\ninternal function for toLocal()</p>"
+				},
+				{
+					"name": "addChild",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Adds one or more children to the container.</p>",
+					"description": "<p>Multiple items can be added like so: <code>myContainer.addChild(thingOne, thingTwo, thingThree)</code></p>"
+				},
+				{
+					"name": "addChildAt",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Adds a child to the container at a specified index. If the index is out of bounds an error will be thrown</p>",
+					"description": ""
+				},
+				{
+					"name": "addFrame",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "addRect",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "calculateBounds",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Recalculates the bounds of the container.</p>",
+					"description": "<p>This implementation will automatically fit the children's bounds into the calculation. Each child's bounds\nis limited to its mask's bounds or filterArea, if any is applied.</p>"
+				},
+				{
 					"name": "clear",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "clearModify",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "constructor",
 					"type": "MethodDoc",
 					"scope": "instance",
 					"brief": "",
@@ -38432,8 +39587,8 @@
 					"name": "render",
 					"type": "MethodDoc",
 					"scope": "instance",
-					"brief": "<p>Renders the object using the WebGL renderer.</p>",
-					"description": "<p>The [_render]{@link PIXI.Container#_render} method is be overriden for rendering the contents of the\ncontainer itself. This <code>render</code> method will invoke it, and also invoke the <code>render</code> methods of all\nchildren afterward.</p>\n<p>If <code>renderable</code> or <code>visible</code> is false or if <code>worldAlpha</code> is not positive, this implementation will entirely\nskip rendering. See {@link PIXI.DisplayObject} for choosing between <code>renderable</code> or <code>visible</code>. Generally,\nsetting alpha to zero is not recommended for purely skipping rendering.</p>\n<p>When your scene becomes large (especially when it is larger than can be viewed in a single screen), it is\nadvised to employ <strong>culling</strong> to automatically skip rendering objects outside of the current screen. The\n[@pixi-essentials/cull]{@link https://www.npmjs.com/package/@pixi-essentials/cull} and\n[pixi-cull]{@link https://www.npmjs.com/package/pixi-cull} packages do this out of the box.</p>\n<p>The [renderAdvanced]{@link PIXI.Container#renderAdvanced} method is internally used when when masking or\nfiltering is applied on a container. This does, however, break batching and can affect performance when\nmasking and filtering is applied extensively throughout the scene graph.</p>"
+					"brief": "",
+					"description": ""
 				},
 				{
 					"name": "renderCanvas",
@@ -38444,6 +39599,13 @@
 				},
 				{
 					"name": "renderWebGL",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "setBitmaps",
 					"type": "MethodDoc",
 					"scope": "instance",
 					"brief": "",
@@ -38482,6 +39644,13 @@
 					"type": "MethodDoc",
 					"scope": "instance",
 					"brief": "<p>Swaps the position of 2 Display Objects within this container.</p>",
+					"description": ""
+				},
+				{
+					"name": "tileAnimX",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
 					"description": ""
 				},
 				{
@@ -40059,6 +41228,85 @@
 			]
 		},
 		{
+			"name": "Cull",
+			"type": "ClassDoc",
+			"access": "public",
+			"brief": "<p>Provides a simple, configurable mechanism for culling a subtree of your scene graph.</p>",
+			"description": "<p>If your scene graph is not static, culling needs to be done before rendering. You\ncan run it on the <code>prerender</code> event fired by the renderer.</p>",
+			"members": [
+				{
+					"name": "add",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Adds a display-object to the culling list</p>",
+					"description": ""
+				},
+				{
+					"name": "addAll",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Adds all the display-objects to the culling list</p>",
+					"description": ""
+				},
+				{
+					"name": "clear",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Clears the culling list</p>",
+					"description": ""
+				},
+				{
+					"name": "constructor",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "cull",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "cullRecursive",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Recursively culls the subtree of {@code displayObject}.</p>",
+					"description": ""
+				},
+				{
+					"name": "remove",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Removes the display-object from the culling list</p>",
+					"description": ""
+				},
+				{
+					"name": "removeAll",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Removes all the passed display-objects from the culling list</p>",
+					"description": ""
+				},
+				{
+					"name": "uncull",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Sets all display-objects to the unculled state.</p>",
+					"description": "<p>This happens regardless of whether the culling toggle was set by {@code this.cull} or manually. This\nis why it is recommended to one of <code>visible</code> or <code>renderable</code> for normal use and the other for culling.</p>"
+				},
+				{
+					"name": "uncullRecursive",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Recursively unculls the subtree of {@code displayObject}.</p>",
+					"description": ""
+				}
+			]
+		},
+		{
 			"name": "DashedLineStyle",
 			"type": "ClassDoc",
 			"brief": "",
@@ -40213,13 +41461,6 @@
 					"description": ""
 				},
 				{
-					"name": "constructor",
-					"type": "MethodDoc",
-					"scope": "instance",
-					"brief": "",
-					"description": ""
-				},
-				{
 					"name": "destroy",
 					"type": "MethodDoc",
 					"scope": "instance",
@@ -40243,68 +41484,37 @@
 			]
 		},
 		{
+			"name": "DiffDrawer",
+			"type": "ClassDoc",
+			"brief": "",
+			"description": ""
+		},
+		{
 			"name": "DiffGeometry",
 			"type": "ClassDoc",
 			"brief": "<p>The geometry used by {@link DiffGeometryFactory}</p>",
 			"description": "",
 			"members": [
 				{
-					"name": "instanceCount",
-					"type": "PropertyDoc",
-					"scope": "instance",
-					"brief": "",
-					"description": "<p>Number of instances in this geometry, pass it to <code>GeometrySystem.draw()</code></p>"
-				},
-				{
-					"name": "refCount",
-					"type": "PropertyDoc",
-					"scope": "instance",
-					"brief": "",
-					"description": "<p>Count of existing (not destroyed) meshes that reference this geometry</p>"
-				},
-				{
-					"name": "_buffer",
-					"type": "PropertyDoc",
-					"access": "protected",
-					"scope": "instance",
-					"brief": "<p>Buffer used for position, color, texture IDs</p>",
-					"description": ""
-				},
-				{
-					"name": "_indexBuffer",
-					"type": "PropertyDoc",
-					"access": "protected",
-					"scope": "instance",
-					"brief": "<p>Index buffer data</p>",
-					"description": ""
-				},
-				{
-					"name": "glVertexArrayObjects",
-					"type": "PropertyDoc",
-					"access": "protected",
-					"scope": "instance",
-					"brief": "<p>A map of renderer IDs to webgl VAOs</p>",
-					"description": ""
-				},
-				{
-					"name": "addAttribute",
+					"name": "constructor",
 					"type": "MethodDoc",
 					"scope": "instance",
 					"brief": "",
-					"description": "<p>Adds an attribute to the geometry\nNote: <code>stride</code> and <code>start</code> should be <code>undefined</code> if you dont know them, not 0!</p>"
-				},
+					"description": ""
+				}
+			]
+		},
+		{
+			"name": "DiffGeometryFactory",
+			"type": "ClassDoc",
+			"brief": "",
+			"description": "",
+			"members": [
 				{
-					"name": "addIndex",
+					"name": "build",
 					"type": "MethodDoc",
 					"scope": "instance",
 					"brief": "",
-					"description": "<p>Adds an index buffer to the geometry\nThe index buffer contains integers, three for each triangle in the geometry, which reference the various attribute buffers (position, colour, UV coordinates, other UV coordinates, normal, …). There is only ONE index buffer.</p>"
-				},
-				{
-					"name": "clone",
-					"type": "MethodDoc",
-					"scope": "instance",
-					"brief": "<p>returns a clone of the geometry</p>",
 					"description": ""
 				},
 				{
@@ -40315,46 +41525,53 @@
 					"description": ""
 				},
 				{
-					"name": "destroy",
-					"type": "MethodDoc",
-					"scope": "instance",
-					"brief": "<p>Destroys the geometry.</p>",
-					"description": ""
-				},
-				{
-					"name": "dispose",
-					"type": "MethodDoc",
-					"scope": "instance",
-					"brief": "<p>disposes WebGL resources that are connected to this geometry</p>",
-					"description": ""
-				},
-				{
-					"name": "getAttribute",
-					"type": "MethodDoc",
-					"scope": "instance",
-					"brief": "<p>returns the requested attribute</p>",
-					"description": ""
-				},
-				{
-					"name": "getBuffer",
-					"type": "MethodDoc",
-					"scope": "instance",
-					"brief": "<p>returns the requested buffer</p>",
-					"description": ""
-				},
-				{
-					"name": "getIndex",
-					"type": "MethodDoc",
-					"scope": "instance",
-					"brief": "<p>returns the index buffer</p>",
-					"description": ""
-				},
-				{
-					"name": "interleave",
+					"name": "diffCache",
 					"type": "MethodDoc",
 					"scope": "instance",
 					"brief": "",
-					"description": "<p>this function modifies the structure so that all current attributes become interleaved into a single buffer\nThis can be useful if your model remains static as it offers a little performance boost</p>"
+					"description": ""
+				},
+				{
+					"name": "getAttributeBuffer",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "getIndexBuffer",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "postrender",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "release",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "releaseCache",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "updateCache",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
 				}
 			]
 		},
@@ -40377,37 +41594,6 @@
 					"scope": "instance",
 					"brief": "<p>The geometries already drawn this frame.</p>",
 					"description": ""
-				},
-				{
-					"name": "_geometryPool",
-					"type": "PropertyDoc",
-					"access": "protected",
-					"scope": "instance",
-					"brief": "<p>Batch geometries that can be reused.</p>",
-					"description": ""
-				},
-				{
-					"name": "_indexCountProperty",
-					"type": "PropertyDoc",
-					"access": "protected",
-					"scope": "instance",
-					"brief": "",
-					"description": ""
-				},
-				{
-					"name": "geometryMerger",
-					"type": "PropertyDoc",
-					"access": "protected",
-					"scope": "instance",
-					"brief": "",
-					"description": "<p>This lazy getter returns the geometry-merger function. This function\ntakes one argument - the display-object to be appended to the batch -\nand pushes its geometry to the batch geometry.</p>\n<p>You can overwrite this property with a custom geometry-merger function\nif customizing <code>PIXI.brend.BatchGeometryFactory</code>.</p>"
-				},
-				{
-					"name": "append",
-					"type": "MethodDoc",
-					"scope": "instance",
-					"brief": "",
-					"description": "<p>Append's the display-object geometry to this batch's geometry. You must override\nthis you need to &quot;modify&quot; the geometry of the display-object before merging into\nthe composite geometry (for example, adding an ID to a special uniform)</p>"
 				},
 				{
 					"name": "build",
@@ -40443,13 +41629,6 @@
 					"scope": "instance",
 					"brief": "",
 					"description": ""
-				},
-				{
-					"name": "init",
-					"type": "MethodDoc",
-					"scope": "instance",
-					"brief": "",
-					"description": "<p>Ensures this factory has enough space to buffer the given number of vertices\nand indices. This should be called before feeding display-objects from the\nbatch.</p>"
 				},
 				{
 					"name": "postrender",
@@ -43531,6 +44710,12 @@
 			"name": "MultiTextureResource",
 			"type": "ClassDoc",
 			"brief": "",
+			"description": ""
+		},
+		{
+			"name": "MultiTextureResource",
+			"type": "ClassDoc",
+			"brief": "",
 			"description": "",
 			"members": [
 				{
@@ -43545,6 +44730,85 @@
 					"type": "MethodDoc",
 					"scope": "instance",
 					"brief": "",
+					"description": ""
+				}
+			]
+		},
+		{
+			"name": "ObjectPool",
+			"type": "ClassDoc",
+			"access": "public",
+			"brief": "",
+			"description": "<p><code>ObjectPool</code> provides the framework necessary for pooling minus the object instantiation\nmethod. You can use <code>ObjectPoolFactory</code> for objects that can be created using a default\nconstructor.</p>",
+			"members": [
+				{
+					"name": "allocate",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Obtains an instance from this pool.</p>",
+					"description": ""
+				},
+				{
+					"name": "allocateArray",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Obtains an array of instances from this pool. This is faster than allocating multiple objects\nseparately from this pool.</p>"
+				},
+				{
+					"name": "constructor",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "create",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Instantiates a new object of type <code>T</code>.</p>",
+					"description": ""
+				},
+				{
+					"name": "limit",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Dereferences objects for the GC to collect and brings the pool size down to <code>count</code>.</p>",
+					"description": ""
+				},
+				{
+					"name": "release",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Returns the object to the pool.</p>",
+					"description": ""
+				},
+				{
+					"name": "releaseArray",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Releases all of the objects in the passed array. These need not be allocated using <code>allocateArray</code>, however.</p>",
+					"description": ""
+				},
+				{
+					"name": "reserve",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Preallocates objects so that the pool size is at least <code>count</code>.</p>",
+					"description": ""
+				},
+				{
+					"name": "startGC",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Install the GC on the shared ticker.</p>",
+					"description": ""
+				},
+				{
+					"name": "stopGC",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Stops running the GC on the pool.</p>",
 					"description": ""
 				}
 			]
@@ -43664,6 +44928,22 @@
 					"type": "MethodDoc",
 					"scope": "static",
 					"brief": "",
+					"description": ""
+				}
+			]
+		},
+		{
+			"name": "ObjectPoolFactory",
+			"type": "ClassDoc",
+			"access": "public",
+			"brief": "",
+			"description": "<p>Factory for creating pools of objects with default constructors. It will store the pool of\na given type and reuse it on further builds.</p>",
+			"members": [
+				{
+					"name": "build",
+					"type": "MethodDoc",
+					"scope": "static",
+					"brief": "",
 					"description": "",
 					"members": [
 						{
@@ -43672,30 +44952,6 @@
 							"brief": "",
 							"description": "",
 							"members": [
-								{
-									"name": "_freeCount",
-									"type": "PropertyDoc",
-									"access": "protected",
-									"scope": "instance",
-									"brief": "<p>Number of objects in the pool. This is less than or equal to <code>_pool.length</code>.</p>",
-									"description": ""
-								},
-								{
-									"name": "_freeList",
-									"type": "PropertyDoc",
-									"access": "protected",
-									"scope": "instance",
-									"brief": "<p>Supply pool of objects that can be used to immediately lend.</p>",
-									"description": ""
-								},
-								{
-									"name": "capacity",
-									"type": "PropertyDoc",
-									"access": "protected",
-									"scope": "instance",
-									"brief": "<p>The number of objects that can be stored in the pool without allocating more space.</p>",
-									"description": ""
-								},
 								{
 									"name": "allocate",
 									"type": "MethodDoc",
@@ -43762,6 +45018,57 @@
 							]
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "OooRenderer",
+			"type": "ClassDoc",
+			"access": "public",
+			"brief": "<p>The out-of-order rendering pipeline</p>",
+			"description": "",
+			"members": [
+				{
+					"name": "renderer",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The renderer this manager works for.</p>",
+					"description": ""
+				},
+				{
+					"name": "destroy",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Generic destruction method that frees all resources. This\nshould be called by subclasses.</p>"
+				},
+				{
+					"name": "flush",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "render",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "start",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Stub method that initializes any state required before\nrendering starts. It is different from the <code>prerender</code>\nsignal, which occurs every frame, in that it is called\nwhenever an object requests <em>this</em> renderer specifically.</p>"
+				},
+				{
+					"name": "stop",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Stops the renderer. It should free up any state and\nbecome dormant.</p>"
 				}
 			]
 		},
@@ -43842,6 +45149,70 @@
 			"type": "ClassDoc",
 			"brief": "<p>Plugin factory for the out-of-order pipeline</p>",
 			"description": ""
+		},
+		{
+			"name": "OooRendererPluginFactory",
+			"type": "ClassDoc",
+			"brief": "<p>Plugin factory for the out-of-order pipeline</p>",
+			"description": ""
+		},
+		{
+			"name": "OrientedBounds",
+			"type": "ClassDoc",
+			"brief": "<p>An oriented bounding box is a rotated rectangle.</p>",
+			"description": "<p>An oriented bounding box is modelled by rotating its (axis-aligned) {@link OrientedBounds#innerBounds}\nby an angle {@link OrientedBounds#angle} around its center. The center of an oriented bounding box and\nits axis-aligned inner-bounds coincide.</p>",
+			"members": [
+				{
+					"name": "updateCenter",
+					"type": "PropertyDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>This will translate {@link this.innerBounds} after {@link this.center} is changed to ensure consistency.</p>",
+					"description": ""
+				},
+				{
+					"name": "constructor",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "constructor",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "copyFrom",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Copies {@code bounds} into this instance.</p>",
+					"description": ""
+				},
+				{
+					"name": "equals",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Checks whether the given {@code bounds} are equal to this.</p>",
+					"description": ""
+				},
+				{
+					"name": "isDirty",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Whether any internal state needs to be recalculated.</p>",
+					"description": ""
+				},
+				{
+					"name": "update",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>This will recalculate the center, orientation matrix, and the hull vertices. It should be called only if\n{@code this.isDirty} returns true.</p>"
+				}
+			]
 		},
 		{
 			"name": "OrientedBounds",
@@ -44241,6 +45612,933 @@
 					"type": "MethodDoc",
 					"scope": "instance",
 					"brief": "<p>Evaluates the macros in the template and generates the shader's source.</p>",
+					"description": ""
+				}
+			]
+		},
+		{
+			"name": "RectTileLayer",
+			"type": "ClassDoc",
+			"brief": "",
+			"description": "",
+			"members": [
+				{
+					"name": "_accessibleActive",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "_accessibleDiv",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "_bounds",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The bounds object, this is used to calculate and store the bounds of the displayObject.</p>",
+					"description": ""
+				},
+				{
+					"name": "_localBounds",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Local bounds object, swapped with <code>_bounds</code> when using <code>getLocalBounds()</code>.</p>",
+					"description": ""
+				},
+				{
+					"name": "accessible",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Flag for if the object is accessible. If true AccessibilityManager will overlay a\nshadow div with attributes set</p>"
+				},
+				{
+					"name": "accessibleChildren",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Setting to false will prevent any children inside this container to\nbe accessible. Defaults to true.</p>"
+				},
+				{
+					"name": "accessibleHint",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Sets the aria-label attribute of the shadow div</p>",
+					"description": ""
+				},
+				{
+					"name": "accessiblePointerEvents",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Specify the pointer-events the accessible div will use\nDefaults to auto.</p>"
+				},
+				{
+					"name": "accessibleTitle",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Sets the title attribute of the shadow div\nIf accessibleTitle AND accessibleHint has not been this will default to 'displayObject [tabIndex]'</p>"
+				},
+				{
+					"name": "accessibleType",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Specify the type of div the accessible layer is. Screen readers treat the element differently\ndepending on this type. Defaults to button.</p>"
+				},
+				{
+					"name": "alpha",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The opacity of the object.</p>",
+					"description": ""
+				},
+				{
+					"name": "angle",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The angle of the object in degrees.\n'rotation' and 'angle' have the same effect on a display object; rotation is in radians, angle is in degrees.</p>"
+				},
+				{
+					"name": "buttonMode",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>If enabled, the mouse cursor use the pointer behavior when hovered over the displayObject if it is interactive\nSetting this changes the 'cursor' property to <code>'pointer'</code>.</p>"
+				},
+				{
+					"name": "cacheAsBitmap",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Set this to true if you want this display object to be cached as a bitmap.\nThis basically takes a snap shot of the display object as it is at that moment. It can\nprovide a performance benefit for complex static displayObjects.\nTo remove simply set this property to <code>false</code></p>\n<p>IMPORTANT GOTCHA - Make sure that all your textures are preloaded BEFORE setting this property to true\nas it will take a snapshot of what is currently there. If the textures have not loaded then they will not appear.</p>"
+				},
+				{
+					"name": "children",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The array of children of this container.</p>",
+					"description": ""
+				},
+				{
+					"name": "cursor",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>This defines what cursor mode is used when the mouse cursor\nis hovered over the displayObject.</p>"
+				},
+				{
+					"name": "filterArea",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The area the filter is applied to. This is used as more of an optimization\nrather than figuring out the dimensions of the displayObject each frame you can set this rectangle.</p>\n<p>Also works as an interaction mask.</p>"
+				},
+				{
+					"name": "filters",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Sets the filters for the displayObject.</p>\n<ul>\n<li>IMPORTANT: This is a WebGL only feature and will be ignored by the canvas renderer.\nTo remove filters simply set this property to <code>'null'</code>.</li>\n</ul>"
+				},
+				{
+					"name": "height",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The height of the Container, setting this will actually modify the scale to achieve the value set</p>",
+					"description": ""
+				},
+				{
+					"name": "hitArea",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Interaction shape. Children will be hit first, then this shape will be checked.\nSetting this will cause this shape to be checked in hit tests rather than the displayObject's bounds.</p>"
+				},
+				{
+					"name": "interactive",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Enable interaction events for the DisplayObject. Touch, pointer and mouse\nevents will not be emitted unless <code>interactive</code> is set to <code>true</code>.</p>"
+				},
+				{
+					"name": "interactiveChildren",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Determines if the children to the displayObject can be clicked/touched\nSetting this to false allows PixiJS to bypass a recursive <code>hitTest</code> function</p>"
+				},
+				{
+					"name": "isMask",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Does any other displayObject use this object as a mask?</p>"
+				},
+				{
+					"name": "isSprite",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>used to fast check if a sprite is.. a sprite!</p>"
+				},
+				{
+					"name": "localTransform",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Current transform of the object based on local factors: position, scale, other stuff.</p>",
+					"description": ""
+				},
+				{
+					"name": "mask",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Sets a mask for the displayObject. A mask is an object that limits the visibility of an\nobject to the shape of the mask applied to it. In PixiJS a regular mask must be a\n{@link PIXI.Graphics} or a {@link PIXI.Sprite} object. This allows for much faster masking in canvas as it\nutilities shape clipping. To remove a mask, set this property to <code>null</code>.</p>\n<p>For sprite mask both alpha and red channel are used. Black mask is the same as transparent mask.</p>"
+				},
+				{
+					"name": "name",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The instance name of the object.</p>",
+					"description": ""
+				},
+				{
+					"name": "parent",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The display object container that contains this display object.</p>",
+					"description": ""
+				},
+				{
+					"name": "pivot",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The center of rotation, scaling, and skewing for this display object in its local space. The <code>position</code>\nis the projection of <code>pivot</code> in the parent's local space.</p>\n<p>By default, the pivot is the origin (0, 0).</p>"
+				},
+				{
+					"name": "position",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The coordinate of the object relative to the local coordinates of the parent.</p>",
+					"description": ""
+				},
+				{
+					"name": "renderable",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Can this object be rendered, if false the object will not be drawn but the updateTransform\nmethods will still be called.</p>\n<p>Only affects recursive calls from parent. You can ask for bounds manually.</p>"
+				},
+				{
+					"name": "rotation",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The rotation of the object in radians.\n'rotation' and 'angle' have the same effect on a display object; rotation is in radians, angle is in degrees.</p>"
+				},
+				{
+					"name": "scale",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The scale factors of this object along the local coordinate axes.</p>",
+					"description": "<p>The default scale is (1, 1).</p>"
+				},
+				{
+					"name": "skew",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The skew factor for the object in radians.</p>",
+					"description": ""
+				},
+				{
+					"name": "smartMask",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>It enable smart-masking, set this property. Before rendering the scene graph, you must invoke\n{@code updateSmartMask} on each display-object to enable masking.</p>"
+				},
+				{
+					"name": "sortableChildren",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>If set to true, the container will sort its children by zIndex value\nwhen updateTransform() is called, or manually if sortChildren() is called.</p>\n<p>This actually changes the order of elements in the array, so should be treated\nas a basic solution that is not performant compared to other solutions,\nsuch as @link https://github.com/pixijs/pixi-display</p>\n<p>Also be aware of that this may not work nicely with the addChildAt() function,\nas the zIndex sorting may cause the child to automatically sorted to another position.</p>"
+				},
+				{
+					"name": "sortDirty",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Should children be sorted by zIndex at the next updateTransform call.</p>",
+					"description": "<p>Will get automatically set to true if a new child is added, or if a child's zIndex changes.</p>"
+				},
+				{
+					"name": "transform",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>World transform and local transform of this object.\nThis will become read-only later, please do not assign anything there unless you know what are you doing.</p>"
+				},
+				{
+					"name": "visible",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The visibility of the object. If false the object will not be drawn, and\nthe updateTransform function will not be called.</p>\n<p>Only affects recursive calls from parent. You can ask for bounds or call updateTransform manually.</p>"
+				},
+				{
+					"name": "width",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The width of the Container, setting this will actually modify the scale to achieve the value set</p>",
+					"description": ""
+				},
+				{
+					"name": "worldAlpha",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The multiplied alpha of the displayObject.</p>",
+					"description": ""
+				},
+				{
+					"name": "worldTransform",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Current transform of the object based on world (parent) factors.</p>",
+					"description": ""
+				},
+				{
+					"name": "worldVisible",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Indicates if the object is globally visible.</p>",
+					"description": ""
+				},
+				{
+					"name": "x",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The position of the displayObject on the x axis relative to the local coordinates of the parent.\nAn alias to position.x</p>"
+				},
+				{
+					"name": "y",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The position of the displayObject on the y axis relative to the local coordinates of the parent.\nAn alias to position.y</p>"
+				},
+				{
+					"name": "zIndex",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The zIndex of the displayObject.</p>",
+					"description": "<p>If a container has the sortableChildren property set to true, children will be automatically\nsorted by zIndex value; a higher value will mean it will be moved towards the end of the array,\nand thus rendered on top of other display objects within the same container.</p>"
+				},
+				{
+					"name": "_boundsID",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>Flags the cached bounds as dirty.</p>",
+					"description": ""
+				},
+				{
+					"name": "_boundsRect",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>Cache of this display-object's bounds-rectangle.</p>",
+					"description": ""
+				},
+				{
+					"name": "_destroyed",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>If the object has been destroyed via destroy(). If true, it should not be used.</p>",
+					"description": ""
+				},
+				{
+					"name": "_enabledFilters",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Currently enabled filters</p>"
+				},
+				{
+					"name": "_lastSortedIndex",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Which index in the children array the display component was before the previous zIndex sort.\nUsed by containers to help sort objects with the same zIndex, by using previous array index as the decider.</p>"
+				},
+				{
+					"name": "_localBoundsRect",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>Cache of this display-object's local-bounds rectangle.</p>",
+					"description": ""
+				},
+				{
+					"name": "_mask",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>The original, cached mask of the object.</p>",
+					"description": ""
+				},
+				{
+					"name": "_tempDisplayObjectParent",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "_zIndex",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The zIndex of the displayObject.\nA higher value will mean it will be rendered on top of other displayObjects within the same container.</p>"
+				},
+				{
+					"name": "tabIndex",
+					"type": "PropertyDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "trackedPointers",
+					"type": "PropertyDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Internal set of all active pointers, by identifier</p>",
+					"description": ""
+				},
+				{
+					"name": "_recursivePostUpdateTransform",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Recursively updates transform of all objects from the root to this one\ninternal function for toLocal()</p>"
+				},
+				{
+					"name": "addChild",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Adds one or more children to the container.</p>",
+					"description": "<p>Multiple items can be added like so: <code>myContainer.addChild(thingOne, thingTwo, thingThree)</code></p>"
+				},
+				{
+					"name": "addChildAt",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Adds a child to the container at a specified index. If the index is out of bounds an error will be thrown</p>",
+					"description": ""
+				},
+				{
+					"name": "calculateBounds",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Recalculates the bounds of the container.</p>",
+					"description": "<p>This implementation will automatically fit the children's bounds into the calculation. Each child's bounds\nis limited to its mask's bounds or filterArea, if any is applied.</p>"
+				},
+				{
+					"name": "containerUpdateTransform",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Container default updateTransform, does update children of container.\nWill crash if there's no parent element.</p>"
+				},
+				{
+					"name": "destroy",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Removes all internal references and listeners as well as removes children from the display list.\nDo not use a Container after calling <code>destroy</code>.</p>"
+				},
+				{
+					"name": "disableTempParent",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
+				},
+				{
+					"name": "displayObjectUpdateTransform",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>DisplayObject default updateTransform, does not update children of container.\nWill crash if there's no parent element.</p>"
+				},
+				{
+					"name": "enableTempParent",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Used in Renderer, cacheAsBitmap and other places where you call an <code>updateTransform</code> on root</p>",
+					"description": "<pre><code class=\"hljs\">const cacheParent = elem.enable<span class=\"hljs-constructor\">TempParent()</span>;\nelem.update<span class=\"hljs-constructor\">Transform()</span>;\nelem.disable<span class=\"hljs-constructor\">TempParent(<span class=\"hljs-params\">cacheParent</span>)</span>;\n</code></pre>"
+				},
+				{
+					"name": "getBounds",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Calculates and returns the (world) bounds of the display object as a [Rectangle]{@link PIXI.Rectangle}.</p>",
+					"description": "<p>This method is expensive on containers with a large subtree (like the stage). This is because the bounds\nof a container depend on its children's bounds, which recursively causes all bounds in the subtree to\nbe recalculated. The upside, however, is that calling <code>getBounds</code> once on a container will indeed update\nthe bounds of all children (the whole subtree, in fact). This side effect should be exploited by using\n<code>displayObject._bounds.getRectangle()</code> when traversing through all the bounds in a scene graph. Otherwise,\ncalling <code>getBounds</code> on each object in a subtree will cause the total cost to increase quadratically as\nits height increases.</p>\n<ul>\n<li>The transforms of all objects in a container's <strong>subtree</strong> and of all <strong>ancestors</strong> are updated.</li>\n<li>The world bounds of all display objects in a container's <strong>subtree</strong> will also be recalculated.</li>\n</ul>\n<p>The <code>_bounds</code> object stores the last calculation of the bounds. You can use to entirely skip bounds\ncalculation if needed.</p>\n<pre><code class=\"hljs language-js\"><span class=\"hljs-keyword\">const</span> lastCalculatedBounds = displayObject._bounds.getRectangle(optionalRect);\n</code></pre>\n<p>Do know that usage of <code>getLocalBounds</code> can corrupt the <code>_bounds</code> of children (the whole subtree, actually). This\nis a known issue that has not been solved. See [getLocalBounds]{@link PIXI.DisplayObject#getLocalBounds} for more\ndetails.</p>\n<p><code>getBounds</code> should be called with <code>skipUpdate</code> equal to <code>true</code> in a render() call. This is because the transforms\nare guaranteed to be update-to-date. In fact, recalculating inside a render() call may cause corruption in certain\ncases.</p>"
+				},
+				{
+					"name": "getChildAt",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Returns the child at the specified index</p>",
+					"description": ""
+				},
+				{
+					"name": "getChildByName",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Returns the display object in the container.</p>",
+					"description": "<p>Recursive searches are done in a preorder traversal.</p>"
+				},
+				{
+					"name": "getChildIndex",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Returns the index position of a child DisplayObject instance</p>",
+					"description": ""
+				},
+				{
+					"name": "getGlobalPosition",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Returns the global position of the displayObject. Does not depend on object scale, rotation and pivot.</p>",
+					"description": ""
+				},
+				{
+					"name": "getLocalBounds",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Retrieves the local bounds of the displayObject as a rectangle object.</p>",
+					"description": "<p>Calling <code>getLocalBounds</code> may invalidate the <code>_bounds</code> of the whole subtree below. If using it inside a render()\ncall, it is advised to call <code>getBounds()</code> immediately after to recalculate the world bounds of the subtree.</p>"
+				},
+				{
+					"name": "removeChild",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Removes one or more children from the container.</p>",
+					"description": ""
+				},
+				{
+					"name": "removeChildAt",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Removes a child from the specified index position.</p>",
+					"description": ""
+				},
+				{
+					"name": "removeChildren",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Removes all children from this container that are within the begin and end indexes.</p>",
+					"description": ""
+				},
+				{
+					"name": "render",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Renders the object using the WebGL renderer.</p>",
+					"description": "<p>The [_render]{@link PIXI.Container#_render} method is be overriden for rendering the contents of the\ncontainer itself. This <code>render</code> method will invoke it, and also invoke the <code>render</code> methods of all\nchildren afterward.</p>\n<p>If <code>renderable</code> or <code>visible</code> is false or if <code>worldAlpha</code> is not positive, this implementation will entirely\nskip rendering. See {@link PIXI.DisplayObject} for choosing between <code>renderable</code> or <code>visible</code>. Generally,\nsetting alpha to zero is not recommended for purely skipping rendering.</p>\n<p>When your scene becomes large (especially when it is larger than can be viewed in a single screen), it is\nadvised to employ <strong>culling</strong> to automatically skip rendering objects outside of the current screen. The\n[@pixi-essentials/cull]{@link https://www.npmjs.com/package/@pixi-essentials/cull} and\n[pixi-cull]{@link https://www.npmjs.com/package/pixi-cull} packages do this out of the box.</p>\n<p>The [renderAdvanced]{@link PIXI.Container#renderAdvanced} method is internally used when when masking or\nfiltering is applied on a container. This does, however, break batching and can affect performance when\nmasking and filtering is applied extensively throughout the scene graph.</p>"
+				},
+				{
+					"name": "renderCanvas",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Renders the object using the Canvas renderer</p>"
+				},
+				{
+					"name": "renderWebGL",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "setChildIndex",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Changes the position of an existing child in the display object container</p>",
+					"description": ""
+				},
+				{
+					"name": "setParent",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Set the parent Container of this DisplayObject.</p>",
+					"description": ""
+				},
+				{
+					"name": "setTransform",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Convenience function to set the position, scale, skew and pivot at once.</p>",
+					"description": ""
+				},
+				{
+					"name": "sortChildren",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Sorts children by zIndex. Previous order is mantained for 2 children with the same zIndex.</p>",
+					"description": ""
+				},
+				{
+					"name": "swapChildren",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Swaps the position of 2 Display Objects within this container.</p>",
+					"description": ""
+				},
+				{
+					"name": "toGlobal",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Calculates the global position of the display object.</p>",
+					"description": ""
+				},
+				{
+					"name": "toLocal",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Calculates the local position of the display object relative to another point.</p>",
+					"description": ""
+				},
+				{
+					"name": "updateTransform",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Updates the transform on all children of this container for rendering</p>",
+					"description": ""
+				},
+				{
+					"name": "_calculateBounds",
+					"type": "MethodDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Recalculates the content bounds of this object. This should be overriden to\ncalculate the bounds of this specific object (not including children).</p>"
+				},
+				{
+					"name": "_render",
+					"type": "MethodDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>To be overridden by the subclasses.</p>",
+					"description": ""
+				},
+				{
+					"name": "_renderCanvas",
+					"type": "MethodDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>To be overridden by the subclass</p>"
+				},
+				{
+					"name": "onChildrenChange",
+					"type": "MethodDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>Overridable method that can be used by Container subclasses whenever the children array is modified</p>",
+					"description": ""
+				},
+				{
+					"name": "renderAdvanced",
+					"type": "MethodDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>Render the object using the WebGL renderer and advanced features.</p>",
+					"description": ""
+				},
+				{
+					"name": "_cacheAsBitmapDestroy",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Destroys the cached object.</p>",
+					"description": ""
+				},
+				{
+					"name": "_calculateCachedBounds",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Calculates the bounds of the cached sprite</p>",
+					"description": ""
+				},
+				{
+					"name": "_destroyCachedDisplayObject",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Destroys the cached sprite.</p>",
+					"description": ""
+				},
+				{
+					"name": "_getCachedLocalBounds",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Gets the bounds of the cached sprite.</p>",
+					"description": ""
+				},
+				{
+					"name": "_initCachedDisplayObject",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Prepares the WebGL renderer to cache the sprite</p>",
+					"description": ""
+				},
+				{
+					"name": "_initCachedDisplayObjectCanvas",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Prepares the Canvas renderer to cache the sprite</p>",
+					"description": ""
+				},
+				{
+					"name": "_renderCached",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Renders a cached version of the sprite with WebGL</p>",
+					"description": ""
+				},
+				{
+					"name": "_renderCachedCanvas",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Renders a cached version of the sprite with canvas</p>",
+					"description": ""
+				},
+				{
+					"name": "childAdded",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "<p>Fired when a DisplayObject is added to this Container.</p>",
+					"description": ""
+				},
+				{
+					"name": "click",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button (usually a mouse left-button) is pressed and released on\nthe display object. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mousedown",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button (usually a mouse left-button) is pressed on the display.\nobject. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mousemove",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device (usually a mouse) is moved while over the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mouseout",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device (usually a mouse) is moved off the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mouseover",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device (usually a mouse) is moved onto the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mouseup",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button (usually a mouse left-button) is released over the display\nobject. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mouseupoutside",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button (usually a mouse left-button) is released outside the\ndisplay object that initially registered a\n[mousedown]{@link PIXI.DisplayObject#event:mousedown}.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointercancel",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when the operating system cancels a pointer event.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointerdown",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button is pressed on the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointermove",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device is moved while over the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointerout",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device is moved off the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointerover",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device is moved onto the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointertap",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button is pressed and released on the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointerup",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button is released over the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointerupoutside",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button is released outside the display object that initially\nregistered a [pointerdown]{@link PIXI.DisplayObject#event:pointerdown}.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "removedFrom",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "<p>Fired when a DisplayObject is removed from this Container.</p>",
+					"description": ""
+				},
+				{
+					"name": "rightclick",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device secondary button (usually a mouse right-button) is pressed\nand released on the display object. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "rightdown",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device secondary button (usually a mouse right-button) is pressed\non the display object. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "rightup",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device secondary button (usually a mouse right-button) is released\nover the display object. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "rightupoutside",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device secondary button (usually a mouse right-button) is released\noutside the display object that initially registered a\n[rightdown]{@link PIXI.DisplayObject#event:rightdown}.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "tap",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a touch point is placed and removed from the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "touchcancel",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when the operating system cancels a touch.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "touchend",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a touch point is removed from the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "touchendoutside",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a touch point is removed outside of the display object that initially\nregistered a [touchstart]{@link PIXI.DisplayObject#event:touchstart}.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "touchmove",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a touch point is moved along the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "touchstart",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a touch point is placed on the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "added",
+					"type": "EventDoc",
+					"scope": "instance",
+					"brief": "<p>Fired when this DisplayObject is added to a Container.</p>",
+					"description": ""
+				},
+				{
+					"name": "removed",
+					"type": "EventDoc",
+					"brief": "<p>Fired when this DisplayObject is removed from a Container.</p>",
 					"description": ""
 				}
 			]
@@ -45248,6 +47546,12 @@
 					"description": ""
 				}
 			]
+		},
+		{
+			"name": "Redirect",
+			"type": "ClassDoc",
+			"brief": "",
+			"description": ""
 		},
 		{
 			"name": "ShaderPreprocessor",
@@ -54221,6 +56525,35 @@
 			]
 		},
 		{
+			"name": "TilemapShader",
+			"type": "ClassDoc",
+			"brief": "",
+			"description": "",
+			"members": [
+				{
+					"name": "program",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Program that the shader uses</p>",
+					"description": ""
+				},
+				{
+					"name": "uniforms",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Shader uniform values, shortcut for <code>uniformGroup.uniforms</code></p>"
+				},
+				{
+					"name": "destroy",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				}
+			]
+		},
+		{
 			"name": "TileRenderer",
 			"type": "ClassDoc",
 			"brief": "<p>Renderer for rectangle tiles.</p>",
@@ -57435,6 +59768,933 @@
 					"description": "<p>This implementation will automatically fit the children's bounds into the calculation. Each child's bounds\nis limited to its mask's bounds or filterArea, if any is applied.</p>"
 				},
 				{
+					"name": "containerUpdateTransform",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Container default updateTransform, does update children of container.\nWill crash if there's no parent element.</p>"
+				},
+				{
+					"name": "destroy",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Removes all internal references and listeners as well as removes children from the display list.\nDo not use a Container after calling <code>destroy</code>.</p>"
+				},
+				{
+					"name": "disableTempParent",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Pair method for <code>enableTempParent</code></p>",
+					"description": ""
+				},
+				{
+					"name": "displayObjectUpdateTransform",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>DisplayObject default updateTransform, does not update children of container.\nWill crash if there's no parent element.</p>"
+				},
+				{
+					"name": "enableTempParent",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Used in Renderer, cacheAsBitmap and other places where you call an <code>updateTransform</code> on root</p>",
+					"description": "<pre><code class=\"hljs\">const cacheParent = elem.enable<span class=\"hljs-constructor\">TempParent()</span>;\nelem.update<span class=\"hljs-constructor\">Transform()</span>;\nelem.disable<span class=\"hljs-constructor\">TempParent(<span class=\"hljs-params\">cacheParent</span>)</span>;\n</code></pre>"
+				},
+				{
+					"name": "getBounds",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Calculates and returns the (world) bounds of the display object as a [Rectangle]{@link PIXI.Rectangle}.</p>",
+					"description": "<p>This method is expensive on containers with a large subtree (like the stage). This is because the bounds\nof a container depend on its children's bounds, which recursively causes all bounds in the subtree to\nbe recalculated. The upside, however, is that calling <code>getBounds</code> once on a container will indeed update\nthe bounds of all children (the whole subtree, in fact). This side effect should be exploited by using\n<code>displayObject._bounds.getRectangle()</code> when traversing through all the bounds in a scene graph. Otherwise,\ncalling <code>getBounds</code> on each object in a subtree will cause the total cost to increase quadratically as\nits height increases.</p>\n<ul>\n<li>The transforms of all objects in a container's <strong>subtree</strong> and of all <strong>ancestors</strong> are updated.</li>\n<li>The world bounds of all display objects in a container's <strong>subtree</strong> will also be recalculated.</li>\n</ul>\n<p>The <code>_bounds</code> object stores the last calculation of the bounds. You can use to entirely skip bounds\ncalculation if needed.</p>\n<pre><code class=\"hljs language-js\"><span class=\"hljs-keyword\">const</span> lastCalculatedBounds = displayObject._bounds.getRectangle(optionalRect);\n</code></pre>\n<p>Do know that usage of <code>getLocalBounds</code> can corrupt the <code>_bounds</code> of children (the whole subtree, actually). This\nis a known issue that has not been solved. See [getLocalBounds]{@link PIXI.DisplayObject#getLocalBounds} for more\ndetails.</p>\n<p><code>getBounds</code> should be called with <code>skipUpdate</code> equal to <code>true</code> in a render() call. This is because the transforms\nare guaranteed to be update-to-date. In fact, recalculating inside a render() call may cause corruption in certain\ncases.</p>"
+				},
+				{
+					"name": "getChildAt",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Returns the child at the specified index</p>",
+					"description": ""
+				},
+				{
+					"name": "getChildByName",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Returns the display object in the container.</p>",
+					"description": "<p>Recursive searches are done in a preorder traversal.</p>"
+				},
+				{
+					"name": "getChildIndex",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Returns the index position of a child DisplayObject instance</p>",
+					"description": ""
+				},
+				{
+					"name": "getGlobalPosition",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Returns the global position of the displayObject. Does not depend on object scale, rotation and pivot.</p>",
+					"description": ""
+				},
+				{
+					"name": "getLocalBounds",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Retrieves the local bounds of the displayObject as a rectangle object.</p>",
+					"description": "<p>Calling <code>getLocalBounds</code> may invalidate the <code>_bounds</code> of the whole subtree below. If using it inside a render()\ncall, it is advised to call <code>getBounds()</code> immediately after to recalculate the world bounds of the subtree.</p>"
+				},
+				{
+					"name": "removeChild",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Removes one or more children from the container.</p>",
+					"description": ""
+				},
+				{
+					"name": "removeChildAt",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Removes a child from the specified index position.</p>",
+					"description": ""
+				},
+				{
+					"name": "removeChildren",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Removes all children from this container that are within the begin and end indexes.</p>",
+					"description": ""
+				},
+				{
+					"name": "render",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Renders the object using the WebGL renderer.</p>",
+					"description": "<p>The [_render]{@link PIXI.Container#_render} method is be overriden for rendering the contents of the\ncontainer itself. This <code>render</code> method will invoke it, and also invoke the <code>render</code> methods of all\nchildren afterward.</p>\n<p>If <code>renderable</code> or <code>visible</code> is false or if <code>worldAlpha</code> is not positive, this implementation will entirely\nskip rendering. See {@link PIXI.DisplayObject} for choosing between <code>renderable</code> or <code>visible</code>. Generally,\nsetting alpha to zero is not recommended for purely skipping rendering.</p>\n<p>When your scene becomes large (especially when it is larger than can be viewed in a single screen), it is\nadvised to employ <strong>culling</strong> to automatically skip rendering objects outside of the current screen. The\n[@pixi-essentials/cull]{@link https://www.npmjs.com/package/@pixi-essentials/cull} and\n[pixi-cull]{@link https://www.npmjs.com/package/pixi-cull} packages do this out of the box.</p>\n<p>The [renderAdvanced]{@link PIXI.Container#renderAdvanced} method is internally used when when masking or\nfiltering is applied on a container. This does, however, break batching and can affect performance when\nmasking and filtering is applied extensively throughout the scene graph.</p>"
+				},
+				{
+					"name": "renderCanvas",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Renders the object using the Canvas renderer</p>"
+				},
+				{
+					"name": "renderWebGL",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "setChildIndex",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Changes the position of an existing child in the display object container</p>",
+					"description": ""
+				},
+				{
+					"name": "setParent",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Set the parent Container of this DisplayObject.</p>",
+					"description": ""
+				},
+				{
+					"name": "setTransform",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Convenience function to set the position, scale, skew and pivot at once.</p>",
+					"description": ""
+				},
+				{
+					"name": "sortChildren",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Sorts children by zIndex. Previous order is mantained for 2 children with the same zIndex.</p>",
+					"description": ""
+				},
+				{
+					"name": "swapChildren",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Swaps the position of 2 Display Objects within this container.</p>",
+					"description": ""
+				},
+				{
+					"name": "toGlobal",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Calculates the global position of the display object.</p>",
+					"description": ""
+				},
+				{
+					"name": "toLocal",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Calculates the local position of the display object relative to another point.</p>",
+					"description": ""
+				},
+				{
+					"name": "updateTransform",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Updates the transform on all children of this container for rendering</p>",
+					"description": ""
+				},
+				{
+					"name": "_calculateBounds",
+					"type": "MethodDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Recalculates the content bounds of this object. This should be overriden to\ncalculate the bounds of this specific object (not including children).</p>"
+				},
+				{
+					"name": "_render",
+					"type": "MethodDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>To be overridden by the subclasses.</p>",
+					"description": ""
+				},
+				{
+					"name": "_renderCanvas",
+					"type": "MethodDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>To be overridden by the subclass</p>"
+				},
+				{
+					"name": "onChildrenChange",
+					"type": "MethodDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>Overridable method that can be used by Container subclasses whenever the children array is modified</p>",
+					"description": ""
+				},
+				{
+					"name": "renderAdvanced",
+					"type": "MethodDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>Render the object using the WebGL renderer and advanced features.</p>",
+					"description": ""
+				},
+				{
+					"name": "_cacheAsBitmapDestroy",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Destroys the cached object.</p>",
+					"description": ""
+				},
+				{
+					"name": "_calculateCachedBounds",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Calculates the bounds of the cached sprite</p>",
+					"description": ""
+				},
+				{
+					"name": "_destroyCachedDisplayObject",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Destroys the cached sprite.</p>",
+					"description": ""
+				},
+				{
+					"name": "_getCachedLocalBounds",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Gets the bounds of the cached sprite.</p>",
+					"description": ""
+				},
+				{
+					"name": "_initCachedDisplayObject",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Prepares the WebGL renderer to cache the sprite</p>",
+					"description": ""
+				},
+				{
+					"name": "_initCachedDisplayObjectCanvas",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Prepares the Canvas renderer to cache the sprite</p>",
+					"description": ""
+				},
+				{
+					"name": "_renderCached",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Renders a cached version of the sprite with WebGL</p>",
+					"description": ""
+				},
+				{
+					"name": "_renderCachedCanvas",
+					"type": "MethodDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Renders a cached version of the sprite with canvas</p>",
+					"description": ""
+				},
+				{
+					"name": "childAdded",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "<p>Fired when a DisplayObject is added to this Container.</p>",
+					"description": ""
+				},
+				{
+					"name": "click",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button (usually a mouse left-button) is pressed and released on\nthe display object. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mousedown",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button (usually a mouse left-button) is pressed on the display.\nobject. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mousemove",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device (usually a mouse) is moved while over the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mouseout",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device (usually a mouse) is moved off the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mouseover",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device (usually a mouse) is moved onto the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mouseup",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button (usually a mouse left-button) is released over the display\nobject. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "mouseupoutside",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button (usually a mouse left-button) is released outside the\ndisplay object that initially registered a\n[mousedown]{@link PIXI.DisplayObject#event:mousedown}.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointercancel",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when the operating system cancels a pointer event.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointerdown",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button is pressed on the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointermove",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device is moved while over the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointerout",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device is moved off the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointerover",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device is moved onto the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointertap",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button is pressed and released on the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointerup",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button is released over the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "pointerupoutside",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device button is released outside the display object that initially\nregistered a [pointerdown]{@link PIXI.DisplayObject#event:pointerdown}.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "removedFrom",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "<p>Fired when a DisplayObject is removed from this Container.</p>",
+					"description": ""
+				},
+				{
+					"name": "rightclick",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device secondary button (usually a mouse right-button) is pressed\nand released on the display object. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "rightdown",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device secondary button (usually a mouse right-button) is pressed\non the display object. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "rightup",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device secondary button (usually a mouse right-button) is released\nover the display object. DisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "rightupoutside",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a pointer device secondary button (usually a mouse right-button) is released\noutside the display object that initially registered a\n[rightdown]{@link PIXI.DisplayObject#event:rightdown}.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "tap",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a touch point is placed and removed from the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "touchcancel",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when the operating system cancels a touch.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "touchend",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a touch point is removed from the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "touchendoutside",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a touch point is removed outside of the display object that initially\nregistered a [touchstart]{@link PIXI.DisplayObject#event:touchstart}.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "touchmove",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a touch point is moved along the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "touchstart",
+					"type": "EventDoc",
+					"scope": "static",
+					"brief": "",
+					"description": "<p>Fired when a touch point is placed on the display object.\nDisplayObject's <code>interactive</code> property must be set to <code>true</code> to fire event.</p>"
+				},
+				{
+					"name": "added",
+					"type": "EventDoc",
+					"scope": "instance",
+					"brief": "<p>Fired when this DisplayObject is added to a Container.</p>",
+					"description": ""
+				},
+				{
+					"name": "removed",
+					"type": "EventDoc",
+					"brief": "<p>Fired when this DisplayObject is removed from a Container.</p>",
+					"description": ""
+				}
+			]
+		},
+		{
+			"name": "ZLayer",
+			"type": "ClassDoc",
+			"brief": "",
+			"description": "",
+			"members": [
+				{
+					"name": "_accessibleActive",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "_accessibleDiv",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "_bounds",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The bounds object, this is used to calculate and store the bounds of the displayObject.</p>",
+					"description": ""
+				},
+				{
+					"name": "_localBounds",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Local bounds object, swapped with <code>_bounds</code> when using <code>getLocalBounds()</code>.</p>",
+					"description": ""
+				},
+				{
+					"name": "accessible",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Flag for if the object is accessible. If true AccessibilityManager will overlay a\nshadow div with attributes set</p>"
+				},
+				{
+					"name": "accessibleChildren",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Setting to false will prevent any children inside this container to\nbe accessible. Defaults to true.</p>"
+				},
+				{
+					"name": "accessibleHint",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Sets the aria-label attribute of the shadow div</p>",
+					"description": ""
+				},
+				{
+					"name": "accessiblePointerEvents",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Specify the pointer-events the accessible div will use\nDefaults to auto.</p>"
+				},
+				{
+					"name": "accessibleTitle",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Sets the title attribute of the shadow div\nIf accessibleTitle AND accessibleHint has not been this will default to 'displayObject [tabIndex]'</p>"
+				},
+				{
+					"name": "accessibleType",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Specify the type of div the accessible layer is. Screen readers treat the element differently\ndepending on this type. Defaults to button.</p>"
+				},
+				{
+					"name": "alpha",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The opacity of the object.</p>",
+					"description": ""
+				},
+				{
+					"name": "angle",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The angle of the object in degrees.\n'rotation' and 'angle' have the same effect on a display object; rotation is in radians, angle is in degrees.</p>"
+				},
+				{
+					"name": "buttonMode",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>If enabled, the mouse cursor use the pointer behavior when hovered over the displayObject if it is interactive\nSetting this changes the 'cursor' property to <code>'pointer'</code>.</p>"
+				},
+				{
+					"name": "cacheAsBitmap",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Set this to true if you want this display object to be cached as a bitmap.\nThis basically takes a snap shot of the display object as it is at that moment. It can\nprovide a performance benefit for complex static displayObjects.\nTo remove simply set this property to <code>false</code></p>\n<p>IMPORTANT GOTCHA - Make sure that all your textures are preloaded BEFORE setting this property to true\nas it will take a snapshot of what is currently there. If the textures have not loaded then they will not appear.</p>"
+				},
+				{
+					"name": "children",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The array of children of this container.</p>",
+					"description": ""
+				},
+				{
+					"name": "cursor",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>This defines what cursor mode is used when the mouse cursor\nis hovered over the displayObject.</p>"
+				},
+				{
+					"name": "filterArea",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The area the filter is applied to. This is used as more of an optimization\nrather than figuring out the dimensions of the displayObject each frame you can set this rectangle.</p>\n<p>Also works as an interaction mask.</p>"
+				},
+				{
+					"name": "filters",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Sets the filters for the displayObject.</p>\n<ul>\n<li>IMPORTANT: This is a WebGL only feature and will be ignored by the canvas renderer.\nTo remove filters simply set this property to <code>'null'</code>.</li>\n</ul>"
+				},
+				{
+					"name": "height",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The height of the Container, setting this will actually modify the scale to achieve the value set</p>",
+					"description": ""
+				},
+				{
+					"name": "hitArea",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Interaction shape. Children will be hit first, then this shape will be checked.\nSetting this will cause this shape to be checked in hit tests rather than the displayObject's bounds.</p>"
+				},
+				{
+					"name": "interactive",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Enable interaction events for the DisplayObject. Touch, pointer and mouse\nevents will not be emitted unless <code>interactive</code> is set to <code>true</code>.</p>"
+				},
+				{
+					"name": "interactiveChildren",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Determines if the children to the displayObject can be clicked/touched\nSetting this to false allows PixiJS to bypass a recursive <code>hitTest</code> function</p>"
+				},
+				{
+					"name": "isMask",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Does any other displayObject use this object as a mask?</p>"
+				},
+				{
+					"name": "isSprite",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>used to fast check if a sprite is.. a sprite!</p>"
+				},
+				{
+					"name": "localTransform",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Current transform of the object based on local factors: position, scale, other stuff.</p>",
+					"description": ""
+				},
+				{
+					"name": "mask",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Sets a mask for the displayObject. A mask is an object that limits the visibility of an\nobject to the shape of the mask applied to it. In PixiJS a regular mask must be a\n{@link PIXI.Graphics} or a {@link PIXI.Sprite} object. This allows for much faster masking in canvas as it\nutilities shape clipping. To remove a mask, set this property to <code>null</code>.</p>\n<p>For sprite mask both alpha and red channel are used. Black mask is the same as transparent mask.</p>"
+				},
+				{
+					"name": "name",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The instance name of the object.</p>",
+					"description": ""
+				},
+				{
+					"name": "parent",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The display object container that contains this display object.</p>",
+					"description": ""
+				},
+				{
+					"name": "pivot",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The center of rotation, scaling, and skewing for this display object in its local space. The <code>position</code>\nis the projection of <code>pivot</code> in the parent's local space.</p>\n<p>By default, the pivot is the origin (0, 0).</p>"
+				},
+				{
+					"name": "position",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The coordinate of the object relative to the local coordinates of the parent.</p>",
+					"description": ""
+				},
+				{
+					"name": "renderable",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Can this object be rendered, if false the object will not be drawn but the updateTransform\nmethods will still be called.</p>\n<p>Only affects recursive calls from parent. You can ask for bounds manually.</p>"
+				},
+				{
+					"name": "rotation",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The rotation of the object in radians.\n'rotation' and 'angle' have the same effect on a display object; rotation is in radians, angle is in degrees.</p>"
+				},
+				{
+					"name": "scale",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The scale factors of this object along the local coordinate axes.</p>",
+					"description": "<p>The default scale is (1, 1).</p>"
+				},
+				{
+					"name": "skew",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The skew factor for the object in radians.</p>",
+					"description": ""
+				},
+				{
+					"name": "smartMask",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>It enable smart-masking, set this property. Before rendering the scene graph, you must invoke\n{@code updateSmartMask} on each display-object to enable masking.</p>"
+				},
+				{
+					"name": "sortableChildren",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>If set to true, the container will sort its children by zIndex value\nwhen updateTransform() is called, or manually if sortChildren() is called.</p>\n<p>This actually changes the order of elements in the array, so should be treated\nas a basic solution that is not performant compared to other solutions,\nsuch as @link https://github.com/pixijs/pixi-display</p>\n<p>Also be aware of that this may not work nicely with the addChildAt() function,\nas the zIndex sorting may cause the child to automatically sorted to another position.</p>"
+				},
+				{
+					"name": "sortDirty",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Should children be sorted by zIndex at the next updateTransform call.</p>",
+					"description": "<p>Will get automatically set to true if a new child is added, or if a child's zIndex changes.</p>"
+				},
+				{
+					"name": "transform",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>World transform and local transform of this object.\nThis will become read-only later, please do not assign anything there unless you know what are you doing.</p>"
+				},
+				{
+					"name": "visible",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The visibility of the object. If false the object will not be drawn, and\nthe updateTransform function will not be called.</p>\n<p>Only affects recursive calls from parent. You can ask for bounds or call updateTransform manually.</p>"
+				},
+				{
+					"name": "width",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The width of the Container, setting this will actually modify the scale to achieve the value set</p>",
+					"description": ""
+				},
+				{
+					"name": "worldAlpha",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The multiplied alpha of the displayObject.</p>",
+					"description": ""
+				},
+				{
+					"name": "worldTransform",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Current transform of the object based on world (parent) factors.</p>",
+					"description": ""
+				},
+				{
+					"name": "worldVisible",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>Indicates if the object is globally visible.</p>",
+					"description": ""
+				},
+				{
+					"name": "x",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The position of the displayObject on the x axis relative to the local coordinates of the parent.\nAn alias to position.x</p>"
+				},
+				{
+					"name": "y",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The position of the displayObject on the y axis relative to the local coordinates of the parent.\nAn alias to position.y</p>"
+				},
+				{
+					"name": "zIndex",
+					"type": "PropertyDoc",
+					"scope": "instance",
+					"brief": "<p>The zIndex of the displayObject.</p>",
+					"description": "<p>If a container has the sortableChildren property set to true, children will be automatically\nsorted by zIndex value; a higher value will mean it will be moved towards the end of the array,\nand thus rendered on top of other display objects within the same container.</p>"
+				},
+				{
+					"name": "_boundsID",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>Flags the cached bounds as dirty.</p>",
+					"description": ""
+				},
+				{
+					"name": "_boundsRect",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>Cache of this display-object's bounds-rectangle.</p>",
+					"description": ""
+				},
+				{
+					"name": "_destroyed",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>If the object has been destroyed via destroy(). If true, it should not be used.</p>",
+					"description": ""
+				},
+				{
+					"name": "_enabledFilters",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Currently enabled filters</p>"
+				},
+				{
+					"name": "_lastSortedIndex",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Which index in the children array the display component was before the previous zIndex sort.\nUsed by containers to help sort objects with the same zIndex, by using previous array index as the decider.</p>"
+				},
+				{
+					"name": "_localBoundsRect",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>Cache of this display-object's local-bounds rectangle.</p>",
+					"description": ""
+				},
+				{
+					"name": "_mask",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "<p>The original, cached mask of the object.</p>",
+					"description": ""
+				},
+				{
+					"name": "_tempDisplayObjectParent",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "_zIndex",
+					"type": "PropertyDoc",
+					"access": "protected",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>The zIndex of the displayObject.\nA higher value will mean it will be rendered on top of other displayObjects within the same container.</p>"
+				},
+				{
+					"name": "tabIndex",
+					"type": "PropertyDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "",
+					"description": ""
+				},
+				{
+					"name": "trackedPointers",
+					"type": "PropertyDoc",
+					"access": "private",
+					"scope": "instance",
+					"brief": "<p>Internal set of all active pointers, by identifier</p>",
+					"description": ""
+				},
+				{
+					"name": "_recursivePostUpdateTransform",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "",
+					"description": "<p>Recursively updates transform of all objects from the root to this one\ninternal function for toLocal()</p>"
+				},
+				{
+					"name": "addChild",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Adds one or more children to the container.</p>",
+					"description": "<p>Multiple items can be added like so: <code>myContainer.addChild(thingOne, thingTwo, thingThree)</code></p>"
+				},
+				{
+					"name": "addChildAt",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Adds a child to the container at a specified index. If the index is out of bounds an error will be thrown</p>",
+					"description": ""
+				},
+				{
+					"name": "calculateBounds",
+					"type": "MethodDoc",
+					"scope": "instance",
+					"brief": "<p>Recalculates the bounds of the container.</p>",
+					"description": "<p>This implementation will automatically fit the children's bounds into the calculation. Each child's bounds\nis limited to its mask's bounds or filterArea, if any is applied.</p>"
+				},
+				{
 					"name": "clear",
 					"type": "MethodDoc",
 					"scope": "instance",
@@ -58182,9 +61442,9 @@
 			]
 		},
 		{
-			"name": "D3D10_RESOURCE_DIMENSION",
+			"name": "DXGI_FORMAT",
 			"type": "EnumDoc",
-			"brief": "<p>Possible values of the field {@link DDS_DX10_FIELDS.RESOURCE_DIMENSION}</p>",
+			"brief": "",
 			"description": ""
 		},
 		{
@@ -58194,15 +61454,9 @@
 			"description": ""
 		},
 		{
-			"name": "DDS_DX10_FIELDS",
+			"name": "DDS_PF_FIELDS",
 			"type": "PropertyDoc",
-			"brief": "<p>DWORD offsets of the DDS_HEADER_DX10 fields.</p>",
-			"description": ""
-		},
-		{
-			"name": "DDS_FIELDS",
-			"type": "PropertyDoc",
-			"brief": "<p>DWORD offsets of the DDS file header fields (relative to file start).</p>",
+			"brief": "<p>DWORD offsets of the DDS PIXEL_FORMAT fields.</p>",
 			"description": ""
 		},
 		{
@@ -58230,27 +61484,15 @@
 			"description": ""
 		},
 		{
-			"name": "DXGI_TO_FORMAT",
+			"name": "FILE_IDENTIFIER",
 			"type": "PropertyDoc",
-			"brief": "<p>Maps {@link DXGI_FORMAT} to types/internal-formats (see {@link PIXI.TYPES}, {@link PIXI.INTERNAL_FORMATS})</p>",
+			"brief": "<p>The 12-byte KTX file identifier</p>",
 			"description": ""
 		},
 		{
-			"name": "ENDIANNESS",
+			"name": "FOURCC_TO_FORMAT",
 			"type": "PropertyDoc",
-			"brief": "<p>The value stored in the &quot;endiannness&quot; field.</p>",
-			"description": ""
-		},
-		{
-			"name": "FILE_HEADER_SIZE",
-			"type": "PropertyDoc",
-			"brief": "<p>Byte size of the file header fields in {@code KTX_FIELDS}</p>",
-			"description": ""
-		},
-		{
-			"name": "FORMATS_TO_COMPONENTS",
-			"type": "PropertyDoc",
-			"brief": "<p>Number of components in each {@link PIXI.FORMATS}</p>",
+			"brief": "<p>Maps <code>FOURCC_*</code> formats to internal formats (see {@link PIXI.INTERNAL_FORMATS}).</p>",
 			"description": ""
 		},
 		{
@@ -58269,6 +61511,12 @@
 			"name": "INTERNAL_FORMAT_TO_BASIS_FORMAT",
 			"type": "PropertyDoc",
 			"brief": "<p>Maps {@link PIXI.INTERNAL_FORMATS} to {@link BASIS_FORMATS}</p>",
+			"description": ""
+		},
+		{
+			"name": "KTX_FIELDS",
+			"type": "PropertyDoc",
+			"brief": "<p>Byte offsets of the KTX file header fields</p>",
 			"description": ""
 		},
 		{
@@ -58298,6 +61546,18 @@
 					"description": ""
 				}
 			]
+		},
+		{
+			"name": "TYPES_TO_BYTES_PER_COMPONENT",
+			"type": "PropertyDoc",
+			"brief": "<p>Maps {@link PIXI.TYPES} to the bytes taken per component, excluding those ones that are bit-fields.</p>",
+			"description": ""
+		},
+		{
+			"name": "TYPES_TO_BYTES_PER_PIXEL",
+			"type": "PropertyDoc",
+			"brief": "<p>Number of bytes per pixel in bit-field types in {@link PIXI.TYPES}</p>",
+			"description": ""
 		},
 		{
 			"name": "buildRectangle",
@@ -58470,6 +61730,20 @@
 			]
 		},
 		{
+			"name": "Boundable",
+			"type": "InterfaceDoc",
+			"brief": "<p>An object that can be represented by an axis-aligned bounding box</p>",
+			"description": "",
+			"members": [
+				{
+					"name": "getBounds",
+					"type": "MethodDoc",
+					"brief": "",
+					"description": ""
+				}
+			]
+		},
+		{
 			"name": "buildDashedLine",
 			"type": "FunctionDoc",
 			"brief": "",
@@ -58560,9 +61834,28 @@
 			"description": ""
 		},
 		{
+			"name": "ICompressedTextureResourceOptions",
+			"type": "InterfaceDoc",
+			"brief": "",
+			"description": ""
+		},
+		{
 			"name": "ICubeResourceOptions",
 			"type": "InterfaceDoc",
 			"brief": "<p>Constructor options for CubeResource</p>",
+			"description": ""
+		},
+		{
+			"name": "ICullOptions",
+			"type": "InterfaceDoc",
+			"access": "public",
+			"brief": "<p>The culling options for {@code Cull}</p>",
+			"description": ""
+		},
+		{
+			"name": "IDoublyLinkedListNode",
+			"type": "InterfaceDoc",
+			"brief": "<p>A node in a doubly linked-list data structure.</p>",
 			"description": ""
 		},
 		{
@@ -58576,6 +61869,20 @@
 			"type": "InterfaceDoc",
 			"brief": "<p>Batch element computed from Graphics geometry</p>",
 			"description": ""
+		},
+		{
+			"name": "ILinkedListNode",
+			"type": "InterfaceDoc",
+			"brief": "<p>A node in a linked-list data-structure.</p>",
+			"description": "",
+			"members": [
+				{
+					"name": "next",
+					"type": "PropertyDoc",
+					"brief": "<p>The next node in the linked-list.</p>",
+					"description": ""
+				}
+			]
 		},
 		{
 			"name": "ILinkedListNode",
@@ -58626,6 +61933,20 @@
 		},
 		{
 			"name": "IObjectPoolOptions",
+			"type": "InterfaceDoc",
+			"access": "public",
+			"brief": "",
+			"description": ""
+		},
+		{
+			"name": "IObjectPoolOptions",
+			"type": "InterfaceDoc",
+			"access": "public",
+			"brief": "",
+			"description": ""
+		},
+		{
+			"name": "IOooRendererOptions",
 			"type": "InterfaceDoc",
 			"access": "public",
 			"brief": "",
@@ -58791,12 +62112,6 @@
 					"description": ""
 				}
 			]
-		},
-		{
-			"name": "registerCompressedTextures",
-			"type": "FunctionDoc",
-			"brief": "",
-			"description": "<p>Creates base-textures and textures for each compressed-texture resource and adds them into the global\ntexture cache. The first texture has two IDs - <code>${url}</code>, <code>${url}-1</code>; while the rest have an ID of the\nform <code>${url}-i</code>.</p>"
 		},
 		{
 			"name": "removeAllHandlers",

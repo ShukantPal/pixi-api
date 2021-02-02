@@ -1,13 +1,15 @@
 {
   "source": {
+    "include": [
+      "projects"
+    ],
     "includePattern": [
-      "projects/pixi.js/bundles/pixi.js/src/**/*.ts",
-      "projects/pixi.js/packages/*/src/**/*.ts",
-      "projects/pixi.js/packages/canvas/*/src/**/*.ts",
-      "projects/pixi.js/packages/filters/*/src/**/*.ts",
-      "projects/pixi-batch-renderer/packages/*/src/**/*.ts",
-      "projects/pixi-tilemap/src/**/*.ts",
-      "projects/pixi-essentials/packages/*/src/**/*.ts"
+      "\\.ts"
+    ],
+    "excludePattern": [
+      "node_modules",
+      "pixi-ui",
+      "pixi-filters"
     ]
   },
   "plugins": [
