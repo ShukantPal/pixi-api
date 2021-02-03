@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Test Template</title>
+
+    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "docs",
+      };
+    </script>
+    <script src="/docs/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="homepage">
+  
+    <div class="homepage__readme md">
+      <h1>@pixi-essentials/texture-allocator</h1>
+<p>This package implements a slab-based texture allocator. It aims to help improve texture batching efficiency by
+generating atlases on-the-fly. You can allocate and free texture space on demand. The following implementations
+are provided:</p>
+<ul>
+<li>TextureAllocator: This generic allocator issues texture that are not backed by any resource. You must handle
+resource management yourself.</li>
+<li>AtlasAllocator: This allocator can be used to issue image/canvas/bitmap- backed textures. Each image item is
+uploaded separately with a <code>texSubImage2D</code> call.</li>
+<li>CanvasTextureAllocator: This allocator creates texture slabs backed by a canvas. You can draw to that canvas
+(<code>texture.baseTexture.resource.source.getContext('2d')</code>) to draw each texture.</li>
+<li>RenderTextureAllocator: This allocator issues render-textures. Since you render directly into the render-texture,
+it requires no resource management.</li>
+</ul>
+<h2>Installation :package:</h2>
+<pre><code class="hljs language-bash">npm install @pixi-essentials/texture-allocator
+</code></pre>
+<h2>Usage :page_facing_up:</h2>
+<h3>AtlasAllocator</h3>
+<pre><code class="hljs language-ts"><span class="hljs-keyword">import</span> { AtlasAllocator } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pixi-essentials/texture-allocator&#x27;</span>;
+
+<span class="hljs-comment">// Create an atlas allocator</span>
+<span class="hljs-keyword">const</span> allocator = <span class="hljs-keyword">new</span> AtlasAllocator();
+
+<span class="hljs-comment">// Create an image-source</span>
+<span class="hljs-keyword">const</span> image = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&#x27;img&#x27;</span>);
+
+<span class="hljs-comment">// Load the image</span>
+image.src = <span class="hljs-string">&quot;example.com/example.jpg&quot;</span>;
+
+<span class="hljs-comment">// After the image loads, create the texture. You must do this *after* the image is loaded so you know the</span>
+<span class="hljs-comment">// width and height needed. Also, the atlas resource requires the image to be loaded; otherwise, it will</span>
+<span class="hljs-comment">// forget to re-upload once it does load.</span>
+image.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Find the dimensions of the texture. Make sure this is less than 2048x2048, otherwise the allocator</span>
+    <span class="hljs-comment">// will fail to issue a texture.</span>
+    <span class="hljs-keyword">const</span> { naturalWidth, naturalHeight } = image;
+
+    <span class="hljs-comment">// Allocate the texture. Edge padding is included by default.</span>
+    <span class="hljs-keyword">const</span> texture = allocator.allocate(naturalWidth, naturalHeight);
+
+    <span class="hljs-comment">// Use the texture as you&#x27;d like. It&#x27;s yours now!</span>
+
+    <span class="hljs-comment">// Free the texture once you&#x27;re done with it!</span>
+    allocate.free(texture);
+}
+</code></pre>
+<h3>CanvasTextureAllocator</h3>
+<pre><code class="hljs language-ts"><span class="hljs-keyword">import</span> { CanvasTextureAllocator } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pixi-essentials/texture-allocator&#x27;</span>;
+
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">type</span> { BaseImageResource, Texture } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pixi/core&#x27;</span>;
+
+<span class="hljs-comment">// Create a canvas-texture allocator</span>
+<span class="hljs-keyword">const</span> allocator = <span class="hljs-keyword">new</span> CanvasTextureAllocator();
+
+<span class="hljs-comment">// Allocate a texture</span>
+<span class="hljs-keyword">const</span> texture = allocator.allocate(<span class="hljs-number">256</span>, <span class="hljs-number">256</span>);
+
+<span class="hljs-comment">// This will draw our geometry into a texture</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">cacheGeometry</span>(<span class="hljs-params">texture: Texture</span>) </span>{
+    <span class="hljs-keyword">const</span> baseTexture = texture.baseTexture;
+    <span class="hljs-keyword">const</span> canvas = (baseTexture.resource <span class="hljs-keyword">as</span> BaseImageResource).source <span class="hljs-keyword">as</span> HTMLCanvasElement;
+    <span class="hljs-keyword">const</span> context = canvas.getContext(<span class="hljs-string">&#x27;2d&#x27;</span>);
+
+    <span class="hljs-keyword">const</span> frame = texture.frame;
+
+    <span class="hljs-comment">// Our geometry is just a rectangle, nothing silly :P</span>
+    context.fillStyle = <span class="hljs-string">&#x27;green&#x27;</span>;
+    context.fillRect(frame.left, frame.top, frame.width, frame.height);
+}
+
+<span class="hljs-comment">// Draw stuff into the texture</span>
+cacheGeometry(texture);
+
+<span class="hljs-comment">// Do stuff with the texture, i.e. add a sprite to your scene</span>
+</code></pre>
+<h3>RenderTextureAllocator</h3>
+<pre><code class="hljs language-ts"><span class="hljs-keyword">import</span> { Graphics } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pixi/graphics&#x27;</span>;
+<span class="hljs-keyword">import</span> { RenderTextureAllocator } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pixi-essentials/texture-allocator&#x27;</span>;
+
+<span class="hljs-comment">// Create a render-texture allocator</span>
+<span class="hljs-keyword">const</span> allocator = <span class="hljs-keyword">new</span> RenderTextureAllocator();
+
+<span class="hljs-comment">// Create something complicated. <span class="hljs-doctag">NOTE:</span> This example is not complicated and is not recommended for caching</span>
+<span class="hljs-comment">// into a texture.</span>
+<span class="hljs-keyword">const</span> complexGraphics = <span class="hljs-keyword">new</span> Graphics()
+    .beginFill(<span class="hljs-number">0xff</span>)
+    .drawCircle(<span class="hljs-number">150</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>)
+    .endFill();
+
+<span class="hljs-comment">// Allocate the texture</span>
+<span class="hljs-keyword">const</span> texture = allocator.allocate(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">250</span>, <span class="hljs-number">250</span>);
+
+<span class="hljs-comment">// Cache the graphics into this texture</span>
+renderer.render(complexGraphics, texture);
+
+<span class="hljs-comment">// Use the texture instead of the graphics, i.e. add a sprite to your scene</span>
+</code></pre>
+
+    </div>
+  
+  </div>
+</div>
+
+            <!-- footer in content -->
+          </div>
+        </div>
+      </article>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

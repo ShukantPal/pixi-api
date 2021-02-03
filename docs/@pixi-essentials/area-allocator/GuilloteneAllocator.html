@@ -1,0 +1,1488 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: GuilloteneAllocator</title>
+
+    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "docs",
+      };
+    </script>
+    <script src="/docs/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi-essentials/area-allocator
+        &gt;
+      
+      
+      <span>GuilloteneAllocator</span>
+    </div>
+    <h1 class="document__title">GuilloteneAllocator</h1>
+    
+<pre class="signature__container"><code class="signature">class GuilloteneAllocator
+implements AreaAllocator</code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"></div>
+
+    
+      
+    
+
+    
+
+<div class="members">
+  <h2 class="members__category">Summary</h2>
+  <hr />
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties from GuilloteneAllocator</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#height">height</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods from GuilloteneAllocator</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a> & AreaPtr
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#allocate">allocate(width: number, height: number, rect: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Allocates an area of the given <code>width</code> and <code>height</code>.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  AreaNode
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#findArea">findArea(aw: number, ah: number)</a>
+                </section>
+                <section>
+                  
+                    <p>Finds an area node with minimum width <code>aw</code> and minimum height <code>ah</code>.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  AreaNode
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#findAreaRecursive">findAreaRecursive(rootArea: AreaNode, aw: number, ah: number)</a>
+                </section>
+                <section>
+                  
+                    <p>The recursive implementation for AreaAllocator#findArea.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#free">free(areaPtr: AreaPtr)</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  AreaField
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#getAreaField">getAreaField(node: AreaNode)</a>
+                </section>
+                <section>
+                  
+                    <p>Returns the <a href=/docs/@pixi-essentials/area-allocator/Area.html>area</a> data for the node.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  AreaNode[]
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#getChildren">getChildren(node: AreaNode)</a>
+                </section>
+                <section>
+                  
+                    <p>Returns the children of the passed node, if any.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#getFrame">getFrame(node: AreaNode, rect: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Returns the rectangle covered by the area node.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  AreaNode
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#getParent">getParent(node: AreaNode)</a>
+                </section>
+                <section>
+                  
+                    <p>Returns the parent of the area node.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  boolean
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#hasChildren">hasChildren(node: AreaNode)</a>
+                </section>
+                <section>
+                  
+                    <p>Returns whether the given node has any children.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#merge">merge(area: AreaNode)</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  SPLIT_ORIENTATION
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#splitOrientation">splitOrientation(host: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, hole: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Returns the orientation of the primary split of host.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  AreaNode
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#splitPrimaryHorizontal">splitPrimaryHorizontal(area: AreaNode, areaFrame: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, holeFrame: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>)</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+
+  
+
+
+  
+
+</div>
+
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="height">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#height">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>height</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">height</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="allocate">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#allocate">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>allocate</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">allocate(width: number, height: number, rect: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>) → {<a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a> &amp; AreaPtr}</code></pre>
+
+
+  <div class="member__brief"><p>Allocates an area of the given <code>width</code> and <code>height</code>.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          width
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The width required for the allocated area.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          height
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The height required for the allocated area.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          rect
+        </td>
+        <td class="member-parameter__type">
+          <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>An optional <code>Rectangle</code> instance to put the resulting area frame into.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a> & AreaPtr
+        </td>
+        <td class="member-return__description"><p>The rectangle frame of the area allocated.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="findArea">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#findArea">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>findArea</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">findArea(aw: number, ah: number) → {AreaNode}</code></pre>
+
+
+  <div class="member__brief"><p>Finds an area node with minimum width <code>aw</code> and minimum height <code>ah</code>.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          aw
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          ah
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          AreaNode
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="findAreaRecursive">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#findAreaRecursive">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>findAreaRecursive</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">findAreaRecursive(rootArea: AreaNode, aw: number, ah: number) → {AreaNode}</code></pre>
+
+
+  <div class="member__brief"><p>The recursive implementation for AreaAllocator#findArea.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          rootArea
+        </td>
+        <td class="member-parameter__type">
+          AreaNode
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          aw
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          ah
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          AreaNode
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="free">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#free">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>free</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">free(areaPtr: AreaPtr) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Frees the area represented by the given area pointer. The original rectangle returned by
+<a href=/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#allocate>GuilloteneAllocator#allocate</a> included this pointer (the <code>__mem_area</code> property).</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          areaPtr
+        </td>
+        <td class="member-parameter__type">
+          AreaPtr
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getAreaField">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#getAreaField">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>getAreaField</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">getAreaField(node: AreaNode) → {AreaField}</code></pre>
+
+
+  <div class="member__brief"><p>Returns the <a href=/docs/@pixi-essentials/area-allocator/Area.html>area</a> data for the node.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          node
+        </td>
+        <td class="member-parameter__type">
+          AreaNode
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          AreaField
+        </td>
+        <td class="member-return__description"><p>The area data for the node.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getChildren">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#getChildren">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>getChildren</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">getChildren(node: AreaNode) → {AreaNode[]}</code></pre>
+
+
+  <div class="member__brief"><p>Returns the children of the passed node, if any.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          node
+        </td>
+        <td class="member-parameter__type">
+          AreaNode
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          AreaNode[]
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getFrame">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#getFrame">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>getFrame</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">getFrame(node: AreaNode, rect: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>) → {<a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Returns the rectangle covered by the area node.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          node
+        </td>
+        <td class="member-parameter__type">
+          AreaNode
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>The node whose covered rectangular area is needed.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          rect
+        </td>
+        <td class="member-parameter__type">
+          <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"><p>An optional <code>Rectangle</code> instance to put the data in.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        <td class="member-return__description"><p>The rectangle covered by <code>node</code>.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="getParent">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#getParent">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>getParent</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">getParent(node: AreaNode) → {AreaNode}</code></pre>
+
+
+  <div class="member__brief"><p>Returns the parent of the area node.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          node
+        </td>
+        <td class="member-parameter__type">
+          AreaNode
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          AreaNode
+        </td>
+        <td class="member-return__description"><p>The parent of <code>node</code></p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="hasChildren">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#hasChildren">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>hasChildren</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">hasChildren(node: AreaNode) → {boolean}</code></pre>
+
+
+  <div class="member__brief"><p>Returns whether the given node has any children.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          node
+        </td>
+        <td class="member-parameter__type">
+          AreaNode
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          boolean
+        </td>
+        <td class="member-return__description"><p>Whether the given node has any children.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="merge">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#merge">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>merge</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">merge(area: AreaNode) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          area
+        </td>
+        <td class="member-parameter__type">
+          AreaNode
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="splitOrientation">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#splitOrientation">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>splitOrientation</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">splitOrientation(host: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, hole: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>) → {SPLIT_ORIENTATION}</code></pre>
+
+
+  <div class="member__brief"><p>Returns the orientation of the primary split of host.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          host
+        </td>
+        <td class="member-parameter__type">
+          <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          hole
+        </td>
+        <td class="member-parameter__type">
+          <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          SPLIT_ORIENTATION
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="splitPrimaryHorizontal">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#splitPrimaryHorizontal">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>splitPrimaryHorizontal</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">splitPrimaryHorizontal(area: AreaNode, areaFrame: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, holeFrame: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>) → {AreaNode}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          area
+        </td>
+        <td class="member-parameter__type">
+          AreaNode
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          areaFrame
+        </td>
+        <td class="member-parameter__type">
+          <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          holeFrame
+        </td>
+        <td class="member-parameter__type">
+          <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          AreaNode
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+  <footer class="footer" id="footer-mount-point"></footer>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  <div class="page-members-explorer-category">
+    <section class="page-members-explorer-category__title">
+      Summary
+    </section>
+  </div>
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#height>height</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#allocate>allocate</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#findArea>findArea</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#findAreaRecursive>findAreaRecursive</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#free>free</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#getAreaField>getAreaField</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#getChildren>getChildren</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#getFrame>getFrame</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#getParent>getParent</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#hasChildren>hasChildren</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#merge>merge</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#splitOrientation>splitOrientation</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/area-allocator/GuilloteneAllocator.html#splitPrimaryHorizontal>splitPrimaryHorizontal</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+            <!-- footer in content -->
+          </div>
+        </div>
+      </article>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

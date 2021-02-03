@@ -64,7 +64,7 @@ events fired by a node:</p>
 <div class="member" id="constructor">
   
   
-<pre class="signature__container"><code class="signature">new SVGScene(content: SVGSVGElement) → {}</code></pre>
+<pre class="signature__container"><code class="signature">new SVGScene(content: SVGSVGElement, context: Partial) → {}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -79,7 +79,7 @@ events fired by a node:</p>
       <tr class="member-parameter-header">
         <th class="member-parameter-header__name">Name</th>
         <th class="member-parameter-header__type">Type</th>
-        
+        <th class="member-parameter-header__attributes">Attributes</th>
         
         <th class="member-parameter-header__description">Description</th>
       </tr>
@@ -92,9 +92,27 @@ events fired by a node:</p>
         <td class="member-parameter__type">
           SVGSVGElement
         </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
+        <td class="member-parameter__description"><p>The SVG node to render</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          context
+        </td>
+        <td class="member-parameter__type">
+          Partial
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
         
-        <td class="member-parameter__description"><p>the SVG node to render</p></td>
+        <td class="member-parameter__description"><p>This can be used to configure the scene</p></td>
       </tr>
     </tbody>
   </table>
@@ -206,6 +224,24 @@ events fired by a node:</p>
                   <a href="/docs/@pixi-essentials/svg/SVGScene.html#width">width</a>
                 </section>
                 <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/docs/@pixi-essentials/svg/SVGSceneContext.html>SVGSceneContext</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/svg/SVGScene.html#_context">protected _context</a>
+                </section>
+                <section>
+                  
+                    <p>The scene context</p>
                   
                 </section>
               </td>
@@ -376,7 +412,7 @@ events fired by a node:</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>
+                  <a href="/docs/@pixi-essentials/svg/PaintServer.html">PaintServer</a>
                 
               </td>
               <td>
@@ -1783,6 +1819,33 @@ the root element.</p></div>
 
   
     
+<div class="member" id="_context">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/svg/SVGScene.html#_context">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>_context</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">protected _context: <a href=/docs/@pixi-essentials/svg/SVGSceneContext.html>SVGSceneContext</a></code></pre>
+
+
+  <div class="member__brief"><p>The scene context</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
 <div class="member" id="_cull">
   
     <section class="member__title">
@@ -2202,7 +2265,7 @@ is not desired; otherwise, use <a href=/docs/@pixi-essentials/svg/SVGScene.html#
     </section>
   
   
-<pre class="signature__container"><code class="signature">createPaintServer(paintServer: SVGGradientElement) → {<a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>}</code></pre>
+<pre class="signature__container"><code class="signature">createPaintServer(paintServer: SVGGradientElement) → {<a href="/docs/@pixi-essentials/svg/PaintServer.html">PaintServer</a>}</code></pre>
 
 
   <div class="member__brief"><p>Creates a lazy paint texture for the paint server.</p></div>
@@ -2254,7 +2317,7 @@ is not desired; otherwise, use <a href=/docs/@pixi-essentials/svg/SVGScene.html#
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>
+          <a href="/docs/@pixi-essentials/svg/PaintServer.html">PaintServer</a>
         </td>
         <td class="member-return__description"></td>
       </tr>
@@ -3022,6 +3085,8 @@ attributes inherited from ancestor elements.</p></div>
 <div class="page-members-explorer-category">
   <section class="page-members-explorer-category__title">Protected Properties</section>
   <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/SVGScene.html#_context>_context</a></li>
     
       <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/SVGScene.html#_cull>_cull</a></li>
     

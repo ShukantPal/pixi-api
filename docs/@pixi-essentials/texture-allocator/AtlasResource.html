@@ -1,0 +1,831 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: AtlasResource</title>
+
+    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "docs",
+      };
+    </script>
+    <script src="/docs/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi-essentials/texture-allocator
+        &gt;
+      
+      
+      <span>AtlasResource</span>
+    </div>
+    <h1 class="document__title">AtlasResource</h1>
+    
+<pre class="signature__container"><code class="signature">class AtlasResource extends <a href="/docs/@pixi/core/PIXI/Resource.html">PIXI.Resource</a></code></pre>
+
+
+    <div class="document__brief"><p>An <code>AtlasResource</code> is used by <a href=/docs/@pixi-essentials/texture-allocator/AtlasAllocator.html>AtlasAllocator</a> to manage texture sources</p></div>
+    <div class="document__description"></div>
+
+    
+      
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new AtlasResource(width: number, height: number) → {}</code></pre>
+
+
+  <div class="member__brief"><p>Creates an atlas resource.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          width
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          height
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+
+    
+
+<div class="members">
+  <h2 class="members__category">Summary</h2>
+  <hr />
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties from AtlasResource</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  AtlasResourceItem[]
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/texture-allocator/AtlasResource.html#managedItems">managedItems</a>
+                </section>
+                <section>
+                  
+                    <p>The list of managed resources in the atlas.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods from AtlasResource</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  boolean
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/texture-allocator/AtlasResource.html#upload">upload(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, baseTexture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, glTexture: <a href="/docs/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Uploads the atlas.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/texture-allocator/AtlasResource.html#uploadItem">uploadItem(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, target: number, format: number, type: number, item: AtlasResourceItem)</a>
+                </section>
+                <section>
+                  
+                    <p>Uploads the atlas item to the GPU.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties inherited from Resource</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  boolean
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi/core/PIXI/Resource.html#destroyed">destroyed</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi/core/PIXI/Resource.html#height">height</a>
+                </section>
+                <section>
+                  
+                    <p>The height of the resource.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  boolean
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi/core/PIXI/Resource.html#valid">valid</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi/core/PIXI/Resource.html#width">width</a>
+                </section>
+                <section>
+                  
+                    <p>The width of the resource.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi/core/PIXI/Resource.html#_height">protected _height</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi/core/PIXI/Resource.html#_width">protected _width</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  boolean
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi/core/PIXI/Resource.html#internal">protected internal</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods inherited from Resource</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi/core/PIXI/Resource.html#bind">bind(baseTexture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Bind to a parent BaseTexture</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi/core/PIXI/Resource.html#destroy">destroy()</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi/core/PIXI/Resource.html#resize">resize(width: number, height: number)</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  boolean
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi/core/PIXI/Resource.html#style">style(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, baseTexture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, glTexture: <a href="/docs/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Set the style, optional to override</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi/core/PIXI/Resource.html#unbind">unbind(baseTexture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Unbind to a parent BaseTexture</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi/core/PIXI/Resource.html#update">update()</a>
+                </section>
+                <section>
+                  
+                    <p>Has been updated trigger event</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi/core/PIXI/Resource.html#dispose">protected dispose()</a>
+                </section>
+                <section>
+                  
+                    <p>Clean up anything, this happens when destroying is ready.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  Promise&lt;void&gt;
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi/core/PIXI/Resource.html#load">protected load()</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+</div>
+
+
+    
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="managedItems">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/texture-allocator/AtlasResource.html#managedItems">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>managedItems</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">managedItems: AtlasResourceItem[]</code></pre>
+
+
+  <div class="member__brief"><p>The list of managed resources in the atlas.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="upload">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/texture-allocator/AtlasResource.html#upload">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>upload</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">upload(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, baseTexture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, glTexture: <a href="/docs/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>) → {boolean}</code></pre>
+
+
+  <div class="member__brief"><p>Uploads the atlas.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          baseTexture
+        </td>
+        <td class="member-parameter__type">
+          <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          glTexture
+        </td>
+        <td class="member-parameter__type">
+          <a href="/docs/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          boolean
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="uploadItem">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/texture-allocator/AtlasResource.html#uploadItem">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>uploadItem</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">uploadItem(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, target: number, format: number, type: number, item: AtlasResourceItem) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Uploads the atlas item to the GPU.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer holding the WebGL context.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          target
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The binding point of the base-texture.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          format
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The format of the base-texture.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          type
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The type of the base-texture data.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          item
+        </td>
+        <td class="member-parameter__type">
+          AtlasResourceItem
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The item to upload.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+  <footer class="footer" id="footer-mount-point"></footer>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  <div class="page-members-explorer-category">
+    <section class="page-members-explorer-category__title">
+      Summary
+    </section>
+  </div>
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/texture-allocator/AtlasResource.html#managedItems>managedItems</a></li>
+    
+  </ul>
+</div>
+
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/texture-allocator/AtlasResource.html#upload>upload</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/texture-allocator/AtlasResource.html#uploadItem>uploadItem</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+            <!-- footer in content -->
+          </div>
+        </div>
+      </article>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

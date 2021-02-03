@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>webdoc: BatchGeometryFactory</title>
+    <title>webdoc: TextureAllocator</title>
 
     <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
@@ -32,36 +32,20 @@
   <div class="document">
     <div class="document__breadcrumb">
       
-        pixi-batch-renderer
+        @pixi-essentials/texture-allocator
         &gt;
       
       
-        <a href=/docs/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a> &gt; <a href=/docs/pixi-batch-renderer/PIXI/brend.html>brend</a>
-        &gt;
-      
-      <span>BatchGeometryFactory</span>
+      <span>TextureAllocator</span>
     </div>
-    <h1 class="document__title">PIXI.brend.BatchGeometryFactory</h1>
+    <h1 class="document__title">TextureAllocator</h1>
     
-<pre class="signature__container"><code class="signature">class BatchGeometryFactory extends <a href="/docs/pixi-batch-renderer/IBatchGeometryFactory.html">IBatchGeometryFactory</a>
-implements <a href="/docs/pixi-batch-renderer/PIXI/brend/IBatchGeometryFactory.html">PIXI.brend.IBatchGeometryFactory</a></code></pre>
+<pre class="signature__container"><code class="signature">class TextureAllocator</code></pre>
 
 
     <div class="document__brief"></div>
-    <div class="document__description"><p>Factory class that generates the geometry for a whole batch by feeding on
-the individual display-object geometries. This factory is reusable, i.e. you
-can build another geometry after a <a href="global.html#build">build</a> call.</p>
-<p><strong>Optimizations:</strong> To speed up geometry generation, this compiles an optimized
-packing function that pushes attributes without looping through the attribute
-redirects.</p>
-<p><strong>Default Format:</strong> If you are not using a custom draw-call issuer, then
-the batch geometry must have an interleaved attribute data buffer and one
-index buffer.</p>
-<p><strong>Customization:</strong> If you want to customize the batch geometry, then you must
-also define your draw call issuer.</p>
-<p><strong>inBatchID Support</strong>: If you specified an <code>inBatchID</code> attribute in the batch-renderer,
-then this will support it automatically. The aggregate-uniforms pipeline doesn't need a custom
-geometry factory.</p></div>
+    <div class="document__description"><p>The texture allocator dynamically manages space on base-texture slabs. It can be used to generate
+atlases on demand, which improve batching efficiency.</p></div>
 
     
       
@@ -74,7 +58,7 @@ geometry factory.</p></div>
 <div class="member" id="constructor">
   
   
-<pre class="signature__container"><code class="signature">new PIXI.brend.BatchGeometryFactory(renderer: <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html">PIXI.brend.BatchRenderer</a>) → {}</code></pre>
+<pre class="signature__container"><code class="signature">new TextureAllocator(slabWidth, slabHeight) → {}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -97,14 +81,24 @@ geometry factory.</p></div>
     <tbody class="member-parameters__body">
       <tr class="member-parameter">
         <td class="member-parameter__name">
-          renderer
+          slabWidth
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html">PIXI.brend.BatchRenderer</a>
+          
         </td>
         
         
-        <td class="member-parameter__description"></td>
+        <td class="member-parameter__description"><p>The width of base-texture slabs. This should be at most 2048.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          slabHeight
+        </td>
+        <td class="member-parameter__type">
+          
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The height of base-texture slabs. This should be at most 2048.</p></td>
       </tr>
     </tbody>
   </table>
@@ -135,7 +129,7 @@ geometry factory.</p></div>
         <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
         <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
-      <h3 class="members__subcategory">Properties from BatchGeometryFactory</h3>
+      <h3 class="members__subcategory">Properties from TextureAllocator</h3>
     </section>
     <div class="accordion__content table-wrapper">
       <table class="summary">
@@ -144,28 +138,10 @@ geometry factory.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/core/PIXI/Geometry.html>PIXI.Geometry</a>
-                
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#_geometryPool">protected _geometryPool</a>
-                </section>
-                <section>
-                  
-                    <p>Batch geometries that can be reused.</p>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#_indexCountProperty">protected _indexCountProperty</a>
+                  <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#maxHeight">maxHeight</a>
                 </section>
                 <section>
                   
@@ -176,14 +152,52 @@ geometry factory.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  PIXI.brend#IGeometryMerger
+                  number
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#geometryMerger">protected geometryMerger</a>
+                  <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#slabHeight">slabHeight</a>
                 </section>
                 <section>
+                  
+                    <p>The height of texture slabs.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#slabWidth">slabWidth</a>
+                </section>
+                <section>
+                  
+                    <p>The width of texture slabs.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  TextureSlab[]
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#textureSlabs">protected textureSlabs</a>
+                </section>
+                <section>
+                  
+                    <p>The list of base-textures that are used to allocate texture space.</p>
                   
                 </section>
               </td>
@@ -205,7 +219,7 @@ geometry factory.</p></div>
         <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
         <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
-      <h3 class="members__subcategory">Methods from BatchGeometryFactory</h3>
+      <h3 class="members__subcategory">Methods from TextureAllocator</h3>
     </section>
     <div class="accordion__content table-wrapper">
       <table class="summary">
@@ -214,12 +228,64 @@ geometry factory.</p></div>
             <tr>
               <td class="summary__signature">
                 
+                  T
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#allocate">allocate(width: number, height: number, padding)</a>
+                </section>
+                <section>
+                  
+                    <p>Allocates a texture from this allocator.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  TextureSlab
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#createSlab">createSlab()</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  T
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#createTexture">createTexture(baseTexture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, frame: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Creates a texture on the given base-texture at <code>frame</code>.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
                   void
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#append">append(targetObject: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, batch: number)</a>
+                  <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#free">free(texture: T)</a>
                 </section>
                 <section>
                   
@@ -230,82 +296,16 @@ geometry factory.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/core/PIXI/Geometry.html">PIXI.Geometry</a>
+                  T
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#build">build()</a>
+                  <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#issueTexture">issueTexture(slab: TextureSlab, width: number, height: number, padding)</a>
                 </section>
                 <section>
                   
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  void
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#init">init(verticesBatched: number, indiciesBatched: number)</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  void
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#release">release(geom: <a href="/docs/@pixi/core/PIXI/Geometry.html">PIXI.Geometry</a>)</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  <a href="/docs/@pixi/core/PIXI/ViewableBuffer.html">PIXI.ViewableBuffer</a>
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#getAttributeBuffer">protected getAttributeBuffer(size: number)</a>
-                </section>
-                <section>
-                  
-                    <p>Allocates an attribute buffer with sufficient capacity to hold <code>size</code> elements.</p>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  Uint16Array
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#getIndexBuffer">protected getIndexBuffer(size: number)</a>
-                </section>
-                <section>
-                  
-                    <p>Allocates an index buffer (<code>Uint16Array</code>) with sufficient capacity to hold <code>size</code> indices.</p>
+                    <p>Issues a texture from the given texture slab, if possible.</p>
                   
                 </section>
               </td>
@@ -320,19 +320,103 @@ geometry factory.</p></div>
   
 
 
-  
-  
 
   
 
 
-  
-  
 
 </div>
 
 
     
+<div class="members">
+  <h2 class="members__category">Public Properties</h2>
+  <hr />
+
+  
+    
+<div class="member" id="maxHeight">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#maxHeight">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>maxHeight</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">maxHeight</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="slabHeight">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#slabHeight">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>slabHeight</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">slabHeight: number</code></pre>
+
+
+  <div class="member__brief"><p>The height of texture slabs.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+    
+<div class="member" id="slabWidth">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#slabWidth">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>slabWidth</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">slabWidth: number</code></pre>
+
+
+  <div class="member__brief"><p>The width of texture slabs.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
     
 <div class="members">
   <h2 class="members__category">Protected Properties</h2>
@@ -340,83 +424,25 @@ geometry factory.</p></div>
 
   
     
-<div class="member" id="_geometryPool">
+<div class="member" id="textureSlabs">
   
     <section class="member__title">
-      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#_geometryPool">
+      <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#textureSlabs">
         <img
           src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
       </a>
-      <span>_geometryPool</span>
+      <span>textureSlabs</span>
     </section>
   
   
-<pre class="signature__container"><code class="signature">protected _geometryPool: <a href=/docs/@pixi/core/PIXI/Geometry.html>PIXI.Geometry</a></code></pre>
+<pre class="signature__container"><code class="signature">protected textureSlabs: TextureSlab[]</code></pre>
 
 
-  <div class="member__brief"><p>Batch geometries that can be reused.</p></div>
+  <div class="member__brief"><p>The list of base-textures that are used to allocate texture space.</p></div>
   <div class="member__description"></div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="_indexCountProperty">
-  
-    <section class="member__title">
-      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#_indexCountProperty">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>_indexCountProperty</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">protected _indexCountProperty</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="geometryMerger">
-  
-    <section class="member__title">
-      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#geometryMerger">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>geometryMerger</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">protected geometryMerger: PIXI.brend#IGeometryMerger</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>This lazy getter returns the geometry-merger function. This function
-takes one argument - the display-object to be appended to the batch -
-and pushes its geometry to the batch geometry.</p>
-<p>You can overwrite this property with a custom geometry-merger function
-if customizing <code>PIXI.brend.BatchGeometryFactory</code>.</p></div>
 
   
 
@@ -433,27 +459,30 @@ if customizing <code>PIXI.brend.BatchGeometryFactory</code>.</p></div>
 
   
     
-<div class="member" id="append">
+<div class="member" id="allocate">
   
     <section class="member__title">
-      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#append">
+      <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#allocate">
         <img
           src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
       </a>
-      <span>append</span>
+      <span>allocate</span>
     </section>
   
   
-<pre class="signature__container"><code class="signature">append(targetObject: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, batch: number) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">allocate(width: number, height: number, padding) → {T}</code></pre>
 
 
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Append's the display-object geometry to this batch's geometry. You must override
-this you need to &quot;modify&quot; the geometry of the display-object before merging into
-the composite geometry (for example, adding an ID to a special uniform)</p></div>
+  <div class="member__brief"><p>Allocates a texture from this allocator.</p></div>
+  <div class="member__description"><p>If its existing slab pool has enough space, the texture is issued from one. Otherwise,
+a new slab is created and the texture is issued from it. However, if the requested
+dimensions are larger than slabs themselves, then <code>null</code> is always returned.</p>
+<p>To upload a texture source, you will have to create an atlas-managing Resource
+yourself on the base-texture. The <a href=/docs/@pixi-essentials/texture-allocator/AtlasAllocator.html>AtlasAllocator</a> does this for you, while the
+<a href=/docs/@pixi-essentials/texture-allocator/CanvasTextureAllocator.html>CanvasTextureAllocator</a> can be used to draw on a canvas-based atlas.</p></div>
 
   
     
@@ -472,172 +501,34 @@ the composite geometry (for example, adding an ID to a special uniform)</p></div
     <tbody class="member-parameters__body">
       <tr class="member-parameter">
         <td class="member-parameter__name">
-          targetObject
+          width
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+          number
         </td>
         
         
-        <td class="member-parameter__description"></td>
+        <td class="member-parameter__description"><p>The width of the requested texture.</p></td>
       </tr><tr class="member-parameter">
         <td class="member-parameter__name">
-          batch
+          height
         </td>
         <td class="member-parameter__type">
           number
         </td>
         
         
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          void
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="build">
-  
-    <section class="member__title">
-      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#build">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>build</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">build() → {<a href="/docs/@pixi/core/PIXI/Geometry.html">PIXI.Geometry</a>}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          <a href="/docs/@pixi/core/PIXI/Geometry.html">PIXI.Geometry</a>
-        </td>
-        <td class="member-return__description"><p>the generated batch geometry</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="init">
-  
-    <section class="member__title">
-      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#init">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>init</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">init(verticesBatched: number, indiciesBatched: number) → {void}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Ensures this factory has enough space to buffer the given number of vertices
-and indices. This should be called before feeding display-objects from the
-batch.</p></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        <th class="member-parameter-header__attributes">Attributes</th>
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          verticesBatched
-        </td>
-        <td class="member-parameter__type">
-          number
-        </td>
-        <td class="member-parameter__attributes">
-          
-          
-          
-        </td>
-        
-        <td class="member-parameter__description"></td>
+        <td class="member-parameter__description"><p>The height of the requested texture.</p></td>
       </tr><tr class="member-parameter">
         <td class="member-parameter__name">
-          indiciesBatched
+          padding
         </td>
         <td class="member-parameter__type">
-          number
-        </td>
-        <td class="member-parameter__attributes">
-          <p>&lt;optional&gt;</p>
-          
           
         </td>
         
-        <td class="member-parameter__description"></td>
+        
+        <td class="member-parameter__description"><p>The padding requested around the texture, to prevent bleeding.</p></td>
       </tr>
     </tbody>
   </table>
@@ -659,9 +550,9 @@ batch.</p></div>
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          void
+          T
         </td>
-        <td class="member-return__description"></td>
+        <td class="member-return__description"><p>The allocated texture, if successful; otherwise, <code>null</code>.</p></td>
       </tr>
     </tbody>
   </table>
@@ -672,24 +563,75 @@ batch.</p></div>
 
   
     
-<div class="member" id="release">
+<div class="member" id="createSlab">
   
     <section class="member__title">
-      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#release">
+      <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#createSlab">
         <img
           src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
       </a>
-      <span>release</span>
+      <span>createSlab</span>
     </section>
   
   
-<pre class="signature__container"><code class="signature">release(geom: <a href="/docs/@pixi/core/PIXI/Geometry.html">PIXI.Geometry</a>) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">createSlab() → {TextureSlab}</code></pre>
 
 
   <div class="member__brief"></div>
+  <div class="member__description"><p>Creates a texture slab. The slab's base-texture is not backed by any resource. You
+will have to manage that yourself. See <a href=/docs/@pixi-essentials/texture-allocator/AtlasAllocator.html>AtlasAllocator</a> or <a href=/docs/@pixi-essentials/texture-allocator/CanvasTextureAllocator.html>CanvasTextureAllocator</a>
+for better resource semantics.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          TextureSlab
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="createTexture">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#createTexture">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>createTexture</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">createTexture(baseTexture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, frame: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>) → {T}</code></pre>
+
+
+  <div class="member__brief"><p>Creates a texture on the given base-texture at <code>frame</code>.</p></div>
   <div class="member__description"></div>
 
   
@@ -709,15 +651,104 @@ batch.</p></div>
     <tbody class="member-parameters__body">
       <tr class="member-parameter">
         <td class="member-parameter__name">
-          geom
+          baseTexture
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/Geometry.html">PIXI.Geometry</a>
+          <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
         </td>
         
         
-        <td class="member-parameter__description"><p>releases back the geometry to be reused. It is expected
-that it is not used externally again.</p></td>
+        <td class="member-parameter__description"><p>The base texture that will hold the texture's space.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          frame
+        </td>
+        <td class="member-parameter__type">
+          <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The frame in which the texture will be stored.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          T
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="free">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#free">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>free</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">free(texture: T) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Frees the texture and reclaims its space. It is assumed you will not use it again, and have
+destroyed any resource uploading its data.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          texture
+        </td>
+        <td class="member-parameter__type">
+          T
+        </td>
+        
+        
+        <td class="member-parameter__description"></td>
       </tr>
     </tbody>
   </table>
@@ -751,33 +782,25 @@ that it is not used externally again.</p></td>
 </div>
 
   
-</div>
-
     
-<div class="members">
-  <h2 class="members__category">Protected Methods</h2>
-  <hr />
-
-  
-    
-<div class="member" id="getAttributeBuffer">
+<div class="member" id="issueTexture">
   
     <section class="member__title">
-      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#getAttributeBuffer">
+      <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#issueTexture">
         <img
           src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
       </a>
-      <span>getAttributeBuffer</span>
+      <span>issueTexture</span>
     </section>
   
   
-<pre class="signature__container"><code class="signature">protected getAttributeBuffer(size: number) → {<a href="/docs/@pixi/core/PIXI/ViewableBuffer.html">PIXI.ViewableBuffer</a>}</code></pre>
+<pre class="signature__container"><code class="signature">issueTexture(slab: TextureSlab, width: number, height: number, padding) → {T}</code></pre>
 
 
-  <div class="member__brief"><p>Allocates an attribute buffer with sufficient capacity to hold <code>size</code> elements.</p></div>
+  <div class="member__brief"><p>Issues a texture from the given texture slab, if possible.</p></div>
   <div class="member__description"></div>
 
   
@@ -797,14 +820,44 @@ that it is not used externally again.</p></td>
     <tbody class="member-parameters__body">
       <tr class="member-parameter">
         <td class="member-parameter__name">
-          size
+          slab
+        </td>
+        <td class="member-parameter__type">
+          TextureSlab
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The texture slab to allocate frame.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          width
         </td>
         <td class="member-parameter__type">
           number
         </td>
         
         
-        <td class="member-parameter__description"></td>
+        <td class="member-parameter__description"><p>The width of the requested texture.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          height
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The height of the requested texture.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          padding
+        </td>
+        <td class="member-parameter__type">
+          
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>Padding required around the texture.</p></td>
       </tr>
     </tbody>
   </table>
@@ -826,88 +879,9 @@ that it is not used externally again.</p></td>
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/docs/@pixi/core/PIXI/ViewableBuffer.html">PIXI.ViewableBuffer</a>
+          T
         </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="getIndexBuffer">
-  
-    <section class="member__title">
-      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#getIndexBuffer">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>getIndexBuffer</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">protected getIndexBuffer(size: number) → {Uint16Array}</code></pre>
-
-
-  <div class="member__brief"><p>Allocates an index buffer (<code>Uint16Array</code>) with sufficient capacity to hold <code>size</code> indices.</p></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          size
-        </td>
-        <td class="member-parameter__type">
-          number
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          Uint16Array
-        </td>
-        <td class="member-return__description"></td>
+        <td class="member-return__description"><p>The issued texture, if successful; otherwise, <code>null</code>.</p></td>
       </tr>
     </tbody>
   </table>
@@ -919,6 +893,7 @@ that it is not used externally again.</p></td>
   
 </div>
 
+    
   </div>
   <footer class="footer" id="footer-mount-point"></footer>
 </div>
@@ -931,17 +906,27 @@ that it is not used externally again.</p></td>
     </section>
   </div>
   
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Properties</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#maxHeight>maxHeight</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#slabHeight>slabHeight</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#slabWidth>slabWidth</a></li>
+    
+  </ul>
+</div>
+
   
 
 <div class="page-members-explorer-category">
   <section class="page-members-explorer-category__title">Protected Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#_geometryPool>_geometryPool</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#_indexCountProperty>_indexCountProperty</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#geometryMerger>geometryMerger</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#textureSlabs>textureSlabs</a></li>
     
   </ul>
 </div>
@@ -952,30 +937,20 @@ that it is not used externally again.</p></td>
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#append>append</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#allocate>allocate</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#build>build</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#createSlab>createSlab</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#init>init</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#createTexture>createTexture</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#release>release</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#free>free</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#issueTexture>issueTexture</a></li>
     
   </ul>
 </div>
 
   
-
-<div class="page-members-explorer-category">
-  <section class="page-members-explorer-category__title">Protected Methods</section>
-  <ul class="page-members-explorer-category__items">
-    
-      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#getAttributeBuffer>getAttributeBuffer</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html#getIndexBuffer>getIndexBuffer</a></li>
-    
-  </ul>
-</div>
-
 </nav>
 
 
@@ -985,6 +960,10 @@ that it is not used externally again.</p></td>
         </div>
       </article>
       <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>
+/script>
     </body>
   </div>
 </html>

@@ -58,7 +58,7 @@ can run it on the <code>prerender</code> event fired by the renderer.</p></div>
 <div class="member" id="constructor">
   
   
-<pre class="signature__container"><code class="signature">new Cull(options) → {}</code></pre>
+<pre class="signature__container"><code class="signature">new Cull(options: Partial) → {}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -84,10 +84,10 @@ can run it on the <code>prerender</code> event fired by the renderer.</p></div>
           options
         </td>
         <td class="member-parameter__type">
-          
+          Partial
         </td>
         <td class="member-parameter__attributes">
-          
+          <p>&lt;optional&gt;</p>
           
           
         </td>
@@ -231,7 +231,7 @@ its culling state. It should be one of <code>renderable</code>, <code>visible</c
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/cull/Cull.html#cull">cull(rect: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, skipUpdate)</a>
+                  <a href="/docs/@pixi-essentials/cull/Cull.html#cull">cull(rect: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, skipUpdate: boolean)</a>
                 </section>
                 <section>
                   
@@ -576,7 +576,7 @@ its culling state. It should be one of <code>renderable</code>, <code>visible</c
     </section>
   
   
-<pre class="signature__container"><code class="signature">cull(rect: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, skipUpdate) → {this}</code></pre>
+<pre class="signature__container"><code class="signature">cull(rect: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, skipUpdate: boolean) → {this}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -591,7 +591,7 @@ its culling state. It should be one of <code>renderable</code>, <code>visible</c
       <tr class="member-parameter-header">
         <th class="member-parameter-header__name">Name</th>
         <th class="member-parameter-header__type">Type</th>
-        
+        <th class="member-parameter-header__attributes">Attributes</th>
         
         <th class="member-parameter-header__description">Description</th>
       </tr>
@@ -604,7 +604,11 @@ its culling state. It should be one of <code>renderable</code>, <code>visible</c
         <td class="member-parameter__type">
           <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
         </td>
-        
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
         <td class="member-parameter__description"><p>the rectangle outside of which display-objects should be culled</p></td>
       </tr><tr class="member-parameter">
@@ -612,9 +616,13 @@ its culling state. It should be one of <code>renderable</code>, <code>visible</c
           skipUpdate
         </td>
         <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
           
         </td>
-        
         
         <td class="member-parameter__description"><p>whether to skip unculling, transform update, bounds calculation. It is
 highly recommended you enable this by calling <em>this.uncull()</em> and <em>root.getBounds(false)</em> manually
@@ -1089,24 +1097,6 @@ is why it is recommended to one of <code>visible</code> or <code>renderable</cod
       <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/cull/Cull.html#uncull>uncull</a></li>
     
       <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/cull/Cull.html#uncullRecursive>uncullRecursive</a></li>
-    
-  </ul>
-</div>
-
-  
-</nav>
-
-
-
-            <!-- footer in content -->
-          </div>
-        </div>
-      </article>
-      <script src="scripts/linenumber.js"> </script>
-    </body>
-  </div>
-</html>
-lass="page-members-explorer__item"><a href=/docs/@pixi-essentials/cull/Cull.html#uncullRecursive>uncullRecursive</a></li>
     
   </ul>
 </div>

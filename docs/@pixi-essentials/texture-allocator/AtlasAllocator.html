@@ -1,0 +1,629 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: AtlasAllocator</title>
+
+    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "docs",
+      };
+    </script>
+    <script src="/docs/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="document">
+    <div class="document__breadcrumb">
+      
+        @pixi-essentials/texture-allocator
+        &gt;
+      
+      
+      <span>AtlasAllocator</span>
+    </div>
+    <h1 class="document__title">AtlasAllocator</h1>
+    
+<pre class="signature__container"><code class="signature">class AtlasAllocator extends <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html">TextureAllocator</a></code></pre>
+
+
+    <div class="document__brief"></div>
+    <div class="document__description"><p>This texture allocator auto-manages the base-texture with an <a href=/docs/@pixi-essentials/texture-allocator/AtlasResource.html>AtlasResource</a>. You can also
+pass a texture source to <code>allocate</code>, mimicing Texture.from functionality.</p></div>
+
+    
+      
+    
+
+    
+
+<div class="members">
+  <h2 class="members__category">Summary</h2>
+  <hr />
+  
+
+
+  
+
+  
+
+
+  
+  <div class="accordion accordion-active">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods from AtlasAllocator</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/texture-allocator/AtlasAllocator.html#allocate">allocate(width: number, height: number, padding: number | AtlasResourceSource, source: AtlasResourceSource)</a>
+                </section>
+                <section>
+                  
+                    <p>Allocates a texture backed by the given atlas source, with the given padding.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/texture-allocator/AtlasAllocator.html#allocate">allocate(width: number, height: number, source: AtlasResourceSource)</a>
+                </section>
+                <section>
+                  
+                    <p>Allocates a texture backed by the given source, with default padding.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  TextureSlab
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/texture-allocator/AtlasAllocator.html#createSlab">createSlab()</a>
+                </section>
+                <section>
+                  
+                    <p>Creates a texture slab backed by an <a href=/docs/@pixi-essentials/texture-allocator/AtlasResource.html>AtlasResource</a>.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties inherited from TextureAllocator</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#slabHeight">slabHeight</a>
+                </section>
+                <section>
+                  
+                    <p>The height of texture slabs.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#slabWidth">slabWidth</a>
+                </section>
+                <section>
+                  
+                    <p>The width of texture slabs.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  TextureSlab[]
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#textureSlabs">protected textureSlabs</a>
+                </section>
+                <section>
+                  
+                    <p>The list of base-textures that are used to allocate texture space.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+
+
+  
+  <div class="accordion">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods inherited from TextureAllocator</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  T
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#createTexture">createTexture(baseTexture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, frame: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Creates a texture on the given base-texture at <code>frame</code>.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#free">free(texture: T)</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  T
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi-essentials/texture-allocator/TextureAllocator.html#issueTexture">issueTexture(slab: TextureSlab, width: number, height: number, padding: number)</a>
+                </section>
+                <section>
+                  
+                    <p>Issues a texture from the given texture slab, if possible.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+</div>
+
+
+    
+    
+    
+<div class="members">
+  <h2 class="members__category">Public Methods</h2>
+  <hr />
+
+  
+    
+<div class="member" id="allocate">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/texture-allocator/AtlasAllocator.html#allocate">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>allocate</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">allocate(width: number, height: number, padding: number | AtlasResourceSource, source: AtlasResourceSource) → {<a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Allocates a texture backed by the given atlas source, with the given padding.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          width
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          height
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          padding
+        </td>
+        <td class="member-parameter__type">
+          number | AtlasResourceSource
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          source
+        </td>
+        <td class="member-parameter__type">
+          AtlasResourceSource
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="allocate">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/texture-allocator/AtlasAllocator.html#allocate">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>allocate</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">allocate(width: number, height: number, source: AtlasResourceSource) → {<a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>}</code></pre>
+
+
+  <div class="member__brief"><p>Allocates a texture backed by the given source, with default padding.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          width
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          height
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          source
+        </td>
+        <td class="member-parameter__type">
+          AtlasResourceSource
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        
+        <td class="member-parameter__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="createSlab">
+  
+    <section class="member__title">
+      <a href="/docs/@pixi-essentials/texture-allocator/AtlasAllocator.html#createSlab">
+        <img
+          src="/docs/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>createSlab</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">createSlab() → {TextureSlab}</code></pre>
+
+
+  <div class="member__brief"><p>Creates a texture slab backed by an <a href=/docs/@pixi-essentials/texture-allocator/AtlasResource.html>AtlasResource</a>.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          TextureSlab
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+  <footer class="footer" id="footer-mount-point"></footer>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  <div class="page-members-explorer-category">
+    <section class="page-members-explorer-category__title">
+      Summary
+    </section>
+  </div>
+  
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/texture-allocator/AtlasAllocator.html#allocate>allocate</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/texture-allocator/AtlasAllocator.html#allocate>allocate</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/texture-allocator/AtlasAllocator.html#createSlab>createSlab</a></li>
+    
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+            <!-- footer in content -->
+          </div>
+        </div>
+      </article>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>

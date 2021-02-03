@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>webdoc: Test Template</title>
+
+    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
+    <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      window.appData = {
+        siteRoot: "docs",
+      };
+    </script>
+    <script src="/docs/scripts/default-template.js"></script>
+  </head>
+  <body class="root">
+    <div class="docs">
+      <article class="page">
+        <div class="page-explorer" id="explorer-mount-point"></div>
+        <div class="header-content-container">
+          <section class="header" id="header-mount-point"></section>
+          <div class="header-content-container__content">
+            
+            
+<div class="page-content">
+  <div class="homepage">
+  
+    <div class="homepage__readme md">
+      <h1>@pixi-essentials/area-allocator</h1>
+<p>This package implements an area allocator that can be used to issue texture space. It provides the following
+implementations:</p>
+<ul>
+<li>GuilloteneAllocator: This maintains a tree of rectangular area nodes that are divided either horizontally or
+vertically in a flip-flop fashion. The allocated area is picked from the tightest fit, after which the original
+area is sliced. Sibling areas are merged when both are freed. This implementation was inspired the <a href="https://github.com/nical/guillotiere">guillotiere</a> crate.</li>
+</ul>
+<h2>Installation :package:</h2>
+<pre><code class="hljs language-bash">npm install @pixi-essentials/area-allocator
+</code></pre>
+<h2>Usage :page_facing_up:</h2>
+<pre><code class="hljs language-ts"><span class="hljs-keyword">import</span> { GuilloteneAllocator } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pixi-essentials/area-allocator&#x27;</span>;
+
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">type</span> { AreaAllocator } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pixi-essentials/area-allocator&#x27;</span>;
+
+<span class="hljs-comment">// A guillotene allocator that can manage 2D space</span>
+<span class="hljs-keyword">const</span> spatialAllocator: AreaAllocator = <span class="hljs-keyword">new</span> GuilloteneAllocator(<span class="hljs-number">1024</span>, <span class="hljs-number">1024</span>);
+
+<span class="hljs-comment">// Rectange-area allocated by the allocator. The returned object has a __mem_area property that</span>
+<span class="hljs-comment">// points to a area node that is required to free this area.</span>
+<span class="hljs-keyword">const</span> space = spatialAllocator.allocate(<span class="hljs-number">128</span>, <span class="hljs-number">256</span>);
+
+<span class="hljs-comment">// Free the 2D space after using. <span class="hljs-doctag">NOTE:</span> This must be the same rectangle passed by &quot;allocate&quot;, or you</span>
+<span class="hljs-comment">// must also copy the __mem_area property.</span>
+spatialAllocator.free(space);
+</code></pre>
+
+    </div>
+  
+  </div>
+</div>
+
+            <!-- footer in content -->
+          </div>
+        </div>
+      </article>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>
