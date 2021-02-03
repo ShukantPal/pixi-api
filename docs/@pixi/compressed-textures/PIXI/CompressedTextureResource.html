@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>webdoc: CompressedTextureResource</title>
 
-    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
@@ -14,10 +14,10 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       window.appData = {
-        siteRoot: "docs",
+        siteRoot: "pixi-api",
       };
     </script>
-    <script src="/docs/scripts/default-template.js"></script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -36,14 +36,14 @@
         &gt;
       
       
-        <a href=/docs/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
+        <a href=/pixi-api/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
         &gt;
       
       <span>CompressedTextureResource</span>
     </div>
     <h1 class="document__title">PIXI.CompressedTextureResource</h1>
     
-<pre class="signature__container"><code class="signature">class CompressedTextureResource extends <a href="/docs/@pixi/compressed-textures/PIXI/resources/BlobResource.html">PIXI.resources.BlobResource</a></code></pre>
+<pre class="signature__container"><code class="signature">class CompressedTextureResource extends <a href="/pixi-api/@pixi/compressed-textures/PIXI/BlobResource.html">PIXI.BlobResource</a></code></pre>
 
 
     <div class="document__brief"><p>Resource for compressed texture formats, as follows: S3TC/DXTn (&amp; their sRGB formats), ATC, ASTC, ETC 1/2, PVRTC.</p></div>
@@ -51,15 +51,15 @@
 graphics memory, increasing memory locality and speeding up texture fetches. These formats can also be used to store
 more detail in the same amount of memory.</p>
 <p>For most developers, container file formats are a better abstraction instead of directly handling raw texture
-data. PixiJS provides native support for the following texture file formats (via <a href=/docs/@pixi/loaders/PIXI/Loader.html>PIXI.Loader</a>):</p>
+data. PixiJS provides native support for the following texture file formats (via <a href=/pixi-api/@pixi/loaders/PIXI/Loader.html>PIXI.Loader</a>):</p>
 <ul>
-<li><strong>.dds</strong> - the DirectDraw Surface file format stores DXTn (DXT-1,3,5) data. See <a href=/docs/@pixi/compressed-textures/PIXI/DDSLoader.html>PIXI.DDSLoader</a></li>
+<li><strong>.dds</strong> - the DirectDraw Surface file format stores DXTn (DXT-1,3,5) data. See <a href=/pixi-api/@pixi/compressed-textures/PIXI/DDSLoader.html>PIXI.DDSLoader</a></li>
 <li><strong>.ktx</strong> - the Khronos Texture Container file format supports storing all the supported WebGL compression formats.
-See <a href=/docs/@pixi/compressed-textures/PIXI/KTXLoader.html>PIXI.KTXLoader</a>.</li>
+See <a href=/pixi-api/@pixi/compressed-textures/PIXI/KTXLoader.html>PIXI.KTXLoader</a>.</li>
 <li><strong>.basis</strong> - the BASIS supercompressed file format stores texture data in an internal format that is transcoded
 to the compression format supported on the device at <em>runtime</em>. It also supports transcoding into a uncompressed
 format as a fallback; you must install the <code>@pixi/basis-loader</code>, <code>@pixi/basis-transcoder</code> packages separately to
-use these files. See <a href=/docs/@pixi/basis/PIXI/BasisLoader.html>PIXI.BasisLoader</a>.</li>
+use these files. See <a href=/pixi-api/@pixi/basis/PIXI/BasisLoader.html>PIXI.BasisLoader</a>.</li>
 </ul>
 <p>The loaders for the aforementioned formats use <code>CompressedTextureResource</code> internally. It is strongly suggested that
 they be used instead.</p>
@@ -97,7 +97,7 @@ PIXI.Texture.addToCache(texture, <span class="hljs-string">&quot;bunny.dxt5&quot
 <div class="member" id="constructor">
   
   
-<pre class="signature__container"><code class="signature">new PIXI.CompressedTextureResource(source: string | Uint8Array | Uint32Array, options: <a href="/docs/@pixi/compressed-textures/ICompressedTextureResourceOptions.html">ICompressedTextureResourceOptions</a>) → {}</code></pre>
+<pre class="signature__container"><code class="signature">new PIXI.CompressedTextureResource(source: string | Uint8Array | Uint32Array, options: <a href="/pixi-api/@pixi/compressed-textures/ICompressedTextureResourceOptions.html">ICompressedTextureResourceOptions</a>) → {}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -139,7 +139,7 @@ PIXI.Texture.addToCache(texture, <span class="hljs-string">&quot;bunny.dxt5&quot
           options
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/compressed-textures/ICompressedTextureResourceOptions.html">ICompressedTextureResourceOptions</a>
+          <a href="/pixi-api/@pixi/compressed-textures/ICompressedTextureResourceOptions.html">ICompressedTextureResourceOptions</a>
         </td>
         <td class="member-parameter__attributes">
           
@@ -155,7 +155,7 @@ PIXI.Texture.addToCache(texture, <span class="hljs-string">&quot;bunny.dxt5&quot
           options.format
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/compressed-textures/PIXI/INTERNAL_FORMATS.html">PIXI.INTERNAL_FORMATS</a>
+          <a href="/pixi-api/@pixi/compressed-textures/PIXI/INTERNAL_FORMATS.html">PIXI.INTERNAL_FORMATS</a>
         </td>
         <td class="member-parameter__attributes">
           
@@ -258,8 +258,8 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties from CompressedTextureResource</h3>
     </section>
@@ -273,7 +273,7 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#format">format</a>
+                  <a href="/pixi-api/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#format">format</a>
                 </section>
                 <section>
                   
@@ -289,7 +289,7 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#levels">levels</a>
+                  <a href="/pixi-api/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#levels">levels = 1</a>
                 </section>
                 <section>
                   
@@ -312,8 +312,8 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods from CompressedTextureResource</h3>
     </section>
@@ -329,7 +329,7 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#upload">upload(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, _texture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, _glTexture: <a href="/docs/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>)</a>
+                  <a href="/pixi-api/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#upload">upload(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, _texture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, _glTexture: <a href="/pixi-api/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>)</a>
                 </section>
                 <section>
                   
@@ -345,7 +345,7 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#onBlobLoaded">protected onBlobLoaded()</a>
+                  <a href="/pixi-api/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#onBlobLoaded">protected onBlobLoaded()</a>
                 </section>
                 <section>
                   
@@ -366,8 +366,8 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties inherited from BlobResource</h3>
     </section>
@@ -383,7 +383,7 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/compressed-textures/PIXI/resources/BlobResource.html#buffer">buffer</a>
+                  <a href="/pixi-api/@pixi/compressed-textures/PIXI/BlobResource.html#buffer">buffer</a>
                 </section>
                 <section>
                   
@@ -399,7 +399,7 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/compressed-textures/PIXI/resources/BlobResource.html#origin">origin</a>
+                  <a href="/pixi-api/@pixi/compressed-textures/PIXI/BlobResource.html#origin">origin</a>
                 </section>
                 <section>
                   
@@ -413,6 +413,139 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
   </div>
 
   
+  <div class="accordion">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Properties inherited from Resource</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  boolean
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#destroyed">destroyed = false</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#height">height</a>
+                </section>
+                <section>
+                  
+                    <p>The height of the resource.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  boolean
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#valid">valid</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#width">width</a>
+                </section>
+                <section>
+                  
+                    <p>The width of the resource.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#_height">protected _height</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#_width">protected _width</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  boolean
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#internal">protected internal</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
 
   
 
@@ -421,8 +554,8 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods inherited from BlobResource</h3>
     </section>
@@ -438,7 +571,7 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/compressed-textures/PIXI/resources/BlobResource.html#load">load()</a>
+                  <a href="/pixi-api/@pixi/compressed-textures/PIXI/BlobResource.html#load">load()</a>
                 </section>
                 <section>
                   
@@ -454,6 +587,145 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
   </div>
 
   
+  <div class="accordion">
+    <section class="accordion__toggle">
+      <button>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+      </button>
+      <h3 class="members__subcategory">Methods inherited from Resource</h3>
+    </section>
+    <div class="accordion__content table-wrapper">
+      <table class="summary">
+        <tbody>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#bind">bind(baseTexture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Bind to a parent BaseTexture</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#destroy">destroy()</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#resize">resize(width: number, height: number)</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  boolean
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#style">style(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, baseTexture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, glTexture: <a href="/pixi-api/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Set the style, optional to override</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#unbind">unbind(baseTexture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>)</a>
+                </section>
+                <section>
+                  
+                    <p>Unbind to a parent BaseTexture</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#update">update()</a>
+                </section>
+                <section>
+                  
+                    <p>Has been updated trigger event</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#dispose">protected dispose()</a>
+                </section>
+                <section>
+                  
+                    <p>Clean up anything, this happens when destroying is ready.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
 
 </div>
 
@@ -468,9 +740,9 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
 <div class="member" id="format">
   
     <section class="member__title">
-      <a href="/docs/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#format">
+      <a href="/pixi-api/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#format">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -495,9 +767,9 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
 <div class="member" id="levels">
   
     <section class="member__title">
-      <a href="/docs/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#levels">
+      <a href="/pixi-api/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#levels">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -506,7 +778,7 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
     </section>
   
   
-<pre class="signature__container"><code class="signature">levels</code></pre>
+<pre class="signature__container"><code class="signature">levels = 1</code></pre>
 
 
   <div class="member__brief"><p>The number of mipmap levels stored in the resource buffer.</p></div>
@@ -531,9 +803,9 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
 <div class="member" id="upload">
   
     <section class="member__title">
-      <a href="/docs/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#upload">
+      <a href="/pixi-api/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#upload">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -542,7 +814,7 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
     </section>
   
   
-<pre class="signature__container"><code class="signature">upload(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, _texture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, _glTexture: <a href="/docs/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>) → {boolean}</code></pre>
+<pre class="signature__container"><code class="signature">upload(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, _texture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, _glTexture: <a href="/pixi-api/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>) → {boolean}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -568,7 +840,7 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
           renderer
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
         </td>
         
         
@@ -578,7 +850,7 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
           _texture
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
         </td>
         
         
@@ -588,7 +860,7 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
           _glTexture
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>
+          <a href="/pixi-api/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>
         </td>
         
         
@@ -638,9 +910,9 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
 <div class="member" id="onBlobLoaded">
   
     <section class="member__title">
-      <a href="/docs/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#onBlobLoaded">
+      <a href="/pixi-api/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#onBlobLoaded">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -702,9 +974,9 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#format>format</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#format>format</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#levels>levels</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#levels>levels</a></li>
     
   </ul>
 </div>
@@ -716,7 +988,7 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#upload>upload</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#upload>upload</a></li>
     
   </ul>
 </div>
@@ -727,7 +999,7 @@ to pass <code>null</code> for <code>source</code>, for cases where each level is
   <section class="page-members-explorer-category__title">Protected Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#onBlobLoaded>onBlobLoaded</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/compressed-textures/PIXI/CompressedTextureResource.html#onBlobLoaded>onBlobLoaded</a></li>
     
   </ul>
 </div>

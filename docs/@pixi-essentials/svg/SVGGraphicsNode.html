@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>webdoc: SVGGraphicsNode</title>
 
-    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
@@ -14,10 +14,10 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       window.appData = {
-        siteRoot: "docs",
+        siteRoot: "pixi-api",
       };
     </script>
-    <script src="/docs/scripts/default-template.js"></script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -40,7 +40,7 @@
     </div>
     <h1 class="document__title">SVGGraphicsNode</h1>
     
-<pre class="signature__container"><code class="signature">class SVGGraphicsNode extends <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a></code></pre>
+<pre class="signature__container"><code class="signature">class SVGGraphicsNode extends <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a></code></pre>
 
 
     <div class="document__brief"><p>This node can be used to directly embed the following elements:</p></div>
@@ -102,8 +102,8 @@ to <code>LineStyle</code>.</p></div>
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods from SVGGraphicsNode</h3>
     </section>
@@ -119,7 +119,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#ellipticArc">ellipticArc(cx: number, cy: number, rx: number, ry: number, startAngle: number, endAngle: number, xAxisRotation, anticlockwise)</a>
+                  <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#ellipticArc">ellipticArc(cx: number, cy: number, rx: number, ry: number, startAngle: number, endAngle: number, xAxisRotation: number, anticlockwise: boolean)</a>
                 </section>
                 <section>
                   
@@ -137,7 +137,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#ellipticArcTo">ellipticArcTo(endX: number, endY: number, rx: number, ry: number, xAxisRotation, anticlockwise, largeArc)</a>
+                  <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#ellipticArcTo">ellipticArcTo(endX: number, endY: number, rx: number, ry: number, xAxisRotation: number, anticlockwise: boolean, largeArc: boolean)</a>
                 </section>
                 <section>
                   
@@ -155,7 +155,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedCircle">embedCircle(element: SVGCircleElement)</a>
+                  <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedCircle">embedCircle(element: SVGCircleElement)</a>
                 </section>
                 <section>
                   
@@ -173,7 +173,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedEllipse">embedEllipse(element: SVGEllipseElement)</a>
+                  <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedEllipse">embedEllipse(element: SVGEllipseElement)</a>
                 </section>
                 <section>
                   
@@ -191,7 +191,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedLine">embedLine(element: SVGLineElement)</a>
+                  <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedLine">embedLine(element: SVGLineElement)</a>
                 </section>
                 <section>
                   
@@ -209,7 +209,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedPolygon">embedPolygon(element: SVGPolygonElement)</a>
+                  <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedPolygon">embedPolygon(element: SVGPolygonElement)</a>
                 </section>
                 <section>
                   
@@ -227,7 +227,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedPolyline">embedPolyline(element: SVGPolylineElement)</a>
+                  <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedPolyline">embedPolyline(element: SVGPolylineElement)</a>
                 </section>
                 <section>
                   
@@ -245,27 +245,11 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedRect">embedRect(element: SVGRectElement)</a>
+                  <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedRect">embedRect(element: SVGRectElement)</a>
                 </section>
                 <section>
                   
                     <p>Embeds the <code>SVGRectElement</code> into this node.</p>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  this
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#lineTextureStyle">lineTextureStyle(options: ILineStyleOptions)</a>
-                </section>
-                <section>
                   
                 </section>
               </td>
@@ -279,7 +263,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#render">render(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
+                  <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#render">render(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
                 </section>
                 <section>
                   
@@ -300,8 +284,8 @@ to <code>LineStyle</code>.</p></div>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties inherited from Graphics</h3>
     </section>
@@ -317,7 +301,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#blendMode">blendMode</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#blendMode">blendMode = PIXI.BLEND_MODES.NORMAL;</a>
                 </section>
                 <section>
                   
@@ -333,7 +317,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#cacheAsBitmap">cacheAsBitmap</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#cacheAsBitmap">cacheAsBitmap = false</a>
                 </section>
                 <section>
                   
@@ -344,12 +328,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/graphics/PIXI/FillStyle.html>PIXI.FillStyle</a>
+                  <a href=/pixi-api/@pixi/graphics/PIXI/FillStyle.html>PIXI.FillStyle</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#fill">fill</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#fill">fill</a>
                 </section>
                 <section>
                   
@@ -362,12 +346,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/graphics/PIXI/GraphicsGeometry.html>PIXI.GraphicsGeometry</a>
+                  <a href=/pixi-api/@pixi/graphics/PIXI/GraphicsGeometry.html>PIXI.GraphicsGeometry</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#geometry">geometry</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#geometry">geometry</a>
                 </section>
                 <section>
                   
@@ -378,12 +362,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/graphics/PIXI/LineStyle.html>PIXI.LineStyle</a>
+                  <a href=/pixi-api/@pixi/graphics/PIXI/LineStyle.html>PIXI.LineStyle</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#line">line</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#line">line</a>
                 </section>
                 <section>
                   
@@ -401,7 +385,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#pluginName">pluginName</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#pluginName">pluginName = 'batch'</a>
                 </section>
                 <section>
                   
@@ -414,12 +398,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/core/PIXI/Shader.html>PIXI.Shader</a>
+                  <a href=/pixi-api/@pixi/core/PIXI/Shader.html>PIXI.Shader</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#shader">shader</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#shader">shader</a>
                 </section>
                 <section>
                   
@@ -430,12 +414,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/core/PIXI/State.html>PIXI.State</a>
+                  <a href=/pixi-api/@pixi/core/PIXI/State.html>PIXI.State</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#state">state</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#state">state</a>
                 </section>
                 <section>
                   
@@ -451,7 +435,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#tint">tint</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#tint">tint = 0xFFFFFF</a>
                 </section>
                 <section>
                   
@@ -462,12 +446,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/graphics/PIXI/FillStyle.html>PIXI.FillStyle</a>
+                  <a href=/pixi-api/@pixi/graphics/PIXI/FillStyle.html>PIXI.FillStyle</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#_fillStyle">protected _fillStyle</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#_fillStyle">protected _fillStyle</a>
                 </section>
                 <section>
                   
@@ -485,7 +469,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#_holeMode">protected _holeMode</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#_holeMode">protected _holeMode = false</a>
                 </section>
                 <section>
                   
@@ -498,12 +482,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/graphics/PIXI/LineStyle.html>PIXI.LineStyle</a>
+                  <a href=/pixi-api/@pixi/graphics/PIXI/LineStyle.html>PIXI.LineStyle</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#_lineStyle">protected _lineStyle</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#_lineStyle">protected _lineStyle</a>
                 </section>
                 <section>
                   
@@ -516,12 +500,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#_matrix">protected _matrix</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#_matrix">protected _matrix</a>
                 </section>
                 <section>
                   
@@ -539,7 +523,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#batchDirty">protected batchDirty</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#batchDirty">protected batchDirty = -1</a>
                 </section>
                 <section>
                   
@@ -557,7 +541,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#batches">protected batches</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#batches">protected batches</a>
                 </section>
                 <section>
                   
@@ -575,7 +559,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#batchTint">protected batchTint</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#batchTint">protected batchTint = -1</a>
                 </section>
                 <section>
                   
@@ -588,12 +572,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/Polygon.html>PIXI.Polygon</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/Polygon.html>PIXI.Polygon</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#currentPath">protected currentPath</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#currentPath">protected currentPath</a>
                 </section>
                 <section>
                   
@@ -611,7 +595,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#vertexData">protected vertexData</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#vertexData">protected vertexData</a>
                 </section>
                 <section>
                   
@@ -630,8 +614,8 @@ to <code>LineStyle</code>.</p></div>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties inherited from Container</h3>
     </section>
@@ -642,12 +626,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  Array&lt;<a href=/docs/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a>&gt;
+                  Array&lt;<a href=/pixi-api/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a>&gt;
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#children">children</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#children">children</a>
                 </section>
                 <section>
                   
@@ -665,7 +649,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#height">height</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#height">height</a>
                 </section>
                 <section>
                   
@@ -683,7 +667,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#interactiveChildren">interactiveChildren</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#interactiveChildren">interactiveChildren</a>
                 </section>
                 <section>
                   
@@ -699,7 +683,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#sortableChildren">sortableChildren</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#sortableChildren">sortableChildren</a>
                 </section>
                 <section>
                   
@@ -715,7 +699,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#sortDirty">sortDirty</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#sortDirty">sortDirty</a>
                 </section>
                 <section>
                   
@@ -733,7 +717,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#width">width</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#width">width</a>
                 </section>
                 <section>
                   
@@ -752,8 +736,8 @@ to <code>LineStyle</code>.</p></div>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties inherited from DisplayObject</h3>
     </section>
@@ -769,7 +753,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_accessibleActive">_accessibleActive</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_accessibleActive">_accessibleActive</a>
                 </section>
                 <section>
                   
@@ -785,7 +769,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_accessibleDiv">_accessibleDiv</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_accessibleDiv">_accessibleDiv</a>
                 </section>
                 <section>
                   
@@ -796,12 +780,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_bounds">_bounds</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_bounds">_bounds</a>
                 </section>
                 <section>
                   
@@ -814,12 +798,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_localBounds">_localBounds</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_localBounds">_localBounds</a>
                 </section>
                 <section>
                   
@@ -837,7 +821,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessible">accessible</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessible">accessible</a>
                 </section>
                 <section>
                   
@@ -853,7 +837,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessibleChildren">accessibleChildren</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessibleChildren">accessibleChildren = true</a>
                 </section>
                 <section>
                   
@@ -869,7 +853,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessibleHint">accessibleHint</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessibleHint">accessibleHint</a>
                 </section>
                 <section>
                   
@@ -887,7 +871,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessiblePointerEvents">accessiblePointerEvents</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessiblePointerEvents">accessiblePointerEvents = 'auto'</a>
                 </section>
                 <section>
                   
@@ -903,7 +887,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessibleTitle">accessibleTitle</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessibleTitle">accessibleTitle</a>
                 </section>
                 <section>
                   
@@ -919,7 +903,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessibleType">accessibleType</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessibleType">accessibleType = 'button'</a>
                 </section>
                 <section>
                   
@@ -935,7 +919,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#alpha">alpha</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#alpha">alpha</a>
                 </section>
                 <section>
                   
@@ -953,7 +937,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#angle">angle</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#angle">angle</a>
                 </section>
                 <section>
                   
@@ -969,7 +953,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#buttonMode">buttonMode</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#buttonMode">buttonMode</a>
                 </section>
                 <section>
                   
@@ -985,7 +969,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#cursor">cursor</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#cursor">cursor</a>
                 </section>
                 <section>
                   
@@ -996,12 +980,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  ?<a href=/docs/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a>
+                  ?<a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#filterArea">filterArea</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#filterArea">filterArea</a>
                 </section>
                 <section>
                   
@@ -1012,12 +996,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  Array&lt;<a href=/docs/@pixi/core/PIXI/Filter.html>PIXI.Filter</a>&gt;
+                  Array&lt;<a href=/pixi-api/@pixi/core/PIXI/Filter.html>PIXI.Filter</a>&gt;
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#filters">filters</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#filters">filters</a>
                 </section>
                 <section>
                   
@@ -1028,28 +1012,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/interaction/PIXI/IHitArea.html>PIXI.IHitArea</a>
+                  <a href=/pixi-api/@pixi/interaction/PIXI/IHitArea.html>PIXI.IHitArea</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#hitArea">hitArea</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  boolean
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#interactive">interactive</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#hitArea">hitArea</a>
                 </section>
                 <section>
                   
@@ -1065,7 +1033,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#isMask">isMask</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#interactive">interactive</a>
                 </section>
                 <section>
                   
@@ -1081,7 +1049,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#isSprite">isSprite</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#isMask">isMask</a>
                 </section>
                 <section>
                   
@@ -1092,12 +1060,28 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a>
+                  boolean
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#localTransform">localTransform</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#isSprite">isSprite</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#localTransform">localTransform</a>
                 </section>
                 <section>
                   
@@ -1110,12 +1094,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Container.html>PIXI.Container</a> | <a href=/docs/@pixi/core/PIXI/MaskData.html>PIXI.MaskData</a> | unknown
+                  <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a> | <a href=/pixi-api/@pixi/core/PIXI/MaskData.html>PIXI.MaskData</a> | unknown
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#mask">mask</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#mask">mask</a>
                 </section>
                 <section>
                   
@@ -1131,7 +1115,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#name">name</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#name">name</a>
                 </section>
                 <section>
                   
@@ -1144,12 +1128,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Container.html>PIXI.Container</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#parent">parent</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#parent">parent</a>
                 </section>
                 <section>
                   
@@ -1162,12 +1146,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#pivot">pivot</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#pivot">pivot</a>
                 </section>
                 <section>
                   
@@ -1178,12 +1162,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#position">position</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#position">position</a>
                 </section>
                 <section>
                   
@@ -1201,7 +1185,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#renderable">renderable</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#renderable">renderable</a>
                 </section>
                 <section>
                   
@@ -1217,7 +1201,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#rotation">rotation</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#rotation">rotation</a>
                 </section>
                 <section>
                   
@@ -1228,12 +1212,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#scale">scale</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#scale">scale</a>
                 </section>
                 <section>
                   
@@ -1246,12 +1230,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#skew">skew</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#skew">skew</a>
                 </section>
                 <section>
                   
@@ -1264,12 +1248,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#smartMask">smartMask</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#smartMask">smartMask</a>
                 </section>
                 <section>
                   
@@ -1280,12 +1264,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/Transform.html>PIXI.Transform</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/Transform.html>PIXI.Transform</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#transform">transform</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#transform">transform</a>
                 </section>
                 <section>
                   
@@ -1301,7 +1285,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#visible">visible</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#visible">visible</a>
                 </section>
                 <section>
                   
@@ -1317,7 +1301,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#worldAlpha">worldAlpha</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#worldAlpha">worldAlpha</a>
                 </section>
                 <section>
                   
@@ -1330,12 +1314,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#worldTransform">worldTransform</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#worldTransform">worldTransform</a>
                 </section>
                 <section>
                   
@@ -1353,7 +1337,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#worldVisible">worldVisible</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#worldVisible">worldVisible</a>
                 </section>
                 <section>
                   
@@ -1371,7 +1355,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#x">x</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#x">x</a>
                 </section>
                 <section>
                   
@@ -1387,7 +1371,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#y">y</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#y">y</a>
                 </section>
                 <section>
                   
@@ -1403,7 +1387,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#zIndex">zIndex</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#zIndex">zIndex</a>
                 </section>
                 <section>
                   
@@ -1421,7 +1405,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_boundsID">protected _boundsID</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_boundsID">protected _boundsID</a>
                 </section>
                 <section>
                   
@@ -1434,12 +1418,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_boundsRect">protected _boundsRect</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_boundsRect">protected _boundsRect</a>
                 </section>
                 <section>
                   
@@ -1457,7 +1441,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_destroyed">protected _destroyed</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_destroyed">protected _destroyed</a>
                 </section>
                 <section>
                   
@@ -1470,12 +1454,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  Array&lt;<a href=/docs/@pixi/core/PIXI/Filter.html>PIXI.Filter</a>&gt;
+                  Array&lt;<a href=/pixi-api/@pixi/core/PIXI/Filter.html>PIXI.Filter</a>&gt;
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_enabledFilters">protected _enabledFilters</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_enabledFilters">protected _enabledFilters</a>
                 </section>
                 <section>
                   
@@ -1491,7 +1475,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_lastSortedIndex">protected _lastSortedIndex</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_lastSortedIndex">protected _lastSortedIndex</a>
                 </section>
                 <section>
                   
@@ -1502,12 +1486,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_localBoundsRect">protected _localBoundsRect</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_localBoundsRect">protected _localBoundsRect</a>
                 </section>
                 <section>
                   
@@ -1520,12 +1504,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Container.html>PIXI.Container</a> | <a href=/docs/@pixi/core/PIXI/MaskData.html>PIXI.MaskData</a> | unknown
+                  <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a> | <a href=/pixi-api/@pixi/core/PIXI/MaskData.html>PIXI.MaskData</a> | unknown
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_mask">protected _mask</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_mask">protected _mask</a>
                 </section>
                 <section>
                   
@@ -1538,12 +1522,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Container.html>PIXI.Container</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_tempDisplayObjectParent">protected _tempDisplayObjectParent</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_tempDisplayObjectParent">protected _tempDisplayObjectParent</a>
                 </section>
                 <section>
                   
@@ -1559,7 +1543,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_zIndex">protected _zIndex</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_zIndex">protected _zIndex</a>
                 </section>
                 <section>
                   
@@ -1581,8 +1565,8 @@ to <code>LineStyle</code>.</p></div>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods inherited from Graphics</h3>
     </section>
@@ -1598,7 +1582,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#_renderDrawCallDirect">_renderDrawCallDirect(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, drawCall: <a href="/docs/@pixi/core/PIXI/BatchDrawCall.html">PIXI.BatchDrawCall</a>)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#_renderDrawCallDirect">_renderDrawCallDirect(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, drawCall: <a href="/pixi-api/@pixi/core/PIXI/BatchDrawCall.html">PIXI.BatchDrawCall</a>)</a>
                 </section>
                 <section>
                   
@@ -1611,12 +1595,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#arc">arc(cx: number, cy: number, radius: number, startAngle: number, endAngle: number, anticlockwise: boolean)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#arc">arc(cx: number, cy: number, radius: number, startAngle: number, endAngle: number, anticlockwise: boolean)</a>
                 </section>
                 <section>
                   
@@ -1629,12 +1613,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#arcTo">arcTo(x1: number, y1: number, x2: number, y2: number, radius: number)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#arcTo">arcTo(x1: number, y1: number, x2: number, y2: number, radius: number)</a>
                 </section>
                 <section>
                   
@@ -1647,12 +1631,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#beginFill">beginFill(color: number, alpha: number)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#beginFill">beginFill(color: number, alpha: number)</a>
                 </section>
                 <section>
                   
@@ -1663,12 +1647,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#beginHole">beginHole()</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#beginHole">beginHole()</a>
                 </section>
                 <section>
                   
@@ -1679,12 +1663,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#beginTextureFill">beginTextureFill(options: object)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#beginTextureFill">beginTextureFill(options: object)</a>
                 </section>
                 <section>
                   
@@ -1697,12 +1681,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#bezierCurveTo">bezierCurveTo(cpX: number, cpY: number, cpX2: number, cpY2: number, toX: number, toY: number)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#bezierCurveTo">bezierCurveTo(cpX: number, cpY: number, cpX2: number, cpY2: number, toX: number, toY: number)</a>
                 </section>
                 <section>
                   
@@ -1715,12 +1699,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#clear">clear()</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#clear">clear()</a>
                 </section>
                 <section>
                   
@@ -1733,12 +1717,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#clone">clone()</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#clone">clone()</a>
                 </section>
                 <section>
                   
@@ -1749,12 +1733,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#closePath">closePath()</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#closePath">closePath()</a>
                 </section>
                 <section>
                   
@@ -1772,7 +1756,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#containsPoint">containsPoint(point: <a href="/docs/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#containsPoint">containsPoint(point: <a href="/pixi-api/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>)</a>
                 </section>
                 <section>
                   
@@ -1790,7 +1774,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#destroy">destroy(options: object | boolean)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#destroy">destroy(options: object | boolean)</a>
                 </section>
                 <section>
                   
@@ -1803,12 +1787,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#drawCircle">drawCircle(x: number, y: number, radius: number)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#drawCircle">drawCircle(x: number, y: number, radius: number)</a>
                 </section>
                 <section>
                   
@@ -1821,12 +1805,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#drawEllipse">drawEllipse(x: number, y: number, width: number, height: number)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#drawEllipse">drawEllipse(x: number, y: number, width: number, height: number)</a>
                 </section>
                 <section>
                   
@@ -1839,12 +1823,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#drawPolygon">drawPolygon(path: Array&lt;number> | Array&lt;<a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>> | <a href="/docs/@pixi/math/PIXI/Polygon.html">PIXI.Polygon</a>)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#drawPolygon">drawPolygon(path: Array&lt;number> | Array&lt;<a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>> | <a href="/pixi-api/@pixi/math/PIXI/Polygon.html">PIXI.Polygon</a>)</a>
                 </section>
                 <section>
                   
@@ -1857,12 +1841,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#drawRect">drawRect(x: number, y: number, width: number, height: number)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#drawRect">drawRect(x: number, y: number, width: number, height: number)</a>
                 </section>
                 <section>
                   
@@ -1875,12 +1859,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#drawRoundedRect">drawRoundedRect(x: number, y: number, width: number, height: number, radius: number)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#drawRoundedRect">drawRoundedRect(x: number, y: number, width: number, height: number, radius: number)</a>
                 </section>
                 <section>
                   
@@ -1893,12 +1877,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#drawShape">drawShape(shape: <a href="/docs/@pixi/math/PIXI/Circle.html">PIXI.Circle</a> | <a href="/docs/@pixi/math/PIXI/Ellipse.html">PIXI.Ellipse</a> | <a href="/docs/@pixi/math/PIXI/Polygon.html">PIXI.Polygon</a> | <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a> | <a href="/docs/@pixi/math/PIXI/RoundedRectangle.html">PIXI.RoundedRectangle</a>)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#drawShape">drawShape(shape: <a href="/pixi-api/@pixi/math/PIXI/Circle.html">PIXI.Circle</a> | <a href="/pixi-api/@pixi/math/PIXI/Ellipse.html">PIXI.Ellipse</a> | <a href="/pixi-api/@pixi/math/PIXI/Polygon.html">PIXI.Polygon</a> | <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a> | <a href="/pixi-api/@pixi/math/PIXI/RoundedRectangle.html">PIXI.RoundedRectangle</a>)</a>
                 </section>
                 <section>
                   
@@ -1911,12 +1895,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#drawStar">drawStar(x: number, y: number, points: number, radius: number, innerRadius: number, rotation: number)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#drawStar">drawStar(x: number, y: number, points: number, radius: number, innerRadius: number, rotation: number)</a>
                 </section>
                 <section>
                   
@@ -1929,12 +1913,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#endFill">endFill()</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#endFill">endFill()</a>
                 </section>
                 <section>
                   
@@ -1947,12 +1931,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#endHole">endHole()</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#endHole">endHole()</a>
                 </section>
                 <section>
                   
@@ -1963,12 +1947,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#generateCanvasTexture">generateCanvasTexture(scaleMode: <a href="/docs/@pixi/constants/PIXI/SCALE_MODES.html">PIXI.SCALE_MODES</a>, resolution: number)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#generateCanvasTexture">generateCanvasTexture(scaleMode: <a href="/pixi-api/@pixi/constants/PIXI/SCALE_MODES.html">PIXI.SCALE_MODES</a>, resolution: number)</a>
                 </section>
                 <section>
                   
@@ -1984,7 +1968,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#isFastRect">isFastRect()</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#isFastRect">isFastRect()</a>
                 </section>
                 <section>
                   
@@ -1995,12 +1979,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#lineStyle">lineStyle(options: object)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#lineStyle">lineStyle(width: number, color: number, alpha: number, alignment: number, native: boolean)</a>
                 </section>
                 <section>
                   
@@ -2011,12 +1995,30 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#lineTo">lineTo(x: number, y: number)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#lineTextureStyle">lineTextureStyle(options: object)</a>
+                </section>
+                <section>
+                  
+                    <p>Like line style but support texture for line fill.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#lineTo">lineTo(x: number, y: number)</a>
                 </section>
                 <section>
                   
@@ -2027,12 +2029,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#moveTo">moveTo(x: number, y: number)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#moveTo">moveTo(x: number, y: number)</a>
                 </section>
                 <section>
                   
@@ -2045,12 +2047,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#quadraticCurveTo">quadraticCurveTo(cpX: number, cpY: number, toX: number, toY: number)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#quadraticCurveTo">quadraticCurveTo(cpX: number, cpY: number, toX: number, toY: number)</a>
                 </section>
                 <section>
                   
@@ -2061,12 +2063,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html">PIXI.Graphics</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#setMatrix">setMatrix(matrix: <a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#setMatrix">setMatrix(matrix: <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>)</a>
                 </section>
                 <section>
                   
@@ -2084,7 +2086,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#_calculateBounds">protected _calculateBounds()</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#_calculateBounds">protected _calculateBounds()</a>
                 </section>
                 <section>
                   
@@ -2102,7 +2104,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#_initCurve">protected _initCurve(x: number, y: number)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#_initCurve">protected _initCurve(x: number, y: number)</a>
                 </section>
                 <section>
                   
@@ -2120,7 +2122,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#_populateBatches">protected _populateBatches()</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#_populateBatches">protected _populateBatches()</a>
                 </section>
                 <section>
                   
@@ -2138,7 +2140,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#_render">protected _render(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#_render">protected _render(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
                 </section>
                 <section>
                   
@@ -2156,7 +2158,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#_renderBatched">protected _renderBatched(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#_renderBatched">protected _renderBatched(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
                 </section>
                 <section>
                   
@@ -2174,7 +2176,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#_renderDirect">protected _renderDirect(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#_renderDirect">protected _renderDirect(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
                 </section>
                 <section>
                   
@@ -2187,12 +2189,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/core/PIXI/Shader.html">PIXI.Shader</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/Shader.html">PIXI.Shader</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#_resolveDirectShader">protected _resolveDirectShader(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#_resolveDirectShader">protected _resolveDirectShader(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
                 </section>
                 <section>
                   
@@ -2210,7 +2212,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#calculateTints">protected calculateTints()</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#calculateTints">protected calculateTints()</a>
                 </section>
                 <section>
                   
@@ -2226,7 +2228,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#calculateVertices">protected calculateVertices()</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#calculateVertices">protected calculateVertices()</a>
                 </section>
                 <section>
                   
@@ -2242,7 +2244,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#finishPoly">protected finishPoly()</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#finishPoly">protected finishPoly()</a>
                 </section>
                 <section>
                   
@@ -2258,7 +2260,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/graphics/PIXI/Graphics.html#startPoly">protected startPoly()</a>
+                  <a href="/pixi-api/@pixi/graphics/PIXI/Graphics.html#startPoly">protected startPoly()</a>
                 </section>
                 <section>
                   
@@ -2275,8 +2277,8 @@ to <code>LineStyle</code>.</p></div>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods inherited from Container</h3>
     </section>
@@ -2287,12 +2289,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#addChild">addChild(children: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#addChild">addChild(children: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -2305,12 +2307,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#addChildAt">addChildAt(child: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, index: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#addChildAt">addChildAt(child: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, index: number)</a>
                 </section>
                 <section>
                   
@@ -2328,7 +2330,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#calculateBounds">calculateBounds()</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#calculateBounds">calculateBounds()</a>
                 </section>
                 <section>
                   
@@ -2344,7 +2346,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#containerUpdateTransform">containerUpdateTransform</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#containerUpdateTransform">containerUpdateTransform</a>
                 </section>
                 <section>
                   
@@ -2355,12 +2357,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#getChildAt">getChildAt(index: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#getChildAt">getChildAt(index: number)</a>
                 </section>
                 <section>
                   
@@ -2373,12 +2375,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#getChildByName">getChildByName(name: string, deep: boolean)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#getChildByName">getChildByName(name: string, deep: boolean)</a>
                 </section>
                 <section>
                   
@@ -2396,7 +2398,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#getChildIndex">getChildIndex(child: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#getChildIndex">getChildIndex(child: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -2409,12 +2411,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#getLocalBounds">getLocalBounds(rect: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, skipChildrenUpdate: boolean)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#getLocalBounds">getLocalBounds(rect: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>, skipChildrenUpdate: boolean)</a>
                 </section>
                 <section>
                   
@@ -2427,12 +2429,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#removeChild">removeChild(children: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#removeChild">removeChild(children: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -2445,12 +2447,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#removeChildAt">removeChildAt(index: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#removeChildAt">removeChildAt(index: number)</a>
                 </section>
                 <section>
                   
@@ -2463,12 +2465,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  Array&lt;<a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>&gt;
+                  Array&lt;<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>&gt;
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#removeChildren">removeChildren(beginIndex: number, endIndex: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#removeChildren">removeChildren(beginIndex: number, endIndex: number)</a>
                 </section>
                 <section>
                   
@@ -2486,7 +2488,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#renderCanvas">renderCanvas(renderer: <a href="/docs/@pixi/canvas-renderer/PIXI/CanvasRenderer.html">PIXI.CanvasRenderer</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#renderCanvas">renderCanvas(renderer: <a href="/pixi-api/@pixi/canvas-renderer/PIXI/CanvasRenderer.html">PIXI.CanvasRenderer</a>)</a>
                 </section>
                 <section>
                   
@@ -2502,23 +2504,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#renderWebGL">renderWebGL(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  void
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#setChildIndex">setChildIndex(child: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, index: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#setChildIndex">setChildIndex(child: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, index: number)</a>
                 </section>
                 <section>
                   
@@ -2536,11 +2522,11 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#sortChildren">sortChildren()</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#sortChildren">sortChildren()</a>
                 </section>
                 <section>
                   
-                    <p>Sorts children by zIndex. Previous order is mantained for 2 children with the same zIndex.</p>
+                    <p>Sorts children by zIndex. Previous order is maintained for 2 children with the same zIndex.</p>
                   
                 </section>
               </td>
@@ -2554,7 +2540,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#swapChildren">swapChildren(child: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, child2: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#swapChildren">swapChildren(child: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, child2: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -2572,7 +2558,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#updateTransform">updateTransform()</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#updateTransform">updateTransform()</a>
                 </section>
                 <section>
                   
@@ -2590,7 +2576,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#onChildrenChange">protected onChildrenChange(_length: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#onChildrenChange">protected onChildrenChange(_length: number)</a>
                 </section>
                 <section>
                   
@@ -2608,7 +2594,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#renderAdvanced">protected renderAdvanced(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#renderAdvanced">protected renderAdvanced(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
                 </section>
                 <section>
                   
@@ -2627,8 +2613,8 @@ to <code>LineStyle</code>.</p></div>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods inherited from DisplayObject</h3>
     </section>
@@ -2644,7 +2630,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_recursivePostUpdateTransform">_recursivePostUpdateTransform()</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_recursivePostUpdateTransform">_recursivePostUpdateTransform()</a>
                 </section>
                 <section>
                   
@@ -2660,7 +2646,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#disableTempParent">disableTempParent(cacheParent: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#disableTempParent">disableTempParent(cacheParent: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -2676,7 +2662,7 @@ to <code>LineStyle</code>.</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#displayObjectUpdateTransform">displayObjectUpdateTransform</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#displayObjectUpdateTransform">displayObjectUpdateTransform</a>
                 </section>
                 <section>
                   
@@ -2687,12 +2673,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#enableTempParent">enableTempParent()</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#enableTempParent">enableTempParent()</a>
                 </section>
                 <section>
                   
@@ -2705,16 +2691,16 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#getBounds">getBounds(skipUpdate: boolean, rect: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#getBounds">getBounds(skipUpdate: boolean, rect: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>)</a>
                 </section>
                 <section>
                   
-                    <p>Calculates and returns the (world) bounds of the display object as a <a href=/docs/@pixi/math/PIXI/Rectangle.html>Rectangle</a>.</p>
+                    <p>Calculates and returns the (world) bounds of the display object as a <a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>Rectangle</a>.</p>
                   
                 </section>
               </td>
@@ -2723,12 +2709,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#getGlobalPosition">getGlobalPosition(point: <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#getGlobalPosition">getGlobalPosition(point: <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
                 </section>
                 <section>
                   
@@ -2741,12 +2727,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/Container.html">PIXI.Container</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#setParent">setParent(container: <a href="/docs/@pixi/display/PIXI/Container.html">PIXI.Container</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#setParent">setParent(container: <a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a>)</a>
                 </section>
                 <section>
                   
@@ -2759,12 +2745,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#setTransform">setTransform(x: number, y: number, scaleX: number, scaleY: number, rotation: number, skewX: number, skewY: number, pivotX: number, pivotY: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#setTransform">setTransform(x: number, y: number, scaleX: number, scaleY: number, rotation: number, skewX: number, skewY: number, pivotX: number, pivotY: number)</a>
                 </section>
                 <section>
                   
@@ -2777,12 +2763,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#toGlobal">toGlobal(position: <a href="/docs/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>, point: <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#toGlobal">toGlobal(position: <a href="/pixi-api/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>, point: <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
                 </section>
                 <section>
                   
@@ -2795,12 +2781,12 @@ to <code>LineStyle</code>.</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#toLocal">toLocal(position: <a href="/docs/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>, from: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, point: <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#toLocal">toLocal(position: <a href="/pixi-api/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>, from: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, point: <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
                 </section>
                 <section>
                   
@@ -2832,9 +2818,9 @@ to <code>LineStyle</code>.</p></div>
 <div class="member" id="ellipticArc">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#ellipticArc">
+      <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#ellipticArc">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2843,7 +2829,7 @@ to <code>LineStyle</code>.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">ellipticArc(cx: number, cy: number, rx: number, ry: number, startAngle: number, endAngle: number, xAxisRotation, anticlockwise) → {this}</code></pre>
+<pre class="signature__container"><code class="signature">ellipticArc(cx: number, cy: number, rx: number, ry: number, startAngle: number, endAngle: number, xAxisRotation: number, anticlockwise: boolean) → {this}</code></pre>
 
 
   <div class="member__brief"><p>Draws an elliptical arc.</p></div>
@@ -2858,7 +2844,7 @@ to <code>LineStyle</code>.</p></div>
       <tr class="member-parameter-header">
         <th class="member-parameter-header__name">Name</th>
         <th class="member-parameter-header__type">Type</th>
-        
+        <th class="member-parameter-header__attributes">Attributes</th>
         
         <th class="member-parameter-header__description">Description</th>
       </tr>
@@ -2871,7 +2857,11 @@ to <code>LineStyle</code>.</p></div>
         <td class="member-parameter__type">
           number
         </td>
-        
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
         <td class="member-parameter__description"><p>The x-coordinate of the center of the ellipse.</p></td>
       </tr><tr class="member-parameter">
@@ -2881,7 +2871,11 @@ to <code>LineStyle</code>.</p></div>
         <td class="member-parameter__type">
           number
         </td>
-        
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
         <td class="member-parameter__description"><p>The y-coordinate of the center of the ellipse.</p></td>
       </tr><tr class="member-parameter">
@@ -2891,7 +2885,11 @@ to <code>LineStyle</code>.</p></div>
         <td class="member-parameter__type">
           number
         </td>
-        
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
         <td class="member-parameter__description"><p>The radius along the x-axis.</p></td>
       </tr><tr class="member-parameter">
@@ -2901,7 +2899,11 @@ to <code>LineStyle</code>.</p></div>
         <td class="member-parameter__type">
           number
         </td>
-        
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
         <td class="member-parameter__description"><p>The radius along the y-axis.</p></td>
       </tr><tr class="member-parameter">
@@ -2911,7 +2913,11 @@ to <code>LineStyle</code>.</p></div>
         <td class="member-parameter__type">
           number
         </td>
-        
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
         <td class="member-parameter__description"><p>The starting eccentric angle, in radians (0 is at the 3 o'clock position of the arc's circle).</p></td>
       </tr><tr class="member-parameter">
@@ -2921,7 +2927,11 @@ to <code>LineStyle</code>.</p></div>
         <td class="member-parameter__type">
           number
         </td>
-        
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
         <td class="member-parameter__description"><p>The ending eccentric angle, in radians.</p></td>
       </tr><tr class="member-parameter">
@@ -2929,9 +2939,13 @@ to <code>LineStyle</code>.</p></div>
           xAxisRotation
         </td>
         <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
           
         </td>
-        
         
         <td class="member-parameter__description"><p>The angle of the whole ellipse w.r.t. x-axis.</p></td>
       </tr><tr class="member-parameter">
@@ -2939,9 +2953,13 @@ to <code>LineStyle</code>.</p></div>
           anticlockwise
         </td>
         <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
           
         </td>
-        
         
         <td class="member-parameter__description"><p>Specifies whether the drawing should be counterclockwise or clockwise.</p></td>
       </tr>
@@ -2981,9 +2999,9 @@ to <code>LineStyle</code>.</p></div>
 <div class="member" id="ellipticArcTo">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#ellipticArcTo">
+      <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#ellipticArcTo">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2992,7 +3010,7 @@ to <code>LineStyle</code>.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">ellipticArcTo(endX: number, endY: number, rx: number, ry: number, xAxisRotation, anticlockwise, largeArc) → {this}</code></pre>
+<pre class="signature__container"><code class="signature">ellipticArcTo(endX: number, endY: number, rx: number, ry: number, xAxisRotation: number, anticlockwise: boolean, largeArc: boolean) → {this}</code></pre>
 
 
   <div class="member__brief"><p>Draws an elliptical arc to the specified point.</p></div>
@@ -3008,7 +3026,7 @@ they are scaled up appropriately.</p></div>
       <tr class="member-parameter-header">
         <th class="member-parameter-header__name">Name</th>
         <th class="member-parameter-header__type">Type</th>
-        
+        <th class="member-parameter-header__attributes">Attributes</th>
         
         <th class="member-parameter-header__description">Description</th>
       </tr>
@@ -3021,7 +3039,11 @@ they are scaled up appropriately.</p></div>
         <td class="member-parameter__type">
           number
         </td>
-        
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
         <td class="member-parameter__description"><p>the x-coordinate of the ending point.</p></td>
       </tr><tr class="member-parameter">
@@ -3031,7 +3053,11 @@ they are scaled up appropriately.</p></div>
         <td class="member-parameter__type">
           number
         </td>
-        
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
         <td class="member-parameter__description"><p>the y-coordinate of the ending point.</p></td>
       </tr><tr class="member-parameter">
@@ -3041,7 +3067,11 @@ they are scaled up appropriately.</p></div>
         <td class="member-parameter__type">
           number
         </td>
-        
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
         <td class="member-parameter__description"><p>The radius along the x-axis.</p></td>
       </tr><tr class="member-parameter">
@@ -3051,7 +3081,11 @@ they are scaled up appropriately.</p></div>
         <td class="member-parameter__type">
           number
         </td>
-        
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
         
         <td class="member-parameter__description"><p>The radius along the y-axis.</p></td>
       </tr><tr class="member-parameter">
@@ -3059,9 +3093,13 @@ they are scaled up appropriately.</p></div>
           xAxisRotation
         </td>
         <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
           
         </td>
-        
         
         <td class="member-parameter__description"><p>The angle of the ellipse as a whole w.r.t/ x-axis.</p></td>
       </tr><tr class="member-parameter">
@@ -3069,9 +3107,13 @@ they are scaled up appropriately.</p></div>
           anticlockwise
         </td>
         <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
           
         </td>
-        
         
         <td class="member-parameter__description"><p>Specifies whether the arc should be drawn counterclockwise or clockwise.</p></td>
       </tr><tr class="member-parameter">
@@ -3079,9 +3121,13 @@ they are scaled up appropriately.</p></div>
           largeArc
         </td>
         <td class="member-parameter__type">
+          boolean
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
           
         </td>
-        
         
         <td class="member-parameter__description"><p>Specifies whether the larger arc of two possible should be choosen.</p></td>
       </tr>
@@ -3121,9 +3167,9 @@ they are scaled up appropriately.</p></div>
 <div class="member" id="embedCircle">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedCircle">
+      <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedCircle">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -3200,9 +3246,9 @@ they are scaled up appropriately.</p></div>
 <div class="member" id="embedEllipse">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedEllipse">
+      <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedEllipse">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -3279,9 +3325,9 @@ they are scaled up appropriately.</p></div>
 <div class="member" id="embedLine">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedLine">
+      <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedLine">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -3358,9 +3404,9 @@ they are scaled up appropriately.</p></div>
 <div class="member" id="embedPolygon">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedPolygon">
+      <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedPolygon">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -3437,9 +3483,9 @@ they are scaled up appropriately.</p></div>
 <div class="member" id="embedPolyline">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedPolyline">
+      <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedPolyline">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -3516,9 +3562,9 @@ they are scaled up appropriately.</p></div>
 <div class="member" id="embedRect">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedRect">
+      <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedRect">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -3592,91 +3638,12 @@ they are scaled up appropriately.</p></div>
 
   
     
-<div class="member" id="lineTextureStyle">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#lineTextureStyle">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>lineTextureStyle</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">lineTextureStyle(options: ILineStyleOptions) → {this}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          options
-        </td>
-        <td class="member-parameter__type">
-          ILineStyleOptions
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          this
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
 <div class="member" id="render">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/svg/SVGGraphicsNode.html#render">
+      <a href="/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#render">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -3685,7 +3652,7 @@ they are scaled up appropriately.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">render(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">render(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -3711,7 +3678,7 @@ they are scaled up appropriately.</p></div>
           renderer
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
         </td>
         
         
@@ -3771,25 +3738,43 @@ they are scaled up appropriately.</p></div>
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/SVGGraphicsNode.html#ellipticArc>ellipticArc</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#ellipticArc>ellipticArc</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/SVGGraphicsNode.html#ellipticArcTo>ellipticArcTo</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#ellipticArcTo>ellipticArcTo</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedCircle>embedCircle</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedCircle>embedCircle</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedEllipse>embedEllipse</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedEllipse>embedEllipse</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedLine>embedLine</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedLine>embedLine</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedPolygon>embedPolygon</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedPolygon>embedPolygon</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedPolyline>embedPolyline</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedPolyline>embedPolyline</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/SVGGraphicsNode.html#embedRect>embedRect</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#embedRect>embedRect</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/SVGGraphicsNode.html#lineTextureStyle>lineTextureStyle</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#render>render</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/SVGGraphicsNode.html#render>render</a></li>
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+            <!-- footer in content -->
+          </div>
+        </div>
+      </article>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>
+/a></li>
+    
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/SVGGraphicsNode.html#render>render</a></li>
     
   </ul>
 </div>

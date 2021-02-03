@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>webdoc: HalfEdge</title>
 
-    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
@@ -14,10 +14,10 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       window.appData = {
-        siteRoot: "docs",
+        siteRoot: "pixi-api",
       };
     </script>
-    <script src="/docs/scripts/default-template.js"></script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -41,17 +41,17 @@
     <h1 class="document__title">HalfEdge</h1>
     
 <pre class="signature__container"><code class="signature">class HalfEdge
-implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedListNode</a></code></pre>
+implements <a href="/pixi-api/@pixi-essentials/types/ILinkedListNode.html">ILinkedListNode</a></code></pre>
 
 
     <div class="document__brief"><p>A directed edge from its origin to destination.</p></div>
     <div class="document__description"><p><code>HalfEdge</code> is a node of the following circular linked-lists:</p>
 <ul>
 <li>the list of edges in the whole mesh: HalfEdge#next</li>
-<li>the list of edges around its left face: <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lnext">HalfEdge#lnext</a></li>
-<li>the list of edges directed from its origin vertex: <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#onext">HalfEdge#onext</a></li>
-<li>the list of edges directed to its destination vertex: <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dnext">HalfEdge#dnext</a></li>
-<li>the list of edges around its right face: <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rnext">HalfEdge#rnext</a></li>
+<li>the list of edges around its left face: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lnext">HalfEdge#lnext</a></li>
+<li>the list of edges directed from its origin vertex: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#onext">HalfEdge#onext</a></li>
+<li>the list of edges directed to its destination vertex: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dnext">HalfEdge#dnext</a></li>
+<li>the list of edges around its right face: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rnext">HalfEdge#rnext</a></li>
 </ul></div>
 
     
@@ -70,8 +70,8 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties from HalfEdge</h3>
     </section>
@@ -85,7 +85,7 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dlast">dlast</a>
+                  <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dlast">dlast</a>
                 </section>
                 <section>
                   
@@ -101,7 +101,7 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dnext">dnext</a>
+                  <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dnext">dnext</a>
                 </section>
                 <section>
                   
@@ -117,7 +117,7 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dst">dst</a>
+                  <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dst">dst</a>
                 </section>
                 <section>
                   
@@ -133,7 +133,7 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#leftFace">leftFace</a>
+                  <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#leftFace">leftFace</a>
                 </section>
                 <section>
                   
@@ -149,7 +149,7 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lnext">lnext</a>
+                  <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lnext">lnext</a>
                 </section>
                 <section>
                   
@@ -165,7 +165,7 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lprev">lprev</a>
+                  <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lprev">lprev</a>
                 </section>
                 <section>
                   
@@ -181,7 +181,7 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#onext">onext</a>
+                  <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#onext">onext</a>
                 </section>
                 <section>
                   
@@ -197,7 +197,7 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#oprev">oprev</a>
+                  <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#oprev">oprev</a>
                 </section>
                 <section>
                   
@@ -211,7 +211,7 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#org">org</a>
+                  <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#org">org</a>
                 </section>
                 <section>
                   
@@ -227,7 +227,7 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rightFace">rightFace</a>
+                  <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rightFace">rightFace</a>
                 </section>
                 <section>
                   
@@ -243,7 +243,7 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rlast">rlast</a>
+                  <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rlast">rlast</a>
                 </section>
                 <section>
                   
@@ -257,7 +257,7 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rnext">rnext</a>
+                  <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rnext">rnext</a>
                 </section>
                 <section>
                   
@@ -271,7 +271,7 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#twin">twin</a>
+                  <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#twin">twin</a>
                 </section>
                 <section>
                   
@@ -294,8 +294,8 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods from HalfEdge</h3>
     </section>
@@ -311,7 +311,7 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#connect">connect(origin: <a href="/docs/@pixi-essentials/data-half-edge-mesh/Vertex.html">Vertex</a>, twin: <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html">HalfEdge</a>, leftFace: <a href="/docs/@pixi-essentials/data-half-edge-mesh/Face.html">Face</a>)</a>
+                  <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#connect">connect(origin: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Vertex.html">Vertex</a>, twin: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html">HalfEdge</a>, leftFace: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Face.html">Face</a>)</a>
                 </section>
                 <section>
                   
@@ -348,9 +348,9 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
 <div class="member" id="dlast">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dlast">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dlast">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -375,9 +375,9 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
 <div class="member" id="dnext">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dnext">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dnext">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -402,9 +402,9 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
 <div class="member" id="dst">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dst">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dst">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -429,9 +429,9 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
 <div class="member" id="leftFace">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#leftFace">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#leftFace">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -456,9 +456,9 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
 <div class="member" id="lnext">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lnext">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lnext">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -483,9 +483,9 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
 <div class="member" id="lprev">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lprev">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lprev">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -510,9 +510,9 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
 <div class="member" id="onext">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#onext">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#onext">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -537,9 +537,9 @@ implements <a href="/docs/@pixi-essentials/types/ILinkedListNode.html">ILinkedLi
 <div class="member" id="oprev">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#oprev">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#oprev">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -565,9 +565,9 @@ the next edge in the clockwise direction.</p></div>
 <div class="member" id="org">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#org">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#org">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -592,9 +592,9 @@ the next edge in the clockwise direction.</p></div>
 <div class="member" id="rightFace">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rightFace">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rightFace">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -619,9 +619,9 @@ the next edge in the clockwise direction.</p></div>
 <div class="member" id="rlast">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rlast">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rlast">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -648,9 +648,9 @@ are directed in the clockwise direction of the right face.</p>
 <div class="member" id="rnext">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rnext">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rnext">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -677,9 +677,9 @@ are directed in the clockwise direction of the right face.</p>
 <div class="member" id="twin">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#twin">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#twin">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -713,9 +713,9 @@ are directed in the clockwise direction of the right face.</p>
 <div class="member" id="connect">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#connect">
+      <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#connect">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -724,7 +724,7 @@ are directed in the clockwise direction of the right face.</p>
     </section>
   
   
-<pre class="signature__container"><code class="signature">connect(origin: <a href="/docs/@pixi-essentials/data-half-edge-mesh/Vertex.html">Vertex</a>, twin: <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html">HalfEdge</a>, leftFace: <a href="/docs/@pixi-essentials/data-half-edge-mesh/Face.html">Face</a>) → {this}</code></pre>
+<pre class="signature__container"><code class="signature">connect(origin: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Vertex.html">Vertex</a>, twin: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html">HalfEdge</a>, leftFace: <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Face.html">Face</a>) → {this}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -750,7 +750,7 @@ are directed in the clockwise direction of the right face.</p>
           origin
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi-essentials/data-half-edge-mesh/Vertex.html">Vertex</a>
+          <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Vertex.html">Vertex</a>
         </td>
         <td class="member-parameter__attributes">
           
@@ -764,7 +764,7 @@ are directed in the clockwise direction of the right face.</p>
           twin
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html">HalfEdge</a>
+          <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html">HalfEdge</a>
         </td>
         <td class="member-parameter__attributes">
           
@@ -778,7 +778,7 @@ are directed in the clockwise direction of the right face.</p>
           leftFace
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi-essentials/data-half-edge-mesh/Face.html">Face</a>
+          <a href="/pixi-api/@pixi-essentials/data-half-edge-mesh/Face.html">Face</a>
         </td>
         <td class="member-parameter__attributes">
           <p>&lt;optional&gt;</p>
@@ -840,31 +840,31 @@ are directed in the clockwise direction of the right face.</p>
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dlast>dlast</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dlast>dlast</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dnext>dnext</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dnext>dnext</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dst>dst</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#dst>dst</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#leftFace>leftFace</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#leftFace>leftFace</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lnext>lnext</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lnext>lnext</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lprev>lprev</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#lprev>lprev</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#onext>onext</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#onext>onext</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#oprev>oprev</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#oprev>oprev</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#org>org</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#org>org</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rightFace>rightFace</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rightFace>rightFace</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rlast>rlast</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rlast>rlast</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rnext>rnext</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#rnext>rnext</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#twin>twin</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#twin>twin</a></li>
     
   </ul>
 </div>
@@ -876,7 +876,7 @@ are directed in the clockwise direction of the right face.</p>
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#connect>connect</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/data-half-edge-mesh/HalfEdge.html#connect>connect</a></li>
     
   </ul>
 </div>

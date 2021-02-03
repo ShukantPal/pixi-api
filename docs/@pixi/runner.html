@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>webdoc: Test Template</title>
 
-    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
@@ -14,10 +14,10 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       window.appData = {
-        siteRoot: "docs",
+        siteRoot: "pixi-api",
       };
     </script>
-    <script src="/docs/scripts/default-template.js"></script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -49,7 +49,7 @@ onComplete.add(listenerObject);
 <span class="hljs-comment">//emit and all listeners will have their &#x27;onComplete&#x27; functions called</span>
 onComplete.emit(data);
 </code></pre>
-<p>Can be used to execute a funcition on many objects. Handy for games. If you need to update you game elements each frame:</p>
+<p>Can be used to execute a function on many objects. Handy for games. If you need to update you game elements each frame:</p>
 <pre><code class="hljs language-js"><span class="hljs-keyword">import</span> { Runner } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@pixi/runner&#x27;</span>;
 
 <span class="hljs-keyword">const</span> updateRunner = <span class="hljs-keyword">new</span> Runner(<span class="hljs-string">&#x27;update&#x27;</span>);
@@ -87,9 +87,9 @@ updateRunner.emit();
 <li>Not quite as flexible. All listeners / items in the runner must have the correct function name specified within the runners constructor.</li>
 </ul>
 <h2>When to Use</h2>
-<p>In practice I have found the Runner increadibly useful and so thought it would be nice to share with the world. It currently forms the backbone of the messaging system in our game engine. Its working out great for things like update events, collison events etc.</p>
+<p>In practice I have found the Runner incredibly useful and so thought it would be nice to share with the world. It currently forms the backbone of the messaging system in our game engine. Its working out great for things like update events, collision events etc.</p>
 <p>Great to use if you are say looping through and array and calling the same function on each object. The resulting code is cleaner than a loop whilst still keeping the performance as fast as possible.</p>
-<p>So yeah, if you are dispatching signals/events to a lot of listeners often (like everyframe often), then I would considor using this alternative. For most cases, this performace boost is not really important enough to switch from your current fave.</p>
+<p>So yeah, if you are dispatching signals/events to a lot of listeners often (like everyframe often), then I would consider using this alternative. For most cases, this performance boost is not really important enough to switch from your current fave.</p>
 <p>Think of this as a nice alternative for when speed really counts!</p>
 <p>to run the tests, move to the runner-benchmark folder then run the following:</p>
 <pre><code class="hljs language-bash">npm run benchmark

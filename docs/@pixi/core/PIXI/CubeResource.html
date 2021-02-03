@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>webdoc: CubeResource</title>
 
-    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
@@ -14,10 +14,10 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       window.appData = {
-        siteRoot: "docs",
+        siteRoot: "pixi-api",
       };
     </script>
-    <script src="/docs/scripts/default-template.js"></script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -36,14 +36,14 @@
         &gt;
       
       
-        <a href=/docs/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
+        <a href=/pixi-api/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
         &gt;
       
       <span>CubeResource</span>
     </div>
     <h1 class="document__title">PIXI.CubeResource</h1>
     
-<pre class="signature__container"><code class="signature">class CubeResource extends <a href="/docs/@pixi/core/PIXI/ArrayResource.html">PIXI.ArrayResource</a></code></pre>
+<pre class="signature__container"><code class="signature">class CubeResource extends <a href="/pixi-api/@pixi/core/PIXI/ArrayResource.html">PIXI.ArrayResource</a></code></pre>
 
 
     <div class="document__brief"><p>Resource for a CubeTexture which contains six resources.</p></div>
@@ -51,6 +51,147 @@
 
     
       
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new PIXI.CubeResource(source: Array&lt;string | <a href="/pixi-api/@pixi/core/PIXI/Resource.html">PIXI.Resource</a>>, options: object) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          source
+        </td>
+        <td class="member-parameter__type">
+          Array&lt;string | <a href="/pixi-api/@pixi/core/PIXI/Resource.html">PIXI.Resource</a>&gt;
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Collection of URLs or resources
+to use as the sides of the cube.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>ImageResource options</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.width
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Width of resource</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.height
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Height of resource</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.autoLoad
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          true
+        </td>
+        <td class="member-parameter__description"><p>Whether to auto-load resources</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.linkBaseTexture
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          true
+        </td>
+        <td class="member-parameter__description"><p>In case BaseTextures are supplied,
+whether to copy them or use</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
     
 
     
@@ -65,8 +206,8 @@
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties from CubeResource</h3>
     </section>
@@ -82,7 +223,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/CubeResource.html#SIDES">static SIDES</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/CubeResource.html#SIDES">static SIDES = 6</a>
                 </section>
                 <section>
                   
@@ -100,7 +241,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/CubeResource.html#linkBaseTexture">protected linkBaseTexture</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/CubeResource.html#linkBaseTexture">protected linkBaseTexture</a>
                 </section>
                 <section>
                   
@@ -121,8 +262,8 @@
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods from CubeResource</h3>
     </section>
@@ -138,7 +279,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/CubeResource.html#test">static test(source: object)</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/CubeResource.html#test">static test(source: object)</a>
                 </section>
                 <section>
                   
@@ -156,7 +297,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/CubeResource.html#bind">bind(baseTexture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>)</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/CubeResource.html#bind">bind(baseTexture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>)</a>
                 </section>
                 <section>
                   
@@ -174,7 +315,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/CubeResource.html#upload">upload(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, _baseTexture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, glTexture: <a href="/docs/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>)</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/CubeResource.html#upload">upload(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, _baseTexture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, glTexture: <a href="/pixi-api/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>)</a>
                 </section>
                 <section>
                   
@@ -198,8 +339,8 @@
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties inherited from Resource</h3>
     </section>
@@ -215,7 +356,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/Resource.html#destroyed">destroyed</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#destroyed">destroyed = false</a>
                 </section>
                 <section>
                   
@@ -231,7 +372,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/Resource.html#height">height</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#height">height</a>
                 </section>
                 <section>
                   
@@ -249,7 +390,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/Resource.html#valid">valid</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#valid">valid</a>
                 </section>
                 <section>
                   
@@ -265,7 +406,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/Resource.html#width">width</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#width">width</a>
                 </section>
                 <section>
                   
@@ -283,7 +424,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/Resource.html#_height">protected _height</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#_height">protected _height</a>
                 </section>
                 <section>
                   
@@ -299,7 +440,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/Resource.html#_width">protected _width</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#_width">protected _width</a>
                 </section>
                 <section>
                   
@@ -315,7 +456,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/Resource.html#internal">protected internal</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#internal">protected internal</a>
                 </section>
                 <section>
                   
@@ -336,8 +477,8 @@
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods inherited from ArrayResource</h3>
     </section>
@@ -348,12 +489,12 @@
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/core/PIXI/ArrayResource.html">PIXI.ArrayResource</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/ArrayResource.html">PIXI.ArrayResource</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/ArrayResource.html#addBaseTextureAt">addBaseTextureAt(baseTexture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, index: number)</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/ArrayResource.html#addBaseTextureAt">addBaseTextureAt(baseTexture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, index: number)</a>
                 </section>
                 <section>
                   
@@ -370,8 +511,8 @@
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods inherited from Resource</h3>
     </section>
@@ -387,7 +528,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/Resource.html#destroy">destroy()</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#destroy">destroy()</a>
                 </section>
                 <section>
                   
@@ -403,7 +544,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/Resource.html#resize">resize(width: number, height: number)</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#resize">resize(width: number, height: number)</a>
                 </section>
                 <section>
                   
@@ -419,7 +560,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/Resource.html#style">style(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, baseTexture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, glTexture: <a href="/docs/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>)</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#style">style(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, baseTexture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, glTexture: <a href="/pixi-api/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>)</a>
                 </section>
                 <section>
                   
@@ -437,7 +578,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/Resource.html#unbind">unbind(baseTexture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>)</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#unbind">unbind(baseTexture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>)</a>
                 </section>
                 <section>
                   
@@ -455,7 +596,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/Resource.html#update">update()</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#update">update()</a>
                 </section>
                 <section>
                   
@@ -473,7 +614,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/Resource.html#dispose">protected dispose()</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#dispose">protected dispose()</a>
                 </section>
                 <section>
                   
@@ -491,7 +632,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/Resource.html#load">protected load()</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/Resource.html#load">protected load()</a>
                 </section>
                 <section>
                   
@@ -518,9 +659,9 @@
 <div class="member" id="SIDES">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/CubeResource.html#SIDES">
+      <a href="/pixi-api/@pixi/core/PIXI/CubeResource.html#SIDES">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -529,7 +670,7 @@
     </section>
   
   
-<pre class="signature__container"><code class="signature">static SIDES: number</code></pre>
+<pre class="signature__container"><code class="signature">static SIDES: number = 6</code></pre>
 
 
   <div class="member__brief"><p>Number of texture sides to store for CubeResources</p></div>
@@ -553,9 +694,9 @@
 <div class="member" id="linkBaseTexture">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/CubeResource.html#linkBaseTexture">
+      <a href="/pixi-api/@pixi/core/PIXI/CubeResource.html#linkBaseTexture">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -588,9 +729,9 @@
 <div class="member" id="test">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/CubeResource.html#test">
+      <a href="/pixi-api/@pixi/core/PIXI/CubeResource.html#test">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -667,9 +808,9 @@
 <div class="member" id="bind">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/CubeResource.html#bind">
+      <a href="/pixi-api/@pixi/core/PIXI/CubeResource.html#bind">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -678,7 +819,7 @@
     </section>
   
   
-<pre class="signature__container"><code class="signature">bind(baseTexture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">bind(baseTexture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>) → {void}</code></pre>
 
 
   <div class="member__brief"><p>Add binding</p></div>
@@ -704,7 +845,7 @@
           baseTexture
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
         </td>
         
         
@@ -746,9 +887,9 @@
 <div class="member" id="upload">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/CubeResource.html#upload">
+      <a href="/pixi-api/@pixi/core/PIXI/CubeResource.html#upload">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -757,7 +898,7 @@
     </section>
   
   
-<pre class="signature__container"><code class="signature">upload(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, _baseTexture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, glTexture: <a href="/docs/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>) → {boolean}</code></pre>
+<pre class="signature__container"><code class="signature">upload(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, _baseTexture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, glTexture: <a href="/pixi-api/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>) → {boolean}</code></pre>
 
 
   <div class="member__brief"><p>Upload the resource</p></div>
@@ -783,7 +924,7 @@
           renderer
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
         </td>
         
         
@@ -793,7 +934,7 @@
           _baseTexture
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
         </td>
         
         
@@ -803,7 +944,7 @@
           glTexture
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>
+          <a href="/pixi-api/@pixi/core/PIXI/GLTexture.html">PIXI.GLTexture</a>
         </td>
         
         
@@ -861,7 +1002,7 @@
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/CubeResource.html#SIDES>SIDES</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/CubeResource.html#SIDES>SIDES</a></li>
     
   </ul>
 </div>
@@ -872,7 +1013,7 @@
   <section class="page-members-explorer-category__title">Protected Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/CubeResource.html#linkBaseTexture>linkBaseTexture</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/CubeResource.html#linkBaseTexture>linkBaseTexture</a></li>
     
   </ul>
 </div>
@@ -883,11 +1024,11 @@
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/CubeResource.html#test>test</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/CubeResource.html#test>test</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/CubeResource.html#bind>bind</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/CubeResource.html#bind>bind</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/CubeResource.html#upload>upload</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/CubeResource.html#upload>upload</a></li>
     
   </ul>
 </div>

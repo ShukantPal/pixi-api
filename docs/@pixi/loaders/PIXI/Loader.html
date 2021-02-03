@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>webdoc: Loader</title>
 
-    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
@@ -14,10 +14,10 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       window.appData = {
-        siteRoot: "docs",
+        siteRoot: "pixi-api",
       };
     </script>
-    <script src="/docs/scripts/default-template.js"></script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -36,7 +36,7 @@
         &gt;
       
       
-        <a href=/docs/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
+        <a href=/pixi-api/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
         &gt;
       
       <span>Loader</span>
@@ -89,6 +89,81 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
 
     
       
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new PIXI.Loader(baseUrl: string, concurrency: number) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          baseUrl
+        </td>
+        <td class="member-parameter__type">
+          string
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          ''
+        </td>
+        <td class="member-parameter__description"><p>The base url for all resources loaded by this loader.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          concurrency
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          10
+        </td>
+        <td class="member-parameter__description"><p>The number of resources to load concurrently.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
     
 
     
@@ -103,8 +178,8 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties from Loader</h3>
     </section>
@@ -115,12 +190,12 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/loaders/PIXI/Loader.html>PIXI.Loader</a>
+                  <a href=/pixi-api/@pixi/loaders/PIXI/Loader.html>PIXI.Loader</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/loaders/PIXI/Loader.html#shared">static shared</a>
+                  <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html#shared">static shared</a>
                 </section>
                 <section>
                   
@@ -131,12 +206,12 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/loaders/PIXI/Loader/ILoaderSignal.html">PIXI.Loader.ILoaderSignal</a>
+                  <a href="/pixi-api/@pixi/loaders/PIXI/Loader/ILoaderSignal.html">PIXI.Loader.ILoaderSignal</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/loaders/PIXI/Loader.html#onComplete">onComplete</a>
+                  <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html#onComplete">onComplete</a>
                 </section>
                 <section>
                   
@@ -147,12 +222,12 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a>
+                  <a href=/pixi-api/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/loaders/PIXI/Loader.html#onError">onError</a>
+                  <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html#onError">onError</a>
                 </section>
                 <section>
                   
@@ -163,12 +238,12 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a>
+                  <a href=/pixi-api/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/loaders/PIXI/Loader.html#onLoad">onLoad</a>
+                  <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html#onLoad">onLoad</a>
                 </section>
                 <section>
                   
@@ -179,12 +254,12 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a>
+                  <a href=/pixi-api/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/loaders/PIXI/Loader.html#onProgress">onProgress</a>
+                  <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html#onProgress">onProgress</a>
                 </section>
                 <section>
                   
@@ -195,12 +270,12 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a>
+                  <a href=/pixi-api/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/loaders/PIXI/Loader.html#onStart">onStart</a>
+                  <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html#onStart">onStart</a>
                 </section>
                 <section>
                   
@@ -221,8 +296,8 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods from Loader</h3>
     </section>
@@ -233,54 +308,12 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
             <tr>
               <td class="summary__signature">
                 
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/loaders/PIXI/Loader.html#off">static off(event: any)</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
+                  <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html">PIXI.Loader</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/loaders/PIXI/Loader.html#on">static on(event: any)</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/loaders/PIXI/Loader.html#once">static once(event: any)</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  <a href="/docs/@pixi/loaders/PIXI/Loader.html">PIXI.Loader</a>
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/loaders/PIXI/Loader.html#registerPlugin">static registerPlugin(plugin: <a href="/docs/@pixi/loaders/PIXI/ILoaderPlugin.html">PIXI.ILoaderPlugin</a>)</a>
+                  <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html#registerPlugin">static registerPlugin(plugin: <a href="/pixi-api/@pixi/loaders/PIXI/ILoaderPlugin.html">PIXI.ILoaderPlugin</a>)</a>
                 </section>
                 <section>
                   
@@ -296,7 +329,7 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/loaders/PIXI/Loader.html#destroy">destroy()</a>
+                  <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html#destroy">destroy()</a>
                 </section>
                 <section>
                   
@@ -333,9 +366,9 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
 <div class="member" id="shared">
   
     <section class="member__title">
-      <a href="/docs/@pixi/loaders/PIXI/Loader.html#shared">
+      <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html#shared">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -344,7 +377,7 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
     </section>
   
   
-<pre class="signature__container"><code class="signature">static shared: <a href=/docs/@pixi/loaders/PIXI/Loader.html>PIXI.Loader</a></code></pre>
+<pre class="signature__container"><code class="signature">static shared: <a href=/pixi-api/@pixi/loaders/PIXI/Loader.html>PIXI.Loader</a></code></pre>
 
 
   <div class="member__brief"></div>
@@ -360,9 +393,9 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
 <div class="member" id="onComplete">
   
     <section class="member__title">
-      <a href="/docs/@pixi/loaders/PIXI/Loader.html#onComplete">
+      <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html#onComplete">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -371,7 +404,7 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
     </section>
   
   
-<pre class="signature__container"><code class="signature">onComplete: <a href=/docs/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a></code></pre>
+<pre class="signature__container"><code class="signature">onComplete: <a href=/pixi-api/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a></code></pre>
 
 
   <div class="member__brief"></div>
@@ -387,9 +420,9 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
 <div class="member" id="onError">
   
     <section class="member__title">
-      <a href="/docs/@pixi/loaders/PIXI/Loader.html#onError">
+      <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html#onError">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -398,7 +431,7 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
     </section>
   
   
-<pre class="signature__container"><code class="signature">onError: <a href=/docs/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a></code></pre>
+<pre class="signature__container"><code class="signature">onError: <a href=/pixi-api/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a></code></pre>
 
 
   <div class="member__brief"></div>
@@ -414,9 +447,9 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
 <div class="member" id="onLoad">
   
     <section class="member__title">
-      <a href="/docs/@pixi/loaders/PIXI/Loader.html#onLoad">
+      <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html#onLoad">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -425,7 +458,7 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
     </section>
   
   
-<pre class="signature__container"><code class="signature">onLoad: <a href=/docs/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a></code></pre>
+<pre class="signature__container"><code class="signature">onLoad: <a href=/pixi-api/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a></code></pre>
 
 
   <div class="member__brief"></div>
@@ -441,9 +474,9 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
 <div class="member" id="onProgress">
   
     <section class="member__title">
-      <a href="/docs/@pixi/loaders/PIXI/Loader.html#onProgress">
+      <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html#onProgress">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -452,7 +485,7 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
     </section>
   
   
-<pre class="signature__container"><code class="signature">onProgress: <a href=/docs/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a></code></pre>
+<pre class="signature__container"><code class="signature">onProgress: <a href=/pixi-api/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a></code></pre>
 
 
   <div class="member__brief"></div>
@@ -468,9 +501,9 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
 <div class="member" id="onStart">
   
     <section class="member__title">
-      <a href="/docs/@pixi/loaders/PIXI/Loader.html#onStart">
+      <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html#onStart">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -479,7 +512,7 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
     </section>
   
   
-<pre class="signature__container"><code class="signature">onStart: <a href=/docs/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a></code></pre>
+<pre class="signature__container"><code class="signature">onStart: <a href=/pixi-api/@pixi/loaders/PIXI/Loader/ILoaderSignal.html>PIXI.Loader.ILoaderSignal</a></code></pre>
 
 
   <div class="member__brief"></div>
@@ -501,183 +534,12 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
 
   
     
-<div class="member" id="off">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/loaders/PIXI/Loader.html#off">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>off</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">static off(event: any) → {}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Use the corresponding signal, e.g., event <code>start`` is signal </code>onStart`.</p></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          event
-        </td>
-        <td class="member-parameter__type">
-          any
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="on">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/loaders/PIXI/Loader.html#on">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>on</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">static on(event: any) → {}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Use the corresponding signal, e.g., event <code>start`` is signal </code>onStart`.</p></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          event
-        </td>
-        <td class="member-parameter__type">
-          any
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="once">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/loaders/PIXI/Loader.html#once">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>once</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">static once(event: any) → {}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"><p>Use the corresponding signal, e.g., event <code>start`` is signal </code>onStart`.</p></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          event
-        </td>
-        <td class="member-parameter__type">
-          any
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-</div>
-
-  
-    
 <div class="member" id="registerPlugin">
   
     <section class="member__title">
-      <a href="/docs/@pixi/loaders/PIXI/Loader.html#registerPlugin">
+      <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html#registerPlugin">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -686,7 +548,7 @@ loader.onComplete.add(<span class="hljs-function">() =&gt;</span> {}); <span cla
     </section>
   
   
-<pre class="signature__container"><code class="signature">static registerPlugin(plugin: <a href="/docs/@pixi/loaders/PIXI/ILoaderPlugin.html">PIXI.ILoaderPlugin</a>) → {<a href="/docs/@pixi/loaders/PIXI/Loader.html">PIXI.Loader</a>}</code></pre>
+<pre class="signature__container"><code class="signature">static registerPlugin(plugin: <a href="/pixi-api/@pixi/loaders/PIXI/ILoaderPlugin.html">PIXI.ILoaderPlugin</a>) → {<a href="/pixi-api/@pixi/loaders/PIXI/Loader.html">PIXI.Loader</a>}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -713,7 +575,7 @@ new Loader instances created.</p></div>
           plugin
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/loaders/PIXI/ILoaderPlugin.html">PIXI.ILoaderPlugin</a>
+          <a href="/pixi-api/@pixi/loaders/PIXI/ILoaderPlugin.html">PIXI.ILoaderPlugin</a>
         </td>
         
         
@@ -739,7 +601,7 @@ new Loader instances created.</p></div>
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/docs/@pixi/loaders/PIXI/Loader.html">PIXI.Loader</a>
+          <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html">PIXI.Loader</a>
         </td>
         <td class="member-return__description"><p>Reference to PIXI.Loader for chaining</p></td>
       </tr>
@@ -755,9 +617,9 @@ new Loader instances created.</p></div>
 <div class="member" id="destroy">
   
     <section class="member__title">
-      <a href="/docs/@pixi/loaders/PIXI/Loader.html#destroy">
+      <a href="/pixi-api/@pixi/loaders/PIXI/Loader.html#destroy">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -820,17 +682,17 @@ new Loader instances created.</p></div>
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/loaders/PIXI/Loader.html#shared>shared</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/loaders/PIXI/Loader.html#shared>shared</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/loaders/PIXI/Loader.html#onComplete>onComplete</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/loaders/PIXI/Loader.html#onComplete>onComplete</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/loaders/PIXI/Loader.html#onError>onError</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/loaders/PIXI/Loader.html#onError>onError</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/loaders/PIXI/Loader.html#onLoad>onLoad</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/loaders/PIXI/Loader.html#onLoad>onLoad</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/loaders/PIXI/Loader.html#onProgress>onProgress</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/loaders/PIXI/Loader.html#onProgress>onProgress</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/loaders/PIXI/Loader.html#onStart>onStart</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/loaders/PIXI/Loader.html#onStart>onStart</a></li>
     
   </ul>
 </div>
@@ -842,15 +704,9 @@ new Loader instances created.</p></div>
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/loaders/PIXI/Loader.html#off>off</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/loaders/PIXI/Loader.html#registerPlugin>registerPlugin</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/loaders/PIXI/Loader.html#on>on</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/loaders/PIXI/Loader.html#once>once</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/loaders/PIXI/Loader.html#registerPlugin>registerPlugin</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/loaders/PIXI/Loader.html#destroy>destroy</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/loaders/PIXI/Loader.html#destroy>destroy</a></li>
     
   </ul>
 </div>

@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>webdoc: Star</title>
 
-    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
@@ -14,10 +14,10 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       window.appData = {
-        siteRoot: "docs",
+        siteRoot: "pixi-api",
       };
     </script>
-    <script src="/docs/scripts/default-template.js"></script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -36,14 +36,14 @@
         &gt;
       
       
-        <a href=/docs/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a> &gt; <a href=/docs/@pixi/graphics/PIXI/graphicsUtils.html>graphicsUtils</a>
+        <a href=/pixi-api/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a> &gt; <a href=/pixi-api/@pixi/graphics/PIXI/graphicsUtils.html>graphicsUtils</a>
         &gt;
       
       <span>Star</span>
     </div>
     <h1 class="document__title">PIXI.graphicsUtils.Star</h1>
     
-<pre class="signature__container"><code class="signature">class Star extends <a href="/docs/@pixi/math/PIXI/Polygon.html">PIXI.Polygon</a></code></pre>
+<pre class="signature__container"><code class="signature">class Star extends <a href="/pixi-api/@pixi/math/PIXI/Polygon.html">PIXI.Polygon</a></code></pre>
 
 
     <div class="document__brief"><p>Draw a star shape with an arbitrary number of points.</p></div>
@@ -51,6 +51,145 @@
 
     
       
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new PIXI.graphicsUtils.Star(x: number, y: number, points: number, radius: number, innerRadius: number, rotation: number) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          x
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Center X position of the star</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          y
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Center Y position of the star</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          points
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The number of points of the star, must be &gt; 1</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          radius
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The outer radius of the star</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          innerRadius
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>The inner radius between points, default half <code>radius</code></p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          rotation
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>The rotation of the star in radians, where 0 is vertical</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
     
 
     
@@ -75,8 +214,8 @@
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties inherited from Polygon</h3>
     </section>
@@ -92,7 +231,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/math/PIXI/Polygon.html#closeStroke">closeStroke</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Polygon.html#closeStroke">closeStroke = true</a>
                 </section>
                 <section>
                   
@@ -108,7 +247,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/math/PIXI/Polygon.html#points">points</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Polygon.html#points">points</a>
                 </section>
                 <section>
                   
@@ -126,7 +265,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/math/PIXI/Polygon.html#type">type</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Polygon.html#type">type = PIXI.SHAPES.POLY</a>
                 </section>
                 <section>
                   
@@ -149,8 +288,8 @@
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods inherited from Polygon</h3>
     </section>
@@ -161,12 +300,12 @@
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/math/PIXI/Polygon.html">PIXI.Polygon</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Polygon.html">PIXI.Polygon</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/math/PIXI/Polygon.html#clone">clone()</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Polygon.html#clone">clone()</a>
                 </section>
                 <section>
                   
@@ -184,7 +323,7 @@
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/math/PIXI/Polygon.html#contains">contains(x: number, y: number)</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Polygon.html#contains">contains(x: number, y: number)</a>
                 </section>
                 <section>
                   

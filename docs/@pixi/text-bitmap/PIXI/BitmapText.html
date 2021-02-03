@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>webdoc: BitmapText</title>
 
-    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
@@ -14,10 +14,10 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       window.appData = {
-        siteRoot: "docs",
+        siteRoot: "pixi-api",
       };
     </script>
-    <script src="/docs/scripts/default-template.js"></script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -36,14 +36,14 @@
         &gt;
       
       
-        <a href=/docs/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
+        <a href=/pixi-api/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
         &gt;
       
       <span>BitmapText</span>
     </div>
     <h1 class="document__title">PIXI.BitmapText</h1>
     
-<pre class="signature__container"><code class="signature">class BitmapText extends <a href="/docs/@pixi/display/PIXI/Container.html">PIXI.Container</a></code></pre>
+<pre class="signature__container"><code class="signature">class BitmapText extends <a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a></code></pre>
 
 
     <div class="document__brief"><p>A BitmapText object will create a line or multiple lines of text using bitmap font.</p></div>
@@ -171,7 +171,7 @@ http://www.bmglyph.com/ for Mac.</p>
         <td class="member-parameter__default">
           'left'
         </td>
-        <td class="member-parameter__description"><p>Alignment for multiline text ('left', 'center' or 'right'),
+        <td class="member-parameter__description"><p>Alignment for multiline text ('left', 'center', 'right' or 'justify'),
 does not affect single line text.</p></td>
       </tr><tr class="member-parameter">
         <td class="member-parameter__name">
@@ -248,8 +248,8 @@ does not affect single line text.</p></td>
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties from BitmapText</h3>
     </section>
@@ -260,30 +260,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  Object&lt;string, <a href=/docs/@pixi/text-bitmap/PIXI/BitmapFont.html>PIXI.BitmapFont</a>&gt;
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#fonts">static fonts</a>
-                </section>
-                <section>
-                  
-                    <p>Get the list of installed fonts.</p>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
                   boolean
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#_roundPixels">_roundPixels</a>
+                  <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#_roundPixels">_roundPixels = PIXI.settings.ROUND_PIXELS</a>
                 </section>
                 <section>
                   
@@ -301,7 +283,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#align">align</a>
+                  <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#align">align = 'left'</a>
                 </section>
                 <section>
                   
@@ -314,12 +296,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/Point.html>PIXI.Point</a> | number
+                  <a href=/pixi-api/@pixi/math/PIXI/Point.html>PIXI.Point</a> | number
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#anchor">anchor</a>
+                  <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#anchor">anchor</a>
                 </section>
                 <section>
                   
@@ -337,7 +319,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#dirty">dirty</a>
+                  <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#dirty">dirty</a>
                 </section>
                 <section>
                   
@@ -355,7 +337,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#fontName">fontName</a>
+                  <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#fontName">fontName</a>
                 </section>
                 <section>
                   
@@ -373,7 +355,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#fontSize">fontSize</a>
+                  <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#fontSize">fontSize</a>
                 </section>
                 <section>
                   
@@ -391,7 +373,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#letterSpacing">letterSpacing</a>
+                  <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#letterSpacing">letterSpacing</a>
                 </section>
                 <section>
                   
@@ -409,7 +391,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#maxLineHeight">maxLineHeight</a>
+                  <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#maxLineHeight">maxLineHeight</a>
                 </section>
                 <section>
                   
@@ -425,7 +407,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#maxWidth">maxWidth</a>
+                  <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#maxWidth">maxWidth</a>
                 </section>
                 <section>
                   
@@ -441,7 +423,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#roundPixels">roundPixels</a>
+                  <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#roundPixels">roundPixels = PIXI.settings.ROUND_PIXELS</a>
                 </section>
                 <section>
                   
@@ -457,7 +439,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#text">text</a>
+                  <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#text">text</a>
                 </section>
                 <section>
                   
@@ -475,7 +457,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#textHeight">textHeight</a>
+                  <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#textHeight">textHeight</a>
                 </section>
                 <section>
                   
@@ -491,7 +473,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#textWidth">textWidth</a>
+                  <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#textWidth">textWidth</a>
                 </section>
                 <section>
                   
@@ -507,27 +489,11 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#tint">tint</a>
+                  <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#tint">tint = 0xffffff</a>
                 </section>
                 <section>
                   
                     <p>The tint of the BitmapText object.</p>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  object
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#font">font</a>
-                </section>
-                <section>
                   
                 </section>
               </td>
@@ -546,8 +512,8 @@ does not affect single line text.</p></td>
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods from BitmapText</h3>
     </section>
@@ -558,30 +524,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapFont.html">PIXI.BitmapFont</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#registerFont">static registerFont(data: string | XMLDocument | <a href="/docs/@pixi/text-bitmap/PIXI/BitmapFontData.html">PIXI.BitmapFontData</a>, textures: <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a> | <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>[] | Dict)</a>
-                </section>
-                <section>
-                  
-                    <p>Register a bitmap font with data and a texture.</p>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#getLocalBounds">getLocalBounds()</a>
+                  <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#getLocalBounds">getLocalBounds()</a>
                 </section>
                 <section>
                   
@@ -599,7 +547,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#updateText">updateText()</a>
+                  <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#updateText">updateText()</a>
                 </section>
                 <section>
                   
@@ -620,8 +568,8 @@ does not affect single line text.</p></td>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties inherited from Container</h3>
     </section>
@@ -632,12 +580,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  Array&lt;<a href=/docs/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a>&gt;
+                  Array&lt;<a href=/pixi-api/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a>&gt;
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#children">children</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#children">children</a>
                 </section>
                 <section>
                   
@@ -655,7 +603,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#height">height</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#height">height</a>
                 </section>
                 <section>
                   
@@ -673,7 +621,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#interactiveChildren">interactiveChildren</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#interactiveChildren">interactiveChildren</a>
                 </section>
                 <section>
                   
@@ -689,7 +637,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#sortableChildren">sortableChildren</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#sortableChildren">sortableChildren</a>
                 </section>
                 <section>
                   
@@ -705,7 +653,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#sortDirty">sortDirty</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#sortDirty">sortDirty</a>
                 </section>
                 <section>
                   
@@ -723,7 +671,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#width">width</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#width">width</a>
                 </section>
                 <section>
                   
@@ -742,8 +690,8 @@ does not affect single line text.</p></td>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties inherited from DisplayObject</h3>
     </section>
@@ -759,7 +707,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_accessibleActive">_accessibleActive</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_accessibleActive">_accessibleActive</a>
                 </section>
                 <section>
                   
@@ -775,7 +723,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_accessibleDiv">_accessibleDiv</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_accessibleDiv">_accessibleDiv</a>
                 </section>
                 <section>
                   
@@ -786,12 +734,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_bounds">_bounds</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_bounds">_bounds</a>
                 </section>
                 <section>
                   
@@ -804,12 +752,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_localBounds">_localBounds</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_localBounds">_localBounds</a>
                 </section>
                 <section>
                   
@@ -827,7 +775,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessible">accessible</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessible">accessible</a>
                 </section>
                 <section>
                   
@@ -843,7 +791,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessibleChildren">accessibleChildren</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessibleChildren">accessibleChildren = true</a>
                 </section>
                 <section>
                   
@@ -859,7 +807,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessibleHint">accessibleHint</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessibleHint">accessibleHint</a>
                 </section>
                 <section>
                   
@@ -877,7 +825,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessiblePointerEvents">accessiblePointerEvents</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessiblePointerEvents">accessiblePointerEvents = 'auto'</a>
                 </section>
                 <section>
                   
@@ -893,7 +841,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessibleTitle">accessibleTitle</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessibleTitle">accessibleTitle</a>
                 </section>
                 <section>
                   
@@ -909,7 +857,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessibleType">accessibleType</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessibleType">accessibleType = 'button'</a>
                 </section>
                 <section>
                   
@@ -925,7 +873,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#alpha">alpha</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#alpha">alpha</a>
                 </section>
                 <section>
                   
@@ -943,7 +891,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#angle">angle</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#angle">angle</a>
                 </section>
                 <section>
                   
@@ -959,7 +907,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#buttonMode">buttonMode</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#buttonMode">buttonMode</a>
                 </section>
                 <section>
                   
@@ -975,7 +923,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#cacheAsBitmap">cacheAsBitmap</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#cacheAsBitmap">cacheAsBitmap</a>
                 </section>
                 <section>
                   
@@ -991,7 +939,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#cursor">cursor</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#cursor">cursor</a>
                 </section>
                 <section>
                   
@@ -1002,12 +950,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  ?<a href=/docs/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a>
+                  ?<a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#filterArea">filterArea</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#filterArea">filterArea</a>
                 </section>
                 <section>
                   
@@ -1018,12 +966,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  Array&lt;<a href=/docs/@pixi/core/PIXI/Filter.html>PIXI.Filter</a>&gt;
+                  Array&lt;<a href=/pixi-api/@pixi/core/PIXI/Filter.html>PIXI.Filter</a>&gt;
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#filters">filters</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#filters">filters</a>
                 </section>
                 <section>
                   
@@ -1034,28 +982,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/interaction/PIXI/IHitArea.html>PIXI.IHitArea</a>
+                  <a href=/pixi-api/@pixi/interaction/PIXI/IHitArea.html>PIXI.IHitArea</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#hitArea">hitArea</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  boolean
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#interactive">interactive</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#hitArea">hitArea</a>
                 </section>
                 <section>
                   
@@ -1071,7 +1003,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#isMask">isMask</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#interactive">interactive</a>
                 </section>
                 <section>
                   
@@ -1087,7 +1019,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#isSprite">isSprite</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#isMask">isMask</a>
                 </section>
                 <section>
                   
@@ -1098,12 +1030,28 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a>
+                  boolean
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#localTransform">localTransform</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#isSprite">isSprite</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#localTransform">localTransform</a>
                 </section>
                 <section>
                   
@@ -1116,12 +1064,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Container.html>PIXI.Container</a> | <a href=/docs/@pixi/core/PIXI/MaskData.html>PIXI.MaskData</a> | unknown
+                  <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a> | <a href=/pixi-api/@pixi/core/PIXI/MaskData.html>PIXI.MaskData</a> | unknown
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#mask">mask</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#mask">mask</a>
                 </section>
                 <section>
                   
@@ -1137,7 +1085,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#name">name</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#name">name</a>
                 </section>
                 <section>
                   
@@ -1150,12 +1098,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Container.html>PIXI.Container</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#parent">parent</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#parent">parent</a>
                 </section>
                 <section>
                   
@@ -1168,12 +1116,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#pivot">pivot</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#pivot">pivot</a>
                 </section>
                 <section>
                   
@@ -1184,12 +1132,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#position">position</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#position">position</a>
                 </section>
                 <section>
                   
@@ -1207,7 +1155,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#renderable">renderable</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#renderable">renderable</a>
                 </section>
                 <section>
                   
@@ -1223,7 +1171,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#rotation">rotation</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#rotation">rotation</a>
                 </section>
                 <section>
                   
@@ -1234,12 +1182,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#scale">scale</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#scale">scale</a>
                 </section>
                 <section>
                   
@@ -1252,12 +1200,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#skew">skew</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#skew">skew</a>
                 </section>
                 <section>
                   
@@ -1270,12 +1218,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#smartMask">smartMask</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#smartMask">smartMask</a>
                 </section>
                 <section>
                   
@@ -1286,12 +1234,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/Transform.html>PIXI.Transform</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/Transform.html>PIXI.Transform</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#transform">transform</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#transform">transform</a>
                 </section>
                 <section>
                   
@@ -1307,7 +1255,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#visible">visible</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#visible">visible</a>
                 </section>
                 <section>
                   
@@ -1323,7 +1271,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#worldAlpha">worldAlpha</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#worldAlpha">worldAlpha</a>
                 </section>
                 <section>
                   
@@ -1336,12 +1284,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#worldTransform">worldTransform</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#worldTransform">worldTransform</a>
                 </section>
                 <section>
                   
@@ -1359,7 +1307,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#worldVisible">worldVisible</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#worldVisible">worldVisible</a>
                 </section>
                 <section>
                   
@@ -1377,7 +1325,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#x">x</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#x">x</a>
                 </section>
                 <section>
                   
@@ -1393,7 +1341,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#y">y</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#y">y</a>
                 </section>
                 <section>
                   
@@ -1409,7 +1357,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#zIndex">zIndex</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#zIndex">zIndex</a>
                 </section>
                 <section>
                   
@@ -1427,7 +1375,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_boundsID">protected _boundsID</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_boundsID">protected _boundsID</a>
                 </section>
                 <section>
                   
@@ -1440,12 +1388,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_boundsRect">protected _boundsRect</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_boundsRect">protected _boundsRect</a>
                 </section>
                 <section>
                   
@@ -1463,7 +1411,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_destroyed">protected _destroyed</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_destroyed">protected _destroyed</a>
                 </section>
                 <section>
                   
@@ -1476,12 +1424,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  Array&lt;<a href=/docs/@pixi/core/PIXI/Filter.html>PIXI.Filter</a>&gt;
+                  Array&lt;<a href=/pixi-api/@pixi/core/PIXI/Filter.html>PIXI.Filter</a>&gt;
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_enabledFilters">protected _enabledFilters</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_enabledFilters">protected _enabledFilters</a>
                 </section>
                 <section>
                   
@@ -1497,7 +1445,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_lastSortedIndex">protected _lastSortedIndex</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_lastSortedIndex">protected _lastSortedIndex</a>
                 </section>
                 <section>
                   
@@ -1508,12 +1456,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_localBoundsRect">protected _localBoundsRect</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_localBoundsRect">protected _localBoundsRect</a>
                 </section>
                 <section>
                   
@@ -1526,12 +1474,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Container.html>PIXI.Container</a> | <a href=/docs/@pixi/core/PIXI/MaskData.html>PIXI.MaskData</a> | unknown
+                  <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a> | <a href=/pixi-api/@pixi/core/PIXI/MaskData.html>PIXI.MaskData</a> | unknown
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_mask">protected _mask</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_mask">protected _mask</a>
                 </section>
                 <section>
                   
@@ -1544,12 +1492,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Container.html>PIXI.Container</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_tempDisplayObjectParent">protected _tempDisplayObjectParent</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_tempDisplayObjectParent">protected _tempDisplayObjectParent</a>
                 </section>
                 <section>
                   
@@ -1565,7 +1513,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_zIndex">protected _zIndex</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_zIndex">protected _zIndex</a>
                 </section>
                 <section>
                   
@@ -1587,8 +1535,8 @@ does not affect single line text.</p></td>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods inherited from Container</h3>
     </section>
@@ -1599,12 +1547,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#addChild">addChild(children: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#addChild">addChild(children: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -1617,12 +1565,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#addChildAt">addChildAt(child: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, index: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#addChildAt">addChildAt(child: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, index: number)</a>
                 </section>
                 <section>
                   
@@ -1640,7 +1588,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#calculateBounds">calculateBounds()</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#calculateBounds">calculateBounds()</a>
                 </section>
                 <section>
                   
@@ -1656,7 +1604,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#containerUpdateTransform">containerUpdateTransform</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#containerUpdateTransform">containerUpdateTransform</a>
                 </section>
                 <section>
                   
@@ -1672,7 +1620,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#destroy">destroy(options: object | boolean)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#destroy">destroy(options: object | boolean)</a>
                 </section>
                 <section>
                   
@@ -1683,12 +1631,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#getChildAt">getChildAt(index: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#getChildAt">getChildAt(index: number)</a>
                 </section>
                 <section>
                   
@@ -1701,12 +1649,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#getChildByName">getChildByName(name: string, deep: boolean)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#getChildByName">getChildByName(name: string, deep: boolean)</a>
                 </section>
                 <section>
                   
@@ -1724,7 +1672,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#getChildIndex">getChildIndex(child: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#getChildIndex">getChildIndex(child: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -1737,12 +1685,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#removeChild">removeChild(children: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#removeChild">removeChild(children: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -1755,12 +1703,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#removeChildAt">removeChildAt(index: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#removeChildAt">removeChildAt(index: number)</a>
                 </section>
                 <section>
                   
@@ -1773,12 +1721,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  Array&lt;<a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>&gt;
+                  Array&lt;<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>&gt;
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#removeChildren">removeChildren(beginIndex: number, endIndex: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#removeChildren">removeChildren(beginIndex: number, endIndex: number)</a>
                 </section>
                 <section>
                   
@@ -1796,7 +1744,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#render">render(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#render">render(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
                 </section>
                 <section>
                   
@@ -1814,7 +1762,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#renderCanvas">renderCanvas(renderer: <a href="/docs/@pixi/canvas-renderer/PIXI/CanvasRenderer.html">PIXI.CanvasRenderer</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#renderCanvas">renderCanvas(renderer: <a href="/pixi-api/@pixi/canvas-renderer/PIXI/CanvasRenderer.html">PIXI.CanvasRenderer</a>)</a>
                 </section>
                 <section>
                   
@@ -1830,23 +1778,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#renderWebGL">renderWebGL(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  void
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#setChildIndex">setChildIndex(child: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, index: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#setChildIndex">setChildIndex(child: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, index: number)</a>
                 </section>
                 <section>
                   
@@ -1864,11 +1796,11 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#sortChildren">sortChildren()</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#sortChildren">sortChildren()</a>
                 </section>
                 <section>
                   
-                    <p>Sorts children by zIndex. Previous order is mantained for 2 children with the same zIndex.</p>
+                    <p>Sorts children by zIndex. Previous order is maintained for 2 children with the same zIndex.</p>
                   
                 </section>
               </td>
@@ -1882,7 +1814,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#swapChildren">swapChildren(child: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, child2: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#swapChildren">swapChildren(child: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, child2: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -1900,7 +1832,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#_calculateBounds">protected _calculateBounds()</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#_calculateBounds">protected _calculateBounds()</a>
                 </section>
                 <section>
                   
@@ -1916,7 +1848,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#_render">protected _render(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#_render">protected _render(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
                 </section>
                 <section>
                   
@@ -1934,7 +1866,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#_renderCanvas">protected _renderCanvas(renderer: <a href="/docs/@pixi/canvas-renderer/PIXI/CanvasRenderer.html">PIXI.CanvasRenderer</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#_renderCanvas">protected _renderCanvas(renderer: <a href="/pixi-api/@pixi/canvas-renderer/PIXI/CanvasRenderer.html">PIXI.CanvasRenderer</a>)</a>
                 </section>
                 <section>
                   
@@ -1950,7 +1882,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#onChildrenChange">protected onChildrenChange(_length: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#onChildrenChange">protected onChildrenChange(_length: number)</a>
                 </section>
                 <section>
                   
@@ -1968,7 +1900,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#renderAdvanced">protected renderAdvanced(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#renderAdvanced">protected renderAdvanced(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
                 </section>
                 <section>
                   
@@ -1987,8 +1919,8 @@ does not affect single line text.</p></td>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods inherited from DisplayObject</h3>
     </section>
@@ -2004,7 +1936,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_recursivePostUpdateTransform">_recursivePostUpdateTransform()</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_recursivePostUpdateTransform">_recursivePostUpdateTransform()</a>
                 </section>
                 <section>
                   
@@ -2020,7 +1952,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#disableTempParent">disableTempParent(cacheParent: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#disableTempParent">disableTempParent(cacheParent: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -2036,7 +1968,7 @@ does not affect single line text.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#displayObjectUpdateTransform">displayObjectUpdateTransform</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#displayObjectUpdateTransform">displayObjectUpdateTransform</a>
                 </section>
                 <section>
                   
@@ -2047,12 +1979,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#enableTempParent">enableTempParent()</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#enableTempParent">enableTempParent()</a>
                 </section>
                 <section>
                   
@@ -2065,16 +1997,16 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#getBounds">getBounds(skipUpdate: boolean, rect: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#getBounds">getBounds(skipUpdate: boolean, rect: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>)</a>
                 </section>
                 <section>
                   
-                    <p>Calculates and returns the (world) bounds of the display object as a <a href=/docs/@pixi/math/PIXI/Rectangle.html>Rectangle</a>.</p>
+                    <p>Calculates and returns the (world) bounds of the display object as a <a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>Rectangle</a>.</p>
                   
                 </section>
               </td>
@@ -2083,12 +2015,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#getGlobalPosition">getGlobalPosition(point: <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#getGlobalPosition">getGlobalPosition(point: <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
                 </section>
                 <section>
                   
@@ -2101,12 +2033,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/Container.html">PIXI.Container</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#setParent">setParent(container: <a href="/docs/@pixi/display/PIXI/Container.html">PIXI.Container</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#setParent">setParent(container: <a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a>)</a>
                 </section>
                 <section>
                   
@@ -2119,12 +2051,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#setTransform">setTransform(x: number, y: number, scaleX: number, scaleY: number, rotation: number, skewX: number, skewY: number, pivotX: number, pivotY: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#setTransform">setTransform(x: number, y: number, scaleX: number, scaleY: number, rotation: number, skewX: number, skewY: number, pivotX: number, pivotY: number)</a>
                 </section>
                 <section>
                   
@@ -2137,12 +2069,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#toGlobal">toGlobal(position: <a href="/docs/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>, point: <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#toGlobal">toGlobal(position: <a href="/pixi-api/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>, point: <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
                 </section>
                 <section>
                   
@@ -2155,12 +2087,12 @@ does not affect single line text.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#toLocal">toLocal(position: <a href="/docs/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>, from: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, point: <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#toLocal">toLocal(position: <a href="/pixi-api/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>, from: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, point: <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
                 </section>
                 <section>
                   
@@ -2187,39 +2119,12 @@ does not affect single line text.</p></td>
 
   
     
-<div class="member" id="fonts">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#fonts">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>fonts</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">static fonts: Object&lt;string, <a href=/docs/@pixi/text-bitmap/PIXI/BitmapFont.html>PIXI.BitmapFont</a>></code></pre>
-
-
-  <div class="member__brief"><p>Get the list of installed fonts.</p></div>
-  <div class="member__description"></div>
-
-  
-
-  
-</div>
-
-  
-    
 <div class="member" id="_roundPixels">
   
     <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#_roundPixels">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#_roundPixels">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2228,7 +2133,7 @@ does not affect single line text.</p></td>
     </section>
   
   
-<pre class="signature__container"><code class="signature">_roundPixels: boolean</code></pre>
+<pre class="signature__container"><code class="signature">_roundPixels: boolean = PIXI.settings.ROUND_PIXELS</code></pre>
 
 
   <div class="member__brief"><p>If true PixiJS will Math.floor() x/y values when rendering</p></div>
@@ -2244,9 +2149,9 @@ does not affect single line text.</p></td>
 <div class="member" id="align">
   
     <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#align">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#align">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2255,7 +2160,7 @@ does not affect single line text.</p></td>
     </section>
   
   
-<pre class="signature__container"><code class="signature">align: string</code></pre>
+<pre class="signature__container"><code class="signature">align: string = 'left'</code></pre>
 
 
   <div class="member__brief"><p>The alignment of the BitmapText object.</p></div>
@@ -2271,9 +2176,9 @@ does not affect single line text.</p></td>
 <div class="member" id="anchor">
   
     <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#anchor">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#anchor">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2282,7 +2187,7 @@ does not affect single line text.</p></td>
     </section>
   
   
-<pre class="signature__container"><code class="signature">anchor: <a href=/docs/@pixi/math/PIXI/Point.html>PIXI.Point</a> | number</code></pre>
+<pre class="signature__container"><code class="signature">anchor: <a href=/pixi-api/@pixi/math/PIXI/Point.html>PIXI.Point</a> | number</code></pre>
 
 
   <div class="member__brief"><p>The anchor sets the origin point of the text.</p></div>
@@ -2300,9 +2205,9 @@ does not affect single line text.</p></td>
 <div class="member" id="dirty">
   
     <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#dirty">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#dirty">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2327,9 +2232,9 @@ does not affect single line text.</p></td>
 <div class="member" id="fontName">
   
     <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#fontName">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#fontName">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2354,9 +2259,9 @@ does not affect single line text.</p></td>
 <div class="member" id="fontSize">
   
     <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#fontSize">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#fontSize">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2381,9 +2286,9 @@ does not affect single line text.</p></td>
 <div class="member" id="letterSpacing">
   
     <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#letterSpacing">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#letterSpacing">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2408,9 +2313,9 @@ does not affect single line text.</p></td>
 <div class="member" id="maxLineHeight">
   
     <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#maxLineHeight">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#maxLineHeight">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2436,9 +2341,9 @@ i.e. when trying to vertically align.</p></div>
 <div class="member" id="maxWidth">
   
     <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#maxWidth">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#maxWidth">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2465,9 +2370,9 @@ Disable by setting the value to 0.</p></div>
 <div class="member" id="roundPixels">
   
     <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#roundPixels">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#roundPixels">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2476,14 +2381,14 @@ Disable by setting the value to 0.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">roundPixels: boolean</code></pre>
+<pre class="signature__container"><code class="signature">roundPixels: boolean = PIXI.settings.ROUND_PIXELS</code></pre>
 
 
   <div class="member__brief"></div>
   <div class="member__description"><p>If true PixiJS will Math.floor() x/y values when rendering, stopping pixel interpolation.
 Advantages can include sharper image quality (like text) and faster rendering on canvas.
 The main disadvantage is movement of objects may appear less smooth.
-To set the global default, change <a href=/docs/@pixi/settings/PIXI/settings.html#ROUND_PIXELS>PIXI.settings.ROUND_PIXELS</a></p></div>
+To set the global default, change <a href=/pixi-api/@pixi/settings/PIXI/settings.html#ROUND_PIXELS>PIXI.settings.ROUND_PIXELS</a></p></div>
 
   
 
@@ -2495,9 +2400,9 @@ To set the global default, change <a href=/docs/@pixi/settings/PIXI/settings.htm
 <div class="member" id="text">
   
     <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#text">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#text">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2522,9 +2427,9 @@ To set the global default, change <a href=/docs/@pixi/settings/PIXI/settings.htm
 <div class="member" id="textHeight">
   
     <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#textHeight">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#textHeight">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2550,9 +2455,9 @@ which is defined in the style object.</p></div>
 <div class="member" id="textWidth">
   
     <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#textWidth">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#textWidth">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2578,9 +2483,9 @@ which is defined in the style object.</p></div>
 <div class="member" id="tint">
   
     <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#tint">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#tint">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2589,37 +2494,10 @@ which is defined in the style object.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">tint: number</code></pre>
+<pre class="signature__container"><code class="signature">tint: number = 0xffffff</code></pre>
 
 
   <div class="member__brief"><p>The tint of the BitmapText object.</p></div>
-  <div class="member__description"></div>
-
-  
-
-  
-</div>
-
-  
-    
-<div class="member" id="font">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#font">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>font</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">font: object</code></pre>
-
-
-  <div class="member__brief"></div>
   <div class="member__description"></div>
 
   
@@ -2638,101 +2516,12 @@ which is defined in the style object.</p></div>
 
   
     
-<div class="member" id="registerFont">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#registerFont">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>registerFont</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">static registerFont(data: string | XMLDocument | <a href="/docs/@pixi/text-bitmap/PIXI/BitmapFontData.html">PIXI.BitmapFontData</a>, textures: <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a> | <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>[] | Dict) → {<a href="/docs/@pixi/text-bitmap/PIXI/BitmapFont.html">PIXI.BitmapFont</a>}</code></pre>
-
-
-  <div class="member__brief"><p>Register a bitmap font with data and a texture.</p></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          data
-        </td>
-        <td class="member-parameter__type">
-          string | XMLDocument | <a href="/docs/@pixi/text-bitmap/PIXI/BitmapFontData.html">PIXI.BitmapFontData</a>
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          textures
-        </td>
-        <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a> | <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>[] | Dict
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          <a href="/docs/@pixi/text-bitmap/PIXI/BitmapFont.html">PIXI.BitmapFont</a>
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
 <div class="member" id="getLocalBounds">
   
     <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#getLocalBounds">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#getLocalBounds">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2741,7 +2530,7 @@ which is defined in the style object.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">getLocalBounds() → {<a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>}</code></pre>
+<pre class="signature__container"><code class="signature">getLocalBounds() → {<a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>}</code></pre>
 
 
   <div class="member__brief"><p>Validates text before calling parent's getLocalBounds</p></div>
@@ -2763,7 +2552,7 @@ which is defined in the style object.</p></div>
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+          <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
         </td>
         <td class="member-return__description"><p>The rectangular bounding area</p></td>
       </tr>
@@ -2779,9 +2568,9 @@ which is defined in the style object.</p></div>
 <div class="member" id="updateText">
   
     <section class="member__title">
-      <a href="/docs/@pixi/text-bitmap/PIXI/BitmapText.html#updateText">
+      <a href="/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#updateText">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2845,37 +2634,33 @@ if the BitmapFont is regenerated.</p></div>
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#fonts>fonts</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#_roundPixels>_roundPixels</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#_roundPixels>_roundPixels</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#align>align</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#align>align</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#anchor>anchor</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#anchor>anchor</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#dirty>dirty</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#dirty>dirty</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#fontName>fontName</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#fontName>fontName</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#fontSize>fontSize</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#fontSize>fontSize</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#letterSpacing>letterSpacing</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#letterSpacing>letterSpacing</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#maxLineHeight>maxLineHeight</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#maxLineHeight>maxLineHeight</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#maxWidth>maxWidth</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#maxWidth>maxWidth</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#roundPixels>roundPixels</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#roundPixels>roundPixels</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#text>text</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#text>text</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#textHeight>textHeight</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#textHeight>textHeight</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#textWidth>textWidth</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#textWidth>textWidth</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#tint>tint</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#font>font</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#tint>tint</a></li>
     
   </ul>
 </div>
@@ -2887,11 +2672,9 @@ if the BitmapFont is regenerated.</p></div>
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#registerFont>registerFont</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#getLocalBounds>getLocalBounds</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#getLocalBounds>getLocalBounds</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/text-bitmap/PIXI/BitmapText.html#updateText>updateText</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/text-bitmap/PIXI/BitmapText.html#updateText>updateText</a></li>
     
   </ul>
 </div>

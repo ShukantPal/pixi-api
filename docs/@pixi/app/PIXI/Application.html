@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>webdoc: Application</title>
 
-    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
@@ -14,10 +14,10 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       window.appData = {
-        siteRoot: "docs",
+        siteRoot: "pixi-api",
       };
     </script>
-    <script src="/docs/scripts/default-template.js"></script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -36,7 +36,7 @@
         &gt;
       
       
-        <a href=/docs/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
+        <a href=/pixi-api/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
         &gt;
       
       <span>Application</span>
@@ -165,7 +165,7 @@ options.sharedTicker to true in case that it is already started. Stop it by your
         <td class="member-parameter__description"><p>The canvas to use as a view, optional.</p></td>
       </tr><tr class="member-parameter">
         <td class="member-parameter__name">
-          options.transparent
+          options.useContextAlpha
         </td>
         <td class="member-parameter__type">
           boolean
@@ -176,9 +176,11 @@ options.sharedTicker to true in case that it is already started. Stop it by your
           
         </td>
         <td class="member-parameter__default">
-          false
+          true
         </td>
-        <td class="member-parameter__description"><p>If the render view is transparent.</p></td>
+        <td class="member-parameter__description"><p>Pass-through value for canvas' context <code>alpha</code> property.
+If you want to set transparency, please use <code>backgroundAlpha</code>. This option is for cases where the
+canvas needs to be opaque, possibly for performance reasons on some older devices.</p></td>
       </tr><tr class="member-parameter">
         <td class="member-parameter__name">
           options.autoDensity
@@ -280,6 +282,22 @@ it is ignored.</p></td>
         </td>
         <td class="member-parameter__description"><p>The background color of the rendered area
 (shown if not transparent).</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.backgroundAlpha
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          1
+        </td>
+        <td class="member-parameter__description"><p>Value from 0 (fully transparent) to 1 (fully opaque).</p></td>
       </tr><tr class="member-parameter">
         <td class="member-parameter__name">
           options.clearBeforeRender
@@ -391,8 +409,8 @@ The system ticker will always run before both the shared ticker and the app tick
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties from Application</h3>
     </section>
@@ -403,12 +421,12 @@ The system ticker will always run before both the shared ticker and the app tick
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/loaders/PIXI/Loader.html>PIXI.Loader</a>
+                  <a href=/pixi-api/@pixi/loaders/PIXI/Loader.html>PIXI.Loader</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/app/PIXI/Application.html#loader">loader</a>
+                  <a href="/pixi-api/@pixi/app/PIXI/Application.html#loader">loader</a>
                 </section>
                 <section>
                   
@@ -419,12 +437,12 @@ The system ticker will always run before both the shared ticker and the app tick
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a> | <a href=/docs/@pixi/canvas-renderer/PIXI/CanvasRenderer.html>PIXI.CanvasRenderer</a>
+                  <a href=/pixi-api/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a> | <a href=/pixi-api/@pixi/canvas-renderer/PIXI/CanvasRenderer.html>PIXI.CanvasRenderer</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/app/PIXI/Application.html#renderer">renderer</a>
+                  <a href="/pixi-api/@pixi/app/PIXI/Application.html#renderer">renderer</a>
                 </section>
                 <section>
                   
@@ -440,7 +458,7 @@ The system ticker will always run before both the shared ticker and the app tick
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/app/PIXI/Application.html#resizeTo">resizeTo</a>
+                  <a href="/pixi-api/@pixi/app/PIXI/Application.html#resizeTo">resizeTo</a>
                 </section>
                 <section>
                   
@@ -451,12 +469,12 @@ The system ticker will always run before both the shared ticker and the app tick
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/app/PIXI/Application.html#screen">screen</a>
+                  <a href="/pixi-api/@pixi/app/PIXI/Application.html#screen">screen</a>
                 </section>
                 <section>
                   
@@ -467,12 +485,12 @@ The system ticker will always run before both the shared ticker and the app tick
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Container.html>PIXI.Container</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/app/PIXI/Application.html#stage">stage</a>
+                  <a href="/pixi-api/@pixi/app/PIXI/Application.html#stage">stage</a>
                 </section>
                 <section>
                   
@@ -483,12 +501,12 @@ The system ticker will always run before both the shared ticker and the app tick
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/ticker/PIXI/Ticker.html>PIXI.Ticker</a>
+                  <a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html>PIXI.Ticker</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/app/PIXI/Application.html#ticker">ticker</a>
+                  <a href="/pixi-api/@pixi/app/PIXI/Application.html#ticker">ticker = PIXI.Ticker.shared</a>
                 </section>
                 <section>
                   
@@ -506,7 +524,7 @@ The system ticker will always run before both the shared ticker and the app tick
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/app/PIXI/Application.html#view">view</a>
+                  <a href="/pixi-api/@pixi/app/PIXI/Application.html#view">view</a>
                 </section>
                 <section>
                   
@@ -527,8 +545,8 @@ The system ticker will always run before both the shared ticker and the app tick
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods from Application</h3>
     </section>
@@ -544,7 +562,7 @@ The system ticker will always run before both the shared ticker and the app tick
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/app/PIXI/Application.html#registerPlugin">static registerPlugin(plugin: <a href="/docs/@pixi/app/PIXI/Application/Plugin.html">PIXI.Application.Plugin</a>)</a>
+                  <a href="/pixi-api/@pixi/app/PIXI/Application.html#registerPlugin">static registerPlugin(plugin: <a href="/pixi-api/@pixi/app/PIXI/IApplicationPlugin.html">PIXI.IApplicationPlugin</a>)</a>
                 </section>
                 <section>
                   
@@ -560,43 +578,7 @@ The system ticker will always run before both the shared ticker and the app tick
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/app/PIXI/Application.html#start">static start()</a>
-                </section>
-                <section>
-                  
-                    <p>Convenience method for starting the render.</p>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  void
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/app/PIXI/Application.html#stop">static stop()</a>
-                </section>
-                <section>
-                  
-                    <p>Convenience method for stopping the render.</p>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  void
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/app/PIXI/Application.html#destroy">destroy(removeView: Boolean, stageOptions: object | boolean)</a>
+                  <a href="/pixi-api/@pixi/app/PIXI/Application.html#destroy">destroy(removeView: Boolean, stageOptions: object | boolean)</a>
                 </section>
                 <section>
                   
@@ -612,7 +594,7 @@ The system ticker will always run before both the shared ticker and the app tick
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/app/PIXI/Application.html#render">render()</a>
+                  <a href="/pixi-api/@pixi/app/PIXI/Application.html#render">render()</a>
                 </section>
                 <section>
                   
@@ -630,9 +612,45 @@ The system ticker will always run before both the shared ticker and the app tick
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/app/PIXI/Application.html#resize">resize()</a>
+                  <a href="/pixi-api/@pixi/app/PIXI/Application.html#resize">resize()</a>
                 </section>
                 <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/app/PIXI/Application.html#start">start()</a>
+                </section>
+                <section>
+                  
+                    <p>Convenience method for starting the render.</p>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  void
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/app/PIXI/Application.html#stop">stop()</a>
+                </section>
+                <section>
+                  
+                    <p>Convenience method for stopping the render.</p>
                   
                 </section>
               </td>
@@ -665,9 +683,9 @@ The system ticker will always run before both the shared ticker and the app tick
 <div class="member" id="loader">
   
     <section class="member__title">
-      <a href="/docs/@pixi/app/PIXI/Application.html#loader">
+      <a href="/pixi-api/@pixi/app/PIXI/Application.html#loader">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -676,7 +694,7 @@ The system ticker will always run before both the shared ticker and the app tick
     </section>
   
   
-<pre class="signature__container"><code class="signature">loader: <a href=/docs/@pixi/loaders/PIXI/Loader.html>PIXI.Loader</a></code></pre>
+<pre class="signature__container"><code class="signature">loader: <a href=/pixi-api/@pixi/loaders/PIXI/Loader.html>PIXI.Loader</a></code></pre>
 
 
   <div class="member__brief"></div>
@@ -692,9 +710,9 @@ The system ticker will always run before both the shared ticker and the app tick
 <div class="member" id="renderer">
   
     <section class="member__title">
-      <a href="/docs/@pixi/app/PIXI/Application.html#renderer">
+      <a href="/pixi-api/@pixi/app/PIXI/Application.html#renderer">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -703,7 +721,7 @@ The system ticker will always run before both the shared ticker and the app tick
     </section>
   
   
-<pre class="signature__container"><code class="signature">renderer: <a href=/docs/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a> | <a href=/docs/@pixi/canvas-renderer/PIXI/CanvasRenderer.html>PIXI.CanvasRenderer</a></code></pre>
+<pre class="signature__container"><code class="signature">renderer: <a href=/pixi-api/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a> | <a href=/pixi-api/@pixi/canvas-renderer/PIXI/CanvasRenderer.html>PIXI.CanvasRenderer</a></code></pre>
 
 
   <div class="member__brief"></div>
@@ -719,9 +737,9 @@ The system ticker will always run before both the shared ticker and the app tick
 <div class="member" id="resizeTo">
   
     <section class="member__title">
-      <a href="/docs/@pixi/app/PIXI/Application.html#resizeTo">
+      <a href="/pixi-api/@pixi/app/PIXI/Application.html#resizeTo">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -747,9 +765,9 @@ renderer's view element to match width and height.</p></div>
 <div class="member" id="screen">
   
     <section class="member__title">
-      <a href="/docs/@pixi/app/PIXI/Application.html#screen">
+      <a href="/pixi-api/@pixi/app/PIXI/Application.html#screen">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -758,7 +776,7 @@ renderer's view element to match width and height.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">screen: <a href=/docs/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a></code></pre>
+<pre class="signature__container"><code class="signature">screen: <a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a></code></pre>
 
 
   <div class="member__brief"></div>
@@ -774,9 +792,9 @@ renderer's view element to match width and height.</p></div>
 <div class="member" id="stage">
   
     <section class="member__title">
-      <a href="/docs/@pixi/app/PIXI/Application.html#stage">
+      <a href="/pixi-api/@pixi/app/PIXI/Application.html#stage">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -785,7 +803,7 @@ renderer's view element to match width and height.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">stage: <a href=/docs/@pixi/display/PIXI/Container.html>PIXI.Container</a></code></pre>
+<pre class="signature__container"><code class="signature">stage: <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a></code></pre>
 
 
   <div class="member__brief"></div>
@@ -801,9 +819,9 @@ renderer's view element to match width and height.</p></div>
 <div class="member" id="ticker">
   
     <section class="member__title">
-      <a href="/docs/@pixi/app/PIXI/Application.html#ticker">
+      <a href="/pixi-api/@pixi/app/PIXI/Application.html#ticker">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -812,7 +830,7 @@ renderer's view element to match width and height.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">ticker: <a href=/docs/@pixi/ticker/PIXI/Ticker.html>PIXI.Ticker</a></code></pre>
+<pre class="signature__container"><code class="signature">ticker: <a href=/pixi-api/@pixi/ticker/PIXI/Ticker.html>PIXI.Ticker</a> = PIXI.Ticker.shared</code></pre>
 
 
   <div class="member__brief"><p>Ticker for doing render updates.</p></div>
@@ -828,9 +846,9 @@ renderer's view element to match width and height.</p></div>
 <div class="member" id="view">
   
     <section class="member__title">
-      <a href="/docs/@pixi/app/PIXI/Application.html#view">
+      <a href="/pixi-api/@pixi/app/PIXI/Application.html#view">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -864,9 +882,9 @@ renderer's view element to match width and height.</p></div>
 <div class="member" id="registerPlugin">
   
     <section class="member__title">
-      <a href="/docs/@pixi/app/PIXI/Application.html#registerPlugin">
+      <a href="/pixi-api/@pixi/app/PIXI/Application.html#registerPlugin">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -875,7 +893,7 @@ renderer's view element to match width and height.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">static registerPlugin(plugin: <a href="/docs/@pixi/app/PIXI/Application/Plugin.html">PIXI.Application.Plugin</a>) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">static registerPlugin(plugin: <a href="/pixi-api/@pixi/app/PIXI/IApplicationPlugin.html">PIXI.IApplicationPlugin</a>) → {void}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -901,7 +919,7 @@ renderer's view element to match width and height.</p></div>
           plugin
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/app/PIXI/Application/Plugin.html">PIXI.Application.Plugin</a>
+          <a href="/pixi-api/@pixi/app/PIXI/IApplicationPlugin.html">PIXI.IApplicationPlugin</a>
         </td>
         
         
@@ -940,110 +958,12 @@ renderer's view element to match width and height.</p></div>
 
   
     
-<div class="member" id="start">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/app/PIXI/Application.html#start">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>start</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">static start() → {void}</code></pre>
-
-
-  <div class="member__brief"><p>Convenience method for starting the render.</p></div>
-  <div class="member__description"></div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          void
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="stop">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/app/PIXI/Application.html#stop">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>stop</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">static stop() → {void}</code></pre>
-
-
-  <div class="member__brief"><p>Convenience method for stopping the render.</p></div>
-  <div class="member__description"></div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          void
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
 <div class="member" id="destroy">
   
     <section class="member__title">
-      <a href="/docs/@pixi/app/PIXI/Application.html#destroy">
+      <a href="/pixi-api/@pixi/app/PIXI/Application.html#destroy">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1194,9 +1114,9 @@ to true. Should it destroy the base texture of the child sprite</p></td>
 <div class="member" id="render">
   
     <section class="member__title">
-      <a href="/docs/@pixi/app/PIXI/Application.html#render">
+      <a href="/pixi-api/@pixi/app/PIXI/Application.html#render">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1243,9 +1163,9 @@ to true. Should it destroy the base texture of the child sprite</p></td>
 <div class="member" id="resize">
   
     <section class="member__title">
-      <a href="/docs/@pixi/app/PIXI/Application.html#resize">
+      <a href="/pixi-api/@pixi/app/PIXI/Application.html#resize">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1261,6 +1181,104 @@ to true. Should it destroy the base texture of the child sprite</p></td>
   <div class="member__description"><p>Execute an immediate resize on the renderer, this is not
 throttled and can be expensive to call many times in a row.
 Will resize only if <code>resizeTo</code> property is set.</p></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="start">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/app/PIXI/Application.html#start">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>start</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">start() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Convenience method for starting the render.</p></div>
+  <div class="member__description"></div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="stop">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi/app/PIXI/Application.html#stop">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>stop</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">stop() → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Convenience method for stopping the render.</p></div>
+  <div class="member__description"></div>
 
   
 
@@ -1310,19 +1328,19 @@ Will resize only if <code>resizeTo</code> property is set.</p></div>
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/app/PIXI/Application.html#loader>loader</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/app/PIXI/Application.html#loader>loader</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/app/PIXI/Application.html#renderer>renderer</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/app/PIXI/Application.html#renderer>renderer</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/app/PIXI/Application.html#resizeTo>resizeTo</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/app/PIXI/Application.html#resizeTo>resizeTo</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/app/PIXI/Application.html#screen>screen</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/app/PIXI/Application.html#screen>screen</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/app/PIXI/Application.html#stage>stage</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/app/PIXI/Application.html#stage>stage</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/app/PIXI/Application.html#ticker>ticker</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/app/PIXI/Application.html#ticker>ticker</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/app/PIXI/Application.html#view>view</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/app/PIXI/Application.html#view>view</a></li>
     
   </ul>
 </div>
@@ -1334,17 +1352,17 @@ Will resize only if <code>resizeTo</code> property is set.</p></div>
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/app/PIXI/Application.html#registerPlugin>registerPlugin</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/app/PIXI/Application.html#registerPlugin>registerPlugin</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/app/PIXI/Application.html#start>start</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/app/PIXI/Application.html#destroy>destroy</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/app/PIXI/Application.html#stop>stop</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/app/PIXI/Application.html#render>render</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/app/PIXI/Application.html#destroy>destroy</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/app/PIXI/Application.html#resize>resize</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/app/PIXI/Application.html#render>render</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/app/PIXI/Application.html#start>start</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/app/PIXI/Application.html#resize>resize</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/app/PIXI/Application.html#stop>stop</a></li>
     
   </ul>
 </div>

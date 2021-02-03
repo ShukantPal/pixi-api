@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>webdoc: BaseTexture</title>
 
-    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
@@ -14,10 +14,10 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       window.appData = {
-        siteRoot: "docs",
+        siteRoot: "pixi-api",
       };
     </script>
-    <script src="/docs/scripts/default-template.js"></script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -36,14 +36,14 @@
         &gt;
       
       
-        <a href=/docs/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
+        <a href=/pixi-api/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
         &gt;
       
       <span>BaseTexture</span>
     </div>
     <h1 class="document__title">PIXI.BaseTexture</h1>
     
-<pre class="signature__container"><code class="signature">class BaseTexture extends <a href="/docs/@pixi/utils/PIXI/utils/EventEmitter.html">PIXI.utils.EventEmitter</a></code></pre>
+<pre class="signature__container"><code class="signature">class BaseTexture extends <a href="/pixi-api/@pixi/utils/PIXI/utils/EventEmitter.html">PIXI.utils.EventEmitter</a></code></pre>
 
 
     <div class="document__brief"></div>
@@ -53,6 +53,275 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
 
     
       
+<div class="members">
+  <h2 class="members__category">Constructor</h2>
+  <hr />
+
+  
+    
+<div class="member" id="constructor">
+  
+  
+<pre class="signature__container"><code class="signature">new PIXI.BaseTexture(resource: <a href="/pixi-api/@pixi/core/PIXI/Resource.html">PIXI.Resource</a> | string | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement, options: Object) → {}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        <th class="member-parameter-header__attributes">Attributes</th>
+        <th class="member-parameter-header__default">Default</th>
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          resource
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Resource.html">PIXI.Resource</a> | string | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          null
+        </td>
+        <td class="member-parameter__description"><p>The current resource to use, for things that aren't Resource objects, will be converted
+into a Resource.</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options
+        </td>
+        <td class="member-parameter__type">
+          Object
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Collection of options</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.mipmap
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/constants/PIXI/MIPMAP_MODES.html">PIXI.MIPMAP_MODES</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.settings.MIPMAP_TEXTURES
+        </td>
+        <td class="member-parameter__description"><p>If mipmapping is enabled for texture</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.anisotropicLevel
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.settings.ANISOTROPIC_LEVEL
+        </td>
+        <td class="member-parameter__description"><p>Anisotropic filtering level of texture</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.wrapMode
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/constants/PIXI/WRAP_MODES.html">PIXI.WRAP_MODES</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.settings.WRAP_MODE
+        </td>
+        <td class="member-parameter__description"><p>Wrap mode for textures</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.scaleMode
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/constants/PIXI/SCALE_MODES.html">PIXI.SCALE_MODES</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.settings.SCALE_MODE
+        </td>
+        <td class="member-parameter__description"><p>Default scale mode, linear, nearest</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.format
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/constants/PIXI/FORMATS.html">PIXI.FORMATS</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.FORMATS.RGBA
+        </td>
+        <td class="member-parameter__description"><p>GL format type</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.type
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/constants/PIXI/TYPES.html">PIXI.TYPES</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.TYPES.UNSIGNED_BYTE
+        </td>
+        <td class="member-parameter__description"><p>GL data type</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.target
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/constants/PIXI/TARGETS.html">PIXI.TARGETS</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.TARGETS.TEXTURE_2D
+        </td>
+        <td class="member-parameter__description"><p>GL texture target</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.alphaMode
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/constants/PIXI/ALPHA_MODES.html">PIXI.ALPHA_MODES</a>
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          PIXI.ALPHA_MODES.UNPACK
+        </td>
+        <td class="member-parameter__description"><p>Pre multiply the image alpha</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.width
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>Width of the texture</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.height
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          0
+        </td>
+        <td class="member-parameter__description"><p>Height of the texture</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.resolution
+        </td>
+        <td class="member-parameter__type">
+          number
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Resolution of the base texture</p></td>
+      </tr><tr class="member-parameter">
+        <td class="member-parameter__name">
+          options.resourceOptions
+        </td>
+        <td class="member-parameter__type">
+          object
+        </td>
+        <td class="member-parameter__attributes">
+          <p>&lt;optional&gt;</p>
+          
+          
+        </td>
+        <td class="member-parameter__default">
+          
+        </td>
+        <td class="member-parameter__description"><p>Optional resource options,
+see <a href=/pixi-api/@pixi/core/PIXI/autoDetectResource.html>autoDetectResource</a></p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+</div>
+
+  
+</div>
+
     
 
     
@@ -67,8 +336,8 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties from BaseTexture</h3>
     </section>
@@ -84,7 +353,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#_globalBatch">static _globalBatch</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#_globalBatch">static _globalBatch = 0</a>
                 </section>
                 <section>
                   
@@ -102,7 +371,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#_batchEnabled">_batchEnabled</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#_batchEnabled">_batchEnabled</a>
                 </section>
                 <section>
                   
@@ -120,7 +389,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#_batchLocation">_batchLocation</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#_batchLocation">_batchLocation</a>
                 </section>
                 <section>
                   
@@ -133,34 +402,16 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  number
+                  <a href=/pixi-api/@pixi/constants/PIXI/ALPHA_MODES.html>PIXI.ALPHA_MODES</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#_id">_id</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#alphaMode">alphaMode = PIXI.ALPHA_MODES.UNPACK</a>
                 </section>
                 <section>
                   
-                    <p>Batch local field, stores current texture location</p>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  <a href=/docs/@pixi/constants/PIXI/ALPHA_MODES.html>PIXI.ALPHA_MODES</a>
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#alphaMode">alphaMode</a>
-                </section>
-                <section>
-                  
-                    <p>How to treat premultiplied alpha, see <a href=/docs/@pixi/constants/PIXI/ALPHA_MODES.html>PIXI.ALPHA_MODES</a>.</p>
+                    <p>How to treat premultiplied alpha, see <a href=/pixi-api/@pixi/constants/PIXI/ALPHA_MODES.html>PIXI.ALPHA_MODES</a>.</p>
                   
                 </section>
               </td>
@@ -174,7 +425,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#anisotropicLevel">anisotropicLevel</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#anisotropicLevel">anisotropicLevel = PIXI.settings.ANISOTROPIC_LEVEL</a>
                 </section>
                 <section>
                   
@@ -192,7 +443,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#cacheId">cacheId</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#cacheId">cacheId</a>
                 </section>
                 <section>
                   
@@ -210,7 +461,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#destroyed">destroyed</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#destroyed">destroyed</a>
                 </section>
                 <section>
                   
@@ -228,7 +479,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#dirtyId">dirtyId</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#dirtyId">dirtyId</a>
                 </section>
                 <section>
                   
@@ -239,12 +490,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/constants/PIXI/FORMATS.html>PIXI.FORMATS</a>
+                  <a href=/pixi-api/@pixi/constants/PIXI/FORMATS.html>PIXI.FORMATS</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#format">format</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#format">format = PIXI.FORMATS.RGBA</a>
                 </section>
                 <section>
                   
@@ -257,28 +508,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  boolean
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#hasLoaded">hasLoaded</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
                   number
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#height">height</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#height">height</a>
                 </section>
                 <section>
                   
@@ -291,28 +526,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  string
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#imageUrl">imageUrl</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
                   boolean
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#isPowerOfTwo">isPowerOfTwo</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#isPowerOfTwo">isPowerOfTwo = false</a>
                 </section>
                 <section>
                   
@@ -323,12 +542,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/constants/PIXI/MIPMAP_MODES.html>PIXI.MIPMAP_MODES</a>
+                  <a href=/pixi-api/@pixi/constants/PIXI/MIPMAP_MODES.html>PIXI.MIPMAP_MODES</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#mipmap">mipmap</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#mipmap">mipmap = PIXI.settings.MIPMAP_TEXTURES</a>
                 </section>
                 <section>
                   
@@ -341,32 +560,16 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/core/PIXI/BaseTexture.html>PIXI.BaseTexture</a>
+                  <a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html>PIXI.BaseTexture</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#parentTextureArray">parentTextureArray</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#parentTextureArray">parentTextureArray</a>
                 </section>
                 <section>
                   
                     <p>Whether its a part of another texture, handled by ArrayResource or CubeResource</p>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  boolean
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#premultiplyAlpha">premultiplyAlpha</a>
-                </section>
-                <section>
                   
                 </section>
               </td>
@@ -380,7 +583,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#realHeight">realHeight</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#realHeight">realHeight</a>
                 </section>
                 <section>
                   
@@ -398,7 +601,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#realWidth">realWidth</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#realWidth">realWidth</a>
                 </section>
                 <section>
                   
@@ -416,7 +619,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#resolution">resolution</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#resolution">resolution = PIXI.settings.RESOLUTION</a>
                 </section>
                 <section>
                   
@@ -429,12 +632,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/core/PIXI/Resource.html>PIXI.Resource</a>
+                  <a href=/pixi-api/@pixi/core/PIXI/Resource.html>PIXI.Resource</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#resource">resource</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#resource">resource</a>
                 </section>
                 <section>
                   
@@ -445,12 +648,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/constants/PIXI/SCALE_MODES.html>PIXI.SCALE_MODES</a>
+                  <a href=/pixi-api/@pixi/constants/PIXI/SCALE_MODES.html>PIXI.SCALE_MODES</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#scaleMode">scaleMode</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#scaleMode">scaleMode = PIXI.settings.SCALE_MODE</a>
                 </section>
                 <section>
                   
@@ -463,28 +666,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | SVGElement
+                  <a href=/pixi-api/@pixi/constants/PIXI/TARGETS.html>PIXI.TARGETS</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#source">source</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  <a href=/docs/@pixi/constants/PIXI/TARGETS.html>PIXI.TARGETS</a>
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#target">target</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#target">target = PIXI.TARGETS.TEXTURE_2D</a>
                 </section>
                 <section>
                   
@@ -502,7 +689,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#textureCacheIds">textureCacheIds</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#textureCacheIds">textureCacheIds</a>
                 </section>
                 <section>
                   
@@ -513,12 +700,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/constants/PIXI/TYPES.html>PIXI.TYPES</a>
+                  <a href=/pixi-api/@pixi/constants/PIXI/TYPES.html>PIXI.TYPES</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#type">type</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#type">type = PIXI.TYPES.UNSIGNED_BYTE</a>
                 </section>
                 <section>
                   
@@ -536,7 +723,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#valid">valid</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#valid">valid</a>
                 </section>
                 <section>
                   
@@ -552,7 +739,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#width">width</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#width">width</a>
                 </section>
                 <section>
                   
@@ -570,7 +757,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#wrapMode">wrapMode</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#wrapMode">wrapMode</a>
                 </section>
                 <section>
                   
@@ -586,7 +773,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#dirtyStyleId">protected dirtyStyleId</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#dirtyStyleId">protected dirtyStyleId</a>
                 </section>
                 <section>
                   
@@ -604,7 +791,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#touched">protected touched</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#touched">protected touched</a>
                 </section>
                 <section>
                   
@@ -622,7 +809,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#uid">protected uid</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#uid">protected uid</a>
                 </section>
                 <section>
                   
@@ -645,8 +832,8 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods from BaseTexture</h3>
     </section>
@@ -662,7 +849,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#addToCache">static addToCache(baseTexture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, id: string)</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#addToCache">static addToCache(baseTexture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, id: string)</a>
                 </section>
                 <section>
                   
@@ -675,12 +862,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#from">static from(source: string | HTMLImageElement | HTMLCanvasElement | SVGElement | HTMLVideoElement, options: object, strict: boolean)</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#from">static from(source: string | HTMLImageElement | HTMLCanvasElement | SVGElement | HTMLVideoElement, options: object, strict: boolean)</a>
                 </section>
                 <section>
                   
@@ -691,12 +878,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#fromBuffer">static fromBuffer(buffer: Float32Array | Uint8Array, width: number, height: number, options: object)</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#fromBuffer">static fromBuffer(buffer: Float32Array | Uint8Array, width: number, height: number, options: object)</a>
                 </section>
                 <section>
                   
@@ -707,44 +894,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a> | unknown
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#fromCanvas">static fromCanvas(canvas: HTMLCanvasElement, scaleMode: number)</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#fromSVG">static fromSVG(canvas: HTMLCanvasElement, crossorigin: string | boolean, scaleMode: number, scale: number)</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a> | unknown
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#removeFromCache">static removeFromCache(baseTexture: string | <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>)</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#removeFromCache">static removeFromCache(baseTexture: string | <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>)</a>
                 </section>
                 <section>
                   
@@ -757,12 +912,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#castToBaseTexture">castToBaseTexture()</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#castToBaseTexture">castToBaseTexture()</a>
                 </section>
                 <section>
                   
@@ -780,7 +935,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#destroy">destroy()</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#destroy">destroy()</a>
                 </section>
                 <section>
                   
@@ -796,7 +951,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#dispose">dispose()</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#dispose">dispose()</a>
                 </section>
                 <section>
                   
@@ -807,12 +962,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/canvas-sprite/PIXI/ICanvasImageSource.html">PIXI.ICanvasImageSource</a>
+                  <a href="/pixi-api/@pixi/canvas-sprite/PIXI/ICanvasImageSource.html">PIXI.ICanvasImageSource</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#getDrawableSource">getDrawableSource()</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#getDrawableSource">getDrawableSource()</a>
                 </section>
                 <section>
                   
@@ -823,28 +978,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  void
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#loadSource">loadSource(image: string | HTMLImageElement)</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#setRealSize">setRealSize(realWidth: number, realHeight: number, resolution: number)</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#setRealSize">setRealSize(realWidth: number, realHeight: number, resolution: number)</a>
                 </section>
                 <section>
                   
@@ -857,12 +996,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#setResolution">setResolution(resolution: number)</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#setResolution">setResolution(resolution: number)</a>
                 </section>
                 <section>
                   
@@ -875,12 +1014,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#setResource">setResource(resource: <a href="/docs/@pixi/core/PIXI/Resource.html">PIXI.Resource</a>)</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#setResource">setResource(resource: <a href="/pixi-api/@pixi/core/PIXI/Resource.html">PIXI.Resource</a>)</a>
                 </section>
                 <section>
                   
@@ -893,12 +1032,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#setSize">setSize(width: number, height: number, resolution: number)</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#setSize">setSize(width: number, height: number, resolution: number)</a>
                 </section>
                 <section>
                   
@@ -911,12 +1050,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#setStyle">setStyle(scaleMode: <a href="/docs/@pixi/constants/PIXI/SCALE_MODES.html">PIXI.SCALE_MODES</a>, mipmap: <a href="/docs/@pixi/constants/PIXI/MIPMAP_MODES.html">PIXI.MIPMAP_MODES</a>)</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#setStyle">setStyle(scaleMode: <a href="/pixi-api/@pixi/constants/PIXI/SCALE_MODES.html">PIXI.SCALE_MODES</a>, mipmap: <a href="/pixi-api/@pixi/constants/PIXI/MIPMAP_MODES.html">PIXI.MIPMAP_MODES</a>)</a>
                 </section>
                 <section>
                   
@@ -934,7 +1073,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/core/PIXI/BaseTexture.html#update">update()</a>
+                  <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#update">update()</a>
                 </section>
                 <section>
                   
@@ -973,9 +1112,9 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
 <div class="member" id="_globalBatch">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#_globalBatch">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#_globalBatch">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -984,7 +1123,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">static _globalBatch: number</code></pre>
+<pre class="signature__container"><code class="signature">static _globalBatch: number = 0</code></pre>
 
 
   <div class="member__brief"><p>Global number of the texture batch, used by multi-texture renderers</p></div>
@@ -1000,9 +1139,9 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
 <div class="member" id="_batchEnabled">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#_batchEnabled">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#_batchEnabled">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1027,9 +1166,9 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
 <div class="member" id="_batchLocation">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#_batchLocation">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#_batchLocation">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1051,39 +1190,12 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
 
   
     
-<div class="member" id="_id">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#_id">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>_id</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">_id: number</code></pre>
-
-
-  <div class="member__brief"><p>Batch local field, stores current texture location</p></div>
-  <div class="member__description"></div>
-
-  
-
-  
-</div>
-
-  
-    
 <div class="member" id="alphaMode">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#alphaMode">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#alphaMode">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1092,10 +1204,10 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">alphaMode: <a href=/docs/@pixi/constants/PIXI/ALPHA_MODES.html>PIXI.ALPHA_MODES</a></code></pre>
+<pre class="signature__container"><code class="signature">alphaMode: <a href=/pixi-api/@pixi/constants/PIXI/ALPHA_MODES.html>PIXI.ALPHA_MODES</a> = PIXI.ALPHA_MODES.UNPACK</code></pre>
 
 
-  <div class="member__brief"><p>How to treat premultiplied alpha, see <a href=/docs/@pixi/constants/PIXI/ALPHA_MODES.html>PIXI.ALPHA_MODES</a>.</p></div>
+  <div class="member__brief"><p>How to treat premultiplied alpha, see <a href=/pixi-api/@pixi/constants/PIXI/ALPHA_MODES.html>PIXI.ALPHA_MODES</a>.</p></div>
   <div class="member__description"></div>
 
   
@@ -1108,9 +1220,9 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
 <div class="member" id="anisotropicLevel">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#anisotropicLevel">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#anisotropicLevel">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1119,7 +1231,7 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">anisotropicLevel: number</code></pre>
+<pre class="signature__container"><code class="signature">anisotropicLevel: number = PIXI.settings.ANISOTROPIC_LEVEL</code></pre>
 
 
   <div class="member__brief"><p>Anisotropic filtering level of texture</p></div>
@@ -1135,9 +1247,9 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
 <div class="member" id="cacheId">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#cacheId">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#cacheId">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1162,9 +1274,9 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
 <div class="member" id="destroyed">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#destroyed">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#destroyed">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1189,9 +1301,9 @@ Therefore you can have many textures all using a single BaseTexture</p></div>
 <div class="member" id="dirtyId">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#dirtyId">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#dirtyId">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1217,9 +1329,9 @@ Please call <code>update()</code> to increment it.</p></div>
 <div class="member" id="format">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#format">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#format">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1228,7 +1340,7 @@ Please call <code>update()</code> to increment it.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">format: <a href=/docs/@pixi/constants/PIXI/FORMATS.html>PIXI.FORMATS</a></code></pre>
+<pre class="signature__container"><code class="signature">format: <a href=/pixi-api/@pixi/constants/PIXI/FORMATS.html>PIXI.FORMATS</a> = PIXI.FORMATS.RGBA</code></pre>
 
 
   <div class="member__brief"><p>The pixel format of the texture</p></div>
@@ -1241,39 +1353,12 @@ Please call <code>update()</code> to increment it.</p></div>
 
   
     
-<div class="member" id="hasLoaded">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#hasLoaded">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>hasLoaded</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">hasLoaded: boolean</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-
-  
-</div>
-
-  
-    
 <div class="member" id="height">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#height">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#height">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1295,39 +1380,12 @@ Please call <code>update()</code> to increment it.</p></div>
 
   
     
-<div class="member" id="imageUrl">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#imageUrl">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>imageUrl</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">imageUrl: string</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-
-  
-</div>
-
-  
-    
 <div class="member" id="isPowerOfTwo">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#isPowerOfTwo">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#isPowerOfTwo">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1336,7 +1394,7 @@ Please call <code>update()</code> to increment it.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">isPowerOfTwo: boolean</code></pre>
+<pre class="signature__container"><code class="signature">isPowerOfTwo: boolean = false</code></pre>
 
 
   <div class="member__brief"></div>
@@ -1353,9 +1411,9 @@ as you can</p></div>
 <div class="member" id="mipmap">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#mipmap">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#mipmap">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1364,7 +1422,7 @@ as you can</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">mipmap: <a href=/docs/@pixi/constants/PIXI/MIPMAP_MODES.html>PIXI.MIPMAP_MODES</a></code></pre>
+<pre class="signature__container"><code class="signature">mipmap: <a href=/pixi-api/@pixi/constants/PIXI/MIPMAP_MODES.html>PIXI.MIPMAP_MODES</a> = PIXI.settings.MIPMAP_TEXTURES</code></pre>
 
 
   <div class="member__brief"><p>Mipmap mode of the texture, affects downscaled images</p></div>
@@ -1380,9 +1438,9 @@ as you can</p></div>
 <div class="member" id="parentTextureArray">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#parentTextureArray">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#parentTextureArray">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1391,7 +1449,7 @@ as you can</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">parentTextureArray: <a href=/docs/@pixi/core/PIXI/BaseTexture.html>PIXI.BaseTexture</a></code></pre>
+<pre class="signature__container"><code class="signature">parentTextureArray: <a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html>PIXI.BaseTexture</a></code></pre>
 
 
   <div class="member__brief"><p>Whether its a part of another texture, handled by ArrayResource or CubeResource</p></div>
@@ -1404,39 +1462,12 @@ as you can</p></div>
 
   
     
-<div class="member" id="premultiplyAlpha">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#premultiplyAlpha">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>premultiplyAlpha</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">premultiplyAlpha: boolean</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-
-  
-</div>
-
-  
-    
 <div class="member" id="realHeight">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#realHeight">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#realHeight">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1461,9 +1492,9 @@ as you can</p></div>
 <div class="member" id="realWidth">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#realWidth">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#realWidth">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1488,9 +1519,9 @@ as you can</p></div>
 <div class="member" id="resolution">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#resolution">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#resolution">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1499,7 +1530,7 @@ as you can</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">resolution: number</code></pre>
+<pre class="signature__container"><code class="signature">resolution: number = PIXI.settings.RESOLUTION</code></pre>
 
 
   <div class="member__brief"><p>The resolution / device pixel ratio of the texture</p></div>
@@ -1515,9 +1546,9 @@ as you can</p></div>
 <div class="member" id="resource">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#resource">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#resource">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1526,7 +1557,7 @@ as you can</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">resource: <a href=/docs/@pixi/core/PIXI/Resource.html>PIXI.Resource</a></code></pre>
+<pre class="signature__container"><code class="signature">resource: <a href=/pixi-api/@pixi/core/PIXI/Resource.html>PIXI.Resource</a></code></pre>
 
 
   <div class="member__brief"></div>
@@ -1544,9 +1575,9 @@ resources.</p></div>
 <div class="member" id="scaleMode">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#scaleMode">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#scaleMode">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1555,7 +1586,7 @@ resources.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">scaleMode: <a href=/docs/@pixi/constants/PIXI/SCALE_MODES.html>PIXI.SCALE_MODES</a></code></pre>
+<pre class="signature__container"><code class="signature">scaleMode: <a href=/pixi-api/@pixi/constants/PIXI/SCALE_MODES.html>PIXI.SCALE_MODES</a> = PIXI.settings.SCALE_MODE</code></pre>
 
 
   <div class="member__brief"><p>The scale mode to apply when scaling this texture</p></div>
@@ -1568,39 +1599,12 @@ resources.</p></div>
 
   
     
-<div class="member" id="source">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#source">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>source</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">source: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | SVGElement</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-
-  
-</div>
-
-  
-    
 <div class="member" id="target">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#target">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#target">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1609,7 +1613,7 @@ resources.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">target: <a href=/docs/@pixi/constants/PIXI/TARGETS.html>PIXI.TARGETS</a></code></pre>
+<pre class="signature__container"><code class="signature">target: <a href=/pixi-api/@pixi/constants/PIXI/TARGETS.html>PIXI.TARGETS</a> = PIXI.TARGETS.TEXTURE_2D</code></pre>
 
 
   <div class="member__brief"><p>The target type</p></div>
@@ -1625,9 +1629,9 @@ resources.</p></div>
 <div class="member" id="textureCacheIds">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#textureCacheIds">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#textureCacheIds">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1653,9 +1657,9 @@ can have more than one ID, short name and longer full URL</p></div>
 <div class="member" id="type">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#type">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#type">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1664,7 +1668,7 @@ can have more than one ID, short name and longer full URL</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">type: <a href=/docs/@pixi/constants/PIXI/TYPES.html>PIXI.TYPES</a></code></pre>
+<pre class="signature__container"><code class="signature">type: <a href=/pixi-api/@pixi/constants/PIXI/TYPES.html>PIXI.TYPES</a> = PIXI.TYPES.UNSIGNED_BYTE</code></pre>
 
 
   <div class="member__brief"><p>The type of resource data</p></div>
@@ -1680,9 +1684,9 @@ can have more than one ID, short name and longer full URL</p></div>
 <div class="member" id="valid">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#valid">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#valid">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1707,9 +1711,9 @@ can have more than one ID, short name and longer full URL</p></div>
 <div class="member" id="width">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#width">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#width">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1734,9 +1738,9 @@ can have more than one ID, short name and longer full URL</p></div>
 <div class="member" id="wrapMode">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#wrapMode">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#wrapMode">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1769,9 +1773,9 @@ can have more than one ID, short name and longer full URL</p></div>
 <div class="member" id="dirtyStyleId">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#dirtyStyleId">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#dirtyStyleId">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1796,9 +1800,9 @@ can have more than one ID, short name and longer full URL</p></div>
 <div class="member" id="touched">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#touched">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#touched">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1823,9 +1827,9 @@ can have more than one ID, short name and longer full URL</p></div>
 <div class="member" id="uid">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#uid">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#uid">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1858,9 +1862,9 @@ can have more than one ID, short name and longer full URL</p></div>
 <div class="member" id="addToCache">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#addToCache">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#addToCache">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1869,7 +1873,7 @@ can have more than one ID, short name and longer full URL</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">static addToCache(baseTexture: <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, id: string) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">static addToCache(baseTexture: <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>, id: string) → {void}</code></pre>
 
 
   <div class="member__brief"><p>Adds a BaseTexture to the global BaseTextureCache. This cache is shared across the whole PIXI object.</p></div>
@@ -1895,7 +1899,7 @@ can have more than one ID, short name and longer full URL</p></div>
           baseTexture
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
         </td>
         
         
@@ -1947,9 +1951,9 @@ can have more than one ID, short name and longer full URL</p></div>
 <div class="member" id="from">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#from">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#from">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1958,7 +1962,7 @@ can have more than one ID, short name and longer full URL</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">static from(source: string | HTMLImageElement | HTMLCanvasElement | SVGElement | HTMLVideoElement, options: object, strict: boolean) → {<a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
+<pre class="signature__container"><code class="signature">static from(source: string | HTMLImageElement | HTMLCanvasElement | SVGElement | HTMLVideoElement, options: object, strict: boolean) → {<a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -2014,7 +2018,7 @@ source to create base texture from.</p></td>
         <td class="member-parameter__default">
           
         </td>
-        <td class="member-parameter__description"><p>See <a href=/docs/@pixi/core/PIXI/BaseTexture.html>PIXI.BaseTexture</a>'s constructor for options.</p></td>
+        <td class="member-parameter__description"><p>See <a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html>PIXI.BaseTexture</a>'s constructor for options.</p></td>
       </tr><tr class="member-parameter">
         <td class="member-parameter__name">
           options.pixiIdPrefix
@@ -2046,7 +2050,7 @@ source to create base texture from.</p></td>
         <td class="member-parameter__default">
           
         </td>
-        <td class="member-parameter__description"><p>Enforce strict-mode, see <a href=/docs/@pixi/settings/PIXI/settings.html#STRICT_TEXTURE_CACHE>PIXI.settings.STRICT_TEXTURE_CACHE</a>.</p></td>
+        <td class="member-parameter__description"><p>Enforce strict-mode, see <a href=/pixi-api/@pixi/settings/PIXI/settings.html#STRICT_TEXTURE_CACHE>PIXI.settings.STRICT_TEXTURE_CACHE</a>.</p></td>
       </tr>
     </tbody>
   </table>
@@ -2068,7 +2072,7 @@ source to create base texture from.</p></td>
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
         </td>
         <td class="member-return__description"><p>The new base texture.</p></td>
       </tr>
@@ -2084,9 +2088,9 @@ source to create base texture from.</p></td>
 <div class="member" id="fromBuffer">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#fromBuffer">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#fromBuffer">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2095,7 +2099,7 @@ source to create base texture from.</p></td>
     </section>
   
   
-<pre class="signature__container"><code class="signature">static fromBuffer(buffer: Float32Array | Uint8Array, width: number, height: number, options: object) → {<a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
+<pre class="signature__container"><code class="signature">static fromBuffer(buffer: Float32Array | Uint8Array, width: number, height: number, options: object) → {<a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -2173,7 +2177,7 @@ is provided, a new Float32Array is created.</p></td>
           
         </td>
         
-        <td class="member-parameter__description"><p>See <a href=/docs/@pixi/core/PIXI/BaseTexture.html>PIXI.BaseTexture</a>'s constructor for options.</p></td>
+        <td class="member-parameter__description"><p>See <a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html>PIXI.BaseTexture</a>'s constructor for options.</p></td>
       </tr>
     </tbody>
   </table>
@@ -2195,207 +2199,9 @@ is provided, a new Float32Array is created.</p></td>
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
         </td>
         <td class="member-return__description"><p>The resulting new BaseTexture</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="fromCanvas">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#fromCanvas">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>fromCanvas</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">static fromCanvas(canvas: HTMLCanvasElement, scaleMode: number) → {<a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          canvas
-        </td>
-        <td class="member-parameter__type">
-          HTMLCanvasElement
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          scaleMode
-        </td>
-        <td class="member-parameter__type">
-          number
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="fromSVG">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#fromSVG">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>fromSVG</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">static fromSVG(canvas: HTMLCanvasElement, crossorigin: string | boolean, scaleMode: number, scale: number) → {<a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          canvas
-        </td>
-        <td class="member-parameter__type">
-          HTMLCanvasElement
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          crossorigin
-        </td>
-        <td class="member-parameter__type">
-          string | boolean
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          scaleMode
-        </td>
-        <td class="member-parameter__type">
-          number
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr><tr class="member-parameter">
-        <td class="member-parameter__name">
-          scale
-        </td>
-        <td class="member-parameter__type">
-          number
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
-        </td>
-        <td class="member-return__description"></td>
       </tr>
     </tbody>
   </table>
@@ -2409,9 +2215,9 @@ is provided, a new Float32Array is created.</p></td>
 <div class="member" id="removeFromCache">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#removeFromCache">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#removeFromCache">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2420,7 +2226,7 @@ is provided, a new Float32Array is created.</p></td>
     </section>
   
   
-<pre class="signature__container"><code class="signature">static removeFromCache(baseTexture: string | <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>) → {<a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a> | unknown}</code></pre>
+<pre class="signature__container"><code class="signature">static removeFromCache(baseTexture: string | <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>) → {<a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a> | unknown}</code></pre>
 
 
   <div class="member__brief"><p>Remove a BaseTexture from the global BaseTextureCache.</p></div>
@@ -2446,7 +2252,7 @@ is provided, a new Float32Array is created.</p></td>
           baseTexture
         </td>
         <td class="member-parameter__type">
-          string | <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+          string | <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
         </td>
         
         
@@ -2472,7 +2278,7 @@ is provided, a new Float32Array is created.</p></td>
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a> | unknown
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a> | unknown
         </td>
         <td class="member-return__description"><p>The BaseTexture that was removed.</p></td>
       </tr>
@@ -2488,9 +2294,9 @@ is provided, a new Float32Array is created.</p></td>
 <div class="member" id="castToBaseTexture">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#castToBaseTexture">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#castToBaseTexture">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2499,7 +2305,7 @@ is provided, a new Float32Array is created.</p></td>
     </section>
   
   
-<pre class="signature__container"><code class="signature">castToBaseTexture() → {<a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
+<pre class="signature__container"><code class="signature">castToBaseTexture() → {<a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
 
 
   <div class="member__brief"><p>Utility function for BaseTexture|Texture cast</p></div>
@@ -2521,7 +2327,7 @@ is provided, a new Float32Array is created.</p></td>
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
         </td>
         <td class="member-return__description"></td>
       </tr>
@@ -2537,9 +2343,9 @@ is provided, a new Float32Array is created.</p></td>
 <div class="member" id="destroy">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#destroy">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#destroy">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2588,9 +2394,9 @@ Removes texture from all caches.</p></div>
 <div class="member" id="dispose">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#dispose">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#dispose">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2639,9 +2445,9 @@ memory again.</p></div>
 <div class="member" id="getDrawableSource">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#getDrawableSource">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#getDrawableSource">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2650,7 +2456,7 @@ memory again.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">getDrawableSource() → {<a href="/docs/@pixi/canvas-sprite/PIXI/ICanvasImageSource.html">PIXI.ICanvasImageSource</a>}</code></pre>
+<pre class="signature__container"><code class="signature">getDrawableSource() → {<a href="/pixi-api/@pixi/canvas-sprite/PIXI/ICanvasImageSource.html">PIXI.ICanvasImageSource</a>}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -2673,88 +2479,9 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/docs/@pixi/canvas-sprite/PIXI/ICanvasImageSource.html">PIXI.ICanvasImageSource</a>
+          <a href="/pixi-api/@pixi/canvas-sprite/PIXI/ICanvasImageSource.html">PIXI.ICanvasImageSource</a>
         </td>
         <td class="member-return__description"><p>Source to render with CanvasRenderer</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="loadSource">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#loadSource">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>loadSource</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">loadSource(image: string | HTMLImageElement) → {void}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          image
-        </td>
-        <td class="member-parameter__type">
-          string | HTMLImageElement
-        </td>
-        
-        
-        <td class="member-parameter__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          void
-        </td>
-        <td class="member-return__description"></td>
       </tr>
     </tbody>
   </table>
@@ -2768,9 +2495,9 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
 <div class="member" id="setRealSize">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#setRealSize">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#setRealSize">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2779,7 +2506,7 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
     </section>
   
   
-<pre class="signature__container"><code class="signature">setRealSize(realWidth: number, realHeight: number, resolution: number) → {<a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
+<pre class="signature__container"><code class="signature">setRealSize(realWidth: number, realHeight: number, resolution: number) → {<a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
 
 
   <div class="member__brief"><p>Sets real size of baseTexture, preserves current resolution.</p></div>
@@ -2863,7 +2590,7 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
         </td>
         <td class="member-return__description"><p>this</p></td>
       </tr>
@@ -2879,9 +2606,9 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
 <div class="member" id="setResolution">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#setResolution">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#setResolution">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2890,7 +2617,7 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
     </section>
   
   
-<pre class="signature__container"><code class="signature">setResolution(resolution: number) → {<a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
+<pre class="signature__container"><code class="signature">setResolution(resolution: number) → {<a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
 
 
   <div class="member__brief"><p>Changes resolution</p></div>
@@ -2942,7 +2669,7 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
         </td>
         <td class="member-return__description"><p>this</p></td>
       </tr>
@@ -2958,9 +2685,9 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
 <div class="member" id="setResource">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#setResource">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#setResource">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2969,7 +2696,7 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
     </section>
   
   
-<pre class="signature__container"><code class="signature">setResource(resource: <a href="/docs/@pixi/core/PIXI/Resource.html">PIXI.Resource</a>) → {<a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
+<pre class="signature__container"><code class="signature">setResource(resource: <a href="/pixi-api/@pixi/core/PIXI/Resource.html">PIXI.Resource</a>) → {<a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
 
 
   <div class="member__brief"><p>Sets the resource if it wasn't set. Throws error if resource already present</p></div>
@@ -2995,7 +2722,7 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
           resource
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/Resource.html">PIXI.Resource</a>
+          <a href="/pixi-api/@pixi/core/PIXI/Resource.html">PIXI.Resource</a>
         </td>
         
         
@@ -3021,7 +2748,7 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
         </td>
         <td class="member-return__description"><p>this</p></td>
       </tr>
@@ -3037,9 +2764,9 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
 <div class="member" id="setSize">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#setSize">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#setSize">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -3048,7 +2775,7 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
     </section>
   
   
-<pre class="signature__container"><code class="signature">setSize(width: number, height: number, resolution: number) → {<a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
+<pre class="signature__container"><code class="signature">setSize(width: number, height: number, resolution: number) → {<a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
 
 
   <div class="member__brief"><p>Changes w/h/resolution. Texture becomes valid if width and height are greater than zero.</p></div>
@@ -3132,7 +2859,7 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
         </td>
         <td class="member-return__description"><p>this</p></td>
       </tr>
@@ -3148,9 +2875,9 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
 <div class="member" id="setStyle">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#setStyle">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#setStyle">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -3159,7 +2886,7 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
     </section>
   
   
-<pre class="signature__container"><code class="signature">setStyle(scaleMode: <a href="/docs/@pixi/constants/PIXI/SCALE_MODES.html">PIXI.SCALE_MODES</a>, mipmap: <a href="/docs/@pixi/constants/PIXI/MIPMAP_MODES.html">PIXI.MIPMAP_MODES</a>) → {<a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
+<pre class="signature__container"><code class="signature">setStyle(scaleMode: <a href="/pixi-api/@pixi/constants/PIXI/SCALE_MODES.html">PIXI.SCALE_MODES</a>, mipmap: <a href="/pixi-api/@pixi/constants/PIXI/MIPMAP_MODES.html">PIXI.MIPMAP_MODES</a>) → {<a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>}</code></pre>
 
 
   <div class="member__brief"><p>Changes style options of BaseTexture</p></div>
@@ -3185,7 +2912,7 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
           scaleMode
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/constants/PIXI/SCALE_MODES.html">PIXI.SCALE_MODES</a>
+          <a href="/pixi-api/@pixi/constants/PIXI/SCALE_MODES.html">PIXI.SCALE_MODES</a>
         </td>
         <td class="member-parameter__attributes">
           <p>&lt;optional&gt;</p>
@@ -3199,7 +2926,7 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
           mipmap
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/constants/PIXI/MIPMAP_MODES.html">PIXI.MIPMAP_MODES</a>
+          <a href="/pixi-api/@pixi/constants/PIXI/MIPMAP_MODES.html">PIXI.MIPMAP_MODES</a>
         </td>
         <td class="member-parameter__attributes">
           <p>&lt;optional&gt;</p>
@@ -3229,7 +2956,7 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/docs/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
+          <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html">PIXI.BaseTexture</a>
         </td>
         <td class="member-return__description"><p>this</p></td>
       </tr>
@@ -3245,9 +2972,9 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
 <div class="member" id="update">
   
     <section class="member__title">
-      <a href="/docs/@pixi/core/PIXI/BaseTexture.html#update">
+      <a href="/pixi-api/@pixi/core/PIXI/BaseTexture.html#update">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -3310,63 +3037,53 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#_globalBatch>_globalBatch</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#_globalBatch>_globalBatch</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#_batchEnabled>_batchEnabled</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#_batchEnabled>_batchEnabled</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#_batchLocation>_batchLocation</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#_batchLocation>_batchLocation</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#_id>_id</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#alphaMode>alphaMode</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#alphaMode>alphaMode</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#anisotropicLevel>anisotropicLevel</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#anisotropicLevel>anisotropicLevel</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#cacheId>cacheId</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#cacheId>cacheId</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#destroyed>destroyed</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#destroyed>destroyed</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#dirtyId>dirtyId</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#dirtyId>dirtyId</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#format>format</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#format>format</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#height>height</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#hasLoaded>hasLoaded</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#isPowerOfTwo>isPowerOfTwo</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#height>height</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#mipmap>mipmap</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#imageUrl>imageUrl</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#parentTextureArray>parentTextureArray</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#isPowerOfTwo>isPowerOfTwo</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#realHeight>realHeight</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#mipmap>mipmap</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#realWidth>realWidth</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#parentTextureArray>parentTextureArray</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#resolution>resolution</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#premultiplyAlpha>premultiplyAlpha</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#resource>resource</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#realHeight>realHeight</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#scaleMode>scaleMode</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#realWidth>realWidth</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#target>target</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#resolution>resolution</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#textureCacheIds>textureCacheIds</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#resource>resource</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#type>type</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#scaleMode>scaleMode</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#valid>valid</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#source>source</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#width>width</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#target>target</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#textureCacheIds>textureCacheIds</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#type>type</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#valid>valid</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#width>width</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#wrapMode>wrapMode</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#wrapMode>wrapMode</a></li>
     
   </ul>
 </div>
@@ -3377,11 +3094,11 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
   <section class="page-members-explorer-category__title">Protected Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#dirtyStyleId>dirtyStyleId</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#dirtyStyleId>dirtyStyleId</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#touched>touched</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#touched>touched</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#uid>uid</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#uid>uid</a></li>
     
   </ul>
 </div>
@@ -3392,39 +3109,33 @@ for rendering with CanvasRenderer. Provided by <strong>@pixi/canvas-renderer</st
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#addToCache>addToCache</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#addToCache>addToCache</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#from>from</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#from>from</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#fromBuffer>fromBuffer</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#fromBuffer>fromBuffer</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#fromCanvas>fromCanvas</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#removeFromCache>removeFromCache</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#fromSVG>fromSVG</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#castToBaseTexture>castToBaseTexture</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#removeFromCache>removeFromCache</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#destroy>destroy</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#castToBaseTexture>castToBaseTexture</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#dispose>dispose</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#destroy>destroy</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#getDrawableSource>getDrawableSource</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#dispose>dispose</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#setRealSize>setRealSize</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#getDrawableSource>getDrawableSource</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#setResolution>setResolution</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#loadSource>loadSource</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#setResource>setResource</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#setRealSize>setRealSize</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#setSize>setSize</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#setResolution>setResolution</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#setStyle>setStyle</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#setResource>setResource</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#setSize>setSize</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#setStyle>setStyle</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/BaseTexture.html#update>update</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html#update>update</a></li>
     
   </ul>
 </div>

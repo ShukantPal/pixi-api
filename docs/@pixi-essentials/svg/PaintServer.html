@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>webdoc: PaintServer</title>
 
-    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
@@ -14,10 +14,10 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       window.appData = {
-        siteRoot: "docs",
+        siteRoot: "pixi-api",
       };
     </script>
-    <script src="/docs/scripts/default-template.js"></script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -58,7 +58,7 @@ wrapper around paint textures, which can only be generated using the <code>rende
 <div class="member" id="constructor">
   
   
-<pre class="signature__container"><code class="signature">new PaintServer(paintServer: SVGGradientElement | SVGPatternElement, paintTexture: <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>) → {}</code></pre>
+<pre class="signature__container"><code class="signature">new PaintServer(paintServer: SVGGradientElement | SVGPatternElement, paintTexture: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>) → {}</code></pre>
 
 
   <div class="member__brief"><p>Creates a <code>PaintServer</code> wrapper.</p></div>
@@ -94,7 +94,7 @@ wrapper around paint textures, which can only be generated using the <code>rende
           paintTexture
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+          <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
         </td>
         
         
@@ -131,8 +131,8 @@ wrapper around paint textures, which can only be generated using the <code>rende
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods from PaintServer</h3>
     </section>
@@ -143,66 +143,12 @@ wrapper around paint textures, which can only be generated using the <code>rende
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi-essentials/gradients/ColorStop.html">ColorStop</a>[]
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/svg/PaintServer.html#createColorStops">createColorStops(stopElements: HTMLCollection)</a>
-                </section>
-                <section>
-                  
-                    <p>Extracts the color-stops from the children of a <code>SVGGradientElement</code>.</p>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/svg/PaintServer.html#linearGradient">linearGradient(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
-                </section>
-                <section>
-                  
-                    <p>Renders <code>this.paintServer</code> as a <code>SVGLinearGradientElement</code>.</p>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/svg/PaintServer.html#radialGradient">radialGradient(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
-                </section>
-                <section>
-                  
-                    <p>Renders <code>this.paintServer</code> as a <code>SVGRadialGradientElement</code>.</p>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
                   void
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/svg/PaintServer.html#resolvePaint">resolvePaint(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
+                  <a href="/pixi-api/@pixi-essentials/svg/PaintServer.html#resolvePaint">resolvePaint(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
                 </section>
                 <section>
                   
@@ -218,7 +164,7 @@ wrapper around paint textures, which can only be generated using the <code>rende
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/svg/PaintServer.html#resolvePaintDimensions">resolvePaintDimensions(bbox: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>)</a>
+                  <a href="/pixi-api/@pixi-essentials/svg/PaintServer.html#resolvePaintDimensions">resolvePaintDimensions(bbox: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>)</a>
                 </section>
                 <section>
                   
@@ -234,7 +180,7 @@ wrapper around paint textures, which can only be generated using the <code>rende
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi-essentials/svg/PaintServer.html#updatePaint">updatePaint(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
+                  <a href="/pixi-api/@pixi-essentials/svg/PaintServer.html#updatePaint">updatePaint(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
                 </section>
                 <section>
                   
@@ -270,249 +216,12 @@ wrapper around paint textures, which can only be generated using the <code>rende
 
   
     
-<div class="member" id="createColorStops">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi-essentials/svg/PaintServer.html#createColorStops">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>createColorStops</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">createColorStops(stopElements: HTMLCollection) → {<a href="/docs/@pixi-essentials/gradients/ColorStop.html">ColorStop</a>[]}</code></pre>
-
-
-  <div class="member__brief"><p>Extracts the color-stops from the children of a <code>SVGGradientElement</code>.</p></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          stopElements
-        </td>
-        <td class="member-parameter__type">
-          HTMLCollection
-        </td>
-        
-        
-        <td class="member-parameter__description"><p>The children of a <code>SVGGradientElement</code>. You can get it via <code>element.children</code>.</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          <a href="/docs/@pixi-essentials/gradients/ColorStop.html">ColorStop</a>[]
-        </td>
-        <td class="member-return__description"><p>The color stops that can be fed into <a href=/docs/@pixi-essentials/gradients/GradientFactory.html>GradientFactory</a>.</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="linearGradient">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi-essentials/svg/PaintServer.html#linearGradient">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>linearGradient</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">linearGradient(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {<a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>}</code></pre>
-
-
-  <div class="member__brief"><p>Renders <code>this.paintServer</code> as a <code>SVGLinearGradientElement</code>.</p></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          renderer
-        </td>
-        <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
-        </td>
-        
-        
-        <td class="member-parameter__description"><p>The renderer being used to render the paint texture.</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="radialGradient">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi-essentials/svg/PaintServer.html#radialGradient">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>radialGradient</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">radialGradient(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {<a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>}</code></pre>
-
-
-  <div class="member__brief"><p>Renders <code>this.paintServer</code> as a <code>SVGRadialGradientElement</code>.</p></div>
-  <div class="member__description"></div>
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-parameters">
-    <caption class="member-parameters__caption">Parameters:</caption>
-    <thead class="member-parameters__head">
-      <tr class="member-parameter-header">
-        <th class="member-parameter-header__name">Name</th>
-        <th class="member-parameter-header__type">Type</th>
-        
-        
-        <th class="member-parameter-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-parameters__body">
-      <tr class="member-parameter">
-        <td class="member-parameter__name">
-          renderer
-        </td>
-        <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
-        </td>
-        
-        
-        <td class="member-parameter__description"><p>The renderer being used to render the paint texture.</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
 <div class="member" id="resolvePaint">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/svg/PaintServer.html#resolvePaint">
+      <a href="/pixi-api/@pixi-essentials/svg/PaintServer.html#resolvePaint">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -521,7 +230,7 @@ wrapper around paint textures, which can only be generated using the <code>rende
     </section>
   
   
-<pre class="signature__container"><code class="signature">resolvePaint(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">resolvePaint(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -548,7 +257,7 @@ paint texture to render anything.</p></div>
           renderer
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
         </td>
         
         
@@ -590,9 +299,9 @@ paint texture to render anything.</p></div>
 <div class="member" id="resolvePaintDimensions">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/svg/PaintServer.html#resolvePaintDimensions">
+      <a href="/pixi-api/@pixi-essentials/svg/PaintServer.html#resolvePaintDimensions">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -601,7 +310,7 @@ paint texture to render anything.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">resolvePaintDimensions(bbox: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">resolvePaintDimensions(bbox: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>) → {void}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -630,7 +339,7 @@ be scaled up to fit it.</p></div>
           bbox
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+          <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
         </td>
         
         
@@ -672,9 +381,9 @@ be scaled up to fit it.</p></div>
 <div class="member" id="updatePaint">
   
     <section class="member__title">
-      <a href="/docs/@pixi-essentials/svg/PaintServer.html#updatePaint">
+      <a href="/pixi-api/@pixi-essentials/svg/PaintServer.html#updatePaint">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -683,7 +392,7 @@ be scaled up to fit it.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">updatePaint(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">updatePaint(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
 
 
   <div class="member__brief"><p>Renders the paint texture using the renderer immediately.</p></div>
@@ -709,7 +418,7 @@ be scaled up to fit it.</p></div>
           renderer
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
         </td>
         
         
@@ -769,17 +478,352 @@ be scaled up to fit it.</p></div>
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/PaintServer.html#createColorStops>createColorStops</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/PaintServer.html#resolvePaint>resolvePaint</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/PaintServer.html#linearGradient>linearGradient</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/PaintServer.html#resolvePaintDimensions>resolvePaintDimensions</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/PaintServer.html#radialGradient>radialGradient</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/PaintServer.html#updatePaint>updatePaint</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/PaintServer.html#resolvePaint>resolvePaint</a></li>
+  </ul>
+</div>
+
+  
+</nav>
+
+
+
+            <!-- footer in content -->
+          </div>
+        </div>
+      </article>
+      <script src="scripts/linenumber.js"> </script>
+    </body>
+  </div>
+</html>
+  <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer being used to render the paint texture.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/PaintServer.html#resolvePaintDimensions>resolvePaintDimensions</a></li>
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi-essentials/svg/PaintServer.html#updatePaint>updatePaint</a></li>
+<div class="member" id="resolvePaint">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/svg/PaintServer.html#resolvePaint">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>resolvePaint</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">resolvePaint(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Ensures the paint texture is updated for the renderer's WebGL context. This should be called before using the
+paint texture to render anything.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer that will use the paint texture.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="resolvePaintDimensions">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/svg/PaintServer.html#resolvePaintDimensions">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>resolvePaintDimensions</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">resolvePaintDimensions(bbox: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"></div>
+  <div class="member__description"><p>Calculates the optimal texture dimensions for the paint texture, given the bounding box of the
+object applying it. The paint texture is resized accordingly.</p>
+<p>If the paint texture is sized smaller than the bounding box, then it is expected that it will
+be scaled up to fit it.</p></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          bbox
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The bounding box of the object applying the paint texture.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+    
+<div class="member" id="updatePaint">
+  
+    <section class="member__title">
+      <a href="/pixi-api/@pixi-essentials/svg/PaintServer.html#updatePaint">
+        <img
+          src="/pixi-api/icons/link.svg"
+          width="16px"
+          height="16px"
+        />
+      </a>
+      <span>updatePaint</span>
+    </section>
+  
+  
+<pre class="signature__container"><code class="signature">updatePaint(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
+
+
+  <div class="member__brief"><p>Renders the paint texture using the renderer immediately.</p></div>
+  <div class="member__description"></div>
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-parameters">
+    <caption class="member-parameters__caption">Parameters:</caption>
+    <thead class="member-parameters__head">
+      <tr class="member-parameter-header">
+        <th class="member-parameter-header__name">Name</th>
+        <th class="member-parameter-header__type">Type</th>
+        
+        
+        <th class="member-parameter-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-parameters__body">
+      <tr class="member-parameter">
+        <td class="member-parameter__name">
+          renderer
+        </td>
+        <td class="member-parameter__type">
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+        </td>
+        
+        
+        <td class="member-parameter__description"><p>The renderer to use for rendering to the paint texture.</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+
+  
+    
+<div class="table-wrapper">
+  <table class="member-returns">
+    <caption class="member-returns__caption">Returns:</caption>
+    <thead class="member-returns__head">
+      <tr class="member-returns-header">
+        <th class="member-returns-header__type">Type</th>
+        <th class="member-returns-header__description">Description</th>
+      </tr>
+    </thead>
+    <tbody class="member-returns__body">
+      <tr class="member-return">
+        <td class="member-return__type">
+          void
+        </td>
+        <td class="member-return__description"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+  
+</div>
+
+    
+  </div>
+  <footer class="footer" id="footer-mount-point"></footer>
+</div>
+
+<hr class="page-r-divider" />
+<nav class="page-members-explorer">
+  <div class="page-members-explorer-category">
+    <section class="page-members-explorer-category__title">
+      Summary
+    </section>
+  </div>
+  
+  
+  
+
+<div class="page-members-explorer-category">
+  <section class="page-members-explorer-category__title">Public Methods</section>
+  <ul class="page-members-explorer-category__items">
+    
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/PaintServer.html#createColorStops>createColorStops</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/PaintServer.html#linearGradient>linearGradient</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/PaintServer.html#radialGradient>radialGradient</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/PaintServer.html#resolvePaint>resolvePaint</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/PaintServer.html#resolvePaintDimensions>resolvePaintDimensions</a></li>
+    
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi-essentials/svg/PaintServer.html#updatePaint>updatePaint</a></li>
     
   </ul>
 </div>

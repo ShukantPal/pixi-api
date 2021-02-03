@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>webdoc: Sprite</title>
 
-    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
@@ -14,10 +14,10 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       window.appData = {
-        siteRoot: "docs",
+        siteRoot: "pixi-api",
       };
     </script>
-    <script src="/docs/scripts/default-template.js"></script>
+    <script src="/pixi-api/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -36,21 +36,21 @@
         &gt;
       
       
-        <a href=/docs/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
+        <a href=/pixi-api/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
         &gt;
       
       <span>Sprite</span>
     </div>
     <h1 class="document__title">PIXI.Sprite</h1>
     
-<pre class="signature__container"><code class="signature">class Sprite extends <a href="/docs/@pixi/display/PIXI/Container.html">PIXI.Container</a></code></pre>
+<pre class="signature__container"><code class="signature">class Sprite extends <a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a></code></pre>
 
 
     <div class="document__brief"><p>The Sprite object is the base for all textured objects that are rendered to the screen</p></div>
     <div class="document__description"><p>A sprite can be created directly from an image like this:</p>
 <pre><code class="hljs language-js"><span class="hljs-keyword">let</span> sprite = PIXI.Sprite.from(<span class="hljs-string">&#x27;assets/image.png&#x27;</span>);
 </code></pre>
-<p>The more efficient way to create sprites is using a <a href=/docs/@pixi/spritesheet/PIXI/Spritesheet.html>PIXI.Spritesheet</a>,
+<p>The more efficient way to create sprites is using a <a href=/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html>PIXI.Spritesheet</a>,
 as swapping base textures when rendering to the screen is inefficient.</p>
 <pre><code class="hljs language-js">PIXI.Loader.shared.add(<span class="hljs-string">&quot;assets/spritesheet.json&quot;</span>).load(setup);
 
@@ -72,7 +72,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
 <div class="member" id="constructor">
   
   
-<pre class="signature__container"><code class="signature">new PIXI.Sprite(texture: <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>) → {}</code></pre>
+<pre class="signature__container"><code class="signature">new PIXI.Sprite(texture: <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>) → {}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -98,7 +98,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
           texture
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>
+          <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a>
         </td>
         <td class="member-parameter__attributes">
           <p>&lt;optional&gt;</p>
@@ -134,8 +134,8 @@ as swapping base textures when rendering to the screen is inefficient.</p>
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties from Sprite</h3>
     </section>
@@ -146,12 +146,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#anchor">anchor</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#anchor">anchor</a>
                 </section>
                 <section>
                   
@@ -167,7 +167,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#blendMode">blendMode</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#blendMode">blendMode = PIXI.BLEND_MODES.NORMAL</a>
                 </section>
                 <section>
                   
@@ -185,7 +185,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#height">height</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#height">height</a>
                 </section>
                 <section>
                   
@@ -203,7 +203,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#isSprite">isSprite</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#isSprite">isSprite</a>
                 </section>
                 <section>
                   
@@ -219,7 +219,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#pluginName">pluginName</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#pluginName">pluginName = 'batch'</a>
                 </section>
                 <section>
                   
@@ -235,7 +235,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#roundPixels">roundPixels</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#roundPixels">roundPixels = false</a>
                 </section>
                 <section>
                   
@@ -246,12 +246,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/core/PIXI/Texture.html>PIXI.Texture</a>
+                  <a href=/pixi-api/@pixi/core/PIXI/Texture.html>PIXI.Texture</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#texture">texture</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#texture">texture</a>
                 </section>
                 <section>
                   
@@ -269,7 +269,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#tint">tint</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#tint">tint = 0xFFFFFF</a>
                 </section>
                 <section>
                   
@@ -285,7 +285,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#width">width</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#width">width</a>
                 </section>
                 <section>
                   
@@ -303,7 +303,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#_cachedTint">protected _cachedTint</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#_cachedTint">protected _cachedTint = 0xFFFFFF</a>
                 </section>
                 <section>
                   
@@ -319,7 +319,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#_height">protected _height</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#_height">protected _height</a>
                 </section>
                 <section>
                   
@@ -337,7 +337,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#_tintedCanvas">protected _tintedCanvas</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#_tintedCanvas">protected _tintedCanvas</a>
                 </section>
                 <section>
                   
@@ -353,7 +353,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#_width">protected _width</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#_width">protected _width</a>
                 </section>
                 <section>
                   
@@ -376,8 +376,8 @@ as swapping base textures when rendering to the screen is inefficient.</p>
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods from Sprite</h3>
     </section>
@@ -388,92 +388,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#from">static from(source: string | <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a> | HTMLCanvasElement | HTMLVideoElement, options: object)</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#fromCanvas">static fromCanvas</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#fromFrame">static fromFrame</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#fromImage">static fromImage</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#fromSVG">static fromSVG</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#fromVideo">static fromVideo</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#from">static from(source: string | <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a> | HTMLCanvasElement | HTMLVideoElement, options: object)</a>
                 </section>
                 <section>
                   
@@ -489,7 +409,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#calculateTrimmedVertices">calculateTrimmedVertices()</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#calculateTrimmedVertices">calculateTrimmedVertices()</a>
                 </section>
                 <section>
                   
@@ -505,7 +425,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#calculateVertices">calculateVertices()</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#calculateVertices">calculateVertices()</a>
                 </section>
                 <section>
                   
@@ -523,7 +443,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#containsPoint">containsPoint(point: <a href="/docs/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>)</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#containsPoint">containsPoint(point: <a href="/pixi-api/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>)</a>
                 </section>
                 <section>
                   
@@ -541,7 +461,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#destroy">destroy(options: object | boolean)</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#destroy">destroy(options: object | boolean)</a>
                 </section>
                 <section>
                   
@@ -554,12 +474,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#getLocalBounds">getLocalBounds(rect: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>)</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#getLocalBounds">getLocalBounds(rect: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>)</a>
                 </section>
                 <section>
                   
@@ -577,7 +497,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#_calculateBounds">protected _calculateBounds()</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#_calculateBounds">protected _calculateBounds()</a>
                 </section>
                 <section>
                   
@@ -595,7 +515,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#_onTextureUpdate">protected _onTextureUpdate()</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#_onTextureUpdate">protected _onTextureUpdate()</a>
                 </section>
                 <section>
                   
@@ -613,7 +533,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/sprite/PIXI/Sprite.html#_render">protected _render(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
+                  <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#_render">protected _render(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
                 </section>
                 <section>
                   
@@ -636,8 +556,8 @@ as swapping base textures when rendering to the screen is inefficient.</p>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties inherited from Container</h3>
     </section>
@@ -648,12 +568,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  Array&lt;<a href=/docs/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a>&gt;
+                  Array&lt;<a href=/pixi-api/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a>&gt;
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#children">children</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#children">children</a>
                 </section>
                 <section>
                   
@@ -671,7 +591,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#interactiveChildren">interactiveChildren</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#interactiveChildren">interactiveChildren</a>
                 </section>
                 <section>
                   
@@ -687,7 +607,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#sortableChildren">sortableChildren</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#sortableChildren">sortableChildren</a>
                 </section>
                 <section>
                   
@@ -703,7 +623,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#sortDirty">sortDirty</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#sortDirty">sortDirty</a>
                 </section>
                 <section>
                   
@@ -722,8 +642,8 @@ as swapping base textures when rendering to the screen is inefficient.</p>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties inherited from DisplayObject</h3>
     </section>
@@ -739,7 +659,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_accessibleActive">_accessibleActive</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_accessibleActive">_accessibleActive</a>
                 </section>
                 <section>
                   
@@ -755,7 +675,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_accessibleDiv">_accessibleDiv</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_accessibleDiv">_accessibleDiv</a>
                 </section>
                 <section>
                   
@@ -766,12 +686,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_bounds">_bounds</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_bounds">_bounds</a>
                 </section>
                 <section>
                   
@@ -784,12 +704,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_localBounds">_localBounds</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_localBounds">_localBounds</a>
                 </section>
                 <section>
                   
@@ -807,7 +727,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessible">accessible</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessible">accessible</a>
                 </section>
                 <section>
                   
@@ -823,7 +743,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessibleChildren">accessibleChildren</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessibleChildren">accessibleChildren = true</a>
                 </section>
                 <section>
                   
@@ -839,7 +759,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessibleHint">accessibleHint</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessibleHint">accessibleHint</a>
                 </section>
                 <section>
                   
@@ -857,7 +777,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessiblePointerEvents">accessiblePointerEvents</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessiblePointerEvents">accessiblePointerEvents = 'auto'</a>
                 </section>
                 <section>
                   
@@ -873,7 +793,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessibleTitle">accessibleTitle</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessibleTitle">accessibleTitle</a>
                 </section>
                 <section>
                   
@@ -889,7 +809,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#accessibleType">accessibleType</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#accessibleType">accessibleType = 'button'</a>
                 </section>
                 <section>
                   
@@ -905,7 +825,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#alpha">alpha</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#alpha">alpha</a>
                 </section>
                 <section>
                   
@@ -923,7 +843,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#angle">angle</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#angle">angle</a>
                 </section>
                 <section>
                   
@@ -939,7 +859,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#buttonMode">buttonMode</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#buttonMode">buttonMode</a>
                 </section>
                 <section>
                   
@@ -955,7 +875,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#cacheAsBitmap">cacheAsBitmap</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#cacheAsBitmap">cacheAsBitmap</a>
                 </section>
                 <section>
                   
@@ -971,7 +891,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#cursor">cursor</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#cursor">cursor</a>
                 </section>
                 <section>
                   
@@ -982,12 +902,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  ?<a href=/docs/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a>
+                  ?<a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#filterArea">filterArea</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#filterArea">filterArea</a>
                 </section>
                 <section>
                   
@@ -998,12 +918,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  Array&lt;<a href=/docs/@pixi/core/PIXI/Filter.html>PIXI.Filter</a>&gt;
+                  Array&lt;<a href=/pixi-api/@pixi/core/PIXI/Filter.html>PIXI.Filter</a>&gt;
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#filters">filters</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#filters">filters</a>
                 </section>
                 <section>
                   
@@ -1014,28 +934,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/interaction/PIXI/IHitArea.html>PIXI.IHitArea</a>
+                  <a href=/pixi-api/@pixi/interaction/PIXI/IHitArea.html>PIXI.IHitArea</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#hitArea">hitArea</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  boolean
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#interactive">interactive</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#hitArea">hitArea</a>
                 </section>
                 <section>
                   
@@ -1051,7 +955,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#isMask">isMask</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#interactive">interactive</a>
                 </section>
                 <section>
                   
@@ -1062,12 +966,28 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a>
+                  boolean
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#localTransform">localTransform</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#isMask">isMask</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  <a href=/pixi-api/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a>
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#localTransform">localTransform</a>
                 </section>
                 <section>
                   
@@ -1080,12 +1000,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Container.html>PIXI.Container</a> | <a href=/docs/@pixi/core/PIXI/MaskData.html>PIXI.MaskData</a> | unknown
+                  <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a> | <a href=/pixi-api/@pixi/core/PIXI/MaskData.html>PIXI.MaskData</a> | unknown
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#mask">mask</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#mask">mask</a>
                 </section>
                 <section>
                   
@@ -1101,7 +1021,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#name">name</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#name">name</a>
                 </section>
                 <section>
                   
@@ -1114,12 +1034,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Container.html>PIXI.Container</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#parent">parent</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#parent">parent</a>
                 </section>
                 <section>
                   
@@ -1132,12 +1052,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#pivot">pivot</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#pivot">pivot</a>
                 </section>
                 <section>
                   
@@ -1148,12 +1068,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#position">position</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#position">position</a>
                 </section>
                 <section>
                   
@@ -1171,7 +1091,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#renderable">renderable</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#renderable">renderable</a>
                 </section>
                 <section>
                   
@@ -1187,7 +1107,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#rotation">rotation</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#rotation">rotation</a>
                 </section>
                 <section>
                   
@@ -1198,12 +1118,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#scale">scale</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#scale">scale</a>
                 </section>
                 <section>
                   
@@ -1216,12 +1136,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#skew">skew</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#skew">skew</a>
                 </section>
                 <section>
                   
@@ -1234,12 +1154,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/DisplayObject.html>PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#smartMask">smartMask</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#smartMask">smartMask</a>
                 </section>
                 <section>
                   
@@ -1250,12 +1170,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/Transform.html>PIXI.Transform</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/Transform.html>PIXI.Transform</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#transform">transform</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#transform">transform</a>
                 </section>
                 <section>
                   
@@ -1271,7 +1191,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#visible">visible</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#visible">visible</a>
                 </section>
                 <section>
                   
@@ -1287,7 +1207,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#worldAlpha">worldAlpha</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#worldAlpha">worldAlpha</a>
                 </section>
                 <section>
                   
@@ -1300,12 +1220,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a>
+                  <a href=/pixi-api/@pixi/math/PIXI/Matrix.html>PIXI.Matrix</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#worldTransform">worldTransform</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#worldTransform">worldTransform</a>
                 </section>
                 <section>
                   
@@ -1323,7 +1243,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#worldVisible">worldVisible</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#worldVisible">worldVisible</a>
                 </section>
                 <section>
                   
@@ -1341,7 +1261,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#x">x</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#x">x</a>
                 </section>
                 <section>
                   
@@ -1357,7 +1277,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#y">y</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#y">y</a>
                 </section>
                 <section>
                   
@@ -1373,7 +1293,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#zIndex">zIndex</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#zIndex">zIndex</a>
                 </section>
                 <section>
                   
@@ -1391,7 +1311,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_boundsID">protected _boundsID</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_boundsID">protected _boundsID</a>
                 </section>
                 <section>
                   
@@ -1404,12 +1324,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_boundsRect">protected _boundsRect</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_boundsRect">protected _boundsRect</a>
                 </section>
                 <section>
                   
@@ -1427,7 +1347,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_destroyed">protected _destroyed</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_destroyed">protected _destroyed</a>
                 </section>
                 <section>
                   
@@ -1440,12 +1360,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  Array&lt;<a href=/docs/@pixi/core/PIXI/Filter.html>PIXI.Filter</a>&gt;
+                  Array&lt;<a href=/pixi-api/@pixi/core/PIXI/Filter.html>PIXI.Filter</a>&gt;
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_enabledFilters">protected _enabledFilters</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_enabledFilters">protected _enabledFilters</a>
                 </section>
                 <section>
                   
@@ -1461,7 +1381,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_lastSortedIndex">protected _lastSortedIndex</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_lastSortedIndex">protected _lastSortedIndex</a>
                 </section>
                 <section>
                   
@@ -1472,12 +1392,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Bounds.html>PIXI.Bounds</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_localBoundsRect">protected _localBoundsRect</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_localBoundsRect">protected _localBoundsRect</a>
                 </section>
                 <section>
                   
@@ -1490,12 +1410,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Container.html>PIXI.Container</a> | <a href=/docs/@pixi/core/PIXI/MaskData.html>PIXI.MaskData</a> | unknown
+                  <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a> | <a href=/pixi-api/@pixi/core/PIXI/MaskData.html>PIXI.MaskData</a> | unknown
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_mask">protected _mask</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_mask">protected _mask</a>
                 </section>
                 <section>
                   
@@ -1508,12 +1428,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/docs/@pixi/display/PIXI/Container.html>PIXI.Container</a>
+                  <a href=/pixi-api/@pixi/display/PIXI/Container.html>PIXI.Container</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_tempDisplayObjectParent">protected _tempDisplayObjectParent</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_tempDisplayObjectParent">protected _tempDisplayObjectParent</a>
                 </section>
                 <section>
                   
@@ -1529,7 +1449,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_zIndex">protected _zIndex</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_zIndex">protected _zIndex</a>
                 </section>
                 <section>
                   
@@ -1551,8 +1471,8 @@ as swapping base textures when rendering to the screen is inefficient.</p>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods inherited from Container</h3>
     </section>
@@ -1563,12 +1483,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#addChild">addChild(children: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#addChild">addChild(children: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -1581,12 +1501,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#addChildAt">addChildAt(child: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, index: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#addChildAt">addChildAt(child: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, index: number)</a>
                 </section>
                 <section>
                   
@@ -1604,7 +1524,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#calculateBounds">calculateBounds()</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#calculateBounds">calculateBounds()</a>
                 </section>
                 <section>
                   
@@ -1620,7 +1540,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#containerUpdateTransform">containerUpdateTransform</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#containerUpdateTransform">containerUpdateTransform</a>
                 </section>
                 <section>
                   
@@ -1631,12 +1551,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#getChildAt">getChildAt(index: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#getChildAt">getChildAt(index: number)</a>
                 </section>
                 <section>
                   
@@ -1649,12 +1569,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#getChildByName">getChildByName(name: string, deep: boolean)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#getChildByName">getChildByName(name: string, deep: boolean)</a>
                 </section>
                 <section>
                   
@@ -1672,7 +1592,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#getChildIndex">getChildIndex(child: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#getChildIndex">getChildIndex(child: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -1685,12 +1605,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#removeChild">removeChild(children: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#removeChild">removeChild(children: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -1703,12 +1623,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#removeChildAt">removeChildAt(index: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#removeChildAt">removeChildAt(index: number)</a>
                 </section>
                 <section>
                   
@@ -1721,12 +1641,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  Array&lt;<a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>&gt;
+                  Array&lt;<a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>&gt;
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#removeChildren">removeChildren(beginIndex: number, endIndex: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#removeChildren">removeChildren(beginIndex: number, endIndex: number)</a>
                 </section>
                 <section>
                   
@@ -1744,7 +1664,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#render">render(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#render">render(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
                 </section>
                 <section>
                   
@@ -1762,7 +1682,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#renderCanvas">renderCanvas(renderer: <a href="/docs/@pixi/canvas-renderer/PIXI/CanvasRenderer.html">PIXI.CanvasRenderer</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#renderCanvas">renderCanvas(renderer: <a href="/pixi-api/@pixi/canvas-renderer/PIXI/CanvasRenderer.html">PIXI.CanvasRenderer</a>)</a>
                 </section>
                 <section>
                   
@@ -1778,23 +1698,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#renderWebGL">renderWebGL(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  void
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#setChildIndex">setChildIndex(child: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, index: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#setChildIndex">setChildIndex(child: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, index: number)</a>
                 </section>
                 <section>
                   
@@ -1812,11 +1716,11 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#sortChildren">sortChildren()</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#sortChildren">sortChildren()</a>
                 </section>
                 <section>
                   
-                    <p>Sorts children by zIndex. Previous order is mantained for 2 children with the same zIndex.</p>
+                    <p>Sorts children by zIndex. Previous order is maintained for 2 children with the same zIndex.</p>
                   
                 </section>
               </td>
@@ -1830,7 +1734,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#swapChildren">swapChildren(child: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, child2: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#swapChildren">swapChildren(child: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, child2: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -1848,7 +1752,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#updateTransform">updateTransform()</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#updateTransform">updateTransform()</a>
                 </section>
                 <section>
                   
@@ -1866,7 +1770,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#onChildrenChange">protected onChildrenChange(_length: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#onChildrenChange">protected onChildrenChange(_length: number)</a>
                 </section>
                 <section>
                   
@@ -1884,7 +1788,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/Container.html#renderAdvanced">protected renderAdvanced(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html#renderAdvanced">protected renderAdvanced(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>)</a>
                 </section>
                 <section>
                   
@@ -1903,8 +1807,8 @@ as swapping base textures when rendering to the screen is inefficient.</p>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods inherited from DisplayObject</h3>
     </section>
@@ -1920,7 +1824,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#_recursivePostUpdateTransform">_recursivePostUpdateTransform()</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#_recursivePostUpdateTransform">_recursivePostUpdateTransform()</a>
                 </section>
                 <section>
                   
@@ -1936,7 +1840,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#disableTempParent">disableTempParent(cacheParent: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#disableTempParent">disableTempParent(cacheParent: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -1952,7 +1856,7 @@ as swapping base textures when rendering to the screen is inefficient.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#displayObjectUpdateTransform">displayObjectUpdateTransform</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#displayObjectUpdateTransform">displayObjectUpdateTransform</a>
                 </section>
                 <section>
                   
@@ -1963,12 +1867,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#enableTempParent">enableTempParent()</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#enableTempParent">enableTempParent()</a>
                 </section>
                 <section>
                   
@@ -1981,16 +1885,16 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#getBounds">getBounds(skipUpdate: boolean, rect: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#getBounds">getBounds(skipUpdate: boolean, rect: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>)</a>
                 </section>
                 <section>
                   
-                    <p>Calculates and returns the (world) bounds of the display object as a <a href=/docs/@pixi/math/PIXI/Rectangle.html>Rectangle</a>.</p>
+                    <p>Calculates and returns the (world) bounds of the display object as a <a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>Rectangle</a>.</p>
                   
                 </section>
               </td>
@@ -1999,12 +1903,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#getGlobalPosition">getGlobalPosition(point: <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#getGlobalPosition">getGlobalPosition(point: <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
                 </section>
                 <section>
                   
@@ -2017,12 +1921,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/Container.html">PIXI.Container</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#setParent">setParent(container: <a href="/docs/@pixi/display/PIXI/Container.html">PIXI.Container</a>)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#setParent">setParent(container: <a href="/pixi-api/@pixi/display/PIXI/Container.html">PIXI.Container</a>)</a>
                 </section>
                 <section>
                   
@@ -2035,12 +1939,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#setTransform">setTransform(x: number, y: number, scaleX: number, scaleY: number, rotation: number, skewX: number, skewY: number, pivotX: number, pivotY: number)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#setTransform">setTransform(x: number, y: number, scaleX: number, scaleY: number, rotation: number, skewX: number, skewY: number, pivotX: number, pivotY: number)</a>
                 </section>
                 <section>
                   
@@ -2053,12 +1957,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#toGlobal">toGlobal(position: <a href="/docs/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>, point: <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#toGlobal">toGlobal(position: <a href="/pixi-api/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>, point: <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
                 </section>
                 <section>
                   
@@ -2071,12 +1975,12 @@ as swapping base textures when rendering to the screen is inefficient.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>
+                  <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/docs/@pixi/display/PIXI/DisplayObject.html#toLocal">toLocal(position: <a href="/docs/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>, from: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, point: <a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
+                  <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html#toLocal">toLocal(position: <a href="/pixi-api/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>, from: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, point: <a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>, skipUpdate: boolean)</a>
                 </section>
                 <section>
                   
@@ -2106,9 +2010,9 @@ as swapping base textures when rendering to the screen is inefficient.</p>
 <div class="member" id="anchor">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#anchor">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#anchor">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2117,11 +2021,11 @@ as swapping base textures when rendering to the screen is inefficient.</p>
     </section>
   
   
-<pre class="signature__container"><code class="signature">anchor: <a href=/docs/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a></code></pre>
+<pre class="signature__container"><code class="signature">anchor: <a href=/pixi-api/@pixi/math/PIXI/ObservablePoint.html>PIXI.ObservablePoint</a></code></pre>
 
 
   <div class="member__brief"></div>
-  <div class="member__description"><p>The anchor sets the origin point of the sprite. The default value is taken from the <a href=/docs/@pixi/core/PIXI/Texture.html>Texture</a>
+  <div class="member__description"><p>The anchor sets the origin point of the sprite. The default value is taken from the <a href=/pixi-api/@pixi/core/PIXI/Texture.html>Texture</a>
 and passed to the constructor.</p>
 <p>The default is <code>(0,0)</code>, this means the sprite's origin is the top left.</p>
 <p>Setting the anchor to <code>(0.5,0.5)</code> means the sprite's origin is centered.</p>
@@ -2138,9 +2042,9 @@ and passed to the constructor.</p>
 <div class="member" id="blendMode">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#blendMode">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#blendMode">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2149,7 +2053,7 @@ and passed to the constructor.</p>
     </section>
   
   
-<pre class="signature__container"><code class="signature">blendMode: number</code></pre>
+<pre class="signature__container"><code class="signature">blendMode: number = PIXI.BLEND_MODES.NORMAL</code></pre>
 
 
   <div class="member__brief"><p>The blend mode to be applied to the sprite. Apply a value of <code>PIXI.BLEND_MODES.NORMAL</code> to reset the blend mode.</p></div>
@@ -2165,9 +2069,9 @@ and passed to the constructor.</p>
 <div class="member" id="height">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#height">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#height">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2192,9 +2096,9 @@ and passed to the constructor.</p>
 <div class="member" id="isSprite">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#isSprite">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#isSprite">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2219,9 +2123,9 @@ and passed to the constructor.</p>
 <div class="member" id="pluginName">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#pluginName">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#pluginName">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2230,7 +2134,7 @@ and passed to the constructor.</p>
     </section>
   
   
-<pre class="signature__container"><code class="signature">pluginName: string</code></pre>
+<pre class="signature__container"><code class="signature">pluginName: string = 'batch'</code></pre>
 
 
   <div class="member__brief"></div>
@@ -2247,9 +2151,9 @@ Allows to customize the rendering process without overriding '_render' &amp; '_r
 <div class="member" id="roundPixels">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#roundPixels">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#roundPixels">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2258,14 +2162,14 @@ Allows to customize the rendering process without overriding '_render' &amp; '_r
     </section>
   
   
-<pre class="signature__container"><code class="signature">roundPixels: boolean</code></pre>
+<pre class="signature__container"><code class="signature">roundPixels: boolean = false</code></pre>
 
 
   <div class="member__brief"></div>
   <div class="member__description"><p>If true PixiJS will Math.floor() x/y values when rendering, stopping pixel interpolation.
 Advantages can include sharper image quality (like text) and faster rendering on canvas.
 The main disadvantage is movement of objects may appear less smooth.
-To set the global default, change <a href=/docs/@pixi/settings/PIXI/settings.html#ROUND_PIXELS>PIXI.settings.ROUND_PIXELS</a></p></div>
+To set the global default, change <a href=/pixi-api/@pixi/settings/PIXI/settings.html#ROUND_PIXELS>PIXI.settings.ROUND_PIXELS</a></p></div>
 
   
 
@@ -2277,9 +2181,9 @@ To set the global default, change <a href=/docs/@pixi/settings/PIXI/settings.htm
 <div class="member" id="texture">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#texture">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#texture">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2288,7 +2192,7 @@ To set the global default, change <a href=/docs/@pixi/settings/PIXI/settings.htm
     </section>
   
   
-<pre class="signature__container"><code class="signature">texture: <a href=/docs/@pixi/core/PIXI/Texture.html>PIXI.Texture</a></code></pre>
+<pre class="signature__container"><code class="signature">texture: <a href=/pixi-api/@pixi/core/PIXI/Texture.html>PIXI.Texture</a></code></pre>
 
 
   <div class="member__brief"><p>The texture that the sprite is using</p></div>
@@ -2304,9 +2208,9 @@ To set the global default, change <a href=/docs/@pixi/settings/PIXI/settings.htm
 <div class="member" id="tint">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#tint">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#tint">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2315,7 +2219,7 @@ To set the global default, change <a href=/docs/@pixi/settings/PIXI/settings.htm
     </section>
   
   
-<pre class="signature__container"><code class="signature">tint: number</code></pre>
+<pre class="signature__container"><code class="signature">tint: number = 0xFFFFFF</code></pre>
 
 
   <div class="member__brief"></div>
@@ -2332,9 +2236,9 @@ A value of 0xFFFFFF will remove any tint effect.</p></div>
 <div class="member" id="width">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#width">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#width">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2367,9 +2271,9 @@ A value of 0xFFFFFF will remove any tint effect.</p></div>
 <div class="member" id="_cachedTint">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#_cachedTint">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#_cachedTint">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2378,7 +2282,7 @@ A value of 0xFFFFFF will remove any tint effect.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">protected _cachedTint: number</code></pre>
+<pre class="signature__container"><code class="signature">protected _cachedTint: number = 0xFFFFFF</code></pre>
 
 
   <div class="member__brief"></div>
@@ -2395,9 +2299,9 @@ Value is used for 2d CanvasRenderer.</p></div>
 <div class="member" id="_height">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#_height">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#_height">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2422,9 +2326,9 @@ Value is used for 2d CanvasRenderer.</p></div>
 <div class="member" id="_tintedCanvas">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#_tintedCanvas">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#_tintedCanvas">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2449,9 +2353,9 @@ Value is used for 2d CanvasRenderer.</p></div>
 <div class="member" id="_width">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#_width">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#_width">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2484,9 +2388,9 @@ Value is used for 2d CanvasRenderer.</p></div>
 <div class="member" id="from">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#from">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#from">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2495,7 +2399,7 @@ Value is used for 2d CanvasRenderer.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">static from(source: string | <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a> | HTMLCanvasElement | HTMLVideoElement, options: object) → {<a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>}</code></pre>
+<pre class="signature__container"><code class="signature">static from(source: string | <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a> | HTMLCanvasElement | HTMLVideoElement, options: object) → {<a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -2522,7 +2426,7 @@ The source can be - frame id, image url, video url, canvas element, video elemen
           source
         </td>
         <td class="member-parameter__type">
-          string | <a href="/docs/@pixi/core/PIXI/Texture.html">PIXI.Texture</a> | HTMLCanvasElement | HTMLVideoElement
+          string | <a href="/pixi-api/@pixi/core/PIXI/Texture.html">PIXI.Texture</a> | HTMLCanvasElement | HTMLVideoElement
         </td>
         <td class="member-parameter__attributes">
           
@@ -2544,7 +2448,7 @@ The source can be - frame id, image url, video url, canvas element, video elemen
           
         </td>
         
-        <td class="member-parameter__description"><p>See <a href=/docs/@pixi/core/PIXI/BaseTexture.html>PIXI.BaseTexture</a>'s constructor for options.</p></td>
+        <td class="member-parameter__description"><p>See <a href=/pixi-api/@pixi/core/PIXI/BaseTexture.html>PIXI.BaseTexture</a>'s constructor for options.</p></td>
       </tr>
     </tbody>
   </table>
@@ -2566,254 +2470,9 @@ The source can be - frame id, image url, video url, canvas element, video elemen
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>
+          <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>
         </td>
         <td class="member-return__description"><p>The newly created sprite</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="fromCanvas">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#fromCanvas">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>fromCanvas</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">static fromCanvas → {<a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          <a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="fromFrame">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#fromFrame">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>fromFrame</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">static fromFrame → {<a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          <a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="fromImage">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#fromImage">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>fromImage</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">static fromImage → {<a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          <a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="fromSVG">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#fromSVG">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>fromSVG</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">static fromSVG → {<a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          <a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>
-        </td>
-        <td class="member-return__description"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-  
-</div>
-
-  
-    
-<div class="member" id="fromVideo">
-  
-    <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#fromVideo">
-        <img
-          src="/docs/icons/link.svg"
-          width="16px"
-          height="16px"
-        />
-      </a>
-      <span>fromVideo</span>
-    </section>
-  
-  
-<pre class="signature__container"><code class="signature">static fromVideo → {<a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>}</code></pre>
-
-
-  <div class="member__brief"></div>
-  <div class="member__description"></div>
-
-  
-
-  
-    
-<div class="table-wrapper">
-  <table class="member-returns">
-    <caption class="member-returns__caption">Returns:</caption>
-    <thead class="member-returns__head">
-      <tr class="member-returns-header">
-        <th class="member-returns-header__type">Type</th>
-        <th class="member-returns-header__description">Description</th>
-      </tr>
-    </thead>
-    <tbody class="member-returns__body">
-      <tr class="member-return">
-        <td class="member-return__type">
-          <a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>
-        </td>
-        <td class="member-return__description"></td>
       </tr>
     </tbody>
   </table>
@@ -2827,9 +2486,9 @@ The source can be - frame id, image url, video url, canvas element, video elemen
 <div class="member" id="calculateTrimmedVertices">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#calculateTrimmedVertices">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#calculateTrimmedVertices">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2877,9 +2536,9 @@ This is used to ensure that the true width and height of a trimmed texture is re
 <div class="member" id="calculateVertices">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#calculateVertices">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#calculateVertices">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2926,9 +2585,9 @@ This is used to ensure that the true width and height of a trimmed texture is re
 <div class="member" id="containsPoint">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#containsPoint">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#containsPoint">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -2937,7 +2596,7 @@ This is used to ensure that the true width and height of a trimmed texture is re
     </section>
   
   
-<pre class="signature__container"><code class="signature">containsPoint(point: <a href="/docs/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>) → {boolean}</code></pre>
+<pre class="signature__container"><code class="signature">containsPoint(point: <a href="/pixi-api/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>) → {boolean}</code></pre>
 
 
   <div class="member__brief"><p>Tests if a point is inside this sprite</p></div>
@@ -2963,7 +2622,7 @@ This is used to ensure that the true width and height of a trimmed texture is re
           point
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>
+          <a href="/pixi-api/@pixi/math/PIXI/IPointData.html">PIXI.IPointData</a>
         </td>
         
         
@@ -3005,9 +2664,9 @@ This is used to ensure that the true width and height of a trimmed texture is re
 <div class="member" id="destroy">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#destroy">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#destroy">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -3140,9 +2799,9 @@ method called as well. 'options' will be passed on to those calls.</p></td>
 <div class="member" id="getLocalBounds">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#getLocalBounds">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#getLocalBounds">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -3151,7 +2810,7 @@ method called as well. 'options' will be passed on to those calls.</p></td>
     </section>
   
   
-<pre class="signature__container"><code class="signature">getLocalBounds(rect: <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>) → {<a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>}</code></pre>
+<pre class="signature__container"><code class="signature">getLocalBounds(rect: <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>) → {<a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>}</code></pre>
 
 
   <div class="member__brief"><p>Gets the local bounds of the sprite object.</p></div>
@@ -3177,7 +2836,7 @@ method called as well. 'options' will be passed on to those calls.</p></td>
           rect
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+          <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
         </td>
         <td class="member-parameter__attributes">
           <p>&lt;optional&gt;</p>
@@ -3207,7 +2866,7 @@ method called as well. 'options' will be passed on to those calls.</p></td>
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/docs/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
+          <a href="/pixi-api/@pixi/math/PIXI/Rectangle.html">PIXI.Rectangle</a>
         </td>
         <td class="member-return__description"><p>The bounds.</p></td>
       </tr>
@@ -3231,9 +2890,9 @@ method called as well. 'options' will be passed on to those calls.</p></td>
 <div class="member" id="_calculateBounds">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#_calculateBounds">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#_calculateBounds">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -3280,9 +2939,9 @@ method called as well. 'options' will be passed on to those calls.</p></td>
 <div class="member" id="_onTextureUpdate">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#_onTextureUpdate">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#_onTextureUpdate">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -3329,9 +2988,9 @@ method called as well. 'options' will be passed on to those calls.</p></td>
 <div class="member" id="_render">
   
     <section class="member__title">
-      <a href="/docs/@pixi/sprite/PIXI/Sprite.html#_render">
+      <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html#_render">
         <img
-          src="/docs/icons/link.svg"
+          src="/pixi-api/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -3340,7 +2999,7 @@ method called as well. 'options' will be passed on to those calls.</p></td>
     </section>
   
   
-<pre class="signature__container"><code class="signature">protected _render(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">protected _render(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {void}</code></pre>
 
 
   <div class="member__brief"><p>Renders the object using the WebGL renderer</p></div>
@@ -3366,7 +3025,7 @@ method called as well. 'options' will be passed on to those calls.</p></td>
           renderer
         </td>
         <td class="member-parameter__type">
-          <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
         </td>
         
         
@@ -3423,23 +3082,23 @@ method called as well. 'options' will be passed on to those calls.</p></td>
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#anchor>anchor</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#anchor>anchor</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#blendMode>blendMode</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#blendMode>blendMode</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#height>height</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#height>height</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#isSprite>isSprite</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#isSprite>isSprite</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#pluginName>pluginName</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#pluginName>pluginName</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#roundPixels>roundPixels</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#roundPixels>roundPixels</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#texture>texture</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#texture>texture</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#tint>tint</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#tint>tint</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#width>width</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#width>width</a></li>
     
   </ul>
 </div>
@@ -3450,13 +3109,13 @@ method called as well. 'options' will be passed on to those calls.</p></td>
   <section class="page-members-explorer-category__title">Protected Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#_cachedTint>_cachedTint</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#_cachedTint>_cachedTint</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#_height>_height</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#_height>_height</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#_tintedCanvas>_tintedCanvas</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#_tintedCanvas>_tintedCanvas</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#_width>_width</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#_width>_width</a></li>
     
   </ul>
 </div>
@@ -3467,27 +3126,17 @@ method called as well. 'options' will be passed on to those calls.</p></td>
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#from>from</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#from>from</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#fromCanvas>fromCanvas</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#calculateTrimmedVertices>calculateTrimmedVertices</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#fromFrame>fromFrame</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#calculateVertices>calculateVertices</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#fromImage>fromImage</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#containsPoint>containsPoint</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#fromSVG>fromSVG</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#destroy>destroy</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#fromVideo>fromVideo</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#calculateTrimmedVertices>calculateTrimmedVertices</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#calculateVertices>calculateVertices</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#containsPoint>containsPoint</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#destroy>destroy</a></li>
-    
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#getLocalBounds>getLocalBounds</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#getLocalBounds>getLocalBounds</a></li>
     
   </ul>
 </div>
@@ -3498,11 +3147,11 @@ method called as well. 'options' will be passed on to those calls.</p></td>
   <section class="page-members-explorer-category__title">Protected Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#_calculateBounds>_calculateBounds</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#_calculateBounds>_calculateBounds</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#_onTextureUpdate>_onTextureUpdate</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#_onTextureUpdate>_onTextureUpdate</a></li>
     
-      <li class="page-members-explorer__item"><a href=/docs/@pixi/sprite/PIXI/Sprite.html#_render>_render</a></li>
+      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/sprite/PIXI/Sprite.html#_render>_render</a></li>
     
   </ul>
 </div>
