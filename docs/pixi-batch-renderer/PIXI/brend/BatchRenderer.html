@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>webdoc: BatchRenderer</title>
 
-    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
@@ -14,10 +14,10 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       window.appData = {
-        siteRoot: "pixi-api",
+        siteRoot: "docs",
       };
     </script>
-    <script src="/pixi-api/scripts/default-template.js"></script>
+    <script src="/docs/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -36,14 +36,14 @@
         &gt;
       
       
-        <a href=/pixi-api/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a> &gt; <a href=/pixi-api/pixi-batch-renderer/PIXI/brend.html>brend</a>
+        <a href=/docs/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a> &gt; <a href=/docs/pixi-batch-renderer/PIXI/brend.html>brend</a>
         &gt;
       
       <span>BatchRenderer</span>
     </div>
     <h1 class="document__title">PIXI.brend.BatchRenderer</h1>
     
-<pre class="signature__container"><code class="signature">class BatchRenderer extends <a href="/pixi-api/@pixi/core/PIXI/ObjectRenderer.html">PIXI.ObjectRenderer</a></code></pre>
+<pre class="signature__container"><code class="signature">class BatchRenderer extends <a href="/docs/@pixi/core/PIXI/ObjectRenderer.html">PIXI.ObjectRenderer</a></code></pre>
 
 
     <div class="document__brief"></div>
@@ -63,12 +63,12 @@ instance of PIXI.brend.BatchFactory.</p>
 </li>
 <li>
 <p><strong>Geometry Composition</strong>: The geometries of all display-objects are merged together in a
-composite geometry. This is done using an instance of <a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html>PIXI.brend.BatchGeometryFactory</a>.</p>
+composite geometry. This is done using an instance of <a href=/docs/pixi-batch-renderer/PIXI/brend/BatchGeometryFactory.html>PIXI.brend.BatchGeometryFactory</a>.</p>
 </li>
 <li>
 <p><strong>Drawing</strong>: Each batch is rendered in-order using <code>gl.draw*</code>. The textures and
 uniforms of each display-object are uploaded as arrays. This is done using an instance of
-<a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchDrawer.html>PIXI.brend.BatchDrawer</a>.</p>
+<a href=/docs/pixi-batch-renderer/PIXI/brend/BatchDrawer.html>PIXI.brend.BatchDrawer</a>.</p>
 </li>
 </ul>
 <p>Each stage in this pipeline can be configured by overriding the appropriate component and passing that
@@ -78,7 +78,7 @@ class to <code>BatchRendererPluginFactory.from*</code>.</p>
 <p>Since the max. display-object count per batch is not known until the WebGL context is created,
 shaders are generated at runtime by processing shader templates. A shader templates has &quot;%macros%&quot;
 that are replaced by constants at runtime.</p>
-<p>To use shader templates, simply use <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchShaderFactory.html#derive">PIXI.brend.BatchShaderFactory#derive</a>. This will generate a
+<p>To use shader templates, simply use <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchShaderFactory.html#derive">PIXI.brend.BatchShaderFactory#derive</a>. This will generate a
 function that derives a shader from your template at runtime.</p>
 <h3>Textures</h3>
 <p>The batch renderer uploads textures in the <code>uniform sampler2D uSamplers[%texturesPerBatch%];</code>. The
@@ -109,7 +109,7 @@ work-in-progress feature.</p>
 <div class="member" id="constructor">
   
   
-<pre class="signature__container"><code class="signature">new PIXI.brend.BatchRenderer(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, options: object) → {}</code></pre>
+<pre class="signature__container"><code class="signature">new PIXI.brend.BatchRenderer(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>, options: object) → {}</code></pre>
 
 
   <div class="member__brief"><p>Creates a batch renderer the renders display-objects with the described geometry.</p></div>
@@ -135,7 +135,7 @@ work-in-progress feature.</p>
           renderer
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+          <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
         </td>
         <td class="member-parameter__attributes">
           
@@ -167,7 +167,7 @@ work-in-progress feature.</p>
           options.attribSet
         </td>
         <td class="member-parameter__type">
-          Array&lt;<a href="/pixi-api/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html">PIXI.brend.AttributeRedirect</a>&gt;
+          Array&lt;<a href="/docs/pixi-batch-renderer/PIXI/brend/AttributeRedirect.html">PIXI.brend.AttributeRedirect</a>&gt;
         </td>
         <td class="member-parameter__attributes">
           
@@ -365,8 +365,8 @@ work-in-progress feature.</p>
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties from BatchRenderer</h3>
     </section>
@@ -380,7 +380,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_masterIDAttrib">_masterIDAttrib</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_masterIDAttrib">_masterIDAttrib</a>
                 </section>
                 <section>
                   
@@ -396,7 +396,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_attribRedirects">protected _attribRedirects</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_attribRedirects">protected _attribRedirects</a>
                 </section>
                 <section>
                   
@@ -414,7 +414,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchDrawerClass">protected _BatchDrawerClass</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchDrawerClass">protected _BatchDrawerClass</a>
                 </section>
                 <section>
                   
@@ -430,7 +430,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_batchFactory">protected _batchFactory</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_batchFactory">protected _batchFactory</a>
                 </section>
                 <section>
                   
@@ -446,7 +446,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchFactoryClass">protected _BatchFactoryClass</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchFactoryClass">protected _BatchFactoryClass</a>
                 </section>
                 <section>
                   
@@ -462,7 +462,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchGeometryFactoryClass">protected _BatchGeometryFactoryClass</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchGeometryFactoryClass">protected _BatchGeometryFactoryClass</a>
                 </section>
                 <section>
                   
@@ -478,7 +478,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_drawer">protected _drawer</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_drawer">protected _drawer</a>
                 </section>
                 <section>
                   
@@ -494,7 +494,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_geometryFactory">protected _geometryFactory</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_geometryFactory">protected _geometryFactory</a>
                 </section>
                 <section>
                   
@@ -510,7 +510,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_inBatchIDAttrib">protected _inBatchIDAttrib</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_inBatchIDAttrib">protected _inBatchIDAttrib</a>
                 </section>
                 <section>
                   
@@ -526,7 +526,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_indexCountProperty">protected _indexCountProperty</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_indexCountProperty">protected _indexCountProperty</a>
                 </section>
                 <section>
                   
@@ -542,7 +542,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_indexProperty">protected _indexProperty</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_indexProperty">protected _indexProperty</a>
                 </section>
                 <section>
                   
@@ -560,7 +560,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_shaderFunction">protected _shaderFunction</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_shaderFunction">protected _shaderFunction</a>
                 </section>
                 <section>
                   
@@ -576,7 +576,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_stateFunction">protected _stateFunction</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_stateFunction">protected _stateFunction</a>
                 </section>
                 <section>
                   
@@ -592,7 +592,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_texIDAttrib">protected _texIDAttrib</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_texIDAttrib">protected _texIDAttrib</a>
                 </section>
                 <section>
                   
@@ -608,7 +608,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_textureProperty">protected _textureProperty</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_textureProperty">protected _textureProperty</a>
                 </section>
                 <section>
                   
@@ -624,7 +624,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_texturesPerObject">protected _texturesPerObject</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_texturesPerObject">protected _texturesPerObject</a>
                 </section>
                 <section>
                   
@@ -640,7 +640,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_uniformIDAttrib">protected _uniformIDAttrib</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_uniformIDAttrib">protected _uniformIDAttrib</a>
                 </section>
                 <section>
                   
@@ -651,12 +651,12 @@ work-in-progress feature.</p>
             <tr>
               <td class="summary__signature">
                 
-                  Array&lt;<a href=/pixi-api/pixi-batch-renderer/PIXI/brend/UniformRedirect.html>PIXI.brend.UniformRedirect</a>&gt;
+                  Array&lt;<a href=/docs/pixi-batch-renderer/PIXI/brend/UniformRedirect.html>PIXI.brend.UniformRedirect</a>&gt;
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_uniformRedirects">protected _uniformRedirects</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_uniformRedirects">protected _uniformRedirects</a>
                 </section>
                 <section>
                   
@@ -672,7 +672,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_vertexCountProperty">protected _vertexCountProperty</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_vertexCountProperty">protected _vertexCountProperty</a>
                 </section>
                 <section>
                   
@@ -686,7 +686,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#options">protected options</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#options">protected options</a>
                 </section>
                 <section>
                   
@@ -707,8 +707,8 @@ work-in-progress feature.</p>
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods from BatchRenderer</h3>
     </section>
@@ -724,7 +724,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#calculateIndexCount">calculateIndexCount(object: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#calculateIndexCount">calculateIndexCount(object: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -742,7 +742,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#calculateVertexCount">calculateVertexCount(object: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#calculateVertexCount">calculateVertexCount(object: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -760,7 +760,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#contextChange">contextChange()</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#contextChange">contextChange()</a>
                 </section>
                 <section>
                   
@@ -778,7 +778,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#flush">flush()</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#flush">flush()</a>
                 </section>
                 <section>
                   
@@ -794,7 +794,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#render">render(displayObject: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#render">render(displayObject: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>)</a>
                 </section>
                 <section>
                   
@@ -810,7 +810,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#start">start()</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#start">start()</a>
                 </section>
                 <section>
                   
@@ -826,7 +826,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#stop">stop()</a>
+                  <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#stop">stop()</a>
                 </section>
                 <section>
                   
@@ -849,8 +849,8 @@ work-in-progress feature.</p>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties inherited from ObjectRenderer</h3>
     </section>
@@ -861,12 +861,12 @@ work-in-progress feature.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/pixi-api/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a>
+                  <a href=/docs/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/ObjectRenderer.html#renderer">renderer</a>
+                  <a href="/docs/@pixi/core/PIXI/ObjectRenderer.html#renderer">renderer</a>
                 </section>
                 <section>
                   
@@ -890,8 +890,8 @@ work-in-progress feature.</p>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods inherited from ObjectRenderer</h3>
     </section>
@@ -907,7 +907,7 @@ work-in-progress feature.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/ObjectRenderer.html#destroy">destroy()</a>
+                  <a href="/docs/@pixi/core/PIXI/ObjectRenderer.html#destroy">destroy()</a>
                 </section>
                 <section>
                   
@@ -935,9 +935,9 @@ work-in-progress feature.</p>
 <div class="member" id="_masterIDAttrib">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_masterIDAttrib">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_masterIDAttrib">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -954,7 +954,7 @@ work-in-progress feature.</p>
 <code>_inBatchIDAttrib</code>, and other information into one 32-bit float attribute. You can then unpack
 them in the vertex shader and pass varyings to the fragment shader (because <code>int</code> varyings are not
 supported).</p>
-<p>To use it, you must provide your own <a href=/pixi-api/pixi-batch-renderer/BatchGeometryFactory.html>BatchGeometryFactory</a> that overrides
+<p>To use it, you must provide your own <a href=/docs/pixi-batch-renderer/BatchGeometryFactory.html>BatchGeometryFactory</a> that overrides
 BatchGeometryFactory#append and sets the <code>_masterIDAttrib</code>.</p></div>
 
   
@@ -975,9 +975,9 @@ BatchGeometryFactory#append and sets the <code>_masterIDAttrib</code>.</p></div>
 <div class="member" id="_attribRedirects">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_attribRedirects">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_attribRedirects">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1002,9 +1002,9 @@ BatchGeometryFactory#append and sets the <code>_masterIDAttrib</code>.</p></div>
 <div class="member" id="_BatchDrawerClass">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchDrawerClass">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchDrawerClass">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1029,9 +1029,9 @@ BatchGeometryFactory#append and sets the <code>_masterIDAttrib</code>.</p></div>
 <div class="member" id="_batchFactory">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_batchFactory">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_batchFactory">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1056,9 +1056,9 @@ BatchGeometryFactory#append and sets the <code>_masterIDAttrib</code>.</p></div>
 <div class="member" id="_BatchFactoryClass">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchFactoryClass">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchFactoryClass">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1083,9 +1083,9 @@ BatchGeometryFactory#append and sets the <code>_masterIDAttrib</code>.</p></div>
 <div class="member" id="_BatchGeometryFactoryClass">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchGeometryFactoryClass">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchGeometryFactoryClass">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1110,9 +1110,9 @@ BatchGeometryFactory#append and sets the <code>_masterIDAttrib</code>.</p></div>
 <div class="member" id="_drawer">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_drawer">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_drawer">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1137,9 +1137,9 @@ BatchGeometryFactory#append and sets the <code>_masterIDAttrib</code>.</p></div>
 <div class="member" id="_geometryFactory">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_geometryFactory">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_geometryFactory">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1164,9 +1164,9 @@ BatchGeometryFactory#append and sets the <code>_masterIDAttrib</code>.</p></div>
 <div class="member" id="_inBatchIDAttrib">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_inBatchIDAttrib">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_inBatchIDAttrib">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1191,9 +1191,9 @@ BatchGeometryFactory#append and sets the <code>_masterIDAttrib</code>.</p></div>
 <div class="member" id="_indexCountProperty">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_indexCountProperty">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_indexCountProperty">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1220,9 +1220,9 @@ is used.</p></div>
 <div class="member" id="_indexProperty">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_indexProperty">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_indexProperty">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1247,9 +1247,9 @@ is used.</p></div>
 <div class="member" id="_shaderFunction">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_shaderFunction">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_shaderFunction">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1274,9 +1274,9 @@ is used.</p></div>
 <div class="member" id="_stateFunction">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_stateFunction">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_stateFunction">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1301,9 +1301,9 @@ is used.</p></div>
 <div class="member" id="_texIDAttrib">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_texIDAttrib">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_texIDAttrib">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1328,9 +1328,9 @@ is used.</p></div>
 <div class="member" id="_textureProperty">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_textureProperty">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_textureProperty">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1355,9 +1355,9 @@ is used.</p></div>
 <div class="member" id="_texturesPerObject">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_texturesPerObject">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_texturesPerObject">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1382,9 +1382,9 @@ is used.</p></div>
 <div class="member" id="_uniformIDAttrib">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_uniformIDAttrib">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_uniformIDAttrib">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1410,9 +1410,9 @@ in-batch ID because equal uniforms are not uploaded twice.</p></div>
 <div class="member" id="_uniformRedirects">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_uniformRedirects">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_uniformRedirects">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1421,7 +1421,7 @@ in-batch ID because equal uniforms are not uploaded twice.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">protected _uniformRedirects: Array&lt;<a href=/pixi-api/pixi-batch-renderer/PIXI/brend/UniformRedirect.html>PIXI.brend.UniformRedirect</a>></code></pre>
+<pre class="signature__container"><code class="signature">protected _uniformRedirects: Array&lt;<a href=/docs/pixi-batch-renderer/PIXI/brend/UniformRedirect.html>PIXI.brend.UniformRedirect</a>></code></pre>
 
 
   <div class="member__brief"></div>
@@ -1438,9 +1438,9 @@ batch factories (like <code>PIXI.brend.AggregateUniformsBatchFactory</code>).</p
 <div class="member" id="_vertexCountProperty">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_vertexCountProperty">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_vertexCountProperty">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1466,9 +1466,9 @@ calculated as the number of element in the first attribute's buffer.</p></div>
 <div class="member" id="options">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#options">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#options">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1501,9 +1501,9 @@ calculated as the number of element in the first attribute's buffer.</p></div>
 <div class="member" id="calculateIndexCount">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#calculateIndexCount">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#calculateIndexCount">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1512,7 +1512,7 @@ calculated as the number of element in the first attribute's buffer.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">calculateIndexCount(object: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>) → {number}</code></pre>
+<pre class="signature__container"><code class="signature">calculateIndexCount(object: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>) → {number}</code></pre>
 
 
   <div class="member__brief"><p>Calculates the number of indices in the display object's geometry.</p></div>
@@ -1538,7 +1538,7 @@ calculated as the number of element in the first attribute's buffer.</p></div>
           object
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+          <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
         </td>
         
         
@@ -1580,9 +1580,9 @@ calculated as the number of element in the first attribute's buffer.</p></div>
 <div class="member" id="calculateVertexCount">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#calculateVertexCount">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#calculateVertexCount">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1591,7 +1591,7 @@ calculated as the number of element in the first attribute's buffer.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">calculateVertexCount(object: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>) → {number}</code></pre>
+<pre class="signature__container"><code class="signature">calculateVertexCount(object: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>) → {number}</code></pre>
 
 
   <div class="member__brief"><p>Calculates the number of vertices in the display object's geometry.</p></div>
@@ -1617,7 +1617,7 @@ calculated as the number of element in the first attribute's buffer.</p></div>
           object
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+          <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
         </td>
         
         
@@ -1659,9 +1659,9 @@ calculated as the number of element in the first attribute's buffer.</p></div>
 <div class="member" id="contextChange">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#contextChange">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#contextChange">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1708,9 +1708,9 @@ calculated as the number of element in the first attribute's buffer.</p></div>
 <div class="member" id="flush">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#flush">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#flush">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1767,9 +1767,9 @@ because the PixiJS renderer is not re-entrant.</p>
 <div class="member" id="render">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#render">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#render">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1778,7 +1778,7 @@ because the PixiJS renderer is not re-entrant.</p>
     </section>
   
   
-<pre class="signature__container"><code class="signature">render(displayObject: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">render(displayObject: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>) → {void}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -1808,7 +1808,7 @@ this as follows:</p>
           displayObject
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+          <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
         </td>
         
         
@@ -1850,9 +1850,9 @@ this as follows:</p>
 <div class="member" id="start">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#start">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#start">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1900,9 +1900,9 @@ This is automatically invoked by the renderer's batch system.</p></div>
 <div class="member" id="stop">
   
     <section class="member__title">
-      <a href="/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#stop">
+      <a href="/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#stop">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1965,7 +1965,7 @@ This is automatically invoked by the renderer's batch system.</p></div>
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_masterIDAttrib>_masterIDAttrib</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_masterIDAttrib>_masterIDAttrib</a></li>
     
   </ul>
 </div>
@@ -1976,43 +1976,43 @@ This is automatically invoked by the renderer's batch system.</p></div>
   <section class="page-members-explorer-category__title">Protected Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_attribRedirects>_attribRedirects</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_attribRedirects>_attribRedirects</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchDrawerClass>_BatchDrawerClass</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchDrawerClass>_BatchDrawerClass</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_batchFactory>_batchFactory</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_batchFactory>_batchFactory</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchFactoryClass>_BatchFactoryClass</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchFactoryClass>_BatchFactoryClass</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchGeometryFactoryClass>_BatchGeometryFactoryClass</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_BatchGeometryFactoryClass>_BatchGeometryFactoryClass</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_drawer>_drawer</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_drawer>_drawer</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_geometryFactory>_geometryFactory</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_geometryFactory>_geometryFactory</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_inBatchIDAttrib>_inBatchIDAttrib</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_inBatchIDAttrib>_inBatchIDAttrib</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_indexCountProperty>_indexCountProperty</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_indexCountProperty>_indexCountProperty</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_indexProperty>_indexProperty</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_indexProperty>_indexProperty</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_shaderFunction>_shaderFunction</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_shaderFunction>_shaderFunction</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_stateFunction>_stateFunction</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_stateFunction>_stateFunction</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_texIDAttrib>_texIDAttrib</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_texIDAttrib>_texIDAttrib</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_textureProperty>_textureProperty</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_textureProperty>_textureProperty</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_texturesPerObject>_texturesPerObject</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_texturesPerObject>_texturesPerObject</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_uniformIDAttrib>_uniformIDAttrib</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_uniformIDAttrib>_uniformIDAttrib</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_uniformRedirects>_uniformRedirects</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_uniformRedirects>_uniformRedirects</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_vertexCountProperty>_vertexCountProperty</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#_vertexCountProperty>_vertexCountProperty</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#options>options</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#options>options</a></li>
     
   </ul>
 </div>
@@ -2023,19 +2023,19 @@ This is automatically invoked by the renderer's batch system.</p></div>
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#calculateIndexCount>calculateIndexCount</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#calculateIndexCount>calculateIndexCount</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#calculateVertexCount>calculateVertexCount</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#calculateVertexCount>calculateVertexCount</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#contextChange>contextChange</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#contextChange>contextChange</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#flush>flush</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#flush>flush</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#render>render</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#render>render</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#start>start</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#start>start</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#stop>stop</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/pixi-batch-renderer/PIXI/brend/BatchRenderer.html#stop>stop</a></li>
     
   </ul>
 </div>

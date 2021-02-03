@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>webdoc: SpritesheetLoader</title>
 
-    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
@@ -14,10 +14,10 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       window.appData = {
-        siteRoot: "pixi-api",
+        siteRoot: "docs",
       };
     </script>
-    <script src="/pixi-api/scripts/default-template.js"></script>
+    <script src="/docs/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -36,7 +36,7 @@
         &gt;
       
       
-        <a href=/pixi-api/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
+        <a href=/docs/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
         &gt;
       
       <span>SpritesheetLoader</span>
@@ -44,15 +44,15 @@
     <h1 class="document__title">PIXI.SpritesheetLoader</h1>
     
 <pre class="signature__container"><code class="signature">class SpritesheetLoader
-implements <a href="/pixi-api/@pixi/loaders/PIXI/ILoaderPlugin.html">PIXI.ILoaderPlugin</a></code></pre>
+implements <a href="/docs/@pixi/loaders/PIXI/ILoaderPlugin.html">PIXI.ILoaderPlugin</a></code></pre>
 
 
     <div class="document__brief"></div>
-    <div class="document__description"><p><a href=/pixi-api/@pixi/loaders/PIXI/Loader.html>PIXI.Loader</a> middleware for loading texture atlases that have been created with
+    <div class="document__description"><p><a href=/docs/@pixi/loaders/PIXI/Loader.html>PIXI.Loader</a> middleware for loading texture atlases that have been created with
 TexturePacker or similar JSON-based spritesheet.</p>
 <p>This middleware automatically generates Texture resources.</p>
 <p>If you're using Webpack or other bundlers and plan on bundling the atlas' JSON,
-use the <a href=/pixi-api/@pixi/spritesheet/PIXI/Spritesheet.html>PIXI.Spritesheet</a> class to directly parse the JSON.</p>
+use the <a href=/docs/@pixi/spritesheet/PIXI/Spritesheet.html>PIXI.Spritesheet</a> class to directly parse the JSON.</p>
 <p>The Loader's image Resource name is automatically appended with <code>&quot;_image&quot;</code>.
 If a Resource with this name is already loaded, the Loader will skip parsing the
 Spritesheet. The code below will generate an internal Loader Resource called <code>&quot;myatlas_image&quot;</code>.</p></div>
@@ -78,8 +78,8 @@ Spritesheet. The code below will generate an internal Loader Resource called <co
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods from SpritesheetLoader</h3>
     </section>
@@ -95,7 +95,7 @@ Spritesheet. The code below will generate an internal Loader Resource called <co
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/spritesheet/PIXI/SpritesheetLoader.html#getResourcePath">static getResourcePath(resource: <a href="/pixi-api/@pixi/loaders/PIXI/LoaderResource.html">PIXI.LoaderResource</a>, baseUrl: string)</a>
+                  <a href="/docs/@pixi/spritesheet/PIXI/SpritesheetLoader.html#getResourcePath">static getResourcePath(resource: <a href="/docs/@pixi/loaders/PIXI/LoaderResource.html">PIXI.LoaderResource</a>, baseUrl: string)</a>
                 </section>
                 <section>
                   
@@ -111,7 +111,7 @@ Spritesheet. The code below will generate an internal Loader Resource called <co
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/spritesheet/PIXI/SpritesheetLoader.html#use">static use(resource: <a href="/pixi-api/@pixi/loaders/PIXI/LoaderResource.html">PIXI.LoaderResource</a>, next: Function)</a>
+                  <a href="/docs/@pixi/spritesheet/PIXI/SpritesheetLoader.html#use">static use(resource: <a href="/docs/@pixi/loaders/PIXI/LoaderResource.html">PIXI.LoaderResource</a>, next: Function)</a>
                 </section>
                 <section>
                   
@@ -150,9 +150,9 @@ Spritesheet. The code below will generate an internal Loader Resource called <co
 <div class="member" id="getResourcePath">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/spritesheet/PIXI/SpritesheetLoader.html#getResourcePath">
+      <a href="/docs/@pixi/spritesheet/PIXI/SpritesheetLoader.html#getResourcePath">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -161,7 +161,7 @@ Spritesheet. The code below will generate an internal Loader Resource called <co
     </section>
   
   
-<pre class="signature__container"><code class="signature">static getResourcePath(resource: <a href="/pixi-api/@pixi/loaders/PIXI/LoaderResource.html">PIXI.LoaderResource</a>, baseUrl: string) → {string}</code></pre>
+<pre class="signature__container"><code class="signature">static getResourcePath(resource: <a href="/docs/@pixi/loaders/PIXI/LoaderResource.html">PIXI.LoaderResource</a>, baseUrl: string) → {string}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -187,7 +187,7 @@ Spritesheet. The code below will generate an internal Loader Resource called <co
           resource
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/loaders/PIXI/LoaderResource.html">PIXI.LoaderResource</a>
+          <a href="/docs/@pixi/loaders/PIXI/LoaderResource.html">PIXI.LoaderResource</a>
         </td>
         
         
@@ -239,9 +239,9 @@ Spritesheet. The code below will generate an internal Loader Resource called <co
 <div class="member" id="use">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/spritesheet/PIXI/SpritesheetLoader.html#use">
+      <a href="/docs/@pixi/spritesheet/PIXI/SpritesheetLoader.html#use">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -250,7 +250,7 @@ Spritesheet. The code below will generate an internal Loader Resource called <co
     </section>
   
   
-<pre class="signature__container"><code class="signature">static use(resource: <a href="/pixi-api/@pixi/loaders/PIXI/LoaderResource.html">PIXI.LoaderResource</a>, next: Function) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">static use(resource: <a href="/docs/@pixi/loaders/PIXI/LoaderResource.html">PIXI.LoaderResource</a>, next: Function) → {void}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -276,7 +276,7 @@ Spritesheet. The code below will generate an internal Loader Resource called <co
           resource
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/loaders/PIXI/LoaderResource.html">PIXI.LoaderResource</a>
+          <a href="/docs/@pixi/loaders/PIXI/LoaderResource.html">PIXI.LoaderResource</a>
         </td>
         
         
@@ -346,9 +346,9 @@ Spritesheet. The code below will generate an internal Loader Resource called <co
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/spritesheet/PIXI/SpritesheetLoader.html#getResourcePath>getResourcePath</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/spritesheet/PIXI/SpritesheetLoader.html#getResourcePath>getResourcePath</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/spritesheet/PIXI/SpritesheetLoader.html#use>use</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/spritesheet/PIXI/SpritesheetLoader.html#use>use</a></li>
     
   </ul>
 </div>

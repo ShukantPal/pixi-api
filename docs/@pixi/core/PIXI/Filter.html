@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>webdoc: Filter</title>
 
-    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
@@ -14,10 +14,10 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       window.appData = {
-        siteRoot: "pixi-api",
+        siteRoot: "docs",
       };
     </script>
-    <script src="/pixi-api/scripts/default-template.js"></script>
+    <script src="/docs/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -36,21 +36,21 @@
         &gt;
       
       
-        <a href=/pixi-api/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
+        <a href=/docs/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
         &gt;
       
       <span>Filter</span>
     </div>
     <h1 class="document__title">PIXI.Filter</h1>
     
-<pre class="signature__container"><code class="signature">class Filter extends <a href="/pixi-api/@pixi/core/PIXI/Shader.html">PIXI.Shader</a></code></pre>
+<pre class="signature__container"><code class="signature">class Filter extends <a href="/docs/@pixi/core/PIXI/Shader.html">PIXI.Shader</a></code></pre>
 
 
     <div class="document__brief"></div>
     <div class="document__description"><p>A filter is a special shader that applies post-processing effects to an input texture and writes into an output
 render-target.</p>
 <p><a href="http://pixijs.io/examples/#/filters/blur-filter.js">Example</a> of the
-<a href=/pixi-api/@pixi/filter-blur/PIXI/filters/BlurFilter.html>BlurFilter</a>.</p>
+<a href=/docs/@pixi/filter-blur/PIXI/filters/BlurFilter.html>BlurFilter</a>.</p>
 <h3>Usage</h3>
 <p>Filters can be applied to any DisplayObject or Container.
 PixiJS' <code>FilterSystem</code> renders the container into temporary Framebuffer,
@@ -121,7 +121,7 @@ Use it to sample the input.</p>
 
 <span class="hljs-keyword">const</span> myFilter = new PIXI.Filter(null, fragment);
 </code></pre>
-<p>This filter is just one uniform less than <a href=/pixi-api/@pixi/filter-alpha/PIXI/filters/AlphaFilter.html>AlphaFilter</a>.</p>
+<p>This filter is just one uniform less than <a href=/docs/@pixi/filter-alpha/PIXI/filters/AlphaFilter.html>AlphaFilter</a>.</p>
 <p><strong>outputFrame</strong></p>
 <p>The <code>outputFrame</code> holds the rectangle where filter is applied in screen (CSS) coordinates.
 It's the same as <code>renderer.screen</code> for a fullscreen filter.
@@ -153,7 +153,7 @@ Divide by <code>inputSize.xy</code> to get input normalized coordinate.</p>
 <p><strong>inputPixel</strong></p>
 <p><code>inputPixel.xy</code> is the size of framebuffer in real pixels, same as <code>inputSize.xy * resolution</code>
 <code>inputPixel.zw</code> is inverted <code>inputPixel.xy</code>.</p>
-<p>It's handy for filters that use neighbour pixels, like <a href=/pixi-api/@pixi/filter-fxaa/PIXI/filters/FXAAFilter.html>FXAAFilter</a>.</p>
+<p>It's handy for filters that use neighbour pixels, like <a href=/docs/@pixi/filter-fxaa/PIXI/filters/FXAAFilter.html>FXAAFilter</a>.</p>
 <p><strong>inputClamp</strong></p>
 <p>If you try to get info from outside of used part of Framebuffer - you'll get undefined behaviour.
 For displacements, coordinates has to be clamped.</p>
@@ -271,8 +271,8 @@ For displacements, coordinates has to be clamped.</p>
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties from Filter</h3>
     </section>
@@ -288,7 +288,7 @@ For displacements, coordinates has to be clamped.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Filter.html#defaultFragmentSrc">static defaultFragmentSrc</a>
+                  <a href="/docs/@pixi/core/PIXI/Filter.html#defaultFragmentSrc">static defaultFragmentSrc</a>
                 </section>
                 <section>
                   
@@ -306,7 +306,7 @@ For displacements, coordinates has to be clamped.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Filter.html#defaultVertexSrc">static defaultVertexSrc</a>
+                  <a href="/docs/@pixi/core/PIXI/Filter.html#defaultVertexSrc">static defaultVertexSrc</a>
                 </section>
                 <section>
                   
@@ -324,7 +324,7 @@ For displacements, coordinates has to be clamped.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Filter.html#SOURCE_KEY_MAP">protected static SOURCE_KEY_MAP</a>
+                  <a href="/docs/@pixi/core/PIXI/Filter.html#SOURCE_KEY_MAP">protected static SOURCE_KEY_MAP</a>
                 </section>
                 <section>
                   
@@ -342,7 +342,7 @@ For displacements, coordinates has to be clamped.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Filter.html#autoFit">autoFit</a>
+                  <a href="/docs/@pixi/core/PIXI/Filter.html#autoFit">autoFit</a>
                 </section>
                 <section>
                   
@@ -358,7 +358,7 @@ For displacements, coordinates has to be clamped.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Filter.html#blendMode">blendMode</a>
+                  <a href="/docs/@pixi/core/PIXI/Filter.html#blendMode">blendMode</a>
                 </section>
                 <section>
                   
@@ -376,7 +376,7 @@ For displacements, coordinates has to be clamped.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Filter.html#enabled">enabled</a>
+                  <a href="/docs/@pixi/core/PIXI/Filter.html#enabled">enabled</a>
                 </section>
                 <section>
                   
@@ -394,7 +394,7 @@ For displacements, coordinates has to be clamped.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Filter.html#legacy">legacy</a>
+                  <a href="/docs/@pixi/core/PIXI/Filter.html#legacy">legacy</a>
                 </section>
                 <section>
                   
@@ -410,7 +410,7 @@ For displacements, coordinates has to be clamped.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Filter.html#padding">padding</a>
+                  <a href="/docs/@pixi/core/PIXI/Filter.html#padding">padding</a>
                 </section>
                 <section>
                   
@@ -426,7 +426,7 @@ For displacements, coordinates has to be clamped.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Filter.html#resolution">resolution</a>
+                  <a href="/docs/@pixi/core/PIXI/Filter.html#resolution">resolution</a>
                 </section>
                 <section>
                   
@@ -437,12 +437,12 @@ For displacements, coordinates has to be clamped.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/pixi-api/@pixi/core/PIXI/State.html>PIXI.State</a>
+                  <a href=/docs/@pixi/core/PIXI/State.html>PIXI.State</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Filter.html#state">state</a>
+                  <a href="/docs/@pixi/core/PIXI/Filter.html#state">state</a>
                 </section>
                 <section>
                   
@@ -463,8 +463,8 @@ For displacements, coordinates has to be clamped.</p>
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods from Filter</h3>
     </section>
@@ -480,7 +480,7 @@ For displacements, coordinates has to be clamped.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Filter.html#apply">apply(filterManager: <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html">PIXI.FilterSystem</a>, input: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, output: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, clearMode: <a href="/pixi-api/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>, currentState: object)</a>
+                  <a href="/docs/@pixi/core/PIXI/Filter.html#apply">apply(filterManager: <a href="/docs/@pixi/core/PIXI/FilterSystem.html">PIXI.FilterSystem</a>, input: <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, output: <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, clearMode: <a href="/docs/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>, currentState: object)</a>
                 </section>
                 <section>
                   
@@ -503,8 +503,8 @@ For displacements, coordinates has to be clamped.</p>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties inherited from Shader</h3>
     </section>
@@ -515,12 +515,12 @@ For displacements, coordinates has to be clamped.</p>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/pixi-api/@pixi/core/PIXI/Program.html>PIXI.Program</a>
+                  <a href=/docs/@pixi/core/PIXI/Program.html>PIXI.Program</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Shader.html#program">program</a>
+                  <a href="/docs/@pixi/core/PIXI/Shader.html#program">program</a>
                 </section>
                 <section>
                   
@@ -538,7 +538,7 @@ For displacements, coordinates has to be clamped.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Shader.html#uniforms">uniforms</a>
+                  <a href="/docs/@pixi/core/PIXI/Shader.html#uniforms">uniforms</a>
                 </section>
                 <section>
                   
@@ -559,8 +559,8 @@ For displacements, coordinates has to be clamped.</p>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods inherited from Shader</h3>
     </section>
@@ -576,7 +576,7 @@ For displacements, coordinates has to be clamped.</p>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Shader.html#destroy">destroy()</a>
+                  <a href="/docs/@pixi/core/PIXI/Shader.html#destroy">destroy()</a>
                 </section>
                 <section>
                   
@@ -603,9 +603,9 @@ For displacements, coordinates has to be clamped.</p>
 <div class="member" id="defaultFragmentSrc">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/Filter.html#defaultFragmentSrc">
+      <a href="/docs/@pixi/core/PIXI/Filter.html#defaultFragmentSrc">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -630,9 +630,9 @@ For displacements, coordinates has to be clamped.</p>
 <div class="member" id="defaultVertexSrc">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/Filter.html#defaultVertexSrc">
+      <a href="/docs/@pixi/core/PIXI/Filter.html#defaultVertexSrc">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -657,9 +657,9 @@ For displacements, coordinates has to be clamped.</p>
 <div class="member" id="autoFit">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/Filter.html#autoFit">
+      <a href="/docs/@pixi/core/PIXI/Filter.html#autoFit">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -685,9 +685,9 @@ Switch it off if it does not work for specific shader.</p></div>
 <div class="member" id="blendMode">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/Filter.html#blendMode">
+      <a href="/docs/@pixi/core/PIXI/Filter.html#blendMode">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -712,9 +712,9 @@ Switch it off if it does not work for specific shader.</p></div>
 <div class="member" id="enabled">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/Filter.html#enabled">
+      <a href="/docs/@pixi/core/PIXI/Filter.html#enabled">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -739,9 +739,9 @@ Switch it off if it does not work for specific shader.</p></div>
 <div class="member" id="legacy">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/Filter.html#legacy">
+      <a href="/docs/@pixi/core/PIXI/Filter.html#legacy">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -766,9 +766,9 @@ Switch it off if it does not work for specific shader.</p></div>
 <div class="member" id="padding">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/Filter.html#padding">
+      <a href="/docs/@pixi/core/PIXI/Filter.html#padding">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -795,9 +795,9 @@ filter is applied to.</p></div>
 <div class="member" id="resolution">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/Filter.html#resolution">
+      <a href="/docs/@pixi/core/PIXI/Filter.html#resolution">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -823,9 +823,9 @@ increase the performance of the filter.</p></div>
 <div class="member" id="state">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/Filter.html#state">
+      <a href="/docs/@pixi/core/PIXI/Filter.html#state">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -834,7 +834,7 @@ increase the performance of the filter.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">state: <a href=/pixi-api/@pixi/core/PIXI/State.html>PIXI.State</a></code></pre>
+<pre class="signature__container"><code class="signature">state: <a href=/docs/@pixi/core/PIXI/State.html>PIXI.State</a></code></pre>
 
 
   <div class="member__brief"></div>
@@ -858,9 +858,9 @@ increase the performance of the filter.</p></div>
 <div class="member" id="SOURCE_KEY_MAP">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/Filter.html#SOURCE_KEY_MAP">
+      <a href="/docs/@pixi/core/PIXI/Filter.html#SOURCE_KEY_MAP">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -893,9 +893,9 @@ increase the performance of the filter.</p></div>
 <div class="member" id="apply">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/Filter.html#apply">
+      <a href="/docs/@pixi/core/PIXI/Filter.html#apply">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -904,7 +904,7 @@ increase the performance of the filter.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">apply(filterManager: <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html">PIXI.FilterSystem</a>, input: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, output: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, clearMode: <a href="/pixi-api/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>, currentState: object) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">apply(filterManager: <a href="/docs/@pixi/core/PIXI/FilterSystem.html">PIXI.FilterSystem</a>, input: <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, output: <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, clearMode: <a href="/docs/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>, currentState: object) → {void}</code></pre>
 
 
   <div class="member__brief"><p>Applies the filter</p></div>
@@ -930,7 +930,7 @@ increase the performance of the filter.</p></div>
           filterManager
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html">PIXI.FilterSystem</a>
+          <a href="/docs/@pixi/core/PIXI/FilterSystem.html">PIXI.FilterSystem</a>
         </td>
         <td class="member-parameter__attributes">
           
@@ -944,7 +944,7 @@ increase the performance of the filter.</p></div>
           input
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+          <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
         </td>
         <td class="member-parameter__attributes">
           
@@ -958,7 +958,7 @@ increase the performance of the filter.</p></div>
           output
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+          <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
         </td>
         <td class="member-parameter__attributes">
           
@@ -972,7 +972,7 @@ increase the performance of the filter.</p></div>
           clearMode
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>
+          <a href="/docs/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>
         </td>
         <td class="member-parameter__attributes">
           
@@ -1050,23 +1050,23 @@ target, filters, sourceFrame, destinationFrame, renderTarget, resolution</p></td
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/Filter.html#defaultFragmentSrc>defaultFragmentSrc</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/Filter.html#defaultFragmentSrc>defaultFragmentSrc</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/Filter.html#defaultVertexSrc>defaultVertexSrc</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/Filter.html#defaultVertexSrc>defaultVertexSrc</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/Filter.html#autoFit>autoFit</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/Filter.html#autoFit>autoFit</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/Filter.html#blendMode>blendMode</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/Filter.html#blendMode>blendMode</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/Filter.html#enabled>enabled</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/Filter.html#enabled>enabled</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/Filter.html#legacy>legacy</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/Filter.html#legacy>legacy</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/Filter.html#padding>padding</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/Filter.html#padding>padding</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/Filter.html#resolution>resolution</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/Filter.html#resolution>resolution</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/Filter.html#state>state</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/Filter.html#state>state</a></li>
     
   </ul>
 </div>
@@ -1077,7 +1077,7 @@ target, filters, sourceFrame, destinationFrame, renderTarget, resolution</p></td
   <section class="page-members-explorer-category__title">Protected Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/Filter.html#SOURCE_KEY_MAP>SOURCE_KEY_MAP</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/Filter.html#SOURCE_KEY_MAP>SOURCE_KEY_MAP</a></li>
     
   </ul>
 </div>
@@ -1088,7 +1088,7 @@ target, filters, sourceFrame, destinationFrame, renderTarget, resolution</p></td
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/Filter.html#apply>apply</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/Filter.html#apply>apply</a></li>
     
   </ul>
 </div>

@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>webdoc: FilterSystem</title>
 
-    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
@@ -14,10 +14,10 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       window.appData = {
-        siteRoot: "pixi-api",
+        siteRoot: "docs",
       };
     </script>
-    <script src="/pixi-api/scripts/default-template.js"></script>
+    <script src="/docs/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -36,32 +36,32 @@
         &gt;
       
       
-        <a href=/pixi-api/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
+        <a href=/docs/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
         &gt;
       
       <span>FilterSystem</span>
     </div>
     <h1 class="document__title">PIXI.FilterSystem</h1>
     
-<pre class="signature__container"><code class="signature">class FilterSystem extends <a href="/pixi-api/@pixi/core/PIXI/System.html">PIXI.System</a></code></pre>
+<pre class="signature__container"><code class="signature">class FilterSystem extends <a href="/docs/@pixi/core/PIXI/System.html">PIXI.System</a></code></pre>
 
 
     <div class="document__brief"><p>System plugin to the renderer to manage filters.</p></div>
     <div class="document__description"><h2>Pipeline</h2>
 <p>The FilterSystem executes the filtering pipeline by rendering the display-object into a texture, applying its
-<a href=/pixi-api/@pixi/core/PIXI/Filter.html>filters</a> in series, and the last filter outputs into the final render-target.</p>
+<a href=/docs/@pixi/core/PIXI/Filter.html>filters</a> in series, and the last filter outputs into the final render-target.</p>
 <p>The filter-frame is the rectangle in world space being filtered, and those contents are mapped into
 <code>(0, 0, filterFrame.width, filterFrame.height)</code> into the filter render-texture. The filter-frame is also called
 the source-frame, as it is used to bind the filter render-textures. The last filter outputs to the <code>filterFrame</code>
 in the final render-target.</p>
 <h2>Usage</h2>
-<p><a href=/pixi-api/@pixi/display/PIXI/Container.html#renderAdvanced>PIXI.Container#renderAdvanced</a> is an example of how to use the filter system. It is a 3 step process:</p>
+<p><a href=/docs/@pixi/display/PIXI/Container.html#renderAdvanced>PIXI.Container#renderAdvanced</a> is an example of how to use the filter system. It is a 3 step process:</p>
 <ul>
-<li><strong>push</strong>: Use <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#push">PIXI.FilterSystem#push</a> to push the set of filters to be applied on a filter-target.</li>
+<li><strong>push</strong>: Use <a href="/docs/@pixi/core/PIXI/FilterSystem.html#push">PIXI.FilterSystem#push</a> to push the set of filters to be applied on a filter-target.</li>
 <li><strong>render</strong>: Render the contents to be filtered using the renderer. The filter-system will only capture the contents
-inside the bounds of the filter-target. NOTE: Using <a href="/pixi-api/@pixi/core/PIXI/Renderer.html#render">PIXI.Renderer#render</a> is
+inside the bounds of the filter-target. NOTE: Using <a href="/docs/@pixi/core/PIXI/Renderer.html#render">PIXI.Renderer#render</a> is
 illegal during an existing render cycle, and it may reset the filter system.</li>
-<li><strong>pop</strong>: Use <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#pop">PIXI.FilterSystem#pop</a> to pop &amp; execute the filters you initially pushed. It will apply them
+<li><strong>pop</strong>: Use <a href="/docs/@pixi/core/PIXI/FilterSystem.html#pop">PIXI.FilterSystem#pop</a> to pop &amp; execute the filters you initially pushed. It will apply them
 serially and output to the bounds of the filter-target.</li>
 </ul></div>
 
@@ -76,7 +76,7 @@ serially and output to the bounds of the filter-target.</li>
 <div class="member" id="constructor">
   
   
-<pre class="signature__container"><code class="signature">new PIXI.FilterSystem(renderer: <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {}</code></pre>
+<pre class="signature__container"><code class="signature">new PIXI.FilterSystem(renderer: <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>) → {}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -102,7 +102,7 @@ serially and output to the bounds of the filter-target.</li>
           renderer
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
+          <a href="/docs/@pixi/core/PIXI/Renderer.html">PIXI.Renderer</a>
         </td>
         
         
@@ -134,8 +134,8 @@ serially and output to the bounds of the filter-target.</li>
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties from FilterSystem</h3>
     </section>
@@ -151,7 +151,7 @@ serially and output to the bounds of the filter-target.</li>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#activeState">activeState</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#activeState">activeState</a>
                 </section>
                 <section>
                   
@@ -167,7 +167,7 @@ serially and output to the bounds of the filter-target.</li>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#defaultFilterStack">defaultFilterStack</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#defaultFilterStack">defaultFilterStack</a>
                 </section>
                 <section>
                   
@@ -183,7 +183,7 @@ serially and output to the bounds of the filter-target.</li>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#forceClear">forceClear</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#forceClear">forceClear</a>
                 </section>
                 <section>
                   
@@ -194,12 +194,12 @@ serially and output to the bounds of the filter-target.</li>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/pixi-api/@pixi/core/PIXI/UniformGroup.html>PIXI.UniformGroup</a>
+                  <a href=/docs/@pixi/core/PIXI/UniformGroup.html>PIXI.UniformGroup</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#globalUniforms">globalUniforms</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#globalUniforms">globalUniforms</a>
                 </section>
                 <section>
                   
@@ -210,12 +210,12 @@ serially and output to the bounds of the filter-target.</li>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/pixi-api/@pixi/core/PIXI/Quad.html>PIXI.Quad</a>
+                  <a href=/docs/@pixi/core/PIXI/Quad.html>PIXI.Quad</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#quad">quad</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#quad">quad</a>
                 </section>
                 <section>
                   
@@ -226,12 +226,12 @@ serially and output to the bounds of the filter-target.</li>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/pixi-api/@pixi/core/PIXI/QuadUv.html>PIXI.QuadUv</a>
+                  <a href=/docs/@pixi/core/PIXI/QuadUv.html>PIXI.QuadUv</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#quadUv">quadUv</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#quadUv">quadUv</a>
                 </section>
                 <section>
                   
@@ -247,7 +247,7 @@ serially and output to the bounds of the filter-target.</li>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#statePool">statePool</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#statePool">statePool</a>
                 </section>
                 <section>
                   
@@ -258,12 +258,12 @@ serially and output to the bounds of the filter-target.</li>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a>
+                  <a href=/docs/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#tempRect">tempRect</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#tempRect">tempRect</a>
                 </section>
                 <section>
                   
@@ -279,7 +279,7 @@ serially and output to the bounds of the filter-target.</li>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#texturePool">texturePool</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#texturePool">texturePool</a>
                 </section>
                 <section>
                   
@@ -295,7 +295,7 @@ serially and output to the bounds of the filter-target.</li>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#useMaxPadding">useMaxPadding</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#useMaxPadding">useMaxPadding</a>
                 </section>
                 <section>
                   
@@ -316,8 +316,8 @@ serially and output to the bounds of the filter-target.</li>
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods from FilterSystem</h3>
     </section>
@@ -328,12 +328,12 @@ serially and output to the bounds of the filter-target.</li>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
+                  <a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#calculateNormalizedScreenSpaceMatrix">static calculateNormalizedScreenSpaceMatrix(outputMatrix: <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>)</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#calculateNormalizedScreenSpaceMatrix">static calculateNormalizedScreenSpaceMatrix(outputMatrix: <a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>)</a>
                 </section>
                 <section>
                   
@@ -344,12 +344,12 @@ serially and output to the bounds of the filter-target.</li>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
+                  <a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#calculateScreenSpaceMatrix">static calculateScreenSpaceMatrix(outputMatrix: <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>)</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#calculateScreenSpaceMatrix">static calculateScreenSpaceMatrix(outputMatrix: <a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>)</a>
                 </section>
                 <section>
                   
@@ -365,7 +365,7 @@ serially and output to the bounds of the filter-target.</li>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#applyFilter">applyFilter(filter: <a href="/pixi-api/@pixi/core/PIXI/Filter.html">PIXI.Filter</a>, input: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, output: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, clearMode: <a href="/pixi-api/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>)</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#applyFilter">applyFilter(filter: <a href="/docs/@pixi/core/PIXI/Filter.html">PIXI.Filter</a>, input: <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, output: <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, clearMode: <a href="/docs/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>)</a>
                 </section>
                 <section>
                   
@@ -383,7 +383,7 @@ serially and output to the bounds of the filter-target.</li>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#bindAndClear">bindAndClear(filterTexture: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, clearMode: <a href="/pixi-api/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>)</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#bindAndClear">bindAndClear(filterTexture: <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, clearMode: <a href="/docs/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>)</a>
                 </section>
                 <section>
                   
@@ -394,12 +394,12 @@ serially and output to the bounds of the filter-target.</li>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
+                  <a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#calculateSpriteMatrix">calculateSpriteMatrix(outputMatrix: <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>, sprite: <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>)</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#calculateSpriteMatrix">calculateSpriteMatrix(outputMatrix: <a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>, sprite: <a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>)</a>
                 </section>
                 <section>
                   
@@ -417,7 +417,7 @@ serially and output to the bounds of the filter-target.</li>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#destroy">destroy()</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#destroy">destroy()</a>
                 </section>
                 <section>
                   
@@ -435,7 +435,7 @@ serially and output to the bounds of the filter-target.</li>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#emptyPool">emptyPool()</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#emptyPool">emptyPool()</a>
                 </section>
                 <section>
                   
@@ -448,12 +448,12 @@ serially and output to the bounds of the filter-target.</li>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+                  <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#getFilterTexture">getFilterTexture(input: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, resolution: number)</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#getFilterTexture">getFilterTexture(input: <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, resolution: number)</a>
                 </section>
                 <section>
                   
@@ -469,7 +469,7 @@ serially and output to the bounds of the filter-target.</li>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#pop">pop()</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#pop">pop()</a>
                 </section>
                 <section>
                   
@@ -487,7 +487,7 @@ serially and output to the bounds of the filter-target.</li>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#push">push(target: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, filters: Array&lt;<a href="/pixi-api/@pixi/core/PIXI/Filter.html">PIXI.Filter</a>>)</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#push">push(target: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, filters: Array&lt;<a href="/docs/@pixi/core/PIXI/Filter.html">PIXI.Filter</a>>)</a>
                 </section>
                 <section>
                   
@@ -503,7 +503,7 @@ serially and output to the bounds of the filter-target.</li>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#resize">resize()</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#resize">resize()</a>
                 </section>
                 <section>
                   
@@ -521,7 +521,7 @@ serially and output to the bounds of the filter-target.</li>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#returnFilterTexture">returnFilterTexture(renderTexture: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>)</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#returnFilterTexture">returnFilterTexture(renderTexture: <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>)</a>
                 </section>
                 <section>
                   
@@ -534,12 +534,12 @@ serially and output to the bounds of the filter-target.</li>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+                  <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#getOptimalFilterTexture">protected getOptimalFilterTexture(minWidth: number, minHeight: number, resolution: number)</a>
+                  <a href="/docs/@pixi/core/PIXI/FilterSystem.html#getOptimalFilterTexture">protected getOptimalFilterTexture(minWidth: number, minHeight: number, resolution: number)</a>
                 </section>
                 <section>
                   
@@ -562,8 +562,8 @@ serially and output to the bounds of the filter-target.</li>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties inherited from System</h3>
     </section>
@@ -574,12 +574,12 @@ serially and output to the bounds of the filter-target.</li>
             <tr>
               <td class="summary__signature">
                 
-                  <a href=/pixi-api/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a>
+                  <a href=/docs/@pixi/core/PIXI/Renderer.html>PIXI.Renderer</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/System.html#renderer">renderer</a>
+                  <a href="/docs/@pixi/core/PIXI/System.html#renderer">renderer</a>
                 </section>
                 <section>
                   
@@ -613,9 +613,9 @@ serially and output to the bounds of the filter-target.</li>
 <div class="member" id="activeState">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#activeState">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#activeState">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -640,9 +640,9 @@ serially and output to the bounds of the filter-target.</li>
 <div class="member" id="defaultFilterStack">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#defaultFilterStack">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#defaultFilterStack">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -667,9 +667,9 @@ serially and output to the bounds of the filter-target.</li>
 <div class="member" id="forceClear">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#forceClear">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#forceClear">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -682,7 +682,7 @@ serially and output to the bounds of the filter-target.</li>
 
 
   <div class="member__brief"></div>
-  <div class="member__description"><p>Whether to clear output renderTexture in AUTO/BLIT mode. See <a href=/pixi-api/@pixi/constants/PIXI/CLEAR_MODES.html>PIXI.CLEAR_MODES</a></p></div>
+  <div class="member__description"><p>Whether to clear output renderTexture in AUTO/BLIT mode. See <a href=/docs/@pixi/constants/PIXI/CLEAR_MODES.html>PIXI.CLEAR_MODES</a></p></div>
 
   
 
@@ -694,9 +694,9 @@ serially and output to the bounds of the filter-target.</li>
 <div class="member" id="globalUniforms">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#globalUniforms">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#globalUniforms">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -705,7 +705,7 @@ serially and output to the bounds of the filter-target.</li>
     </section>
   
   
-<pre class="signature__container"><code class="signature">globalUniforms: <a href=/pixi-api/@pixi/core/PIXI/UniformGroup.html>PIXI.UniformGroup</a></code></pre>
+<pre class="signature__container"><code class="signature">globalUniforms: <a href=/docs/@pixi/core/PIXI/UniformGroup.html>PIXI.UniformGroup</a></code></pre>
 
 
   <div class="member__brief"></div>
@@ -721,9 +721,9 @@ serially and output to the bounds of the filter-target.</li>
 <div class="member" id="quad">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#quad">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#quad">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -732,7 +732,7 @@ serially and output to the bounds of the filter-target.</li>
     </section>
   
   
-<pre class="signature__container"><code class="signature">quad: <a href=/pixi-api/@pixi/core/PIXI/Quad.html>PIXI.Quad</a></code></pre>
+<pre class="signature__container"><code class="signature">quad: <a href=/docs/@pixi/core/PIXI/Quad.html>PIXI.Quad</a></code></pre>
 
 
   <div class="member__brief"></div>
@@ -748,9 +748,9 @@ serially and output to the bounds of the filter-target.</li>
 <div class="member" id="quadUv">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#quadUv">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#quadUv">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -759,7 +759,7 @@ serially and output to the bounds of the filter-target.</li>
     </section>
   
   
-<pre class="signature__container"><code class="signature">quadUv: <a href=/pixi-api/@pixi/core/PIXI/QuadUv.html>PIXI.QuadUv</a></code></pre>
+<pre class="signature__container"><code class="signature">quadUv: <a href=/docs/@pixi/core/PIXI/QuadUv.html>PIXI.QuadUv</a></code></pre>
 
 
   <div class="member__brief"></div>
@@ -775,9 +775,9 @@ serially and output to the bounds of the filter-target.</li>
 <div class="member" id="statePool">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#statePool">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#statePool">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -802,9 +802,9 @@ serially and output to the bounds of the filter-target.</li>
 <div class="member" id="tempRect">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#tempRect">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#tempRect">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -813,7 +813,7 @@ serially and output to the bounds of the filter-target.</li>
     </section>
   
   
-<pre class="signature__container"><code class="signature">tempRect: <a href=/pixi-api/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a></code></pre>
+<pre class="signature__container"><code class="signature">tempRect: <a href=/docs/@pixi/math/PIXI/Rectangle.html>PIXI.Rectangle</a></code></pre>
 
 
   <div class="member__brief"></div>
@@ -829,9 +829,9 @@ serially and output to the bounds of the filter-target.</li>
 <div class="member" id="texturePool">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#texturePool">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#texturePool">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -856,9 +856,9 @@ serially and output to the bounds of the filter-target.</li>
 <div class="member" id="useMaxPadding">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#useMaxPadding">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#useMaxPadding">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -893,9 +893,9 @@ Use this flag if you need the old behavior.</p></div>
 <div class="member" id="calculateNormalizedScreenSpaceMatrix">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#calculateNormalizedScreenSpaceMatrix">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#calculateNormalizedScreenSpaceMatrix">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -904,7 +904,7 @@ Use this flag if you need the old behavior.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">static calculateNormalizedScreenSpaceMatrix(outputMatrix: <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>) → {<a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>}</code></pre>
+<pre class="signature__container"><code class="signature">static calculateNormalizedScreenSpaceMatrix(outputMatrix: <a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>) → {<a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -930,7 +930,7 @@ Use this flag if you need the old behavior.</p></div>
           outputMatrix
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
+          <a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
         </td>
         
         
@@ -956,7 +956,7 @@ Use this flag if you need the old behavior.</p></div>
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
+          <a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
         </td>
         <td class="member-return__description"><p>The mapped matrix.</p></td>
       </tr>
@@ -972,9 +972,9 @@ Use this flag if you need the old behavior.</p></div>
 <div class="member" id="calculateScreenSpaceMatrix">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#calculateScreenSpaceMatrix">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#calculateScreenSpaceMatrix">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -983,7 +983,7 @@ Use this flag if you need the old behavior.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">static calculateScreenSpaceMatrix(outputMatrix: <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>) → {<a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>}</code></pre>
+<pre class="signature__container"><code class="signature">static calculateScreenSpaceMatrix(outputMatrix: <a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>) → {<a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -1009,7 +1009,7 @@ Use this flag if you need the old behavior.</p></div>
           outputMatrix
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
+          <a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
         </td>
         
         
@@ -1035,7 +1035,7 @@ Use this flag if you need the old behavior.</p></div>
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
+          <a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
         </td>
         <td class="member-return__description"><p>The mapped matrix.</p></td>
       </tr>
@@ -1051,9 +1051,9 @@ Use this flag if you need the old behavior.</p></div>
 <div class="member" id="applyFilter">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#applyFilter">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#applyFilter">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1062,7 +1062,7 @@ Use this flag if you need the old behavior.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">applyFilter(filter: <a href="/pixi-api/@pixi/core/PIXI/Filter.html">PIXI.Filter</a>, input: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, output: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, clearMode: <a href="/pixi-api/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">applyFilter(filter: <a href="/docs/@pixi/core/PIXI/Filter.html">PIXI.Filter</a>, input: <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, output: <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, clearMode: <a href="/docs/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>) → {void}</code></pre>
 
 
   <div class="member__brief"><p>Draws a filter.</p></div>
@@ -1088,7 +1088,7 @@ Use this flag if you need the old behavior.</p></div>
           filter
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/core/PIXI/Filter.html">PIXI.Filter</a>
+          <a href="/docs/@pixi/core/PIXI/Filter.html">PIXI.Filter</a>
         </td>
         <td class="member-parameter__attributes">
           
@@ -1102,7 +1102,7 @@ Use this flag if you need the old behavior.</p></div>
           input
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+          <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
         </td>
         <td class="member-parameter__attributes">
           
@@ -1116,7 +1116,7 @@ Use this flag if you need the old behavior.</p></div>
           output
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+          <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
         </td>
         <td class="member-parameter__attributes">
           
@@ -1130,7 +1130,7 @@ Use this flag if you need the old behavior.</p></div>
           clearMode
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>
+          <a href="/docs/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>
         </td>
         <td class="member-parameter__attributes">
           <p>&lt;optional&gt;</p>
@@ -1176,9 +1176,9 @@ Use this flag if you need the old behavior.</p></div>
 <div class="member" id="bindAndClear">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#bindAndClear">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#bindAndClear">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1187,7 +1187,7 @@ Use this flag if you need the old behavior.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">bindAndClear(filterTexture: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, clearMode: <a href="/pixi-api/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">bindAndClear(filterTexture: <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, clearMode: <a href="/docs/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>) → {void}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -1213,7 +1213,7 @@ Use this flag if you need the old behavior.</p></div>
           filterTexture
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+          <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
         </td>
         <td class="member-parameter__attributes">
           
@@ -1227,7 +1227,7 @@ Use this flag if you need the old behavior.</p></div>
           clearMode
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>
+          <a href="/docs/@pixi/constants/PIXI/CLEAR_MODES.html">PIXI.CLEAR_MODES</a>
         </td>
         <td class="member-parameter__attributes">
           <p>&lt;optional&gt;</p>
@@ -1235,7 +1235,7 @@ Use this flag if you need the old behavior.</p></div>
           
         </td>
         
-        <td class="member-parameter__description"><p>clearMode, by default its CLEAR/YES. See <a href=/pixi-api/@pixi/constants/PIXI/CLEAR_MODES.html>PIXI.CLEAR_MODES</a></p></td>
+        <td class="member-parameter__description"><p>clearMode, by default its CLEAR/YES. See <a href=/docs/@pixi/constants/PIXI/CLEAR_MODES.html>PIXI.CLEAR_MODES</a></p></td>
       </tr>
     </tbody>
   </table>
@@ -1273,9 +1273,9 @@ Use this flag if you need the old behavior.</p></div>
 <div class="member" id="calculateSpriteMatrix">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#calculateSpriteMatrix">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#calculateSpriteMatrix">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1284,7 +1284,7 @@ Use this flag if you need the old behavior.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">calculateSpriteMatrix(outputMatrix: <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>, sprite: <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>) → {<a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>}</code></pre>
+<pre class="signature__container"><code class="signature">calculateSpriteMatrix(outputMatrix: <a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>, sprite: <a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>) → {<a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>}</code></pre>
 
 
   <div class="member__brief"><p>Multiply <em>input normalized coordinates</em> to this matrix to get <em>sprite texture normalized coordinates</em>.</p></div>
@@ -1310,7 +1310,7 @@ Use this flag if you need the old behavior.</p></div>
           outputMatrix
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
+          <a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
         </td>
         
         
@@ -1320,7 +1320,7 @@ Use this flag if you need the old behavior.</p></div>
           sprite
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>
+          <a href="/docs/@pixi/sprite/PIXI/Sprite.html">PIXI.Sprite</a>
         </td>
         
         
@@ -1346,7 +1346,7 @@ Use this flag if you need the old behavior.</p></div>
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/pixi-api/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
+          <a href="/docs/@pixi/math/PIXI/Matrix.html">PIXI.Matrix</a>
         </td>
         <td class="member-return__description"><p>The mapped matrix.</p></td>
       </tr>
@@ -1362,9 +1362,9 @@ Use this flag if you need the old behavior.</p></div>
 <div class="member" id="destroy">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#destroy">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#destroy">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1411,9 +1411,9 @@ Use this flag if you need the old behavior.</p></div>
 <div class="member" id="emptyPool">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#emptyPool">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#emptyPool">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1460,9 +1460,9 @@ Use this flag if you need the old behavior.</p></div>
 <div class="member" id="getFilterTexture">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#getFilterTexture">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#getFilterTexture">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1471,7 +1471,7 @@ Use this flag if you need the old behavior.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">getFilterTexture(input: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, resolution: number) → {<a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>}</code></pre>
+<pre class="signature__container"><code class="signature">getFilterTexture(input: <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>, resolution: number) → {<a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -1498,7 +1498,7 @@ To be compliant with older filters, you can use params in any order</p></div>
           input
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+          <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
         </td>
         <td class="member-parameter__attributes">
           <p>&lt;optional&gt;</p>
@@ -1542,7 +1542,7 @@ To be compliant with older filters, you can use params in any order</p></div>
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+          <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
         </td>
         <td class="member-return__description"></td>
       </tr>
@@ -1558,9 +1558,9 @@ To be compliant with older filters, you can use params in any order</p></div>
 <div class="member" id="pop">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#pop">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#pop">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1607,9 +1607,9 @@ To be compliant with older filters, you can use params in any order</p></div>
 <div class="member" id="push">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#push">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#push">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1618,7 +1618,7 @@ To be compliant with older filters, you can use params in any order</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">push(target: <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, filters: Array&lt;<a href="/pixi-api/@pixi/core/PIXI/Filter.html">PIXI.Filter</a>>) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">push(target: <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>, filters: Array&lt;<a href="/docs/@pixi/core/PIXI/Filter.html">PIXI.Filter</a>>) → {void}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -1645,7 +1645,7 @@ input render-texture for the rest of the filtering pipeline.</p></div>
           target
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
+          <a href="/docs/@pixi/display/PIXI/DisplayObject.html">PIXI.DisplayObject</a>
         </td>
         
         
@@ -1655,7 +1655,7 @@ input render-texture for the rest of the filtering pipeline.</p></div>
           filters
         </td>
         <td class="member-parameter__type">
-          Array&lt;<a href="/pixi-api/@pixi/core/PIXI/Filter.html">PIXI.Filter</a>&gt;
+          Array&lt;<a href="/docs/@pixi/core/PIXI/Filter.html">PIXI.Filter</a>&gt;
         </td>
         
         
@@ -1697,9 +1697,9 @@ input render-texture for the rest of the filtering pipeline.</p></div>
 <div class="member" id="resize">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#resize">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#resize">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1746,9 +1746,9 @@ input render-texture for the rest of the filtering pipeline.</p></div>
 <div class="member" id="returnFilterTexture">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#returnFilterTexture">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#returnFilterTexture">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1757,7 +1757,7 @@ input render-texture for the rest of the filtering pipeline.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">returnFilterTexture(renderTexture: <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>) → {void}</code></pre>
+<pre class="signature__container"><code class="signature">returnFilterTexture(renderTexture: <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>) → {void}</code></pre>
 
 
   <div class="member__brief"><p>Frees a render texture back into the pool.</p></div>
@@ -1783,7 +1783,7 @@ input render-texture for the rest of the filtering pipeline.</p></div>
           renderTexture
         </td>
         <td class="member-parameter__type">
-          <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+          <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
         </td>
         
         
@@ -1833,9 +1833,9 @@ input render-texture for the rest of the filtering pipeline.</p></div>
 <div class="member" id="getOptimalFilterTexture">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/core/PIXI/FilterSystem.html#getOptimalFilterTexture">
+      <a href="/docs/@pixi/core/PIXI/FilterSystem.html#getOptimalFilterTexture">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -1844,7 +1844,7 @@ input render-texture for the rest of the filtering pipeline.</p></div>
     </section>
   
   
-<pre class="signature__container"><code class="signature">protected getOptimalFilterTexture(minWidth: number, minHeight: number, resolution: number) → {<a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>}</code></pre>
+<pre class="signature__container"><code class="signature">protected getOptimalFilterTexture(minWidth: number, minHeight: number, resolution: number) → {<a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>}</code></pre>
 
 
   <div class="member__brief"><p>Gets a Power-of-Two render texture or fullScreen texture</p></div>
@@ -1934,7 +1934,7 @@ input render-texture for the rest of the filtering pipeline.</p></div>
     <tbody class="member-returns__body">
       <tr class="member-return">
         <td class="member-return__type">
-          <a href="/pixi-api/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
+          <a href="/docs/@pixi/core/PIXI/RenderTexture.html">PIXI.RenderTexture</a>
         </td>
         <td class="member-return__description"><p>The new render texture.</p></td>
       </tr>
@@ -1965,25 +1965,25 @@ input render-texture for the rest of the filtering pipeline.</p></div>
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#activeState>activeState</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#activeState>activeState</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#defaultFilterStack>defaultFilterStack</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#defaultFilterStack>defaultFilterStack</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#forceClear>forceClear</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#forceClear>forceClear</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#globalUniforms>globalUniforms</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#globalUniforms>globalUniforms</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#quad>quad</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#quad>quad</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#quadUv>quadUv</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#quadUv>quadUv</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#statePool>statePool</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#statePool>statePool</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#tempRect>tempRect</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#tempRect>tempRect</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#texturePool>texturePool</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#texturePool>texturePool</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#useMaxPadding>useMaxPadding</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#useMaxPadding>useMaxPadding</a></li>
     
   </ul>
 </div>
@@ -1995,29 +1995,29 @@ input render-texture for the rest of the filtering pipeline.</p></div>
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#calculateNormalizedScreenSpaceMatrix>calculateNormalizedScreenSpaceMatrix</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#calculateNormalizedScreenSpaceMatrix>calculateNormalizedScreenSpaceMatrix</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#calculateScreenSpaceMatrix>calculateScreenSpaceMatrix</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#calculateScreenSpaceMatrix>calculateScreenSpaceMatrix</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#applyFilter>applyFilter</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#applyFilter>applyFilter</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#bindAndClear>bindAndClear</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#bindAndClear>bindAndClear</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#calculateSpriteMatrix>calculateSpriteMatrix</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#calculateSpriteMatrix>calculateSpriteMatrix</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#destroy>destroy</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#destroy>destroy</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#emptyPool>emptyPool</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#emptyPool>emptyPool</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#getFilterTexture>getFilterTexture</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#getFilterTexture>getFilterTexture</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#pop>pop</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#pop>pop</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#push>push</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#push>push</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#resize>resize</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#resize>resize</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#returnFilterTexture>returnFilterTexture</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#returnFilterTexture>returnFilterTexture</a></li>
     
   </ul>
 </div>
@@ -2028,7 +2028,7 @@ input render-texture for the rest of the filtering pipeline.</p></div>
   <section class="page-members-explorer-category__title">Protected Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/core/PIXI/FilterSystem.html#getOptimalFilterTexture>getOptimalFilterTexture</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/core/PIXI/FilterSystem.html#getOptimalFilterTexture>getOptimalFilterTexture</a></li>
     
   </ul>
 </div>

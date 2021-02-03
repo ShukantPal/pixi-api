@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>webdoc: RopeGeometry</title>
 
-    <link type="text/css" rel="stylesheet" href="/pixi-api/styles/index.css" />
+    <link type="text/css" rel="stylesheet" href="/docs/styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700&display=swap" />
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/googlecode.min.css">
@@ -14,10 +14,10 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       window.appData = {
-        siteRoot: "pixi-api",
+        siteRoot: "docs",
       };
     </script>
-    <script src="/pixi-api/scripts/default-template.js"></script>
+    <script src="/docs/scripts/default-template.js"></script>
   </head>
   <body class="root">
     <div class="docs">
@@ -36,14 +36,14 @@
         &gt;
       
       
-        <a href=/pixi-api/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
+        <a href=/docs/@pixi-essentials/instanced-renderer/PIXI.html>PIXI</a>
         &gt;
       
       <span>RopeGeometry</span>
     </div>
     <h1 class="document__title">PIXI.RopeGeometry</h1>
     
-<pre class="signature__container"><code class="signature">class RopeGeometry extends <a href="/pixi-api/@pixi/mesh/PIXI/MeshGeometry.html">PIXI.MeshGeometry</a></code></pre>
+<pre class="signature__container"><code class="signature">class RopeGeometry extends <a href="/docs/@pixi/mesh/PIXI/MeshGeometry.html">PIXI.MeshGeometry</a></code></pre>
 
 
     <div class="document__brief"><p>RopeGeometry allows you to draw a geometry across several points and then manipulate these points.</p></div>
@@ -64,7 +64,7 @@
 <div class="member" id="constructor">
   
   
-<pre class="signature__container"><code class="signature">new PIXI.RopeGeometry(width: number, points: Array&lt;<a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>>, textureScale: number) → {}</code></pre>
+<pre class="signature__container"><code class="signature">new PIXI.RopeGeometry(width: number, points: Array&lt;<a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>>, textureScale: number) → {}</code></pre>
 
 
   <div class="member__brief"></div>
@@ -106,7 +106,7 @@
           points
         </td>
         <td class="member-parameter__type">
-          Array&lt;<a href="/pixi-api/@pixi/math/PIXI/Point.html">PIXI.Point</a>&gt;
+          Array&lt;<a href="/docs/@pixi/math/PIXI/Point.html">PIXI.Point</a>&gt;
         </td>
         <td class="member-parameter__attributes">
           <p>&lt;optional&gt;</p>
@@ -116,7 +116,7 @@
         <td class="member-parameter__default">
           
         </td>
-        <td class="member-parameter__description"><p>An array of <a href=/pixi-api/@pixi/math/PIXI/Point.html>PIXI.Point</a> objects to construct this rope.</p></td>
+        <td class="member-parameter__description"><p>An array of <a href=/docs/@pixi/math/PIXI/Point.html>PIXI.Point</a> objects to construct this rope.</p></td>
       </tr><tr class="member-parameter">
         <td class="member-parameter__name">
           textureScale
@@ -135,7 +135,7 @@
         <td class="member-parameter__description"><p>By default the rope texture will be stretched to match
 rope length. If textureScale is positive this value will be treated as a scaling
 factor and the texture will preserve its aspect ratio instead. To create a tiling rope
-set baseTexture.wrapMode to <a href="/pixi-api/@pixi/constants/PIXI/WRAP_MODES.html#REPEAT">PIXI.WRAP_MODES.REPEAT</a> and use a power of two texture,
+set baseTexture.wrapMode to <a href="/docs/@pixi/constants/PIXI/WRAP_MODES.html#REPEAT">PIXI.WRAP_MODES.REPEAT</a> and use a power of two texture,
 then set textureScale=1 to keep the original texture pixel size.
 In order to reduce alpha channel artifacts provide a larger texture and downsample -
 i.e. set textureScale=0.5 to scale it down twice.</p></td>
@@ -166,8 +166,8 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties from RopeGeometry</h3>
     </section>
@@ -183,7 +183,7 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/mesh-extras/PIXI/RopeGeometry.html#_width">_width</a>
+                  <a href="/docs/@pixi/mesh-extras/PIXI/RopeGeometry.html#_width">_width</a>
                 </section>
                 <section>
                   
@@ -194,28 +194,12 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  Array&lt;<a href=/pixi-api/@pixi/math/PIXI/Point.html>PIXI.Point</a>&gt;
+                  Array&lt;<a href=/docs/@pixi/math/PIXI/Point.html>PIXI.Point</a>&gt;
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/mesh-extras/PIXI/RopeGeometry.html#points">points</a>
-                </section>
-                <section>
-                  
-                </section>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="summary__signature">
-                
-                  number
-                
-              </td>
-              <td>
-                <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/mesh-extras/PIXI/RopeGeometry.html#textureScale">textureScale</a>
+                  <a href="/docs/@pixi/mesh-extras/PIXI/RopeGeometry.html#points">points</a>
                 </section>
                 <section>
                   
@@ -231,7 +215,23 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/mesh-extras/PIXI/RopeGeometry.html#width">width</a>
+                  <a href="/docs/@pixi/mesh-extras/PIXI/RopeGeometry.html#textureScale">textureScale</a>
+                </section>
+                <section>
+                  
+                </section>
+              </td>
+            </tr>
+          
+            <tr>
+              <td class="summary__signature">
+                
+                  number
+                
+              </td>
+              <td>
+                <section class="summary__signature">
+                  <a href="/docs/@pixi/mesh-extras/PIXI/RopeGeometry.html#width">width</a>
                 </section>
                 <section>
                   
@@ -252,8 +252,8 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
   <div class="accordion accordion-active">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods from RopeGeometry</h3>
     </section>
@@ -269,7 +269,7 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/mesh-extras/PIXI/RopeGeometry.html#updateVertices">updateVertices()</a>
+                  <a href="/docs/@pixi/mesh-extras/PIXI/RopeGeometry.html#updateVertices">updateVertices()</a>
                 </section>
                 <section>
                   
@@ -293,8 +293,8 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Properties inherited from Geometry</h3>
     </section>
@@ -310,7 +310,7 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Geometry.html#instanceCount">instanceCount</a>
+                  <a href="/docs/@pixi/core/PIXI/Geometry.html#instanceCount">instanceCount</a>
                 </section>
                 <section>
                   
@@ -326,7 +326,7 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Geometry.html#refCount">refCount</a>
+                  <a href="/docs/@pixi/core/PIXI/Geometry.html#refCount">refCount</a>
                 </section>
                 <section>
                   
@@ -342,7 +342,7 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Geometry.html#glVertexArrayObjects">protected glVertexArrayObjects</a>
+                  <a href="/docs/@pixi/core/PIXI/Geometry.html#glVertexArrayObjects">protected glVertexArrayObjects</a>
                 </section>
                 <section>
                   
@@ -366,8 +366,8 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
   <div class="accordion">
     <section class="accordion__toggle">
       <button>
-        <img class="accordion__bg-inactive" src="/pixi-api/icons/chevron-down.svg"/>
-        <img class="accordion__bg-active" src="/pixi-api/icons/chevron-up.svg"/>
+        <img class="accordion__bg-inactive" src="/docs/icons/chevron-down.svg"/>
+        <img class="accordion__bg-active" src="/docs/icons/chevron-up.svg"/>
       </button>
       <h3 class="members__subcategory">Methods inherited from Geometry</h3>
     </section>
@@ -378,12 +378,12 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/pixi-api/@pixi/core/PIXI/Geometry.html">PIXI.Geometry</a>
+                  <a href="/docs/@pixi/core/PIXI/Geometry.html">PIXI.Geometry</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Geometry.html#addAttribute">addAttribute(id: String, buffer: <a href="/pixi-api/@pixi/core/PIXI/Buffer.html">PIXI.Buffer</a> | number&lt;Array>, size: Number, normalized: Boolean, type: Number, stride: Number, start: Number, instance: boolean)</a>
+                  <a href="/docs/@pixi/core/PIXI/Geometry.html#addAttribute">addAttribute(id: String, buffer: <a href="/docs/@pixi/core/PIXI/Buffer.html">PIXI.Buffer</a> | number&lt;Array>, size: Number, normalized: Boolean, type: Number, stride: Number, start: Number, instance: boolean)</a>
                 </section>
                 <section>
                   
@@ -394,12 +394,12 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/pixi-api/@pixi/core/PIXI/Geometry.html">PIXI.Geometry</a>
+                  <a href="/docs/@pixi/core/PIXI/Geometry.html">PIXI.Geometry</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Geometry.html#addIndex">addIndex(buffer: <a href="/pixi-api/@pixi/core/PIXI/Buffer.html">PIXI.Buffer</a> | number&lt;Array>)</a>
+                  <a href="/docs/@pixi/core/PIXI/Geometry.html#addIndex">addIndex(buffer: <a href="/docs/@pixi/core/PIXI/Buffer.html">PIXI.Buffer</a> | number&lt;Array>)</a>
                 </section>
                 <section>
                   
@@ -410,12 +410,12 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/pixi-api/@pixi/core/PIXI/Geometry.html">PIXI.Geometry</a>
+                  <a href="/docs/@pixi/core/PIXI/Geometry.html">PIXI.Geometry</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Geometry.html#clone">clone()</a>
+                  <a href="/docs/@pixi/core/PIXI/Geometry.html#clone">clone()</a>
                 </section>
                 <section>
                   
@@ -433,7 +433,7 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Geometry.html#destroy">destroy()</a>
+                  <a href="/docs/@pixi/core/PIXI/Geometry.html#destroy">destroy()</a>
                 </section>
                 <section>
                   
@@ -451,7 +451,7 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Geometry.html#dispose">dispose()</a>
+                  <a href="/docs/@pixi/core/PIXI/Geometry.html#dispose">dispose()</a>
                 </section>
                 <section>
                   
@@ -464,12 +464,12 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/pixi-api/@pixi/core/PIXI/Attribute.html">PIXI.Attribute</a>
+                  <a href="/docs/@pixi/core/PIXI/Attribute.html">PIXI.Attribute</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Geometry.html#getAttribute">getAttribute(id: String)</a>
+                  <a href="/docs/@pixi/core/PIXI/Geometry.html#getAttribute">getAttribute(id: String)</a>
                 </section>
                 <section>
                   
@@ -482,12 +482,12 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/pixi-api/@pixi/core/PIXI/Buffer.html">PIXI.Buffer</a>
+                  <a href="/docs/@pixi/core/PIXI/Buffer.html">PIXI.Buffer</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Geometry.html#getBuffer">getBuffer(id: String)</a>
+                  <a href="/docs/@pixi/core/PIXI/Geometry.html#getBuffer">getBuffer(id: String)</a>
                 </section>
                 <section>
                   
@@ -500,12 +500,12 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/pixi-api/@pixi/core/PIXI/Buffer.html">PIXI.Buffer</a>
+                  <a href="/docs/@pixi/core/PIXI/Buffer.html">PIXI.Buffer</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Geometry.html#getIndex">getIndex()</a>
+                  <a href="/docs/@pixi/core/PIXI/Geometry.html#getIndex">getIndex()</a>
                 </section>
                 <section>
                   
@@ -518,12 +518,12 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
             <tr>
               <td class="summary__signature">
                 
-                  <a href="/pixi-api/@pixi/core/PIXI/Geometry.html">PIXI.Geometry</a>
+                  <a href="/docs/@pixi/core/PIXI/Geometry.html">PIXI.Geometry</a>
                 
               </td>
               <td>
                 <section class="summary__signature">
-                  <a href="/pixi-api/@pixi/core/PIXI/Geometry.html#interleave">interleave()</a>
+                  <a href="/docs/@pixi/core/PIXI/Geometry.html#interleave">interleave()</a>
                 </section>
                 <section>
                   
@@ -550,9 +550,9 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
 <div class="member" id="_width">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/mesh-extras/PIXI/RopeGeometry.html#_width">
+      <a href="/docs/@pixi/mesh-extras/PIXI/RopeGeometry.html#_width">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -577,9 +577,9 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
 <div class="member" id="points">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/mesh-extras/PIXI/RopeGeometry.html#points">
+      <a href="/docs/@pixi/mesh-extras/PIXI/RopeGeometry.html#points">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -588,7 +588,7 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
     </section>
   
   
-<pre class="signature__container"><code class="signature">points: Array&lt;<a href=/pixi-api/@pixi/math/PIXI/Point.html>PIXI.Point</a>></code></pre>
+<pre class="signature__container"><code class="signature">points: Array&lt;<a href=/docs/@pixi/math/PIXI/Point.html>PIXI.Point</a>></code></pre>
 
 
   <div class="member__brief"></div>
@@ -604,9 +604,9 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
 <div class="member" id="textureScale">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/mesh-extras/PIXI/RopeGeometry.html#textureScale">
+      <a href="/docs/@pixi/mesh-extras/PIXI/RopeGeometry.html#textureScale">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -631,9 +631,9 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
 <div class="member" id="width">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/mesh-extras/PIXI/RopeGeometry.html#width">
+      <a href="/docs/@pixi/mesh-extras/PIXI/RopeGeometry.html#width">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -667,9 +667,9 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
 <div class="member" id="updateVertices">
   
     <section class="member__title">
-      <a href="/pixi-api/@pixi/mesh-extras/PIXI/RopeGeometry.html#updateVertices">
+      <a href="/docs/@pixi/mesh-extras/PIXI/RopeGeometry.html#updateVertices">
         <img
-          src="/pixi-api/icons/link.svg"
+          src="/docs/icons/link.svg"
           width="16px"
           height="16px"
         />
@@ -732,13 +732,13 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
   <section class="page-members-explorer-category__title">Public Properties</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/mesh-extras/PIXI/RopeGeometry.html#_width>_width</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/mesh-extras/PIXI/RopeGeometry.html#_width>_width</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/mesh-extras/PIXI/RopeGeometry.html#points>points</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/mesh-extras/PIXI/RopeGeometry.html#points>points</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/mesh-extras/PIXI/RopeGeometry.html#textureScale>textureScale</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/mesh-extras/PIXI/RopeGeometry.html#textureScale>textureScale</a></li>
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/mesh-extras/PIXI/RopeGeometry.html#width>width</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/mesh-extras/PIXI/RopeGeometry.html#width>width</a></li>
     
   </ul>
 </div>
@@ -750,7 +750,7 @@ i.e. set textureScale=0.5 to scale it down twice.</p></td>
   <section class="page-members-explorer-category__title">Public Methods</section>
   <ul class="page-members-explorer-category__items">
     
-      <li class="page-members-explorer__item"><a href=/pixi-api/@pixi/mesh-extras/PIXI/RopeGeometry.html#updateVertices>updateVertices</a></li>
+      <li class="page-members-explorer__item"><a href=/docs/@pixi/mesh-extras/PIXI/RopeGeometry.html#updateVertices>updateVertices</a></li>
     
   </ul>
 </div>
